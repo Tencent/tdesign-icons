@@ -1,20 +1,13 @@
 .DS_Store
 
 # auto generated icons
-src/components/*.tsx
+src/components/*.vue
 src/manifest.ts
 src/icons.ts
 
 # build
 dist/
 esm/
-
-# node_modules
-**/node_modules
-
-# legacy
-/gallery
-/src/icons
 
 # yarn
 yarn-error.log

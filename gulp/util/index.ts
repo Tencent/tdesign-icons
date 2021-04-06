@@ -2,6 +2,8 @@ import fs from 'fs-extra';
 import path from 'path';
 import camelCase from 'camelcase';
 
+export { renderNode } from './render';
+
 export function upperCamelCase(name: string) {
   const cased = camelCase.apply(camelCase, [name]);
   return cased.charAt(0).toUpperCase() + cased.slice(1);

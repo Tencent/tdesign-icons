@@ -18,13 +18,12 @@
     "noUnusedLocals": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "noImplicitAny": false,
     "types": [
       "node"
     ],
     "typeRoots": [
-      "./typings",
+      "./types",
       "./node_modules/@types",
     ]
-  }
+  },
 }

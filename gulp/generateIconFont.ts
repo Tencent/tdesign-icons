@@ -1,5 +1,4 @@
 import { dest, src } from 'gulp';
-import chalk from 'chalk';
 import iconfont from 'gulp-iconfont';
 import iconfontCss from 'gulp-iconfont-css';
 const runTimestamp = Math.round(Date.now() / 1000);
@@ -23,9 +22,5 @@ export const generateIconFont = ({
           timestamp: runTimestamp, // recommended to get consistent builds when watching files
         }),
       )
-      .on('glyphs', (glyphs: any, options: any) => {
-        // CSS templating, e.g.
-        chalk('generateIconFont: ', glyphs, options);
-      })
       .pipe(dest(targetDir));
   };

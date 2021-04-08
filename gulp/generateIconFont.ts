@@ -1,10 +1,20 @@
 import { dest, src } from 'gulp';
 import chalk from 'chalk';
 import iconfont from 'gulp-iconfont';
+import iconfontCss from 'gulp-iconfont-css';
 const runTimestamp = Math.round(Date.now() / 1000);
-export const generateIconFont = ({ iconGlob, targetDir }: { iconGlob: string; targetDir: string }) =>
+export const generateIconFont = ({
+  iconGlob,
+  targetDir,
+  fontCssConfig,
+}: {
+  iconGlob: string;
+  targetDir: string;
+  fontCssConfig: Object;
+}) =>
   function generateIconFont() {
     return src([iconGlob])
+      .pipe(iconfontCss(fontCssConfig))
       .pipe(
         iconfont({
           fontName: 'myfont', // required

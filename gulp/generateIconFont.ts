@@ -16,9 +16,9 @@ export const generateIconFont = ({
       .pipe(iconfontCss(fontCssConfig))
       .pipe(
         iconfont({
-          fontName: 'myfont', // required
+          fontName: 'index', // required
           prependUnicode: true, // recommended option
-          formats: ['ttf', 'eot', 'woff'], // default, 'woff2' and 'svg' are available
+          formats: ['ttf', 'eot', 'woff', 'svg'], // default, 'woff2' and 'svg' are available
           timestamp: runTimestamp, // recommended to get consistent builds when watching files
         }),
       )

@@ -1,5 +1,5 @@
 import decamelize from 'decamelize';
-import { IconElement } from '../svgInfoCheck';
+import { IconElement } from '../svg-info-check';
 
 export function renderNode(node: IconElement): string {
   const { attrs } = node;

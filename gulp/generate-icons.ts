@@ -1,9 +1,9 @@
 import { dest, src } from 'gulp';
 import rename from 'gulp-rename';
 
-import { svgToElement, SvgToElementOptions } from './svgInfoCheck';
+import { svgToElement, SvgToElementOptions } from './svg-info-check';
 import { svgo, SVGOConfig } from './svgo';
-import { useTemplate, IconFileContentGenerator } from './useTemplate';
+import { useTemplate, IconFileContentGenerator } from './use-template';
 
 interface GenerateIconOptions {
   from: string[];

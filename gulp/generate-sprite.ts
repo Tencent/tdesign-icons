@@ -1,6 +1,6 @@
 import { dest, src } from 'gulp';
 import svgSprite from 'gulp-svg-sprite';
-import { getSvgSpriteJSFile } from '../packages/svgSprite/gulp/useSvgSpriteTemplate';
+import { getSvgSpriteJSFile } from '../packages/svg-sprite/gulp/use-svg-sprite-template';
 import { createTransformStream } from './transform';
 import rename from 'gulp-rename';
 

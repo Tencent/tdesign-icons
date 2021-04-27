@@ -1,7 +1,7 @@
 import { parallel, series } from 'gulp';
 
-import { generateIcons } from '../../../gulp/generateIcons';
-import { svgGenIconFileContent } from './svgUseTemplate';
+import { generateIcons } from '../../../gulp/generate-icons';
+import { svgGenIconFileContent } from './svg-use-template';
 
 export function svgTask(source: string[]) {
   return series(

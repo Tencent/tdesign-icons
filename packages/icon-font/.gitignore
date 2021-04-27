@@ -1,7 +1,6 @@
 .DS_Sore
 
 # build
-dist/
 esm/
 
 # yarn

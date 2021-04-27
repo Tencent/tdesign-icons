@@ -6,7 +6,6 @@ src/manifest.ts
 src/icons.ts
 
 # build
-dist/
 esm/
 
 # node_modules

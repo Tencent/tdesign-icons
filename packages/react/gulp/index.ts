@@ -5,7 +5,7 @@ import { generateManifest } from '../../../gulp/generateManifest';
 import { generateIcons } from '../../../gulp/generateIcons';
 import { clearDir } from '../../../gulp/cleanDir';
 
-import { reactGetIconFileContent } from './reactUseTemplate';
+import { reactGetIconFileContent } from './react-use-template';
 
 export function reactTask(source: string[]) {
   return series(

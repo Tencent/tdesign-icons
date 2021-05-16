@@ -1,10 +1,12 @@
+import classNames from 'classnames';
 import { createElement, forwardRef, ForwardRefExoticComponent, ReactElement, Ref, RefAttributes } from 'react';
+import useSizeProps from './iconfont/use-size-props';
 
 export interface IconProps {
   focusable?: string;
   style?: React.CSSProperties;
   className?: string;
-
+  size?: 'small' | 'middle' | 'large' | string | number;
   onClick?: React.MouseEventHandler<SVGSVGElement>;
 }
 
@@ -27,12 +29,14 @@ export interface IconElement {
 export type CompoundedComponent = ForwardRefExoticComponent<IconFulfilledProps & RefAttributes<SVGElement>>;
 
 export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGElement>) => {
-  const { icon, id, className, ...restProps } = props;
-  const cls = `t-icon t-icon-${id} ${className || ''}`.trim();
+  const { icon, id, className, size = 'middle', style, ...restProps } = props;
+  const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
+  const cls = classNames(`t-icon`, `t-icon-${id}`, className, sizeClassName);
 
   return render(icon, `${id}`, {
     ref,
     className: cls,
+    style: { ...style, ...sizeStyle },
     ...restProps,
   });
 }) as CompoundedComponent;
@@ -52,4 +56,4 @@ function render(node: IconElement, id: string, rootProps?: { [key: string]: any 
   );
 }
 
-IconBase.displayName = 'WefeIcon';
+IconBase.displayName = 'TIconBase';

@@ -16,7 +16,6 @@ export function vueTask(source: string[]) {
         from: [...source],
         to: 'packages/vue/src/components',
         iconGenerator: vueGetIconFileContent,
-        extName: '.vue',
         options: {
           replaceColor: true,
         },
@@ -31,7 +30,6 @@ export function vueTask(source: string[]) {
     generateEntry({
       from: `packages/vue/src/components/*`,
       to: `packages/vue/src`,
-      extName: `.vue`,
     }),
   );
 }

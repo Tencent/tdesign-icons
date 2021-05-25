@@ -9,7 +9,7 @@ export const generateEntry = ({ from, to, extName = '' }: { from: string; to: st
     return src(from).pipe(useEntryTemplate(extName)).pipe(concat('icons.ts')).pipe(dest(to));
   };
 
-const template = `export { default as $ICON_NAME } from './components/$FILE_NAME`;
+const template = `export { default as $ICON_NAMEIcon } from './components/$FILE_NAME`;
 const useEntryTemplate = (extName: string) =>
   createTransformStream((_, { stem: name }) => {
     const templateWithExt = `${template + extName}';`;

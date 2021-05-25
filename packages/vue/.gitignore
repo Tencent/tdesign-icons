@@ -1,13 +1,14 @@
 .DS_Store
 
 # auto generated icons
-src/components/*.vue
+src/components/*
 src/manifest.ts
 src/icons.ts
 
 # build
 dist/
 esm/
+umd/
 
 # yarn
 yarn-error.log

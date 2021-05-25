@@ -7,7 +7,7 @@ const template = fs.readFileSync(path.resolve(__dirname, 'template/icon.tsx'), '
 
 export function reactGetIconFileContent({ name, element }: { name: string; element: string }): string {
   return template
-    .replace(/\$ICON_NAME/g, upperCamelCase(name))
+    .replace(/\$ICON_NAME/g, `${upperCamelCase(name)}Icon`)
     .replace(/\$ELEMENT/g, element)
     .replace(/\$KEY/g, name);
 }

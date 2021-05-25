@@ -1,0 +1,30 @@
+@font-face {
+	font-family: "<%= fontName %>";
+  src: url('<%= fontPath %><%= fontName %>.svg#iconcool') format("svg"),
+  url('<%= fontPath %><%= fontName %>.ttf') format("truetype"),
+  url('<%= fontPath %><%= fontName %>.woff') format("woff"),
+  url('<%= fontPath %><%= fontName %>.eot?#iefix') format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.t-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "<%= fontName %>" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  text-align: center;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+<% _.each(glyphs, function(glyph) { %>
+.t-icon-<%= glyph.fileName %>:before {
+    content: "\<%= glyph.codePoint %>";
+}
+<% }); %>

@@ -1,0 +1,11 @@
+.DS_Sore
+
+# build
+dist/
+esm/
+
+# yarn
+yarn-error.log
+
+# eslint
+.eslintcache

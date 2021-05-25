@@ -1,10 +1,10 @@
 import { parallel, series } from 'gulp';
 
-import { generateManifest } from '../../../gulp/generateManifest';
-import { generateIcons } from '../../../gulp/generateIcons';
-import { clearDir } from '../../../gulp/cleanDir';
-import { angularGetIconFileContent } from './angularUseTemplate';
-import { angularGenerateEntry } from './angularGenerateEntry';
+import { generateManifest } from '../../../gulp/generate-manifest';
+import { generateIcons } from '../../../gulp/generate-icons';
+import { clearDir } from '../../../gulp/clean-dir';
+import { angularGetIconFileContent } from './angular-use-template';
+import { angularGenerateEntry } from './angular-generate-entry';
 
 export function angularTask(source: string[]) {
   return series(

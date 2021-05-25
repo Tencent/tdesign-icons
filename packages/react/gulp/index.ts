@@ -1,9 +1,9 @@
 import { parallel, series } from 'gulp';
 
-import { generateEntry } from '../../../gulp/generateEntry';
-import { generateManifest } from '../../../gulp/generateManifest';
-import { generateIcons } from '../../../gulp/generateIcons';
-import { clearDir } from '../../../gulp/cleanDir';
+import { generateEntry } from '../../../gulp/generate-entry';
+import { generateManifest } from '../../../gulp/generate-manifest';
+import { generateIcons } from '../../../gulp/generate-icons';
+import { clearDir } from '../../../gulp/clean-dir';
 
 import { reactGetIconFileContent } from './react-use-template';
 

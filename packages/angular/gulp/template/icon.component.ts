@@ -18,9 +18,9 @@ import {
   },
 })
 export class TIcon$ICON_NAMEComponent extends TIconStandaloneComponent {
-  @Input() styles?: NgStyleInterface;
-  @Input() classes?: NgClassInterface;
-  @Input() size: string | TIconSize = 'default';
+  @Input() public styles?: NgStyleInterface;
+  @Input() public classes?: NgClassInterface;
+  @Input() public size: string | TIconSize = 'default';
 
   protected name = '$KEY';
 }

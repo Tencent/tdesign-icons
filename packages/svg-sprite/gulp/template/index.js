@@ -8,4 +8,4 @@
       document.body.insertAdjacentHTML('afterbegin', svgCode);
     });
   }
-})();
+}());

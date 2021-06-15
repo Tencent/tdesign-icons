@@ -6,8 +6,10 @@ src/manifest.ts
 src/icons.ts
 
 # build
+lib/
 dist/
 esm/
+es/
 
 # yarn
 yarn-error.log

@@ -9,7 +9,7 @@ import { reactGetIconFileContent } from './react-use-template';
 
 export function reactTask(source: string[]) {
   return series(
-    clearDir(['packages/react/dist', 'packages/react/src/components']),
+    clearDir(['packages/react/src/components']),
 
     parallel(
       generateIcons({

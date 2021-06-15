@@ -1,7 +1,7 @@
 import { parallel, series } from 'gulp';
-import { angularTask } from './packages/angular/gulp';
 
 import { reactTask } from './packages/react/gulp';
+import { angularTask } from './packages/angular/gulp';
 import { svgTask } from './packages/svg/gulp';
 import { vueTask } from './packages/vue/gulp';
 import { svgSpriteTask } from './packages/svg-sprite/gulp';

@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -7,10 +10,10 @@
       "projectType": "library",
       "root": "projects/tdesign-icons-angular",
       "sourceRoot": "projects/tdesign-icons-angular/src",
-      "prefix": "lib",
+      "prefix": "t",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "projects/tdesign-icons-angular/tsconfig.lib.json",
             "project": "projects/tdesign-icons-angular/ng-package.json"

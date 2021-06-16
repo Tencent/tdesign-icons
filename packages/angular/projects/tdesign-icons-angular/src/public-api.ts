@@ -7,3 +7,4 @@ export * from './lib/tdesign-icons-angular.component';
 export * from './lib/tdesign-icons-angular.module';
 
 export * from './lib/icons';
+export { manifest } from './lib/manifest';

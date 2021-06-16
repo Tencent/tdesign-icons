@@ -10,5 +10,6 @@ export function angularGetIconFileContent({ name, element }: { name: string; ele
   return template
     .replace(/\$ICON_NAME/g, upperCamelCase(name))
     .replace(/\$SVG/g, svg)
-    .replace(/\$KEY/g, name);
+    .replace(/\$KEY/g, name)
+    .replace(/view-box/g, 'viewBox');
 }

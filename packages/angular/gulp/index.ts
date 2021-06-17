@@ -23,13 +23,13 @@ export function angularTask(source: string[]) {
 
       generateManifest({
         from: source,
-        to: `packages/angular/projects/tdesign-icons-angular/src/lib`,
+        to: 'packages/angular/projects/tdesign-icons-angular/src/lib',
       }),
     ),
 
     angularGenerateEntry({
-      from: `packages/angular/projects/tdesign-icons-angular/src/lib/components/*`,
-      to: `packages/angular/projects/tdesign-icons-angular/src/lib`,
+      from: 'packages/angular/projects/tdesign-icons-angular/src/lib/components/*',
+      to: 'packages/angular/projects/tdesign-icons-angular/src/lib',
     }),
   );
 }

@@ -23,13 +23,13 @@ export function vueTask(source: string[]) {
 
       generateManifest({
         from: source,
-        to: `packages/vue/src`,
+        to: 'packages/vue/src',
       }),
     ),
 
     generateEntry({
-      from: `packages/vue/src/components/*`,
-      to: `packages/vue/src`,
+      from: 'packages/vue/src/components/*',
+      to: 'packages/vue/src',
     }),
   );
 }

@@ -31,7 +31,7 @@ export type CompoundedComponent = ForwardRefExoticComponent<IconFulfilledProps &
 export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGElement>) => {
   const { icon, id, className, size = 'middle', style, ...restProps } = props;
   const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
-  const cls = classNames(`t-icon`, `t-icon-${id}`, className, sizeClassName);
+  const cls = classNames('t-icon', `t-icon-${id}`, className, sizeClassName);
 
   return render(icon, `${id}`, {
     ref,

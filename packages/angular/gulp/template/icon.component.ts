@@ -11,7 +11,7 @@ import {
   preserveWhitespaces: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
-  template: `$SVG`,
+  template: '$SVG',
   host: {
     '[attr.data-t-icon]': 'true',
     '[style.line-height]': '0',

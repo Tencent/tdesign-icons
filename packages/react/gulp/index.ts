@@ -23,13 +23,13 @@ export function reactTask(source: string[]) {
 
       generateManifest({
         from: source,
-        to: `packages/react/src`,
+        to: 'packages/react/src',
       }),
     ),
 
     generateEntry({
-      from: `packages/react/src/components/*`,
-      to: `packages/react/src`,
+      from: 'packages/react/src/components/*',
+      to: 'packages/react/src',
     }),
   );
 }

@@ -8,7 +8,7 @@ src/icons.ts
 # build
 dist/
 esm/
-umd/
+lib/
 
 # yarn
 yarn-error.log

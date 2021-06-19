@@ -9,4 +9,4 @@ import { ICON_COMPONENTS } from './icons';
   declarations: [TIconComponent, ...ICON_COMPONENTS],
   exports: [TIconComponent, ...ICON_COMPONENTS],
 })
-export class TdesignIconsAngularModule {}
+export class TIconModule {}

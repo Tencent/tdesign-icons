@@ -1,3 +1,5 @@
+import { ComponentType } from 'react';
+
 /**
  * TS 无法直接 extends Union Type，但是可以 extends 一个 TypeAlias
 ```ts
@@ -53,4 +55,4 @@ export type MatchProperties<S, T> = Pick<S, MatchPropertyNames<S, T>>;
   type FooProps = InferProps<typeof Foo>;
 ```
  */
-export type InferProps<C> = C extends React.ComponentType<infer P> ? P : never;
+export type InferProps<C> = C extends ComponentType<infer P> ? P : never;

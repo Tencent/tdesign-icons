@@ -1,13 +1,13 @@
 import Vue from 'vue';
 
-function hump2Underline(s) {
+function hump2Underline(s: string) {
   return s
     .replace(/([A-Z])/g, '-$1')
     .toLowerCase()
     .replace('view-box', 'viewBox');
 }
 
-function jsonToUnderline(obj) {
+function jsonToUnderline(obj: any) {
   if (obj instanceof Array) {
     obj.forEach((v) => {
       jsonToUnderline(v);
@@ -24,7 +24,7 @@ function jsonToUnderline(obj) {
   }
 }
 
-function renderFn(createElement, node, id, rootProps) {
+function renderFn(createElement: any, node: any, id: string, rootProps: any) {
   const iconAttrs = Object.assign({}, node.attrs, rootProps.attrs);
   const { attrs, ...restProps } = rootProps;
   return createElement(
@@ -34,13 +34,16 @@ function renderFn(createElement, node, id, rootProps) {
       attrs: iconAttrs,
       ...restProps,
     },
-    (node.children || []).map((child, index) => renderFn(createElement, child, `${id}-${node.tag}-${index}`, {})),
+    (node.children || []).map((child: any, index: number) =>
+      renderFn(createElement, child, `${id}-${node.tag}-${index}`, {}),
+    ),
   );
 }
 
 export default Vue.extend({
   functional: true,
   render(createElement, { data }) {
+    // @ts-ignore
     const { icon, id, ...userProps } = data.props;
     data.props = userProps;
     const { staticClass, class: clz, ...restProps } = data;

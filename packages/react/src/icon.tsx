@@ -1,13 +1,22 @@
 import classNames from 'classnames';
-import { createElement, forwardRef, ForwardRefExoticComponent, ReactElement, Ref, RefAttributes } from 'react';
+import {
+  createElement,
+  forwardRef,
+  ForwardRefExoticComponent,
+  ReactElement,
+  Ref,
+  RefAttributes,
+  MouseEventHandler,
+  CSSProperties,
+} from 'react';
 import useSizeProps from './iconfont/use-size-props';
 
 export interface IconProps {
   focusable?: string;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
   className?: string;
   size?: 'small' | 'middle' | 'large' | string | number;
-  onClick?: React.MouseEventHandler<SVGSVGElement>;
+  onClick?: MouseEventHandler<SVGSVGElement>;
 }
 
 export interface IconFulfilledProps extends IconProps {

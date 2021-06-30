@@ -20,6 +20,7 @@ export const IconFont = Vue.extend({
         url = this.url instanceof Array ? this.url.concat() : [this.url];
       }
       if (this.loadDefaultIcons) {
+        // @ts-ignore
         url.push(this.innerUrl);
       }
       return [...Array.from(new Set(url))];
@@ -34,7 +35,9 @@ export const IconFont = Vue.extend({
 
   // 插入 iconfont 样式
   mounted() {
+    // @ts-ignore
     this._urls.forEach((url: any) => {
+      // @ts-ignore
       this.checkUrlAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
     });
   },

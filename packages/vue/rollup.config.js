@@ -1,6 +1,13 @@
 import vue from 'rollup-plugin-vue';
-import typescript from 'rollup-plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
+
+const defaults = {
+  compilerOptions: {
+    declaration: true,
+    module: 'es2015',
+  },
+};
 
 export default [
   {
@@ -12,9 +19,7 @@ export default [
     external: ['vue'],
     plugins: [
       typescript({
-        tsconfig: false,
-        experimentalDecorators: true,
-        module: 'es2015',
+        tsconfigDefaults: defaults,
       }),
       vue({ template: { optimizeSSR: true } }),
     ],
@@ -28,9 +33,7 @@ export default [
     external: ['vue'],
     plugins: [
       typescript({
-        tsconfig: false,
-        experimentalDecorators: true,
-        module: 'es2015',
+        tsconfigDefaults: defaults,
       }),
       vue(),
     ],
@@ -46,9 +49,7 @@ export default [
     external: ['vue'],
     plugins: [
       typescript({
-        tsconfig: false,
-        experimentalDecorators: true,
-        module: 'es2015',
+        tsconfigDefaults: defaults,
       }),
       vue({ template: { optimizeSSR: true } }),
     ],
@@ -64,9 +65,7 @@ export default [
     external: ['vue'],
     plugins: [
       typescript({
-        tsconfig: false,
-        experimentalDecorators: true,
-        module: 'es2015',
+        tsconfigDefaults: defaults,
       }),
       vue({ template: { optimizeSSR: true } }),
       terser(),

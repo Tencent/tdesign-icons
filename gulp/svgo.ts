@@ -40,7 +40,7 @@ function getSVGOOption(config: SVGOConfig = {}) {
       { moveGroupAttrsToElems: true },
       { collapseGroups: true },
       { removeRasterImages: false },
-      { mergePaths: true },
+      // { mergePaths: true },
       { convertShapeToPath: true },
       { sortAttrs: true },
       { removeDimensions: true },

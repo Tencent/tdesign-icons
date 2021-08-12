@@ -23,7 +23,7 @@ export const IconFont = Vue.extend({
       if (this.loadDefaultIcons) {
         url.push(CDN_ICONFONT_URL);
       }
-      return [...Array.from(new Set(url))];
+      return Array.from(new Set(url));
     },
   },
 

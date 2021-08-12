@@ -1,7 +1,6 @@
 import Vue, { VNode } from 'vue';
 import classNames from 'classnames';
 import props from './props/props';
-import { Styles } from '../utils/interface';
 import useSizeProps from './util/useSizeProps';
 import ConfigContext from './util/ConfigContext';
 

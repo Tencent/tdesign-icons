@@ -1,5 +1,3 @@
-import { Styles } from '../../utils/interface';
-
 /**
  * 表示组件支持通过 className 和 style 进行样式定制
  */

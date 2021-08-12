@@ -1,4 +1,5 @@
-import Vue from 'vue';
+import Vue, { VNode } from 'vue';
+import classNames from 'classnames';
 
 function hump2Underline(s: string) {
   return s
@@ -42,16 +43,25 @@ function renderFn(createElement: any, node: any, id: string, rootProps: any) {
 
 export default Vue.extend({
   functional: true,
-  render(createElement, { data }) {
-    // @ts-ignore
-    const { icon, id, ...userProps } = data.props;
-    data.props = userProps;
-    const { staticClass, class: clz, ...restProps } = data;
-    const cls = `t-icon t-icon-${id} ${staticClass || ''} ${clz || ''}`.trim();
+  props: {
+    icon: {
+      type: Object,
+    },
+    id: {
+      type: String,
+      default: '',
+    },
+  },
+  render(createElement, context): VNode {
+    const { icon, id, ...userProps } = context.props;
+    const { staticClass, class: clz, ...restProps } = context.data;
+    const cls = classNames('t-icon', `t-icon-${id}`, staticClass, clz);
     jsonToUnderline(icon);
-    return renderFn(createElement, icon, `${id}`, {
-      class: cls,
+    return renderFn(createElement, icon, id, {
       ...restProps,
+      class: undefined,
+      staticClass: cls,
+      props: userProps,
     });
   },
 });

@@ -14,7 +14,7 @@ export default {
   },
   /** 图标尺寸，支持 'small', 'medium', 'large'，'35px', '3em' 等 */
   size: {
-    type: String,
+    type: String as PropType<'small' | 'medium' | 'large' | string>,
     default: undefined,
   },
   /** 图标 DOM 元素，可选值：i/span/div/... */

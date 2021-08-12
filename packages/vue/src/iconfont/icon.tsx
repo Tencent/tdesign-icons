@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import props from './props/props';
 import useSizeProps from './util/useSizeProps';
 import ConfigContext from './util/ConfigContext';
+import { TdIconfontProps } from './props/TdIconfontProps';
 
 const { classPrefix } = ConfigContext;
 const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/web/index.css';
@@ -66,7 +67,7 @@ export const IconFont = Vue.extend({
       ...otherBinds
     } = data;
 
-    const { name = '', size = 'middle', tag = 'i', url = [], loadDefaultIcons = true } = {
+    const { name = '', size = 'middle', tag = 'i', url = [], loadDefaultIcons = true }: Partial<TdIconfontProps> = {
       ...customAttrs,
       ...this.$props,
     };

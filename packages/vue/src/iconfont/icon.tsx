@@ -28,7 +28,7 @@ export const IconFont = Vue.extend({
 
   // 插入 iconfont 样式
   mounted() {
-    this._urls.forEach((url: any) => {
+    this._urls.forEach((url: string) => {
       this.checkUrlAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
     });
   },

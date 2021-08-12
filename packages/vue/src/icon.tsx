@@ -1,4 +1,4 @@
-import Vue, { VNode } from 'vue';
+import Vue, { VNode, CreateElement, PropType, VNodeData } from 'vue';
 import classNames from 'classnames';
 
 function hump2Underline(s: string) {
@@ -8,9 +8,9 @@ function hump2Underline(s: string) {
     .replace('view-box', 'viewBox');
 }
 
-function jsonToUnderline(obj: any) {
+function jsonToUnderline(obj: SVGJson) {
   if (obj instanceof Array) {
-    obj.forEach((v) => {
+    (obj as SVGJson[]).forEach((v) => {
       jsonToUnderline(v);
     });
   } else if (obj instanceof Object) {
@@ -25,7 +25,7 @@ function jsonToUnderline(obj: any) {
   }
 }
 
-function renderFn(createElement: any, node: any, id: string, rootProps: any) {
+function renderFn(createElement: CreateElement, node: SVGJson, id: string, rootProps: VNodeData): VNode {
   const iconAttrs = Object.assign({}, node.attrs, rootProps.attrs);
   const { attrs, ...restProps } = rootProps;
   return createElement(
@@ -35,7 +35,7 @@ function renderFn(createElement: any, node: any, id: string, rootProps: any) {
       attrs: iconAttrs,
       ...restProps,
     },
-    (node.children || []).map((child: any, index: number) =>
+    (node.children || []).map((child: SVGJson, index: number) =>
       renderFn(createElement, child, `${id}-${node.tag}-${index}`, {}),
     ),
   );
@@ -45,7 +45,7 @@ export default Vue.extend({
   functional: true,
   props: {
     icon: {
-      type: Object,
+      type: Object as PropType<SVGJson>,
     },
     id: {
       type: String,

@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import IconBase from '../icon';
 
-const element = $ELEMENT;
+const element: SVGJson = $ELEMENT;
 
 const $ICON_NAME = Vue.extend({
   name: '$ICON_NAME',

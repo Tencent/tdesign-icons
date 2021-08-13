@@ -97,13 +97,23 @@ export const IconFont = Vue.extend({
       finalStyle = { ...sizeStyle };
     }
 
+    const { domProps, on, nativeOn, directives, scopedSlots, slot, key, ref, refInFor } = otherBinds;
+
     const finalData = {
       class: undefined,
       staticClass: className,
       style: finalStyle,
       props: finalProps,
       attrs: customAttrs,
-      ...otherBinds,
+      domProps,
+      on,
+      nativeOn,
+      directives,
+      scopedSlots,
+      slot,
+      key,
+      ref,
+      refInFor,
     };
 
     return createElement(tag, finalData);

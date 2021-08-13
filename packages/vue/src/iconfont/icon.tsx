@@ -67,7 +67,14 @@ export const IconFont = Vue.extend({
       ...otherBinds
     } = data;
 
-    const { name = '', size = 'middle', tag = 'i', url = [], loadDefaultIcons = true }: Partial<TdIconfontProps> = {
+    const {
+      name = '',
+      size = 'middle',
+      tag = 'i',
+      url = [],
+      loadDefaultIcons = true,
+      onClick,
+    }: Partial<TdIconfontProps> = {
       ...customAttrs,
       ...this.$props,
     };
@@ -106,7 +113,7 @@ export const IconFont = Vue.extend({
       props: finalProps,
       attrs: customAttrs,
       domProps,
-      on,
+      on: onClick ? { ...on, click: onClick } : on,
       nativeOn,
       directives,
       scopedSlots,

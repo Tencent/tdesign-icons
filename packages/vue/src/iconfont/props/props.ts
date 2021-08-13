@@ -32,4 +32,6 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 点击时触发 */
+  onClick: Function as PropType<TdIconfontProps['onClick']>,
 };

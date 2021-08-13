@@ -1,9 +1,9 @@
 import Vue, { VNode } from 'vue';
 import classNames from 'classnames';
 import props from './props/props';
-import useSizeProps from './util/useSizeProps';
-import ConfigContext from './util/ConfigContext';
-import { TdIconfontProps } from './props/TdIconfontProps';
+import useSizeProps from '../utils/useSizeProps';
+import ConfigContext from '../utils/ConfigContext';
+import { TdIconfontProps } from '../utils/types';
 
 const { classPrefix } = ConfigContext;
 const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/web/index.css';

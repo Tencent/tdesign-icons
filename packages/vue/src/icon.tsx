@@ -1,6 +1,8 @@
 import Vue, { VNode, CreateElement, PropType, VNodeData } from 'vue';
 import classNames from 'classnames';
 
+import { IconBaseData } from './utils/types';
+
 function hump2Underline(s: string) {
   return s
     .replace(/([A-Z])/g, '-$1')
@@ -25,9 +27,9 @@ function jsonToUnderline(obj: SVGJson) {
   }
 }
 
-function renderFn(createElement: CreateElement, node: SVGJson, id: string, rootProps: VNodeData): VNode {
-  const iconAttrs = Object.assign({}, node.attrs, rootProps.attrs);
-  const { attrs, ...restProps } = rootProps;
+function renderFn(createElement: CreateElement, node: SVGJson, id: string, rootData: VNodeData): VNode {
+  const iconAttrs = Object.assign({}, node.attrs, rootData.attrs);
+  const { attrs, ...restProps } = rootData;
   return createElement(
     node.tag,
     {
@@ -54,14 +56,20 @@ export default Vue.extend({
   },
   render(createElement, context): VNode {
     const { icon, id, ...userProps } = context.props;
-    const { staticClass, class: clz, ...restProps } = context.data;
-    const cls = classNames('t-icon', `t-icon-${id}`, staticClass, clz);
+    const { staticClass, style, icon: _, id: __, onClick, ...otherProps } = (context.data as IconBaseData).props;
+    const cls = classNames('t-icon', `t-icon-${id}`, staticClass);
     jsonToUnderline(icon);
     return renderFn(createElement, icon, id, {
-      ...restProps,
       class: undefined,
       staticClass: cls,
-      props: userProps,
+      props: { ...userProps, ...otherProps },
+      attrs: (context.data as IconBaseData).attrs,
+      style,
+      on: onClick
+        ? {
+            click: onClick,
+          }
+        : {},
     });
   },
 });

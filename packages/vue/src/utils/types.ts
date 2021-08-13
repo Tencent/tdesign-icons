@@ -1,7 +1,3 @@
-/**
- * 代码拷贝自tdesign-web-vue
- * */
-
 export interface TdIconfontProps {
   /**
    * 是否加载组件库内置图标
@@ -55,4 +51,27 @@ export interface TdIconSVGProps {
    * 点击时触发
    */
   onClick?: (context: { e: MouseEvent }) => void;
+}
+
+export interface IconProps {
+  size?: string;
+  onClick?: (context: { e: MouseEvent }) => void;
+  [key: string]: any;
+}
+
+export interface IconBaseData {
+  attrs: {
+    [key: string]: any;
+  };
+  props: {
+    icon: SVGJson;
+    id: string;
+    staticClass?: string;
+    style?: {
+      [key: string]: any;
+    };
+    onClick?: (context: { e: MouseEvent }) => void;
+    [key: string]: any;
+  };
+  [key: string]: any;
 }

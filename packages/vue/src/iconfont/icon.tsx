@@ -1,8 +1,9 @@
-import Vue from 'vue';
+import Vue, { VNode } from 'vue';
 import classNames from 'classnames';
 import props from './props/props';
-import useSizeProps from './util/useSizeProps';
-import ConfigContext from './util/ConfigContext';
+import useSizeProps from '../utils/useSizeProps';
+import ConfigContext from '../utils/ConfigContext';
+import { TdIconfontProps } from '../utils/types';
 
 const { classPrefix } = ConfigContext;
 const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/web/index.css';
@@ -20,24 +21,15 @@ export const IconFont = Vue.extend({
         url = this.url instanceof Array ? this.url.concat() : [this.url];
       }
       if (this.loadDefaultIcons) {
-        // @ts-ignore
-        url.push(this.innerUrl);
+        url.push(CDN_ICONFONT_URL);
       }
-      return [...Array.from(new Set(url))];
+      return Array.from(new Set(url));
     },
-  },
-  data() {
-    return {
-      innerUrl: CDN_ICONFONT_URL,
-      classPrefix,
-    };
   },
 
   // 插入 iconfont 样式
   mounted() {
-    // @ts-ignore
-    this._urls.forEach((url: any) => {
-      // @ts-ignore
+    this._urls.forEach((url: string) => {
       this.checkUrlAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
     });
   },
@@ -64,18 +56,38 @@ export const IconFont = Vue.extend({
     },
   },
 
-  render(createElement) {
+  render(createElement): VNode {
     const data = this.$vnode.data || {};
-    const { class: customClassName, style: customStyle, attrs: customAttrs, ...otherBinds } = data;
+    const {
+      class: customClassName,
+      staticClass: customStaticClassName,
+      style: customStyle,
+      attrs: customAttrs,
+      props: _,
+      ...otherBinds
+    } = data;
 
-    const customProps = this.$props || {};
-
-    const customPandA = { ...customProps, ...customAttrs };
-    const { name, size = 'middle', tag = 'i', url = [], loadDefaultIcons = true } = customPandA || {};
+    const {
+      name = '',
+      size = 'middle',
+      tag = 'i',
+      url = [],
+      loadDefaultIcons = true,
+      onClick,
+    }: Partial<TdIconfontProps> = {
+      ...customAttrs,
+      ...this.$props,
+    };
 
     const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
 
-    const className = classNames(`${classPrefix}-icon`, `${classPrefix}-icon-${name}`, sizeClassName, customClassName);
+    const className = classNames(
+      `${classPrefix}-icon`,
+      `${classPrefix}-icon-${name}`,
+      sizeClassName,
+      customClassName,
+      customStaticClassName,
+    );
 
     const finalProps = {
       name,
@@ -85,21 +97,23 @@ export const IconFont = Vue.extend({
       loadDefaultIcons,
     };
 
-    let finalStyle;
+    let finalStyle: Styles;
     if (customStyle instanceof Object) {
-      finalStyle = { ...customStyle, ...sizeStyle };
+      finalStyle = { ...sizeStyle, ...(customStyle as Styles) };
     } else {
       finalStyle = { ...sizeStyle };
     }
 
     const { domProps, on, nativeOn, directives, scopedSlots, slot, key, ref, refInFor } = otherBinds;
+
     const finalData = {
-      class: className,
+      class: undefined,
+      staticClass: className,
       style: finalStyle,
       props: finalProps,
       attrs: customAttrs,
       domProps,
-      on,
+      on: onClick ? { ...on, click: onClick } : on,
       nativeOn,
       directives,
       scopedSlots,

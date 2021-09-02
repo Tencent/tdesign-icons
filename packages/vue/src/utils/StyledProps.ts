@@ -5,10 +5,10 @@ export interface StyledProps {
   /**
    * 组件自定义类名
    */
-  className?: string;
+  className: string;
 
   /**
    * 组件自定义样式
    */
-  style?: Record<string, unknown>;
+  style: Styles;
 }

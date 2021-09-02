@@ -2,7 +2,7 @@
  * 代码拷贝自tdesign-web-vue types/iconfont/props.ts
  * */
 
-import { TdIconfontProps } from './TdIconfontProps';
+import { TdIconfontProps } from '../../utils/types';
 import { PropType } from 'vue';
 
 export default {
@@ -14,7 +14,7 @@ export default {
   },
   /** 图标尺寸，支持 'small', 'medium', 'large'，'35px', '3em' 等 */
   size: {
-    type: String,
+    type: String as PropType<SizeEnum | string>,
     default: undefined,
   },
   /** 图标 DOM 元素，可选值：i/span/div/... */
@@ -32,4 +32,6 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 点击时触发 */
+  onClick: Function as PropType<TdIconfontProps['onClick']>,
 };

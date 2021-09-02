@@ -1,4 +1,7 @@
-import Vue from 'vue';
+import Vue, { VNode, CreateElement, PropType, VNodeData } from 'vue';
+import classNames from 'classnames';
+
+import { IconBaseData } from './utils/types';
 
 function hump2Underline(s: string) {
   return s
@@ -7,9 +10,9 @@ function hump2Underline(s: string) {
     .replace('view-box', 'viewBox');
 }
 
-function jsonToUnderline(obj: any) {
+function jsonToUnderline(obj: SVGJson) {
   if (obj instanceof Array) {
-    obj.forEach((v) => {
+    (obj as SVGJson[]).forEach((v) => {
       jsonToUnderline(v);
     });
   } else if (obj instanceof Object) {
@@ -24,9 +27,9 @@ function jsonToUnderline(obj: any) {
   }
 }
 
-function renderFn(createElement: any, node: any, id: string, rootProps: any) {
-  const iconAttrs = Object.assign({}, node.attrs, rootProps.attrs);
-  const { attrs, ...restProps } = rootProps;
+function renderFn(createElement: CreateElement, node: SVGJson, id: string, rootData: VNodeData): VNode {
+  const iconAttrs = Object.assign({}, node.attrs, rootData.attrs);
+  const { attrs, ...restProps } = rootData;
   return createElement(
     node.tag,
     {
@@ -34,7 +37,7 @@ function renderFn(createElement: any, node: any, id: string, rootProps: any) {
       attrs: iconAttrs,
       ...restProps,
     },
-    (node.children || []).map((child: any, index: number) =>
+    (node.children || []).map((child: SVGJson, index: number) =>
       renderFn(createElement, child, `${id}-${node.tag}-${index}`, {}),
     ),
   );
@@ -42,16 +45,31 @@ function renderFn(createElement: any, node: any, id: string, rootProps: any) {
 
 export default Vue.extend({
   functional: true,
-  render(createElement, { data }) {
-    // @ts-ignore
-    const { icon, id, ...userProps } = data.props;
-    data.props = userProps;
-    const { staticClass, class: clz, ...restProps } = data;
-    const cls = `t-icon t-icon-${id} ${staticClass || ''} ${clz || ''}`.trim();
+  props: {
+    icon: {
+      type: Object as PropType<SVGJson>,
+    },
+    id: {
+      type: String,
+      default: '',
+    },
+  },
+  render(createElement, context): VNode {
+    const { icon, id, ...userProps } = context.props;
+    const { staticClass, style, icon: _, id: __, onClick, ...otherProps } = (context.data as IconBaseData).props;
+    const cls = classNames('t-icon', `t-icon-${id}`, staticClass);
     jsonToUnderline(icon);
-    return renderFn(createElement, icon, `${id}`, {
-      class: cls,
-      ...restProps,
+    return renderFn(createElement, icon, id, {
+      class: undefined,
+      staticClass: cls,
+      props: { ...userProps, ...otherProps },
+      attrs: (context.data as IconBaseData).attrs,
+      style,
+      on: onClick
+        ? {
+            click: onClick,
+          }
+        : {},
     });
   },
 });

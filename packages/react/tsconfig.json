@@ -12,7 +12,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "strict": true,
-    "declaration": true,
+    "declaration": false,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "noUnusedLocals": true,

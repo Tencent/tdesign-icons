@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { dest, src } from 'gulp';
 import concat from 'gulp-concat';
 import iconfont from 'gulp-iconfont';
@@ -23,10 +24,12 @@ export const generateIconFont = ({
       .pipe(iconfontCss(fontCssConfig))
       .pipe(
         iconfont({
-          fontName: 'index', // required
+          fontName: 't', // required
           prependUnicode: true, // recommended option
-          formats: ['ttf', 'eot', 'woff', 'svg'], // default, 'woff2' and 'svg' are available
+          formats: ['svg', 'ttf', 'eot', 'woff'], // default, 'woff2' and 'svg' are available
           timestamp: runTimestamp, // recommended to get consistent builds when watching files
+          normalize: true,
+          fontHeight: 1024
         }),
       )
       .on('glyphs', (glyphs: GLYPHS[]) => {
@@ -48,15 +51,17 @@ export const generateIconFontJson = ({ iconGlob, targetDir }: { iconGlob: string
 
 function useItemJsonTemplate() {
   function getItem(content: string, name: string) {
-    return `{"name": "${name}","svgCode": '${content}',"codepoint": "\\\\${escape(svgMap[name]).replace('%u', '')}"},`;
+    return `{"name": "${name}","svgCode": ${JSON.stringify(content).replace(
+      /(\r\n|\n|\r)/gm,
+      '',
+    )},"codepoint": "\\\\${escape(svgMap[name]).replace('%u', '')}"},`;
   }
   return createTransformStream((_, { stem: name }) => getItem(_, name));
 }
 
 function useJsonTemplate() {
   function getContainer(content: string) {
-    return `
-    {"iconName":"t","icons":[${content}]}`;
+    return `{"iconName":"t","icons":[${content}]}`;
   }
   return createTransformStream((content) => getContainer(content));
 }

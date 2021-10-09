@@ -1,9 +1,10 @@
 @font-face {
 	font-family: "<%= fontName %>";
-  src: url('<%= fontPath %><%= fontName %>.svg#iconcool') format("svg"),
-  url('<%= fontPath %><%= fontName %>.ttf') format("truetype"),
-  url('<%= fontPath %><%= fontName %>.woff') format("woff"),
-  url('<%= fontPath %><%= fontName %>.eot?#iefix') format("embedded-opentype");
+  src: url('<%= fontPath %><%= fontName %>.eot'), /* for IE 9*/
+  url('<%= fontPath %><%= fontName %>.eot?#iefix') format("embedded-opentype"), /* under IE9 */
+  url('<%= fontPath %><%= fontName %>.woff') format("woff"),  /* chrome, firefox */
+  url('<%= fontPath %><%= fontName %>.ttf') format("truetype"),  /* opera, Safari, Android, iOS 4.2+ */
+  url('<%= fontPath %><%= fontName %>.svg') format("svg");  /* iOS 4.1- */
   font-weight: normal;
   font-style: normal;
 }

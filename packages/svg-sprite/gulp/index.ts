@@ -8,30 +8,31 @@ const iconGlob = path.resolve(__dirname, '../../../svg/*.svg');
 const iconDir = path.resolve(__dirname, '../../../svg');
 const targetDir = path.resolve(__dirname, '../dist/');
 const config = {
+  svg: {
+    rootAttributes: {
+      style: 'position:absolute; width:0; height:0; visibility:hidden',
+    },
+  },
   shape: {
+    id: {
+      generator(name: string) {
+        return `t-icon-${name.replace('.svg', '')}`;
+      },
+    },
     dimension: {
       // Set maximum dimensions
-      maxWidth: 32,
-      maxHeight: 32,
-    },
-    spacing: {
-      // Add padding
-      padding: 10,
+      maxWidth: 16,
+      maxHeight: 16,
     },
   },
   mode: {
-    css: {
-      bust: false,
-      render: {
-        css: true,
-      },
-    },
+    symbol: true,
   },
 };
 
 export function svgSpriteTask() {
   return series(
-    clearDir(['packages/svgSprite/dist']),
+    clearDir(['packages/svg-sprite/dist']),
     generateSprite({ iconGlob, iconDir, config, targetDir }),
     generateSvgSpriteJS({ from: templateFrom, to: targetDir }),
   );

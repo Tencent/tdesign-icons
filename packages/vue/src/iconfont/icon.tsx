@@ -6,7 +6,7 @@ import ConfigContext from '../utils/ConfigContext';
 import { TdIconfontProps } from '../utils/types';
 
 const { classPrefix } = ConfigContext;
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/web/index.css';
+const CDN_ICONFONT_URL = '//tdesign.gtimg.com/icon/0.0.3/fonts/index.css';
 
 const name = `${classPrefix}-icon`;
 

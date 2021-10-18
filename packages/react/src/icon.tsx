@@ -6,17 +6,15 @@ import {
   ReactElement,
   Ref,
   RefAttributes,
-  MouseEventHandler,
+  SVGAttributes,
   CSSProperties,
 } from 'react';
 import useSizeProps from './iconfont/use-size-props';
 
-export interface IconProps {
-  focusable?: string;
+export interface IconProps extends SVGAttributes<SVGSVGElement> {
   style?: CSSProperties;
   className?: string;
   size?: 'small' | 'middle' | 'large' | string | number;
-  onClick?: MouseEventHandler<SVGSVGElement>;
 }
 
 export interface IconFulfilledProps extends IconProps {

@@ -5,6 +5,8 @@ import typescript from 'rollup-plugin-typescript2';
 import less from 'rollup-plugin-less';
 import { terser } from 'rollup-plugin-terser';
 
+// TODO cjs/es都改为rollup打包
+
 const defaults = {
   compilerOptions: {
     declaration: false,
@@ -12,44 +14,44 @@ const defaults = {
   },
 };
 
-export default [
-  {
-    input: 'src/index.ts',
-    output: {
-      format: 'umd',
-      file: 'dist/index.js',
-      name: 'tdesignIconsVue',
-      sourcemap: true,
-    },
-    external: ['vue'],
-    plugins: [
-      nodeResolve(),
-      commonjs(),
-      less({ output: 'dist/index.css' }),
-      typescript({
-        tsconfigOverride: defaults,
-      }),
-      vue({ template: { optimizeSSR: true } }),
-    ],
+const umdConfig = {
+  input: 'src/index.ts',
+  output: {
+    format: 'umd',
+    file: 'dist/index.js',
+    name: 'tdesignIconsVue',
+    sourcemap: true,
   },
-  {
-    input: 'src/index.ts',
-    output: {
-      format: 'umd',
-      file: 'dist/index.min.js',
-      name: 'tdesignIconsVue',
-      sourcemap: true,
-    },
-    external: ['vue'],
-    plugins: [
-      nodeResolve(),
-      commonjs(),
-      less({ output: 'dist/index.min.css', options: { compress: true } }),
-      typescript({
-        tsconfigOverride: defaults,
-      }),
-      vue({ template: { optimizeSSR: true } }),
-      terser(),
-    ],
+  external: ['vue'],
+  plugins: [
+    nodeResolve(),
+    commonjs(),
+    less({ output: 'dist/index.css' }),
+    typescript({
+      tsconfigOverride: defaults,
+    }),
+    vue({ template: { optimizeSSR: true } }),
+  ],
+};
+
+const umdMiniConfig = {
+  input: 'src/index.ts',
+  output: {
+    format: 'umd',
+    file: 'dist/index.min.js',
+    name: 'tdesignIconsVue',
+    sourcemap: true,
   },
-];
+  external: ['vue'],
+  plugins: [
+    nodeResolve(),
+    commonjs(),
+    less({ output: 'dist/index.min.css', options: { compress: true } }),
+    typescript({
+      tsconfigOverride: defaults,
+    }),
+    vue({ template: { optimizeSSR: true } }),
+    terser(),
+  ],
+};
+export default [umdConfig, umdMiniConfig];

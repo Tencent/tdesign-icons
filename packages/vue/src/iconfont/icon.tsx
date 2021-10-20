@@ -5,13 +5,13 @@ import useSizeProps from '../utils/useSizeProps';
 import ConfigContext from '../utils/ConfigContext';
 import { TdIconfontProps } from '../utils/types';
 
+import '../style/index.css';
+
 const { classPrefix } = ConfigContext;
 const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.0.3/fonts/index.css';
 
-const name = `${classPrefix}-icon`;
-
 export const IconFont = Vue.extend({
-  name,
+  name: 'TIconFont',
   props: { ...props },
 
   computed: {

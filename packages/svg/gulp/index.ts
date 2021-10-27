@@ -1,6 +1,8 @@
 import { parallel, series } from 'gulp';
 
 import { generateIcons } from '../../../gulp/generate-icons';
+import { generateManifest } from '../../../gulp/generate-manifest';
+
 import { svgGenIconFileContent } from './svg-use-template';
 
 export function svgTask(source: string[]) {
@@ -17,6 +19,10 @@ export function svgTask(source: string[]) {
         config: {
           removeXMLNS: false,
         },
+      }),
+      generateManifest({
+        from: source,
+        to: 'packages/svg/src',
       }),
     ),
   );

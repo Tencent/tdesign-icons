@@ -1,4 +1,4 @@
-import _Icon from './SvgSprite';
+import _Icon from './svg-sprite';
 
-export const TIcon = _Icon;
-export default TIcon;
+export const Icon = _Icon;
+export default Icon;

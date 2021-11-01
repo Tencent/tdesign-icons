@@ -1,4 +1,4 @@
 import _Icon from './icon';
 
-export const TIconFont = _Icon;
-export default TIconFont;
+export const IconFont = _Icon;
+export default IconFont;

@@ -1,5 +1,6 @@
-import Vue, { VNode, CreateElement, PropType, VNodeData } from 'vue';
+import Vue, { VNode, PropType } from 'vue';
 import classNames from 'classnames';
+import renderFn from './utils/render-fn';
 
 import { IconBaseData } from './utils/types';
 
@@ -27,22 +28,6 @@ function jsonToUnderline(obj: SVGJson) {
   }
 }
 
-function renderFn(createElement: CreateElement, node: SVGJson, id: string, rootData: VNodeData): VNode {
-  const iconAttrs = Object.assign({}, node.attrs, rootData.attrs);
-  const { attrs, ...restProps } = rootData;
-  return createElement(
-    node.tag,
-    {
-      key: id,
-      attrs: iconAttrs,
-      ...restProps,
-    },
-    (node.children || []).map((child: SVGJson, index: number) =>
-      renderFn(createElement, child, `${id}-${node.tag}-${index}`, {}),
-    ),
-  );
-}
-
 export default Vue.extend({
   functional: true,
   props: {
@@ -56,20 +41,39 @@ export default Vue.extend({
   },
   render(createElement, context): VNode {
     const { icon, id, ...userProps } = context.props;
+
     const { staticClass, style, icon: _, id: __, onClick, ...otherProps } = (context.data as IconBaseData).props;
-    const cls = classNames('t-icon', `t-icon-${id}`, staticClass);
+    const {
+      class: customClassName,
+      staticClass: customStaticClassName,
+      style: customStyle,
+      staticStyle: customStaticStyle,
+      attrs,
+      ...otherBinds
+    } = context.data;
+
+    const { domProps, on, nativeOn, directives, scopedSlots, slot, key, ref, refInFor } = otherBinds;
+
+    const finalCls = classNames('t-icon', `t-icon-${id}`, staticClass, customClassName, customStaticClassName);
+
+    const finalStyle = { ...style, ...(customStyle as Styles), ...(customStaticStyle as Styles) };
+
     jsonToUnderline(icon);
-    return renderFn(createElement, icon, id, {
+
+    return renderFn(createElement, icon, {
       class: undefined,
-      staticClass: cls,
+      staticClass: finalCls,
       props: { ...userProps, ...otherProps },
-      attrs: (context.data as IconBaseData).attrs,
-      style,
-      on: onClick
-        ? {
-            click: onClick,
-          }
-        : {},
+      attrs,
+      style: finalStyle,
+      on: onClick ? { ...on, ...nativeOn, click: onClick } : { ...on, ...nativeOn },
+      directives,
+      scopedSlots,
+      slot,
+      key,
+      ref,
+      refInFor,
+      domProps,
     });
   },
 });

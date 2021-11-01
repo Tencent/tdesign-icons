@@ -1,14 +1,14 @@
 import Vue, { PropType } from 'vue';
 import IconBase from '../icon';
 import { TdIconSVGProps, IconProps } from '../utils/types';
-import useSizeProps from '../utils/useSizeProps';
+import useSizeProps from '../utils/use-size-props';
 
 import '../style/index.css';
 
 const element: SVGJson = $ELEMENT;
 
 const $ICON_NAME = Vue.extend<IconProps>({
-  name: '$ICON_NAME',
+  name: '$ICON_NAMEIcon',
   functional: true,
   props: {
     // small/medium/large/xl/18px/2em
@@ -19,8 +19,10 @@ const $ICON_NAME = Vue.extend<IconProps>({
       type: Function as PropType<TdIconSVGProps['onClick']>,
     },
   },
-  render(createElement, { props, data }) {
+  render(createElement, context) {
+    const { props, data } = context;
     const { size, ...otherProps } = props;
+
     const { className, style } = useSizeProps(size);
     const fullProps = Object.assign({}, otherProps || {}, {
       id: '$KEY',

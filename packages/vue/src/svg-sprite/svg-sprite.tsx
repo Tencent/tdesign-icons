@@ -1,20 +1,20 @@
 import Vue, { VNode } from 'vue';
 import classNames from 'classnames';
-
 import props from './props/props';
-import useSizeProps from '../utils/use-size-props';
+
 import ConfigContext from '../utils/config-context';
-import { TdIconfontProps } from '../utils/types';
-import { checkLinkAndLoad } from '../utils/check-url-and-load';
+import useSizeProps from '../utils/use-size-props';
+import { checkScriptAndLoad } from '../utils/check-url-and-load';
+import { TdIconSVGProps } from '../utils/types';
 
 import '../style/index.css';
 
 const { classPrefix } = ConfigContext;
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.0.3/fonts/index.css';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.0.3/fonts/index.js';
 
-export const IconFont = Vue.extend({
-  name: 'IconFont',
+export default Vue.extend({
+  name: 'Icon',
   functional: true,
   props: { ...props },
 
@@ -31,12 +31,10 @@ export const IconFont = Vue.extend({
       ...otherBinds
     } = data;
 
-    const { name = '', size = 'middle', tag = 'i', url, loadDefaultIcons = true, onClick }: Partial<TdIconfontProps> = {
+    const { name = '', size = 'middle', url, loadDefaultIcons = true, onClick }: Partial<TdIconSVGProps> = {
       ...customAttrs,
       ...props,
     };
-
-    const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
 
     let finalUrl: Array<string> = [];
 
@@ -46,28 +44,28 @@ export const IconFont = Vue.extend({
     if (loadDefaultIcons) {
       finalUrl.push(CDN_ICONFONT_URL);
     }
-
     Array.from(new Set(finalUrl)).forEach((url: string) => {
-      checkLinkAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
+      checkScriptAndLoad(url, `${classPrefix}-svg-js-stylesheet--unique-class`);
     });
+
+    const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
 
     const className = classNames(
       `${classPrefix}-icon`,
-      url ? name : `${classPrefix}-icon-${name}`,
+      `${classPrefix}-icon-${name}`,
       sizeClassName,
       customClassName,
       customStaticClassName,
     );
 
+    const finalStyle: Styles = { ...sizeStyle, ...(customStyle as Styles), ...(customStaticStyle as Styles) };
+
     const finalProps = {
       name,
       size,
-      tag,
       url,
       loadDefaultIcons,
     };
-
-    const finalStyle: Styles = { ...sizeStyle, ...(customStyle as Styles), ...(customStaticStyle as Styles) };
 
     const { domProps, on, nativeOn, directives, scopedSlots, slot, key, ref, refInFor } = otherBinds;
 
@@ -79,7 +77,6 @@ export const IconFont = Vue.extend({
       attrs: customAttrs,
       domProps,
       on: onClick ? { ...on, ...nativeOn, click: onClick } : { ...on, ...nativeOn },
-      nativeOn,
       directives,
       scopedSlots,
       slot,
@@ -88,8 +85,12 @@ export const IconFont = Vue.extend({
       refInFor,
     };
 
-    return createElement(tag, finalData);
+    return createElement('svg', finalData, [
+      createElement('use', {
+        attrs: {
+          href: url ? `#${name}` : `#t-icon-${name}`,
+        },
+      }),
+    ]);
   },
 });
-
-export default IconFont;

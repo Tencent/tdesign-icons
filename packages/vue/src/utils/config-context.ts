@@ -5,7 +5,7 @@ export interface Config {
   /**
    * 组件类名前缀
    *
-   * @default 'tdesign'
+   * @default 't'
    */
   classPrefix?: string;
 

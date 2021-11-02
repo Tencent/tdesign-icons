@@ -1,6 +1,6 @@
 import Vue, { PropType } from 'vue';
 import IconBase from '../icon';
-import { TdIconSVGProps, IconProps } from '../utils/types';
+import { TdIconSVGProps, IconProps, SVGJson } from '../utils/types';
 import useSizeProps from '../utils/use-size-props';
 
 import '../style/index.css';

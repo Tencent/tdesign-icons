@@ -59,6 +59,12 @@ export interface IconProps {
   [key: string]: any;
 }
 
+export interface SVGJson {
+  tag: string;
+  attrs: Record<string, any>;
+  children?: SVGJson[];
+  [kay: string]: any;
+}
 export interface IconBaseData {
   attrs: {
     [key: string]: any;

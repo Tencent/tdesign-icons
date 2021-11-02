@@ -2,7 +2,7 @@ import Vue, { VNode, PropType } from 'vue';
 import classNames from 'classnames';
 import renderFn from './utils/render-fn';
 
-import { IconBaseData } from './utils/types';
+import { IconBaseData, SVGJson } from './utils/types';
 
 function hump2Underline(s: string) {
   return s

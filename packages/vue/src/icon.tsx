@@ -60,13 +60,15 @@ export default Vue.extend({
 
     jsonToUnderline(icon);
 
+    const click = (onClick || on?.click) as Function;
+
     return renderFn(createElement, icon, {
       class: undefined,
       staticClass: finalCls,
       props: { ...userProps, ...otherProps },
       attrs,
       style: finalStyle,
-      on: onClick ? { ...on, ...nativeOn, click: onClick } : { ...on, ...nativeOn },
+      on: { ...on, click: (e: MouseEvent) => click?.({ e }), ...nativeOn },
       directives,
       scopedSlots,
       slot,

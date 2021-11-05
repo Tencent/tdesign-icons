@@ -71,6 +71,8 @@ export const IconFont = Vue.extend({
 
     const { domProps, on, nativeOn, directives, scopedSlots, slot, key, ref, refInFor } = otherBinds;
 
+    const click = (onClick || on?.click) as Function;
+
     const finalData = {
       class: undefined,
       staticClass: className,
@@ -78,7 +80,7 @@ export const IconFont = Vue.extend({
       props: finalProps,
       attrs: customAttrs,
       domProps,
-      on: onClick ? { ...on, ...nativeOn, click: onClick } : { ...on, ...nativeOn },
+      on: { ...on, click: (e: MouseEvent) => click?.({ e }), ...nativeOn },
       nativeOn,
       directives,
       scopedSlots,

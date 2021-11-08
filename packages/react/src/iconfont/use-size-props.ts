@@ -1,4 +1,4 @@
-import useCommonClassName from './util/use-common-classname';
+import useCommonClassName from '../util/use-common-classname';
 import { StyledProps } from './type';
 
 export default function useSizeProps(size: string | number): StyledProps {

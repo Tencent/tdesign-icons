@@ -1,9 +1,5 @@
 import { renderNode } from '../../../gulp/util/render';
 
-export function svgGenIconFileContent({ name, element }: { name: string; element: string }): string {
-  return renderIcon(name, element);
-}
-
 function renderIcon(name: string, element: string) {
   const node = JSON.parse(element);
 
@@ -13,4 +9,8 @@ function renderIcon(name: string, element: string) {
   node.attrs = { ...node.attrs, className };
 
   return renderNode(node);
+}
+
+export function svgGenIconFileContent({ name, element }: { name: string; element: string }): string {
+  return renderIcon(name, element);
 }

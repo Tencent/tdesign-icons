@@ -27,11 +27,14 @@ export const IconFont = Vue.extend({
       style: customStyle,
       staticStyle: customStaticStyle,
       attrs: customAttrs,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       props: _,
       ...otherBinds
     } = data;
 
-    const { name = '', size = 'middle', tag = 'i', url, loadDefaultIcons = true, onClick }: Partial<TdIconfontProps> = {
+    const {
+      name = '', size = 'middle', tag = 'i', url, loadDefaultIcons = true, onClick,
+    }: Partial<TdIconfontProps> = {
       ...customAttrs,
       ...props,
     };
@@ -69,7 +72,9 @@ export const IconFont = Vue.extend({
 
     const finalStyle: Styles = { ...sizeStyle, ...(customStyle as Styles), ...(customStaticStyle as Styles) };
 
-    const { domProps, on, nativeOn, directives, scopedSlots, slot, key, ref, refInFor } = otherBinds;
+    const {
+      domProps, on, nativeOn, directives, scopedSlots, slot, key, ref, refInFor,
+    } = otherBinds;
 
     const click = (onClick || on?.click) as Function;
 

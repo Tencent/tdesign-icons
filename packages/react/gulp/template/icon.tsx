@@ -7,16 +7,15 @@ import '../style/index.css';
 
 const element = $ELEMENT;
 
-const $ICON_NAME = forwardRef<SVGElement, IconProps>((props: IconProps, ref: Ref<SVGElement>) =>
-  createElement(
-    IconBase,
-    Object.assign({}, props, {
-      id: '$KEY',
-      ref,
-      icon: element,
-    }),
-  ),
-);
+const $ICON_NAME = forwardRef<SVGElement, IconProps>((props: IconProps, ref: Ref<SVGElement>) => createElement(
+  IconBase,
+  {
+    ...props,
+    id: '$KEY',
+    ref,
+    icon: element,
+  },
+));
 
 $ICON_NAME.displayName = '$ICON_NAME';
 

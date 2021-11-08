@@ -1,0 +1,16 @@
+{
+  "extends": ["eslint-config-airbnb-base"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-shadow": "off",
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "no-underscore-dangle": "off",
+    "max-len": "off"
+  }
+}

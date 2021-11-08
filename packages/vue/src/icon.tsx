@@ -20,7 +20,9 @@ function jsonToUnderline(obj: SVGJson) {
     Object.keys(obj).forEach((key) => {
       const newKey = hump2Underline(key);
       if (newKey !== key) {
+        // eslint-disable-next-line no-param-reassign
         obj[newKey] = obj[key];
+        // eslint-disable-next-line no-param-reassign
         delete obj[key];
       }
       jsonToUnderline(obj[newKey]);
@@ -42,7 +44,9 @@ export default Vue.extend({
   render(createElement, context): VNode {
     const { icon, id, ...userProps } = context.props;
 
-    const { staticClass, style, icon: _, id: __, onClick, ...otherProps } = (context.data as IconBaseData).props;
+    const {
+      staticClass, style, icon: _, id: __, onClick, ...otherProps
+    } = (context.data as IconBaseData).props;
     const {
       class: customClassName,
       staticClass: customStaticClassName,
@@ -52,7 +56,9 @@ export default Vue.extend({
       ...otherBinds
     } = context.data;
 
-    const { domProps, on, nativeOn, directives, scopedSlots, slot, key, ref, refInFor } = otherBinds;
+    const {
+      domProps, on, nativeOn, directives, scopedSlots, slot, key, ref, refInFor,
+    } = otherBinds;
 
     const finalCls = classNames('t-icon', `t-icon-${id}`, staticClass, customClassName, customStaticClassName);
 

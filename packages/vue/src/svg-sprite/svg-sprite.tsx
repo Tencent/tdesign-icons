@@ -31,7 +31,9 @@ export default Vue.extend({
       ...otherBinds
     } = data;
 
-    const { name = '', size = 'middle', url, loadDefaultIcons = true, onClick }: Partial<TdIconSVGProps> = {
+    const {
+      name = '', size = 'middle', url, loadDefaultIcons = true, onClick,
+    }: Partial<TdIconSVGProps> = {
       ...customAttrs,
       ...props,
     };
@@ -67,7 +69,9 @@ export default Vue.extend({
       loadDefaultIcons,
     };
 
-    const { domProps, on, nativeOn, directives, scopedSlots, slot, key, ref, refInFor } = otherBinds;
+    const {
+      domProps, on, nativeOn, directives, scopedSlots, slot, key, ref, refInFor,
+    } = otherBinds;
 
     const click = (onClick || on?.click) as Function;
 

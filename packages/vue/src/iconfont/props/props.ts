@@ -2,8 +2,8 @@
  * 代码拷贝自tdesign-web-vue types/iconfont/props.ts
  * */
 
-import { TdIconfontProps } from '../../utils/types';
 import { PropType } from 'vue';
+import { TdIconfontProps } from '../../utils/types';
 
 export default {
   /** 图标名称 */

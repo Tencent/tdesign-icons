@@ -16,37 +16,18 @@ export interface IconProps extends SVGAttributes<SVGSVGElement> {
   className?: string;
   size?: 'small' | 'middle' | 'large' | string | number;
 }
-
-export interface IconFulfilledProps extends IconProps {
-  icon: IconElement;
-  id: string;
-}
-
 export interface Attrs {
   [key: string]: any;
 }
-
 export interface IconElement {
   tag: string;
   attrs: Attrs;
   children?: IconElement[];
 }
-
-// https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757
-export type CompoundedComponent = ForwardRefExoticComponent<IconFulfilledProps & RefAttributes<SVGElement>>;
-
-export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGElement>) => {
-  const { icon, id, className, size = 'middle', style, ...restProps } = props;
-  const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
-  const cls = classNames('t-icon', `t-icon-${id}`, className, sizeClassName);
-
-  return render(icon, `${id}`, {
-    ref,
-    className: cls,
-    style: { ...style, ...sizeStyle },
-    ...restProps,
-  });
-}) as CompoundedComponent;
+export interface IconFulfilledProps extends IconProps {
+  icon: IconElement;
+  id: string;
+}
 
 /**
  * use react createElement to render an IconElement with other props
@@ -62,5 +43,23 @@ function render(node: IconElement, id: string, rootProps?: { [key: string]: any 
     (node.children || []).map((child, index) => render(child, `${id}-${node.tag}-${index}`)),
   );
 }
+
+// https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757
+export type CompoundedComponent = ForwardRefExoticComponent<IconFulfilledProps & RefAttributes<SVGElement>>;
+
+export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGElement>) => {
+  const {
+    icon, id, className, size = 'middle', style, ...restProps
+  } = props;
+  const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
+  const cls = classNames('t-icon', `t-icon-${id}`, className, sizeClassName);
+
+  return render(icon, `${id}`, {
+    ref,
+    className: cls,
+    style: { ...style, ...sizeStyle },
+    ...restProps,
+  });
+}) as CompoundedComponent;
 
 IconBase.displayName = 'TIconBase';

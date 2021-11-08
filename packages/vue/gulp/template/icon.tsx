@@ -24,12 +24,13 @@ const $ICON_NAME = Vue.extend<IconProps>({
     const { size, ...otherProps } = props;
 
     const { className, style } = useSizeProps(size);
-    const fullProps = Object.assign({}, otherProps || {}, {
+    const fullProps = {
+      ...otherProps || {},
       id: '$KEY',
       icon: element,
       staticClass: className,
       style,
-    });
+    };
     data.props = fullProps;
     return createElement(IconBase, data);
   },

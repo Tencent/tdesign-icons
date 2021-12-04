@@ -1,11 +1,14 @@
 {
   "name": "tdesign-icons-vue-next",
-  "version": "0.0.0-alpha.4",
+  "version": "0.0.1",
   "files": [
     "dist",
     "esm",
     "lib",
-    "types"
+    "types",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "main": "lib/index.js",
   "module": "esm/index.js",

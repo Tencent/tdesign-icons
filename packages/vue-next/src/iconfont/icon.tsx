@@ -30,7 +30,10 @@ export const IconFont = defineComponent({
 
     const classNames = computed(() => [
       `${classPrefix}-icon`,
-      `${classPrefix}-icon-${name}`,
+      {
+        [name]: propUrl,
+        [`${classPrefix}-icon-${name}`]: !propUrl,
+      },
       sizeClassName,
       attrs.class,
     ]);
@@ -38,16 +41,12 @@ export const IconFont = defineComponent({
     const finalStyle = computed(() => ({ ...sizeStyle, ...(attrs.style as Styles) }));
 
     Array.from(new Set(finalUrl.value as string[])).forEach((url: string) => {
-      checkLinkAndLoad(url, `${classPrefix}-svg-js-stylesheet--unique-class`);
+      checkLinkAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
     });
 
     const finalProps = {
       class: classNames.value,
       style: finalStyle.value,
-      name,
-      size,
-      url: propUrl,
-      loadDefaultIcons,
       onClick: (e:MouseEvent) => onClick?.({ e }),
     };
 

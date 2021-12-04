@@ -44,10 +44,6 @@ export default defineComponent({
     const finalProps = {
       class: classNames.value,
       style: finalStyle.value,
-      name,
-      size,
-      url: propUrl,
-      loadDefaultIcons,
       onClick: (e:MouseEvent) => onClick?.({ e }),
     };
 

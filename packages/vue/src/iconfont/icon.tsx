@@ -7,7 +7,7 @@ import ConfigContext from '../utils/config-context';
 import { TdIconfontProps } from '../utils/types';
 import { checkLinkAndLoad } from '../utils/check-url-and-load';
 
-import '../style/index.css';
+import '../style/css';
 
 const { classPrefix } = ConfigContext;
 
@@ -79,7 +79,7 @@ export const IconFont = Vue.extend({
     const click = (onClick || on?.click) as Function;
 
     const finalData = {
-      class: undefined,
+      class: undefined as undefined,
       staticClass: className,
       style: finalStyle,
       props: finalProps,

@@ -3,7 +3,7 @@ import IconBase from '../icon';
 import { TdIconSVGProps, IconProps, SVGJson } from '../utils/types';
 import useSizeProps from '../utils/use-size-props';
 
-import '../style/index.css';
+import '../style/css';
 
 const element: SVGJson = $ELEMENT;
 

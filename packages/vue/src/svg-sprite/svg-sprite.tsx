@@ -7,7 +7,7 @@ import useSizeProps from '../utils/use-size-props';
 import { checkScriptAndLoad } from '../utils/check-url-and-load';
 import { TdIconSVGProps } from '../utils/types';
 
-import '../style/index.css';
+import '../style/css';
 
 const { classPrefix } = ConfigContext;
 
@@ -33,7 +33,7 @@ export default Vue.extend({
     } = data;
 
     const {
-      name = '', size = 'middle', url, loadDefaultIcons = true, onClick,
+      name = '', size, url, loadDefaultIcons = true, onClick,
     }: Partial<TdIconSVGProps> = {
       ...customAttrs,
       ...props,
@@ -77,7 +77,7 @@ export default Vue.extend({
     const click = (onClick || on?.click) as Function;
 
     const finalData = {
-      class: undefined,
+      class: undefined as undefined,
       staticClass: className,
       style: finalStyle,
       props: finalProps,

@@ -1,33 +1,35 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "jsx": "preserve",
     "lib": [
       "esnext",
-      "dom"
+      "dom",
+      "dom.iterable",
     ],
-    "sourceMap": true,
-    "target": "es5",
-    "outDir": "dist",
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
-    "strict": true,
-    "declaration": true,
-    "allowSyntheticDefaultImports": true,
+    "isolatedModules": false,
     "experimentalDecorators": true,
-    "noUnusedLocals": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "types": [
-      "node"
-    ],
-    "typeRoots": [
-      "./types",
-      "./node_modules/@types",
-    ]
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": false,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "skipLibCheck": true
   },
   "include": [
-    "src",
-    "types"
-  ]
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "types/**/*.d.ts",
+    "src/style/css.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false
 }

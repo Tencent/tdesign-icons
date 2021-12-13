@@ -18,20 +18,7 @@ module.exports = {
     ],
     '@vue/babel-preset-jsx',
   ],
-  env: {
-    test: {
-      presets: [
-        [
-          '@babel/preset-env',
-          {
-            targets: {
-              node: 'current',
-            },
-            modules: 'commonjs',
-          },
-        ],
-        '@vue/babel-preset-jsx',
-      ],
-    },
-  },
+  plugins: [
+    '@babel/plugin-transform-runtime',
+  ],
 };

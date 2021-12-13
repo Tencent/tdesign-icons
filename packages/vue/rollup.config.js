@@ -1,57 +1,126 @@
-import vue from 'rollup-plugin-vue';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
+import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
-import typescript from 'rollup-plugin-typescript2';
-import less from 'rollup-plugin-less';
+import nodeResolve from '@rollup/plugin-node-resolve';
+import multiInput from 'rollup-plugin-multi-input';
+import postcss from 'rollup-plugin-postcss';
+import vuePlugin from 'rollup-plugin-vue';
+import esbuild from 'rollup-plugin-esbuild';
+import ignoreImport from 'rollup-plugin-ignore-import';
+import replace from '@rollup/plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 
-// TODO cjs/es都改为rollup打包
+const extensions = ['.ts', '.tsx'];
 
-const defaults = {
-  compilerOptions: {
-    declaration: false,
-    module: 'es2015',
+const external = ['vue', '@babel/runtime', 'classnames'];
+const input = 'src/index.ts';
+const inputList = ['src/**/*.ts', 'src/**/*.tsx'];
+
+const getPlugins = ({ isProd = false, isUmd = false, isEsm = false } = {}) => {
+  const plugins = [
+    nodeResolve({ extensions }),
+    commonjs(),
+    vuePlugin(),
+    esbuild({
+      target: 'esnext',
+      minify: false,
+      jsx: 'preserve',
+    }),
+    babel({ babelHelpers: 'runtime', extensions }),
+  ];
+
+  if (isProd) {
+    plugins.push(
+      terser({
+        output: {
+          ascii_only: true,
+        },
+      }),
+    );
+  }
+
+  if (isUmd) {
+    plugins.push(
+      postcss({
+        extract: isProd ? 'index.min.css' : 'index.css',
+        minimize: isProd,
+        sourceMap: true,
+      }),
+    );
+  } else {
+    plugins.push(
+      postcss({
+        extract: 'style/index.css',
+      }),
+      ignoreImport({
+        extensions: ['.css'],
+      }),
+    );
+  }
+
+  if (isEsm) {
+    plugins.push(replace({
+      'var undefined$1 = undefined': 'import "./index.css"',
+    }));
+  }
+
+  return plugins;
+};
+
+const esmConfig = {
+  input: inputList,
+  treeshake: false,
+  external,
+  plugins: [multiInput()].concat(getPlugins({ isEsm: true })),
+  output: {
+    dir: 'esm/',
+    format: 'esm',
+    sourcemap: true,
+    chunkFileNames: '_chunks/dep-[hash].js',
+  },
+};
+
+const cjsConfig = {
+  input: inputList,
+  external,
+  plugins: [multiInput()].concat(getPlugins()),
+  output: {
+    dir: 'lib/',
+    format: 'cjs',
+    sourcemap: true,
+    exports: 'named',
+    chunkFileNames: '_chunks/dep-[hash].js',
   },
 };
 
 const umdConfig = {
-  input: 'src/index.ts',
+  input,
+  external,
+  plugins: getPlugins({ isUmd: true }),
   output: {
+    name: 'TDesignIconVue',
     format: 'umd',
-    file: 'dist/index.js',
-    name: 'tdesignIconsVue',
+    exports: 'named',
+    globals: { vue: 'Vue' },
     sourcemap: true,
+    file: 'dist/index.js',
   },
-  external: ['vue'],
-  plugins: [
-    nodeResolve(),
-    commonjs(),
-    less({ output: 'dist/index.css' }),
-    typescript({
-      tsconfigOverride: defaults,
-    }),
-    vue({ template: { optimizeSSR: true } }),
-  ],
 };
 
-const umdMiniConfig = {
-  input: 'src/index.ts',
+const umdMinConfig = {
+  input,
+  external,
+  plugins: getPlugins({
+    isProd: true,
+    isUmd: true,
+  }),
   output: {
+    name: 'TDesignIconVue',
     format: 'umd',
-    file: 'dist/index.min.js',
-    name: 'tdesignIconsVue',
+    exports: 'named',
+    globals: { vue: 'Vue' },
     sourcemap: true,
+    file: 'dist/index.min.js',
   },
-  external: ['vue'],
-  plugins: [
-    nodeResolve(),
-    commonjs(),
-    less({ output: 'dist/index.min.css', options: { compress: true } }),
-    typescript({
-      tsconfigOverride: defaults,
-    }),
-    vue({ template: { optimizeSSR: true } }),
-    terser(),
-  ],
 };
-export default [umdConfig, umdMiniConfig];
+
+export default [esmConfig, cjsConfig, umdConfig, umdMinConfig];

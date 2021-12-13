@@ -3,8 +3,6 @@ import IconBase from '../icon';
 import { TdIconSVGProps, IconProps, SVGJson } from '../utils/types';
 import useSizeProps from '../utils/use-size-props';
 
-import '../style/css';
-
 const element: SVGJson = $ELEMENT;
 
 const $ICON_NAME = Vue.extend<IconProps>({

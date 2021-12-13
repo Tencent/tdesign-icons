@@ -10,7 +10,7 @@ import { checkScriptAndLoad } from '../util/check-url-and-load';
 
 import { IconProps as BaseIconProps } from './type';
 
-import '../style/index.css';
+import '../style/css';
 
 export interface SpriteIconProps extends BaseIconProps {
   /**

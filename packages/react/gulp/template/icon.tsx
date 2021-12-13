@@ -3,7 +3,7 @@
 import { createElement, forwardRef, Ref } from 'react';
 import { IconBase, IconProps } from '../icon';
 
-import '../style/index.css';
+import '../style/css';
 
 const element = $ELEMENT;
 

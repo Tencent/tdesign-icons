@@ -5,7 +5,8 @@ import classNames from 'classnames';
 import useConfig from '../util/use-config';
 import useSizeProps from './use-size-props';
 import { checkLinkAndLoad } from '../util/check-url-and-load';
-import '../style/index.css';
+
+import '../style/css';
 
 export interface IconFontProps extends HTMLAttributes<HTMLElement> {
   /**

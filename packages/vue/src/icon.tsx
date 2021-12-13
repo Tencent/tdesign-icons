@@ -4,6 +4,8 @@ import renderFn from './utils/render-fn';
 
 import { IconBaseData, SVGJson } from './utils/types';
 
+import './style/css';
+
 function hump2Underline(s: string) {
   return s
     .replace(/([A-Z])/g, '-$1')

@@ -5,7 +5,7 @@ import {
 } from 'react';
 import classNames from 'classnames';
 import useConfig from '../util/use-config';
-import useSizeProps from '../iconfont/use-size-props';
+import useSizeProps from '../util/use-size-props';
 import { checkScriptAndLoad } from '../util/check-url-and-load';
 
 import { IconProps as BaseIconProps } from './type';
@@ -56,7 +56,7 @@ export const Icon = forwardRef((props: SpriteIconProps, ref: Ref<SVGSVGElement>)
     style: customStyle,
     ...restProps
   } = props;
-  const { className: sizeClassName, style: sizeStyle } = useSizeProps(size || 'middle');
+  const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
   const className = useMemo(
     () =>
       // eslint-disable-next-line implicit-arrow-linebreak

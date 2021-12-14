@@ -9,7 +9,7 @@ import {
   SVGAttributes,
   CSSProperties,
 } from 'react';
-import useSizeProps from './iconfont/use-size-props';
+import useSizeProps from './util/use-size-props';
 
 export interface IconProps extends SVGAttributes<SVGSVGElement> {
   style?: CSSProperties;
@@ -49,7 +49,7 @@ export type CompoundedComponent = ForwardRefExoticComponent<IconFulfilledProps &
 
 export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGElement>) => {
   const {
-    icon, id, className, size = 'middle', style, ...restProps
+    icon, id, className, size, style, ...restProps
   } = props;
   const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
   const cls = classNames('t-icon', `t-icon-${id}`, className, sizeClassName);

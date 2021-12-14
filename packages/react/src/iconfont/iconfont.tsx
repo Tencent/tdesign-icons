@@ -3,7 +3,7 @@ import {
 } from 'react';
 import classNames from 'classnames';
 import useConfig from '../util/use-config';
-import useSizeProps from './use-size-props';
+import useSizeProps from '../util/use-size-props';
 import { checkLinkAndLoad } from '../util/check-url-and-load';
 
 import '../style/css';
@@ -57,7 +57,7 @@ export const IconFont = forwardRef((props: IconFontProps, ref: Ref<HTMLElement>)
   const { classPrefix } = useConfig();
   const {
     name,
-    size = 'middle',
+    size,
     tag = 'i',
     className: customClassName,
     url = [],

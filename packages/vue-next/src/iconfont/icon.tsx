@@ -17,7 +17,7 @@ export const IconFont = defineComponent({
 
   setup(props, { attrs }) {
     const {
-      name = '', size = 'middle', tag = 'i', url: propUrl, loadDefaultIcons = true, onClick,
+      name = '', size, tag = 'i', url: propUrl, loadDefaultIcons = true, onClick,
     } = props;
     const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
 

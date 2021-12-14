@@ -9,12 +9,15 @@
   "files": [
     "dist/",
     "esm/",
-    "lib/"
+    "lib/",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "main": "lib/index.js",
   "module": "esm/index.js",
   "unpkg": "dist/index.min.js",
   "sideEffects": [
+    "dist/**/*",
     "esm/style/**/*",
     "lib/style/**/*"
   ],

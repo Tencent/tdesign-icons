@@ -17,7 +17,7 @@ export default defineComponent({
   props: { ...props },
   setup(props, { attrs }) {
     const {
-      name = '', size = 'middle', url: propUrl, loadDefaultIcons = true, onClick,
+      name = '', size, url: propUrl, loadDefaultIcons = true, onClick,
     } = props;
     const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
 

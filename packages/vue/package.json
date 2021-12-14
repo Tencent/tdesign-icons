@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-vue",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "files": [
     "dist",
     "esm",
@@ -25,12 +25,15 @@
     "vue": "^2.6.12"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.5",
     "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.5",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@rollup/plugin-replace": "^3.0.0",
     "@vue/babel-plugin-jsx": "^1.1.1",
+    "@vue/babel-preset-jsx": "^1.2.4",
     "@vue/compiler-sfc": "^3.2.26",
     "camelcase": "^6.2.0",
     "concurrently": "^6.4.0",

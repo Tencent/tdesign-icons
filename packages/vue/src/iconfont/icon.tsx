@@ -33,7 +33,7 @@ export const IconFont = Vue.extend({
     } = data;
 
     const {
-      name = '', size = 'middle', tag = 'i', url, loadDefaultIcons = true, onClick,
+      name = '', size, tag = 'i', url, loadDefaultIcons = true, onClick,
     }: Partial<TdIconfontProps> = {
       ...customAttrs,
       ...props,

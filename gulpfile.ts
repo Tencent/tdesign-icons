@@ -9,6 +9,8 @@ import { vueNextTask } from './packages/vue-next/gulp';
 import { svgSpriteTask } from './packages/svg-sprite/gulp';
 import { iconFontTask } from './packages/icon-font/gulp';
 
+import { iconViewTask } from './packages/view/gulp';
+
 const source: string[] = ['svg/*.svg'];
 
 export default series(
@@ -20,5 +22,6 @@ export default series(
     angularTask(source),
     svgSpriteTask(),
     iconFontTask(source),
+    iconViewTask(source),
   ),
 );

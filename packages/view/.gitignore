@@ -1,0 +1,14 @@
+.DS_Store
+
+# auto generated icons
+src/manifest.ts
+
+# build
+dist/
+src/index.js
+
+# yarn
+yarn-error.log
+
+# eslint
+.eslintcache

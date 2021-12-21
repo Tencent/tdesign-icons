@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.0.4 (2021-12-21)
+
+### Bug Fixes
+
+- 支持 es-check es5
+
 ## 0.0.3 (2021-12-14)
 
 ### Bug Fixes

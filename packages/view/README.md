@@ -13,5 +13,5 @@
 ```js
 import "tdesign-icons-view";
 
-<tdesign-icons-view />;
+<td-icons-view />;
 ```

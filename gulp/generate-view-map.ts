@@ -24,7 +24,7 @@ function showTast(host) {
 }
 
 export default define({
-    tag: 'tdesign-icons-view',
+    tag: 'td-icons-view',
     opened: false,
     render: ({ opened }) => html\`<div style="display:flex;flex-wrap:wrap">${content}</div><lit-toast></lit-toast><style>.tdesign-svg-wrapper:hover { background:var(--bg-color-demo-hover)}</style>\`,
 });`;

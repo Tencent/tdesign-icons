@@ -16,23 +16,22 @@ export const IconFont = defineComponent({
   props: { ...props },
 
   setup(props, { attrs }) {
-    const {
-      name = '', size, tag = 'i', url: propUrl, loadDefaultIcons = true, onClick,
-    } = props;
-    const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
+    const { className: sizeClassName, style: sizeStyle } = useSizeProps(props.size);
+    const propUrl = computed(() => props.url);
+    const name = computed(() => props.name || '');
 
     const finalUrl = computed(() => {
       let url = [];
-      url = propUrl instanceof Array ? propUrl.concat() : [propUrl];
-      if (loadDefaultIcons) url.push(CDN_ICONFONT_URL);
+      url = propUrl.value instanceof Array ? propUrl.value.concat() : [propUrl.value];
+      if (props.loadDefaultIcons) url.push(CDN_ICONFONT_URL);
       return url;
     });
 
     const classNames = computed(() => [
       `${classPrefix}-icon`,
       {
-        [name]: propUrl,
-        [`${classPrefix}-icon-${name}`]: !propUrl,
+        [name.value]: propUrl.value,
+        [`${classPrefix}-icon-${name.value}`]: !propUrl.value,
       },
       sizeClassName,
       attrs.class,
@@ -44,13 +43,13 @@ export const IconFont = defineComponent({
       checkLinkAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
     });
 
-    const finalProps = {
+    const finalProps = computed(() => ({
       class: classNames.value,
       style: finalStyle.value,
-      onClick: (e:MouseEvent) => onClick?.({ e }),
-    };
+      onClick: (e:MouseEvent) => props.onClick?.({ e }),
+    }));
 
-    return () => h(tag, { ...finalProps });
+    return () => h(props.tag || 'i', finalProps.value);
   },
 });
 

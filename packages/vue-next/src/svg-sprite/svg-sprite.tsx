@@ -16,21 +16,18 @@ export default defineComponent({
   name: 'Icon',
   props: { ...props },
   setup(props, { attrs }) {
-    const {
-      name = '', size, url: propUrl, loadDefaultIcons = true, onClick,
-    } = props;
-    const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
-
+    const { className: sizeClassName, style: sizeStyle } = useSizeProps(props.size);
+    const name = computed(() => props.name || '');
     const finalUrl = computed(() => {
       let url = [];
-      url = propUrl instanceof Array ? propUrl.concat() : [propUrl];
-      if (loadDefaultIcons) url.push(CDN_ICONFONT_URL);
+      url = props.url instanceof Array ? props.url.concat() : [props.url];
+      if (props.loadDefaultIcons) url.push(CDN_ICONFONT_URL);
       return url;
     });
 
     const classNames = computed(() => [
       `${classPrefix}-icon`,
-      `${classPrefix}-icon-${name}`,
+      `${classPrefix}-icon-${name.value}`,
       sizeClassName,
       attrs.class,
     ]);
@@ -41,13 +38,13 @@ export default defineComponent({
       checkScriptAndLoad(url, `${classPrefix}-svg-js-stylesheet--unique-class`);
     });
 
-    const finalProps = {
+    const finalProps = computed(() => ({
       class: classNames.value,
       style: finalStyle.value,
-      onClick: (e:MouseEvent) => onClick?.({ e }),
-    };
+      onClick: (e:MouseEvent) => props.onClick?.({ e }),
+    }));
 
-    return () => h('svg', { ...finalProps }, h('use', { href: propUrl ? `#${name}` : `#t-icon-${name}` }));
+    return () => h('svg', finalProps.value, h('use', { href: props.url ? `#${name.value}` : `#t-icon-${name.value}` }));
   },
 
 });

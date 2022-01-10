@@ -20,10 +20,12 @@ export default defineComponent({
     },
   },
   setup(props, { attrs }) {
-    const { className, style } = useSizeProps(props.size);
+    const propsSize = computed(() => props.size);
 
-    const finalCls = computed(() => ['t-icon', 't-icon-$KEY', className, attrs.class]);
-    const finalStyle = computed(() => ({ ...style, ...(attrs.style as Styles) }));
+    const { className, style } = useSizeProps(propsSize);
+
+    const finalCls = computed(() => ['t-icon', 't-icon-$KEY', className.value]);
+    const finalStyle = computed(() => ({ ...style.value, ...(attrs.style as Styles) }));
     const finalProps = computed(() => ({
       class: finalCls.value,
       style: finalStyle.value,

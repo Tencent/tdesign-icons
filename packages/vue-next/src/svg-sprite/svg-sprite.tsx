@@ -1,4 +1,6 @@
-import { computed, defineComponent, h } from 'vue';
+import {
+  computed, defineComponent, h, ref,
+} from 'vue';
 
 import ConfigContext from '../utils/config-context';
 import useSizeProps from '../utils/use-size-props';
@@ -14,10 +16,13 @@ const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.0.3/fonts/index.js';
 
 export default defineComponent({
   name: 'Icon',
-  props: { ...props },
+  props,
   setup(props, { attrs }) {
-    const { className: sizeClassName, style: sizeStyle } = useSizeProps(props.size);
+    const propsSize = computed(() => props.size);
     const name = computed(() => props.name || '');
+
+    const { className: sizeClassName, style: sizeStyle } = useSizeProps(propsSize);
+
     const finalUrl = computed(() => {
       let url = [];
       url = props.url instanceof Array ? props.url.concat() : [props.url];
@@ -28,11 +33,11 @@ export default defineComponent({
     const classNames = computed(() => [
       `${classPrefix}-icon`,
       `${classPrefix}-icon-${name.value}`,
-      sizeClassName,
-      attrs.class,
+      sizeClassName.value,
+
     ]);
 
-    const finalStyle = computed(() => ({ ...sizeStyle, ...(attrs.style as Styles) }));
+    const finalStyle = computed(() => ({ ...sizeStyle.value, ...(attrs.style as Styles) }));
 
     Array.from(new Set(finalUrl.value as string[])).forEach((url: string) => {
       checkScriptAndLoad(url, `${classPrefix}-svg-js-stylesheet--unique-class`);

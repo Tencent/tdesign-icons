@@ -13,44 +13,43 @@ const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.0.3/fonts/index.css';
 
 export const IconFont = defineComponent({
   name: 'IconFont',
-  props: { ...props },
-
+  props,
   setup(props, { attrs }) {
-    const {
-      name = '', size, tag = 'i', url: propUrl, loadDefaultIcons = true, onClick,
-    } = props;
-    const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
+    const propsSize = computed(() => props.size);
+
+    const { className: sizeClassName, style: sizeStyle } = useSizeProps(propsSize);
+
+    const name = computed(() => props.name || '');
 
     const finalUrl = computed(() => {
       let url = [];
-      url = propUrl instanceof Array ? propUrl.concat() : [propUrl];
-      if (loadDefaultIcons) url.push(CDN_ICONFONT_URL);
+      url = props.url instanceof Array ? props.url.concat() : [props.url];
+      if (props.loadDefaultIcons) url.push(CDN_ICONFONT_URL);
       return url;
     });
 
     const classNames = computed(() => [
       `${classPrefix}-icon`,
       {
-        [name]: propUrl,
-        [`${classPrefix}-icon-${name}`]: !propUrl,
+        [name.value]: props.url,
+        [`${classPrefix}-icon-${name.value}`]: !props.url,
       },
-      sizeClassName,
-      attrs.class,
+      sizeClassName.value,
     ]);
 
-    const finalStyle = computed(() => ({ ...sizeStyle, ...(attrs.style as Styles) }));
+    const finalStyle = computed(() => ({ ...sizeStyle.value, ...(attrs.style as Styles) }));
 
     Array.from(new Set(finalUrl.value as string[])).forEach((url: string) => {
       checkLinkAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
     });
 
-    const finalProps = {
+    const finalProps = computed(() => ({
       class: classNames.value,
       style: finalStyle.value,
-      onClick: (e:MouseEvent) => onClick?.({ e }),
-    };
+      onClick: (e:MouseEvent) => props.onClick?.({ e }),
+    }));
 
-    return () => h(tag, { ...finalProps });
+    return () => h(props.tag || 'i', finalProps.value);
   },
 });
 

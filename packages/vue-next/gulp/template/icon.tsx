@@ -20,19 +20,18 @@ export default defineComponent({
     },
   },
   setup(props, { attrs }) {
-    const {
-      onClick, size,
-    } = props;
-    const { className, style } = useSizeProps(size);
+    const propsSize = computed(() => props.size);
 
-    const finalCls = computed(() => ['t-icon', 't-icon-$KEY', className, attrs.class]);
-    const finalStyle = computed(() => ({ ...style, ...(attrs.style as Styles) }));
-    const finalProps = {
+    const { className, style } = useSizeProps(propsSize);
+
+    const finalCls = computed(() => ['t-icon', 't-icon-$KEY', className.value]);
+    const finalStyle = computed(() => ({ ...style.value, ...(attrs.style as Styles) }));
+    const finalProps = computed(() => ({
       class: finalCls.value,
       style: finalStyle.value,
-      onClick: (e:MouseEvent) => onClick?.({ e }),
-    };
-    return () => renderFn(element, finalProps);
+      onClick: (e:MouseEvent) => props.onClick?.({ e }),
+    }));
+    return () => renderFn(element, finalProps.value);
   },
 
 });

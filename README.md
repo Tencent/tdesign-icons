@@ -6,6 +6,15 @@
 
 TDesign Icons 是统一生产、管理 TDesign 各框架的 Icons 组件资源的仓库。
 
+# 各框架图标资源
+
+- [tdesign-icons-vue](./packages/vue)：适用于 Vue2 的 TDesign 图标 [![npm version](https://img.shields.io/npm/v/tdesign-icons-vue.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-vue) [![NPM downloads](http://img.shields.io/npm/dt/tdesign-icons-vue.svg)](https://npmjs.org/package/tdesign-icons-vue)
+- [tdesign-icons-vue-next](./packages/vue-next)：适用于 Vue3 的 TDesign 图标 [![npm version](https://img.shields.io/npm/v/tdesign-icons-vue-next.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-vue-next) [![NPM downloads](http://img.shields.io/npm/dt/tdesign-icons-vue-next.svg)](https://npmjs.org/package/tdesign-icons-vue-next)
+- [tdesign-icons-react](./packages/react)：适用于 React 的 TDesign 图标 [![npm version](https://img.shields.io/npm/v/tdesign-icons-react.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-react) [![NPM downloads](http://img.shields.io/npm/dt/tdesign-icons-react.svg)](https://npmjs.org/package/tdesign-icons-react)
+- [tdesign-icons-angular](./packages/angular)：适用于 Angular 的 TDesign 图标 [![npm version](https://img.shields.io/npm/v/tdesign-icons-angular.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-angular) [![NPM downloads](http://img.shields.io/npm/dt/tdesign-icons-angular.svg)](https://npmjs.org/package/tdesign-icons-angular)
+- [tdesign-icons-view](./packages/view)：跨框架展示 TDesign 全量图标的 Web Component [![npm version](https://img.shields.io/npm/v/tdesign-icons-view.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-view) [![NPM downloads](http://img.shields.io/npm/dt/tdesign-icons-view.svg)](https://npmjs.org/package/tdesign-icons-view)
+- [tdesign-icons-svg](./packages/svg)：纯 SVG 的 TDesign 图标 [![npm version](https://img.shields.io/npm/v/tdesign-icons-svg.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-svg) [![NPM downloads](http://img.shields.io/npm/dt/tdesign-icons-svg.svg)](https://npmjs.org/package/tdesign-icons-svg)
+
 # 贡献指南
 
 ## 加入原始图标 ⛽️

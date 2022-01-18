@@ -16,9 +16,9 @@ export interface IconFontProps extends HTMLAttributes<HTMLElement> {
 
   /**
    * 尺寸
-   * @default 'middle'
+   * @default undefined
    */
-  size?: 'small' | 'middle' | 'large' | string | number;
+  size?: 'small' | 'medium' | 'large' | string | number;
 
   /**
    * 渲染容器元素

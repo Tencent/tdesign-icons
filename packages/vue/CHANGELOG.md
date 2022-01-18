@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.0.8 `2022-01-18`
+
+### Bug Fixes
+
+- 修复 SSR 渲染问题
+- 修复 `medium` size 渲染错误问题
+
 ## 0.0.7 `2021-12-21`
 
 ### Bug Fixes

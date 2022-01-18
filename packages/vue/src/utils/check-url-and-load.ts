@@ -1,18 +1,20 @@
-// to avoid append script repeatly
+// to avoid repeat append script
 function checkScriptAndLoad(url: string, className: string) {
-  if (!document || !url || typeof url !== 'string') return;
+  if (window) {
+    if (!document || !url || typeof url !== 'string') return;
 
-  if (document.querySelectorAll(`.${className}[src="${url}"]`).length > 0) {
-    return;
+    if (document.querySelectorAll(`.${className}[src="${url}"]`).length > 0) {
+      return;
+    }
+
+    const svg = document.createElement('script');
+    svg.setAttribute('class', className);
+    svg.setAttribute('src', url);
+    document.body.appendChild(svg);
   }
-
-  const svg = document.createElement('script');
-  svg.setAttribute('class', className);
-  svg.setAttribute('src', url);
-  document.body.appendChild(svg);
 }
 
-// to avoid append link repeatly
+// to avoid repeat append link
 function checkLinkAndLoad(url: string, className: string) {
   if (!document || !url || typeof url !== 'string') return;
 

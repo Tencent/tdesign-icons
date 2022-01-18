@@ -1,5 +1,5 @@
 import {
-  computed, defineComponent, h, ref,
+  computed, defineComponent, h, onMounted,
 } from 'vue';
 
 import ConfigContext from '../utils/config-context';
@@ -39,8 +39,10 @@ export default defineComponent({
 
     const finalStyle = computed(() => ({ ...sizeStyle.value, ...(attrs.style as Styles) }));
 
-    Array.from(new Set(finalUrl.value as string[])).forEach((url: string) => {
-      checkScriptAndLoad(url, `${classPrefix}-svg-js-stylesheet--unique-class`);
+    onMounted(() => {
+      Array.from(new Set(finalUrl.value as string[])).forEach((url: string) => {
+        checkScriptAndLoad(url, `${classPrefix}-svg-js-stylesheet--unique-class`);
+      });
     });
 
     const finalProps = computed(() => ({

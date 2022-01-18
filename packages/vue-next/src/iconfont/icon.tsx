@@ -1,4 +1,6 @@
-import { computed, defineComponent, h } from 'vue';
+import {
+  computed, defineComponent, h, onMounted,
+} from 'vue';
 
 import props from './props/props';
 import useSizeProps from '../utils/use-size-props';
@@ -39,8 +41,10 @@ export const IconFont = defineComponent({
 
     const finalStyle = computed(() => ({ ...sizeStyle.value, ...(attrs.style as Styles) }));
 
-    Array.from(new Set(finalUrl.value as string[])).forEach((url: string) => {
-      checkLinkAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
+    onMounted(() => {
+      Array.from(new Set(finalUrl.value as string[])).forEach((url: string) => {
+        checkLinkAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
+      });
     });
 
     const finalProps = computed(() => ({

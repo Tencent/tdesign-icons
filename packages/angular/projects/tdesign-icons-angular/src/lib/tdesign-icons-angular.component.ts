@@ -18,7 +18,7 @@ const sizeMap = {
   default: '',
   xs: `${prefix}-size-xs`,
   small: `${prefix}-size-s`,
-  middle: `${prefix}-size-m`,
+  medium: `${prefix}-size-m`,
   large: `${prefix}-size-l`,
   xl: `${prefix}-size-xl`,
   block: `${prefix}-size-full-width`,

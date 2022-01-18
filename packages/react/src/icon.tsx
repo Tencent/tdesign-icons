@@ -14,7 +14,7 @@ import useSizeProps from './util/use-size-props';
 export interface IconProps extends SVGAttributes<SVGSVGElement> {
   style?: CSSProperties;
   className?: string;
-  size?: 'small' | 'middle' | 'large' | string | number;
+  size?: 'small' | 'medium' | 'large' | string | number;
 }
 export interface Attrs {
   [key: string]: any;

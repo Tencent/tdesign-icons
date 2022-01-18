@@ -3,9 +3,9 @@ import { SVGAttributes, CSSProperties } from 'react';
 export interface IconProps extends SVGAttributes<SVGSVGElement> {
   /**
    * 尺寸
-   * @default 'middle'
+   * @default undefined
    */
-  size?: 'small' | 'middle' | 'large' | string | number;
+  size?: 'small' | 'medium' | 'large' | string | number;
 
   /**
    * 样式

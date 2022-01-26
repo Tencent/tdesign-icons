@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-view",
-  "version": "0.0.1",
+  "version": "0.0.2-alpha.3",
   "description": "A web-component package for display all icons in any UI framework",
   "main": "dist/index.js",
   "files": [
@@ -17,7 +17,7 @@
   "dependencies": {
     "@github/clipboard-copy-element": "^1.1.2",
     "hybrids": "^7.0.3",
-    "lit-toast": "^1.5.1"
+    "tdesign-site-components": "0.5.51"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",

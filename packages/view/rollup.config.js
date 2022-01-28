@@ -1,20 +1,19 @@
-// import babel from '@rollup/plugin-babel';
-import commonjs from '@rollup/plugin-commonjs';
+import babel from '@rollup/plugin-babel';
 
 const input = 'src/index.js';
 
-const cjsConfig = {
+const esmConfig = {
   input,
   plugins: [
-    commonjs(),
-    // babel({ babelHelpers: 'runtime' }),
+    babel({
+      exclude: 'node_modules/**',
+    }),
   ],
   output: {
     dir: 'dist/',
-    format: 'cjs',
-    sourcemap: true,
-    exports: 'named',
+    format: 'esm',
+    external: ['@babel/runtime', 'tdesign-site-components'],
   },
 };
 
-export default [cjsConfig];
+export default [esmConfig];

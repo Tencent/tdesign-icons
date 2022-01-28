@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-view",
-  "version": "0.0.2-alpha.3",
+  "version": "0.0.2",
   "description": "A web-component package for display all icons in any UI framework",
   "main": "dist/index.js",
   "files": [
@@ -10,17 +10,20 @@
     "build": "cross-env NODE_ENV=production rollup -c rollup.config.js"
   },
   "keywords": [
-    "icons"
+    "icons",
+    "web component"
   ],
   "author": "uyarn",
   "license": "MIT",
   "dependencies": {
+    "@babel/runtime": "^7.16.7",
     "@github/clipboard-copy-element": "^1.1.2",
-    "hybrids": "^7.0.3",
-    "tdesign-site-components": "0.5.51"
+    "hybrids": "^7.0.3"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.0.1",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@rollup/plugin-babel": "^5.3.0",
     "rollup": "^2.61.1"
   }
 }

@@ -6,11 +6,24 @@ import concat from 'gulp-concat';
 import { createTransformStream } from '../../../gulp/transform';
 import { useTemplate } from '../../../gulp/use-template';
 
-const elementWrapperStyle = 'width: 110px; height: 110px; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-direction: column;cursor: pointer; border-radius: 6px';
+function clearAndUpper(text:string) {
+  return text.replace(/-/, '').toUpperCase();
+}
+
+function toPascalCase(text:string) {
+  return text.replace(/(^\w|-\w)/g, clearAndUpper);
+}
 
 function useItemTemplate() {
   function getItem(element:string, stem: string) {
-    return `<clipboard-copy value='<icon name="${stem}" />'><div class="tdesign-svg-wrapper" style="${elementWrapperStyle}" onclick="showToast">${element.replace(/black/g, 'currentColor').replace(/"16"/g, '"2em"')}<div style="margin-top: 12px; text-align:center">${stem}</div></div></clipboard-copy>`;
+    const pascalIconName = toPascalCase(stem);
+    return `<div class="t-icons-view__wrapper">
+    ${element.replace(/black/g, 'currentColor').replace(/"16"/g, '"2em"')}
+    <div class="t-icons-view__name" style="margin-top: 12px; text-align:center">${stem}</div>
+    <div class="t-icons-view__actions" style="margin-top: 12px; text-align:center">
+      \${showType === 'develop' ? developHTML('${stem}', '${pascalIconName}') : designHTML('${stem}' ,\`${element}\`)}
+    </div>
+  </div>`;
   }
 
   return createTransformStream((element, { stem: name }) => getItem(element, name));

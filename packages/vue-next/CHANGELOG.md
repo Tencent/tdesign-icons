@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.0.7 `2022-02-25`
+
+### Bug Fixes
+
+- 修复按需引入方式使用部分图标，由于`fillOpacity`, `fillRule`, `clipRule`属性加载异常导致的问题
+
 ## 0.0.6 `2022-01-18`
 
 ### Bug Fixes

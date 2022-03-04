@@ -8,7 +8,12 @@
     },
     "keywords": [
         "tdesign",
-        "icon"
+        "icon",
+        "tdesign-icons-react",
+        "tdesign-icons-vue",
+        "tdesign-icons-vue-next",
+        "tdesign-icons-view",
+        "tdesign-icons-svg"
     ],
     "author": "tdesign",
     "lint-staged": {

@@ -60,16 +60,18 @@ export const IconFont = forwardRef((props: IconFontProps, ref: Ref<HTMLElement>)
     size,
     tag = 'i',
     className: customClassName,
-    url = [],
+    url,
     loadDefaultIcons = true,
     style: customStyle,
     ...htmlProps
   } = props;
   const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
+
   const className = useMemo(
-    () =>
-      // eslint-disable-next-line implicit-arrow-linebreak
-      classNames(`${classPrefix}-icon`, `${classPrefix}-icon-${name}`, sizeClassName, customClassName),
+    () => {
+      const iconName = url ? name : `${classPrefix}-icon-${name}`;
+      return classNames(`${classPrefix}-icon`, iconName, sizeClassName, customClassName);
+    },
     [classPrefix, customClassName, name, sizeClassName],
   );
 
@@ -91,7 +93,7 @@ export const IconFont = forwardRef((props: IconFontProps, ref: Ref<HTMLElement>)
   // 加载 url
   useEffect(() => {
     const urls = Array.isArray(url) ? url : [url];
-    urls.forEach((url) => {
+    (urls as Array<string>).forEach((url) => {
       checkLinkAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
     });
   }, [classPrefix, url]);

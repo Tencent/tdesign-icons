@@ -50,17 +50,19 @@ export const Icon = forwardRef((props: SpriteIconProps, ref: Ref<SVGSVGElement>)
   const {
     name,
     size,
-    url = [],
+    url,
     loadDefaultIcons = true,
     className: customClassName,
     style: customStyle,
     ...restProps
   } = props;
   const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
+
   const className = useMemo(
-    () =>
-      // eslint-disable-next-line implicit-arrow-linebreak
-      classNames(`${classPrefix}-icon`, `${classPrefix}-icon-${name}`, sizeClassName, customClassName),
+    () => {
+      const iconName = url ? name : `${classPrefix}-icon-${name}`;
+      return classNames(`${classPrefix}-icon`, iconName, sizeClassName, customClassName);
+    },
     [classPrefix, customClassName, name, sizeClassName],
   );
 
@@ -82,14 +84,14 @@ export const Icon = forwardRef((props: SpriteIconProps, ref: Ref<SVGSVGElement>)
   // 加载 url
   useEffect(() => {
     const urls = Array.isArray(url) ? url : [url];
-    urls.forEach((url) => {
+    (urls as Array<string>).forEach((url) => {
       checkScriptAndLoad(url, `${classPrefix}-svg-js-stylesheet--unique-class`);
     });
   }, [classPrefix, url]);
 
   return (
     <svg ref={ref} className={className} style={{ ...customStyle, ...sizeStyle }} {...restProps}>
-      <use xlinkHref={`#t-icon-${name}`} />
+      <use xlinkHref={url ? `#${name}` : `#t-icon-${name}`} />
     </svg>
   );
 });

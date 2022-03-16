@@ -6,6 +6,7 @@ import {
   Component,
   Directive,
   OnInit,
+  HostBinding,
 } from '@angular/core';
 import { TIconService } from './tdesign-icons-angular.service';
 
@@ -102,6 +103,9 @@ export class TIconComponent extends TIconCommonBase implements OnChanges {
 
   @Input() public styles?: NgStyleInterface;
   @Input() public classes?: NgClassInterface;
+
+  @HostBinding('style.line-height') protected hostStyleLineHeight = 0;
+  @HostBinding('style.display') protected hostStyleDisplay = 'inline-block';
 
   public isSvgIcon = false;
 

@@ -1,5 +1,10 @@
 {
   "extends": "tslint:recommended",
+  "linterOptions": {
+    "exclude": [
+      "gulp/template/**/*.ts"
+    ]
+  },
   "rulesDirectory": [
     "codelyzer"
   ],

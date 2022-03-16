@@ -4,7 +4,6 @@ import {
   ViewEncapsulation,
   OnChanges,
   Component,
-  Directive,
   OnInit,
   HostBinding,
 } from '@angular/core';
@@ -39,11 +38,12 @@ export interface NgClassInterface {
 }
 
 export abstract class TIconCommonBase {
+  // tslint:disable-next-line:variable-name
   public _classes: NgClassInterface = {};
+  // tslint:disable-next-line:variable-name
   public _styles: NgStyleInterface = {};
 }
 
-@Directive()
 /**
  * all standalone icons should inherit this component
  */
@@ -52,8 +52,9 @@ export abstract class TIconStandaloneComponent
   implements OnInit, OnChanges {
   protected abstract styles?: NgStyleInterface;
   protected abstract classes?: NgClassInterface;
-  protected abstract size: string | TIconSize = 'default';
   protected abstract name: string;
+
+  protected size: string | TIconSize = 'default';
 
   public ngOnInit(): void {
     this.updateStyle();
@@ -98,9 +99,7 @@ export abstract class TIconStandaloneComponent
 export class TIconComponent extends TIconCommonBase implements OnChanges {
   @Input() public svg?: string;
   @Input() public iconfont?: string;
-
   @Input() public size: string | TIconSize = 'default';
-
   @Input() public styles?: NgStyleInterface;
   @Input() public classes?: NgClassInterface;
 

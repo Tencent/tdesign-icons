@@ -39,7 +39,7 @@ export interface SpriteIconProps extends BaseIconProps {
   className?: string;
 }
 
-const CDN_SVGSPRITE_URL = 'https://tdesign.gtimg.com/icon/0.0.3/fonts/index.js';
+const CDN_SVGSPRITE_URL = 'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.js';
 
 /**
  * 图标组件

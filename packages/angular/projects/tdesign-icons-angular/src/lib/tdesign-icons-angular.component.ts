@@ -9,8 +9,8 @@ import {
 } from '@angular/core';
 import { TIconService } from './tdesign-icons-angular.service';
 
-const DEFAULT_ICON_SVG_URL = 'https://tdesign.gtimg.com/icon/0.0.3/fonts/index.js';
-const DEFAULT_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.0.3/fonts/index.css';
+const DEFAULT_ICON_SVG_URL = 'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.js';
+const DEFAULT_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.css';
 
 const prefix = 't';
 

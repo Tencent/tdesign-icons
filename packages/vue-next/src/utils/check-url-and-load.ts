@@ -1,5 +1,10 @@
+const isServer = typeof window === 'undefined';
+
 // to avoid append script repeatly
 function checkScriptAndLoad(url: string, className: string) {
+  if (isServer) {
+    return;
+  }
   if (!document || !url || typeof url !== 'string') return;
 
   if (document.querySelectorAll(`.${className}[src="${url}"]`).length > 0) {
@@ -14,6 +19,9 @@ function checkScriptAndLoad(url: string, className: string) {
 
 // to avoid append link repeatly
 function checkLinkAndLoad(url: string, className: string) {
+  if (isServer) {
+    return;
+  }
   if (!document || !url || typeof url !== 'string') return;
 
   if (document.querySelectorAll(`.${className}[href="${url}"]`).length > 0) {

@@ -23,11 +23,11 @@ export class TIcon$ICON_NAMEComponent extends TIconStandaloneComponent {
 
   @Input() public size: string | TIconSize = 'default';
 
-  @HostBinding('attr.data-t-icon') protected hostAttrDataTIcon = true;
+  @HostBinding('attr.data-t-icon') public hostAttrDataTIcon = true;
 
-  @HostBinding('style.line-height') protected hostStyleLineHeight = 0;
+  @HostBinding('style.line-height') public hostStyleLineHeight = 0;
 
-  @HostBinding('style.display') protected hostStyleDisplay = 'inline-block';
+  @HostBinding('style.display') public hostStyleDisplay = 'inline-block';
 
   protected name = '$KEY';
 }

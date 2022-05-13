@@ -103,8 +103,8 @@ export class TIconComponent extends TIconCommonBase implements OnChanges {
   @Input() public styles?: NgStyleInterface;
   @Input() public classes?: NgClassInterface;
 
-  @HostBinding('style.line-height') protected hostStyleLineHeight = 0;
-  @HostBinding('style.display') protected hostStyleDisplay = 'inline-block';
+  @HostBinding('style.line-height') public hostStyleLineHeight = 0;
+  @HostBinding('style.display') public hostStyleDisplay = 'inline-block';
 
   public isSvgIcon = false;
 

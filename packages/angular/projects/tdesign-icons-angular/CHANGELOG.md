@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.1 `2022-05-13`
+
+### Bug Fixes
+
+- 将 HostBinding 相关 protected 变量设置为 public
+
 ## 0.1.0 `2022-05-09`
 
 ### Features

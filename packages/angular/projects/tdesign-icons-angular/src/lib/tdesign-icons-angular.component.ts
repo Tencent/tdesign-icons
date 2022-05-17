@@ -9,8 +9,10 @@ import {
 } from '@angular/core';
 import { TIconService } from './tdesign-icons-angular.service';
 
-const DEFAULT_ICON_SVG_URL = 'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.js';
-const DEFAULT_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.css';
+const DEFAULT_ICON_SVG_URL =
+  'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.js';
+const DEFAULT_ICONFONT_URL =
+  'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.css';
 
 const prefix = 't';
 
@@ -25,6 +27,7 @@ const sizeMap = {
 } as const;
 
 export type TIconSize = keyof typeof sizeMap;
+
 function isSize(key: string | TIconSize): key is TIconSize {
   return Object.keys(sizeMap).findIndex((s) => s === key) > -1;
 }
@@ -85,6 +88,7 @@ export abstract class TIconStandaloneComponent
   selector: 't-icon',
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
+  styleUrls: ['../style/index.css'],
   template: `
     <ng-container *ngIf="isSvgIcon">
       <svg [ngClass]="_classes" [ngStyle]="_styles">
@@ -103,8 +107,7 @@ export class TIconComponent extends TIconCommonBase implements OnChanges {
   @Input() public styles?: NgStyleInterface;
   @Input() public classes?: NgClassInterface;
 
-  @HostBinding('style.line-height') public hostStyleLineHeight = 0;
-  @HostBinding('style.display') public hostStyleDisplay = 'inline-block';
+  @HostBinding('class.t-icon-container') public tIconContainerClass = true;
 
   public isSvgIcon = false;
 

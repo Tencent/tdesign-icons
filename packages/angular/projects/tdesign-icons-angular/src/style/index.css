@@ -6,6 +6,10 @@
     transform: rotate(360deg);
   }
 }
+.t-icon-container {
+  display: inline-block;
+  line-height: 0;
+}
 .t-icon {
   display: inline-block;
   vertical-align: middle;

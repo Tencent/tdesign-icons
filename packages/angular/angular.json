@@ -39,9 +39,7 @@
               "projects/tdesign-icons-angular/tsconfig.lib.json",
               "projects/tdesign-icons-angular/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }

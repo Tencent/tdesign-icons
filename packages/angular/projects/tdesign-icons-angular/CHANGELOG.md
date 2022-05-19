@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.1.3 `2022-05-19`
+
+### Bug Fixes
+
+- 修复组件 HostBinding 绑定 style 属性优先级过高的问题
+- 修复添加样式引用
+
 ## 0.1.2 `2022-05-13`
 
 ### Bug Fixes

@@ -1,12 +1,16 @@
 import {
-  Component, ChangeDetectionStrategy, Input, ViewEncapsulation, HostBinding,
+  Component,
+  ChangeDetectionStrategy,
+  Input,
+  ViewEncapsulation,
+  HostBinding,
 } from '@angular/core';
 import {
   NgStyleInterface,
   NgClassInterface,
   TIconStandaloneComponent,
   TIconSize,
-// @ts-ignore
+  // @ts-ignore
 } from '../tdesign-icons-angular.component';
 
 @Component({
@@ -14,6 +18,7 @@ import {
   preserveWhitespaces: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
+  styleUrls: ['../../style/index.css'],
   template: '$SVG',
 })
 export class TIcon$ICON_NAMEComponent extends TIconStandaloneComponent {
@@ -25,9 +30,7 @@ export class TIcon$ICON_NAMEComponent extends TIconStandaloneComponent {
 
   @HostBinding('attr.data-t-icon') public hostAttrDataTIcon = true;
 
-  @HostBinding('style.line-height') public hostStyleLineHeight = 0;
-
-  @HostBinding('style.display') public hostStyleDisplay = 'inline-block';
+  @HostBinding('class.t-icon-container') public tIconContainerClass = true;
 
   protected name = '$KEY';
 }

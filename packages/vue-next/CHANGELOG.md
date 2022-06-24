@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.2 `2022-06-24`
+
+### Features
+
+- 新增`rollfront`图标
+
 ## 0.1.1 `2022-05-11`
 
 ### Bug Fixes

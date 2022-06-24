@@ -1,11 +1,7 @@
 import classNames from 'classnames';
 import {
   createElement,
-  forwardRef,
-  ForwardRefExoticComponent,
   ReactElement,
-  Ref,
-  RefAttributes,
   SVGAttributes,
   CSSProperties,
 } from 'react';
@@ -44,10 +40,7 @@ function render(node: IconElement, id: string, rootProps?: { [key: string]: any 
   );
 }
 
-// https://github.com/DefinitelyTyped/DefinitelyTyped/issues/34757
-export type CompoundedComponent = ForwardRefExoticComponent<IconFulfilledProps & RefAttributes<SVGElement>>;
-
-export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGElement>) => {
+export const IconBase = ((props: IconFulfilledProps) => {
   const {
     icon, id, className, size, style, ...restProps
   } = props;
@@ -55,11 +48,8 @@ export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGEleme
   const cls = classNames('t-icon', `t-icon-${id}`, className, sizeClassName);
 
   return render(icon, `${id}`, {
-    ref,
     className: cls,
     style: { ...style, ...sizeStyle },
     ...restProps,
   });
-}) as CompoundedComponent;
-
-IconBase.displayName = 'TIconBase';
+});

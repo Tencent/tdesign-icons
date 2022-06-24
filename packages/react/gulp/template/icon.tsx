@@ -1,21 +1,20 @@
 // This file is generated automatically by `useTemplate.ts`. DO NOT EDIT IT.
 
-import { createElement, forwardRef, Ref } from 'react';
+import { createElement } from 'react';
 import { IconBase, IconProps } from '../icon';
 
 import '../style/css';
 
 const element = $ELEMENT;
 
-const $ICON_NAME = forwardRef<SVGElement, IconProps>((props: IconProps, ref: Ref<SVGElement>) => createElement(
+const $ICON_NAME = (props: IconProps) => createElement(
   IconBase,
   {
     ...props,
     id: '$KEY',
-    ref,
     icon: element,
   },
-));
+);
 
 $ICON_NAME.displayName = '$ICON_NAME';
 

@@ -15,7 +15,7 @@ TDesign Icons 是统一生产、管理 TDesign 各框架的 Icons 组件资源�
 - [tdesign-icons-view](./packages/view)：跨框架展示 TDesign 全量图标的 Web Component [![npm version](https://img.shields.io/npm/v/tdesign-icons-view.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-view) [![NPM downloads](http://img.shields.io/npm/dm/tdesign-icons-view.svg)](https://npmjs.org/package/tdesign-icons-view)
 - [tdesign-icons-svg](./packages/svg)：纯 SVG 的 TDesign 图标 [![npm version](https://img.shields.io/npm/v/tdesign-icons-svg.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-svg) [![NPM downloads](http://img.shields.io/npm/dm/tdesign-icons-svg.svg)](https://npmjs.org/package/tdesign-icons-svg)
 
-# 贡献指南
+# 开发指南
 
 ## 加入原始图标 ⛽️
 

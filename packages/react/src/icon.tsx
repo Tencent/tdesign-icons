@@ -4,6 +4,8 @@ import {
   ReactElement,
   SVGAttributes,
   CSSProperties,
+  forwardRef,
+  Ref,
 } from 'react';
 import useSizeProps from './util/use-size-props';
 
@@ -40,7 +42,7 @@ function render(node: IconElement, id: string, rootProps?: { [key: string]: any 
   );
 }
 
-export const IconBase = ((props: IconFulfilledProps) => {
+export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGElement>) => {
   const {
     icon, id, className, size, style, ...restProps
   } = props;
@@ -48,6 +50,7 @@ export const IconBase = ((props: IconFulfilledProps) => {
   const cls = classNames('t-icon', `t-icon-${id}`, className, sizeClassName);
 
   return render(icon, `${id}`, {
+    ref,
     className: cls,
     style: { ...style, ...sizeStyle },
     ...restProps,

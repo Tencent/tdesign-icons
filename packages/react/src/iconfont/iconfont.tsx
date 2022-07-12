@@ -72,7 +72,7 @@ export const IconFont = forwardRef((props: IconFontProps, ref: Ref<HTMLElement>)
   const className = useMemo(
     () => classNames({
       [name]: props.url,
-      [`${classPrefix}-icon`]: !props.url && isBuiltInIcon,
+      [`${classPrefix}-icon`]: !props.url || isBuiltInIcon,
       [`${classPrefix}-icon-${name}`]: !props.url,
     }, sizeClassName, customClassName),
     [classPrefix, customClassName, name, sizeClassName],

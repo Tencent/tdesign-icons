@@ -21,12 +21,15 @@
 .t-icon {
   fill: currentColor;
 }
-.t-icon.t-size-s {
+.t-icon.t-size-s,
+i.t-size-s {
   font-size: 14px;
 }
-.t-icon.t-size-m {
+.t-icon.t-size-m,
+i.t-size-m {
   font-size: 16px;
 }
-.t-icon.t-size-l {
+.t-icon.t-size-l,
+i.t-size-l {
   font-size: 18px;
 }

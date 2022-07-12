@@ -15,16 +15,24 @@ export const IconFont = Vue.extend({
   props,
 
   computed: {
+    isBuiltinIcon(): boolean {
+      return this.url && /^t-icon-(\w|-)+$/.test(this.name); // 判断是否是渲染内置图标
+    },
     classes(): ClassName {
       const tName = `${classPrefix}-icon`;
 
       const { className: sizeClassName } = useSizeProps(this.size);
       const iconName = this.url ? this.name : `${tName}-${this.name}`;
+
       const arr = [
-        tName,
-        iconName,
+        {
+          [this.name]: this.url,
+          [tName]: !this.url || this.isBuiltinIcon,
+          [iconName]: !this.url,
+        },
         sizeClassName,
       ];
+
       return arr;
     },
     iconStyle(): Styles {

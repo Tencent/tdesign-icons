@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.5 `2022-07-12`
+
+### Features
+
+- 新增`mirror`和`rotation`图标
+
 ## 0.1.4 `2022-06-24`
 
 ### Features

@@ -47,7 +47,7 @@ export interface IconFontProps extends HTMLAttributes<HTMLElement> {
   loadDefaultIcons?: boolean;
 }
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.css';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.1/fonts/index.css';
 
 /**
  * 图标组件

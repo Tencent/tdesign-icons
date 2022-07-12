@@ -8,23 +8,30 @@ import '../style/css';
 
 const { classPrefix } = ConfigContext;
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.css';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.1/fonts/index.css';
 
 export const IconFont = Vue.extend({
   name: 'IconFont',
   props,
 
   computed: {
+    isBuiltinIcon(): boolean {
+      return this.url && /^t-icon-(\w|-)+$/.test(this.name); // 判断是否是渲染内置图标
+    },
     classes(): ClassName {
       const tName = `${classPrefix}-icon`;
 
       const { className: sizeClassName } = useSizeProps(this.size);
-      const iconName = this.url ? this.name : `${tName}-${this.name}`;
+
       const arr = [
-        tName,
-        iconName,
+        {
+          [this.name]: this.url,
+          [tName]: !this.url || this.isBuiltinIcon,
+          [`${tName}-${this.name}`]: !this.url,
+        },
         sizeClassName,
       ];
+
       return arr;
     },
     iconStyle(): Styles {

@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 0.1.2 `2022-07-12`
+
+### Features
+
+- 新增`mirror`和`rotation`图标
+
+### Bug Fixes
+
+- 修复 iconfont 高级用法因为 t-icon 导致不显示的异常
+- 修复 丢失 ref 的问题
+
 ## 0.1.1 `2022-06-24`
 
 ### Features

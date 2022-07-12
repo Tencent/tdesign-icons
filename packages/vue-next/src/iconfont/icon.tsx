@@ -11,7 +11,7 @@ import '../style/css';
 
 const { classPrefix } = ConfigContext;
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.css';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.1/fonts/index.css';
 
 export const IconFont = defineComponent({
   name: 'IconFont',
@@ -23,6 +23,8 @@ export const IconFont = defineComponent({
 
     const name = computed(() => props.name || '');
 
+    const isBuiltinIcon = computed(() => props.url && /^t-icon-(\w|-)+$/.test(props.name)); // 判断是否是渲染内置图标
+
     const finalUrl = computed(() => {
       let url = [];
       url = props.url instanceof Array ? props.url.concat() : [props.url];
@@ -31,9 +33,9 @@ export const IconFont = defineComponent({
     });
 
     const classNames = computed(() => [
-      `${classPrefix}-icon`,
       {
         [name.value]: props.url,
+        [`${classPrefix}-icon`]: !props.url || isBuiltinIcon.value,
         [`${classPrefix}-icon-${name.value}`]: !props.url,
       },
       sizeClassName.value,

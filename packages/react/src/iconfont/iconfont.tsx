@@ -47,7 +47,7 @@ export interface IconFontProps extends HTMLAttributes<HTMLElement> {
   loadDefaultIcons?: boolean;
 }
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.css';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.1/fonts/index.css';
 
 /**
  * 图标组件
@@ -56,7 +56,7 @@ const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.0/fonts/index.css';
 export const IconFont = forwardRef((props: IconFontProps, ref: Ref<HTMLElement>) => {
   const { classPrefix } = useConfig();
   const {
-    name,
+    name = '',
     size,
     tag = 'i',
     className: customClassName,
@@ -67,11 +67,14 @@ export const IconFont = forwardRef((props: IconFontProps, ref: Ref<HTMLElement>)
   } = props;
   const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
 
+  const isBuiltInIcon = props.url && /^t-icon-(\w|-)+$/.test(name);
+
   const className = useMemo(
-    () => {
-      const iconName = url ? name : `${classPrefix}-icon-${name}`;
-      return classNames(`${classPrefix}-icon`, iconName, sizeClassName, customClassName);
-    },
+    () => classNames({
+      [name]: props.url,
+      [`${classPrefix}-icon`]: !props.url && isBuiltInIcon,
+      [`${classPrefix}-icon-${name}`]: !props.url,
+    }, sizeClassName, customClassName),
     [classPrefix, customClassName, name, sizeClassName],
   );
 

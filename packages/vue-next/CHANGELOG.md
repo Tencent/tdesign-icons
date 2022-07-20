@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.4 `2022-07-20`
+
+### Features
+
+- 新增`image-error`图标
+
 ## 0.1.3 `2022-07-12`
 
 ### Features

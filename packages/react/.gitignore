@@ -4,6 +4,7 @@
 src/components/*.tsx
 src/manifest.ts
 src/icons.ts
+src/global-config.ts
 
 # build
 lib/

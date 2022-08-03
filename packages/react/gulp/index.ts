@@ -2,6 +2,8 @@ import { parallel, series } from 'gulp';
 
 import { generateEntry } from '../../../gulp/generate-entry';
 import { generateManifest } from '../../../gulp/generate-manifest';
+import { generateTypeMap } from '../../../gulp/generate-type-map';
+
 import { generateIcons } from '../../../gulp/generate-icons';
 import { clearDir } from '../../../gulp/clean-dir';
 
@@ -22,6 +24,10 @@ export function reactTask(source: string[]) {
       }),
 
       generateManifest({
+        from: source,
+        to: 'packages/react/src',
+      }),
+      generateTypeMap({
         from: source,
         to: 'packages/react/src',
       }),

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.7 `2022-08-10`
+
+### Features
+
+- 新增`qq`、`wechat`、`wecom`、`relativity`和`pin-filled`等图标
+
 ## 0.1.6 `2022-07-20`
 
 ### Features

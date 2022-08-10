@@ -11,7 +11,7 @@ import '../style/css';
 
 const { classPrefix } = ConfigContext;
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.1/fonts/index.css';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.2/fonts/index.css';
 
 export const IconFont = defineComponent({
   name: 'IconFont',

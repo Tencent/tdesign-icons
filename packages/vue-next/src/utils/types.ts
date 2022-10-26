@@ -19,7 +19,7 @@ export interface TdIconfontProps {
    */
   tag?: string;
   /**
-   * 图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/icon/web/index.css)。也可以在 index.html 中引入图标地址
+   * 图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/tea-icon/web/index.css)。也可以在 index.html 中引入图标地址
    */
   url?: string | Array<string>;
   /**
@@ -44,7 +44,7 @@ export interface TdIconSVGProps {
    */
   size?: string;
   /**
-   * 图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/icon/web/index.js)
+   * 图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/tea-icon/web/index.js)
    */
   url?: string | Array<string>;
   /**

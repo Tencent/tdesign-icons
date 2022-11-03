@@ -5,7 +5,7 @@ import { clearDir } from '../../../gulp/clean-dir';
 
 const targetDir = path.resolve(__dirname, '../dist/');
 const fontCssConfig = {
-  fontName: 't',
+  fontName: 'tea',
   path: path.resolve(__dirname, './template/index.css'),
   targetPath: '../dist/index.css',
   fontPath: './',

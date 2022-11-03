@@ -16,7 +16,7 @@ const config = {
   shape: {
     id: {
       generator(name: string) {
-        return `t-icon-${name.replace('.svg', '')}`;
+        return `tea-icon-${name.replace('.svg', '')}`;
       },
     },
     dimension: {

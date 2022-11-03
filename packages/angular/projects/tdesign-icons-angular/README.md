@@ -1,1 +1,0 @@
-# TDesign Icons for Angular

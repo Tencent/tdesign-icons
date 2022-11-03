@@ -39,14 +39,14 @@ export interface SpriteIconProps extends BaseIconProps {
   className?: string;
 }
 
-const CDN_SVGSPRITE_URL = 'https://tdesign.gtimg.com/tea-icon/0.1.0/fonts/index.js';
+const CDN_SVGSPRITE_URL = 'https://tdesign.gtimg.com/tea-icon/0.1.1/fonts/index.js';
 
 /**
  * 图标组件
  * svg 版本
  */
 export const Icon = forwardRef((props: SpriteIconProps, ref: Ref<SVGSVGElement>) => {
-  const { classPrefix } = useConfig();
+  const { classPrefix, iconfontClassPrefix } = useConfig();
   const {
     name,
     size,
@@ -78,20 +78,20 @@ export const Icon = forwardRef((props: SpriteIconProps, ref: Ref<SVGSVGElement>)
       return;
     }
 
-    checkScriptAndLoad(CDN_SVGSPRITE_URL, `${classPrefix}-svg-js-stylesheet--unique-class`);
-  }, [classPrefix, loadDefaultIcons]);
+    checkScriptAndLoad(CDN_SVGSPRITE_URL, `${iconfontClassPrefix}-svg-js-stylesheet--unique-class`);
+  }, [iconfontClassPrefix, loadDefaultIcons]);
 
   // 加载 url
   useEffect(() => {
     const urls = Array.isArray(url) ? url : [url];
     (urls as Array<string>).forEach((url) => {
-      checkScriptAndLoad(url, `${classPrefix}-svg-js-stylesheet--unique-class`);
+      checkScriptAndLoad(url, `${iconfontClassPrefix}-svg-js-stylesheet--unique-class`);
     });
-  }, [classPrefix, url]);
+  }, [iconfontClassPrefix, url]);
 
   return (
     <svg ref={ref} className={className} style={{ ...customStyle, ...sizeStyle }} {...restProps}>
-      <use xlinkHref={url ? `#${name}` : `#t-icon-${name}`} />
+      <use xlinkHref={url ? `#${name}` : `#${iconfontClassPrefix}-icon-${name}`} />
     </svg>
   );
 });

@@ -47,14 +47,14 @@ export interface IconFontProps extends HTMLAttributes<HTMLElement> {
   loadDefaultIcons?: boolean;
 }
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/tea-icon/0.1.0/fonts/index.css';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/tea-icon/0.1.1/fonts/index.css';
 
 /**
  * 图标组件
  * iconfont 版本
  */
 export const IconFont = forwardRef((props: IconFontProps, ref: Ref<HTMLElement>) => {
-  const { classPrefix } = useConfig();
+  const { classPrefix, iconfontClassPrefix } = useConfig();
   const {
     name = '',
     size,
@@ -90,16 +90,16 @@ export const IconFont = forwardRef((props: IconFontProps, ref: Ref<HTMLElement>)
       return;
     }
 
-    checkLinkAndLoad(CDN_ICONFONT_URL, `${classPrefix}-iconfont-stylesheet--unique-class`);
-  }, [classPrefix, loadDefaultIcons]);
+    checkLinkAndLoad(CDN_ICONFONT_URL, `${iconfontClassPrefix}-iconfont-stylesheet--unique-class`);
+  }, [iconfontClassPrefix, loadDefaultIcons]);
 
   // 加载 url
   useEffect(() => {
     const urls = Array.isArray(url) ? url : [url];
     (urls as Array<string>).forEach((url) => {
-      checkLinkAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
+      checkLinkAndLoad(url, `${iconfontClassPrefix}-iconfont-stylesheet--unique-class`);
     });
-  }, [classPrefix, url]);
+  }, [iconfontClassPrefix, url]);
 
   return createElement(tag, {
     ref,

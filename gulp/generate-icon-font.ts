@@ -1,9 +1,9 @@
-/* eslint-disable prettier/prettier */
 import { dest, src } from 'gulp';
 import concat from 'gulp-concat';
 import iconfont from 'gulp-iconfont';
 import iconfontCss from 'gulp-iconfont-css';
 import { createTransformStream } from './transform';
+
 const runTimestamp = Math.round(Date.now() / 1000);
 const svgMap: any = {};
 interface GLYPHS {
@@ -18,36 +18,26 @@ export const generateIconFont = ({
   iconGlob: string;
   targetDir: string;
   fontCssConfig: Object;
-}) =>
-  function generateIconFont() {
-    return src([iconGlob])
-      .pipe(iconfontCss(fontCssConfig))
-      .pipe(
-        iconfont({
-          fontName: 't', // required
-          prependUnicode: true, // recommended option
-          formats: ['svg', 'ttf', 'eot', 'woff'], // default, 'woff2' and 'svg' are available
-          timestamp: runTimestamp, // recommended to get consistent builds when watching files
-          normalize: true,
-          fontHeight: 1024
-        }),
-      )
-      .on('glyphs', (glyphs: GLYPHS[]) => {
-        glyphs.forEach((item) => {
-          svgMap[item.name] = item.unicode;
-        });
-      })
-      .pipe(dest(targetDir));
-  };
-
-export const generateIconFontJson = ({ iconGlob, targetDir }: { iconGlob: string; targetDir: string }) =>
-  function generateIconFont() {
-    return src([iconGlob])
-      .pipe(useItemJsonTemplate())
-      .pipe(concat('index.json'))
-      .pipe(useJsonTemplate())
-      .pipe(dest(targetDir));
-  };
+}) => function generateIconFont() {
+  return src([iconGlob])
+    .pipe(iconfontCss(fontCssConfig))
+    .pipe(
+      iconfont({
+        fontName: 't', // required
+        prependUnicode: true, // recommended option
+        formats: ['svg', 'ttf', 'eot', 'woff'], // default, 'woff2' and 'svg' are available
+        timestamp: runTimestamp, // recommended to get consistent builds when watching files
+        normalize: true,
+        fontHeight: 1024,
+      }),
+    )
+    .on('glyphs', (glyphs: GLYPHS[]) => {
+      glyphs.forEach((item) => {
+        svgMap[item.name] = item.unicode;
+      });
+    })
+    .pipe(dest(targetDir));
+};
 
 function useItemJsonTemplate() {
   function getItem(content: string, name: string) {
@@ -65,3 +55,11 @@ function useJsonTemplate() {
   }
   return createTransformStream((content) => getContainer(content));
 }
+
+export const generateIconFontJson = ({ iconGlob, targetDir }: { iconGlob: string; targetDir: string }) => function generateIconFont() {
+  return src([iconGlob])
+    .pipe(useItemJsonTemplate())
+    .pipe(concat('index.json'))
+    .pipe(useJsonTemplate())
+    .pipe(dest(targetDir));
+};

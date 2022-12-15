@@ -27,39 +27,6 @@ export interface SvgToElementOptions {
   replaceColor?: boolean;
 }
 
-export function svgToElement(
-  options: SvgToElementOptions = {
-    replaceColor: false,
-  },
-) {
-  return createTransformStream((svgString) => {
-    const ast = parse(svgString);
-    // TODO: more accurate type annotation here
-    const svgElement = astToElement((ast.children as any) as IconNode[], options)[0];
-
-    normalizeWidthAndHeight(svgElement);
-
-    return JSON.stringify(svgElement);
-  });
-}
-
-/**
- * map svg-parser ast to React element, so it would be convenient to render
- */
-function astToElement(wrappedRoot: IconNode[], options: SvgToElementOptions): IconElement[] {
-  return wrappedRoot
-    .map((node) => ({
-      tag: node.tagName,
-      attrs: node.properties,
-      children: astToElement(node.children, options),
-    }))
-    .map((node: IconElement) => {
-      normalizeChildren(node);
-      normalizeAttrs(node, options);
-      return node;
-    });
-}
-
 function normalizeWidthAndHeight(node: IconElement) {
   const { attrs } = node;
   attrs.width = '1em';
@@ -71,21 +38,6 @@ function normalizeChildren(node: IconElement) {
     // eslint-disable-next-line no-param-reassign
     delete node.children;
   }
-}
-
-function normalizeAttrs(node: IconElement, options: SvgToElementOptions) {
-  const { attrs } = node;
-
-  Object.keys(attrs).forEach((key) => {
-    if (key.indexOf('-') !== -1) {
-      attrs[camelCase(key)] = attrs[key];
-      delete attrs[key];
-    }
-  });
-
-  normalizeStyle(node);
-  normalizeClassName(node);
-  normalizeColor(node, options);
 }
 
 function normalizeStyle(node: IconElement) {
@@ -129,4 +81,52 @@ function normalizeColor(node: IconElement, options: SvgToElementOptions) {
   if (attrs.stroke === '#000') {
     attrs.stroke = 'currentColor';
   }
+}
+
+function normalizeAttrs(node: IconElement, options: SvgToElementOptions) {
+  const { attrs } = node;
+
+  Object.keys(attrs).forEach((key) => {
+    if (key.indexOf('-') !== -1) {
+      attrs[camelCase(key)] = attrs[key];
+      delete attrs[key];
+    }
+  });
+
+  normalizeStyle(node);
+  normalizeClassName(node);
+  normalizeColor(node, options);
+}
+
+/**
+ * map svg-parser ast to React element, so it would be convenient to render
+ */
+function astToElement(wrappedRoot: IconNode[], options: SvgToElementOptions): IconElement[] {
+  return wrappedRoot
+    .map((node) => ({
+      tag: node.tagName,
+      attrs: node.properties,
+      children: astToElement(node.children, options),
+    }))
+    .map((node: IconElement) => {
+      normalizeChildren(node);
+      normalizeAttrs(node, options);
+      return node;
+    });
+}
+
+export function svgToElement(
+  options: SvgToElementOptions = {
+    replaceColor: false,
+  },
+) {
+  return createTransformStream((svgString) => {
+    const ast = parse(svgString);
+    // TODO: more accurate type annotation here
+    const svgElement = astToElement((ast.children as any) as IconNode[], options)[0];
+
+    normalizeWidthAndHeight(svgElement);
+
+    return JSON.stringify(svgElement);
+  });
 }

@@ -14,19 +14,20 @@ interface GenerateIconOptions {
   config?: SVGOConfig;
 }
 
-export const generateIcons = ({ from, to, iconGenerator, extName = '.tsx', config, options }: GenerateIconOptions) =>
-  function generateIcons() {
-    return src(from)
-      .pipe(svgo(config))
-      .pipe(svgToElement(options))
-      .pipe(useTemplate(iconGenerator))
-      .pipe(
-        rename((file) => {
-          if (file.basename) {
-            // eslint-disable-next-line no-param-reassign
-            file.extname = extName;
-          }
-        }),
-      )
-      .pipe(dest(to));
-  };
+export const generateIcons = ({
+  from, to, iconGenerator, extName = '.tsx', config, options,
+}: GenerateIconOptions) => function generateIcons() {
+  return src(from)
+    .pipe(svgo(config))
+    .pipe(svgToElement(options))
+    .pipe(useTemplate(iconGenerator))
+    .pipe(
+      rename((file) => {
+        if (file.basename) {
+          // eslint-disable-next-line no-param-reassign
+          file.extname = extName;
+        }
+      }),
+    )
+    .pipe(dest(to));
+};

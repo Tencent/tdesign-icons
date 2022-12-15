@@ -30,6 +30,7 @@ export function reactTask(source: string[]) {
       generateTypeMap({
         from: source,
         to: 'packages/react/src',
+        type: 'react',
       }),
     ),
 

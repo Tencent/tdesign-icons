@@ -4,6 +4,7 @@
 src/components/*
 src/manifest.ts
 src/icons.ts
+src/global-config.ts
 
 # build
 dist/

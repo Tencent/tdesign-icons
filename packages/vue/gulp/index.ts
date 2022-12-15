@@ -4,6 +4,7 @@ import { generateEntry } from '../../../gulp/generate-entry';
 import { generateManifest } from '../../../gulp/generate-manifest';
 import { generateIcons } from '../../../gulp/generate-icons';
 import { clearDir } from '../../../gulp/clean-dir';
+import { generateTypeMap } from '../../../gulp/generate-type-map';
 
 import { vueGetIconFileContent } from './vue-use-template';
 
@@ -24,6 +25,11 @@ export function vueTask(source: string[]) {
       generateManifest({
         from: source,
         to: 'packages/vue/src',
+      }),
+      generateTypeMap({
+        from: source,
+        to: 'packages/vue/src',
+        type: 'vue',
       }),
     ),
 

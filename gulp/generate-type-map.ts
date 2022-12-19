@@ -21,8 +21,7 @@ ${content}
 }
 
 function getVueWrapper(content: string) {
-  return `import { VNode } from 'vue';\n
-export type GlobalIconType = VNode;
+  return `export type GlobalIconType = () => JSX.Element;\n
 export type GlobalIconConfig = {
 ${content}
 };

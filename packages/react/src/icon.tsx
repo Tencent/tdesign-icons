@@ -6,8 +6,10 @@ import {
   CSSProperties,
   forwardRef,
   Ref,
+  useEffect,
 } from 'react';
 import useSizeProps from './util/use-size-props';
+import { loadStylesheet } from './util/check-url-and-load';
 
 export interface IconProps extends SVGAttributes<SVGSVGElement> {
   style?: CSSProperties;
@@ -48,6 +50,10 @@ export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGEleme
   } = props;
   const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
   const cls = classNames('t-icon', `t-icon-${id}`, className, sizeClassName);
+
+  useEffect(() => {
+    loadStylesheet();
+  }, []);
 
   return render(icon, `${id}`, {
     ref,

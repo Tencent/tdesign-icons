@@ -18,7 +18,7 @@ function useItemTemplate() {
   function getItem(element:string, stem: string) {
     const pascalIconName = toPascalCase(stem);
     return `<div class="t-icons-view__wrapper">
-    ${element.replace(/fill="(.*)"/g, 'fill="currentColor"').replace(/"16"/g, '"2em"')}
+    ${element.replace(/black/g, 'currentColor').replace(/"16"/g, '"2em"')}
     <div class="t-icons-view__name" style="margin-top: 12px; text-align:center">${stem}</div>
     <div class="t-icons-view__actions" style="margin-top: 12px; text-align:center">
       \${showType === 'develop' ? developHTML('${stem}', '${pascalIconName}') : designHTML('${stem}' ,\`${element}\`)}

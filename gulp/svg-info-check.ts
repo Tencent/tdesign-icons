@@ -74,11 +74,11 @@ function normalizeColor(node: IconElement, options: SvgToElementOptions) {
 
   const { attrs } = node;
 
-  if (attrs.fill === '#000') {
+  if (attrs.fill !== 'none') {
     attrs.fill = 'currentColor';
   }
 
-  if (attrs.stroke === '#000') {
+  if (attrs.fill !== 'none') {
     attrs.stroke = 'currentColor';
   }
 }

@@ -6,11 +6,9 @@ import {
 import classNames from 'classnames';
 import useConfig from '../util/use-config';
 import useSizeProps from '../util/use-size-props';
-import { checkScriptAndLoad } from '../util/check-url-and-load';
+import { loadScript, loadStylesheet } from '../util/check-url-and-load';
 
 import { IconProps as BaseIconProps } from './type';
-
-import '../style/css';
 
 export interface SpriteIconProps extends BaseIconProps {
   /**
@@ -66,26 +64,24 @@ export const Icon = forwardRef((props: SpriteIconProps, ref: Ref<SVGSVGElement>)
     [classPrefix, customClassName, name, sizeClassName],
   );
 
-  // 插入 iconfont 样式
   useEffect(() => {
-    // 兼容一下服务端渲染
-    if (typeof document === 'undefined') {
-      return;
-    }
+    loadStylesheet();
+  }, []);
 
+  useEffect(() => {
     // 不加载图标
     if (!loadDefaultIcons) {
       return;
     }
 
-    checkScriptAndLoad(CDN_SVGSPRITE_URL, `${iconfontClassPrefix}-svg-js-stylesheet--unique-class`);
-  }, [iconfontClassPrefix, loadDefaultIcons]);
+    loadScript(CDN_SVGSPRITE_URL, `${classPrefix}-svg-js-stylesheet--unique-class`);
+  }, [classPrefix, loadDefaultIcons]);
 
   // 加载 url
   useEffect(() => {
     const urls = Array.isArray(url) ? url : [url];
     (urls as Array<string>).forEach((url) => {
-      checkScriptAndLoad(url, `${iconfontClassPrefix}-svg-js-stylesheet--unique-class`);
+      loadScript(url, `${classPrefix}-svg-js-stylesheet--unique-class`);
     });
   }, [iconfontClassPrefix, url]);
 

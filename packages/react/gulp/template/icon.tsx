@@ -3,8 +3,6 @@
 import { createElement,forwardRef, Ref } from 'react';
 import { IconBase, IconProps } from '../icon';
 
-import '../style/css';
-
 const element = $ELEMENT;
 
 const $ICON_NAME = forwardRef<SVGElement, IconProps>((props: IconProps, ref: Ref<SVGElement>) => createElement(

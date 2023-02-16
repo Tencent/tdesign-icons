@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.7 `2022-12-05`
+
+### Features
+
+- 新增 `minus-rectangle-filled` 图标
+
 ## 0.1.5 `2022-08-10`
 
 ### Features

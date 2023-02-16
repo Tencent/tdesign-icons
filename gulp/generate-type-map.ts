@@ -5,30 +5,51 @@ import { upperCamelCase } from './util';
 
 function useItemTemplate() {
   function getItem(stem: string) {
-    return `${upperCamelCase(stem)}Icon?: React.ForwardRefExoticComponent<Record<string, unknown>> | (() => JSX.Element);`;
+    return `${upperCamelCase(stem)}Icon?: GlobalIconType`;
   }
 
   return createTransformStream((_, { stem: name }) => getItem(name));
 }
 
-function useWrapperTemplate() {
-  function getWrapper(content: string) {
-    return `import React from 'react';\n
+function getReactWrapper(content: string) {
+  return `import React from 'react';\n
+export type GlobalIconType = React.ForwardRefExoticComponent<Record<string, unknown>> | (() => JSX.Element);
 export type GlobalIconConfig = {
 ${content}
 };
 `;
+}
+
+function getVueWrapper(content: string) {
+  return `export type GlobalIconType = () => JSX.Element;\n
+export type GlobalIconConfig = {
+${content}
+};
+`;
+}
+
+function useWrapperTemplate(type: 'react' | 'vue') {
+  if (type === 'react') {
+    return createTransformStream((content) => getReactWrapper(content));
   }
 
-  return createTransformStream((content) => getWrapper(content));
+  return createTransformStream((content) => getVueWrapper(content));
 }
 
 // generate a type map for global icon replace config
-export const generateTypeMap = ({ from, to }: { from: string[]; to: string }) => function generateManifest() {
+export const generateTypeMap = ({
+  from,
+  to,
+  type,
+}: {
+  from: string[];
+  to: string;
+  type: 'react' | 'vue';
+}) => function generateManifest() {
   return src(from)
     .pipe(useItemTemplate())
     .pipe(concat('NOT-VALID'))
-    .pipe(useWrapperTemplate())
+    .pipe(useWrapperTemplate(type))
     .pipe(concat('global-config.ts'))
     .pipe(dest(to));
 };

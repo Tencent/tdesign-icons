@@ -4,8 +4,6 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import multiInput from 'rollup-plugin-multi-input';
 import postcss from 'rollup-plugin-postcss';
 import esbuild from 'rollup-plugin-esbuild';
-import ignoreImport from 'rollup-plugin-ignore-import';
-import replace from '@rollup/plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 
 const extensions = ['.ts', '.tsx'];
@@ -15,7 +13,7 @@ const external = ['react', 'react-dom', '@babel/runtime'];
 const input = 'src/index.ts';
 const inputList = ['src/**/*.ts', 'src/**/*.tsx'];
 
-const getPlugins = ({ isProd = false, isUmd = false, isEsm = false } = {}) => {
+const getPlugins = ({ isProd = false, isUmd = false } = {}) => {
   const plugins = [
     nodeResolve({ extensions }),
     commonjs(),
@@ -48,21 +46,6 @@ const getPlugins = ({ isProd = false, isUmd = false, isEsm = false } = {}) => {
         sourceMap: true,
       }),
     );
-  } else {
-    plugins.push(
-      postcss({
-        extract: 'style/index.css',
-      }),
-      ignoreImport({
-        extensions: ['.css'],
-      }),
-    );
-  }
-
-  if (isEsm) {
-    plugins.push(replace({
-      'var undefined$1 = undefined': 'import "./index.css"',
-    }));
   }
 
   return plugins;

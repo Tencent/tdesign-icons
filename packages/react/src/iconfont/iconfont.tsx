@@ -4,9 +4,7 @@ import {
 import classNames from 'classnames';
 import useConfig from '../util/use-config';
 import useSizeProps from '../util/use-size-props';
-import { checkLinkAndLoad } from '../util/check-url-and-load';
-
-import '../style/css';
+import { loadLink, loadStylesheet } from '../util/check-url-and-load';
 
 export interface IconFontProps extends HTMLAttributes<HTMLElement> {
   /**
@@ -78,26 +76,24 @@ export const IconFont = forwardRef((props: IconFontProps, ref: Ref<HTMLElement>)
     [classPrefix, customClassName, name, sizeClassName],
   );
 
-  // 插入 iconfont 样式
   useEffect(() => {
-    // 兼容一下服务端渲染
-    if (typeof document === 'undefined') {
-      return;
-    }
+    loadStylesheet();
+  }, []);
 
+  useEffect(() => {
     // 不加载图标
     if (!loadDefaultIcons) {
       return;
     }
 
-    checkLinkAndLoad(CDN_ICONFONT_URL, `${classPrefix}-iconfont-stylesheet--unique-class`);
+    loadLink(CDN_ICONFONT_URL, `${classPrefix}-iconfont-stylesheet--unique-class`);
   }, [classPrefix, loadDefaultIcons]);
 
   // 加载 url
   useEffect(() => {
     const urls = Array.isArray(url) ? url : [url];
     (urls as Array<string>).forEach((url) => {
-      checkLinkAndLoad(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
+      loadLink(url, `${classPrefix}-iconfont-stylesheet--unique-class`);
     });
   }, [classPrefix, url]);
 

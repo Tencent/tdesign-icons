@@ -17,7 +17,7 @@ ${content}
 
 function useItemTemplate() {
   function getItem(stem: string) {
-    return `    { stem: "${stem}", icon: "${upperCamelCase(stem)}" },`;
+    return `    { stem: "${stem}", icon: "${upperCamelCase(stem)}", path: () => import('./components/${stem}')  },`;
   }
 
   return createTransformStream((_, { stem: name }) => getItem(name));

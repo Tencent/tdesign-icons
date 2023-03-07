@@ -24,6 +24,7 @@ export function angularTask(source: string[]) {
       generateManifest({
         from: source,
         to: 'packages/angular/projects/tdesign-icons-angular/src/lib',
+        type: 'angular',
       }),
     ),
 

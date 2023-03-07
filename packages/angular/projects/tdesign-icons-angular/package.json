@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-angular",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "peerDependencies": {
     "@angular/common": "^10.0.11",
     "@angular/core": "^10.0.11"

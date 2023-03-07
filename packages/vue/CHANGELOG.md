@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.7 `2023-03-07`
+
+### Features
+
+- manifest 文件增加 path 属性
+
 ## 0.1.6 `2022-12-19`
 
 ### Features

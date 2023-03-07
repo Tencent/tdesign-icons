@@ -15,9 +15,10 @@ ${content}
   return createTransformStream((content) => getWrapper(content));
 }
 
-function useItemTemplate() {
+function useItemTemplate(type?:string) {
+  const isAngular = type === 'angular'; // angular has different component path
   function getItem(stem: string) {
-    return `    { stem: "${stem}", icon: "${upperCamelCase(stem)}", path: () => import('./components/${stem}')  },`;
+    return `    { stem: "${stem}", icon: "${upperCamelCase(stem)}", path: () => import('./components/${isAngular ? `${stem}.component` : stem}')  },`;
   }
 
   return createTransformStream((_, { stem: name }) => getItem(name));
@@ -31,9 +32,9 @@ function useItemTemplate() {
  *   { stem: <kebab-name>, icon: <CamelName> },
  * ]
  */
-export const generateManifest = ({ from, to }: { from: string[]; to: string }) => function generateManifest() {
+export const generateManifest = ({ from, to, type }: { from: string[]; to: string, type?: string }) => function generateManifest() {
   return src(from)
-    .pipe(useItemTemplate())
+    .pipe(useItemTemplate(type))
     .pipe(concat('NOT-VALID'))
     .pipe(useWrapperTemplate())
     .pipe(concat('manifest.ts'))

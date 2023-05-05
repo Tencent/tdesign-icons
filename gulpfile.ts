@@ -6,8 +6,8 @@ import { svgTask } from './packages/svg/gulp';
 import { vueTask } from './packages/vue/gulp';
 import { vueNextTask } from './packages/vue-next/gulp';
 
-import { svgSpriteTask } from './packages/svg-sprite/gulp';
-import { iconFontTask } from './packages/icon-font/gulp';
+import { svgSpriteTask } from './resources/svg-sprite/gulp';
+import { iconFontTask } from './resources/icon-font/gulp';
 
 import { iconViewTask } from './packages/view/gulp';
 

@@ -23,8 +23,8 @@ yarn-error.log
 .eslintcache
 
 # lock
-packages/**/yarn.lock
-packages/**/package-lock.json
+yarn.lock
+package-lock.json
 
 # webstorm
 .idea/

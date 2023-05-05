@@ -32,7 +32,7 @@ const config = {
 
 export function svgSpriteTask() {
   return series(
-    clearDir(['packages/svg-sprite/dist']),
+    clearDir(['resources/svg-sprite/dist']),
     generateSprite({
       iconGlob, iconDir, config, targetDir,
     }),

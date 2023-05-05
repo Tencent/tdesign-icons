@@ -23,6 +23,12 @@ yarn-error.log
 .eslintcache
 
 # lock
+packages/**/yarn.lock
+packages/**/package-lock.json
+packages/**/pnpm-lock.yaml
+resources/**/yarn.lock
+resources/**/package-lock.json
+resources/**/pnpm-lock.yaml
 yarn.lock
 package-lock.json
 

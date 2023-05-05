@@ -13,7 +13,7 @@ const fontCssConfig = {
 
 export function iconFontTask(source: string[]) {
   return series(
-    clearDir(['packages/icon-font/dist']),
+    clearDir(['resources/icon-font/dist']),
     // to generate eot/svg/ttf/woff/css
     generateIconFont({
       iconGlob: source[0],

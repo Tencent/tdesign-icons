@@ -1,10 +1,7 @@
 {
   "name": "tdesign-icons",
   "private": true,
-  "description": "TDesign Icon 图标统一管理仓库",
-  "workspaces": [
-    "packages/**"
-  ],
+  "description": "mono repo for TDesign Icon",
   "repository": {
     "type": "git",
     "url": "git@github.com:Tencent/tdesign-icons.git"
@@ -23,6 +20,7 @@
     ]
   },
   "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
     "husky": "husky",
     "prepare": "husky install",
     "lint": "eslint ./packages --max-warnings 0 --ext .ts,.tsx --fix",
@@ -71,6 +69,6 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "lerna": "^6.6.1"
+    "lerna": "^6.6.2"
   }
 }

@@ -1,0 +1,4 @@
+{
+  "useWorkspaces": true,
+  "npmClient": "pnpm"
+}

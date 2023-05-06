@@ -6,7 +6,7 @@
 
 English | [简体中文](./README-zh_CN.md)
 
-TDesign Icons is a mono-repo for 是统一生产、管理 TDesign 各框架的 Icons 组件资源的仓库。
+TDesign Icons is a mono-repo for TDesign Icons packages and resources management.
 
 # Resources and Packages
 
@@ -17,25 +17,34 @@ TDesign Icons is a mono-repo for 是统一生产、管理 TDesign 各框架的 I
 - [tdesign-icons-view](./packages/view)： Web Component Package for display TDesign Icons [![npm version](https://img.shields.io/npm/v/tdesign-icons-view.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-view) [![NPM downloads](http://img.shields.io/npm/dm/tdesign-icons-view.svg)](https://npmjs.org/package/tdesign-icons-view)
 - [tdesign-icons-svg](./packages/svg)：SVG package of TDesign Icons [![npm version](https://img.shields.io/npm/v/tdesign-icons-svg.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-svg) [![NPM downloads](http://img.shields.io/npm/dm/tdesign-icons-svg.svg)](https://npmjs.org/package/tdesign-icons-svg)
 
-# Develop Guide
+# Development Guide
 
-you can also clone this repository/workflow to generate your own icon resource and package as well.
+TDesign Icon repository is created to manage all TDesign Icons resources and packages. Y
+ou can also clone this repository to generate your own icon resource and package as well.
 
-## Add SVG source ⛽️
+## Add SVG Source ⛽️
 
 please add all icon svg source file into `svg/` dir.
 
 ## Generate Resources 🏗
 
-在根目录运行 `yarn generate`，该命令会在 `packages/` 目录下的各个子目录中生成资源文件。
+execute `pnpm run generate` to update icon resource of all frameworks within `packages/` dir and the iconfont and svgsprite resource within `resources/` dir.
 
-更新了原始图标资源之后，请务必运行 `yarn generate` 命令。
+If you have updated the original icon resources, please execute `pnpm run generate` again.
 
-此流程会生产发布到 CDN 的 iconfont 各字体资源、svgsprite 资源，并全量更新各框架包的单 Icon 的资源。
+## Update Versions and CHANGELOG 🔖
+
+execute `npx changeset`, and choose the version number change rules for each package according to the specific situation, and fill in the content of the `CHANGELOG`.
+
+then execute `pnpm changeset version`，the new content of `CHANGELOG` will be injected into the package.json and `CHANGELOG` of each framework package in the `packages/` directory in turn.
 
 ## Build NPM Packages 📦
 
-进入 `packages/` 目录下的各个子目录分别执行 `yarn build` 命令以执行构建。
+execute `pnpm run --filter "tdesign-icons-*" build` to build all framework packages.
+
+## Publish NPM Packages 🚀
+
+execute `pnpm publish -r` to publish all framework packages.
 
 # License
 

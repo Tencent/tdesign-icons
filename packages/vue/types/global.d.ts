@@ -7,3 +7,9 @@ declare interface Styles {
 declare type SizeEnum = 'small' | 'medium' | 'large';
 
 declare type ClassName = { [className: string]: any } | ClassName[] | string;
+
+declare module 'classnames' {
+  import * as classNames from 'classnames';
+
+  export = classNames;
+}

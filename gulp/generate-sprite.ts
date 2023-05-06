@@ -1,7 +1,7 @@
 import { dest, src } from 'gulp';
 import svgSprite from 'gulp-svg-sprite';
 import rename from 'gulp-rename';
-import { getSvgSpriteJSFile } from '../packages/svg-sprite/gulp/use-svg-sprite-template';
+import { getSvgSpriteJSFile } from '../resources/svg-sprite/gulp/use-svg-sprite-template';
 import { createTransformStream } from './transform';
 
 export const generateSprite = ({

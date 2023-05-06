@@ -13,6 +13,7 @@
     "moduleResolution": "node",
     "strict": true,
     "declaration": false,
+    "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "noUnusedLocals": true,

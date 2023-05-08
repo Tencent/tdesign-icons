@@ -225,18 +225,6 @@ importers:
         specifier: ~3.9.7
         version: 3.9.7
 
-  packages/angular/projects/tdesign-icons-angular:
-    dependencies:
-      '@angular/common':
-        specifier: ^10.0.11
-        version: 10.0.11(@angular/core@10.0.11)(rxjs@6.5.5)
-      '@angular/core':
-        specifier: ^10.0.11
-        version: 10.0.11(rxjs@6.5.5)(zone.js@0.10.3)
-      tslib:
-        specifier: ^2.0.0
-        version: 2.1.0
-
   packages/react:
     dependencies:
       '@babel/runtime':

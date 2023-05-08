@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.9
+
+### Patch Changes
+
+- feat: add `translate` `translate-1` `arrow-down-triangle` `arrow-down-triangle-filled` `arrow-up-triangle` `arrow-up-triangle-filled` icons
+
 ## 0.1.8 `2023-03-07`
 
 ### Features

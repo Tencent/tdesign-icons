@@ -12,7 +12,7 @@ import '../style/css';
 
 const { classPrefix } = ConfigContext;
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.3/fonts/index.js';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.1.4/fonts/index.js';
 
 export default defineComponent({
   name: 'Icon',

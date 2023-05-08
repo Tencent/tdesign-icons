@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git@github.com:Tencent/tdesign-icons.git"
   },
-  "workspaces":["packages/**"],
+  "workspaces":["packages/*"],
   "keywords": [
     "tdesign",
     "icon"

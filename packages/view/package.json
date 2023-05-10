@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-view",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A web-component package for display all icons in any UI framework",
   "main": "dist/index.js",
   "files": [

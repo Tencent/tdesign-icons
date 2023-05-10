@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.3
+
+### Patch Changes
+
+- 更名`arrow-triangle` 相关的 4 个图标
+
 ## 0.2.2
 
 ### Patch Changes

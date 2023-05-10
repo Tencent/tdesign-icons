@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 0.1.8
+
+### Patch Changes
+
+- 更名`arrow-triangle` 相关的 4 个图标
+
 ## 0.1.7
 
 ### Patch Changes

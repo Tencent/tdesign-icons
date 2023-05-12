@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 0.1.9
+
+### Patch Changes
+
+- add repository info
+
 ## 0.1.8
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # tdesign-icons-svg
 
+## 0.1.8
+
+### Patch Changes
+
+- add repository info
+
 ## 0.1.7
 
 ### Patch Changes

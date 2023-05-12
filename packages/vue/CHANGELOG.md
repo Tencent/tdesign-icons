@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.10
+
+### Patch Changes
+
+- add repository info
+
 ## 0.1.9
 
 ### Patch Changes

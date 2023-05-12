@@ -1,6 +1,15 @@
 {
   "name": "tdesign-icons-angular",
   "version": "0.1.10",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tencent/tdesign-icons.git",
+    "directory": "packages/angular"
+  },
+  "homepage": "https://github.com/Tencent/tdesign-icons/blob/develop/README.md",
+  "bugs": {
+    "url": "https://github.com/Tencent/tdesign-icons/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^10.0.11",
     "@angular/core": "^10.0.11"

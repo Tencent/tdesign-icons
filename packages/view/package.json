@@ -2,6 +2,15 @@
   "name": "tdesign-icons-view",
   "version": "0.1.8",
   "description": "A web-component package for display all icons in any UI framework",
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/Tencent/tdesign-icons.git",
+    "directory": "packages/view"
+  },
+  "homepage": "https://github.com/Tencent/tdesign-icons/blob/develop/README.md",
+  "bugs": {
+    "url": "https://github.com/Tencent/tdesign-icons/issues"
+  },
   "main": "dist/index.js",
   "files": [
     "dist"

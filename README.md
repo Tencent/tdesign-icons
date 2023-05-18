@@ -19,10 +19,9 @@ TDesign Icons is a mono-repo for TDesign Icons packages and resources management
 
 # Development Guide
 
-TDesign Icon repository is created to manage all TDesign Icons resources and packages. Y
-ou can also clone this repository to generate your own icon resource and package as well.
+TDesign Icon repository is created to manage all TDesign Icons resources and packages. You can also clone this repository to generate your own icon resources and packages as well.
 
-## Add SVG Source ⛽️
+## Add SVG Source Files ⛽️
 
 please add all icon svg source file into `svg/` dir.
 

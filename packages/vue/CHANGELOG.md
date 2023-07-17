@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.11
+
+### Patch Changes
+
+- fix: fix manifest effects chunk load
+
 ## 0.1.10
 
 ### Patch Changes

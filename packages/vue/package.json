@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-vue",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

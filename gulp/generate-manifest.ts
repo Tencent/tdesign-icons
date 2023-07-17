@@ -15,10 +15,15 @@ ${content}
   return createTransformStream((content) => getWrapper(content));
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function useItemTemplate(type?:string) {
-  const isAngular = type === 'angular'; // angular has different component path
+  // const isAngular = type === 'angular'; // angular has different component path
+  // function getItem(stem: string) {
+  //   return `    { stem: "${stem}", icon: "${upperCamelCase(stem)}", path: () => import('./components/${isAngular ? `${stem}.component` : stem}')  },`;
+  // }
+
   function getItem(stem: string) {
-    return `    { stem: "${stem}", icon: "${upperCamelCase(stem)}", path: () => import('./components/${isAngular ? `${stem}.component` : stem}')  },`;
+    return `    { stem: "${stem}", icon: "${upperCamelCase(stem)}"  },`;
   }
 
   return createTransformStream((_, { stem: name }) => getItem(name));

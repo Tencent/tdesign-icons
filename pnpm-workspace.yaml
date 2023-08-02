@@ -1,2 +1,6 @@
 packages:
-  - "packages/*"
+  - "packages/vue-next"
+  - "packages/react"
+  - "packages/view"
+  - "packages/svg"
+  - "packages/vue"

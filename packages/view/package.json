@@ -31,7 +31,7 @@
     "core-js": "^3.8.3",
     "cssbeautify": "^0.3.1",
     "lodash": "^4.17.21",
-    "tdesign-icons-vue": "^0.0.8",
+    "tdesign-icons-vue": "0.2.0-alpha.1",
     "tdesign-vue": "1.4.6-naruto",
     "tvision-color": "^1.6.0",
     "vue": "2.7.14"

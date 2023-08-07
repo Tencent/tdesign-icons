@@ -47,7 +47,7 @@ import { onMounted, ref, computed, watch } from "vue";
 import zhCN from "./i18n/zh-CN";
 import enUS from "./i18n/en-US";
 import { categories } from "./category";
-import SvgSprite from "./SvgSprite";
+import SvgSprite from "../gulp/template/svg-sprite.vue";
 
 const lang = ref(zhCN);
 const currentType = ref("filled");

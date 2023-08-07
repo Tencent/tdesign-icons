@@ -1,5 +1,10 @@
 export const categories = {
   filled: {
+    Arrow: {
+      labelCN: '箭头',
+      labelEn: 'Arrow',
+      icons: ['arrow-triangle-down-filled', 'arrow-triangle-up-filled'],
+    },
     Maps: { labelCN: '地图', labelEn: 'Maps', icons: ['pin-filled'] },
     System: {
       labelCN: '系统',
@@ -54,6 +59,8 @@ export const categories = {
       labelCN: '图片',
       labelEn: 'Image',
       icons: [
+        'arrow-triangle-down-filled',
+        'arrow-triangle-up-filled',
         'circle',
         'image-error',
         'rectangle',

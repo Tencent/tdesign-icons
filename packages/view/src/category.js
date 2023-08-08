@@ -1,9 +1,18 @@
 export const categories = {
   filled: {
-    Arrow: {
-      labelCN: '箭头',
-      labelEn: 'Arrow',
-      icons: ['arrow-triangle-down-filled', 'arrow-triangle-up-filled'],
+    Alert: {
+      labelCN: '警报',
+      labelEn: 'Alert',
+      icons: [
+        'check-circle-filled',
+        'close-circle-filled',
+        'error-circle-filled',
+        'help-circle-filled',
+        'info-circle-filled',
+        'minus-circle-filled',
+        'notification-filled',
+        'time-filled',
+      ],
     },
     Maps: { labelCN: '地图', labelEn: 'Maps', icons: ['pin-filled'] },
     System: {
@@ -38,29 +47,19 @@ export const categories = {
         'logo-windows-filled',
       ],
     },
-    Alert: {
-      labelCN: '警报',
-      labelEn: 'Alert',
-      icons: [
-        'check-circle-filled',
-        'close-circle-filled',
-        'error-circle-filled',
-        'help-circle-filled',
-        'info-circle-filled',
-        'minus-circle-filled',
-        'notification-filled',
-        'time-filled',
-      ],
-    },
+
     File: { labelCN: '文件', labelEn: 'File', icons: ['discount-filled'] },
+    Arrow: {
+      labelCN: '箭头',
+      labelEn: 'Arrow',
+      icons: ['arrow-triangle-down-filled', 'arrow-triangle-up-filled'],
+    },
   },
   outline: {
     Image: {
       labelCN: '图片',
       labelEn: 'Image',
       icons: [
-        'arrow-triangle-down-filled',
-        'arrow-triangle-up-filled',
         'circle',
         'image-error',
         'rectangle',
@@ -180,7 +179,7 @@ export const categories = {
         'chevron-up-circle',
         'chevron-up-rectangle',
         'enter',
-        'order-adjustment.column',
+        'order-adjustment-column',
         'swap-left',
         'swap',
         'unfold-more',
@@ -194,8 +193,8 @@ export const categories = {
         'rollback',
         'download',
         'chevron-up-double',
-        'chevron-right.double',
-        'chevron-left.double',
+        'chevron-right-double',
+        'chevron-left-double',
         'chevron-down-double',
         'chevron-up',
         'chevron-right',
@@ -243,6 +242,8 @@ export const categories = {
         'arrow-left',
         'arrow-left-up',
         'arrow-left-down',
+        'arrow-triangle-down-filled',
+        'arrow-triangle-up-filled',
       ],
     },
     Emoji: {
@@ -304,8 +305,8 @@ export const categories = {
       icons: [
         'undertake-transaction',
         'undertake-delivery',
-        '-gesture-pray-1',
-        '-gesture-pray',
+        'gesture-pray-1',
+        'gesture-pray',
         'wave-right',
         'wave-left',
         'thumb-down-1',
@@ -377,7 +378,7 @@ export const categories = {
         'system-marked',
         'system-log',
         'system-messages',
-        'control.platform',
+        'control-platform',
         'system-blocked',
         'system-interface',
         'system-components',
@@ -1188,7 +1189,7 @@ export const categories = {
       icons: [
         'usb',
         'mobile-vibrate',
-        'precise.monitor',
+        'precise-monitor',
         'rss',
         'sim-card',
         'qrcode',
@@ -1302,7 +1303,7 @@ export const categories = {
       labelCN: '文件',
       labelEn: 'File',
       icons: [
-        '4k',
+        'screen-4k',
         'file-icon',
         'file-paste',
         'file-pdf',

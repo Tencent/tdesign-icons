@@ -27,8 +27,9 @@
         <t-tabs v-model="selectTab">
           <t-tab-panel
             v-for="tab in tabs"
-            :label="tab.labelCN"
+            :label="isEn ? tab.labelEn : tab.labelCN"
             :value="tab.labelEn"
+            :key="tab.labelEn"
           >
             <div
               style="
@@ -44,27 +45,30 @@
                   marginTop: '16px',
                 }"
               >
-                <span>{{ tab.labelCN }}</span>
+                <span>{{ isEn ? tab.labelEn : tab.labelCN }}</span>
                 <t-tag :style="{ marginLeft: '8px' }">{{
                   tab.icons.length
                 }}</t-tag>
               </div>
               <t-divider :style="{ margin: '8px 0 16px 0' }" />
-              <li v-for="icon in tab.icons" class="t-icons-view__wrapper">
+              <li v-for="icon in tab.icons" class="t-icons-view__wrapper" :key="icon.name">
                 <svg
                   width="1em"
                   height="1em"
                   style="font-size: 30px; margin-bottom: 8px"
                 >
-                  <use :href="`#t-icon-${icon}`" />
+                  <use :href="`#t-icon-${icon.name}`" />
                 </svg>
-                <div class="t-icons-view__name">{{ icon }}</div>
-                <div class="t-icons-view__actions">
+                <div class="t-icons-view__name">{{ icon.name }}</div>
+                <div
+                  class="t-icons-view__actions"
+                  v-if="showType === 'develop'"
+                >
                   <svg
                     width="1em"
                     height="1em"
                     style="font-size: 20px; color: var(--text-secondary)"
-                    @click="() => handleCopyFile('name', icon)"
+                    @click="() => handleCopyFile('name', icon.name)"
                   >
                     <use :href="`#t-icon-file-copy`" />
                   </svg>
@@ -73,9 +77,31 @@
                     width="1em"
                     height="1em"
                     style="font-size: 20px; color: var(--text-secondary)"
-                    @click="() => handleCopyFile('component', icon)"
+                    @click="() => handleCopyFile('component', icon.name)"
                   >
                     <use :href="`#t-icon-file-icon`" />
+                  </svg>
+                </div>
+                <div
+                  class="t-icons-view__actions"
+                  v-if="showType === 'design'"
+                >
+                  <svg
+                    width="1em"
+                    height="1em"
+                    style="font-size: 20px; color: var(--text-secondary)"
+                    @click="() => handleCopyFile('content', icon.svgString)"
+                  >
+                    <use :href="`#t-icon-file-copy`" />
+                  </svg>
+                  <div class="t-icons-view__actions-divider"></div>
+                  <svg
+                    width="1em"
+                    height="1em"
+                    style="font-size: 20px; color: var(--text-secondary)"
+                    @click="() => handleDownloadIcon(icon.name, icon.svgString)"
+                  >
+                    <use :href="`#t-icon-download`" />
                   </svg>
                 </div>
               </li>
@@ -96,33 +122,67 @@ import {
   Divider as TDivider,
   Tag as TTag,
   MessagePlugin,
-} from "tdesign-vue";
-import { onMounted, ref, computed, watch } from "vue";
-import zhCN from "./i18n/zh-CN";
-import enUS from "./i18n/en-US";
-import { categories } from "./category";
-import SvgSprite from "../gulp/template/svg-sprite.vue";
+} from 'tdesign-vue';
+import {
+  onMounted, ref, computed, watch, defineProps,
+} from 'vue';
+import zhCN from './i18n/zh-CN';
+import enUS from './i18n/en-US';
+import { manifest } from './manifest';
+import SvgSprite from '../gulp/template/svg-sprite.vue';
 
-const lang = ref(zhCN);
-const currentType = ref("outline");
-const selectTab = ref("");
-
-const tabs = computed(() => {
-  return categories[currentType.value] || {};
+defineProps({
+  showType: {
+    type: String,
+    default: 'develop',
+  },
 });
 
-const handleCopyFile = (type, name) => {
-  if (type === "name") {
-    navigator.clipboard.writeText(name);
-  } else if (type === "component") {
-    navigator.clipboard.writeText(name);
+const lang = ref(zhCN);
+const isEn = ref(false);
+const currentType = ref('outline');
+const selectTab = ref('');
+
+const kebabToPascal = (str) => {
+  const words = str.split('-');
+
+  const capitalizedWords = words.map(
+    (word) => word.charAt(0).toUpperCase() + word.slice(1),
+  );
+
+  return capitalizedWords.join('');
+};
+
+const tabs = computed(() => manifest[currentType.value] || {});
+
+const handleCopyFile = async (type, name) => {
+  if (type === 'name') {
+    // copy icon kebab-case name
+    await navigator.clipboard.writeText(name);
+  } else if (type === 'component') {
+    // copy icon PascalCase name
+    await navigator.clipboard.writeText(`<${kebabToPascal(name)}Icon />`);
+  } else {
+    // copy svg content
+    await navigator.clipboard.writeText(name);
   }
-  MessagePlugin.success("复制成功");
+  MessagePlugin.success(lang.value.copied);
+};
+
+const handleDownloadIcon = (iconName, svgString) => {
+  const blob = new Blob([svgString], { type: 'image/svg+xml' });
+  const imgUrl = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.download = `${iconName}.svg`;
+  a.target = '_blank';
+  a.href = imgUrl;
+  a.click();
 };
 
 onMounted(() => {
-  const isEn = window.location.pathname.endsWith("en");
-  lang.value = isEn ? enUS : zhCN;
+  const en = window.location.pathname.endsWith('en');
+  isEn.value = en;
+  lang.value = en ? enUS : zhCN;
   const tabCategories = Object.keys(tabs.value);
   selectTab.value = tabs.value[tabCategories[0]].labelEn;
 });
@@ -132,7 +192,7 @@ watch(
   () => {
     const tabCategories = Object.keys(tabs.value);
     selectTab.value = tabs.value[tabCategories[0]].labelEn;
-  }
+  },
 );
 </script>
 <style>

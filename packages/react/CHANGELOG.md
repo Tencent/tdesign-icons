@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.3.0
+
+### Minor Changes
+
+- feat: increase 900 + new icons
+
 ## 0.2.5
 
 ### Patch Changes

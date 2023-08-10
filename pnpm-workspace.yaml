@@ -1,3 +1,6 @@
 packages:
-  - "packages/*"
-  - "packages/angular/dist/tdesign-icons-angular"
+  - "packages/vue-next"
+  - "packages/react"
+  - "packages/view"
+  - "packages/svg"
+  - "packages/vue"

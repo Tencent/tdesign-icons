@@ -1,14 +1,11 @@
 import { series } from 'gulp';
-
-import { generateViewMap } from './generate-view-map';
 import { clearDir } from '../../../gulp/clean-dir';
 
-export function iconViewTask(source: string[]) {
+import { generateViewSvgSprite } from './generate-view-svg-sprite';
+
+export function iconViewTask() {
   return series(
-    clearDir(['packages/view/src']),
-    generateViewMap({
-      from: source,
-      to: 'packages/view/src',
-    }),
+    clearDir(['packages/view/gulp/template']),
+    generateViewSvgSprite(),
   );
 }

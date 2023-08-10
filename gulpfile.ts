@@ -22,6 +22,6 @@ export default series(
     angularTask(source),
     svgSpriteTask(),
     iconFontTask(source),
-    iconViewTask(source),
+    iconViewTask(),
   ),
 );

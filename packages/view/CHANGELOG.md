@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 0.2.0
+
+### Minor Changes
+
+- feat: increase 900 + new icons
+
 ## 0.1.9
 
 ### Patch Changes

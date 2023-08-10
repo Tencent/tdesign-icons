@@ -241,9 +241,6 @@ importers:
       core-js:
         specifier: ^3.8.3
         version: 3.30.2
-      cssbeautify:
-        specifier: ^0.3.1
-        version: 0.3.1
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
@@ -274,28 +271,19 @@ importers:
         version: 5.0.0(@vue/cli-service@5.0.1)(eslint@7.32.0)
       '@vue/cli-service':
         specifier: ~5.0.0
-        version: 5.0.1(@babel/core@7.20.12)(less-loader@10.2.0)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14)
+        version: 5.0.1(@babel/core@7.20.12)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14)
       eslint:
         specifier: ^7.32.0
         version: 7.32.0
       eslint-plugin-vue:
         specifier: ^8.0.3
         version: 8.0.3(eslint@7.32.0)
-      less:
-        specifier: ^4.1.2
-        version: 4.1.2
-      less-loader:
-        specifier: ^10.2.0
-        version: 10.2.0(less@4.1.2)(webpack@5.88.2)
       raw-loader:
         specifier: ^4.0.2
         version: 4.0.2(webpack@5.88.2)
       vue-loader:
         specifier: ^17.0.0
         version: 17.0.0(webpack@5.88.2)
-      vue-svg-loader:
-        specifier: ^0.17.0-beta.2
-        version: 0.17.0-beta.2(vue@2.7.14)
       vue-template-compiler:
         specifier: 2.7.14
         version: 2.7.14
@@ -4688,7 +4676,7 @@ packages:
     dependencies:
       '@babel/core': 7.20.12
       '@vue/babel-preset-app': 5.0.8(@babel/core@7.20.12)(core-js@3.30.2)(vue@2.7.14)
-      '@vue/cli-service': 5.0.1(@babel/core@7.20.12)(less-loader@10.2.0)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14)
+      '@vue/cli-service': 5.0.1(@babel/core@7.20.12)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14)
       '@vue/cli-shared-utils': 5.0.8
       babel-loader: 8.3.0(@babel/core@7.20.12)(webpack@5.88.2)
       thread-loader: 3.0.4(webpack@5.88.2)
@@ -4710,7 +4698,7 @@ packages:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
       eslint: '>=7.5.0'
     dependencies:
-      '@vue/cli-service': 5.0.1(@babel/core@7.20.12)(less-loader@10.2.0)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14)
+      '@vue/cli-service': 5.0.1(@babel/core@7.20.12)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14)
       '@vue/cli-shared-utils': 5.0.8
       eslint: 7.32.0
       eslint-webpack-plugin: 3.2.0(eslint@7.32.0)(webpack@5.88.2)
@@ -4730,7 +4718,7 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': 5.0.1(@babel/core@7.20.12)(less-loader@10.2.0)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14)
+      '@vue/cli-service': 5.0.1(@babel/core@7.20.12)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14)
       '@vue/cli-shared-utils': 5.0.8
     transitivePeerDependencies:
       - encoding
@@ -4741,10 +4729,10 @@ packages:
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
     dependencies:
-      '@vue/cli-service': 5.0.1(@babel/core@7.20.12)(less-loader@10.2.0)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14)
+      '@vue/cli-service': 5.0.1(@babel/core@7.20.12)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14)
     dev: true
 
-  /@vue/cli-service@5.0.1(@babel/core@7.20.12)(less-loader@10.2.0)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14):
+  /@vue/cli-service@5.0.1(@babel/core@7.20.12)(lodash@4.17.21)(raw-loader@4.0.2)(vue-template-compiler@2.7.14):
     resolution: {integrity: sha512-lhTW1d8waZv1VaRSvhE5pWWfkdmAgRTRSluDfyxkehZHMAWi//rd7a9zppN3k9Zr4X3oYVii+u7wR/RcTlr9cQ==}
     engines: {node: ^12.0.0 || >= 14.0.0}
     hasBin: true
@@ -4809,7 +4797,6 @@ packages:
       html-webpack-plugin: 5.5.3(webpack@5.88.2)
       is-file-esm: 1.0.0
       launch-editor-middleware: 2.6.0
-      less-loader: 10.2.0(less@4.1.2)(webpack@5.88.2)
       lodash.defaultsdeep: 4.6.1
       lodash.mapvalues: 4.6.0
       mini-css-extract-plugin: 2.7.6(webpack@5.88.2)
@@ -7485,11 +7472,6 @@ packages:
       source-map: 0.6.1
       source-map-resolve: 0.6.0
     dev: true
-
-  /cssbeautify@0.3.1:
-    resolution: {integrity: sha512-ljnSOCOiMbklF+dwPbpooyB78foId02vUrTDogWzu6ca2DCNB7Kc/BHEGBnYOlUYtwXvSW0mWTwaiO2pwFIoRg==}
-    hasBin: true
-    dev: false
 
   /cssesc@3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
@@ -11719,18 +11701,6 @@ packages:
       - debug
       - encoding
       - supports-color
-    dev: true
-
-  /less-loader@10.2.0(less@4.1.2)(webpack@5.88.2):
-    resolution: {integrity: sha512-AV5KHWvCezW27GT90WATaDnfXBv99llDbtaj4bshq6DvAihMdNjaPDcUMa6EXKLRF+P2opFenJp89BXg91XLYg==}
-    engines: {node: '>= 12.13.0'}
-    peerDependencies:
-      less: ^3.5.0 || ^4.0.0
-      webpack: ^5.0.0
-    dependencies:
-      klona: 2.0.6
-      less: 4.1.2
-      webpack: 5.88.2
     dev: true
 
   /less@3.13.1:
@@ -17733,17 +17703,6 @@ packages:
     dependencies:
       hash-sum: 1.0.2
       loader-utils: 1.4.2
-    dev: true
-
-  /vue-svg-loader@0.17.0-beta.2(vue@2.7.14):
-    resolution: {integrity: sha512-iMUGJTKEcuNAG8VXOchjA8443IqEmEi2Aw6EVIHWma2cC4TUQ7Oet5Yry9IFfqXQXXvyzXz5EyttVvfRGTNH4Q==}
-    peerDependencies:
-      vue: ^2.5.0 || ^3.0.0-0
-    dependencies:
-      loader-utils: 2.0.0
-      semver: 7.5.0
-      svgo: 1.3.2
-      vue: 2.7.14
     dev: true
 
   /vue-template-compiler@2.7.14:

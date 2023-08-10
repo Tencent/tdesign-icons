@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 0.2.1
+
+### Patch Changes
+
+- feat: support name search
+
 ## 0.2.0
 
 ### Minor Changes

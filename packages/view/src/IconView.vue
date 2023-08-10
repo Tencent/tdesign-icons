@@ -12,6 +12,7 @@
           display: 'flex',
           marginTop: '10px',
           padding: '0 16px',
+          boxSizing: 'border-box',
         }"
       >
         <t-radio-group v-model="currentType" variant="default-filled">
@@ -22,6 +23,11 @@
             lang.types.filled
           }}</t-radio-button>
         </t-radio-group>
+        <t-input
+          :placeholder="lang.search"
+          :style="{ marginLeft: '8px', flex: 1 }"
+          @change="handleSearchIcon"
+        />
       </div>
       <div>
         <t-tabs v-model="selectTab">
@@ -51,7 +57,11 @@
                 }}</t-tag>
               </div>
               <t-divider :style="{ margin: '8px 0 16px 0' }" />
-              <li v-for="icon in tab.icons" class="t-icons-view__wrapper" :key="icon.name">
+              <li
+                v-for="icon in tab.icons"
+                class="t-icons-view__wrapper"
+                :key="icon.name"
+              >
                 <svg
                   width="1em"
                   height="1em"
@@ -82,10 +92,7 @@
                     <use :href="`#t-icon-file-icon`" />
                   </svg>
                 </div>
-                <div
-                  class="t-icons-view__actions"
-                  v-if="showType === 'design'"
-                >
+                <div class="t-icons-view__actions" v-if="showType === 'design'">
                   <svg
                     width="1em"
                     height="1em"
@@ -122,13 +129,15 @@ import {
   Divider as TDivider,
   Tag as TTag,
   MessagePlugin,
+  Input as TInput,
 } from 'tdesign-vue';
 import {
   onMounted, ref, computed, watch, defineProps,
 } from 'vue';
+import forEach from 'lodash/forEach';
 import zhCN from './i18n/zh-CN';
 import enUS from './i18n/en-US';
-import { manifest } from './manifest';
+import { manifest as manifestSrc } from './manifest';
 import SvgSprite from '../gulp/template/svg-sprite.vue';
 
 defineProps({
@@ -138,6 +147,7 @@ defineProps({
   },
 });
 
+const manifest = ref(manifestSrc);
 const lang = ref(zhCN);
 const isEn = ref(false);
 const currentType = ref('outline');
@@ -153,7 +163,7 @@ const kebabToPascal = (str) => {
   return capitalizedWords.join('');
 };
 
-const tabs = computed(() => manifest[currentType.value] || {});
+const tabs = computed(() => manifest.value[currentType.value] || {});
 
 const handleCopyFile = async (type, name) => {
   if (type === 'name') {
@@ -179,6 +189,40 @@ const handleDownloadIcon = (iconName, svgString) => {
   a.click();
 };
 
+const handleSearchIcon = (searchStr) => {
+  if (!searchStr) {
+    manifest.value = manifestSrc;
+  } else {
+    const searchManifest = {};
+    forEach(manifestSrc, (categories, key) => {
+      searchManifest[key] = {};
+      forEach(categories, (ctx, category) => {
+        if (
+          ctx.labelCN.indexOf(searchStr) > -1
+          || ctx.labelEn.indexOf(searchStr) > -1
+        ) {
+          searchManifest[key][category] = ctx;
+        } else {
+          ctx.icons.forEach((icon) => {
+            if (icon.name.indexOf(searchStr) > -1) {
+              if (!searchManifest[key][category]) {
+                searchManifest[key][category] = {
+                  labelCN: ctx.labelCN,
+                  labelEn: ctx.labelEn,
+                  icons: [],
+                };
+              }
+              searchManifest[key][category].icons.push(icon);
+            }
+          });
+        }
+      });
+    });
+    manifest.value = searchManifest;
+  }
+  const tabCategories = Object.keys(tabs.value);
+  selectTab.value = tabCategories.length ? tabs.value[tabCategories?.[0]]?.labelEn : '';
+};
 onMounted(() => {
   const en = window.location.pathname.endsWith('en');
   isEn.value = en;
@@ -191,7 +235,7 @@ watch(
   () => [currentType.value],
   () => {
     const tabCategories = Object.keys(tabs.value);
-    selectTab.value = tabs.value[tabCategories[0]].labelEn;
+    selectTab.value = tabCategories.length ? tabs.value[tabCategories?.[0]]?.labelEn : '';
   },
 );
 </script>
@@ -201,6 +245,9 @@ watch(
 .t-tabs__btn {
   height: 24px !important;
   width: 24px;
+}
+.t-input {
+  background-color: var(--bg-color-page);
 }
 .t-tabs__operations {
   top: 4px;

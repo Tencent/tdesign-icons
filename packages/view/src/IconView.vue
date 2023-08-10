@@ -246,6 +246,9 @@ watch(
   height: 24px !important;
   width: 24px;
 }
+.t-input {
+  background-color: var(--bg-color-page);
+}
 .t-tabs__operations {
   top: 4px;
 }

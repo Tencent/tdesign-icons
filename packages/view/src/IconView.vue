@@ -140,13 +140,17 @@ import enUS from './i18n/en-US';
 import { manifest as manifestSrc } from './manifest';
 import SvgSprite from '../gulp/template/svg-sprite.vue';
 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import tdesignVariables from '!raw-loader!../node_modules/tdesign-vue/es/style/index.css';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+import themeVariables from '!raw-loader!./vars.css';
+
 defineProps({
   showType: {
     type: String,
     default: 'develop',
   },
 });
-
 const manifest = ref(manifestSrc);
 const lang = ref(zhCN);
 const isEn = ref(false);
@@ -164,6 +168,27 @@ const kebabToPascal = (str) => {
 };
 
 const tabs = computed(() => manifest.value[currentType.value] || {});
+
+const appendStyleSheet = () => {
+  const iconViewId = 'TDESIGN_ICON_VIEW';
+
+  const componentVariablesExist = window
+    .getComputedStyle(document.documentElement)
+    .getPropertyValue('--td-brand-color');
+  const siteVariablesExist = window
+    .getComputedStyle(document.documentElement)
+    .getPropertyValue('--brand-main');
+
+  if (componentVariablesExist && siteVariablesExist) return;
+
+  const styleSheet = document.createElement('style');
+  let variables = '';
+  if (!componentVariablesExist) variables += tdesignVariables;
+  if (!siteVariablesExist) variables += themeVariables;
+  styleSheet.id = iconViewId;
+  styleSheet.innerText = variables;
+  document.head.appendChild(styleSheet);
+};
 
 const handleCopyFile = async (type, name) => {
   if (type === 'name') {
@@ -229,6 +254,7 @@ onMounted(() => {
   lang.value = en ? enUS : zhCN;
   const tabCategories = Object.keys(tabs.value);
   selectTab.value = tabs.value[tabCategories[0]].labelEn;
+  appendStyleSheet();
 });
 
 watch(
@@ -240,8 +266,7 @@ watch(
 );
 </script>
 <style>
-@import "../node_modules/tdesign-vue/dist/tdesign.css";
-@import "./vars.css";
+@import '../node_modules/tdesign-vue/dist/tdesign.min.css';
 .t-tabs__btn {
   height: 24px !important;
   width: 24px;

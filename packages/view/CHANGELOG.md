@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 0.2.2
+
+### Patch Changes
+
+- fix: fix variables missing
+
 ## 0.2.1
 
 ### Patch Changes

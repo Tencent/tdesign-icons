@@ -78,7 +78,8 @@
     --text-disabled: rgba(0, 0, 0, 0.26);
     --text-anti: #fff;
     --text-interactive: #0052d9;
-    --brand-main: #0052d9 --brand-main-hover: #366ef4;
+    --brand-main: #0052d9;
+    --brand-main-hover: #366ef4;
     --brand-main-focus: #d9e1ff;
     --brand-main-disabled: #b5c7ff;
     --brand-main-light: rgba(0, 82, 217, 0.1);

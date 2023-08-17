@@ -1,5 +1,13 @@
 # tdesign-icons-view
 
+## 0.2.4
+
+### Patch Changes
+
+- fix: fix icon draw path
+- Updated dependencies
+  - tdesign-icons-vue@0.2.2
+
 ## 0.2.3
 
 ### Patch Changes

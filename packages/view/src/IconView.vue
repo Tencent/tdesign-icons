@@ -297,11 +297,12 @@ watch(
   font-size: 12px;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   cursor: pointer;
   border-radius: 6px;
+  padding-top: 16px;
   position: relative;
+  box-sizing: border-box;
 }
 .t-icons-view__wrapper:hover {
   background: var(--bg-color-demo-hover);

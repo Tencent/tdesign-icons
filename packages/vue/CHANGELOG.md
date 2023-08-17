@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.2
+
+### Patch Changes
+
+- fix: fix icon draw path
+
 ## 0.2.1
 
 ### Patch Changes

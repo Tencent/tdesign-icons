@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.3.1
+
+### Patch Changes
+
+- fix: fix evenodd fill-rule render error when transformed to iconfont
+
 ## 0.3.0
 
 ### Minor Changes

@@ -2,7 +2,7 @@
   <div>
     <svg-sprite />
     <t-space
-      :style="{ width: '100%', background: 'var(--bg-color-page)' }"
+      :style="{ width: '100%', background: 'var(--bg-color-page)', borderRadius: '6px', border: '1px solid var(--component-border)', overflow: 'hidden',}"
       direction="vertical"
       size="8px"
     >
@@ -10,7 +10,7 @@
         :style="{
           width: '100%',
           display: 'flex',
-          marginTop: '10px',
+          marginTop: '16px',
           padding: '0 16px',
           boxSizing: 'border-box',
         }"
@@ -25,7 +25,7 @@
         </t-radio-group>
         <t-input
           :placeholder="lang.search"
-          :style="{ marginLeft: '8px', flex: 1 }"
+          :style="{ marginLeft: '16px', flex: 1 }"
           @change="handleSearchIcon"
         />
       </div>
@@ -279,12 +279,49 @@ watch(
 }
 .t-tabs__header {
   background-color: var(--bg-color-page);
+}
+.t-tabs__operations {
+  border: none;
+}
+.t-tabs__operations--left {
+  margin-left: 16px;
+}
+.t-tabs__operations--right {
+  margin-right: 16px;
+}
+.t-tabs__btn {
+  border: none;
+  background-color: var(--bg-color-component);
+  border-radius: 3px;
+}
+.t-tabs__btn:hover {
+ background-color: var(--bg-color-component-hover);
+}
+.t-tabs__btn--right {
+  box-shadow: none;
+}
+.t-tabs__btn--left {
+  box-shadow: none;
+}
+.t-tabs__nav-container {
   padding: 0 16px;
 }
 .t-tabs__nav-item {
   font-size: 12px;
   height: 32px !important;
   line-height: 32px !important;
+}
+.t-tabs__nav-item-wrapper {
+  padding: 0 8px;
+  margin: 0;
+  height: 24px;
+  --ripple-color: var(--td-bg-color-secondarycontainer-active);
+}
+.t-tabs__nav-item-wrapper:hover {
+  background-color: var(--td-bg-color-secondarycontainer-hover) !important;
+}
+.t-tabs__operations--right .t-tabs__btn:first-child {
+  box-shadow: none;
 }
 .t-icons-view__count {
   display: flex;
@@ -325,7 +362,6 @@ watch(
   font-size: 16px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.1s linear;
 }
 .t-icons-view__actions-divider {
   border-left: 1px solid var(--component-border);

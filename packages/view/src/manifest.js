@@ -371,11 +371,6 @@ export const manifest = {
       labelEn: 'Arrows',
       icons: [
         {
-          name: 'arrow-triangle-down',
-          svgString:
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M9 12V2H15V12H19.5L12 22L4.5 12H9ZM8.5 14L12 18.6667L15.5 14H13V4H11V14H8.5Z" fill="black"/>\n</svg>\n',
-        },
-        {
           name: 'backtop-rectangle',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M2 2H22V22H2V2ZM4 4V20H20V4H4ZM17.5 8H6.5V6H17.5V8ZM12 8.80761L16.5962 13.4038L15.182 14.818L13 12.636L13 18.5H11L11 12.636L8.81802 14.818L7.40381 13.4038L12 8.80761Z" fill="black"/>\n</svg>\n',
@@ -389,11 +384,6 @@ export const manifest = {
           name: 'caret-right-small',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M16.5 12L9.5 5L9.5 19L16.5 12Z" fill="black"/>\n</svg>\n',
-        },
-        {
-          name: 'arrow-triangle-up',
-          svgString:
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M9 12V22H15V12H19.5L12 2L4.5 12H9ZM8.5 10L12 5.33333L15.5 10H13V20H11V10H8.5Z" fill="black"/>\n</svg>\n',
         },
         {
           name: 'caret-down',
@@ -2633,11 +2623,6 @@ export const manifest = {
           name: 'loudspeaker',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M16 1.38184V15.4999L8.8 12.4999H7.88925L7.71278 13.9999H9.5V15.9999H7.47749L6.88925 20.9999H2V4.99987H8.76393L16 1.38184ZM5.87546 12.4999H4V18.9999H5.11075L5.87546 12.4999ZM4 10.4999H9.2L14 12.4999V4.6179L9.23607 6.99987H4V10.4999ZM20.3329 4.58566L21.04 5.29276C21.9769 6.22968 22.3684 7.6354 22.3684 8.91669C22.3684 10.198 21.9769 11.6037 21.04 12.5406L20.3329 13.2477L18.9187 11.8335L19.6258 11.1264C20.0695 10.6827 20.3684 9.86189 20.3684 8.91669C20.3684 7.97148 20.0695 7.15072 19.6258 6.70698L18.9187 5.99987L20.3329 4.58566ZM18.2496 6.25454L18.9567 6.96165C20.0375 8.0425 20.0375 9.79491 18.9567 10.8758L18.2496 11.5829L16.8354 10.1687L17.5425 9.46154C17.8423 9.16174 17.8423 8.67566 17.5425 8.37586L16.8354 7.66875L18.2496 6.25454Z" fill="black"/>\n</svg>\n',
-        },
-        {
-          name: 'download-1',
-          svgString:
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M1 1H23V18H1V1ZM3 3V16H21V3H3ZM13 5.5V10.1573L14.5304 8.69136L15.9139 10.1356L12 13.8848L8.08611 10.1356L9.4696 8.69136L11 10.1573V5.5H13ZM3.22222 21H20.7778V23H3.22222V21Z" fill="black"/>\n</svg>\n',
         },
         {
           name: 'screencast',
@@ -6188,11 +6173,6 @@ export const manifest = {
           name: 'catalog',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M3 1H21V23H3V1ZM5 3V21H19V3H5ZM8 7H16V9H8V7ZM8 11H16V13H8V11ZM8 15H16V17H8V15Z" fill="black"/>\n</svg>\n',
-        },
-        {
-          name: 'task-1',
-          svgString:
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M7 1L17 1V3L21 3L21 23L3 23L3 3L7 3V1ZM7 5H5L5 21L19 21L19 5L17 5V7L7 7V5ZM15 3L9 3V5L15 5V3Z" fill="black"/>\n</svg>\n',
         },
         {
           name: 'file',

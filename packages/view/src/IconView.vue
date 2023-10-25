@@ -2,7 +2,13 @@
   <div>
     <svg-sprite />
     <t-space
-      :style="{ width: '100%', background: 'var(--bg-color-page)', borderRadius: '6px', border: '1px solid var(--component-border)', overflow: 'hidden',}"
+      :style="{
+        width: '100%',
+        background: 'var(--bg-color-page)',
+        borderRadius: '6px',
+        border: '1px solid var(--component-border)',
+        overflow: 'hidden',
+      }"
       direction="vertical"
       size="8px"
     >
@@ -53,12 +59,13 @@
               >
                 <span>{{ isEn ? tab.labelEn : tab.labelCN }}</span>
                 <t-tag :style="{ marginLeft: '8px' }">{{
-                  tab.icons.length
+                  selectTab !== allKey ? tab.icons.length : allIcons.length
                 }}</t-tag>
               </div>
               <t-divider :style="{ margin: '8px 0 16px 0' }" />
+
               <li
-                v-for="icon in tab.icons"
+                v-for="icon in selectTab !== allKey ? tab.icons : allIcons"
                 class="t-icons-view__wrapper"
                 :key="icon.name"
               >
@@ -145,6 +152,9 @@ import tdesignVariables from '!raw-loader!../node_modules/tdesign-vue/es/style/i
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import themeVariables from '!raw-loader!./vars.css';
 
+const allKey = 'All';
+const iconViewId = 'TDESIGN_ICON_VIEW';
+
 defineProps({
   showType: {
     type: String,
@@ -166,12 +176,25 @@ const kebabToPascal = (str) => {
 
   return capitalizedWords.join('');
 };
+const tabs = computed(
+  () => ({
+    ...{
+      All: {
+        labelCN: '全部',
+        labelEn: allKey,
+        icons: [],
+      },
+    },
+    ...manifest.value[currentType.value],
+  } || {}),
+);
 
-const tabs = computed(() => manifest.value[currentType.value] || {});
+const allIcons = computed(() => {
+  const types = Object.keys(tabs.value);
+  return types.reduce((acc, type) => acc.concat(tabs.value[type].icons), []);
+});
 
 const appendStyleSheet = () => {
-  const iconViewId = 'TDESIGN_ICON_VIEW';
-
   const componentVariablesExist = window
     .getComputedStyle(document.documentElement)
     .getPropertyValue('--td-brand-color');
@@ -246,7 +269,9 @@ const handleSearchIcon = (searchStr) => {
     manifest.value = searchManifest;
   }
   const tabCategories = Object.keys(tabs.value);
-  selectTab.value = tabCategories.length ? tabs.value[tabCategories?.[0]]?.labelEn : '';
+  selectTab.value = tabCategories.length
+    ? tabs.value[tabCategories?.[0]]?.labelEn
+    : '';
 };
 onMounted(() => {
   const en = window.location.pathname.endsWith('en');
@@ -261,12 +286,14 @@ watch(
   () => [currentType.value],
   () => {
     const tabCategories = Object.keys(tabs.value);
-    selectTab.value = tabCategories.length ? tabs.value[tabCategories?.[0]]?.labelEn : '';
+    selectTab.value = tabCategories.length
+      ? tabs.value[tabCategories?.[0]]?.labelEn
+      : '';
   },
 );
 </script>
 <style>
-@import '../node_modules/tdesign-vue/dist/tdesign.min.css';
+@import "../node_modules/tdesign-vue/dist/tdesign.min.css";
 .t-tabs__btn {
   height: 24px !important;
   width: 24px;
@@ -295,7 +322,7 @@ watch(
   border-radius: 3px;
 }
 .t-tabs__btn:hover {
- background-color: var(--bg-color-component-hover);
+  background-color: var(--bg-color-component-hover);
 }
 .t-tabs__btn--right {
   box-shadow: none;

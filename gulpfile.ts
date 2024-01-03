@@ -5,6 +5,7 @@ import { angularTask } from './packages/angular/gulp';
 import { svgTask } from './packages/svg/gulp';
 import { vueTask } from './packages/vue/gulp';
 import { vueNextTask } from './packages/vue-next/gulp';
+import { reactNativeTask } from './packages/react-native/gulp';
 
 import { svgSpriteTask } from './resources/svg-sprite/gulp';
 import { iconFontTask } from './resources/icon-font/gulp';
@@ -23,5 +24,6 @@ export default series(
     svgSpriteTask(),
     iconFontTask(source),
     iconViewTask(),
+    reactNativeTask(),
   ),
 );

@@ -4,3 +4,4 @@ packages:
   - "packages/view"
   - "packages/svg"
   - "packages/vue"
+  - "packages/react-native"

@@ -20,6 +20,7 @@
     "no-undef": "off",
     "no-unused-vars": "off",
     "no-underscore-dangle": "off",
+    "no-use-before-define": "off",
     "max-len": "off"
   }
 }

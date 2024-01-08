@@ -11,17 +11,9 @@
     "url": "https://github.com/Tencent/tdesign-icons/issues"
   },
   "main": "src/index.js",
-  "sideEffects": [
-    "dist/**/*",
-    "esm/style/**/*",
-    "lib/style/**/*"
-  ],
   "scripts": {
     "pregenerate": "rimraf src/*",
-    "generate": "node scripts/generate.js",
-    "build:tsc": "concurrently \"npm:build:tsc-*\"",
-    "build:tsc-esm": "tsc --emitDeclarationOnly -d --outDir esm/",
-    "build:tsc-lib": " tsc --emitDeclarationOnly -d --outDir lib/"
+    "generate": "node scripts/generate.js"
   },
   "peerDependencies": {
     "react": ">=16.13.1"

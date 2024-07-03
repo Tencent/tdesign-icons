@@ -11,11 +11,13 @@ import { svgSpriteTask } from './resources/svg-sprite/gulp';
 import { iconFontTask } from './resources/icon-font/gulp';
 
 import { iconViewTask } from './packages/view/gulp';
+import { wcTask } from './packages/web-components/gulp';
 
 const source: string[] = ['svg/*.svg'];
 
 export default series(
   parallel(
+    wcTask(source),
     reactTask(source),
     vueTask(source),
     vueNextTask(source),

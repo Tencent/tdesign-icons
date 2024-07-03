@@ -5,3 +5,4 @@ packages:
   - "packages/svg"
   - "packages/vue"
   - "packages/react-native"
+  - "packages/web-components"

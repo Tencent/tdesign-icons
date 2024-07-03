@@ -13,7 +13,7 @@
   },
   "[typescriptreact]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[javascriptreact]": {
     "editor.formatOnSave": true,
@@ -26,5 +26,6 @@
   "[javascript]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

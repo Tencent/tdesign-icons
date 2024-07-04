@@ -5,6 +5,8 @@ import multiInput from 'rollup-plugin-multi-input';
 import postcss from 'rollup-plugin-postcss';
 import esbuild from 'rollup-plugin-esbuild';
 import { terser } from 'rollup-plugin-terser';
+import json from '@rollup/plugin-json';
+import copy from 'rollup-plugin-copy';
 
 const extensions = ['.ts', '.tsx'];
 
@@ -25,6 +27,7 @@ const getPlugins = ({ isProd = false, isUmd = false } = {}) => {
       jsxFactory: 'h',
       jsxFragment: 'h.f',
     }),
+    json(),
     babel({ babelHelpers: 'runtime', extensions }),
   ];
 
@@ -46,6 +49,15 @@ const getPlugins = ({ isProd = false, isUmd = false } = {}) => {
         sourceMap: true,
       }),
     );
+  } else {
+    plugins.push(copy({
+      targets: [
+        { src: 'src/iconfont/t.*', dest: 'esm/iconfont' },
+        { src: 'src/iconfont/t.*', dest: 'lib/iconfont' },
+        { src: 'src/iconfont/index.css', dest: 'esm/iconfont' },
+        { src: 'src/iconfont/index.css', dest: 'lib/iconfont' },
+      ],
+    }));
   }
 
   return plugins;

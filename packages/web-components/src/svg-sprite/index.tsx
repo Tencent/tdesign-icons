@@ -10,7 +10,7 @@ import {
 import classNames, { getClassPrefix } from '../util/classname';
 import getSizeProps from '../util/size-props';
 import { loadScript, getStylesheet } from '../util/check-url-and-load';
-import iconJson from '../components/web-components-svg-icon';
+import iconJson from './svg-icon';
 
 import type { IconProps } from '../icon';
 

@@ -17,7 +17,6 @@ const source: string[] = ['svg/*.svg'];
 
 export default series(
   parallel(
-    wcTask(source),
     reactTask(source),
     vueTask(source),
     vueNextTask(source),
@@ -27,5 +26,6 @@ export default series(
     svgSpriteTask(),
     iconFontTask(source),
     iconViewTask(),
+    wcTask(source),
   ),
 );

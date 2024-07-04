@@ -1,14 +1,18 @@
 import { parallel, series } from 'gulp';
 
+import path from 'path';
 import { generateEntry } from '../../../gulp/generate-entry';
 import { generateManifest } from '../../../gulp/generate-manifest';
 import { generateTypeMap } from '../../../gulp/generate-type-map';
 
 import { generateIcons } from '../../../gulp/generate-icons';
 import { clearDir } from '../../../gulp/clean-dir';
+import { generateIconFontJson } from '../../../gulp/generate-icon-font';
 
 import { wcGetIconFileContent } from './wc-use-template';
 import { generateIconsJson } from './generate-icons-json';
+
+const targetDir = path.resolve(__dirname, '../src/iconfont/');
 
 export function wcTask(source: string[]) {
   return series(

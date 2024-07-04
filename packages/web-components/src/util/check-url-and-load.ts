@@ -45,6 +45,7 @@ function getStylesheet() {
       transform: rotate(360deg);
     }
   }
+    
   .t-icon {
     display: inline-block;
     vertical-align: middle;

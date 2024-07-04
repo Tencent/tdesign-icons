@@ -1,4 +1,4 @@
-# TDesign Icons for React
+# TDesign Icons for Web Components
 
 ## 安装
 
@@ -8,17 +8,17 @@
 
 ```js
 // svgsprite
-import { Icon } from "tdesign-icons-react";
+import 'tdesign-icons-web-components'
 
-<Icon name="close" />;
+<t-icon name="add"></t-icon>
 
 // iconfont
-import { IconFont } from "tdesign-icons-react";
+import 'tdesign-icons-web-components/esm/iconfont'
 
-<IconFont name="close" />;
+<t-icon-font name="add"></t-icon-font>
 
 // single icon
-import { CloseIcon, TimeIcon } from "tdesign-icons-react";
+import 'tdesign-icons-web-components/esm/components/add'
 
-<CloseIcon />;
+<t-icon-add name="add"></t-icon-add>
 ```

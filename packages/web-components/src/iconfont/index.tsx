@@ -1,11 +1,15 @@
 import type { OmiProps } from 'omi';
 import {
-  Component, createElement, tag, css,
+  Component,
+  tag,
+  // @ts-ignore
+  h,
 } from 'omi';
 import classNames, { getClassPrefix } from '../util/classname';
-import { loadLink, getStylesheet } from '../util/check-url-and-load';
+import { getStylesheet } from '../util/check-url-and-load';
 import getSizeProps from '../util/size-props';
 import { IconProps } from '../icon';
+import fontJson from './font-icon.json';
 
 export interface IconFontProps extends IconProps {
   /**
@@ -36,32 +40,28 @@ export interface IconFontProps extends IconProps {
   loadDefaultIcons?: boolean;
 }
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.2.0/fonts/index.css';
-
 /**
  * 图标组件
  * iconfont 版本
  */
 @tag('t-icon-font')
 export default class IconFont extends Component<IconFontProps> {
-  static css = [css`
-.t-icon {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "t" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.t-icon-add:before {
-  content: "\E005";
-}
-    `, getStylesheet()];
+  static css = [
+    `.t-icon {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: "t" !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }`,
+    getStylesheet(),
+  ];
 
   classPrefix = getClassPrefix();
 
@@ -94,23 +94,14 @@ export default class IconFont extends Component<IconFontProps> {
   }
 
   install() {
-    if (this.props.loadDefaultIcons) {
-      loadLink(CDN_ICONFONT_URL, `${this.classPrefix}-iconfont-stylesheet--unique-class`, () => {
-        this.update();
-      });
-    }
-    const urls = Array.isArray(this.props.url) ? this.props.url : [this.props.url];
-    (urls as Array<string>).forEach((url) => {
-      loadLink(url, `${this.classPrefix}-iconfont-stylesheet--unique-class`, () => {
-        this.update();
-      });
-    });
+    const fontCode = (fontJson?.find((item) => item.name === this.props.name) || {}).codepoint;
+    (this.constructor as any)?.css?.push(`.t-icon-${this.props.name}:before {content: "${fontCode}";}`);
   }
 
   render(props: OmiProps<IconFontProps, any>) {
     const {
       size,
-      tag = 'i',
+      tag: Tag = 'i',
       style: customStyle,
       ...htmlProps
     } = props;
@@ -121,12 +112,11 @@ export default class IconFont extends Component<IconFontProps> {
     delete htmlProps.name;
 
     const { style: sizeStyle } = getSizeProps(size);
-
-    return createElement(tag, {
-      part: 't-icon',
-      style: { ...customStyle, ...sizeStyle },
-      className: this.className,
-      ...htmlProps,
-    });
+    return <Tag
+      class={this.className}
+      style={{ ...customStyle, ...sizeStyle }}
+      part='t-icon'
+      {...htmlProps}
+    ></Tag>;
   }
 }

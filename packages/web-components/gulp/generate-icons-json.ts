@@ -9,7 +9,7 @@ import vnodeConvert from './vnode-convert';
 
 const iconGlob = path.resolve(__dirname, '../../../svg/*.svg');
 const iconDir = path.resolve(__dirname, '../../../svg');
-const targetDir = path.resolve(__dirname, '../src/components/');
+const targetDir = path.resolve(__dirname, '../src/svg-sprite/');
 
 interface GenerateIconOptions {
   options?: SvgToElementOptions;
@@ -33,6 +33,6 @@ export const generateIconsJson = ({
     }))
     .on('end', () => {
       const iconJson = template.replace(/\$SVGJSON/g, JSON.stringify(iconsJson, undefined, 2));
-      fs.writeFileSync(path.resolve(targetDir, 'web-components-svg-icon.ts'), iconJson);
+      fs.writeFileSync(path.resolve(targetDir, 'svg-icon.ts'), iconJson);
     });
 };

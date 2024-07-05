@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.3.3
+
+### Patch Changes
+
+- feat: add `list-numbered` icon, optimize path of `lock-off`;
+- fix: fix `chart-column` naming;
+
 ## 0.3.2
 
 ### Patch Changes

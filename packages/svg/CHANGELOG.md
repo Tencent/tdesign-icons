@@ -1,5 +1,12 @@
 # tdesign-icons-svg
 
+## 0.2.1
+
+### Patch Changes
+
+- feat: add `list-numbered` icon, optimize path of `lock-off`;
+- fix: fix `chart-column` naming;
+
 ## 0.2.0
 
 ### Minor Changes

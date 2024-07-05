@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.4
+
+### Patch Changes
+
+- feat: update iconfont and svgsprite address
+
 ## 0.2.3
 
 ### Patch Changes

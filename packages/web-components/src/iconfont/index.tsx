@@ -93,11 +93,6 @@ export default class IconFont extends Component<IconFontProps> {
     }, sizeClassName, this.props.className);
   }
 
-  install() {
-    const fontCode = (fontJson?.find((item) => item.name === this.props.name) || {}).codepoint;
-    (this.constructor as any)?.css?.push(`.t-icon-${this.props.name}:before {content: "${fontCode}";}`);
-  }
-
   render(props: OmiProps<IconFontProps, any>) {
     const {
       size,
@@ -112,11 +107,16 @@ export default class IconFont extends Component<IconFontProps> {
     delete htmlProps.name;
 
     const { style: sizeStyle } = getSizeProps(size);
-    return <Tag
+    const fontCode = (fontJson?.find((item) => item.name === this.props.name) || {}).codepoint;
+
+    return <>
+      <style>{`.t-icon-${this.props.name}:before {content: "${fontCode}";}`}</style>
+      <Tag
       class={this.className}
       style={{ ...customStyle, ...sizeStyle }}
       part='t-icon'
       {...htmlProps}
-    ></Tag>;
+      ></Tag>
+    </>;
   }
 }

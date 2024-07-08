@@ -110,7 +110,7 @@ export class Icon extends Component<SpriteIconProps> {
     const { style: sizeStyle } = getSizeProps(size);
 
     try {
-      const node = JSON.parse(iconJson?.[name] || '{}');
+      const node = JSON.parse(this.svgIconJson?.[name] || '{}');
       return render(node, `${name}`, {
         className: this.className,
         style: { ...style, ...sizeStyle },

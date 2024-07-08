@@ -1,0 +1,4 @@
+default.check-filename = true
+
+[files]
+extend-exclude = ["packages/angular/tslint.json"]

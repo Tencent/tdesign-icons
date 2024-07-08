@@ -1,6 +1,6 @@
 const isServer = typeof window === 'undefined';
 
-// to avoid append script repeatly
+// to avoid append script repeatedly
 function checkScriptAndLoad(url: string, className: string) {
   if (isServer) {
     return;
@@ -17,7 +17,7 @@ function checkScriptAndLoad(url: string, className: string) {
   document.body.appendChild(svg);
 }
 
-// to avoid append link repeatly
+// to avoid append link repeatedly
 function checkLinkAndLoad(url: string, className: string) {
   if (isServer) {
     return;

@@ -1,0 +1,2 @@
+default.check-filename = true
+default.extend-ignore-re = ["no-inferrable-types"]

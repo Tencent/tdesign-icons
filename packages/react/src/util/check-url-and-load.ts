@@ -1,4 +1,4 @@
-// to avoid append script repeatly
+// to avoid append script repeatedly
 function loadScript(url: string, className: string) {
   if (!document || !url || typeof url !== 'string') return;
 
@@ -12,7 +12,7 @@ function loadScript(url: string, className: string) {
   document.body.appendChild(svg);
 }
 
-// to avoid append link repeatly
+// to avoid append link repeatedly
 function loadLink(url: string, className: string) {
   if (!document || !url || typeof url !== 'string') return;
 

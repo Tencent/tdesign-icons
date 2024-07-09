@@ -84,7 +84,7 @@ export default class IconFont extends Component<IconFontProps> {
     return this.props.url && /^t-icon-(\w|-)+$/.test(this.props.name || '');
   }
 
-  get className() {
+  get cls() {
     const { className: sizeClassName } = getSizeProps(this.props.size);
     return classNames({
       [this.props.name || '']: this.props.url,
@@ -112,10 +112,10 @@ export default class IconFont extends Component<IconFontProps> {
     return <>
       <style>{`.t-icon-${this.props.name}:before {content: "${fontCode}";}`}</style>
       <Tag
-      class={this.className}
-      style={{ ...customStyle, ...sizeStyle }}
-      part='t-icon'
-      {...htmlProps}
+        class={this.cls}
+        style={{ ...customStyle, ...sizeStyle }}
+        part='t-icon'
+        {...htmlProps}
       ></Tag>
     </>;
   }

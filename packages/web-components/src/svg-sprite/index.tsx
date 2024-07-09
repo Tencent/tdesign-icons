@@ -75,7 +75,7 @@ export class Icon extends Component<SpriteIconProps> {
 
   svgIconJson = iconJson;
 
-  get className() {
+  get cls() {
     const {
       url, name, size, className: customClassName,
     } = this.props;
@@ -112,7 +112,7 @@ export class Icon extends Component<SpriteIconProps> {
     try {
       const node = JSON.parse(this.svgIconJson?.[name] || '{}');
       return render(node, `${name}`, {
-        className: this.className,
+        className: this.cls,
         style: { ...style, ...sizeStyle },
         ...restProps,
         part: 't-icon',

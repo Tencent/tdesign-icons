@@ -1,4 +1,4 @@
-// to avoid append script repeatly
+// to avoid append script repeatedly
 function loadScript(url: string, className: string, callback: () => void) {
   if (!document || !url || typeof url !== 'string') return;
 
@@ -16,7 +16,7 @@ function loadScript(url: string, className: string, callback: () => void) {
   };
 }
 
-// to avoid append link repeatly
+// to avoid append link repeatedly
 function loadLink(url: string, className: string, callback) {
   if (!document || !url || typeof url !== 'string') return;
 

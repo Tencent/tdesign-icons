@@ -21,5 +21,5 @@ import 'tdesign-icons-web-components/esm/iconfont'
 // single icon
 import 'tdesign-icons-web-components/esm/components/add'
 
-<t-icon-add name="add"></t-icon-add>
+<t-icon-add></t-icon-add>
 ```

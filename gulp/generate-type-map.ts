@@ -44,7 +44,7 @@ export const generateTypeMap = ({
 }: {
   from: string[];
   to: string;
-  type: 'react' | 'vue';
+  type: 'react' | 'vue' | 'web-components';
 }) => function generateManifest() {
   return src(from)
     .pipe(useItemTemplate())

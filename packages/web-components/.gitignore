@@ -1,0 +1,23 @@
+.DS_Store
+
+# auto generated icons
+src/components/*.tsx
+src/manifest.ts
+src/icons.ts
+src/global-config.ts
+src/svg-sprite/svg-icon.ts
+src/iconfont/font-icon.json
+src/iconfont/t.*
+src/iconfont/index.css
+
+# build
+lib/
+dist/
+esm/
+es/
+
+# yarn
+yarn-error.log
+
+# eslint
+.eslintcache

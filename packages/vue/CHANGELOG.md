@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 0.2.4
+
+### Patch Changes
+
+- feat: update iconfont and svgsprite address
+
+## 0.2.3
+
+### Patch Changes
+
+- feat: add `list-numbered` icon, optimize path of `lock-off`;
+- fix: fix `chart-column` naming;
+
 ## 0.2.2
 
 ### Patch Changes

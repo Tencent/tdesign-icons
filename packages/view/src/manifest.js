@@ -4465,7 +4465,7 @@ export const manifest = {
         {
           name: 'lock-off',
           svgString:
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M5.74478 5.72784C6.51627 3.00014 9.02326 1 12 1C15.5898 1 18.5 3.91015 18.5 7.5V9H20.5V22H3.5V9H16.5V7.5C16.5 5.01472 14.4853 3 12 3C9.94163 3 8.20365 4.38286 7.66928 6.27216L7.39712 7.23441L5.47262 6.69009L5.74478 5.72784ZM5.5 11V20H18.5L18.5 11H5.5ZM9 14.5H15V16.5H9V14.5Z" fill="black"/>\n</svg>\n',
+            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C9.79086 3 8 4.79086 8 7V10H20.5V22H3.5V10H6V7C6 3.68629 8.68629 1 12 1C14.4619 1 16.5754 2.48263 17.5003 4.59963C17.5855 4.79465 17.6607 4.99511 17.7251 5.20035L18.0248 6.1544L16.1167 6.7537L15.817 5.79965C15.7742 5.66329 15.7243 5.53006 15.6676 5.40037C15.0494 3.98556 13.6387 3 12 3ZM5.5 12V20H18.5V12H5.5ZM9 15H15V17H9V15Z" fill="black"/>\n</svg>\n',
         },
         {
           name: 'print',
@@ -4845,7 +4845,7 @@ export const manifest = {
         {
           name: 'lock-on',
           svgString:
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M5.5 7.5C5.5 3.91015 8.41015 1 12 1C15.5899 1 18.5 3.91015 18.5 7.5V9H20.5V22H3.5V9H5.5V7.5ZM7.5 9H16.5V7.5C16.5 5.01472 14.4853 3 12 3C9.51472 3 7.5 5.01472 7.5 7.5V9ZM5.5 11V20H18.5V11H5.5ZM9 14.5H15V16.5H9V14.5Z" fill="black"/>\n</svg>\n',
+            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C9.79086 3 8 4.79086 8 7V10H16V7C16 4.79086 14.2091 3 12 3ZM18 10V7C18 3.68629 15.3137 1 12 1C8.68629 1 6 3.68629 6 7V10H3.5V22H20.5V10H18ZM5.5 12V20H18.5V12H5.5ZM9 15H15V17H9V15Z" fill="black" />\n</svg>\n',
         },
         {
           name: 'bug-report',
@@ -5186,7 +5186,7 @@ export const manifest = {
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M4 2V20H22V22H2V2H4ZM21.9142 5.5L15.5 11.9142L11.5 7.91421L6.5 12.9142L5.08579 11.5L11.5 5.08579L15.5 9.08579L20.5 4.08579L21.9142 5.5ZM21.9142 10.5L15.5 16.9142L11.5 12.9142L6.5 17.9142L5.08579 16.5L11.5 10.0858L15.5 14.0858L20.5 9.08579L21.9142 10.5Z" fill="black"/>\n</svg>\n',
         },
         {
-          name: 'chart-colum',
+          name: 'chart-column',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M4 2V4L19 4V10H4V12L15 12V18H4V20H22V22H2L2 2L4 2ZM4 16L13 16V14L4 14L4 16ZM4 8L17 8V6L4 6L4 8Z" fill="black"/>\n</svg>\n',
         },
@@ -5336,6 +5336,11 @@ export const manifest = {
           name: 'bulletpoint',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M3 6.00391H2V5.00391V5V4H3H3.00391H4.00391V5V5.00391V6.00391H3.00391H3ZM3 13.0039H2V12.0039V12V11H3H3.00391H4.00391V12V12.0039V13.0039H3.00391H3ZM2 20.0039H3H3.00391H4.00391V19.0039V19V18H3.00391H3H2V19V19.0039V20.0039ZM8 4H7V6H8H21H22V4H21H8ZM7 11H8H21H22V13H21H8H7V11ZM8 18H7V20H8H21H22V18H21H8Z" fill="black"/>\n</svg>\n',
+        },
+        {
+          name: 'list-numbered',
+          svgString:
+            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n<path d="M4.5 6H5.5V8H1.5V6H2.5L2.5 4H1.5L1.5 2H2.5C3.60457 2 4.5 2.89543 4.5 4V6Z" fill="black"/>\n<path d="M7 20V18H22V20H7Z" fill="black"/>\n<path d="M7 13V11H22V13H7Z" fill="black"/>\n<path d="M7 6V4H22V6H7Z" fill="black"/>\n<path d="M1.5 9.25H3.96967C4.81485 9.25 5.5 9.93515 5.5 10.7803C5.5 11.1862 5.33877 11.5754 5.05178 11.8624L4.16421 12.75H5.5V14.75H1.5V13.4142C1.5 12.8838 1.71071 12.3751 2.08579 12L2.83579 11.25H1.5V9.25Z" fill="black"/>\n<path d="M1.5 15.75V17.75H3.5V18H2V20H3.5V20.25H1.5V22.25H3.5C4.60457 22.25 5.5 21.3546 5.5 20.25V17.75C5.5 16.6454 4.60457 15.75 3.5 15.75H1.5Z" fill="black"/>\n</svg>\n',
         },
         {
           name: 'format-vertical-align-right',

@@ -37,7 +37,12 @@ function loadLink(url: string, className: string, callback) {
 }
 
 function getStylesheet() {
-  const iconStyleString = `@keyframes t-spin {
+  const iconStyleString = `
+  :host {
+    display: inline-flex;
+  }
+
+  @keyframes t-spin {
     from {
       transform: rotate(0deg);
     }

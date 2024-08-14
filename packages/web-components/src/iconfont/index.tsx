@@ -75,7 +75,7 @@ export default class IconFont extends Component<IconFontProps> {
     name: String,
     url: [String, Array],
     loadDefaultIcons: Boolean,
-    className: String,
+    cls: String,
     size: String,
     style: Object,
   }
@@ -84,13 +84,13 @@ export default class IconFont extends Component<IconFontProps> {
     return this.props.url && /^t-icon-(\w|-)+$/.test(this.props.name || '');
   }
 
-  get cls() {
+  get class() {
     const { className: sizeClassName } = getSizeProps(this.props.size);
     return classNames({
       [this.props.name || '']: this.props.url,
       [`${this.classPrefix}-icon`]: !this.props.url || this.isBuiltInIcon,
       [`${this.classPrefix}-icon-${this.props.name}`]: !this.props.url,
-    }, sizeClassName, this.props.className);
+    }, sizeClassName, this.props.cls);
   }
 
   render(props: OmiProps<IconFontProps, any>) {
@@ -103,6 +103,7 @@ export default class IconFont extends Component<IconFontProps> {
 
     delete htmlProps.loadDefaultIcons;
     delete htmlProps.url;
+    delete htmlProps.cls;
     delete htmlProps.className;
     delete htmlProps.name;
 
@@ -112,7 +113,7 @@ export default class IconFont extends Component<IconFontProps> {
     return <>
       <style>{`.t-icon-${this.props.name}:before {content: "${fontCode}";}`}</style>
       <Tag
-        class={this.cls}
+        class={this.class}
         style={{ ...customStyle, ...sizeStyle }}
         part='t-icon'
         {...htmlProps}

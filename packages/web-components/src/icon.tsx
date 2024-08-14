@@ -7,7 +7,10 @@ import { getStylesheet } from './util/check-url-and-load';
 
 export interface IconProps extends OmiDOMAttributes {
   style?: CSSStyleDeclaration;
-  className?: string;
+  /**
+   * 类名，叫cls是为了和className区分
+   */
+  cls?: string;
   size?: 'small' | 'medium' | 'large' | string | number;
 }
 
@@ -48,19 +51,27 @@ export class IconBase extends Component<IconProps> {
   static icon: VNode | null = null;
 
   static propTypes = {
-    className: String,
+    cls: String,
     size: String,
     style: Object,
   }
 
   render(props) {
     const {
-      id, className, size, style, ...restProps
+      id,
+      cls,
+      size,
+      style,
+      ...restProps
     } = props;
+
+    delete restProps.cls;
+    delete (restProps as any)?.className;
+
     const { className: sizeClassName, style: sizeStyle } = getSizeProps(size);
-    const cls = classname('t-icon', `t-icon-${id}`, className, sizeClassName);
+    const combinCls = classname('t-icon', `t-icon-${id}`, cls, sizeClassName);
     return render((this.constructor as typeof IconBase).icon as VNode, `${id}`, {
-      className: cls,
+      className: combinCls,
       style: { ...style, ...sizeStyle },
       ...restProps,
     });

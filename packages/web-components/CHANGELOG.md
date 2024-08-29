@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.1.3
+
+### Patch Changes
+
+- fix: fix lock-on icon path
+
 ## 0.1.2
 
 ### Patch Changes

@@ -280,8 +280,8 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
       tdesign-icons-vue:
-        specifier: 0.2.2
-        version: 0.2.2(vue@2.7.14)
+        specifier: 0.2.5
+        version: 0.2.5(vue@2.7.14)
       tdesign-vue:
         specifier: 1.4.6-naruto
         version: 1.4.6-naruto(vue@2.7.14)
@@ -520,8 +520,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       omi:
-        specifier: ^7.6.7
-        version: 7.6.7
+        specifier: ^7.6.17
+        version: 7.7.1
       tailwind-merge:
         specifier: ^2.3.0
         version: 2.3.0
@@ -7185,8 +7185,8 @@ packages:
   obuf@1.1.2:
     resolution: {integrity: sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==}
 
-  omi@7.6.7:
-    resolution: {integrity: sha512-YjoCtgCOghSFB2wc1fCzwKA9eMd01FF2auZRp17HxSpo6noal12NbuzvSfgsGXFzAy97+lwgaRjTBR3n3EGiYw==}
+  omi@7.7.1:
+    resolution: {integrity: sha512-LoCfSNXhfXfWvx93gNeikX2XVUFECVcJiPXs63/Nhybahliwo32nqbtpb6+XhWYsB1ohnSk0WDvGQuHvy8KXUQ==}
 
   on-finished@2.3.0:
     resolution: {integrity: sha512-ikqdkGAAyf/X/gPhXGvfgAytDZtDbr+bkNUJ0N9h5MI/dmdgCs3l6hoHrcUv41sRKew3jIwrp4qQDXiK99Utww==}
@@ -8123,8 +8123,8 @@ packages:
     resolution: {integrity: sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==}
     engines: {node: '>=0.10.0'}
 
-  reactive-signal@1.0.3:
-    resolution: {integrity: sha512-UlbIDgdkreGW0QFdrxCsVQNcPkiv+aOT4bWIF3inHb4jZlBdvRCZtgO9Ie5ayFxlnjetQg1QvRhg5PlGKSxZEA==}
+  reactive-signal@2.0.1:
+    resolution: {integrity: sha512-c+avHi2L+sHn9kkEsDZskRGtkfj6PtoTn1wGgutY2NZR9jCI0InXY7zqWbUXz6cGcuIXKMkQq/mtUiUXBFmKVA==}
 
   read-cmd-shim@3.0.0:
     resolution: {integrity: sha512-KQDVjGqhZk92PPNRj9ZEXEuqg8bUobSKRw+q0YQ3TKI5xkce7bUJobL4Z/OtiEbAAv70yEpYIXp4iQ9L8oPVog==}
@@ -9087,8 +9087,8 @@ packages:
     peerDependencies:
       vue: ^2.6.12
 
-  tdesign-icons-vue@0.2.2:
-    resolution: {integrity: sha512-aAHrd5K2O9pQSUZb09A58qIH9b6fOP9pUapvxzvByuc5Ri3YLLgoz+6/XZcRu5S8insx7OzfhH951qjKxfzLtg==}
+  tdesign-icons-vue@0.2.5:
+    resolution: {integrity: sha512-wKah1jB2JqLf4dj9fyTUrjl+JfdVqP91HiXyE368Nm2VFxbA1HiQcwhnvRixwqTh7S3++/whq3pzV8BLcRtOeA==}
     peerDependencies:
       vue: ^2.6.12
 
@@ -18484,10 +18484,10 @@ snapshots:
 
   obuf@1.1.2: {}
 
-  omi@7.6.7:
+  omi@7.7.1:
     dependencies:
       construct-style-sheets-polyfill: 3.0.1
-      reactive-signal: 1.0.3
+      reactive-signal: 2.0.1
       weakmap-polyfill: 2.0.4
 
   on-finished@2.3.0:
@@ -19726,7 +19726,7 @@ snapshots:
       object-assign: 4.1.1
       prop-types: 15.8.1
 
-  reactive-signal@1.0.3: {}
+  reactive-signal@2.0.1: {}
 
   read-cmd-shim@3.0.0: {}
 
@@ -20922,9 +20922,9 @@ snapshots:
       classnames: 2.2.6
       vue: 2.7.14
 
-  tdesign-icons-vue@0.2.2(vue@2.7.14):
+  tdesign-icons-vue@0.2.5(vue@2.7.14):
     dependencies:
-      '@babel/runtime': 7.22.10
+      '@babel/runtime': 7.24.7
       classnames: 2.2.6
       vue: 2.7.14
 

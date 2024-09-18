@@ -1,5 +1,11 @@
 # tdesign-icons-svg
 
+## 0.2.2
+
+### Patch Changes
+
+- fix: fix lock-on icon path
+
 ## 0.2.1
 
 ### Patch Changes

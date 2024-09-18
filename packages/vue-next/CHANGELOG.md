@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 0.2.6
+
+### Patch Changes
+
+- fix: fix lock-on icon path
+
+## 0.2.5
+
+### Patch Changes
+
+- fix: fix umd usage
+
 ## 0.2.4
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # tdesign-icons-web-components
 
+## 0.1.3
+
+### Patch Changes
+
+- fix: fix lock-on icon path
+
+## 0.1.2
+
+### Patch Changes
+
+- fix: fix icon center position and duplicated class
+
 ## 0.1.1
 
 ### Minor Changes

@@ -1,5 +1,13 @@
 # tdesign-icons-view
 
+## 0.2.8
+
+### Patch Changes
+
+- fix: fix lock-on icon path
+- Updated dependencies
+  - tdesign-icons-vue@0.2.5
+
 ## 0.2.7
 
 ### Patch Changes

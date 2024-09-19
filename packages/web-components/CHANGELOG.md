@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.1.4
+
+### Patch Changes
+
+- fix: fix: upgrade omi to fix icon repeated rendering
+
 ## 0.1.3
 
 ### Patch Changes

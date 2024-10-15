@@ -61,9 +61,9 @@ export class Icon extends Component<SpriteIconProps> {
     name: String,
     url: [String, Array],
     loadDefaultIcons: Boolean,
-    cls: String,
     size: String,
-    style: Object,
+    innerClass: String,
+    innerStyle: Object,
   }
 
   classPrefix = getClassPrefix();
@@ -72,7 +72,7 @@ export class Icon extends Component<SpriteIconProps> {
 
   get class() {
     const {
-      url, name, size, cls: customClassName,
+      url, name, size, innerClass: customClassName,
     } = this.props;
     const iconName = url ? name : `${this.classPrefix}-icon-${name}`;
     const { className: sizeClassName } = getSizeProps(size);
@@ -94,13 +94,14 @@ export class Icon extends Component<SpriteIconProps> {
     const {
       name = '',
       size,
-      style,
+      innerStyle,
       ...restProps
     } = props;
 
     delete restProps.loadDefaultIcons;
-    delete restProps.cls;
+    delete restProps.class;
     delete (restProps as any)?.className;
+    delete restProps.style;
     delete restProps.url;
 
     const { style: sizeStyle } = getSizeProps(size);
@@ -109,7 +110,7 @@ export class Icon extends Component<SpriteIconProps> {
       const node = JSON.parse(this.svgIconJson?.[name] || '{}');
       return render(node, `${name}`, {
         className: this.class,
-        style: { ...style, ...sizeStyle },
+        style: { ...sizeStyle, ...innerStyle },
         ...restProps,
         part: 't-icon',
       });

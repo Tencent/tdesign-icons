@@ -7,10 +7,11 @@ import { getStylesheet } from './util/check-url-and-load';
 
 export interface IconProps extends OmiDOMAttributes {
   style?: CSSStyleDeclaration;
+  innerStyle?: CSSStyleDeclaration;
   /**
-   * 类名，叫cls是为了和className区分
+   * 类名，叫innerClass是为了和最外层className区分
    */
-  cls?: string;
+  innerClass?: string;
   size?: 'small' | 'medium' | 'large' | string | number;
 }
 
@@ -45,23 +46,23 @@ function render(node: VNode, id: string, rootProps?: { [key: string]: any }): VN
   );
 }
 
-export class IconBase extends Component<IconProps> {
+export class IconBase<T extends IconProps> extends Component<T> {
   static css = [getStylesheet()];
 
   static icon: VNode | null = null;
 
   static propTypes = {
-    cls: String,
+    innerClass: String,
+    innerStyle: Object,
     size: String,
-    style: Object,
   }
 
   render(props) {
     const {
       id,
-      cls,
       size,
-      style,
+      innerClass,
+      innerStyle,
       ...restProps
     } = props;
 
@@ -69,10 +70,10 @@ export class IconBase extends Component<IconProps> {
     delete (restProps as any)?.className;
 
     const { className: sizeClassName, style: sizeStyle } = getSizeProps(size);
-    const combinCls = classname('t-icon', `t-icon-${id}`, cls, sizeClassName);
+    const combinCls = classname('t-icon', `t-icon-${id}`, sizeClassName, innerClass);
     return render((this.constructor as typeof IconBase).icon as VNode, `${id}`, {
       className: combinCls,
-      style: { ...style, ...sizeStyle },
+      style: { ...sizeStyle, ...innerStyle },
       ...restProps,
     });
   }

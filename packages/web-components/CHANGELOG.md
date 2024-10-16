@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.1.5
+
+### Patch Changes
+
+- feat: add innerClass and innerStyle
+
 ## 0.1.4
 
 ### Patch Changes

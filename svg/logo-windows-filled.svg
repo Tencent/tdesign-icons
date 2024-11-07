@@ -1,3 +1,6 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21.75 2.13525V11.75H12.25V3.4924L21.75 2.13525ZM10.75 4.11655V11.75H2.25V5.51482L10.75 4.11655ZM2.25 13.25H10.75V20.8248L2.25 20.0153V13.25ZM12.25 13.25H21.75V21.8673L12.25 20.4819V13.25Z" fill="black"/>
+    <path d="M10 3.8L2 5V10.999H10V3.8Z" fill="black" />
+    <path d="M12 3.5V10.999H22V2L12 3.5Z" fill="black" />
+    <path d="M22 13.001H12V20.5L22 22V13.001Z" fill="black" />
+    <path d="M10 20.2V13.001H2V19L10 20.2Z" fill="black" />
 </svg>

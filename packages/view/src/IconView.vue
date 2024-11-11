@@ -306,16 +306,12 @@ watch(
 }
 .t-tabs__header {
   background-color: var(--bg-color-page);
+  padding: 0 16px;
 }
 .t-tabs__operations {
   border: none;
 }
-.t-tabs__operations--left {
-  margin-left: 16px;
-}
-.t-tabs__operations--right {
-  margin-right: 16px;
-}
+
 .t-tabs__btn {
   border: none;
   background-color: var(--bg-color-component);
@@ -325,25 +321,25 @@ watch(
   background-color: var(--bg-color-component-hover);
 }
 .t-tabs__btn--right {
-  box-shadow: none;
+ box-shadow: none;
 }
 .t-tabs__btn--left {
-  box-shadow: none;
+ box-shadow: none;
 }
-.t-tabs__nav-container {
-  padding: 0 16px;
-}
+
 .t-tabs__nav-item {
   font-size: 12px;
   height: 32px !important;
   line-height: 32px !important;
 }
+
 .t-tabs__nav-item-wrapper {
   padding: 0 8px;
   margin: 0;
   height: 24px;
   --ripple-color: var(--td-bg-color-secondarycontainer-active);
 }
+
 .t-tabs__nav-item-wrapper:hover {
   background-color: var(--td-bg-color-secondarycontainer-hover) !important;
 }
@@ -355,6 +351,7 @@ watch(
   justify-content: center;
   width: 100%;
 }
+
 .t-icons-view__wrapper {
   width: calc(1 / 6 * 100%);
   height: 100px;

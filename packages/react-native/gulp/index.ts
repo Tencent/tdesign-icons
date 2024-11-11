@@ -21,7 +21,7 @@ const getIcons = () => {
   const list = fs.readdirSync(svgDir).map((fileName: string) => path.join(svgDir, fileName))
     .filter(isFile);
 
-  const nameList = list.map((path: any) => path.match(/svg\/(\S*).svg/)[1]);
+  const nameList = list.map((path: any) => path.match(/svg\/(\S*).svg/)?.[1]).filter((name) => !!name);
   return nameList;
 };
 
@@ -54,6 +54,7 @@ const generateIconCode = async ({ name }: {name: string}) => {
   fs.ensureDirSync(componentsDir);
 
   const names = parseName(name);
+
   const location = path.join(svgDir, `${names.name}.svg`);
   const destination = path.join(componentsDir, `${names.name}.js`);
   const svgCode = fs.readFileSync(location, 'utf-8');
@@ -138,7 +139,6 @@ export function reactNativeTask() {
       generateIconsIndex();
 
       const icons = getIcons();
-
       icons.forEach((name: string) => {
         generateIconCode({ name })
           .then(({ ComponentName, name }) => {

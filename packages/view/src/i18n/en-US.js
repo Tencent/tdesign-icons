@@ -3,6 +3,6 @@ export default {
     outline: 'outline',
     filled: 'filled',
   },
-  search: 'enter icon name to search',
+  search: 'enter the icon name or keyword to search',
   copied: 'copied',
 };

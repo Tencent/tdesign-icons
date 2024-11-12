@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.3.2
+
+### Patch Changes
+
+- fix: fix video-camera naming
+
 ## 0.3.0
 
 ### Major Changes

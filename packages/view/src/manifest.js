@@ -787,7 +787,7 @@ export const manifest = {
           keywords: ['视频库', '影视资料馆'],
         },
         {
-          name: 'video-camera-2-filled-1',
+          name: 'video-camera-3-filled',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 19.7232V4.23382L17 8.43382V4H0V20L17 20V15.7232L24 19.7232ZM12.3 12L6 16.2V7.8L12.3 12Z"    fill="black" />\n</svg>',
           keywords: ['电视摄像机', '视频摄影机'],
@@ -7496,7 +7496,7 @@ export const manifest = {
           keywords: ['"关闭摄像机', '摄像机关"'],
         },
         {
-          name: 'video-camera-2-1',
+          name: 'video-camera-3',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4.23382V19.7232L17 15.7232V20L0 20L6.9938e-07 4L17 4V8.43382L24 4.23382ZM17 10.7662V13.4197L22 16.2768V7.76619L17 10.7662ZM15 18V6L2 6L2 18H15ZM13.3028 12L6 16.8685L6 7.13148L13.3028 12ZM8 10.8685V13.1315L9.69722 12L8 10.8685Z"    fill="black" />\n</svg>',
           keywords: ['电视摄像机', '视频摄影机'],
@@ -10686,12 +10686,6 @@ export const manifest = {
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 20V14H20V16H16V20H14ZM8 20V16H4V14H10V20H8ZM20 10H14V4H16V8H20V10ZM10 10H4V8H8V4H10V10Z"    fill="black" />\n</svg>',
           keywords: ['全屏退出', '退出全屏模式'],
-        },
-        {
-          name: 'fullsreen',
-          svgString:
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5H19.5V12H17.5V7.91421L7.91421 17.5H12V19.5H4.5V12H6.5V16.0858L16.0858 6.5H12V4.5Z" fill="black" />\n</svg>',
-          keywords: ['全屏', '完整屏幕'],
         },
         {
           name: 'login',

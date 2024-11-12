@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-view",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A web-component package for display all icons in any UI framework",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "lodash": "^4.17.21",
-    "tdesign-icons-vue": "0.2.5",
+    "tdesign-icons-vue": "0.3.1",
     "tdesign-vue": "1.10.5-naruto",
     "tvision-color": "^1.6.0",
     "vue": "2.7.14"

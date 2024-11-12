@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.4.1
+
+### Patch Changes
+
+- fix: fix video-camera naming
+
 ## 0.4.0
 
 ### Major Changes

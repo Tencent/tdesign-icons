@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.2.1
+
+### Patch Changes
+
+- fix: fix video-camera naming
+
 ## 0.2.0
 
 ### Major Changes

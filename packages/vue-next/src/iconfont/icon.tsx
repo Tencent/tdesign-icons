@@ -11,7 +11,7 @@ import '../style/css';
 
 const { classPrefix } = ConfigContext;
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.2.1/fonts/index.css';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.3.0/fonts/index.css';
 
 export const IconFont = defineComponent({
   name: 'IconFont',
@@ -52,7 +52,7 @@ export const IconFont = defineComponent({
     const finalProps = computed(() => ({
       class: classNames.value,
       style: finalStyle.value,
-      onClick: (e:MouseEvent) => props.onClick?.({ e }),
+      onClick: (e: MouseEvent) => props.onClick?.({ e }),
     }));
 
     return () => h(props.tag || 'i', finalProps.value);

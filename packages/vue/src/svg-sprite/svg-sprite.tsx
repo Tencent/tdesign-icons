@@ -11,7 +11,7 @@ const { classPrefix } = ConfigContext;
 
 const tName = `${classPrefix}-icon`;
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.2.1/fonts/index.js';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.3.0/fonts/index.js';
 
 export default Vue.extend({
   name: 'Icon',
@@ -62,7 +62,7 @@ export default Vue.extend({
     };
     return (
       <svg class={this.classes} style={this.iconStyle} onClick={this.handleClick}>
-        <use {...{ attrs }}/>
+        <use {...{ attrs }} />
       </svg>
     );
   },

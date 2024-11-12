@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 0.3.0
+
+### Major Changes
+
+- feat: 新增 907 个新图标
+- feat: `blockchain` 重命名改为`transform-1`,`gesture-pray-1`重命名为`gesture-open`,
+  `gesture-ranslation-1`重命名为`wave-bye`, `gesture-up-1`重命名为`gesture-typing`,`gesture-up-2`重命名为`gesture-right-slip`,`logo-wechat`重命名为`logo-wechat-stroke-filled`
+- feat: 移除`tree-list`、`logo-adobe-photoshop-1` 图标
+
 ## 0.2.5
 
 ### Patch Changes

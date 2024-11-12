@@ -252,7 +252,10 @@ const handleSearchIcon = (searchStr) => {
           searchManifest[key][category] = ctx;
         } else {
           ctx.icons.forEach((icon) => {
-            if (icon.name.indexOf(searchStr) > -1) {
+            if (
+              icon.name.indexOf(searchStr) > -1
+              || icon.keywords.find((keyword) => keyword.indexOf(searchStr) > -1)
+            ) {
               if (!searchManifest[key][category]) {
                 searchManifest[key][category] = {
                   labelCN: ctx.labelCN,
@@ -321,10 +324,10 @@ watch(
   background-color: var(--bg-color-component-hover);
 }
 .t-tabs__btn--right {
- box-shadow: none;
+  box-shadow: none;
 }
 .t-tabs__btn--left {
- box-shadow: none;
+  box-shadow: none;
 }
 
 .t-tabs__nav-item {

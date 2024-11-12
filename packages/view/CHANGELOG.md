@@ -1,5 +1,13 @@
 # tdesign-icons-view
 
+## 0.3.1
+
+### Patch Changes
+
+- fix: fix video-camera naming
+- Updated dependencies
+  - tdesign-icons-vue@0.3.1
+
 ## 0.3.0
 
 ### Major Changes

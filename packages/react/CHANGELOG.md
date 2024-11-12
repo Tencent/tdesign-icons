@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.4.2
+
+### Patch Changes
+
+- fix: fix filled-icon naming
+
 ## 0.4.1
 
 ### Patch Changes

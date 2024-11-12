@@ -871,7 +871,7 @@ export const manifest = {
           keywords: ['圆环图,环形图'],
         },
         {
-          name: 'chart-radar -filled',
+          name: 'chart-radar-filled',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.0011 1.48999L1.81469 8.1643L11.0011 11.1491V1.48999Z" fill="black" /><path d="M1.19604 10.0662L4.70517 20.8662L10.3831 13.0513L1.19604 10.0662Z" fill="black" /><path d="M6.32406 22.0406H17.6781L12.0011 14.2268L6.32406 22.0406Z" fill="black" /><path d="M19.2953 20.8638L22.8033 10.0671L13.6191 13.0513L19.2953 20.8638Z" fill="black" /><path d="M22.1857 8.16488L13.0011 1.49184V11.1491L22.1857 8.16488Z" fill="black" />\n</svg>',
           keywords: ['图表雷达', '雷达图表'],
@@ -3413,7 +3413,7 @@ export const manifest = {
           keywords: ['制表符', '表格符号'],
         },
         {
-          name: 'scroll-bar -filled',
+          name: 'scroll-bar-filled',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 2V22H20V2H22ZM2 2H18V22H2V2Z" fill="black" />\n</svg>',
           keywords: ['滚动条', '滚动条'],
@@ -4937,7 +4937,7 @@ export const manifest = {
           keywords: ['胶卷', '电影胶片'],
         },
         {
-          name: 'data -filled',
+          name: 'data-filled',
           svgString:
             '<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.22632 2H22.2263V11H2.22632V2ZM8.22827 5.5H6.22437V7.50391H8.22827V5.5Z" fill="black" /><path d="M2.22632 13H22.2263V22H2.22632V13ZM8.22827 16.5H6.22437V18.5039H8.22827V16.5Z" fill="black" />\n</svg>',
           keywords: ['数据', '资讯'],

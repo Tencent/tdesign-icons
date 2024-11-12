@@ -1,5 +1,13 @@
 # tdesign-icons-view
 
+## 0.3.2
+
+### Patch Changes
+
+- fix: fix filled-icon naming
+- Updated dependencies
+  - tdesign-icons-vue@0.3.2
+
 ## 0.3.1
 
 ### Patch Changes

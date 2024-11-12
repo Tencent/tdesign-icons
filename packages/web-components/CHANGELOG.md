@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.2.2
+
+### Patch Changes
+
+- fix: fix filled-icon naming
+
 ## 0.2.1
 
 ### Patch Changes

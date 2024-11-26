@@ -3710,7 +3710,7 @@ export const manifest = {
           name: 'delete-time-filled',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3H16.5V1H7.5V3Z" fill="black" /><path d="M22 6V4H2V6H4.02898L4.52898 23H12.4994C11.5579 21.7465 11 20.1884 11 18.5V8H13V13.4009C14.3697 11.9242 16.3269 11 18.5 11C18.9506 11 19.3919 11.0397 19.8206 11.1159L19.971 6H22Z"    fill="black" /><path d="M13 18.5C13 15.4624 15.4624 13 18.5 13C21.5376 13 24 15.4624 24 18.5C24 21.5376 21.5376 24 18.5 24C15.4624 24 13 21.5376 13 18.5ZM20.9142 19.5001L19.5 18.0857V16.252H17.5V18.9141L19.4999 20.9142L20.9142 19.5001Z"    fill="black" />\n</svg>',
-          keywords: ['删除时间', '删除时刻'],
+          keywords: ['删除时间', '删除时刻', '垃圾桶'],
         },
         {
           name: 'help-circle-filled',
@@ -4298,7 +4298,7 @@ export const manifest = {
           name: 'delete-1-filled',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3H16.5V1H7.5V3Z" fill="black" /><path d="M22 6V4H2V6H4.02898L4.52898 23H19.471L19.971 6H22ZM16.2431 10.6715L13.4147 13.5L16.2431 16.3284L14.8289 17.7426L12.0005 14.9142L9.17203 17.7426L7.75781 16.3284L10.5862 13.5L7.75781 10.6715L9.17203 9.25732L12.0005 12.0858L14.8289 9.25732L16.2431 10.6715Z"    fill="black" />\n</svg>',
-          keywords: ['删除', '删去'],
+          keywords: ['删除', '删去', '垃圾桶'],
         },
         {
           name: 'explore-filled',
@@ -4406,7 +4406,7 @@ export const manifest = {
           name: 'delete-filled',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 3H16.5V1H7.5V3Z" fill="black" /><path d="M22 6V4H2V6H4.02898L4.52898 23H19.471L19.971 6H22ZM11 19V8H13V19H11Z" fill="black" />\n</svg>',
-          keywords: ['删除', '删去'],
+          keywords: ['删除', '删去', '垃圾桶'],
         },
         {
           name: 'heart-filled',
@@ -10859,7 +10859,7 @@ export const manifest = {
           name: 'delete-time',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 1H16.5V4H22V6H19.971L19.8084 11.529L17.8093 11.4702L17.9702 6H6.02984L6.47102 21H11.5V23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM13 8V15H11V8H13ZM18.5 15C16.567 15 15 16.567 15 18.5C15 20.433 16.567 22 18.5 22C20.433 22 22 20.433 22 18.5C22 16.567 20.433 15 18.5 15ZM13 18.5C13 15.4624 15.4624 13 18.5 13C21.5376 13 24 15.4624 24 18.5C24 21.5376 21.5376 24 18.5 24C15.4624 24 13 21.5376 13 18.5ZM19.5 16.252V18.0858L20.9142 19.5001L19.4999 20.9142L17.5 18.9141V16.252H19.5Z"    fill="black" />\n</svg>',
-          keywords: ['删除时间', '删除时刻'],
+          keywords: ['删除时间', '删除时刻', '垃圾桶'],
         },
         {
           name: 'time',
@@ -11475,7 +11475,7 @@ export const manifest = {
           name: 'delete',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.49988 1H16.4999V4H21.9999V6H19.9709L19.4709 23H4.52886L4.02886 6H1.99988V4H7.49988V1ZM9.49988 4H14.4999V3H9.49988V4ZM6.02972 6L6.4709 21H17.5289L17.97 6H6.02972ZM12.9999 8V19H10.9999V8H12.9999Z"    fill="black" />\n</svg>',
-          keywords: ['删除', '删去'],
+          keywords: ['删除', '删去', '垃圾桶'],
         },
         {
           name: 'edit',
@@ -11541,7 +11541,7 @@ export const manifest = {
           name: 'delete-1',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 1H16.5V4H22V6H19.971L19.471 23H4.52898L4.02898 6H2V4H7.5V1ZM9.5 4H14.5V3H9.5V4ZM6.02984 6L6.47102 21H17.529L17.9702 6H6.02984ZM9.17158 9.25736L12 12.0858L14.8284 9.25736L16.2426 10.6716L13.4142 13.5L16.2426 16.3284L14.8284 17.7426L12 14.9142L9.17158 17.7426L7.75737 16.3284L10.5858 13.5L7.75737 10.6716L9.17158 9.25736Z"    fill="black" />\n</svg>',
-          keywords: ['删除', '删去'],
+          keywords: ['删除', '删去', '垃圾桶'],
         },
         {
           name: 'flag-3',

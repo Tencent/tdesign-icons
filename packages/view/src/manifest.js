@@ -3734,7 +3734,7 @@ export const manifest = {
           name: 'notification-add-filled',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8C4 3.58172 7.58172 0 12 0C16.4183 0 20 3.58172 20 8V12.6972L22 15.6972V20H2V15.6972L4 12.6972V8ZM13 9L13 6L11 6L11 9L8 9L8 11L11 11V14H13V11H16V9H13Z"    fill="black" /><path d="M8.64453 21C9.07481 22.4457 10.4141 23.5 11.9996 23.5C13.5851 23.5 14.9244 22.4457 15.3547 21H8.64453Z"    fill="black" />\n</svg>',
-          keywords: ['通知添加', '添加通知'],
+          keywords: ['通知添加', '添加通知', '铃铛'],
         },
         {
           name: 'info-circle-filled',
@@ -3758,13 +3758,13 @@ export const manifest = {
           name: 'notification-error-filled',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8C4 3.58172 7.58172 0 12 0C16.4183 0 20 3.58172 20 8V12.6972L22 15.6972V20H2V15.6972L4 12.6972V8ZM11 6V12H13V6H11ZM13.0039 13.5H11V15.5039H13.0039V13.5Z"    fill="black" /><path d="M8.64453 21C9.07481 22.4457 10.4141 23.5 11.9996 23.5C13.5851 23.5 14.9244 22.4457 15.3547 21H8.64453Z"    fill="black" />\n</svg>',
-          keywords: ['通知错误', '错误通知'],
+          keywords: ['通知错误', '错误通知', '铃铛'],
         },
         {
           name: 'notification-filled',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C7.58172 0 4 3.58172 4 8V12.6972L2 15.6972V20H22V15.6972L20 12.6972V8C20 3.58172 16.4183 0 12 0Z"    fill="black" /><path d="M11.9996 23.5C10.4141 23.5 9.07481 22.4457 8.64453 21H15.3547C14.9244 22.4457 13.5851 23.5 11.9996 23.5Z"    fill="black" />\n</svg>',
-          keywords: ['通知', '通报'],
+          keywords: ['通知', '通报', '铃铛'],
         },
       ],
     },
@@ -4574,7 +4574,7 @@ export const manifest = {
           name: 'notification-circle-filled',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM6.5 16.5H9.87793C10.1868 17.3739 11.0202 18 11.9999 18C12.9796 18 13.813 17.3739 14.1219 16.5H17.5V14.882L16.5 12.882V10.5C16.5 8.01472 14.4853 6 12 6C9.51472 6 7.5 8.01472 7.5 10.5V12.882L6.5 14.882V16.5Z"    fill="black" />\n</svg>',
-          keywords: ['通知圆圈', '圆形通知'],
+          keywords: ['通知圆圈', '圆形通知', '铃铛'],
         },
         {
           name: 'print-filled',
@@ -10841,7 +10841,7 @@ export const manifest = {
           name: 'notification-add',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8C4 3.58172 7.58172 0 12 0C16.4183 0 20 3.58172 20 8V12.6972L22 15.6972V20H16.3885C15.9338 22.004 14.1416 23.5 12 23.5C9.85841 23.5 8.06624 22.004 7.61151 20H2V15.6972L4 12.6972V8ZM9.70802 20C10.0938 20.883 10.9748 21.5 12 21.5C13.0252 21.5 13.9062 20.883 14.292 20H9.70802ZM12 2C8.68629 2 6 4.68629 6 8V13.3028L4 16.3028V18H20V16.3028L18 13.3028V8C18 4.68629 15.3137 2 12 2ZM13 6L13 9H16V11H13V14H11V11L8 11L8 9L11 9L11 6L13 6Z"    fill="black" />\n</svg>',
-          keywords: ['通知添加', '添加通知'],
+          keywords: ['通知添加', '添加通知', '铃铛'],
         },
         {
           name: 'error-triangle',
@@ -10853,7 +10853,7 @@ export const manifest = {
           name: 'notification',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8C4 3.58172 7.58172 0 12 0C16.4183 0 20 3.58172 20 8V12.6972L22 15.6972V20H16.3885C15.9338 22.004 14.1416 23.5 12 23.5C9.85841 23.5 8.06624 22.004 7.61151 20H2V15.6972L4 12.6972V8ZM9.70802 20C10.0938 20.883 10.9748 21.5 12 21.5C13.0252 21.5 13.9062 20.883 14.292 20H9.70802ZM12 2C8.68629 2 6 4.68629 6 8V13.3028L4 16.3028V18H20V16.3028L18 13.3028V8C18 4.68629 15.3137 2 12 2Z"    fill="black" />\n</svg>',
-          keywords: ['通知', '通报'],
+          keywords: ['通知', '通报', '铃铛'],
         },
         {
           name: 'delete-time',
@@ -10871,7 +10871,7 @@ export const manifest = {
           name: 'notification-error',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8C4 3.58172 7.58172 0 12 0C16.4183 0 20 3.58172 20 8V12.6972L22 15.6972V20H16.3885C15.9338 22.004 14.1416 23.5 12 23.5C9.85841 23.5 8.06624 22.004 7.61151 20H2V15.6972L4 12.6972V8ZM20 18V16.3028L18 13.3028V8C18 4.68629 15.3137 2 12 2C8.68629 2 6 4.68629 6 8V13.3028L4 16.3028V18H20ZM14.292 20H9.70802C10.0938 20.883 10.9748 21.5 12 21.5C13.0252 21.5 13.9062 20.883 14.292 20ZM13 6V12H11V6H13ZM11 13.5H13.0039V15.5039H11V13.5Z"    fill="black" />\n</svg>',
-          keywords: ['通知错误', '错误通知'],
+          keywords: ['通知错误', '错误通知', '铃铛'],
         },
         {
           name: 'help-circle',
@@ -11805,7 +11805,7 @@ export const manifest = {
           name: 'notification-circle',
           svgString:
             '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM23 12C23 18.0751 18.0751 23 12 23C5.92487 23 0.999999 18.0751 1 12C1 5.92487 5.92487 0.999999 12 1C18.0751 1 23 5.92487 23 12ZM13.7324 17C13.3866 17.5978 12.7403 18 12 18C11.2597 18 10.6134 17.5978 10.2676 17H6L6 14.2639L7 12.2639V10C7 7.23858 9.23858 5 12 5C14.7614 5 17 7.23858 17 10V12.2639L18 14.2639V17H13.7324ZM8 15H16V14.7361L15 12.7361V10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10V12.7361L8 14.7361V15Z"    fill="black" />\n</svg>',
-          keywords: ['通知圆圈', '圆形通知'],
+          keywords: ['通知圆圈', '圆形通知', '铃铛'],
         },
         {
           name: 'print',

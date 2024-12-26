@@ -25,8 +25,8 @@
   "unpkg": "dist/index.min.js",
   "sideEffects": [
     "dist/**/*",
-    "esm/style/**/*",
-    "lib/style/**/*"
+    "esm/**/*",
+    "lib/**/*"
   ],
   "scripts": {
     "prebuild": "rimraf esm/* lib/* dist/*",

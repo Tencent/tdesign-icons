@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- fix: fix sideeffect and search name
+- fix: fix search keywords
 
 ## 0.3.2
 

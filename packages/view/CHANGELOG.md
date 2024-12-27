@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 0.3.3
+
+### Patch Changes
+
+- fix: fix search keywords
+
 ## 0.3.2
 
 ### Patch Changes

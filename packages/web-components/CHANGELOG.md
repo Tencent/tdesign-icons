@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.2.3
+
+### Patch Changes
+
+- fix: fix sideEffect
+
 ## 0.2.2
 
 ### Patch Changes

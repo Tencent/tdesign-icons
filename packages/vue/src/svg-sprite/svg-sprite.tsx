@@ -11,7 +11,7 @@ const { classPrefix } = ConfigContext;
 
 const tName = `${classPrefix}-icon`;
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.3.0/fonts/index.js';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.3.1/fonts/index.js';
 
 export default Vue.extend({
   name: 'Icon',

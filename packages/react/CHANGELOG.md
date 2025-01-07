@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.4.3
+
+### Patch Changes
+
+- feat: 新增 logo-alipay、logo-behance-filled 等图标，修改 logo-wecom 图标，移除不合理的 logo-wecom-filled 图标
+
 ## 0.4.2
 
 ### Patch Changes

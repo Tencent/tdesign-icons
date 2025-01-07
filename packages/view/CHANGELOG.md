@@ -1,5 +1,13 @@
 # tdesign-icons-view
 
+## 0.3.4
+
+### Patch Changes
+
+- feat: 新增 logo-alipay、logo-behance-filled 等图标，修改 logo-wecom 图标，移除不合理的 logo-wecom-filled 图标
+- Updated dependencies
+  - tdesign-icons-vue@0.3.3
+
 ## 0.3.3
 
 ### Patch Changes

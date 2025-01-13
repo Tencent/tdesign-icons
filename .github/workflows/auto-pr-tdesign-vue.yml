@@ -1,0 +1,20 @@
+name: auto-pr-tdesign-vue
+
+on:
+  pull_request:
+    branches: [ develop ]
+    types: [ closed]
+    paths:
+      - "packages/vue/package.json"
+jobs:
+    auto-pr:
+        runs-on: ubuntu-latest
+        if: github.event.pull_request.merged == true 
+        steps:
+        - name: Auto PR tdesign-vue
+          uses: TDesignOteam//tdesign-pr-trigger-action@develop
+          env:
+            GITHUB_TOKEN: ${{ secrets.TDESIGN_BOT_TOKEN }}
+          with:
+            pr_number: ${{ github.event.pull_request.number }}
+            comment: /pr-vue

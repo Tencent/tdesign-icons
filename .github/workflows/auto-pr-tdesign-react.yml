@@ -2,8 +2,8 @@ name: auto-pr-tdesign-react
 
 on:
   pull_request:
-    branches: [ develop ]
-    types: [ closed]
+    branches: [develop]
+    types: [closed]
     paths:
       - "packages/react/package.json"
 jobs:

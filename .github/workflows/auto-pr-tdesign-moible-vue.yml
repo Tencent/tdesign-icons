@@ -7,16 +7,16 @@ on:
     paths:
       - "packages/vue-next/package.json"
 jobs:
-    auto-pr:
-        runs-on: ubuntu-latest
-        if: github.event.pull_request.merged 
-        steps:
-        - uses: actions/setup-node@v4
-          with:
-            node-version: 18
-        - name: Auto PR tdesign-vue
-          uses: TDesignOteam/tdesign-pr-trigger-action@develop
-          with:
-            pr_number: ${{ github.event.pull_request.number }}
-            trigger: /pr-mobile-vue
-            token: ${{ secrets.TDESIGN_BOT_TOKEN }}
+  auto-pr:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged 
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Auto PR
+        uses: TDesignOteam/tdesign-pr-trigger-action@develop
+        with:
+          pr_number: ${{ github.event.pull_request.number }}
+          trigger: /pr-mobile-vue
+          token: ${{ secrets.TDESIGN_BOT_TOKEN }}

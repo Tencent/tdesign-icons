@@ -9,13 +9,13 @@ on:
 jobs:
     auto-pr:
         runs-on: ubuntu-latest
-        if: github.event.pull_request.merged == true 
+        if: github.event.pull_request.merged
         steps:
         - uses: actions/setup-node@v4
           with:
             node-version: 18
         - name: Auto PR tdesign-vue-next
-          uses: TDesignOteam//tdesign-pr-trigger-action@develop
+          uses: TDesignOteam/tdesign-pr-trigger-action@develop
           with:
             pr_number: ${{ github.event.pull_request.number }}
             trigger: /pr-vue-next

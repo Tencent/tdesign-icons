@@ -17,4 +17,5 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.TDESIGN_BOT_TOKEN }}
           with:
             pr_number: ${{ github.event.pull_request.number }}
-            comment: /pr-react
+            trigger: /pr-react
+            token: ${{ secrets.TDESIGN_BOT_TOKEN }}

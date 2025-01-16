@@ -17,4 +17,5 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.TDESIGN_BOT_TOKEN }}
           with:
             pr_number: ${{ github.event.pull_request.number }}
-            comment: /pr-vue
+            trigger: /pr-vue
+            token: ${{ secrets.TDESIGN_BOT_TOKEN }}

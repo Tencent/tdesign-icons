@@ -11,6 +11,9 @@ jobs:
         runs-on: ubuntu-latest
         if: github.event.pull_request.merged == true 
         steps:
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 18
         - name: Auto PR tdesign-vue
           uses: TDesignOteam//tdesign-pr-trigger-action@develop
           with:

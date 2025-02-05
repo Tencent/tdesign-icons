@@ -1,23 +1,22 @@
-name: Auto PR tdesign-miniprogram
+name: auto-pr-tdesign-miniprogram
 
 on:
   pull_request:
     branches: [develop]
     types: [closed]
     paths:
-      - "packages/vue/package.json"
+      - "packages/vue-next/package.json"
 jobs:
-    pr-miniprogram:
-        runs-on: ubuntu-latest
-        if: github.event.pull_request.merged == true 
-        steps:
-        - uses: actions/setup-node@v4
-          with:
-            node-version: 18
-        - name: pr tdesign-miniprogram
-          uses: TDesignOteam//tdesign-pr-trigger-action@develop
-          env:
-            GITHUB_TOKEN: ${{ secrets.TDESIGN_BOT_TOKEN }}
-          with:
-            pr_number: ${{ github.event.pull_request.number }}
-            comment: /pr-miniprogram
+  auto-pr:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged 
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Auto PR
+        uses: TDesignOteam/tdesign-pr-trigger-action@develop
+        with:
+          pr_number: ${{ github.event.pull_request.number }}
+          trigger: /pr-miniprogram
+          token: ${{ secrets.TDESIGN_BOT_TOKEN }}

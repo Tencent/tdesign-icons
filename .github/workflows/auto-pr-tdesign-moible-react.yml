@@ -1,11 +1,11 @@
-name: auto-pr-tdesign-vue
+name: auto-pr-tdesign-mobile-react
 
 on:
   pull_request:
     branches: [develop]
     types: [closed]
     paths:
-      - "packages/vue/package.json"
+      - "packages/react/package.json"
 jobs:
   auto-pr:
     runs-on: ubuntu-latest
@@ -14,9 +14,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: Auto PR tdesign-miniprogram
+      - name: Auto PR
         uses: TDesignOteam/tdesign-pr-trigger-action@develop
         with:
           pr_number: ${{ github.event.pull_request.number }}
-          trigger: /pr-vue
+          trigger: /pr-mobile-react
           token: ${{ secrets.TDESIGN_BOT_TOKEN }}

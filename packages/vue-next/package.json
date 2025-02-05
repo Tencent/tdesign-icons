@@ -37,9 +37,9 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.5",
+    "@babel/core": "catalog:",
     "@babel/plugin-transform-runtime": "catalog:",
-    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-env": "catalog:",
     "@rollup/plugin-babel": "catalog:",
     "@rollup/plugin-commonjs": "catalog:",
     "@rollup/plugin-node-resolve": "catalog:",
@@ -67,6 +67,6 @@
     "vue": "3"
   },
   "dependencies": {
-    "@babel/runtime": "^7.16.3"
+    "@babel/runtime": "catalog:"
   }
 }

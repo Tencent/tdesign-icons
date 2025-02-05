@@ -42,10 +42,10 @@
     "react-dom": ">=16.13.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
+    "@babel/core": "catalog:",
     "@babel/plugin-transform-react-jsx": "catalog:",
     "@babel/plugin-transform-runtime": "catalog:",
-    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-env": "catalog:",
     "@babel/preset-react": "catalog:",
     "@rollup/plugin-babel": "catalog:",
     "@rollup/plugin-commonjs": "catalog:",
@@ -73,7 +73,7 @@
     "typescript": "4.4.4"
   },
   "dependencies": {
-    "@babel/runtime": "^7.16.5",
+    "@babel/runtime": "catalog:",
     "classnames": "catalog:"
   }
 }

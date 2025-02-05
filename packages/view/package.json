@@ -36,7 +36,7 @@
     "vue": "2.7.14"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@babel/core": "catalog:",
     "@babel/eslint-parser": "catalog:",
     "@vue/cli-plugin-babel": "catalog:",
     "@vue/cli-plugin-eslint": "catalog:",

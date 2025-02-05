@@ -16,8 +16,8 @@
   },
   "devDependencies": {
     "@vercel/ncc": "^0.27.0",
-    "camelcase": "^6.2.0",
-    "cross-env": "^7.0.3",
+    "camelcase": "catalog:",
+    "cross-env": "catalog:",
     "typescript": "^4.1.3"
   }
 }

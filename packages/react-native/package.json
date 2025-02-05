@@ -19,15 +19,15 @@
     "react": ">=16.13.1"
   },
   "dependencies": {
-    "react-native-svg": "^13.9.0"
+    "react-native-svg": "catalog:"
   },
   "devDependencies": {
-    "@svgr/core": "^6.1.2",
-    "@svgr/plugin-prettier": "^8.1.0",
-    "@svgr/plugin-svgo": "^6.2.0",
-    "@types/uppercamelcase": "^3.0.0",
-    "fs-extra": "^9.1.0",
-    "path": "^0.12.7",
-    "uppercamelcase": "^3.0.0"
+    "@svgr/core": "catalog:",
+    "@svgr/plugin-prettier": "catalog:",
+    "@svgr/plugin-svgo": "catalog:",
+    "@types/uppercamelcase": "catalog:",
+    "fs-extra": "catalog:",
+    "path": "catalog:",
+    "uppercamelcase": "catalog:"
   }
 }

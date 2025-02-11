@@ -60,7 +60,6 @@
     "gulp-svg-sprite": "catalog:",
     "gulp-typescript": "catalog:",
     "husky": "catalog:",
-    "lerna": "catalog:",
     "lint-staged": "catalog:",
     "merge-stream": "catalog:",
     "merge2": "catalog:",

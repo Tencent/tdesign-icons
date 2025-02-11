@@ -50,11 +50,12 @@ jobs:
               echo "邮箱 $log_emails 校验通过";
           fi
 
-  icons:
+  build:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        icon:
+        icons:
           - tdesign-icons-vue
           - tdesign-icons-vue-next
           - tdesign-icons-react
@@ -75,4 +76,4 @@ jobs:
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
       - run: pnpm run generate
-      - run: pnpm run --filter ${{ matrix.icon }} build  
+      - run: pnpm run --filter ${{ matrix.icons }} build  

@@ -100,7 +100,9 @@ jobs:
 
       - run: mv packages/view/dist/demo.html packages/view/dist/index.html
 
-      - run: zip -r _site.zip packages/view/dist
+      - run: mv packages/view/dist _site
+
+      - run: zip -r _site.zip _site
       
       - name: upload _site artifact
         uses: actions/upload-artifact@v4

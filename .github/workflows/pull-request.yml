@@ -94,6 +94,8 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - run: pnpm run generate
+
       - run: pnpm run --filter tdesign-icons-view build
 
       - run: mv packages/view/dist/demo.html packages/view/dist/index.html

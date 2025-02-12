@@ -283,8 +283,8 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
       tdesign-icons-vue:
-        specifier: 0.2.5
-        version: 0.2.5(vue@2.7.14)
+        specifier: 0.3.3
+        version: 0.3.3(vue@2.7.14)
       tdesign-vue:
         specifier: 1.10.5-naruto
         version: 1.10.5-naruto(vue@2.7.14)
@@ -9047,6 +9047,7 @@ packages:
 
   sudo-prompt@9.2.1:
     resolution: {integrity: sha512-Mu7R0g4ig9TUuGSxJavny5Rv0egCEtpZRNMrZaYS1vxkiIxGiGUwoezU3LazIQ+KE04hTrTfNPgxU5gzi7F5Pw==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   supports-color@2.0.0:
     resolution: {integrity: sha512-KKNVtd6pCYgPIKU4cp2733HWYCpplQhddZLBUryaAHou723x+FRzQ5Df824Fj+IyyuiQTRoub4SnIFfIcrp70g==}
@@ -9134,6 +9135,11 @@ packages:
 
   tdesign-icons-vue@0.2.5:
     resolution: {integrity: sha512-wKah1jB2JqLf4dj9fyTUrjl+JfdVqP91HiXyE368Nm2VFxbA1HiQcwhnvRixwqTh7S3++/whq3pzV8BLcRtOeA==}
+    peerDependencies:
+      vue: ^2.6.12
+
+  tdesign-icons-vue@0.3.3:
+    resolution: {integrity: sha512-FOBoGwHej/wv7K9SfHn0vR2qvMdlm0occ+dWNMJrqw4wmHvE5LxIVcby1dB0px+s5qHz0/PmQ2y5PsWC7uPY9w==}
     peerDependencies:
       vue: ^2.6.12
 
@@ -20965,6 +20971,12 @@ snapshots:
       yallist: 4.0.0
 
   tdesign-icons-vue@0.2.5(vue@2.7.14):
+    dependencies:
+      '@babel/runtime': 7.24.7
+      classnames: 2.2.6
+      vue: 2.7.14
+
+  tdesign-icons-vue@0.3.3(vue@2.7.14):
     dependencies:
       '@babel/runtime': 7.24.7
       classnames: 2.2.6

@@ -59,6 +59,7 @@ jobs:
           - tdesign-icons-vue
           - tdesign-icons-vue-next
           - tdesign-icons-react
+          - tdesign-icons-react-native
           - tdesign-icons-svg
           - tdesign-icons-view
           - tdesign-icons-web-components

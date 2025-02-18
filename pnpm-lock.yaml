@@ -403,7 +403,7 @@ importers:
         specifier: 'catalog:'
         version: 4.17.21
       tdesign-icons-vue:
-        specifier: 'catalog:'
+        specifier: 0.3.3
         version: 0.3.3(vue@2.7.14)
       tdesign-vue:
         specifier: 'catalog:'

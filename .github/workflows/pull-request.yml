@@ -77,3 +77,47 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm run generate
       - run: pnpm run --filter ${{ matrix.icons }} build  
+  
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: "pnpm"
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm run generate
+
+      - run: pnpm run --filter tdesign-icons-view build
+
+      - run: mv packages/view/dist/demo.html packages/view/dist/index.html
+
+      - run: mv packages/view/dist _site
+
+      - run: zip -r _site.zip _site
+      
+      - name: upload _site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: _site
+          path: _site.zip
+          retention-days: 5
+
+      - name: Save PR number
+        if: always() 
+        run: echo ${{ github.event.number }} > ./pr-id.txt
+
+      - name: Upload PR number
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr
+          path: ./pr-id.txt

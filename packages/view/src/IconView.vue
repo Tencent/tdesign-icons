@@ -140,8 +140,10 @@ import {
 } from 'tdesign-vue';
 import {
   onMounted, ref, computed, watch, defineProps,
+  shallowRef,
 } from 'vue';
 import forEach from 'lodash/forEach';
+import debounce from 'lodash/debounce';
 import zhCN from './i18n/zh-CN';
 import enUS from './i18n/en-US';
 import { manifest as manifestSrc } from './manifest';
@@ -161,7 +163,7 @@ defineProps({
     default: 'develop',
   },
 });
-const manifest = ref(manifestSrc);
+const manifest = shallowRef(manifestSrc);
 const lang = ref(zhCN);
 const isEn = ref(false);
 const currentType = ref('outline');
@@ -237,7 +239,7 @@ const handleDownloadIcon = (iconName, svgString) => {
   a.click();
 };
 
-const handleSearchIcon = (searchStr) => {
+const handleSearchIcon = debounce((searchStr) => {
   if (!searchStr) {
     manifest.value = manifestSrc;
   } else {
@@ -275,7 +277,8 @@ const handleSearchIcon = (searchStr) => {
   selectTab.value = tabCategories.length
     ? tabs.value[tabCategories?.[0]]?.labelEn
     : '';
-};
+}, 250);
+
 onMounted(() => {
   const en = window.location.pathname.endsWith('en');
   isEn.value = en;

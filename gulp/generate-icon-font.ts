@@ -4,6 +4,7 @@ import iconfont from 'gulp-iconfont';
 import iconfontCss from 'gulp-iconfont-css';
 import path from 'path';
 import fs from 'fs';
+import SVGFixer from 'oslllo-svg-fixer';
 import { createTransformStream } from './transform';
 
 const webComponentsFontsDir = path.resolve(__dirname, '../packages/web-components/src/iconfont/');
@@ -95,4 +96,15 @@ export const generateIconFontJson = ({ iconGlob, targetDir }: { iconGlob: string
         JSON.stringify(iconFonts, undefined, 2),
       );
     });
+};
+
+export const getSvgFixer = async () => {
+  const source = path.resolve(__dirname, '../../../svg');
+  const destination = path.resolve(__dirname, '../../../svg_converted');
+
+  if (!fs.existsSync(destination)) {
+    fs.mkdirSync(destination, { recursive: true });
+  }
+
+  await SVGFixer(source, destination, { showProgressBar: true }).fix();
 };

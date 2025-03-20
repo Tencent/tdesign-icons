@@ -1,5 +1,13 @@
 # tdesign-icons-view
 
+## 0.3.5
+
+### Patch Changes
+
+- fix: fix path covert bug
+- Updated dependencies
+  - tdesign-icons-vue@0.3.4
+
 ## 0.3.4
 
 ### Patch Changes

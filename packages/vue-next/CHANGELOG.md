@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.3.5
+
+### Patch Changes
+
+- fix: fix path covert bug
+
 ## 0.3.4
 
 ### Patch Changes

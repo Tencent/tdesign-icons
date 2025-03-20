@@ -28,7 +28,7 @@ function getSVGOOption(config: SVGOConfig = {}) {
       { removeViewBox: false },
       { cleanupEnableBackground: true },
       { convertStyleToAttrs: true },
-      { convertPathData: true },
+      { convertPathData: false },
       { convertTransform: true },
       { removeUnknownsAndDefaults: true },
       { removeNonInheritableGroupAttrs: true },

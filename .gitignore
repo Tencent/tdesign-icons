@@ -8,6 +8,7 @@ src/icons.ts
 # build
 dist/
 esm/
+svg_converted/
 
 # node_modules
 **/node_modules

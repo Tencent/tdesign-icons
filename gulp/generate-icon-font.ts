@@ -99,7 +99,7 @@ export const generateIconFontJson = ({ iconGlob, targetDir }: { iconGlob: string
 };
 
 export const getSvgFixer = async () => {
-  const source = path.resolve(__dirname, '../../../svg');
+  const source = path.resolve(__dirname, '../svg');
   const destination = path.resolve(__dirname, '../../../svg_converted');
 
   if (!fs.existsSync(destination)) {

@@ -819,7 +819,7 @@ export const manifest = {
         {
           name: 'video-filled',
           svgString:
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 2H2V22H22V2ZM17.75 11.9998L8 17.6289L8 6.3706L17.75 11.9998Z" fill="black" />\n</svg>',
+            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 2H2V22H22V2ZM16.75 11.9998L8.75 16.5V7.5L16.75 11.9998Z" fill="black" />\n</svg>',
           keywords: ['视频', '录像'],
         },
       ],
@@ -2453,7 +2453,7 @@ export const manifest = {
         {
           name: 'file-add-1-filled',
           svgString:
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 1H13V9H21V23H3V1ZM16 16V14H13V11H11V14H8V16H11V19H13V16H16Z" fill="black" /><path d="M21 6.58579V7H15V1H15.4142L21 6.58579Z" fill="black" />\n</svg>',
+            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4142 1H3V23H21V6.58579L15.4142 1ZM14.5 7.5V3L19 7.5H14.5ZM16 16H13V19H11V16H8V14H11V11H13V14H16V16Z" fill="black" /></svg>',
           keywords: ['文件添加', '添加文件'],
         },
         {
@@ -4681,7 +4681,7 @@ export const manifest = {
         {
           name: 'sticky-note-filled',
           svgString:
-            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2V22H13V13H22V2H2ZM18 8V10H6V8H18ZM11 12V14H6V12H11Z" fill="black" /><path d="M15 21.4142L21.4142 15H15V21.4142Z" fill="black" />\n</svg>',
+            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.4142 22H2V2H22V16.4142L16.4142 22ZM15.5 15.5V20L20 15.5H15.5ZM18 10V8H6V10H18ZM11 14V12H6V14H11Z" fill="black" /></svg>',
           keywords: ['便利贴', '粘性便签'],
         },
         {

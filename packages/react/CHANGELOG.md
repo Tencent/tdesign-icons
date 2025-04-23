@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.4.5
+
+### Patch Changes
+
+- feat: 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标
+  fix: 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题
+
 ## 0.4.4
 
 ### Patch Changes

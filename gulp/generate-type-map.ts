@@ -13,7 +13,7 @@ function useItemTemplate() {
 
 function getReactWrapper(content: string) {
   return `import React from 'react';\n
-export type GlobalIconType = React.ForwardRefExoticComponent<Record<string, unknown>> | (() => JSX.Element);
+export type GlobalIconType = React.ForwardRefExoticComponent<Record<string, unknown>> | (() => React.ReactElement);
 export type GlobalIconConfig = {
 ${content}
 };

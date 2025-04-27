@@ -1,5 +1,14 @@
 # tdesign-icons-view
 
+## 0.3.6
+
+### Patch Changes
+
+- feat: 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标
+  fix: 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题
+- Updated dependencies
+  - tdesign-icons-vue@0.3.5
+
 ## 0.3.5
 
 ### Patch Changes

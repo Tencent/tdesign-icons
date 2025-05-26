@@ -1,3 +1,11 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5 2H19V4H18V8H22V10H21V20H22V22H2V20H3V10H2V8H6V4H5V2ZM8 4V8H16V4H8ZM5 10V20H8V13H16V20H19V10H5ZM14 20V15H10V20H14ZM10.998 4.99805H13.002V7.00195H10.998V4.99805Z" fill="black"/>
+<g id="double-storey">
+<path id="fill1" d="M17 9H20V21H4V9H7V3H17V9Z" fill="white"/>
+<path id="fill2" d="M9 21V14H15V21H9Z" fill="white"/>
+<g id="stroke2">
+<path d="M11.998 5.99805H12.002V6.00195H11.998V5.99805Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M9 21V14H15V21H9Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+<path id="stroke1" d="M6 3H7M7 3V9H17V3M7 3H17M17 3H18M3 9H4M4 9V21M4 9H20M4 21H3M4 21H20M20 9V21M20 9H21M20 21H21" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

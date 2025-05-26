@@ -1,3 +1,6 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M23 10L8 18.6603L8 1.33975L23 10ZM10 4.80385L10 15.1962L19 10L10 4.80385ZM4 1L6 1L6 23H4L4 1Z" fill="black"/>
+<g id="flag-3">
+<path id="fill1" d="M21 9.99998L9 16.9282L9 3.07178L21 9.99998Z" fill="white"/>
+<path id="stroke1" d="M5 2L5 22M21 9.99998L9 16.9282L9 3.07178L21 9.99998Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

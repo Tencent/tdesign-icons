@@ -1,5 +1,10 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-        d="M12 3C14.2091 3 16 4.79086 16 7V10H8V7C8 4.79086 9.79086 3 12 3ZM18 10V7C18 3.68629 15.3137 1 12 1C8.68629 1 6 3.68629 6 7V10H3.5V22H20.5V10H18ZM5.5 12H18.5V20H5.5V12ZM9 15H15V17H9V15Z"
-        fill="black" />
+<g id="lock-on">
+<path id="fill1" d="M4.49951 10H19.4995V21H4.49951V10Z" fill="white"/>
+<g id="stroke1">
+<path d="M4.49951 11H19.4995V21H4.49951V11Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M6.99951 7C6.99951 4.23858 9.23809 2 11.9995 2C14.7609 2 16.9995 4.23858 16.9995 7V11H6.99951V7Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+<path id="stroke2" d="M9.99951 16H13.9995" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

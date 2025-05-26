@@ -1,4 +1,11 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M2 2H18V8H2V2ZM4 4V6H16V4H4ZM2 10H18V22H2V10ZM4 12V20H16V12H4Z" fill="black" />
-    <path d="M22 2V22H20V2H22Z" fill="black" />
+<g id="vertical">
+<rect id="fill1" x="3" y="11" width="14" height="10" fill="white"/>
+<rect id="fill2" x="3" y="3" width="14" height="4" fill="white"/>
+<path id="stroke2" d="M21 2V22" stroke="black" stroke-width="2"/>
+<g id="stroke1">
+<path d="M3 11H17V21H3V11Z" stroke="black" stroke-width="2"/>
+<path d="M3 3H17V7H3V3Z" stroke="black" stroke-width="2"/>
+</g>
+</g>
 </svg>

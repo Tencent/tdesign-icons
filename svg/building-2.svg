@@ -1,3 +1,14 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.833984L18.372 4.65718L17.343 6.37216L17 6.16636V8.00017H22V22.0002H2V8.00017H7V6.16637L6.657 6.37216L5.62801 4.65718L12 0.833984ZM9 4.96637V8.00017H15V4.96637L12 3.16637L9 4.96637ZM11 4.99822H13.0039V7.00213H11V4.99822ZM4 10.0002V20.0002H8V13.0002H16V20.0002H20V10.0002H4ZM14 20.0002V15.0002H10V20.0002H14Z" fill="black"/>
+<g id="building-2">
+<g id="fill1">
+<path d="M21 21V9H3V21H21Z" fill="white"/>
+<path d="M8 9V4.4L12 2L16 4.4V9H8Z" fill="white"/>
+</g>
+<path id="fill2" d="M15 14H9V21H15V14Z" fill="white"/>
+<g id="stroke2">
+<path d="M12 5.99805H12.0039V6.00195H12V5.99805Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M15 14H9V21H15V14Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+<path id="stroke1" d="M7 5L12 2L17 5M8 4.9V9M16 4.9V9M21 9V21H3V9H21Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

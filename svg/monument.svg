@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9 1V2H15V1H17V3.16228L16 6.16228V15H17V18H19V23H5V18H7V15H8V6.16228L7 3.16228V1H9ZM10 7V15H14V7H10ZM14.2792 5L14.6126 4H9.38743L9.72076 5H14.2792ZM9 17V18H15V17H9ZM17 20H7V21H17V20Z" fill="black"/>
+<g id="monument">
+<path id="fill1" d="M15 6V16H9V6L8 3H16L15 6Z" fill="white"/>
+<path id="fill2" d="M16 19H18V22H6V19H8V16H16V19Z" fill="white"/>
+<path id="stroke1" d="M15 6H9M15 6V16H9V6M15 6L16 3V2M9 6L8 3V2M8.5 3H15.5" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M16 19V16H8V19M16 19H8M16 19H18V22H6V19H8" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

@@ -1,3 +1,5 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9 4V11H15V4H17V20H15V13H9V20H7V4H9Z" fill="black"/>
+<g id="letters-h">
+<path id="stroke1" d="M8 5V12M8 12H16M8 12V19M16 12V5M16 12V19" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

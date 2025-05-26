@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.53333 1H21V22H2V6.58824H6.53333V1ZM8.53333 6.58824H13.0667V20H19V3H8.53333V6.58824ZM11.0667 20V8.58824H4V20H11.0667ZM6 16H9V18H6V16Z" fill="black"/>
+<g id="system-device">
+<path id="fill1" d="M3 8.58789H8.5H12V20.9997H3V8.58789Z" fill="white"/>
+<path id="fill2" d="M12 21V8.58824H8.5V3H21V21H12Z" fill="white"/>
+<path id="stroke2" d="M12 21V8.58824H8.5V3H21V21H12Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke1" d="M7 17H8M3 8.58789V20.9997H12V8.58789H3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

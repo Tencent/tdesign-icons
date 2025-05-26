@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 3H23V21H1V3ZM3 5V19H21V5H3ZM8 6.37083L17.75 12L8 17.6292L8 6.37083ZM10 9.83494V14.1651L13.75 12L10 9.83494Z" fill="black"/>
+<g id="play-rectangle">
+<path id="fill1" d="M2 4H22V20H2V4Z" fill="white"/>
+<path id="fill2" d="M15.75 11.9997L9 15.8968L9 8.10254L15.75 11.9997Z" fill="white"/>
+<path id="stroke1" d="M2 4H22V20H2V4Z" stroke="black" stroke-width="2"/>
+<path id="stroke2" d="M15.75 11.9997L9 15.8968L9 8.10254L15.75 11.9997Z" stroke="black" stroke-width="2"/>
+</g>
 </svg>

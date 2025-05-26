@@ -1,3 +1,12 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.5 5H11.0001V12.6507L6.51825 19H3.79467L6.46133 13H2.5V5ZM4.5 7V11H9.00009V7H4.5ZM13 5H21.5V12.6507L17.0182 19H14.2946L16.9612 13H13V5ZM15 7V11H19.5V7H15Z" fill="black" fill-opacity="0.9" style="fill:black;fill-opacity:0.9;"/>
+<g id="quote">
+<g id="fill1">
+<path d="M10.0001 6H3.5V12H8.00009L5.33343 18H6.00009L10.0001 12.3333V6Z" fill="white"/>
+<path d="M20.5 6H14V12H18.5L15.8333 18H16.5L20.5 12.3333V6Z" fill="white"/>
+</g>
+<g id="stroke1">
+<path d="M10.0001 6H3.5V12H8.00009L5.33343 18H6.00009L10.0001 12.3333V6Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M20.5 6H14V12H18.5L15.8333 18H16.5L20.5 12.3333V6Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</g>
 </svg>

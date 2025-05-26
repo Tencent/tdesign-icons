@@ -15,8 +15,24 @@ const config = {
     },
   },
   shape: {
+    transform: [
+      {
+        svgo: {
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  cleanupIDs: false,
+                },
+              },
+            },
+          ],
+        },
+      },
+    ],
     id: {
-      generator(name: string) {
+      generator(name) {
         return `t-icon-${name.replace('.svg', '')}`;
       },
     },
@@ -31,9 +47,68 @@ const config = {
   },
 };
 
-export function generateSvgSpriteVueFile(): string {
-  const svgContent = fs.readFileSync(path.resolve(__dirname, './template/symbol/svg/sprite.symbol.svg'), 'utf-8');
-  return `<template>${svgContent.replace(/fill="#000"/g, 'fill="currentColor"').replace('<?xml version="1.0" encoding="utf-8"?>', '')}</template>`;
+export function generateSvgSpriteVueFile() {
+  const svgContent = fs.readFileSync(
+    path.resolve(__dirname, './template/symbol/svg/sprite.symbol.svg'),
+    'utf-8',
+  );
+  return `<template>${svgContent
+    .replace(/(\w*)stroke2/g, 'stroke2')
+    .replace(/(\w*)stroke1/g, 'stroke1')
+    .replace(/(\w*)fill1/g, 'fill1')
+    .replace(/(\w*)fill2/g, 'fill2')
+    .replace(/fill="#000"/g, ':fill="strokeColor"')
+    .replace(/fill="#fff"/g, ':fill="fillColor"')
+    .replace(/stroke-width="2"/g, ':stroke-width="strokeWidth"')
+    .replace(
+      /(<path id="fill1" \b[^>]*?\bfill=")([^"]*)("[^>]*?\/?>)/g,
+      '$1$21$3',
+    )
+    .replace(
+      /(<path id="stroke1" \b[^>]*?\bfill=")([^"]*)("[^>]*?\/?>)/g,
+      '$1$21$3',
+    )
+    .replace(
+      /(<path id="fill2" \b[^>]*?\bfill=")([^"]*)("[^>]*?\/?>)/g,
+      '$1$22$3',
+    )
+    .replace(
+      /(<path id="stroke2" \b[^>]*?\bfill=")([^"]*)("[^>]*?\/?>)/g,
+      '$1$22$3',
+    )
+    .replace('<?xml version="1.0" encoding="utf-8"?>', '')}</template>
+    <script setup>
+    defineProps({
+      strokeWidth: {
+        type: Number,
+        default: 2,
+      },
+      fillColor: {
+        type: String,
+        default: 'transparent'
+      },
+      fillColor1: {
+        type: String,
+        default: 'transparent'
+      },
+      fillColor2: {
+        type: String,
+        default: 'transparent'
+      },
+      strokeColor:{
+      type: String,
+        default: 'black'
+      },
+      strokeColor1: {
+        type: String,
+        default: 'black'
+      },
+       strokeColor2: {
+        type: String,
+        default: 'black'
+      }
+    });
+    </script>`;
 }
 
 export const generateViewSvgSprite = () => function generateMap() {

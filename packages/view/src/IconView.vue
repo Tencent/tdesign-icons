@@ -1,6 +1,30 @@
 <template>
   <div>
-    <svg-sprite />
+    <svg-sprite
+      :stroke-width="strokeWidth"
+      :fill-color1="fillColor1"
+      :fill-color="fillColor1"
+      :fill-color2="fillColor2"
+      :stroke-color1="strokeColor1"
+      :stroke-color2="strokeColor2"
+      :stroke-color="strokeColor1"
+    />
+    <t-drawer
+      :visible.sync="visible"
+      @visible-change="() => (visible = false)"
+      show-in-attached-element
+    >
+      图标粗细
+      <t-slider :step="1" :min="1" v-model="strokeWidth" :max="4"></t-slider>
+      填充颜色1
+      <t-color-picker v-model="fillColor1"></t-color-picker>
+      填充颜色2
+      <t-color-picker v-model="fillColor2"></t-color-picker>
+      线段颜色1
+      <t-color-picker v-model="strokeColor1"></t-color-picker>
+      线段颜色2
+      <t-color-picker v-model="strokeColor2"></t-color-picker>
+    </t-drawer>
     <t-space
       :style="{
         width: '100%',
@@ -34,6 +58,15 @@
           :style="{ marginLeft: '16px', flex: 1 }"
           @change="handleSearchIcon"
         />
+        <t-space
+          :style="{
+            display: 'flex',
+            padding: '0 16px',
+            boxSizing: 'border-box',
+            alignItems: 'center',
+          }"
+          ><t-icon name="adjustment" @click="visible = true" />
+        </t-space>
       </div>
       <div>
         <t-tabs v-model="selectTab">
@@ -137,10 +170,13 @@ import {
   Tag as TTag,
   MessagePlugin,
   Input as TInput,
+  Drawer as TDrawer,
+  Slider as TSlider,
+  ColorPicker as TColorPicker,
+  Icon as TIcon,
 } from 'tdesign-vue';
 import {
-  onMounted, ref, computed, watch, defineProps,
-  shallowRef,
+  onMounted, ref, computed, watch, defineProps, shallowRef,
 } from 'vue';
 import forEach from 'lodash/forEach';
 import debounce from 'lodash/debounce';
@@ -168,6 +204,12 @@ const lang = ref(zhCN);
 const isEn = ref(false);
 const currentType = ref('outline');
 const selectTab = ref('');
+const visible = ref(false);
+const strokeWidth = ref(2);
+const fillColor1 = ref('transparent');
+const fillColor2 = ref('transparent');
+const strokeColor1 = ref('black');
+const strokeColor2 = ref('black');
 
 const kebabToPascal = (str) => {
   const words = str.split('-');

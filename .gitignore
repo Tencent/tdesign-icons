@@ -4,6 +4,7 @@
 src/components/*.tsx
 src/manifest.ts
 src/icons.ts
+svg_fixed
 
 # build
 dist/

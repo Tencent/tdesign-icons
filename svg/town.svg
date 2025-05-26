@@ -1,3 +1,15 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 2H7.44237L11 5.91339V2H16.4684L22 8.63795V22H2V2ZM13 4V20H20V9.36205L15.5316 4H13ZM11 20V8.88661L6.55763 4H4V20H11ZM6 7.99805H8.00391V10.002H6V7.99805ZM15 7.99805H17.0039V10.002H15V7.99805ZM6 11.998H8.00391V14.002H6V11.998ZM15 11.998H17.0039V14.002H15V11.998ZM6 15.998H8.00391V18.002H6V15.998ZM15 15.998H17.0039V18.002H15V15.998Z" fill="black"/>
+<g id="town">
+<path id="fill1" d="M3 21V3H7L12 8.5V21H3Z" fill="white"/>
+<path id="fill2" d="M21 9V21H12V3H16L21 9Z" fill="white"/>
+<path id="stroke1" d="M12 21H3V3H7L12 8.5V21ZM12 21V3H16L21 9V21H12Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<g id="stroke2">
+<path d="M16 8.99805H16.0039V9.00195H16V8.99805Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M16 12.998H16.0039V13.002H16V12.998Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M16 16.998H16.0039V17.002H16V16.998Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M7 8.99805H7.00391V9.00195H7V8.99805Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M7 12.998H7.00391V13.002H7V12.998Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M7 16.998H7.00391V17.002H7V16.998Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</g>
 </svg>

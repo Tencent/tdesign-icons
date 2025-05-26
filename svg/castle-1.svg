@@ -1,3 +1,11 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7 2V4H9V2H11V4H13V2H15V4H17V2H19V6H18V14H21V13H23V22H1V13H3V14H6V6H5V2H7ZM8 6V20H11V13H13V20H16V6H8ZM18 20H21V16H18V20ZM6 20V16H3V20H6ZM9 7.99805H11.0039V10.002H9V7.99805ZM13 7.99805H15.0039V10.002H13V7.99805Z" fill="black"/>
+<g id="castle-1">
+<g id="fill2">
+<path d="M17 21H22V15H17V21Z" fill="white"/>
+<path d="M2 21H7V15H2V21Z" fill="white"/>
+</g>
+<path id="fill1" d="M17 5H7V21H17V5Z" fill="white"/>
+<path id="stroke2" d="M22 15V21H17V15H22ZM22 15V14M2 15V21H7V15H2ZM2 15V14M12 14V21M10 8.99805H10.0039V9.00195H10V8.99805ZM14 8.99805H14.0039V9.00195H14V8.99805Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke1" d="M6 3V5H7M10 3V5M10 5H14M10 5H7M14 3V5M14 5H17M18 3V5H17M7 5V21H17V5" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

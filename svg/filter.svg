@@ -1,3 +1,6 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.57031 3H21.4302L14.5002 12.8174V21H9.50023V12.8174L2.57031 3ZM6.43015 5L11.5002 12.1826V19H12.5002V12.1826L17.5703 5H6.43015Z" fill="black"/>
+<g id="filter">
+<path id="fill1" fill-rule="evenodd" clip-rule="evenodd" d="M19.5 4H4.5L10.5 12.5V20H13.5V12.5L19.5 4Z" fill="white"/>
+<path id="stroke1" fill-rule="evenodd" clip-rule="evenodd" d="M19.5 4H4.5L10.5 12.5V20H13.5V12.5L19.5 4Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

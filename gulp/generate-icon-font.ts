@@ -4,9 +4,13 @@ import iconfont from 'gulp-iconfont';
 import iconfontCss from 'gulp-iconfont-css';
 import path from 'path';
 import fs from 'fs';
+import svgFixer from 'oslllo-svg-fixer';
 import { createTransformStream } from './transform';
 
-const webComponentsFontsDir = path.resolve(__dirname, '../packages/web-components/src/iconfont/');
+const webComponentsFontsDir = path.resolve(
+  __dirname,
+  '../packages/web-components/src/iconfont/',
+);
 const webComponentsCss = `@font-face {
   font-family: "t";
   src: url('./t.eot'), /* for IE 9*/
@@ -25,7 +29,7 @@ interface GLYPHS {
   unicode: string;
 }
 
-const iconFonts:any[] = [];
+const iconFonts: any[] = [];
 
 export const generateIconFont = ({
   iconGlob,
@@ -57,15 +61,24 @@ export const generateIconFont = ({
     .on('end', () => {
       // web-components 需要icon的字体文件，不需要使用cdn的方式
       ['t.eot', 't.svg', 't.ttf', 't.woff'].forEach((fileName) => {
-        fs.copyFileSync(path.resolve(targetDir, fileName), path.resolve(webComponentsFontsDir, fileName));
+        fs.copyFileSync(
+          path.resolve(targetDir, fileName),
+          path.resolve(webComponentsFontsDir, fileName),
+        );
       });
-      fs.writeFileSync(path.resolve(webComponentsFontsDir, 'index.css'), webComponentsCss);
+      fs.writeFileSync(
+        path.resolve(webComponentsFontsDir, 'index.css'),
+        webComponentsCss,
+      );
     });
 };
 
 function useItemJsonTemplate() {
   function getItem(content: string, name: string) {
-    iconFonts.push({ name, codepoint: `\\${escape(svgMap[name]).replace('%u', '')}` });
+    iconFonts.push({
+      name,
+      codepoint: `\\${escape(svgMap[name]).replace('%u', '')}`,
+    });
 
     return `{"name": "${name}","svgCode": ${JSON.stringify(content).replace(
       /(\r\n|\n|\r)/gm,
@@ -82,8 +95,15 @@ function useJsonTemplate() {
   return createTransformStream((content) => getContainer(content));
 }
 
-export const generateIconFontJson = ({ iconGlob, targetDir }: { iconGlob: string; targetDir: string }) => function generateIconFont() {
+export const generateIconFontJson = ({
+  iconGlob,
+  targetDir,
+}: {
+  iconGlob: string;
+  targetDir: string;
+}) => function generateIconFont() {
   return src([iconGlob])
+
     .pipe(useItemJsonTemplate())
     .pipe(concat('index.json'))
     .pipe(useJsonTemplate())
@@ -95,4 +115,15 @@ export const generateIconFontJson = ({ iconGlob, targetDir }: { iconGlob: string
         JSON.stringify(iconFonts, undefined, 2),
       );
     });
+};
+
+export const getSvgFixer = async () => {
+  const source = path.resolve(__dirname, '../svg');
+  const destination = path.resolve(__dirname, '../svg_fixed');
+
+  if (!fs.existsSync(destination)) {
+    fs.mkdirSync(destination, { recursive: true });
+  }
+
+  await svgFixer(source, destination, { showProgressBar: true }).fix();
 };

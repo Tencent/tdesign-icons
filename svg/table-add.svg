@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 2H22V22H2V2ZM4 4V6H20V4H4ZM20 8H4V20H20V8ZM13 10V13H16V15H13V18H11V15H8V13H11V10H13Z" fill="black"/>
+<g id="table-add">
+<path id="fill1" d="M21 7H3V21H21V7Z" fill="white"/>
+<path id="fill2" d="M21 3H3V7H21V3Z" fill="white"/>
+<path id="stroke1" d="M3 3V21H21V3M3 3H21M3 3V7H21V3" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M12 11V14M12 14V17M12 14H9M12 14H15" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

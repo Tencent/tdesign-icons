@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 3L23 3V21H1L1 3ZM3 5L3 19H21V5L19 5L19 11.5L16 9.25L13 11.5L13 5L3 5ZM15 5L15 7.5L16 6.75L17 7.5V5L15 5ZM5 11H11V13H5V11ZM5 15H19V17H5V15Z" fill="black"/>
+<g id="certificate">
+<path id="fill1" d="M22 4L22 20L2 20L2 4L22 4Z" fill="white"/>
+<path id="fill2" d="M18 4L14 4L14 9.5L16 8L18 9.5L18 4Z" fill="white"/>
+<path id="stroke2" d="M6 12H10M6 16H18M14 4L18 4V9.5L16 8L14 9.5L14 4Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke1" d="M22 4V20L2 20L2 4L22 4Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

@@ -1,5 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-        d="M2 2L22 2L22 22L2 22L2 2ZM4 4L4 20L20 20L20 13.5L19 13.5C17.9846 13.5 17.0109 13.9034 16.2929 14.6213L16 14.9142L16 18L14 18L14 11L16 11L16 12.3314C16.8987 11.7919 17.9343 11.5 19 11.5L20 11.5L20 4L4 4ZM8 6L8 16L13 16L13 18L6 18L6 6L8 6Z"
-        fill="black" />
+<g id="logo-adobe-lightroom">
+<path id="fill1" d="M3 3L21 3L21 21L3 21L3 3Z" fill="white"/>
+<path id="stroke1" d="M3 3L21 3L21 21L3 21L3 3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M15 12V17M7 7L7 17C8.66667 17 12 17 12 17M19 12.5C17.7194 12.5 16.4913 13.0087 15.5858 13.9142L15.4393 14.0607" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

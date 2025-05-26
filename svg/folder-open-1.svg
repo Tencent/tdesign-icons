@@ -1,3 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M23.844 9L20.244 21H0L8.08661e-07 2.5L7.36205 2.5L10.3621 5H20.5L20.5 9H23.844ZM18.5 9L18.5 7H9.63795L6.63795 4.5L2 4.5L2 13.1866L3.25597 9L18.5 9ZM2.34403 19H18.756L21.156 11L4.74403 11L2.34403 19Z" fill="black"/>
+<g id="folder-open-1">
+<path id="fill2" d="M1 3.5V20L4 10L19.5 10L19.5 6L10 6L7 3.5H1Z" fill="white"/>
+<path id="fill1" d="M1 20L19.5 20L22.5 10L4 10L1 20Z" fill="white"/>
+<path id="stroke1" d="M1 20H19.5L22.5 10H4L1 20ZM1 20L1 3.5L7 3.5L10 6L19.5 6L19.5 10" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

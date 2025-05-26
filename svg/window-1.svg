@@ -1,3 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 0.612793L22 4.27946V22.0002H2V3.00022H11V0.612793ZM11 5.00022H4V20.0002H14.8377L11 18.721V5.00022ZM20 19.6128V13.721L13 11.3876V17.2795L20 19.6128ZM20 11.6128V5.72098L13 3.38764V9.27946L20 11.6128Z" fill="black"/>
+<g id="window-1">
+<path id="fill1" d="M21 5L12 2V18L21 21V5Z" fill="white"/>
+<path id="stroke1" d="M3 4V21H21L12 18V10V4H3Z" stroke="black" stroke-width="2"/>
+<path id="stroke2" d="M12 10V18L21 21V13M12 10L16.5 11.5L21 13M12 10V2L21 5V13" stroke="black" stroke-width="2"/>
+</g>
 </svg>

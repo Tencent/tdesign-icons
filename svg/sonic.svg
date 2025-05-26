@@ -1,3 +1,5 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13 2L13 22H11L11 2L13 2ZM9 6L9 18H7L7 6H9ZM17 6L17 18H15L15 6H17ZM5 9V15H3V9H5ZM21 9V15H19V9H21Z" fill="black"/>
+<g id="sonic">
+<path id="stroke1" d="M4 10V14M8 7L8 17M12 3L12 21M16 7L16 17M20 10V14" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

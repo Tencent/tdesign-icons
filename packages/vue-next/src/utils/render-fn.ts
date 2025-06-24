@@ -8,11 +8,10 @@ function camel2Kebab(camelString:string) {
 }
 
 function renderFn(node: SVGJson, props:Record<string, any>): VNode {
-  const kebabAttrs = Object.keys(node.attrs).reduce((result, key) => {
-    // eslint-disable-next-line no-param-reassign
-    result[camel2Kebab(key)] = node.attrs[key];
-    return result;
-  }, {});
+  const kebabAttrs = Object.keys(node.attrs).reduce((result: Record<string, any>, key) => ({
+    ...result,
+    [camel2Kebab(key)]: node.attrs[key],
+  }), {} as Record<string, any>);
   return h(
     node.tag,
     {

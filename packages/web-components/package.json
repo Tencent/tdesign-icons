@@ -47,7 +47,7 @@
     "@rollup/plugin-json": "catalog:",
     "@rollup/plugin-node-resolve": "catalog:",
     "@rollup/plugin-replace": "catalog:",
-    "@types/node": "^12.11.1",
+    "@types/node": "catalog:",
     "camelcase": "catalog:",
     "concurrently": "catalog:",
     "cross-env": "catalog:",

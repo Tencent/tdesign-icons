@@ -47,6 +47,7 @@
     "@rollup/plugin-commonjs": "catalog:",
     "@rollup/plugin-node-resolve": "catalog:",
     "@rollup/plugin-replace": "catalog:",
+    "@types/node": "catalog:",
     "@vue/babel-plugin-jsx": "catalog:",
     "@vue/babel-preset-jsx": "catalog:",
     "@vue/compiler-sfc": "catalog:",
@@ -66,8 +67,7 @@
     "rollup-plugin-styles": "catalog:",
     "rollup-plugin-terser": "catalog:",
     "rollup-plugin-vue": "catalog:",
-    "tslib": "catalog:",
-    "typescript": "4.4.4",
+    "typescript": "catalog:",
     "vue": "~2.6.12"
   },
   "dependencies": {

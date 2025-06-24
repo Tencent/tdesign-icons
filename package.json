@@ -36,7 +36,6 @@
     "@types/gulp-svg-sprite": "catalog:",
     "@types/merge-stream": "catalog:",
     "@types/merge2": "catalog:",
-    "@types/node": "catalog:",
     "@types/svg-parser": "catalog:",
     "@types/svgo": "catalog:",
     "@types/through2": "catalog:",
@@ -70,6 +69,6 @@
     "svg-parser": "catalog:",
     "svgo": "catalog:",
     "ts-node": "catalog:",
-    "typescript": "^4.1.3"
+    "typescript": "catalog:"
   }
 }

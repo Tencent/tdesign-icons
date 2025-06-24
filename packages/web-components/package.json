@@ -65,8 +65,7 @@
     "rollup-plugin-static-import": "catalog:",
     "rollup-plugin-styles": "catalog:",
     "rollup-plugin-terser": "catalog:",
-    "tslib": "catalog:",
-    "typescript": "5.5.3"
+    "typescript": "catalog:"
   },
   "dependencies": {
     "@babel/runtime": "catalog:",

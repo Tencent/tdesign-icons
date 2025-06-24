@@ -36,6 +36,7 @@
     "@types/gulp-svg-sprite": "catalog:",
     "@types/merge-stream": "catalog:",
     "@types/merge2": "catalog:",
+    "@types/node": "catalog:",
     "@types/svg-parser": "catalog:",
     "@types/svgo": "catalog:",
     "@types/through2": "catalog:",

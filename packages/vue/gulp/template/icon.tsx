@@ -16,6 +16,16 @@ const $ICON_NAME = Vue.extend<IconProps>({
     onClick: {
       type: Function as PropType<TdIconSVGProps['onClick']>,
     },
+    fillColor: {
+      type: [String, Array] as PropType<TdIconSVGProps['fillColor']>,
+    },
+    strokeColor: {
+      type: [String, Array] as PropType<TdIconSVGProps['fillColor']>,
+    },
+    strokeWidth: {
+      type: Number,
+      default: 2
+    }
   },
   render(createElement, context) {
     const { props, data } = context;

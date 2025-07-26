@@ -1,6 +1,7 @@
 {
   "name": "tdesign-icons-react",
   "version": "0.5.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Tencent/tdesign-icons.git",

@@ -1,6 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="chart-median">
-<path id="stroke1" d="M21 21H3V3" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M19 6.49953C19 4.79008 17.6569 3.4043 16 3.4043C14.3431 3.4043 13 4.79008 13 6.49953V8.49953M7 14.5714C7 16.465 8.34315 18 10 18C11.6569 18 13 16.465 13 14.5714V12.5M16 10.502H15.9961V10.498H16V10.502ZM19.0039 10.502H19V10.498H19.0039V10.502ZM10 10.502H9.99609V10.498H10V10.502ZM7.00391 10.5H7V10.4961H7.00391V10.5ZM13.0039 10.502H13V10.498H13.0039V10.502Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="chart-median">
+        <path id="stroke1" d="M21 21H3V3" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2"
+            d="M19 6.49953C19 4.79008 17.6569 3.4043 16 3.4043C14.3431 3.4043 13 4.79008 13 6.49953V8.49953M7 14.5714C7 16.465 8.34315 18 10 18C11.6569 18 13 16.465 13 14.5714V12.5M16 10.502H15.9961V10.498H16V10.502ZM19.0039 10.502H19V10.498H19.0039V10.502ZM10 10.502H9.99609V10.498H10V10.502ZM7.00391 10.5H7V10.4961H7.00391V10.5ZM13.0039 10.502H13V10.498H13.0039V10.502Z"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

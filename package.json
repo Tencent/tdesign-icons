@@ -23,6 +23,7 @@
     "preinstall": "npx -y only-allow pnpm",
     "husky": "husky",
     "prepare": "husky install",
+    "dev:icons": "pnpm -C packages/view dev ",
     "lint": "eslint ./packages --max-warnings 0 --ext .ts,.tsx --fix",
     "generate": "cross-env gulp --require ts-node/register/transpile-only"
   },
@@ -70,6 +71,7 @@
     "svg-parser": "^2.0.4",
     "svgo": "^1.3.2",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "xmldom": "^0.6.0"
   }
 }

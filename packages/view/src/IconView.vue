@@ -226,7 +226,7 @@ const handleClick = (e) => {
     {
     placement: 'right',
     showArrow: false,
-    // attach:'td-icons-view'
+
     });
 };
 const appendStyleSheet = () => {
@@ -357,6 +357,10 @@ body {
 .t-icons-view__categories {
   padding-top: 32px;
 }
+.t-icons-view__name {
+  text-align: center;
+}
+
 .t-icons-view__categories-link {
   height: 36px;
   line-height: 36px;

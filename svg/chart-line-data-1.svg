@@ -1,6 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="chart-line-data-1">
-<path id="stroke1" d="M21 21H3V3" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M6.22803 13.4474C6.22803 13.4474 8.95521 8.07109 11.4772 8.78599C13.9991 9.50088 13.0206 12.5277 15.5099 13.2643C17.9991 14.0009 20.7439 8.61621 20.7439 8.61621" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="chart-line-data-1">
+        <path id="stroke1" d="M21 21H3V3" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2"
+            d="M6.22803 13.4474C6.22803 13.4474 8.95521 8.07109 11.4772 8.78599C13.9991 9.50088 13.0206 12.5277 15.5099 13.2643C17.9991 14.0009 20.7439 8.61621 20.7439 8.61621"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

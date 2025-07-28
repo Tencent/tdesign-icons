@@ -1,4 +1,6 @@
+/* eslint-disable no-restricted-syntax */
 import { src, dest } from 'gulp';
+import { DOMParser, XMLSerializer } from 'xmldom';
 import fs from 'fs';
 import path from 'path';
 import concat from 'gulp-concat';
@@ -7,6 +9,7 @@ import { createTransformStream } from '../../../gulp/transform';
 
 const iconGlob = path.resolve(__dirname, '../../../svg/*.svg');
 const iconDir = path.resolve(__dirname, '../../../svg');
+const TEXT_NODE = 3;
 
 const config = {
   svg: {
@@ -24,6 +27,7 @@ const config = {
               params: {
                 overrides: {
                   cleanupIDs: false,
+                  moveElemsAttrsToGroup: false,
                 },
               },
             },
@@ -47,34 +51,92 @@ const config = {
   },
 };
 
+export function processSvgSpriteInNode(svgString) {
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(svgString, 'image/svg+xml');
+
+  const parseError = xmlDoc.getElementsByTagName('parsererror')[0];
+  if (parseError) {
+    throw new Error(`SVG 解析失败: ${parseError.textContent.trim()}`);
+  }
+
+  function traverseNodes(node: any, id?: string) {
+    const element = node;
+
+    if (element.nodeType === TEXT_NODE) return;
+    const nodeId = element.getAttribute('id') || id;
+
+    // 如果是 <g> 节点，递归处理其所有**元素子节点**
+    if (element.tagName.toLowerCase() === 'g' && element.getAttribute('id')) {
+      // 获取所有子节点，并过滤出元素节点（排除文本、注释）
+      const childElements = Array.from(element.childNodes)
+        .filter((child) => child.nodeType !== TEXT_NODE);
+      for (const child of childElements) {
+        traverseNodes(child, nodeId); // 递归处理子元素
+      }
+    } else if (nodeId) {
+      if (/^.*?(stroke\d+)$/.test(nodeId)) {
+        const strokeId = nodeId.replace(/^.*?(stroke\d+)$/,'$1');
+        const strokeContent = strokeId.split('stroke')
+
+        element.setAttribute('id', strokeId);
+        element.removeAttribute('stroke');
+        element.removeAttribute('stroke-width');
+        element.setAttribute(':stroke-width','strokeWidth');
+        element.setAttribute(':stroke', `strokeColor${strokeContent[1]}`);
+      } else if (/^.*?(fill\d+)$/.test(nodeId)) {
+        const fillId = nodeId.replace(/^.*?(fill\d+)$/,'$1');
+        const fillContent = fillId.split('fill');
+
+        element.setAttribute('id', fillId);
+        element.removeAttribute('fill');
+        element.setAttribute(':fill', `fillColor${fillContent[1]}`);
+      }
+    } else {
+      // 填充替换
+      element.removeAttribute('fill');
+      element.setAttribute(':fill','fillColor1');
+    }
+  }
+
+  // 从 SVG 根节点开始遍历
+  const svgRoot = xmlDoc.documentElement;
+
+  const childElements = Array.from(svgRoot.childNodes);
+  for (const symbolEle of childElements) {
+    if (symbolEle.nodeType !== TEXT_NODE) {
+      if (symbolEle.tagName?.toLowerCase?.() === 'symbol') {
+        const gElements = Array.from(symbolEle.childNodes);
+        for (const gEl of gElements) {
+          if (gEl.nodeType !== TEXT_NODE) {
+            if (gEl.tagName?.toLowerCase?.() === 'g') {
+              const pathELements = Array.from(gEl.childNodes);
+              for (const pathEl of pathELements) {
+                traverseNodes(pathEl);
+              }
+            } else {
+              traverseNodes(gEl);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // 3. 序列化为 SVG 字符串
+  const serializer = new XMLSerializer();
+  // 可选：格式化输出（缩进更易读）
+  return serializer.serializeToString(xmlDoc, { indent: true });
+}
 export function generateSvgSpriteVueFile() {
   const svgContent = fs.readFileSync(
     path.resolve(__dirname, './template/symbol/svg/sprite.symbol.svg'),
     'utf-8',
   );
+  const result = processSvgSpriteInNode(svgContent);
 
-  // 修复 id 错误
-  const fixedSvgContent = svgContent.replace(/(\w*)stroke2/g, 'stroke2')
-    .replace(/(\w*)stroke1/g, 'stroke1')
-    .replace(/(\w*)fill1/g, 'fill1')
-    .replace(/(\w*)fill2/g, 'fill2');
 
-  return `<template>${fixedSvgContent
-    .replace(/fill="#000"/g, ':fill="fillColor"') // 填充型图标替换，没有id 后续为 fillColor1
-    .replace(/fill="#fff"/g, ':fill="fillColor"') // 描边型图标替换，有id 后续为 fillColor1 或 fillColor2
-    .replace(/stroke="#000"/g, ':stroke="strokeColor"') // 描边颜色替换，有id 后续为 strokeColor1 或 fillColor2
-    .replace(/stroke-width="2"/g, ':stroke-width="strokeWidth"')
-    .replace(
-      /(<(?:path|g|rect|circle) id="fill2" \b[^>]*?\bfill=")([^"]*)("[^>]*?\/?>)/g,
-      '$1$22$3',
-    )
-    .replace(
-      /(<(?:path|g|rect|circle) id="stroke2" \b[^>]*?\bstroke=")([^"]*)("[^>]*?\/?>)/g,
-      '$1$22$3',
-    )
-    .replace(/"fillColor"/g, '"fillColor1"')
-    .replace(/"strokeColor"/g, '"strokeColor1"')
-    .replace('<?xml version="1.0" encoding="utf-8"?>', '')}</template>
+  return `<template>${result.replace('<?xml version="1.0" encoding="utf-8"?>', '')}</template>
     <script setup>
     defineProps({
       strokeWidth: {

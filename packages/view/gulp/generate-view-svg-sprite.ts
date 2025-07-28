@@ -109,10 +109,16 @@ export function processSvgSpriteInNode(svgString) {
         const strokeContent = strokeId.split('stroke')
 
         element.setAttribute('id', strokeId);
-        element.removeAttribute('stroke');
-        element.removeAttribute('stroke-width');
-        element.setAttribute(':stroke-width','strokeWidth');
-        element.setAttribute(':stroke', `strokeColor${strokeContent[1]}`);
+        if(element.getAttribute('stroke')){
+          element.removeAttribute('stroke');
+          element.removeAttribute('stroke-width');
+          element.setAttribute(':stroke-width','strokeWidth');
+          element.setAttribute(':stroke', `strokeColor${strokeContent[1]}`);
+        }else if(element.getAttribute('fill')) {
+          element.removeAttribute('fill');
+          element.setAttribute(':fill', `strokeColor${strokeContent[1]}`);
+        }
+       
       } else if (/^.*?(fill\d+)$/.test(nodeId)) {
         const fillId = nodeId.replace(/^.*?(fill\d+)$/,'$1');
         const fillContent = fillId.split('fill');

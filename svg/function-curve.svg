@@ -1,6 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="function-curve">
-<path id="stroke1" d="M3 16H21M7 21L7 3" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M4 5C4.26667 9.84051 6.24 19.6152 12 19.99C17.76 20.3647 19.7333 10.1528 20 5" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="function-curve">
+        <path id="stroke1" d="M3 16H21M7 21L7 3" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2" d="M4 5C4.26667 9.84051 6.24 19.6152 12 19.99C17.76 20.3647 19.7333 10.1528 20 5"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

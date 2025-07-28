@@ -17,15 +17,15 @@ const source: string[] = ['svg/*.svg'];
 
 export default series(
   parallel(
-    reactTask(source),
-    vueTask(source),
-    vueNextTask(source),
-    svgTask(source),
-    angularTask(source),
-    reactNativeTask(),
+    // reactTask(source),
+    // vueTask(source),
+    // vueNextTask(source),
+    // svgTask(source),
+    // angularTask(source),
+    // reactNativeTask(),
     svgSpriteTask(),
-    iconFontTask(source),
+    // iconFontTask(source),
     iconViewTask(),
-    wcTask(source),
+    // wcTask(source),
   ),
 );

@@ -1,12 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="brush" clip-path="url(#clip0_2332_2275)">
-<path id="fill1" d="M10.5 2.5L7 6L18 17L21.5 13.5L18 10L21 7L17 3L14 6L10.5 2.5Z" fill="white"/>
-<path id="fill2" d="M1.5 11.5L12.5 22.5L18 17L7 6L1.5 11.5Z" fill="white"/>
-<path id="stroke1" d="M7 6L18 17M7 6L1.5 11.5L12.5 22.5L18 17M7 6L10.5 2.5L14 6L17 3L21 7L18 10L21.5 13.5L18 17" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-<defs>
-<clipPath id="clip0_2332_2275">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
+    <g id="brush">
+        <path id="fill1" d="M10.5 2.5L7 6L18 17L21.5 13.5L18 10L21 7L17 3L14 6L10.5 2.5Z" fill="white" />
+        <path id="fill2" d="M1.5 11.5L12.5 22.5L18 17L7 6L1.5 11.5Z" fill="white" />
+        <path id="stroke1" d="M7 6L18 17M7 6L1.5 11.5L12.5 22.5L18 17M7 6L10.5 2.5L14 6L17 3L21 7L18 10L21.5 13.5L18 17"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

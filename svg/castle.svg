@@ -1,13 +1,15 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="castle">
-<path id="fill1" d="M6 5H18C18 10.3333 18 15.6667 18 21H6V5Z" fill="white"/>
-<g id="fill2">
-<path d="M14 14H10V21H14V14Z" fill="white"/>
-<path d="M2 21H6V15H2V21Z" fill="white"/>
-<path d="M18 21H22V15H18V21Z" fill="white"/>
-<path d="M14 14H10V21H14V14Z" fill="white"/>
-</g>
-<path id="stroke2" d="M2 15V21H6V15H2ZM2 15V14M22 15V21H18V15H22ZM22 15V14M10 14H14V21H10V14Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke1" d="M18 5V3M18 5H14M18 5C18 10.3333 18 15.6667 18 21H6V5M6 5V3M6 5H10M10 3V5M10 5H14M14 3V5" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="castle">
+        <path id="fill1" d="M6 5H18C18 10.3333 18 15.6667 18 21H6V5Z" fill="white" />
+        <g id="fill2">
+            <path d="M14 14H10V21H14V14Z" fill="white" />
+            <path d="M2 21H6V15H2V21Z" fill="white" />
+            <path d="M18 21H22V15H18V21Z" fill="white" />
+            <path d="M14 14H10V21H14V14Z" fill="white" />
+        </g>
+        <path id="stroke2" d="M2 15V21H6V15H2ZM2 15V14M22 15V21H18V15H22ZM22 15V14M10 14H14V21H10V14Z" stroke="black"
+            stroke-width="2" stroke-linecap="square" />
+        <path id="stroke1" d="M18 5V3M18 5H14M18 5C18 10.3333 18 15.6667 18 21H6V5M6 5V3M6 5H10M10 3V5M10 5H14M14 3V5"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

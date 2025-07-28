@@ -1,11 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="send" clip-path="url(#clip0_2332_3602)">
-<path id="fill1" d="M2 3.5L21.5 12L2 20.5L5 12L2 3.5Z" fill="white"/>
-<path id="stroke1" d="M5 12L2 20.5L21.5 12L2 3.5L5 12ZM5 12H10" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-<defs>
-<clipPath id="clip0_2332_3602">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
+    <g id="send" clip-path="url(#clip0_543_8119)">
+        <path id="fill1" d="M2 3.5L21.5 12L2 20.5L5 12L2 3.5Z" fill="white" />
+        <path id="stroke1" d="M5 12L2 20.5L21.5 12L2 3.5L5 12ZM5 12H10" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+    </g>
 </svg>

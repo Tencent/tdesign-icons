@@ -1,7 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="layers">
-<path id="fill1" d="M4.5 6.125L12 3L19.5 6.125L12 9.25L4.5 6.125Z" fill="white"/>
-<path id="stroke1" d="M4.5 6.125L12 3L19.5 6.125L12 9.25L4.5 6.125Z" stroke="black" stroke-width="2"/>
-<path id="stroke2" d="M7.5 13.4386L3 11.5V11.5005L7.5 13.4386ZM7.5 13.4386L12 15.3771L16.5 13.4386M16.5 13.4386L21 11.5V11.5005L16.5 13.4386ZM16.5 19.4386L21 17.5V17.5005L16.5 19.4386ZM16.5 19.4386L12 21.3771L7.5 19.4386M7.5 19.4386L3 17.5L3 17.5005L7.5 19.4386Z" stroke="black" stroke-width="2"/>
-</g>
+    <g id="layers">
+        <path id="fill1" d="M4.5 6.125L12 3L19.5 6.125L12 9.25L4.5 6.125Z" fill="white" />
+        <path id="stroke1" d="M4.5 6.125L12 3L19.5 6.125L12 9.25L4.5 6.125Z" stroke="black" stroke-width="2" />
+        <path id="stroke2" d="M3 11.5005L12 15.3771L21 11.5005M21 17.5005L12 21.3771L3 17.5005" stroke="black"
+            stroke-width="2" />
+    </g>
 </svg>

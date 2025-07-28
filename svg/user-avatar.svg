@@ -1,14 +1,20 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="user-avatar">
-<path id="fill1" d="M3 3L21 3L21 21L3 21L3 3Z" fill="white"/>
-<g id="fill2">
-<path d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z" fill="white"/>
-<path d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z" fill="white"/>
-</g>
-<g id="stroke2">
-<path d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-<path id="stroke1" d="M3 3L21 3L21 21L3 21L3 3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="user-avatar">
+        <path id="fill1" d="M3 3L21 3L21 21L3 21L3 3Z" fill="white" />
+        <g id="fill2">
+            <path
+                d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
+                fill="white" />
+            <path d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
+                fill="white" />
+        </g>
+        <g id="stroke2">
+            <path
+                d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
+                stroke="black" stroke-width="2" stroke-linecap="square" />
+            <path d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
+                stroke="black" stroke-width="2" stroke-linecap="square" />
+        </g>
+        <path id="stroke1" d="M3 3L21 3L21 21L3 21L3 3Z" stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

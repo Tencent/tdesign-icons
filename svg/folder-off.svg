@@ -1,6 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="folder-off">
-<path id="stroke1" d="M19 6H22V19H6M2 16L2.00195 14.5L2.00097 3.5L9.00096 3.5L11.001 6L13.001 6M2 16L2.00195 17L2.00095 17.001L2 16Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M18 6L5 19M20 4L3 21" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="folder-off">
+        <path id="stroke1"
+            d="M19 6H22V19H6M2 16L2.00195 14.5L2.00097 3.5L9.00096 3.5L11.001 6L13.001 6M2 16L2.00195 17L2.00095 17.001L2 16Z"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2" d="M20 4L3 21" stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

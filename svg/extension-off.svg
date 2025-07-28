@@ -1,11 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="extension-off" clip-path="url(#clip0_2332_3831)">
-<path id="stroke1 " d="M8.50023 5H9.00023V4C9.00023 2.89543 9.89567 2 11.0002 2C12.1048 2 13.0002 2.89543 13.0002 4V5H19.0002V11H20.0002C21.1048 11 22.0002 11.8954 22.0002 13C22.0002 14.1046 21.1048 15 20.0002 15H19.0002L19 15.5M8.50023 5H8.00023L7.99023 4.99L8.50023 5ZM19 15.5L19.0002 16L19.01 16.01L19 15.5ZM3 6V9.53544C4.69615 9.77806 6 11.2368 6 13C6 14.7632 4.69615 16.2219 3 16.4646V21H7.53544C7.77806 19.3039 9.23676 18 11 18C12.7632 18 14.2219 19.3039 14.4646 21H18" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M1 3L21 23" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-<defs>
-<clipPath id="clip0_2332_3831">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
+    <g id="extension-off" clip-path="url(#clip0_2332_3831)">
+        <path id="stroke1 "
+            d="M8.50023 5H9.00023V4C9.00023 2.89543 9.89567 2 11.0002 2C12.1048 2 13.0002 2.89543 13.0002 4V5H19.0002V11H20.0002C21.1048 11 22.0002 11.8954 22.0002 13C22.0002 14.1046 21.1048 15 20.0002 15H19.0002L19 15.5M8.50023 5H8.00023L7.99023 4.99L8.50023 5ZM19 15.5L19.0002 16L19.01 16.01L19 15.5ZM3 6V9.53544C4.69615 9.77806 6 11.2368 6 13C6 14.7632 4.69615 16.2219 3 16.4646V21H7.53544C7.77806 19.3039 9.23676 18 11 18C12.7632 18 14.2219 19.3039 14.4646 21H18"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2" d="M1 3L21 23" stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
+
 </svg>

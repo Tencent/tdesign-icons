@@ -1,13 +1,12 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="edit-2" clip-path="url(#clip0_2332_2307)">
-<path id="fill1" d="M3.00013 21.0009L7.49988 20.9999L17.4999 10.9999L12.9999 6.50012L3.00014 16.4999L3.00013 21.0009Z" fill="white"/>
-<path id="fill2" d="M21.5 7L17 2.5L13 6.5L17.5 10.9998L21.5 7Z" fill="white"/>
-<path id="stroke1" d="M13 6.5L3.00026 16.4998L3.00025 21.0007L7.5 20.9998L17.5 10.9998M13 6.5L17 2.5L21.5 7L17.5 10.9998M13 6.5L17.5 10.9998" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M20.9999 21.0009L13.9999 21.0001" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-<defs>
-<clipPath id="clip0_2332_2307">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
+    <g id="edit-2">
+        <path id="fill1"
+            d="M3.00049 21.0007L7.50024 20.9998L17.5002 10.9998L13.0002 6.5L3.0005 16.4998L3.00049 21.0007Z"
+            fill="white" />
+        <path id="fill2" d="M21.5 7L17 2.5L13 6.5L17.5 10.9998L21.5 7Z" fill="white" />
+        <path id="stroke1"
+            d="M13.0002 6.5L3.0005 16.4998L3.00049 21.0007L7.50024 20.9998L17.5002 10.9998M13.0002 6.5L17.0002 2.5L21.5002 7L17.5002 10.9998M13.0002 6.5L17.5002 10.9998"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2" d="M21 21.0008L14 21" stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

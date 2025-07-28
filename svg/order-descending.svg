@@ -1,6 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="order-descending">
-<path id="stroke1" d="M3 5H14M3 12H14M3 19H12" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M22 17L19 20L16 17M19 5L19 18.75" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="order-descending">
+        <path id="stroke1" d="M3 5H14M3 12H14M3 19H12" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2" d="M22 17L19 20L16 17M19 5L19 18.75" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+    </g>
 </svg>

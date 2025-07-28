@@ -1,10 +1,11 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="leaderboard">
-<path id="fill1" d="M9 4H15V20H9V4Z" fill="white"/>
-<g id="fill2">
-<path d="M15 12H21V20H15V12Z" fill="white"/>
-<path d="M3 10H9V20H3V10Z" fill="white"/>
-</g>
-<path id="stroke1" d="M15 20V4H9V20M15 20H9M15 20V12H21V20H15ZM9 20V10H3V20H9Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="leaderboard">
+        <path id="fill1" d="M9 4H15V20H9V4Z" fill="white" />
+        <g id="fill2">
+            <path d="M15 12H21V20H15V12Z" fill="white" />
+            <path d="M3 10H9V20H3V10Z" fill="white" />
+        </g>
+        <path id="stroke1" d="M15 20V4H9V20M15 20H9M15 20V12H21V20H15ZM9 20V10H3V20H9Z" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+    </g>
 </svg>

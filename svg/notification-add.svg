@@ -1,13 +1,16 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="notification-add">
-<g id="fill1">
-<path d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z" fill="white"/>
-<path d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z" fill="white"/>
-</g>
-<g id="stroke1">
-<path d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-<path id="stroke2" d="M15 10H12M12 10L9 10M12 10L12 7M12 10V13" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="notification-add">
+        <path id="fill1" d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
+            fill="white" />
+        <path id="fill2" d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
+            fill="white" />
+        <g id="stroke1">
+            <path d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z" stroke="black"
+                stroke-width="2" stroke-linecap="square" />
+            <path d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z" stroke="black"
+                stroke-width="2" stroke-linecap="square" />
+        </g>
+        <path id="stroke2" d="M15 10H12M12 10L9 10M12 10L12 7M12 10V13" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+    </g>
 </svg>

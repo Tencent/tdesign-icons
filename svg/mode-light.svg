@@ -1,21 +1,24 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="mode-light" clip-path="url(#clip0_2332_756)">
-<path id="fill1" d="M19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12Z" fill="white"/>
-<path id="stroke1" d="M19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<g id="stroke2">
-<path d="M19.7819 19.7762L19.7791 19.779L19.7764 19.7762L19.7791 19.7734L19.7819 19.7762Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M23.0029 11.9961V12H22.999V11.9961H23.0029Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M19.7791 4.2168L19.7819 4.21956L19.7791 4.22232L19.7764 4.21956L19.7791 4.2168Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M11.999 0.996094H12.0029V1H11.999V0.996094Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M4.22525 4.21956L4.22249 4.22232L4.21973 4.21956L4.22249 4.2168L4.22525 4.21956Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M1.00293 11.9961V12H0.999023V11.9961H1.00293Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M4.22249 19.7734L4.22525 19.7762L4.22249 19.779L4.21973 19.7762L4.22249 19.7734Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M11.999 22.9961H12.0029V23H11.999V22.9961Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-</g>
-<defs>
-<clipPath id="clip0_2332_756">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
+    <g clip-path="url(#clip0_543_2115)">
+        <path
+            d="M19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12Z"
+            fill="white" />
+        <path
+            d="M19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12Z"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path d="M19.7819 19.7762L19.7791 19.779L19.7764 19.7762L19.7791 19.7734L19.7819 19.7762Z" stroke="black"
+            stroke-width="2" stroke-linecap="square" />
+        <path d="M23.0029 11.9961V12H22.999V11.9961H23.0029Z" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path d="M19.7791 4.2168L19.7819 4.21956L19.7791 4.22232L19.7764 4.21956L19.7791 4.2168Z" stroke="black"
+            stroke-width="2" stroke-linecap="square" />
+        <path d="M11.999 0.996094H12.0029V1H11.999V0.996094Z" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path d="M4.22525 4.21956L4.22249 4.22232L4.21973 4.21956L4.22249 4.2168L4.22525 4.21956Z" stroke="black"
+            stroke-width="2" stroke-linecap="square" />
+        <path d="M1.00293 11.9961V12H0.999023V11.9961H1.00293Z" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+        <path d="M4.22249 19.7734L4.22525 19.7762L4.22249 19.779L4.21973 19.7762L4.22249 19.7734Z" stroke="black"
+            stroke-width="2" stroke-linecap="square" />
+        <path d="M11.999 22.9961H12.0029V23H11.999V22.9961Z" stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
+
 </svg>

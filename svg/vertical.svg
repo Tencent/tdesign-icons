@@ -1,11 +1,11 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="vertical">
-<rect id="fill1" x="3" y="11" width="14" height="10" fill="white"/>
-<rect id="fill2" x="3" y="3" width="14" height="4" fill="white"/>
-<path id="stroke2" d="M21 2V22" stroke="black" stroke-width="2"/>
-<g id="stroke1">
-<path d="M3 11H17V21H3V11Z" stroke="black" stroke-width="2"/>
-<path d="M3 3H17V7H3V3Z" stroke="black" stroke-width="2"/>
-</g>
-</g>
+    <g id="vertical">
+        <rect id="fill1" x="3" y="11" width="14" height="10" fill="white" />
+        <path id="fill2" d="M3 3H17V7H3V3Z" fill="white" />
+        <path id="stroke2" d="M21 2V22" stroke="black" stroke-width="2" />
+        <g id="stroke1">
+            <path d="M3 11H17V21H3V11Z" stroke="black" stroke-width="2" />
+            <path d="M3 3H17V7H3V3Z" stroke="black" stroke-width="2" />
+        </g>
+    </g>
 </svg>

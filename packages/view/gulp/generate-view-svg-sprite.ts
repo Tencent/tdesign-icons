@@ -10,7 +10,33 @@ import { createTransformStream } from '../../../gulp/transform';
 const iconGlob = path.resolve(__dirname, '../../../svg/*.svg');
 const iconDir = path.resolve(__dirname, '../../../svg');
 const TEXT_NODE = 3;
-
+const specialIcons = [
+  't-icon-logo-alipay',
+  't-icon-logo-wecom',
+  't-icon-logo-behance',
+  't-icon-logo-ie',
+  't-icon-logo-wechat-stroke',
+  't-icon-logo-wechatpay',
+  't-icon-logo-cnb',
+  't-icon-drag-drop',
+  't-icon-caret-up-small',
+  't-icon-caret-down-small',
+   't-icon-caret-left-small',
+  't-icon-caret-right-small',
+  't-icon-loading',
+  't-icon-expand-up',
+  't-icon-expand-down',
+  't-icon-play-circle',
+  't-icon-pause-circle',
+  't-icon-play',
+  't-icon-pause',
+  't-icon-download-2',
+  't-icon-stop',
+  't-icon-stop-circle',
+  't-icon-video-camera-3',
+  't-icon-building',
+  't-icon-list'
+];
 const config = {
   svg: {
     rootAttributes: {
@@ -28,6 +54,8 @@ const config = {
                 overrides: {
                   cleanupIDs: false,
                   moveElemsAttrsToGroup: false,
+                  convertPathData: false,
+                  cleanupNumericValues:false
                 },
               },
             },
@@ -60,7 +88,7 @@ export function processSvgSpriteInNode(svgString) {
     throw new Error(`SVG 解析失败: ${parseError.textContent.trim()}`);
   }
 
-  function traverseNodes(node: any, id?: string) {
+  function traverseNodes(node: any, isSpecial:boolean, id?: string) {
     const element = node;
 
     if (element.nodeType === TEXT_NODE) return;
@@ -72,7 +100,8 @@ export function processSvgSpriteInNode(svgString) {
       const childElements = Array.from(element.childNodes)
         .filter((child) => child.nodeType !== TEXT_NODE);
       for (const child of childElements) {
-        traverseNodes(child, nodeId); // 递归处理子元素
+       
+        traverseNodes(child, false, nodeId); // 递归处理子元素
       }
     } else if (nodeId) {
       if (/^.*?(stroke\d+)$/.test(nodeId)) {
@@ -90,12 +119,13 @@ export function processSvgSpriteInNode(svgString) {
 
         element.setAttribute('id', fillId);
         element.removeAttribute('fill');
-        element.setAttribute(':fill', `fillColor${fillContent[1]}`);
+       
+        element.setAttribute(':fill', isSpecial?`strokeColor${fillContent[1]}`:`fillColor${fillContent[1]}`);
       }
     } else {
       // 填充替换
       element.removeAttribute('fill');
-      element.setAttribute(':fill','fillColor1');
+      element.setAttribute(':fill',isSpecial?'strokeColor1':'fillColor1');
     }
   }
 
@@ -104,18 +134,23 @@ export function processSvgSpriteInNode(svgString) {
 
   const childElements = Array.from(svgRoot.childNodes);
   for (const symbolEle of childElements) {
+    let isSpecial = false
     if (symbolEle.nodeType !== TEXT_NODE) {
       if (symbolEle.tagName?.toLowerCase?.() === 'symbol') {
+     
+        if(specialIcons.includes(symbolEle.getAttribute('id'))){
+          isSpecial= true;
+        }
         const gElements = Array.from(symbolEle.childNodes);
         for (const gEl of gElements) {
           if (gEl.nodeType !== TEXT_NODE) {
             if (gEl.tagName?.toLowerCase?.() === 'g') {
               const pathELements = Array.from(gEl.childNodes);
               for (const pathEl of pathELements) {
-                traverseNodes(pathEl);
+                traverseNodes(pathEl,isSpecial);
               }
             } else {
-              traverseNodes(gEl);
+              traverseNodes(gEl,isSpecial);
             }
           }
         }

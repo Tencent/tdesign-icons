@@ -1,6 +1,6 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="bookmark-minus">
-<path id="stroke1" d="M12 4H5V21L12 16L19 21V8" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M16 4H22" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="bookmark-minus">
+        <path id="stroke1" d="M12 4H5V21L12 16L19 21V8" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2" d="M16 4H22" stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

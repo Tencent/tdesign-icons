@@ -1,5 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="download-1">
-<path id="stroke1" d="M4 19H20M7 10L12 15L17 10M12 13.75V4" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="download-1">
+        <path id="fill1" d="M22 3H2V17H22V3Z" fill="white" />
+        <path id="stroke1" d="M4.22266 21H19.7782M2 3H22V17H2V3Z" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+        <path id="stroke2" d="M9.5 10.6052L12 13L14.5 10.6052M12 12.25V7" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+    </g>
 </svg>

@@ -1,8 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="chart-bar">
         <g id="fill1">
-            <path d="M7 10H11V21H7V10Z" fill="white" style="fill:white;fill-opacity:1;" />
-            <path d="M15 6H19V21H15V6Z" fill="white" style="fill:white;fill-opacity:1;" />
+            <path d="M7 10H11V21H7V10Z" fill="white" />
+            <path d="M15 6H19V21H15V6Z" fill="white" />
         </g>
         <g id="stroke2">
             <path d="M7 10H11V21H7V10Z" stroke="black" stroke-width="2" stroke-linecap="square" />

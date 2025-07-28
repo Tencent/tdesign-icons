@@ -1,0 +1,10 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="ipod-ipod">
+        <path id="fill1" d="M4 22H20V14H4V22Z" fill="white" />
+        <path id="fill2" d="M20 2H4V14H20V2Z" fill="white" />
+        <path id="stroke2"
+            d="M9 10V9H7V10H9ZM13 6V5H11V6H13ZM17 8V7H15V8H17ZM13 18H12V19V20C13.1046 20 14 19.1045 14 18H13ZM12 19V18H11H10C10 19.1045 10.8954 20 12 20V19ZM11 18H12V17V16C10.8954 16 10 16.8954 10 18H11ZM12 17V18H13H14C14 16.8954 13.1046 16 12 16V17ZM8 14H9V10H8H7V14H8ZM12 14H13V6H12H11V14H12ZM16 14H17V8H16H15V14H16Z"
+            fill="black" />
+        <path id="stroke1" d="M4 14V22H20V14M4 14H20M4 14V2H20V14" stroke="black" stroke-width="2" />
+    </g>
+</svg>

@@ -1,10 +1,6 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="device">
-<path id="fill2" d="M15 9H23V21H15V9Z" fill="white"/>
-<path id="stroke1" d="M11 18H2V3H22V5M6 21H11" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<g id="stroke2">
-<path d="M15 9H23V21H15V9Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M18.998 17.998H19.002V18.002H18.998V17.998Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-</g>
+    <path d="M15 9H23V21H15V9Z" fill="white" />
+    <path d="M11 18H2V3H22V5M6 21H11" stroke="black" stroke-width="2" stroke-linecap="square" />
+    <path d="M15 9H23V21H15V9Z" stroke="black" stroke-width="2" stroke-linecap="square" />
+    <path d="M18.998 17.998H19.002V18.002H18.998V17.998Z" stroke="black" stroke-width="2" stroke-linecap="square" />
 </svg>

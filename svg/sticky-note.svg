@@ -1,7 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="sticky-note">
-<path id="fill1" d="M21 3L3 3L3 21H14L21 14V3Z" fill="white"/>
-<path id="stroke1" d="M20 14H14V20M3 3H21V14L14 21H3V3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M7 9H17M7 13H10" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="sticky-note">
+        <path id="fill1" d="M21 3H3V21H14L21 14V3Z" fill="white" />
+        <path id="stroke1" d="M20 14H14V20M3 3H21V14L14 21H3V3Z" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+        <path id="stroke2" d="M7 9H17M7 13H10" stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

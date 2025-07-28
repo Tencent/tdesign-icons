@@ -1,7 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="error-triangle">
-<path id="fill1" d="M12.0003 3L22.2194 20.7H1.78125L12.0003 3Z" fill="white"/>
-<path id="stroke1" d="M12.0003 3L22.2194 20.7H1.78125L12.0003 3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M12 10.5V14M12 17.5H12.0039V17.5039H12V17.5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="error-triangle">
+        <path id="fill1" d="M12.0003 3L22.2194 20.7H1.78125L12.0003 3Z" fill="white" />
+        <path id="stroke1" d="M12.0003 3L22.2194 20.7H1.78125L12.0003 3Z" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+        <path id="stroke2" d="M12 10.5V14M12 17.5H12.0039V17.5039H12V17.5Z" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+    </g>
 </svg>

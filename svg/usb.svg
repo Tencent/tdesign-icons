@@ -1,12 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="usb">
-<path id="fill1" d="M3 12H21V21H3V12Z" fill="white"/>
-<path id="fill1_2" d="M5 3H19V12H5V3Z" fill="white"/>
-<g id="stroke1">
-<path d="M3 12H21V21H3V12Z" stroke="black" stroke-width="2"/>
-<path d="M19 12H5V3H19V12Z" stroke="black" stroke-width="2"/>
-<path d="M9 7.49609H9.00391V7.5H9V7.49609Z" stroke="black" stroke-width="2"/>
-<path d="M15 7.49609H15.0039V7.5H15V7.49609Z" stroke="black" stroke-width="2"/>
-</g>
-</g>
+    <path d="M3 12H21V21H3V12Z" fill="white" />
+    <path d="M5 3H19V12H5V3Z" fill="white" />
+    <path d="M3 12H21V21H3V12Z" stroke="black" stroke-width="2" />
+    <path d="M19 12H5V3H19V12Z" stroke="black" stroke-width="2" />
+    <path d="M9 7.49609H9.00391V7.5H9V7.49609Z" stroke="black" stroke-width="2" />
+    <path d="M15 7.49609H15.0039V7.5H15V7.49609Z" stroke="black" stroke-width="2" />
 </svg>

@@ -1,6 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="indent-left">
-<path id="stroke1" d="M3 5H21M9 12H21M3 19H21" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M4.76777 10.232L3 11.9998L4.76777 13.7676" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="indent-left">
+        <path id="stroke1" d="M3 5H21M9 12H21M3 19H21" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2" d="M4.76777 10.2319L3 11.9997L4.76777 13.7675" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+    </g>
 </svg>

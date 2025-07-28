@@ -1,13 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="cpu" clip-path="url(#clip0_2332_586)">
-<path id="fill1" d="M4 4H20V20H4V4Z" fill="white"/>
-<path id="fill2" d="M9 9H15V15H9V9Z" fill="white"/>
-<path id="stroke1" d="M4 8H1.5M8 4V1.5M16 4V1.5M20 16H22.5M20 8H22.5M8 20V22.5M16 20V22.5M4 16H1.5M4 4H20V20H4V4Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M9 9H15V15H9V9Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-<defs>
-<clipPath id="clip0_2332_586">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
+    <g clip-path="url(#clip0_543_1945)">
+        <path d="M4 4H20V20H4V4Z" fill="white" />
+        <path d="M9 9H15V15H9V9Z" fill="white" />
+        <path d="M4 8H1.5M8 4V1.5M16 4V1.5M20 16H22.5M20 8H22.5M8 20V22.5M16 20V22.5M4 16H1.5M4 4H20V20H4V4Z"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path d="M9 9H15V15H9V9Z" stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

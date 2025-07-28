@@ -1,12 +1,13 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="close-octagon" clip-path="url(#clip0_2332_255)">
-<path id="fill1" d="M8.06497 2.49948L15.935 2.49948L21.5 8.06445L21.5 15.9345L15.935 21.4995L8.06497 21.4995L2.5 15.9345L2.5 8.06445L8.06497 2.49948Z" fill="white"/>
-<path id="stroke1" d="M8.06497 2.49966L15.935 2.49967L21.5 8.06464L21.5 15.9347L15.935 21.4997L8.06497 21.4997L2.5 15.9347L2.5 8.06464L8.06497 2.49966Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M15.1823 8.81802L12.0007 11.9997M12.0007 11.9997L8.81836 15.182M12.0007 11.9997L15.1823 15.1813M12.0007 11.9997L8.81836 8.81734" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-<defs>
-<clipPath id="clip0_2332_255">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
+    <g id="close-octagon">
+        <path id="fill1"
+            d="M8.06595 2.49951L15.936 2.49951L21.501 8.06448V15.9345L15.936 21.4995H8.06595L2.50098 15.9345L2.50098 8.06448L8.06595 2.49951Z"
+            fill="white" />
+        <path id="stroke1"
+            d="M8.06497 2.49963L15.935 2.49963L21.5 8.06461V15.9347L15.935 21.4996H8.06497L2.5 15.9347L2.5 8.06461L8.06497 2.49963Z"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2"
+            d="M15.1823 8.818L12.0007 11.9996M12.0007 11.9996L8.81836 15.182M12.0007 11.9996L15.1823 15.1813M12.0007 11.9996L8.81836 8.81732"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

@@ -1,11 +1,15 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="chat-message">
-<path id="fill1" d="M2.5 3L21.5 3L21.5 17L6.5 17L2.5 20.5L2.5 3Z" fill="white"/>
-<path id="stroke1" d="M2.5 3L21.5 3L21.5 17L6.5 17L2.5 20.5L2.5 3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<g id="stroke2">
-<path d="M7.00391 10L7 10L7 9.99609L7.00391 9.99609L7.00391 10Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M12.0039 10L12 10V9.99609L12.0039 9.99609V10Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M17.0039 10L17 10V9.99609L17.0039 9.99609V10Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-</g>
+    <g id="chat-message">
+        <path id="fill1" d="M2.5 3L21.5 3L21.5 17L6.5 17L2.5 20.5L2.5 3Z" fill="white" />
+        <path id="stroke1" d="M2.5 3L21.5 3L21.5 17L6.5 17L2.5 20.5L2.5 3Z" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+        <g id="stroke2">
+            <path d="M7.00391 10L7 10L7 9.99609L7.00391 9.99609L7.00391 10Z" stroke="black" stroke-width="2"
+                stroke-linecap="square" />
+            <path d="M12.0039 10L12 10V9.99609L12.0039 9.99609V10Z" stroke="black" stroke-width="2"
+                stroke-linecap="square" />
+            <path d="M17.0039 10L17 10V9.99609L17.0039 9.99609V10Z" stroke="black" stroke-width="2"
+                stroke-linecap="square" />
+        </g>
+    </g>
 </svg>

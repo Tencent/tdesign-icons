@@ -1,17 +1,21 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="print">
-<path id="fill1" d="M22.5 8L1.5 8L1.5 17H6L6 15L18 15V17L22.5 17V8Z" fill="white"/>
-<g id="fill2">
-<path d="M19 3V8L5 8L5 3L19 3Z" fill="white"/>
-<path d="M18 15V21L6 21L6 15H18Z" fill="white"/>
-</g>
-<g id="stroke2">
-<path d="M19 3V8L5 8L5 3L19 3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M18 15V21L6 21V15H18Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-<g id="stroke1">
-<path d="M18 11.5H18.0039V11.4961H18V11.5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path d="M22.5 8H1.5V17H6V15H18V17H22.5V8Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
-</g>
+    <g id="print">
+        <path id="fill1" d="M22.5005 8L1.50049 8L1.50049 17H6.00049L6.00049 15L18.0005 15V17L22.5005 17V8Z"
+            fill="white" />
+        <g id="fill2">
+            <path d="M19.0005 3V8L5.00049 8L5.00049 3L19.0005 3Z" fill="white" />
+            <path d="M18.0005 15V21L6.00049 21L6.00049 15H18.0005Z" fill="white" />
+        </g>
+        <g id="stroke2">
+            <path d="M19.0005 3V8L5.00049 8L5.00049 3L19.0005 3Z" stroke="black" stroke-width="2"
+                stroke-linecap="square" />
+            <path d="M18.0005 15V21L6.00049 21V15H18.0005Z" stroke="black" stroke-width="2" stroke-linecap="square" />
+        </g>
+        <g id="stroke1">
+            <path d="M18.0005 11.5H18.0044V11.4961H18.0005V11.5Z" stroke="black" stroke-width="2"
+                stroke-linecap="square" />
+            <path d="M22.5005 8H1.50049V17H6.00049V15H18.0005V17H22.5005V8Z" stroke="black" stroke-width="2"
+                stroke-linecap="square" />
+        </g>
+    </g>
 </svg>

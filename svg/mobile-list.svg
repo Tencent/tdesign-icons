@@ -1,6 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="mobile-list">
-<path id="stroke1" d="M19 17V22H5V2H19V5M12 18H12.0039V18.0039H12V18Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M14 13H20M14 9H23" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="mobile-list">
+        <path id="stroke1" d="M19 17V22H5V2H19V5M12 18H12.0039V18.0039H12V18Z" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+        <path id="stroke2" d="M14 13H20M14 9H23" stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

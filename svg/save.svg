@@ -1,14 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="save">
-<path id="fill1" d="M3 3L16 3L21 8L21 21L3 21L3 3Z" fill="white"/>
-<g id="fill2">
-<path d="M12 3H7V7H12V3Z" fill="white"/>
-<path d="M7 21H17V15H7V21Z" fill="white"/>
-</g>
-<g id="stroke2">
-<path d="M12 3H7V7H12V3Z" stroke="black" stroke-width="2"/>
-<path d="M7 21H17V15H7V21Z" stroke="black" stroke-width="2"/>
-</g>
-<path id="stroke1" d="M3 3L16 3L21 8L21 21L3 21L3 3Z" stroke="black" stroke-width="2"/>
-</g>
+    <path d="M3 3H16L21 8V21H3V3Z" fill="white" />
+    <path d="M12 3H7V7H12V3Z" fill="white" />
+    <path d="M7 21H17V15H7V21Z" fill="white" />
+    <path d="M12 3H7V7H12V3Z" stroke="black" stroke-width="2" />
+    <path d="M7 21H17V15H7V21Z" stroke="black" stroke-width="2" />
+    <path d="M3 3H16L21 8V21H3V3Z" stroke="black" stroke-width="2" />
 </svg>

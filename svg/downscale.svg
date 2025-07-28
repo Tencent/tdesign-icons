@@ -1,6 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="downscale">
-<path id="stroke1" d="M10 3H3V9M21 14V21H15M3 15V13H5M9 13H11V15M11 19V21H9M3 19V21H5" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M13.9442 5.08585L13.9723 10.0075L18.8939 10.0356M14.5046 9.47516L19.9856 3.99416" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="downscale">
+        <path id="stroke1" d="M10 3H3V9M21 14V21H15M3 15V13H5M9 13H11V15M11 19V21H9M3 19V21H5" stroke="black"
+            stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2" d="M13.9443 5.08584L13.9725 10.0075L18.8941 10.0356M14.5048 9.47514L19.9858 3.99414"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

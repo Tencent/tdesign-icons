@@ -15,69 +15,43 @@
             </div>
              </template>
           </t-input>
-          <img id="img" style="display: none;"></img>
+          <img id="img" style="display: none;" />
         </div>
       </div>
     </div>
-    <div style="margin-top: 190px;display: flex">
-
+    <div class="t-icons-view__body">
+        <!-- 左侧categories -->
         <div class="t-icons-view__categories">
+          <div>
           <div v-for="(category,index) in categories" :key="index" class="t-icons-view__categories-link">
             <a theme="default" variant="text" class="categories-link" :href='`#${category.labelEn}`' @click="proxyTitleAnchor">{{ isEn? category.labelEn: category.labelCN }}</a>
           </div>
+          </div>
+           <t-divider layout="vertical" style="height: auto;" />
         </div>
-        <t-divider layout="vertical" style="height: auto;" />
+        <!-- 中间图标展示 -->
         <div class="t-icons-view__content" @click="handleClick">
           <div v-for="(icons,index) in allIcons" :key="index">
             <p>
               <span :id="icons.type" style="margin-right: 8px">{{icons.title}}</span>
               <t-tag>{{icons.count}}</t-tag>
             </p>
-            <li v-for="(icon,index) in icons.icons" :key="index" class="t-icons-view__wrapper" :id="icon.name" >
-            <svg width="1em" height="1em" style="font-size: 30px; margin-bottom: 8px">
-              <use :href="`#t-icon-${icon.name}`" />
-            </svg>
-            <div class="t-icons-view__name">{{ icon.name }}</div>
-            <div v-if="false" class="t-icons-view__actions">
-              <svg
-                width="1em"
-                height="1em"
-                style="font-size: 20px; color: var(--text-secondary)"
-                @click="() => handleCopyFile('name', icon.name)"
-              >
-                <use :href="`#t-icon-file-copy`" />
+            <li
+              v-for="(icon,index) in icons.icons"
+              :key="index"
+              class="t-icons-view__wrapper"
+              :id="icon.name"
+              @click="()=>handleDownloadIcon(icon.name)"
+            >
+              <svg width="1em" height="1em" style="font-size: 30px; margin-bottom: 8px">
+                <use :href="`#t-icon-${icon.name}`" />
               </svg>
-              <div class="t-icons-view__actions-divider"></div>
-              <svg
-                width="1em"
-                height="1em"
-                style="font-size: 20px; color: var(--text-secondary)"
-                @click="() => handleCopyFile('component', icon.name)"
-              >
-                <use :href="`#t-icon-file-icon`" />
-              </svg>
-
-              <svg
-                width="1em"
-                height="1em"
-                style="font-size: 20px; color: var(--text-secondary)"
-                @click="() => handleCopyFile('content', icon.svgString)"
-              >
-                <use :href="`#t-icon-file-copy`" />
-              </svg>
-              <div class="t-icons-view__actions-divider"></div>
-              <svg
-                width="1em"
-                height="1em"
-                style="font-size: 20px; color: var(--text-secondary)"
-                @click="() => handleDownloadIcon(icon.name, icon.svgString)"
-              >
-                <use :href="`#t-icon-download`" />
-              </svg>
-            </div>
+              <div class="t-icons-view__name">{{ icon.name }}</div>
             </li>
           </div>
+
         </div>
+        <!-- 右侧编辑区 -->
         <t-space direction="vertical" class="t-icons-view__operations" size="40px">
           <div>
           {{ lang.strokeText }}
@@ -88,7 +62,7 @@
           </div>
           <div>
           {{ lang.strokeText }}
-          <t-slider v-model="configuration.strokeWidth" :step="0.5" :min="0.5" :max="3" :marks="{ 0.5:0.5,1:1,1.5:1.5,2:2,2.5:2.5 }"  style="margin-top:16px"></t-slider>
+          <t-slider v-model="configuration.strokeWidth" :step="0.5" :min="0.5" :max="2.5" :marks="{ 0.5:0.5,1:1,1.5:1.5,2:2,2.5:2.5 }"  style="margin-top:16px"></t-slider>
           </div>
           <div>
           填充颜色1
@@ -103,15 +77,15 @@
         </t-space>
 
   </div>
-    <svg-sprite
-      :stroke-width="configuration.strokeWidth"
-      :fill-color1="configuration.fillColor1"
-      :fill-color="configuration.fillColor1"
-      :fill-color2="configuration.fillColor2"
-      :stroke-color1="configuration.strokeColor1"
-      :stroke-color2="configuration.strokeColor2"
-      :stroke-color="configuration.strokeColor1"
-    />
+  <svg-sprite
+    :stroke-width="configuration.strokeWidth"
+    :fill-color1="configuration.fillColor1"
+    :fill-color="configuration.fillColor1"
+    :fill-color2="configuration.fillColor2"
+    :stroke-color1="configuration.strokeColor1"
+    :stroke-color2="configuration.strokeColor2"
+    :stroke-color="configuration.strokeColor1"
+  />
   </div>
 </template>
 
@@ -126,18 +100,17 @@ import {
   ColorPicker as TColorPicker,
   Divider as TDivider,
   Tag as TTag,
-  PopupPlugin,
   Icon as TIcon,
-  Button as TButton,
 } from 'tdesign-vue';
 
 import {
   onMounted, ref, computed, shallowRef,
-  reactive, watch
+  reactive, watch,
 } from 'vue';
 import forEach from 'lodash/forEach';
 import debounce from 'lodash/debounce';
 
+import * as tf from '@tensorflow/tfjs';
 import { zhCN, enUS } from './i18n';
 import {
   anchorHighlight, calcNavHighlight, proxyTitleAnchor, getRoot,
@@ -147,9 +120,6 @@ import SvgSprite from '../gulp/template/svg-sprite.vue';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import themeVariables from '!raw-loader!./styles/vars.css';
-
-import * as tf from '@tensorflow/tfjs';
-import * as mobilenet from '@tensorflow-models/mobilenet';
 
 const iconViewId = 'TDESIGN_ICON_VIEW';
 
@@ -169,13 +139,9 @@ const configuration = reactive({
   strokeColor2: '#000',
 });
 
-watch(()=>configuration.currentType, (newType) => {
-  if (newType === 'filled' && configuration.fillColor1 === '#fff') 
-    configuration.fillColor1 = '#000';
-  else if (newType === 'outline' && configuration.fillColor1 === '#000')
-    configuration.fillColor1 = '#fff';
+watch(() => configuration.currentType, (newType) => {
+  if (newType === 'filled' && configuration.fillColor1 === '#fff') { configuration.fillColor1 = '#000'; } else if (newType === 'outline' && configuration.fillColor1 === '#000') configuration.fillColor1 = '#fff';
 });
-
 
 const beginClassify = async (e) => {
   const file = e.target.files[0];
@@ -210,25 +176,6 @@ const allIcons = computed(() => {
   }), []);
 });
 
-const handleClick = (e) => {
-  const targetId = e.target.id || e.target.parentNode.id;
-  if (!targetId) return;
-  const id = `#${targetId}`;
-  PopupPlugin(id, ()=>
-    <div class="t-icons-view__actions">
-      <div onClick={()=> handleDownloadIcon(icon.name)}>复制SVG</div>
-      <div onClick={()=> handleDownloadIcon(icon.name)}>复制PNG</div>
-      <div onClick={()=> handleDownloadIcon(icon.name)}>复制 Vue 代码</div>
-      <div style="border-bottom:1px solid #e8e8e8" onClick={()=> handleDownloadIcon(icon.name)}>复制 React 代码</div>
-      <div onClick={()=> handleDownloadIcon(icon.name)}>下载 SVG </div>
-      <div onClick={()=> handleDownloadIcon(icon.name)}>下载 PNG</div>
-    </div>,
-    {
-    placement: 'right',
-    showArrow: false,
-
-    });
-};
 const appendStyleSheet = () => {
   const componentVariablesExist = window
     .getComputedStyle(document.documentElement)
@@ -261,6 +208,8 @@ const handleCopyFile = async (type, name) => {
 };
 
 const handleDownloadIcon = (iconName) => {
+  const icon = document.getElementById(`t-icon-${iconName}`);
+  console.log(icon, 'icon');
   const blob = new Blob([svgString], { type: 'image/svg+xml' });
   const imgUrl = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -327,12 +276,11 @@ onMounted(async () => {
 </script>
 <style>
 @import '../node_modules/tdesign-vue/dist/tdesign.min.css';
-body {
-  overflow: hidden;
-}
+
 .t-icons-view {
   background-color: var(--bg-color-container);
   padding: 0 calc(calc(100vw - 1200px)/2);
+
 }
 .t-icons-view__header {
   padding: 0 calc(calc(100vw - 1200px)/2);
@@ -342,9 +290,19 @@ body {
   width: 100%;
   box-sizing: border-box;
   right: 0;
+  z-index: 9999;
+  background-color: var(--bg-color-container);
 }
+
 .t-icons-view__header h1 {
   color: var(--text-primary);
+}
+.t-icons-view__body {
+  top: 190px;
+  display: flex;
+  max-height: calc(100vh - 190px);
+  overflow: scroll;
+  position: fixed;
 }
 .t-icons-view__header-description {
   display: flex;
@@ -356,6 +314,7 @@ body {
 }
 .t-icons-view__categories {
   padding-top: 32px;
+  position: fixed;
 }
 .t-icons-view__name {
   text-align: center;
@@ -390,9 +349,7 @@ body {
 .t-icons-view__content {
   flex: 1;
   width: 100%;
-  height: 100vh;
-  overflow: scroll;
-  margin-top: 32px;
+  margin: 32px 305px 0 132px;
 }
 .t-icons-view__count {
   display: flex;
@@ -442,6 +399,8 @@ body {
   height: fit-content;
   border-radius: 6px;
   margin-left: 32px;
+  position: fixed;
+  right: 0;
 }
 .t-radio-group {
   width: 100%;

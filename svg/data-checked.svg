@@ -7,9 +7,4 @@
         <path id="stroke2" d="M22.6818 17.4395L18.4392 21.6821L16.3179 19.5608" stroke="black" stroke-width="2"
             stroke-linecap="square" />
     </g>
-    <defs>
-        <clipPath id="clip0_543_1912">
-            <rect width="24" height="24" fill="white" />
-        </clipPath>
-    </defs>
 </svg>

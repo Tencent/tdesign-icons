@@ -7,9 +7,5 @@
             stroke="black" stroke-width="2" stroke-linecap="square" />
         <path id="stroke2" d="M9 9H15V15H9V9Z" stroke="black" stroke-width="2" stroke-linecap="square" />
     </g>
-    <defs>
-        <clipPath id="clip0_543_1945">
-            <rect width="24" height="24" fill="white" />
-        </clipPath>
-    </defs>
+
 </svg>

@@ -25,9 +25,4 @@
                 stroke-linecap="square" />
         </g>
     </g>
-    <defs>
-        <clipPath id="clip0_543_2115">
-            <rect width="24" height="24" fill="white" />
-        </clipPath>
-    </defs>
 </svg>

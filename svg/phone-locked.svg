@@ -1,7 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M13.9985 17.5H20.9985V22H13.9985V17.5Z" fill="white" />
-    <path d="M10 22H5V2H19V10" stroke="black" stroke-width="2" stroke-linecap="square" />
-    <path
-        d="M15.25 17.5V15.75C15.25 14.5074 16.2574 13.5 17.5 13.5C18.7426 13.5 19.75 14.5074 19.75 15.75V17.5M13.9985 17.5H20.9985V22H13.9985V17.5Z"
-        stroke="black" stroke-width="2" stroke-linecap="square" />
+    <g id="phone-locked">
+        <path id="fill2" d="M13.998 17.5H20.998V22H13.998V17.5Z" fill="white" />
+        <path id="stroke1" d="M10 22H5V2H19V10" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2"
+            d="M15.2495 17.5V15.75C15.2495 14.5074 16.2569 13.5 17.4995 13.5C18.7422 13.5 19.7495 14.5074 19.7495 15.75V17.5M13.998 17.5H20.998V22H13.998V17.5Z"
+            stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

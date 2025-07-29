@@ -30,12 +30,8 @@ const specialIcons = [
   't-icon-pause-circle',
   't-icon-play',
   't-icon-pause',
-  't-icon-download-2',
   't-icon-stop',
-  't-icon-stop-circle',
-  't-icon-video-camera-3',
-  't-icon-building',
-  't-icon-list'
+  't-icon-stop-circle'
 ];
 const config = {
   svg: {

@@ -1,4 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10.5 7.5L15 12L10.5 16.5M13.75 12H4" stroke="black" stroke-width="2" stroke-linecap="square" />
-    <path d="M15 3.5H20V20.5H15" stroke="black" stroke-width="2" stroke-linecap="square" />
+    <g id="login">
+        <path id="stroke1" d="M10.5 7.5L15 12L10.5 16.5M13.75 12H4" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+        <path id="stroke2" d="M15 3.5H20V20.5H15" stroke="black" stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

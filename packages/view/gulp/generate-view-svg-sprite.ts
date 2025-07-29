@@ -21,7 +21,7 @@ const specialIcons = [
   't-icon-drag-drop',
   't-icon-caret-up-small',
   't-icon-caret-down-small',
-   't-icon-caret-left-small',
+  't-icon-caret-left-small',
   't-icon-caret-right-small',
   't-icon-loading',
   't-icon-expand-up',

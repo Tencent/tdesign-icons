@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.2.7
+
+### Patch Changes
+
+- fix: add LICENSE
+
 ## 0.2.6
 
 ### Patch Changes

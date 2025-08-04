@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-view",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "A web-component package for display all icons in any UI framework",
   "repository": {
     "type": "git",
@@ -13,7 +13,8 @@
   },
   "main": "dist/td-icons-view.js",
   "files": [
-    "dist/td-icons-view.js"
+    "dist/td-icons-view.js",
+    "LICENSE"
   ],
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -30,7 +31,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "lodash": "^4.17.21",
-    "tdesign-icons-vue": "0.3.5",
+    "tdesign-icons-vue": "0.3.6",
     "tdesign-vue": "1.10.5-naruto",
     "tvision-color": "^1.6.0",
     "vue": "2.7.14"

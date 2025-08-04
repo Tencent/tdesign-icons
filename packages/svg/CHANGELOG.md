@@ -1,5 +1,11 @@
 # tdesign-icons-svg
 
+## 0.3.4
+
+### Patch Changes
+
+- fix: add LICENSE
+
 ## 0.3.3
 
 ### Patch Changes

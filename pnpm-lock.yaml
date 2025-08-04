@@ -280,8 +280,8 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
       tdesign-icons-vue:
-        specifier: 0.3.5
-        version: 0.3.5(vue@2.7.14)
+        specifier: 0.3.6
+        version: 0.3.6(vue@2.7.14)
       tdesign-vue:
         specifier: 1.10.5-naruto
         version: 1.10.5-naruto(vue@2.7.14)
@@ -9149,8 +9149,8 @@ packages:
     peerDependencies:
       vue: ^2.6.12
 
-  tdesign-icons-vue@0.3.5:
-    resolution: {integrity: sha512-qimpzLAquKh3P9v1wW/uVseZUONN126A75iJjgUh7oDCJ7pAmDaM8v2qoZPn1KzE2yQHzRZfvfkK5hBeBKQDWg==}
+  tdesign-icons-vue@0.3.6:
+    resolution: {integrity: sha512-FXE5Ryihyamk0cYKY1wuppuAOtyV2W0k2HxgR4EaocbbdmnFUWIcSBL0buNeFAQqSi16HQOtr2KpP9v87IwLXw==}
     peerDependencies:
       vue: ^2.6.12
 
@@ -11229,14 +11229,14 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 12.11.1
+      '@types/node': 22.13.10
       jest-mock: 29.7.0
 
   '@jest/fake-timers@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 12.11.1
+      '@types/node': 22.13.10
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -11253,7 +11253,7 @@ snapshots:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 12.11.1
+      '@types/node': 22.13.10
       '@types/yargs': 15.0.19
       chalk: 4.1.2
 
@@ -11262,7 +11262,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 12.11.1
+      '@types/node': 22.13.10
       '@types/yargs': 17.0.32
       chalk: 4.1.2
 
@@ -13859,7 +13859,7 @@ snapshots:
 
   chrome-launcher@0.15.2:
     dependencies:
-      '@types/node': 12.11.1
+      '@types/node': 22.13.10
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -13870,7 +13870,7 @@ snapshots:
 
   chromium-edge-launcher@1.0.0:
     dependencies:
-      '@types/node': 12.11.1
+      '@types/node': 22.13.10
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -16950,7 +16950,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 12.11.1
+      '@types/node': 22.13.10
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -16971,13 +16971,13 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 12.11.1
+      '@types/node': 22.13.10
       jest-util: 29.7.0
 
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 12.11.1
+      '@types/node': 22.13.10
       chalk: 4.1.2
       ci-info: 3.8.0
       graceful-fs: 4.2.11
@@ -17012,7 +17012,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 12.11.1
+      '@types/node': 22.13.10
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -21034,7 +21034,7 @@ snapshots:
       classnames: 2.2.6
       vue: 2.7.14
 
-  tdesign-icons-vue@0.3.5(vue@2.7.14):
+  tdesign-icons-vue@0.3.6(vue@2.7.14):
     dependencies:
       '@babel/runtime': 7.24.7
       classnames: 2.2.6

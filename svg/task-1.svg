@@ -1,7 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="task-1">
-<path id="fill1" d="M20 22L20 4L16 4V6L8 6V4L4 4L4 22L20 22Z" fill="white" stroke="black" stroke-width="2"/>
-<path id="fill2" d="M16 6L8 6V2L16 2V6Z" fill="white"/>
-<path id="stroke1" d="M8 6V4H4V22H20V4H16V6M8 6H16M8 6V2H16V6" stroke="black" stroke-width="2"/>
-</g>
+    <g id="task-1">
+        <path id="fill1" d="M4 4H8V6H16V4H20V22H4V4Z" fill="white" />
+        <rect id="fill2" x="8" y="2" width="8" height="4" fill="white" />
+        <path id="stroke1" d="M16 4H20V22H4V4H8M16 4V2H8V4M16 4V6H8V4" stroke="black" stroke-width="2" />
+    </g>
 </svg>

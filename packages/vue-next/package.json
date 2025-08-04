@@ -17,7 +17,8 @@
     "lib",
     "types",
     "README.md",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "LICENSE"
   ],
   "main": "lib/index.js",
   "module": "esm/index.js",

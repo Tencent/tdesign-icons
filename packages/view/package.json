@@ -31,7 +31,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "lodash": "^4.17.21",
-    "tdesign-icons-vue": "workspace:^",
+    "tdesign-icons-vue": "^0.3.6",
     "tdesign-vue": "1.10.5-naruto",
     "tvision-color": "^1.6.0",
     "vue": "2.7.14",

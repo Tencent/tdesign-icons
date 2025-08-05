@@ -1,6 +1,7 @@
 {
   "name": "tdesign-icons-vue",
-  "version": "0.3.5",
+  "version": "0.3.6",
+  "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -19,7 +20,8 @@
     "lib",
     "types",
     "README.md",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "LICENSE"
   ],
   "main": "lib/index.js",
   "module": "esm/index.js",

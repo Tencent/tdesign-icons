@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 0.5.1
+
+### Patch Changes
+
+- fix: add LICENSE
+
+## 0.5.0
+
+### Minor Changes
+
+- feat: support React 19
+
 ## 0.4.5
 
 ### Patch Changes

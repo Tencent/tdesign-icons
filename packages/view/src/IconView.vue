@@ -50,25 +50,25 @@
             <t-radio-button value="multiple" v-if="configuration.strokeTypes === 'outlineFilled'">{{ lang.colorTypes.multiple }}</t-radio-button>
           </t-radio-group>
           </div>
-          <div style="display: flex; gap: 16px" v-if="configuration.currentType === 'filled' ||(configuration.currentType !== 'filled' && configuration.strokeTypes==='outlineFilled')">
+          <div style="display: flex; gap: 16px;font-size: 14px;" v-if="configuration.currentType === 'filled' ||(configuration.currentType !== 'filled' && configuration.strokeTypes==='outlineFilled')">
             <div>
-              <p>填充颜色1</p>
+              <p style="color:var(--text-secondary)">填充颜色1</p>
               <t-color-picker v-model="configuration.fillColor1" :color-modes="['monochrome']"  format="HEX" style="margin:8px 0 0 0"></t-color-picker>
             </div>
             <div v-if="configuration.currentType !== 'filled' && configuration.colorType === 'multiple'">
               <div v-if="configuration.colorType !== 'single'">
-                <p>填充颜色2</p>
+                <p style="color:var(--text-secondary)">填充颜色2</p>
                 <t-color-picker v-model="configuration.fillColor2" :color-modes="['monochrome']"  format="HEX"  style="margin:8px 0 0 0"></t-color-picker>
               </div>
             </div>
           </div>
-           <div style="display: flex;gap: 16px">
+          <div style="display: flex;gap: 16px;font-size: 14px;">
           <div v-if="configuration.currentType !== 'filled'">
-          <p>线条颜色1</p>
+          <p style="color:var(--text-secondary)">线条颜色1</p>
           <t-color-picker v-model="configuration.strokeColor1" :color-modes="['monochrome']"  format="HEX" style="margin:8px 0 0 0"></t-color-picker>
           </div>
           <div v-if="((configuration.colorType === 'double'&& configuration.strokeTypes==='outline')|| configuration.colorType ==='multiple')&& configuration.currentType !== 'filled'">
-          <p>线条颜色2</p>
+          <p style="color:var(--text-secondary)">线条颜色2</p>
           <t-color-picker v-model="configuration.strokeColor2" :color-modes="['monochrome']"  format="HEX" style="margin:8px 0 0 0"></t-color-picker>
           </div>
           </div>
@@ -480,7 +480,14 @@ onMounted(() => {
   justify-content: space-between;
 }
 
-.t-input,.t-button {
+.t-input {
+  background-color: transparent;
+  border-color: #DCDCDC;
+}
+
+.t-button {
+  color: var(--text-primary);
+  border-color:  var(--text-placeholder);
   background-color: transparent;
 }
 

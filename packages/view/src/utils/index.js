@@ -36,7 +36,9 @@ export function calcNavHighlight() {
     });
   }
   const anchorList = Array.from(getRoot()?.querySelectorAll('.categories-link')) || [];
+
   const linkTopList = getLinkTopList(anchorList);
+
   return {
     anchorList,
     linkTopList,
@@ -44,8 +46,10 @@ export function calcNavHighlight() {
 }
 
 export function anchorHighlight(anchorList, linkTopList) {
-  const { scrollTop } = getRoot()?.querySelector('.t-icons-view__body');
+  const { scrollTop } = getRoot()?.querySelector('.t-icons-view');
+
   const categoriesEle = getRoot()?.querySelector('.t-icons-view__categories');
+
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i < linkTopList.length; i++) {
     if (scrollTop <= linkTopList[i]) {
@@ -68,13 +72,15 @@ export function proxyTitleAnchor(e) {
   const [, id = ''] = href.split('#');
   if (target.classList.contains('categories-link')) {
     const idTarget = getRoot()?.getElementById(id);
+
     if (!idTarget) return;
     const { top } = idTarget.getBoundingClientRect();
-    const target = getRoot()?.querySelector('.t-icons-view__body');
+
+    const target = getRoot()?.querySelector('.t-icons-view');
     const { scrollTop } = target;
 
     const offsetTop = top + scrollTop;
 
-    requestAnimationFrame(() => target.scrollTo({ top: offsetTop - 348, left: 0 }));
+    requestAnimationFrame(() => target.scrollTo({ top: offsetTop - 188, left: 0 }));
   }
 }

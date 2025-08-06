@@ -31,7 +31,8 @@ const specialIcons = [
   't-icon-play',
   't-icon-pause',
   't-icon-stop',
-  't-icon-stop-circle'
+  't-icon-stop-circle',
+  't-icon-logo-stackblitz',
 ];
 const config = {
   svg: {

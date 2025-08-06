@@ -1,12 +1,17 @@
 export default {
-  iconTypeText: '图标类型',
+  iconTypeText: 'Icon 类型',
+  strokeTypes: {
+    outline: '描边',
+    outlineFilled: '描边-填充',
+  },
   types: {
-    outline: '描边风格',
-    filled: '填充风格',
+    outline: '描边',
+    filled: '填充',
   },
   colorText: '图标颜色',
   colorTypes: {
     single: '单色',
+    double: '双色',
     multiple: '多色',
   },
   search: '输入图标名称或关键词',

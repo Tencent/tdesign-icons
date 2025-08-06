@@ -85,6 +85,11 @@ export const manifest = {
           keywords: ['"logo-instagram', '标志Instagram"'],
         },
         {
+          name: 'logo-stackblitz-filled',
+
+          keywords: ['StackBlitz', '在线IDE'],
+        },
+        {
           name: 'logo-apple-filled',
 
           keywords: ['苹果标志', '苹果公司徽标'],
@@ -4788,6 +4793,11 @@ export const manifest = {
           name: 'logo-codesandbox',
 
           keywords: ['代码沙盒标志', '标志代码沙盒'],
+        },
+        {
+          name: 'logo-stackblitz',
+
+          keywords: ['StackBlitz', '在线IDE'],
         },
         {
           name: 'logo-cinema4d',

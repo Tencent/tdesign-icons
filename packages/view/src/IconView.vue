@@ -1,32 +1,87 @@
 <template>
-  <div class="t-icons-view">
-    <div class="t-icons-view__header">
-      <div class="content">
+  <div class="t-icons-view" :key="configuration.currentType">
+    <div class="t-icons-view__header" @mouseenter="hidePopover">
+      <div style="display:flex; justify-content: space-between;align-items: baseline;">
+        <div style="display:flex; align-items: baseline;">
         <h1> Icon 图标资源</h1>
-
-        <div class="t-icons-view__header-description">
-          <p style="margin: 0 0 48px 0"> 2119 Icons ｜ 2025.07.30 更新｜ Figma 链接</p>
-          <t-input size="large" :placeholder="lang.search" :style="{ marginLeft: '16px', width: '480px' }" @change="handleSearchIcon" v-model="searchStr">
+        <span style="margin: 0 0 0 24px"> {{ count }} Icons ｜ 2025.07.30 更新｜ Figma 链接</span>
+        </div>
+        <t-input size="large" :placeholder="lang.search" :style="{ marginLeft: '16px', width: '480px', pointerEvents: 'all' }" @change="handleSearchIcon" v-model="searchStr">
             <template #prefix-icon>
               <search-icon />
             </template>
-            </t-input>
-        </div>
+        </t-input>
       </div>
     </div>
-    <div class="t-icons-view__body scrollbar" :key="configuration.currentType">
+    <div class="t-icons-view__body scrollbar">
         <!-- 左侧categories -->
-        <div class="t-icons-view__categories scrollbar">
-
-          <div v-for="(category,index) in categories" :key="index" class="t-icons-view__categories-link">
-            <a theme="default" variant="text" class="categories-link" :href='`#${category.labelEn}`' @click="proxyTitleAnchor">{{ isEn? category.labelEn: category.labelCN }}</a>
+        <div class="t-icons-view__left"  @mouseenter="hidePopover">
+          <div style="font-size: 16px; color:var(--text-primary)">
+            <t-radio-group v-model="configuration.currentType" variant="default-filled" style="margin-top:8px">
+              <t-radio-button value="outline">{{ lang.types.outline }}</t-radio-button>
+              <t-radio-button value="filled">{{ lang.types.filled }}</t-radio-button>
+            </t-radio-group>
           </div>
-
+          <div class="t-icons-view__categories scrollbar">
+            <div v-for="(category,index) in allIcons" :key="index" class="t-icons-view__categories-link">
+              <a theme="default" variant="text" class="categories-link" :href='`#${category.labelEn}`' @click="proxyTitleAnchor">{{ isEn? category.labelEn: category.title }}</a>
+            </div>
+          </div>
         </div>
-        <!-- 中间图标展示 -->
-        <div class="t-icons-view__content" @click="(e)=>handleClickIcon(e)">
+        <!-- 右侧编辑区 -->
+        <t-space direction="vertical" class="t-icons-view__operations" size="32px" @mouseenter="hidePopover">
+          <div v-if="configuration.currentType !== 'filled'" style="font-size: 16px;color:var(--text-primary)">
+          {{ lang.strokeText }}
+          <t-slider v-model="configuration.strokeWidth" :step="0.5" :min="0.5" :max="2.5" :marks="{ 0.5:0.5,1:1,1.5:1.5,2:2,2.5:2.5 }"  style="margin-top:16px"></t-slider>
+          </div>
           <div>
-          <div v-for="(icons,index) in allIcons" :key="index">
+          <div style="font-size: 16px; margin:32px 0;color:var(--text-primary)" v-if="configuration.currentType !== 'filled'">
+          {{ lang.iconTypeText }}
+            <t-radio-group v-model="configuration.strokeTypes" variant="default-filled" style="margin-top:8px">
+              <t-radio-button value="outline">{{ lang.strokeTypes.outline }}</t-radio-button>
+              <t-radio-button value="outlineFilled">{{ lang.strokeTypes.outlineFilled }}</t-radio-button>
+            </t-radio-group>
+          </div>
+          <div v-if="configuration.currentType !== 'filled'" style="font-size: 16px;color:var(--text-primary)">
+          {{ lang.colorText }}
+          <t-radio-group v-model="configuration.colorType" variant="default-filled" style="margin-top:16px">
+            <t-radio-button value="single" v-if="configuration.strokeTypes === 'outline'">{{ lang.colorTypes.single }}</t-radio-button>
+            <t-radio-button value="double">{{ lang.colorTypes.double }}</t-radio-button>
+            <t-radio-button value="multiple" v-if="configuration.strokeTypes === 'outlineFilled'">{{ lang.colorTypes.multiple }}</t-radio-button>
+          </t-radio-group>
+          </div>
+          <div style="display: flex; gap: 16px" v-if="configuration.currentType === 'filled' ||(configuration.currentType !== 'filled' && configuration.strokeTypes==='outlineFilled')">
+            <div>
+              <p>填充颜色1</p>
+              <t-color-picker v-model="configuration.fillColor1" :color-modes="['monochrome']"  format="HEX" style="margin:8px 0 0 0"></t-color-picker>
+            </div>
+            <div v-if="configuration.currentType !== 'filled' && configuration.colorType === 'multiple'">
+              <div v-if="configuration.colorType !== 'single'">
+                <p>填充颜色2</p>
+                <t-color-picker v-model="configuration.fillColor2" :color-modes="['monochrome']"  format="HEX"  style="margin:8px 0 0 0"></t-color-picker>
+              </div>
+            </div>
+          </div>
+           <div style="display: flex;gap: 16px">
+          <div v-if="configuration.currentType !== 'filled'">
+          <p>线条颜色1</p>
+          <t-color-picker v-model="configuration.strokeColor1" :color-modes="['monochrome']"  format="HEX" style="margin:8px 0 0 0"></t-color-picker>
+          </div>
+          <div v-if="((configuration.colorType === 'double'&& configuration.strokeTypes==='outline')|| configuration.colorType ==='multiple')&& configuration.currentType !== 'filled'">
+          <p>线条颜色2</p>
+          <t-color-picker v-model="configuration.strokeColor2" :color-modes="['monochrome']"  format="HEX" style="margin:8px 0 0 0"></t-color-picker>
+          </div>
+          </div>
+          </div>
+          <t-button theme="default" style="width: 100%;border:1px solid #ddd" @click="handleReset">重置</t-button>
+        </t-space>
+
+  </div>
+
+         <!-- 中间图标展示 -->
+    <div class="t-icons-view__content scrollbar">
+          <div>
+          <div v-for="(icons,index) in allIcons" :key="index" @mousemove="(e)=>handleClickIcon(e)">
             <p style="display: flex;align-items: center; font-weight: 600;">
               <span :id="icons.type" style="margin-right: 8px; font-size: 16px;">{{icons.title}}</span>
               <t-tag>{{icons.count}}</t-tag>
@@ -44,55 +99,8 @@
             </li>
           </div>
           </div>
-        </div>
-        <!-- 右侧编辑区 -->
-        <t-space direction="vertical" class="t-icons-view__operations" size="32px">
-          <div style="font-size: 16px;color:var(--text-primary)">
-          {{ lang.iconTypeText }}
-          <t-radio-group v-model="configuration.currentType" variant="default-filled" style="margin-top:8px">
-            <t-radio-button value="outline">{{ lang.types.outline }}</t-radio-button>
-            <t-radio-button value="filled">{{ lang.types.filled }}</t-radio-button>
-          </t-radio-group>
-          </div>
-          <div v-if="configuration.currentType !== 'filled'" style="font-size: 16px;color:var(--text-primary)">
-          {{ lang.strokeText }}
-          <t-slider v-model="configuration.strokeWidth" :step="0.5" :min="0.5" :max="2.5" :marks="{ 0.5:0.5,1:1,1.5:1.5,2:2,2.5:2.5 }"  style="margin-top:16px"></t-slider>
-          </div>
-          <div>
-          <div v-if="configuration.currentType !== 'filled'" style="font-size: 16px;color:var(--text-primary)">
-          {{ lang.colorText }}
-          <t-radio-group v-model="configuration.colorType" variant="default-filled" style="margin-top:16px">
-            <t-radio-button value="single">{{ lang.colorTypes.single }}</t-radio-button>
-            <t-radio-button value="multiple">{{ lang.colorTypes.multiple }}</t-radio-button>
-          </t-radio-group>
-          </div>
-          <div style="display: flex; gap: 16px">
-            <div>
-              <p>填充颜色1</p>
-              <t-color-picker v-model="configuration.fillColor1" :color-modes="['monochrome']"  style="margin:8px 0 0 0"></t-color-picker>
-            </div>
-            <div v-if="configuration.currentType !== 'filled'">
-              <div v-if="configuration.colorType !== 'single'">
-                <p>填充颜色2</p>
-                <t-color-picker v-model="configuration.fillColor2" :color-modes="['monochrome']"   style="margin:8px 0 0 0"></t-color-picker>
-              </div>
-            </div>
-          </div>
-           <div style="display: flex;gap: 16px">
-            <div>
-          <p>线段颜色1</p>
-          <t-color-picker v-model="configuration.strokeColor1" :color-modes="['monochrome']"  style="margin:8px 0 0 0"></t-color-picker>
-          </div>
-          <div v-if="configuration.colorType !== 'single'">
-          <p>线段颜色2</p>
-          <t-color-picker v-model="configuration.strokeColor2" :color-modes="['monochrome']"  style="margin:8px 0 0 0"></t-color-picker>
-          </div>
-          </div>
-          </div>
-          <t-button theme="default" style="width: 100%;border:1px solid #ddd" @click="handleReset">重置</t-button>
-        </t-space>
+    </div>
 
-  </div>
   <div class="t-icons-view__operation" id="tooltip" role="tooltip" style="display: none;">
     <div @click="()=>handleCopyIcon('svg')">{{lang.operationText.copySvg}}</div>
     <div @click="()=>handleCopyIcon('png')">{{lang.operationText.copyPng}}</div>
@@ -148,6 +156,7 @@ let popperInstance = null;
 const initConfiguration = {
   currentType: 'outline',
   colorType: 'multiple',
+  strokeTypes: 'outlineFilled',
   activeCategory: '',
   strokeWidth: 2,
   fillColor1: 'transparent',
@@ -162,6 +171,8 @@ const searchStr = ref('');
 const anchorArr = ref([]);
 const linkTopArr = ref([]);
 const currentIconName = ref('');
+const count = ref(0);
+const activeCategory = ref('');
 // icon configurations
 const configuration = reactive({
   ...initConfiguration,
@@ -169,7 +180,7 @@ const configuration = reactive({
 
 watch(() => configuration.currentType, (newType) => {
   if (newType === 'filled' && configuration.fillColor1 === 'transparent') { configuration.fillColor1 = '#000000'; } else if (newType === 'outline' && configuration.fillColor1 === '#000000') configuration.fillColor1 = 'transparent';
-
+  activeCategory.value = getRoot()?.querySelector('.active').innerHTML;
   nextTick(() => {
     getHighlightRefValue();
     registerScrollEvent();
@@ -182,9 +193,30 @@ watch(() => configuration.fillColor1, (newColor) => {
   }
 });
 
-watch(() => configuration.strokeColor1, (newColor) => {
+watch(() => configuration.fillColor1, (newColor) => {
   if (configuration.colorType === 'single') {
-    configuration.strokeColor2 = newColor;
+    configuration.fillColor2 = newColor;
+  }
+});
+
+watch(() => configuration.strokeTypes, (newType) => {
+  configuration.colorType = 'double';
+  if (newType === 'outlineFilled') {
+    configuration.fillColor2 = configuration.fillColor1;
+    configuration.strokeColor2 = configuration.strokeColor1;
+  } else {
+    configuration.fillColor2 = 'transparent';
+    configuration.fillColor1 = 'transparent';
+  }
+});
+
+watch(() => configuration.colorType, (newColorType) => {
+  if (newColorType === 'single') {
+    configuration.strokeColor2 = configuration.strokeColor1;
+  }
+  if (newColorType === 'double' && configuration.strokeTypes === 'outlineFilled') {
+    configuration.fillColor2 = configuration.fillColor1;
+    configuration.strokeColor2 = configuration.strokeColor1;
   }
 });
 
@@ -203,14 +235,14 @@ const categories = computed(
 );
 
 const allIcons = computed(() => {
-  const types = Object.keys(categories.value);
+  const types = Object.keys(categories.value).sort();
   return types.reduce((acc, type) => acc.concat({
-    type, title: categories.value[type].labelCN, icons: categories.value[type].icons, count: categories.value[type].icons.length,
+    type, labelEn: categories.value[type].labelEn, title: categories.value[type].labelCN, icons: categories.value[type].icons, count: categories.value[type].icons.length,
   }), []);
 });
 
 const handleReset = () => {
-  configuration.fillColor1 = configuration.currentType === 'filled' ? '#000' : 'transparent';
+  configuration.fillColor1 = configuration.currentType === 'filled' ? '#000000' : 'transparent';
   configuration.fillColor2 = initConfiguration.fillColor2;
   configuration.strokeColor1 = initConfiguration.strokeColor1;
   configuration.strokeColor2 = initConfiguration.strokeColor2;
@@ -361,13 +393,16 @@ const handleSearchIcon = debounce((searchStr) => {
   });
 }, 250);
 
-const activeCurrentCategory = () => anchorHighlight(anchorArr.value, linkTopArr.value);
+const activeCurrentCategory = () => {
+  hidePopover();
+  anchorHighlight(anchorArr.value, linkTopArr.value);
+};
 
 const registerScrollEvent = () => {
   activeCurrentCategory();
-  getRoot()?.querySelector('.t-icons-view__body').removeEventListener('scroll', activeCurrentCategory);
+  getRoot()?.querySelector('.t-icons-view').removeEventListener('scroll', activeCurrentCategory);
 
-  getRoot()?.querySelector('.t-icons-view__body').addEventListener('scroll', activeCurrentCategory);
+  getRoot()?.querySelector('.t-icons-view').addEventListener('scroll', activeCurrentCategory);
 };
 
 const getHighlightRefValue = () => {
@@ -392,6 +427,14 @@ onMounted(() => {
   const en = window.location.pathname.endsWith('en');
   isEn.value = en;
   lang.value = en ? enUS : zhCN;
+  Object.keys(manifest.value).forEach((renderType) => {
+    const currentIcons = manifest.value[renderType];
+    const types = Object.keys(currentIcons);
+
+    types.forEach((item) => {
+      count.value += currentIcons[item].icons.length;
+    });
+  });
 
   nextTick(() => {
     getHighlightRefValue();
@@ -416,7 +459,8 @@ onMounted(() => {
 .t-icons-view {
   background-color: var(--bg-color-container);
   padding: 0 calc(calc(100vw - 1200px)/2);
-
+  overflow: scroll;
+  max-height: 100vh;
 }
 .t-icons-view__header {
   padding: 0 calc(calc(100vw - 1200px)/2);
@@ -426,25 +470,33 @@ onMounted(() => {
   width: 100%;
   box-sizing: border-box;
   right: 0;
-  z-index: 5000;
-  height: 252px;
+  z-index: 3000;
+  height: 92px;
   background-color: var(--bg-color-container);
 }
+
+.t-icons-view__header > content {
+  display: flex;
+  justify-content: space-between;
+}
+
 .t-radio-button__label {
   width: 100%;
   text-align: center;
 }
 .t-icons-view__header h1 {
   color: var(--text-primary);
-  margin:110px 0 16px 0;
-  font-size: 48px;
+  margin: 24px 0;
+  font-size: 36px;
+  line-height: 44px;
 }
 .t-icons-view__body {
-  margin-top: 316px;
+  margin-top: 156px;
   display: flex;
-  max-height: calc(100vh - 348px);
+  max-height: calc(100vh - 212px);
   overflow: scroll;
 }
+
 .scrollbar::-webkit-scrollbar {
     width: 12px;
     height: 12px;
@@ -468,14 +520,20 @@ onMounted(() => {
   flex: 1;
   color: var(--text-secondary);
 }
-.t-icons-view__categories {
-  padding-top: 32px;
-  position: fixed;
+.t-icons-view__left {
+  padding: 24px 8px 4px 8px;
+  width: 113px;
   left: calc(calc(100vw - 1200px)/2);
-  overflow: scroll;
-  height: calc(100vh - 348px);
-
+  position: fixed;
   border-right: 1px solid var(--component-border);
+  height: calc(100vh - 188px);
+}
+.t-icons-view__categories {
+  padding-top: 12px;
+  position: fixed;
+  left: calc(calc(100vw - 1200px)/2 + 8px);
+  overflow: scroll;
+  height: calc(100vh - 244px);
 }
 .t-icons-view__name {
   text-align: center;
@@ -484,7 +542,7 @@ onMounted(() => {
 .t-icons-view__categories-link {
   height: 36px;
   line-height: 36px;
-  width: 132px;
+  width: 113px;
   border-radius: 3px;
   margin-bottom: 4px;
 }
@@ -508,8 +566,7 @@ onMounted(() => {
 
 }
 .t-icons-view__content {
-  flex: 1;
-  width: 100%;
+  max-width: 1200px;
   margin: 32px 353px 0 177px;
 }
 .t-icons-view__count {

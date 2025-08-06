@@ -480,6 +480,10 @@ onMounted(() => {
   justify-content: space-between;
 }
 
+.t-input,.t-button {
+  background-color: transparent;
+}
+
 .t-radio-button__label {
   width: 100%;
   text-align: center;
@@ -621,6 +625,9 @@ onMounted(() => {
   position: fixed;
   right: calc(calc(100vw - 1200px)/2);
   box-sizing: border-box;
+}
+.t-icons-view__operations p {
+  margin:16px 0 8px 0;
 }
 .t-space-item {
   max-width: 100%;

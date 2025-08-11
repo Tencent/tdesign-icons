@@ -73,7 +73,7 @@
           </div>
           </div>
           </div>
-          <t-button theme="default" style="width: 100%;border:1px solid #ddd" @click="handleReset">重置</t-button>
+          <t-button theme="default" @click="handleReset">重置</t-button>
         </t-space>
 
   </div>
@@ -155,8 +155,8 @@ import SvgSprite from '../gulp/template/svg-sprite.vue';
 let popperInstance = null;
 const initConfiguration = {
   currentType: 'outline',
-  colorType: 'multiple',
-  strokeTypes: 'outlineFilled',
+  colorType: 'single',
+  strokeTypes: 'outline',
   activeCategory: '',
   strokeWidth: 2,
   fillColor1: 'transparent',
@@ -190,19 +190,24 @@ watch(() => configuration.currentType, (newType) => {
 watch(() => configuration.fillColor1, (newColor) => {
   if (configuration.colorType === 'single') {
     configuration.fillColor2 = newColor;
+  } else if (configuration.colorType === 'double' && configuration.strokeTypes === 'outlineFilled') {
+    configuration.fillColor2 = newColor;
   }
 });
 
-watch(() => configuration.fillColor1, (newColor) => {
+watch(() => configuration.strokeColor1, (newColor) => {
   if (configuration.colorType === 'single') {
-    configuration.fillColor2 = newColor;
+    configuration.strokeColor2 = newColor;
+  } else if (configuration.colorType === 'double' && configuration.strokeTypes === 'outlineFilled') {
+    configuration.strokeColor2 = newColor;
   }
 });
 
 watch(() => configuration.strokeTypes, (newType) => {
   configuration.colorType = 'double';
   if (newType === 'outlineFilled') {
-    configuration.fillColor2 = configuration.fillColor1;
+    configuration.fillColor1 = '#bbd3fb';
+    configuration.fillColor2 = '#bbd3fb';
     configuration.strokeColor2 = configuration.strokeColor1;
   } else {
     configuration.fillColor2 = 'transparent';
@@ -214,9 +219,17 @@ watch(() => configuration.colorType, (newColorType) => {
   if (newColorType === 'single') {
     configuration.strokeColor2 = configuration.strokeColor1;
   }
-  if (newColorType === 'double' && configuration.strokeTypes === 'outlineFilled') {
-    configuration.fillColor2 = configuration.fillColor1;
-    configuration.strokeColor2 = configuration.strokeColor1;
+  if (newColorType === 'double') {
+    if (configuration.strokeTypes === 'outlineFilled') {
+      configuration.fillColor2 = configuration.fillColor1;
+      configuration.strokeColor2 = configuration.strokeColor1;
+    } else {
+      configuration.strokeColor2 = '#0052d9';
+    }
+  }
+  if (newColorType === 'multiple') {
+    configuration.fillColor2 = '#f78d94';
+    configuration.strokeColor2 = '#0052d9';
   }
 });
 
@@ -486,8 +499,9 @@ onMounted(() => {
 }
 
 .t-button {
-  color: var(--text-primary);
+  color:var(--text-placeholder);
   border-color:  var(--text-placeholder);
+  width: 100%;
   background-color: transparent;
 }
 
@@ -645,6 +659,7 @@ onMounted(() => {
 .t-radio-button {
   width: 50%;
   text-align: center;
+
 }
 .t-icons-view__operation {
   font-size: 14px;

@@ -1,5 +1,4 @@
 import through from 'through2';
-import File from 'vinyl';
 
 export const createTransformStream = (fn: (raw: string, file: File) => string) => through.obj((file: File, encoding, done) => {
   if (file.isBuffer()) {

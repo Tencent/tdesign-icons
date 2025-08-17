@@ -5,7 +5,9 @@ import iconfontCss from 'gulp-iconfont-css';
 import path from 'path';
 import fs from 'fs';
 import svgFixer from 'oslllo-svg-fixer';
-import { createTransformStream } from './transform';
+import through from 'through2';
+
+import { createTransformStream, createTransformStreamAsync } from './transform';
 
 const webComponentsFontsDir = path.resolve(
   __dirname,
@@ -40,6 +42,8 @@ export const generateIconFont = ({
   targetDir: string;
   fontCssConfig: Object;
 }) => function generateIconFont() {
+  // useSvgFixer();
+  // return;
   return src([iconGlob])
     .pipe(iconfontCss(fontCssConfig))
     .pipe(
@@ -95,6 +99,23 @@ function useJsonTemplate() {
   return createTransformStream((content) => getContainer(content));
 }
 
+const useSvgFixer = async () => {
+  const source = path.resolve(__dirname, '../svg');
+  const destination = path.resolve(__dirname, '../svg_fixed');
+
+  if (!fs.existsSync(destination)) {
+    fs.mkdirSync(destination, { recursive: true });
+  }
+
+  svgFixer(source, destination, { showProgressBar: true }).fix().then(() => {
+    console.log('SVG files fixed successfully!');
+  });
+
+  // return through.obj((__file, _encoding, done: any) => {
+
+  // });
+};
+
 export const generateIconFontJson = ({
   iconGlob,
   targetDir,
@@ -103,27 +124,16 @@ export const generateIconFontJson = ({
   targetDir: string;
 }) => function generateIconFont() {
   return src([iconGlob])
-
+    .pipe(useSvgFixer())
     .pipe(useItemJsonTemplate())
     .pipe(concat('index.json'))
     .pipe(useJsonTemplate())
     .pipe(dest(targetDir))
     .on('end', () => {
-      // web-components 需要icon的codepoint
+    // web-components 需要icon的codepoint
       fs.writeFileSync(
         path.resolve(webComponentsFontsDir, 'font-icon.json'),
         JSON.stringify(iconFonts, undefined, 2),
       );
     });
-};
-
-export const getSvgFixer = async () => {
-  const source = path.resolve(__dirname, '../svg');
-  const destination = path.resolve(__dirname, '../svg_fixed');
-
-  if (!fs.existsSync(destination)) {
-    fs.mkdirSync(destination, { recursive: true });
-  }
-
-  await svgFixer(source, destination, { showProgressBar: true }).fix();
 };

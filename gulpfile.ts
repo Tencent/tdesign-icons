@@ -13,19 +13,19 @@ import { iconFontTask } from './resources/icon-font/gulp';
 import { iconViewTask } from './packages/view/gulp';
 import { wcTask } from './packages/web-components/gulp';
 
-const source: string[] = ['svg/*.svg'];
+const source: string[] = ['svg_fixed/*.svg'];
 
 export default series(
   parallel(
-    reactTask(source),
-    vueTask(source),
-    vueNextTask(source),
-    svgTask(source),
-    angularTask(source),
-    reactNativeTask(),
-    svgSpriteTask(),
+    // reactTask(source),
+    // vueTask(source),
+    // vueNextTask(source),
+    // svgTask(source),
+    // angularTask(source),
+    // reactNativeTask(),
+    // svgSpriteTask(),
     iconFontTask(source),
-    iconViewTask(),
-    wcTask(source),
+    // iconViewTask(),
+    // wcTask(source),
   ),
 );

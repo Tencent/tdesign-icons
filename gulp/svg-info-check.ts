@@ -75,7 +75,7 @@ function normalizeColor(node: IconElement, options: SvgToElementOptions) {
   const { attrs } = node;
 
   if (attrs.fill && attrs.fill !== 'none') {
-    attrs.fill = 'currentColor';
+    attrs.fill = 'transparent';
   }
 
   if (attrs.stroke && attrs.stroke !== 'none') {

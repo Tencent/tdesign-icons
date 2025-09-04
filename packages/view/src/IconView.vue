@@ -4,7 +4,7 @@
       <div style="display:flex; justify-content: space-between;align-items: baseline;">
         <div style="display:flex; align-items: baseline;">
         <h1> Icon 图标资源</h1>
-        <span style="margin: 0 0 0 24px"> {{ count }} Icons ｜ 2025.07.30 更新｜ Figma 链接</span>
+        <span style="margin: 0 0 0 24px"> {{ count }} Icons ｜ 2025.07.30 更新｜ <t-link  theme="primary" href="https://www.figma.com/community/file/1543189085651776104" target="_blank"> Figma 链接 </t-link></span>
         </div>
         <t-input size="large" :placeholder="lang.search" :style="{ marginLeft: '16px', width: '480px', pointerEvents: 'all' }" @change="handleSearchIcon" v-model="searchStr">
             <template #prefix-icon>
@@ -134,6 +134,7 @@ import {
   Tag as TTag,
   Divider as TDivider,
   Button as TButton,
+  Link as TLink,
 } from 'tdesign-vue';
 
 import { SearchIcon } from 'tdesign-icons-vue';
@@ -180,7 +181,7 @@ const configuration = reactive({
 });
 
 watch(() => configuration.currentType, (newType) => {
-  if (newType === 'filled' && configuration.fillColor1 === 'transparent') { configuration.fillColor1 = '#000000'; } else if (newType === 'outline' && configuration.fillColor1 === '#000000') configuration.fillColor1 = 'transparent';
+  if (newType === 'filled' && configuration.fillColor1 === 'transparent') { configuration.fillColor1 = 'currentColor'; } else if (newType === 'outline' && configuration.fillColor1 === 'currentColor') configuration.fillColor1 = 'transparent';
   activeCategory.value = getRoot()?.querySelector('.active').innerHTML;
   nextTick(() => {
     getHighlightRefValue();
@@ -256,7 +257,7 @@ const allIcons = computed(() => {
 });
 
 const handleReset = () => {
-  configuration.fillColor1 = configuration.currentType === 'filled' ? '#000000' : 'transparent';
+  configuration.fillColor1 = configuration.currentType === 'filled' ? 'currentColor' : 'transparent';
   configuration.fillColor2 = initConfiguration.fillColor2;
   configuration.strokeColor1 = initConfiguration.strokeColor1;
   configuration.strokeColor2 = initConfiguration.strokeColor2;
@@ -279,6 +280,7 @@ const handleClickIcon = (e) => {
 const getCurrentRawSvg = () => {
   const svg = getRoot()?.querySelector(`#t-icon-${currentIconName.value}`);
   const svgString = new XMLSerializer().serializeToString(svg);
+  // eslint-disable-next-line no-useless-escape
   const regex = new RegExp('<symbol[^>]*>|<\/symbol>', 'g');
   const resultString = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 >${svgString.replace(regex, '')}</svg>`;
@@ -475,6 +477,7 @@ onMounted(() => {
   padding: 0 calc(calc(100vw - 1200px)/2);
   overflow: scroll;
   max-height: 100vh;
+  color: var(--text-primary);
 }
 .t-icons-view__header {
   padding: 0 calc(calc(100vw - 1200px)/2);

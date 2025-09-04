@@ -3,7 +3,8 @@ import { series } from 'gulp';
 import { generateIconFont, generateIconFontJson } from '../../../gulp/generate-icon-font';
 import { clearDir } from '../../../gulp/clean-dir';
 
-const targetDir = path.resolve(__dirname, '../dist_test/');
+const sourceDir = 'converted_svg/*.svg';
+const targetDir = path.resolve(__dirname, '../dist/');
 const fontCssConfig = {
   fontName: 't',
   path: path.resolve(__dirname, './template/index.css'),
@@ -11,19 +12,19 @@ const fontCssConfig = {
   fontPath: './',
 };
 
-export function iconFontTask(source: string[]) {
+export function iconFontTask() {
   return series(
-    // clearDir(['resources/icon-font/dist']),
+    clearDir(['resources/icon-font/dist']),
 
     // to generate eot/svg/ttf/woff/css
     generateIconFont({
-      iconGlob: source[0],
+      iconGlob: sourceDir,
       targetDir,
       fontCssConfig,
     }),
     // to generate .json
     generateIconFontJson({
-      iconGlob: source[0],
+      iconGlob: sourceDir,
       targetDir,
     }),
   );

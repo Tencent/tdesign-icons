@@ -1,7 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="backtop-rectangle">
-<path id="fill1 " d="M3 3H21V21H3V3Z" fill="white"/>
-<path id="stroke1" d="M3 3H21V21H3V3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
-<path id="stroke2" d="M15.14 13.36L12 10.2218L8.86 13.36M12 11L12 17.5M7.5 7H16.5" stroke="black" stroke-width="2" stroke-linecap="square"/>
-</g>
+    <g id="backtop-rectangle">
+        <path id="fill1" d="M3 3H21V21H3V3Z" fill="white" />
+        <path id="stroke1" d="M3 3H21V21H3V3Z" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke2" d="M15.14 13.36L12 10.2218L8.86 13.36M12 11L12 17.5M7.5 7H16.5" stroke="black"
+            stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

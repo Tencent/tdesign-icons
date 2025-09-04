@@ -1,13 +1,13 @@
 import { dest, src } from 'gulp';
+import { DOMParser, XMLSerializer } from 'xmldom';
 import concat from 'gulp-concat';
 import iconfont from 'gulp-iconfont';
 import iconfontCss from 'gulp-iconfont-css';
 import path from 'path';
 import fs from 'fs';
-import svgFixer from 'oslllo-svg-fixer';
-import through from 'through2';
+import convertStrokeToFill from 'oslllo-svg-fixer';
 
-import { createTransformStream, createTransformStreamAsync } from './transform';
+import { createTransformStream } from './transform';
 
 const webComponentsFontsDir = path.resolve(
   __dirname,
@@ -41,9 +41,8 @@ export const generateIconFont = ({
   iconGlob: string;
   targetDir: string;
   fontCssConfig: Object;
-}) => function generateIconFont() {
-  // useSvgFixer();
-  // return;
+}) => async function generateIconFont() {
+  await useSvgFixer();
   return src([iconGlob])
     .pipe(iconfontCss(fontCssConfig))
     .pipe(
@@ -99,22 +98,50 @@ function useJsonTemplate() {
   return createTransformStream((content) => getContainer(content));
 }
 
-const useSvgFixer = async () => {
-  const source = path.resolve(__dirname, '../svg');
-  const destination = path.resolve(__dirname, '../svg_fixed');
+const processSVGFile = async (filePath: string, fileName: string, destination: string) => new Promise((resolve) => {
+  const svgContent = fs.readFileSync(filePath, 'utf-8');
+  const svgDoc = new DOMParser().parseFromString(svgContent, 'text/html');
 
-  if (!fs.existsSync(destination)) {
-    fs.mkdirSync(destination, { recursive: true });
+  const fill1Path = svgDoc.getElementById('fill1');
+  const fill2Path = svgDoc.getElementById('fill2');
+
+  if (fill1Path) svgDoc.removeChild(fill1Path);
+  if (fill2Path) svgDoc.removeChild(fill2Path);
+
+  const serializer = new XMLSerializer();
+  const modifiedSVG = serializer.serializeToString(svgDoc);
+
+  const finalPath = path.join(destination, fileName);
+  fs.writeFileSync(finalPath, modifiedSVG);
+  resolve(true);
+});
+
+// eslint-disable-next-line no-async-promise-executor
+const useSvgFixer = async () => new Promise(async (resolve) => {
+  try {
+    const sourcePath = path.resolve(__dirname, '../svg');
+    const destination = path.resolve(__dirname, '../converted_svg');
+    if (!fs.existsSync(destination)) {
+      fs.mkdirSync(destination, { recursive: true });
+    }
+
+    const files = await fs.promises.readdir(sourcePath);
+
+    // only svg files
+    const removeProcesses = files.filter((file) => path.extname(file).toLowerCase() === '.svg').map((file) => {
+      const filePath = path.join(sourcePath, file);
+      return processSVGFile(filePath, file, destination);
+    });
+
+    await Promise.all(removeProcesses);
+    // iconfont only support fill path, covert stroke path into fill path
+    convertStrokeToFill(destination, destination, { showProgressBar: true }).fix().then(() => {
+      resolve(true);
+    });
+  } catch (error) {
+    console.log(error);
   }
-
-  svgFixer(source, destination, { showProgressBar: true }).fix().then(() => {
-    console.log('SVG files fixed successfully!');
-  });
-
-  // return through.obj((__file, _encoding, done: any) => {
-
-  // });
-};
+});
 
 export const generateIconFontJson = ({
   iconGlob,
@@ -124,7 +151,6 @@ export const generateIconFontJson = ({
   targetDir: string;
 }) => function generateIconFont() {
   return src([iconGlob])
-    .pipe(useSvgFixer())
     .pipe(useItemJsonTemplate())
     .pipe(concat('index.json'))
     .pipe(useJsonTemplate())

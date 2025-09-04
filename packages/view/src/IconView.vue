@@ -161,8 +161,8 @@ const initConfiguration = {
   strokeWidth: 2,
   fillColor1: 'transparent',
   fillColor2: 'transparent',
-  strokeColor1: '#000000',
-  strokeColor2: '#000000',
+  strokeColor1: 'currentColor',
+  strokeColor2: 'currentColor',
 };
 const manifest = shallowRef(manifestSrc);
 const lang = ref(zhCN);
@@ -173,6 +173,7 @@ const linkTopArr = ref([]);
 const currentIconName = ref('');
 const count = ref(0);
 const activeCategory = ref('');
+
 // icon configurations
 const configuration = reactive({
   ...initConfiguration,

@@ -90,7 +90,7 @@
           <div>
           <div v-for="(icons,index) in allIcons" :key="index" @mousemove="(e)=>handleHoverIcon(e)">
             <p class="category-title" style="display: flex;align-items: center; font-weight: 600;">
-              <span :id="icons.type" style="margin-right: 8px; font-size: 16px;">{{icons.title}}</span>
+              <span :id="icons.type" style="margin-right: 8px; font-size: 16px;">{{ isEn? icon.labelEn : icons.title}}</span>
               <t-tag>{{icons.count}}</t-tag>
             </p>
             <li

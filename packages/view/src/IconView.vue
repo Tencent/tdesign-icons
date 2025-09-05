@@ -51,7 +51,7 @@
           </div>
           <div v-if="configuration.currentType !== 'filled'" style="font-size: 16px;color:var(--text-primary)">
           {{ lang.colorText }}
-          <t-radio-group v-model="configuration.colorType" variant="default-filled" style="margin-top:16px">
+          <t-radio-group v-model="configuration.colorType" variant="default-filled" style="margin-top:16px" :key="configuration.strokeTypes">
             <t-radio-button value="single" v-if="configuration.strokeTypes === 'outline'">{{ lang.colorTypes.single }}</t-radio-button>
             <t-radio-button value="double">{{ lang.colorTypes.double }}</t-radio-button>
             <t-radio-button value="multiple" v-if="configuration.strokeTypes === 'outlineFilled'">{{ lang.colorTypes.multiple }}</t-radio-button>
@@ -88,7 +88,7 @@
          <!-- 中间图标展示 -->
     <div class="t-icons-view__content scrollbar">
           <div>
-          <div v-for="(icons,index) in allIcons" :key="index" @mousemove="(e)=>handleClickIcon(e)">
+          <div v-for="(icons,index) in allIcons" :key="index" @mousemove="(e)=>handleHoverIcon(e)">
             <p class="category-title" style="display: flex;align-items: center; font-weight: 600;">
               <span :id="icons.type" style="margin-right: 8px; font-size: 16px;">{{icons.title}}</span>
               <t-tag>{{icons.count}}</t-tag>
@@ -271,16 +271,25 @@ const handleReset = () => {
   configuration.strokeWidth = initConfiguration.strokeWidth;
 };
 
-const handleClickIcon = (e) => {
+const handleHoverIcon = (e) => {
   let triggerNode = e.target;
   while (triggerNode.tagName.toLowerCase?.() !== 'li') {
     triggerNode = triggerNode.parentNode;
   }
+
   currentIconName.value = triggerNode.getAttribute('id');
   const tooltip = getRoot()?.querySelector('#tooltip');
   tooltip.style.display = 'block';
   popperInstance = createPopper(triggerNode, tooltip, {
     placement: 'right-start',
+    modifiers: [
+      {
+        name: 'flip',
+        options: {
+          fallbackPlacements: ['right'],
+        },
+      },
+    ],
   });
 };
 
@@ -503,10 +512,6 @@ onMounted(() => {
   z-index: 3000;
   height: 92px;
   background-color: var(--bg-color-container);
-}
-
-.t-icons-view__header-inner {
-
 }
 
 .t-icons-view__header > content {

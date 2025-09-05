@@ -1,4 +1,6 @@
 export default {
+  title: 'Icon 图标资源',
+  figmaFileText: 'Figma 源文件',
   iconTypeText: 'Icon 类型',
   strokeTypes: {
     outline: '描边',
@@ -14,6 +16,10 @@ export default {
     double: '双色',
     multiple: '多色',
   },
+  fillColor1Text: '填充颜色1',
+  fillColor2Text: '填充颜色2',
+  strokeColor1Text: '线条颜色1',
+  strokeColor2Text: '线条颜色2',
   search: '输入图标名称或关键词',
   copied: '复制成功',
   copyFailed: '复制失败',

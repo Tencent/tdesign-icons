@@ -1,4 +1,6 @@
 export default {
+  title: 'TDesign Icon',
+  figmaFileText: 'Figma Source File',
   iconTypeText: 'Icon Type',
   types: {
     outline: 'outline',
@@ -9,6 +11,10 @@ export default {
     single: 'single',
     multiple: 'multiple',
   },
+  fillColor1Text: 'fillColor1',
+  fillColor2Text: 'fillColor2',
+  strokeColor1Text: 'strokeColor1',
+  strokeColor2Text: 'strokeColor2',
   search: 'enter the icon name or keyword to search',
   copied: 'copied',
   copyFailed: 'failed to copy',

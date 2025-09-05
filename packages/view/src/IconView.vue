@@ -2,9 +2,9 @@
   <div class="t-icons-view" :key="configuration.currentType">
     <div class="t-icons-view__header" @mouseenter="hidePopover">
       <div style="display:flex; justify-content: space-between;align-items: baseline;">
-        <div style="display:flex; align-items: baseline;">
-        <h1> Icon 图标资源</h1>
-        <span style="margin: 0 0 0 24px"> {{ count }} Icons ｜ 2025.07.30 更新｜ <t-link  theme="primary" href="https://www.figma.com/community/file/1543189085651776104" target="_blank"> Figma 链接 </t-link></span>
+        <div class="t-icons-view__header-title">
+        <h1> {{  lang.title }}</h1>
+        <span style="margin: 0 0 0 24px"> {{ count }} Icons ｜ <t-link  theme="primary" href="https://www.figma.com/community/file/1543189085651776104" target="_blank"> {{ lang.figmaFileText }} </t-link></span>
         </div>
         <t-input size="large" :placeholder="lang.search" :style="{ marginLeft: '16px', width: '480px', pointerEvents: 'all' }" @change="handleSearchIcon" v-model="searchStr">
             <template #prefix-icon>
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="t-icons-view__body scrollbar">
-        <!-- 左侧categories -->
+        <!-- 左侧 categories -->
         <div class="t-icons-view__left"  @mouseenter="hidePopover">
           <div style="font-size: 16px; color:var(--text-primary)">
             <t-radio-group v-model="configuration.currentType" variant="default-filled" style="margin-top:8px">
@@ -32,7 +32,14 @@
         <t-space direction="vertical" class="t-icons-view__operations" size="32px" @mouseenter="hidePopover">
           <div v-if="configuration.currentType !== 'filled'" style="font-size: 16px;color:var(--text-primary)">
           {{ lang.strokeText }}
-          <t-slider v-model="configuration.strokeWidth" :step="0.5" :min="0.5" :max="2.5" :marks="{ 0.5:0.5,1:1,1.5:1.5,2:2,2.5:2.5 }"  style="margin-top:16px"></t-slider>
+          <t-slider
+            v-model="configuration.strokeWidth"
+            :step="0.5"
+            :min="0.5"
+            :max="2.5"
+            :marks="{ 0.5:0.5,1:1,1.5:1.5,2:2,2.5:2.5 }"
+            style="margin-top:16px"
+          />
           </div>
           <div>
           <div style="font-size: 16px; margin:32px 0;color:var(--text-primary)" v-if="configuration.currentType !== 'filled'">
@@ -52,28 +59,28 @@
           </div>
           <div style="display: flex; gap: 16px;font-size: 14px;" v-if="configuration.currentType === 'filled' ||(configuration.currentType !== 'filled' && configuration.strokeTypes==='outlineFilled')">
             <div>
-              <p style="color:var(--text-secondary)">填充颜色1</p>
+              <p style="color:var(--text-secondary)">{{ lang.fillColor1Text }}</p>
               <t-color-picker v-model="configuration.fillColor1" :color-modes="['monochrome']"  format="HEX" style="margin:8px 0 0 0"></t-color-picker>
             </div>
             <div v-if="configuration.currentType !== 'filled' && configuration.colorType === 'multiple'">
               <div v-if="configuration.colorType !== 'single'">
-                <p style="color:var(--text-secondary)">填充颜色2</p>
+                <p style="color:var(--text-secondary)">{{ lang.fillColor2Text }}</p>
                 <t-color-picker v-model="configuration.fillColor2" :color-modes="['monochrome']"  format="HEX"  style="margin:8px 0 0 0"></t-color-picker>
               </div>
             </div>
           </div>
           <div style="display: flex;gap: 16px;font-size: 14px;">
           <div v-if="configuration.currentType !== 'filled'">
-          <p style="color:var(--text-secondary)">线条颜色1</p>
+          <p style="color:var(--text-secondary)">{{ lang.strokeColor1Text }}</p>
           <t-color-picker v-model="configuration.strokeColor1" :color-modes="['monochrome']"  format="HEX" style="margin:8px 0 0 0"></t-color-picker>
           </div>
           <div v-if="((configuration.colorType === 'double'&& configuration.strokeTypes==='outline')|| configuration.colorType ==='multiple')&& configuration.currentType !== 'filled'">
-          <p style="color:var(--text-secondary)">线条颜色2</p>
+          <p style="color:var(--text-secondary)">{{ lang.strokeColor2Text }}</p>
           <t-color-picker v-model="configuration.strokeColor2" :color-modes="['monochrome']"  format="HEX" style="margin:8px 0 0 0"></t-color-picker>
           </div>
           </div>
           </div>
-          <t-button theme="default" @click="handleReset">重置</t-button>
+          <t-button theme="default" @click="handleReset">{{ lang.resetText }}</t-button>
         </t-space>
 
   </div>
@@ -181,7 +188,7 @@ const configuration = reactive({
 });
 
 watch(() => configuration.currentType, (newType) => {
-  if (newType === 'filled' && configuration.fillColor1 === 'transparent') { configuration.fillColor1 = 'currentColor'; } else if (newType === 'outline' && configuration.fillColor1 === 'currentColor') configuration.fillColor1 = 'transparent';
+  if (newType === 'filled' && configuration.fillColor1 === 'transparent') { configuration.fillColor1 = '#FFFFFF'; } else if (newType === 'outline' && configuration.fillColor1 === 'currentColor') configuration.fillColor1 = 'transparent';
   activeCategory.value = getRoot()?.querySelector('.active').innerHTML;
   nextTick(() => {
     getHighlightRefValue();
@@ -266,7 +273,7 @@ const handleReset = () => {
 
 const handleClickIcon = (e) => {
   let triggerNode = e.target;
-  while (triggerNode.tagName.toLowerCase() !== 'li') {
+  while (triggerNode.tagName.toLowerCase?.() !== 'li') {
     triggerNode = triggerNode.parentNode;
   }
   currentIconName.value = triggerNode.getAttribute('id');
@@ -288,14 +295,20 @@ const getCurrentRawSvg = () => {
 };
 
 const handleCopyIcon = async (type) => {
-  const fillColor = configuration.colorType === 'single' ? configuration.fillColor1 : JSON.stringify([configuration.fillColor1, configuration.fillColor2]);
-  const strokeColor = configuration.colorType === 'single' ? configuration.strokeColor1 : JSON.stringify([configuration.strokeColor1, configuration.strokeColor2]);
+  const isSingleColor = configuration.colorType === 'single';
+
+  const fillColor = isSingleColor ? configuration.fillColor1 : JSON.stringify([configuration.fillColor1, configuration.fillColor2]);
+  const strokeColor = isSingleColor ? configuration.strokeColor1 : JSON.stringify([configuration.strokeColor1, configuration.strokeColor2]);
 
   try {
     if (type === 'vue') {
-      await navigator.clipboard.writeText(`<${currentIconName.value}-icon :fill-color="${fillColor}" :stroke-color="${strokeColor}" :stroke-width="${configuration.strokeWidth}"/>`);
+      const fillText = !isSingleColor ? fillColor : `"${fillColor}"`;
+      const strokeText = !isSingleColor ? strokeColor : `"${strokeColor}"`;
+      await navigator.clipboard.writeText(`<${currentIconName.value}-icon :fill-color='${fillText}' :stroke-color='${strokeText}' :stroke-width="${configuration.strokeWidth}"/>`);
     } else if (type === 'react') {
-      await navigator.clipboard.writeText(`<${kebabToPascal(currentIconName.value)}Icon fillColor={${fillColor}} strokeColor={${strokeColor}} strokeWidth={${configuration.strokeWidth}}/>`);
+      const fillText = !isSingleColor ? `{${fillColor}}` : `'${fillColor}'`;
+      const strokeText = !isSingleColor ? `{${strokeColor}}` : `'${strokeColor}'`;
+      await navigator.clipboard.writeText(`<${kebabToPascal(currentIconName.value)}Icon fillColor=${fillText} strokeColor=${strokeText} strokeWidth={${configuration.strokeWidth}}/>`);
     } else if (type === 'svg') {
     // copy svg content
       const resultString = getCurrentRawSvg();
@@ -324,10 +337,9 @@ const handleCopyIcon = async (type) => {
       };
       img.src = url;
     }
-  } catch {
-    MessagePlugin.success(lang.value.copyFailed);
-  } finally {
     MessagePlugin.success(lang.value.copied);
+  } catch {
+    MessagePlugin.error(lang.value.copyFailed);
   }
 };
 
@@ -492,6 +504,10 @@ onMounted(() => {
   background-color: var(--bg-color-container);
 }
 
+.t-icons-view__header-inner {
+
+}
+
 .t-icons-view__header > content {
   display: flex;
   justify-content: space-between;
@@ -519,6 +535,12 @@ onMounted(() => {
   font-size: 36px;
   line-height: 44px;
 }
+
+.t-icons-view__header-title {
+  display:flex;
+  align-items: baseline;
+}
+
 .t-icons-view__body {
   margin-top: 156px;
   display: flex;
@@ -692,5 +714,24 @@ onMounted(() => {
 
 .t-color-picker__trigger .t-input__wrap {
   width: 120px;
+}
+</style>
+
+<style>
+@media screen and (max-width: 1200px) {
+  .t-icons-view__content {
+    margin: 32px 0 0 0;
+  }
+  .t-icons-view__header-title {
+    flex-direction: column;
+  }
+
+  .t-icons-view__header h1 {
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .t-input__wrap {
+    display: none;
+  }
 }
 </style>

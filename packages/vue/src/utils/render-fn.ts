@@ -1,18 +1,40 @@
-import { VNode, CreateElement, VNodeData } from 'vue';
-import { SVGJson } from './types';
+import { CreateElement } from 'vue';
+import { IconProps } from './types';
 
-function renderFn(createElement: CreateElement, node: SVGJson, rootData: VNodeData): VNode {
-  const iconAttrs = { ...node.attrs, ...rootData.attrs };
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { attrs, ...restProps } = rootData;
-  return createElement(
-    node.tag,
-    {
-      attrs: iconAttrs,
-      ...restProps,
-    },
-    (node.children || []).map((child: SVGJson) => renderFn(createElement, child, {})),
-  );
-}
+const camel2Kebab = (camelString: string) => {
+  const covertArr = ['strokeLinecap', 'fillRule', 'clipRule', 'strokeWidth'];
+  if (covertArr.includes(camelString)) { return camelString.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase(); }
+  return camelString;
+};
 
-export default renderFn;
+const renderNode = (createElement: CreateElement, node: any, props: Record<string, any>) => {
+  // 处理属性中的props引用
+  const processedAttrs:Record<string, any> = {};
+  if (node.attrs) {
+    // eslint-disable-next-line no-restricted-syntax
+    for (const [key, value] of Object.entries(node.attrs)) {
+      if (typeof value === 'string' && value.startsWith('props.')) {
+        const propName = value.split('.')[1] as keyof IconProps;
+        processedAttrs[camel2Kebab(key)] = props[propName];
+      } else {
+        processedAttrs[camel2Kebab(key)] = value;
+      }
+    }
+  }
+
+  // 处理尺寸属性
+  if (node.tag === 'svg') {
+    processedAttrs.class = props.class;
+    processedAttrs.style = props.style;
+    processedAttrs.onClick = props.onClick;
+  }
+
+  // 递归处理子节点
+  const children = node.children
+    ? node.children.map((child:any) => renderNode(createElement, child, props))
+    : [];
+
+  return createElement(node.tag, processedAttrs, children);
+};
+
+export default renderNode;

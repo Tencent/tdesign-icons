@@ -56,7 +56,9 @@ export interface TdIconSVGProps {
 export interface IconProps {
   size?: string;
   onClick?: (context: { e: MouseEvent }) => void;
-  [key: string]: any;
+  fillColor?: string | string[];
+  strokeColor?: string | string[];
+  strokeWidth?: number;
 }
 
 export interface SVGJson {

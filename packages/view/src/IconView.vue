@@ -3,7 +3,7 @@
     <div class="t-icons-view__header" @mouseenter="hidePopover">
       <div style="display:flex; justify-content: space-between;align-items: baseline;">
         <div class="t-icons-view__header-title">
-        <h1> {{  lang.title }}</h1>
+        <h1> {{ lang.title }}</h1>
         <span style="margin: 0 0 0 24px"> {{ count }} Icons ｜ <t-link  theme="primary" href="https://www.figma.com/community/file/1543189085651776104" target="_blank"> {{ lang.figmaFileText }} </t-link></span>
         </div>
         <t-input size="large" :placeholder="lang.search" :style="{ marginLeft: '16px', width: '480px', pointerEvents: 'all' }" @change="handleSearchIcon" v-model="searchStr">
@@ -89,7 +89,7 @@
     <div class="t-icons-view__content scrollbar">
           <div>
           <div v-for="(icons,index) in allIcons" :key="index" @mousemove="(e)=>handleClickIcon(e)">
-            <p style="display: flex;align-items: center; font-weight: 600;">
+            <p class="category-title" style="display: flex;align-items: center; font-weight: 600;">
               <span :id="icons.type" style="margin-right: 8px; font-size: 16px;">{{icons.title}}</span>
               <t-tag>{{icons.count}}</t-tag>
             </p>
@@ -188,7 +188,7 @@ const configuration = reactive({
 });
 
 watch(() => configuration.currentType, (newType) => {
-  if (newType === 'filled' && configuration.fillColor1 === 'transparent') { configuration.fillColor1 = '#FFFFFF'; } else if (newType === 'outline' && configuration.fillColor1 === 'currentColor') configuration.fillColor1 = 'transparent';
+  if (newType === 'filled' && configuration.fillColor1 === 'transparent') { configuration.fillColor1 = 'currentColor'; } else if (newType === 'outline' && configuration.fillColor1 === 'currentColor') configuration.fillColor1 = 'transparent';
   activeCategory.value = getRoot()?.querySelector('.active').innerHTML;
   nextTick(() => {
     getHighlightRefValue();
@@ -451,6 +451,7 @@ const hidePopover = () => {
     popperInstance = null;
   }
 };
+
 onMounted(() => {
   const en = window.location.pathname.endsWith('en');
   isEn.value = en;
@@ -715,6 +716,9 @@ onMounted(() => {
 .t-color-picker__trigger .t-input__wrap {
   width: 120px;
 }
+.t-radio-group.t-size-m .t-radio-button {
+  padding: var(--td-comp-paddingTB-xs) var(--td-comp-paddingLR-xs);
+}
 </style>
 
 <style>
@@ -728,10 +732,13 @@ onMounted(() => {
 
   .t-icons-view__header h1 {
     color: var(--text-primary);
-    margin: 0;
+    margin: 12px 0;
   }
   .t-input__wrap {
     display: none;
+  }
+  .category-title {
+    padding: 0 24px;
   }
 }
 </style>

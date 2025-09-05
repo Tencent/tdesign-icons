@@ -2,6 +2,10 @@ export default {
   title: 'TDesign Icon',
   figmaFileText: 'Figma Source File',
   iconTypeText: 'Icon Type',
+  strokeTypes: {
+    outline: 'outline',
+    outlineFilled: 'outline-filled',
+  },
   types: {
     outline: 'outline',
     filled: 'filled',
@@ -9,6 +13,7 @@ export default {
   colorText: 'Icon Color',
   colorTypes: {
     single: 'single',
+    double: 'double',
     multiple: 'multiple',
   },
   fillColor1Text: 'fillColor1',

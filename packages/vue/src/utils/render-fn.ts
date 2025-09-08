@@ -1,40 +1,53 @@
-import { CreateElement } from 'vue';
-import { IconProps } from './types';
+import { CreateElement, VNodeData, VNode } from 'vue';
+import { SVGJson } from './types';
 
-const camel2Kebab = (camelString: string) => {
-  const covertArr = ['strokeLinecap', 'fillRule', 'clipRule', 'strokeWidth'];
-  if (covertArr.includes(camelString)) { return camelString.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase(); }
-  return camelString;
-};
-
-const renderNode = (createElement: CreateElement, node: any, props: Record<string, any>) => {
-  // 处理属性中的props引用
-  const processedAttrs:Record<string, any> = {};
+const renderChildNode = (createElement: CreateElement, node: SVGJson, childProps: any): VNode => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const processedAttrs: Record<string, any> = {};
   if (node.attrs) {
     // eslint-disable-next-line no-restricted-syntax
     for (const [key, value] of Object.entries(node.attrs)) {
       if (typeof value === 'string' && value.startsWith('props.')) {
-        const propName = value.split('.')[1] as keyof IconProps;
-        processedAttrs[camel2Kebab(key)] = props[propName];
+        const propName = value.split('.')[1];
+        processedAttrs[key] = childProps[propName];
       } else {
-        processedAttrs[camel2Kebab(key)] = value;
+        processedAttrs[key] = value;
       }
     }
   }
 
-  // 处理尺寸属性
-  if (node.tag === 'svg') {
-    processedAttrs.class = props.class;
-    processedAttrs.style = props.style;
-    processedAttrs.onClick = props.onClick;
-  }
-
-  // 递归处理子节点
-  const children = node.children
-    ? node.children.map((child:any) => renderNode(createElement, child, props))
-    : [];
-
-  return createElement(node.tag, processedAttrs, children);
+  return createElement(
+    node.tag,
+    {
+      attrs: {
+        ...node.attrs,
+        ...processedAttrs,
+      },
+    },
+    (node.children || []).map((child: SVGJson) => renderChildNode(createElement, child, childProps)),
+  );
 };
 
-export default renderNode;
+const renderFn = (createElement: CreateElement, node: SVGJson, rootData: VNodeData): VNode => {
+  const iconAttrs = { ...node.attrs, ...rootData.attrs };
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { attrs, ...restProps } = rootData;
+  const { strokeWidth = 2, strokeColor = 'currentColor', fillColor = 'transparent' } = rootData.props || {};
+  const childProps = {
+    strokeWidth,
+    strokeColor1: Array.isArray(strokeColor) ? strokeColor[0] : strokeColor,
+    strokeColor2: Array.isArray(strokeColor) ? strokeColor[1] ?? strokeColor[0] : strokeColor,
+    fillColor1: Array.isArray(fillColor) ? fillColor[0] : fillColor,
+    fillColor2: Array.isArray(fillColor) ? fillColor[1] ?? strokeColor[0] : fillColor,
+  };
+  return createElement(
+    node.tag,
+    {
+      attrs: iconAttrs,
+      ...restProps,
+    },
+    (node.children || []).map((child: SVGJson) => renderChildNode(createElement, child, childProps)),
+  );
+};
+
+export default renderFn;

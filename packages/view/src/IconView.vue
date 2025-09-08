@@ -785,7 +785,7 @@ onMounted(() => {
 <style>
 @media screen and (max-width: 1200px) {
   .t-icons-view__content {
-    margin: 32px 0 0 0;
+    margin: 188px 0 0 0;
   }
   .t-icons-view__header-title {
     flex-direction: column;

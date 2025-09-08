@@ -7,7 +7,7 @@ const camel2Kebab = (camelString:string) => {
   return camelString;
 };
 
-const renderNode = (node:any, props: Record<string, any>) => {
+const renderNode = (node: any, props: Record<string, any>) => {
   // 处理属性中的props引用
   const processedAttrs:Record<string, any> = {};
   if (node.attrs) {

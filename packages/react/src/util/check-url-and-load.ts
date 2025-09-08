@@ -50,9 +50,6 @@ function loadStylesheet() {
   .t-icon-loading {
     animation: t-spin 1s linear infinite;
   }
-  .t-icon {
-    fill: currentColor;
-  }
   .t-icon.t-size-s,
   i.t-size-s {
     font-size: 14px;

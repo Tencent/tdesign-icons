@@ -25,6 +25,7 @@ export interface IconElement {
 
 export interface SvgToElementOptions {
   replaceColor?: boolean;
+  propsString?: boolean;
 }
 
 function normalizeWidthAndHeight(node: IconElement) {
@@ -74,26 +75,36 @@ function normalizeColor(node: IconElement, options: SvgToElementOptions, nodeId?
 
   const { attrs } = node;
 
-  if (attrs.fill && attrs.fill !== 'none') {
-    if (attrs.id === 'fill1') attrs.fill = 'props.fillColor1';
-    else if (attrs.id === 'fill2') attrs.fill = 'props.fillColor2';
-    else if (!attrs.id) {
-      if (nodeId === 'fill1') attrs.fill = 'props.fillColor1';
-      else if (nodeId === 'fill2') attrs.fill = 'props.fillColor2';
-      else {
+  if (options.propsString) {
+    if (attrs.fill && attrs.fill !== 'none') {
+      if (attrs.id === 'fill1') attrs.fill = 'props.fillColor1';
+      else if (attrs.id === 'fill2') attrs.fill = 'props.fillColor2';
+      else if (!attrs.id) {
+        if (nodeId === 'fill1') attrs.fill = 'props.fillColor1';
+        else if (nodeId === 'fill2') attrs.fill = 'props.fillColor2';
+        else {
         // 填充图标
-        attrs.fill = 'props.fillColor1';
+          attrs.fill = 'props.fillColor1';
+        }
       }
     }
-  }
 
-  if (attrs.stroke && attrs.stroke !== 'none') {
-    attrs.strokeWidth = 'props.strokeWidth';
-    if (attrs.id === 'stroke1') attrs.stroke = 'props.strokeColor1';
-    else if (attrs.id === 'stroke2') attrs.stroke = 'props.strokeColor2';
-    else if (!attrs.id) {
-      if (nodeId === 'stroke1') attrs.stroke = 'props.strokeColor1';
-      else if (nodeId === 'stroke2') attrs.stroke = 'props.strokeColor2';
+    if (attrs.stroke && attrs.stroke !== 'none') {
+      attrs.strokeWidth = 'props.strokeWidth';
+      if (attrs.id === 'stroke1') attrs.stroke = 'props.strokeColor1';
+      else if (attrs.id === 'stroke2') attrs.stroke = 'props.strokeColor2';
+      else if (!attrs.id) {
+        if (nodeId === 'stroke1') attrs.stroke = 'props.strokeColor1';
+        else if (nodeId === 'stroke2') attrs.stroke = 'props.strokeColor2';
+      }
+    }
+  } else {
+    if (attrs.fill && attrs.fill !== 'none') {
+      attrs.fill = attrs.fill === '#000' ? 'currentColor' : 'transparent';
+    }
+
+    if (attrs.stroke && attrs.stroke !== 'none') {
+      attrs.stroke = 'currentColor';
     }
   }
 }
@@ -133,6 +144,7 @@ function astToElement(wrappedRoot: IconNode[], options: SvgToElementOptions, nod
 export function svgToElement(
   options: SvgToElementOptions = {
     replaceColor: false,
+    propsString: false,
   },
 ) {
   return createTransformStream((svgString) => {

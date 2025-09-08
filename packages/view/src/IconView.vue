@@ -90,7 +90,7 @@
           <div>
           <div v-for="(icons,index) in allIcons" :key="index" @mousemove="(e)=>handleHoverIcon(e)">
             <p class="category-title" style="display: flex;align-items: center; font-weight: 600;">
-              <span :id="icons.type" style="margin-right: 8px; font-size: 16px;">{{ isEn? icon.labelEn : icons.title}}</span>
+              <span :id="icons.type" style="margin-right: 8px; font-size: 16px;">{{ isEn? icons.labelEn : icons.title}}</span>
               <t-tag>{{icons.count}}</t-tag>
             </p>
             <li
@@ -733,8 +733,11 @@ onMounted(() => {
   }
   .t-icons-view__header-title {
     flex-direction: column;
-  }
 
+  }
+  .t-icons-view__header {
+    height: 108px;
+  }
   .t-icons-view__header h1 {
     color: var(--text-primary);
     margin: 12px 0;
@@ -744,6 +747,9 @@ onMounted(() => {
   }
   .category-title {
     padding: 0 24px;
+  }
+  .t-icons-view__left,.t-icons-view__operations {
+    display: none;
   }
 }
 </style>

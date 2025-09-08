@@ -32,22 +32,21 @@ export function calcNavHighlight() {
     return linkList.map((link) => {
       if (!link) return 0;
       const { top } = link.getBoundingClientRect();
-      return top + document.documentElement.scrollTop;
+      const containerTop = getRoot()?.querySelector('.t-icons-view').getBoundingClientRect().top;
+      return top - containerTop;
     });
   }
   const anchorList = Array.from(getRoot()?.querySelectorAll('.categories-link')) || [];
 
   const linkTopList = getLinkTopList(anchorList);
-
   return {
     anchorList,
     linkTopList,
   };
 }
 
-export function anchorHighlight(anchorList, linkTopList) {
-  const { scrollTop } = getRoot()?.querySelector('.t-icons-view');
-
+export function anchorHighlight(anchorList, linkTopList, scrollElementSelector) {
+  const { scrollTop } = getRoot()?.querySelector(scrollElementSelector);
   const categoriesEle = getRoot()?.querySelector('.t-icons-view__categories');
 
   // eslint-disable-next-line no-plusplus
@@ -62,7 +61,7 @@ export function anchorHighlight(anchorList, linkTopList) {
   }
 }
 
-export function proxyTitleAnchor(e) {
+export function proxyTitleAnchor(e, scrollElementSelector) {
   if (e.target.tagName !== 'A') return;
   e.preventDefault();
   const { target } = e;
@@ -74,13 +73,15 @@ export function proxyTitleAnchor(e) {
     const idTarget = getRoot()?.getElementById(id);
 
     if (!idTarget) return;
-    const { top } = idTarget.getBoundingClientRect();
 
-    const target = getRoot()?.querySelector('.t-icons-view');
+    const containerTop = getRoot()?.querySelector('.t-icons-view').getBoundingClientRect().top;
+
+    const { top } = idTarget.getBoundingClientRect();
+    const target = getRoot()?.querySelector(scrollElementSelector);
     const { scrollTop } = target;
 
-    const offsetTop = top + scrollTop;
-
-    requestAnimationFrame(() => target.scrollTo({ top: offsetTop - 188, left: 0 }));
+    const offsetTop = top + scrollTop - containerTop;
+    const headerTop = scrollElementSelector === '.t-icons-view' ? 188 : 80;
+    requestAnimationFrame(() => target.scrollTo({ top: offsetTop - headerTop, left: 0 }));
   }
 }

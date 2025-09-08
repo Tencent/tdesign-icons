@@ -1,5 +1,8 @@
 <template>
-  <div class="t-icons-view" :key="configuration.currentType">
+  <div
+    :class="['t-icons-view', { 't-icons-view--framework-content': isFrameworkContent }]"
+    :key="configuration.currentType"
+  >
     <div class="t-icons-view__header" @mouseenter="hidePopover">
       <div style="display:flex; justify-content: space-between;align-items: baseline;">
         <div class="t-icons-view__header-title">
@@ -24,7 +27,7 @@
           </div>
           <div class="t-icons-view__categories scrollbar">
             <div v-for="(category,index) in allIcons" :key="index" class="t-icons-view__categories-link">
-              <a theme="default" variant="text" class="categories-link" :href='`#${category.labelEn}`' @click="proxyTitleAnchor">{{ isEn? category.labelEn: category.title }}</a>
+              <a theme="default" variant="text" class="categories-link" :href='`#${category.labelEn}`' @click="(e)=>proxyTitleAnchor(e, scrollElementSelector)">{{ isEn? category.labelEn: category.title }}</a>
             </div>
           </div>
         </div>
@@ -38,7 +41,7 @@
             :min="0.5"
             :max="2.5"
             :marks="{ 0.5:0.5,1:1,1.5:1.5,2:2,2.5:2.5 }"
-            style="margin-top:16px"
+            style="margin-top: 16px"
           />
           </div>
           <div>
@@ -108,7 +111,7 @@
           </div>
     </div>
 
-  <div class="t-icons-view__operation" id="tooltip" role="tooltip" style="display: none;">
+  <div class="t-icons-view__operation" id="tooltip" role="tooltip" style="display: none;"  v-if="!isFrameworkContent">
     <div @click="()=>handleCopyIcon('svg')">{{lang.operationText.copySvg}}</div>
     <div @click="()=>handleCopyIcon('png')">{{lang.operationText.copyPng}}</div>
     <div @click="()=>handleCopyIcon('react')">{{lang.operationText.copyReact}}</div>
@@ -149,6 +152,7 @@ import {
   onMounted, ref, computed, shallowRef,
   reactive, watch,
   nextTick,
+  defineProps,
 } from 'vue';
 import forEach from 'lodash/forEach';
 import debounce from 'lodash/debounce';
@@ -172,6 +176,15 @@ const initConfiguration = {
   strokeColor1: 'currentColor',
   strokeColor2: 'currentColor',
 };
+
+const props = defineProps({
+  // 是否为嵌入框架的渲染内容
+  frameworkContent: {
+    type: Boolean,
+    default: false,
+  },
+});
+
 const manifest = shallowRef(manifestSrc);
 const lang = ref(zhCN);
 const isEn = ref(false);
@@ -249,7 +262,7 @@ const kebabToPascal = (str) => {
 
   return capitalizedWords.join('');
 };
-
+const isFrameworkContent = computed(() => !!props.frameworkContent);
 const categories = computed(
   () => ({
     ...manifest.value[configuration.currentType],
@@ -262,6 +275,8 @@ const allIcons = computed(() => {
     type, labelEn: categories.value[type].labelEn, title: categories.value[type].labelCN, icons: categories.value[type].icons, count: categories.value[type].icons.length,
   }), []);
 });
+
+const scrollElementSelector = computed(() => (props.frameworkContent ? '.t-icons-view__content' : '.t-icons-view'));
 
 const handleReset = () => {
   configuration.fillColor1 = configuration.currentType === 'filled' ? 'currentColor' : 'transparent';
@@ -280,6 +295,7 @@ const handleHoverIcon = (e) => {
   currentIconName.value = triggerNode.getAttribute('id');
   const tooltip = getRoot()?.querySelector('#tooltip');
   tooltip.style.display = 'block';
+
   popperInstance = createPopper(triggerNode, tooltip, {
     placement: 'right-start',
     modifiers: [
@@ -298,8 +314,7 @@ const getCurrentRawSvg = () => {
   const svgString = new XMLSerializer().serializeToString(svg);
   // eslint-disable-next-line no-useless-escape
   const regex = new RegExp('<symbol[^>]*>|<\/symbol>', 'g');
-  const resultString = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
->${svgString.replace(regex, '')}</svg>`;
+  const resultString = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">${svgString.replace(regex, '')}</svg>`;
   return resultString;
 };
 
@@ -432,14 +447,14 @@ const handleSearchIcon = debounce((searchStr) => {
 
 const activeCurrentCategory = () => {
   hidePopover();
-  anchorHighlight(anchorArr.value, linkTopArr.value);
+  anchorHighlight(anchorArr.value, linkTopArr.value, scrollElementSelector.value);
 };
 
 const registerScrollEvent = () => {
   activeCurrentCategory();
-  getRoot()?.querySelector('.t-icons-view').removeEventListener('scroll', activeCurrentCategory);
+  getRoot()?.querySelector(scrollElementSelector.value).removeEventListener('scroll', activeCurrentCategory);
 
-  getRoot()?.querySelector('.t-icons-view').addEventListener('scroll', activeCurrentCategory);
+  getRoot()?.querySelector(scrollElementSelector.value).addEventListener('scroll', activeCurrentCategory);
 };
 
 const getHighlightRefValue = () => {
@@ -465,6 +480,7 @@ onMounted(() => {
   const en = window.location.pathname.endsWith('en');
   isEn.value = en;
   lang.value = en ? enUS : zhCN;
+  configuration.currentType = 'outline';
   Object.keys(manifest.value).forEach((renderType) => {
     const currentIcons = manifest.value[renderType];
     const types = Object.keys(currentIcons);
@@ -501,6 +517,7 @@ onMounted(() => {
   max-height: 100vh;
   color: var(--text-primary);
 }
+
 .t-icons-view__header {
   padding: 0 calc(calc(100vw - 1200px)/2);
   position: fixed;
@@ -509,7 +526,7 @@ onMounted(() => {
   width: 100%;
   box-sizing: border-box;
   right: 0;
-  z-index: 3000;
+  z-index: 400;
   height: 92px;
   background-color: var(--bg-color-container);
 }
@@ -727,6 +744,42 @@ onMounted(() => {
 </style>
 
 <style>
+@media screen and (min-width: 1200px) {
+  .t-icons-view.t-icons-view--framework-content {
+    overflow: hidden;
+    position: relative;
+  }
+  .t-icons-view--framework-content .t-icons-view__operation {
+    display: none;
+  }
+  .t-icons-view--framework-content h1 {
+    display: none;
+  }
+  .t-icons-view--framework-content .t-icons-view__body {
+    margin: 0;
+    position: absolute;
+    left: 0;
+  }
+  .t-icons-view--framework-content .t-icons-view__left,.t-icons-view__categories {
+    position: static;
+  }
+  .t-icons-view--framework-content .t-icons-view__header {
+    position: sticky;
+    padding: 0;
+    height: 48px;
+    top: 0;
+  }
+  .t-icons-view--framework-content .t-icons-view__content{
+   margin: 32px 0 0 177px;
+   max-height: 1000px;
+   overflow: scroll;
+  }
+  .t-icons-view--framework-content.t-icons-view {
+    padding: 0;
+  }
+}
+</style>
+<style>
 @media screen and (max-width: 1200px) {
   .t-icons-view__content {
     margin: 32px 0 0 0;
@@ -750,6 +803,9 @@ onMounted(() => {
   }
   .t-icons-view__left,.t-icons-view__operations {
     display: none;
+  }
+  .t-icons-view__body {
+     margin: 0;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-view",
-  "version": "0.4.0-alpha.7",
+  "version": "0.4.0-alpha.8",
   "description": "A web-component package for display all icons in any UI framework",
   "repository": {
     "type": "git",
@@ -26,7 +26,6 @@
     "icons",
     "web component"
   ],
-  "author": "uyarn",
   "license": "MIT",
   "dependencies": {
     "core-js": "^3.8.3",

@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="['t-icons-view', { 't-icons-view--framework-content': isFrameworkContent }]"
+    :class="['t-icons-view', { 't-icons-view--framework-content': isFrameworkContent },'scrollbar']"
     :key="configuration.currentType"
   >
     <div class="t-icons-view__header" @mouseenter="hidePopover">
@@ -9,7 +9,7 @@
         <h1> {{ lang.title }}</h1>
         <span style="margin: 0 0 0 24px"> {{ count }} Icons ｜ <t-link  theme="primary" href="https://www.figma.com/community/file/1543189085651776104" target="_blank"> {{ lang.figmaFileText }} </t-link></span>
         </div>
-        <t-input size="large" :placeholder="lang.search" :style="{ marginLeft: '16px', width: '480px', pointerEvents: 'all' }" @change="handleSearchIcon" v-model="searchStr">
+        <t-input :size="isFrameworkContent?'medium':'large'" :placeholder="lang.search" :style="{ marginLeft: '16px', width: isFrameworkContent?'280px':'480px', pointerEvents: 'all' }" @change="handleSearchIcon" v-model="searchStr">
             <template #prefix-icon>
               <search-icon />
             </template>
@@ -92,7 +92,7 @@
     <div class="t-icons-view__content scrollbar">
           <div>
           <div v-for="(icons,index) in allIcons" :key="index" @mousemove="(e)=>handleHoverIcon(e)">
-            <p class="category-title" style="display: flex;align-items: center; font-weight: 600;">
+            <p class="category-title" style="display: flex;align-items: center; font-weight: 600;" @mouseenter="hidePopover">
               <span :id="icons.type" style="margin-right: 8px; font-size: 16px;">{{ isEn? icons.labelEn : icons.title}}</span>
               <t-tag>{{icons.count}}</t-tag>
             </p>
@@ -508,7 +508,7 @@ onMounted(() => {
 
 </script>
 <style>
-@import '../node_modules/tdesign-vue/dist/tdesign.min.css';
+@import './styles/tdesign.min.css';
 
 .t-icons-view {
   background-color: var(--bg-color-container);
@@ -740,6 +740,9 @@ onMounted(() => {
 }
 .t-radio-group.t-size-m .t-radio-button {
   padding: var(--td-comp-paddingTB-xs) var(--td-comp-paddingLR-xs);
+}
+.t-radio-group.t-radio-group--filled  .t-radio-group__bg-block {
+  background-color: var(--bg-color-container);
 }
 </style>
 

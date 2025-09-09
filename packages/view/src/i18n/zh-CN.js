@@ -1,9 +1,39 @@
 export default {
-  types: {
-    outline: '描边风格',
-    filled: '填充风格',
+  title: 'Icon 图标资源',
+  figmaFileText: 'Figma 源文件',
+  iconTypeText: 'Icon 类型',
+  strokeTypes: {
+    outline: '描边',
+    outlineFilled: '描边-填充',
   },
-  search: '输入图标名称或关键词可以搜索',
+  types: {
+    outline: '描边',
+    filled: '填充',
+  },
+  colorText: '图标颜色',
+  colorTypes: {
+    single: '单色',
+    double: '双色',
+    multiple: '多色',
+  },
+  fillColor1Text: '填充颜色1',
+  fillColor2Text: '填充颜色2',
+  strokeColor1Text: '线条颜色1',
+  strokeColor2Text: '线条颜色2',
+  search: '输入图标名称或关键词',
   copied: '复制成功',
-
+  copyFailed: '复制失败',
+  downloaded: '下载成功',
+  downloadFailed: '下载失败',
+  strokeText: '线条粗细',
+  resetText: '重置',
+  operationText: {
+    copySvg: '复制 SVG',
+    copyPng: '复制 PNG',
+    copyName: '复制图标名',
+    copyReact: '复制 React 代码',
+    copyVue: '复制 Vue 代码',
+    downloadSvg: '下载 SVG',
+    downloadPng: '下载 PNG',
+  },
 };

@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.9958 1.6582L22.4117 10.9168L21.083 12.4116L19.9999 11.4489V21.9998H3.99995V11.4536L2.90588 12.4109L1.58887 10.9058L5.99995 7.04607V2.99984H7.99995V5.25448L11.9958 1.6582ZM5.99995 9.70361V19.9998H8.99995V13.9998H14.9999V19.9998H17.9999V9.67113L12.0041 4.34147L7.65852 8.25249L5.99995 9.70361ZM12.9999 19.9998V15.9998H10.9999V19.9998H12.9999Z" fill="black"/>
+<g id="houses">
+<path id="fill1" d="M5 21V9.25L12 3L19 9.22222V21H5Z" fill="white"/>
+<path id="fill2" d="M10.0003 15V21H14.0003V15H10.0003Z" fill="white"/>
+<path id="stroke2" d="M10.0003 21V15H14.0003V21H10.0003ZM10.0003 21C10.3133 21 9.64381 21 10.0003 21Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke1" d="M21 11L12 3L3 11M5 9.97606V21H19V9.95M7 6.75V4" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

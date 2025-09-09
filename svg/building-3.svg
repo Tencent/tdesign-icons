@@ -1,3 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 2H16V5H19V9H22V22H2V9H5V5H8V2ZM10 5H14V4H10V5ZM7 9H17V7H7V9ZM4 11V20H8V14H16V20H20V11H4ZM14 20V16H10V20H14Z" fill="black"/>
+    <g id="building-3">
+        <path id="fill1" d="M15 3V6H18V10H21V21H3V10H6V6H9V3H15Z" fill="white" />
+        <path id="fill2" d="M9 15V21H15V15H9Z" fill="white" />
+        <path id="stroke2" d="M9 15V21H15V15H9Z" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke1" d="M15 6V3H9V6M15 6H18V10M15 6H9M9 6H6V10M18 10H6M18 10H21V21H3V10H6" stroke="black"
+            stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

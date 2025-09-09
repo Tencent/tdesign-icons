@@ -2,7 +2,39 @@ import SVGO from 'svgo';
 import { createTransformStreamAsync } from './transform';
 
 export interface SVGOConfig {
-  removeXMLNS?: boolean;
+     removeXMLNS?: boolean;
+     cleanupAttrs?: boolean ;
+     removeDoctype?: boolean ;
+     removeXMLProcInst?: boolean ;
+     removeComments?: boolean ;
+     removeMetadata?: boolean ;
+     removeTitle?: boolean ;
+     removeDesc?: boolean ;
+     removeUselessDefs?: boolean ;
+     removeEditorsNSData?: boolean ;
+     removeEmptyAttrs?: boolean ;
+     removeHiddenElems?: boolean ;
+     removeEmptyText?: boolean ;
+     removeEmptyContainers?: boolean ;
+     removeViewBox?: boolean ;
+     cleanupEnableBackground?: boolean ;
+     convertStyleToAttrs?: boolean ;
+     convertPathData?: boolean ;
+     convertTransform?: boolean ;
+     removeUnknownsAndDefaults?: boolean ;
+     removeNonInheritableGroupAttrs?: boolean ;
+     removeUselessStrokeAndFill?: boolean ;
+     removeUnusedNS?: boolean ;
+     cleanupIDs?: boolean ;
+     cleanupNumericValues?: boolean ;
+     moveElemsAttrsToGroup?: boolean ;
+     moveGroupAttrsToElems?: boolean ;
+     collapseGroups?: boolean ;
+     removeRasterImages?: boolean ;
+     mergePaths?: boolean ;
+     convertShapeToPath?: boolean ;
+     sortAttrs?: boolean ;
+     removeDimensions?: boolean ;
 }
 
 function getSVGOOption(config: SVGOConfig = {}) {
@@ -34,13 +66,13 @@ function getSVGOOption(config: SVGOConfig = {}) {
       { removeNonInheritableGroupAttrs: true },
       { removeUselessStrokeAndFill: false },
       { removeUnusedNS: true },
-      { cleanupIDs: true },
-      { cleanupNumericValues: true },
-      { moveElemsAttrsToGroup: true },
+      { cleanupIDs: false }, // remain id to identify different paths
+      { cleanupNumericValues: false }, // avoid path destroyed
+      { moveElemsAttrsToGroup: false }, // remain each path attrs
       { moveGroupAttrsToElems: true },
       { collapseGroups: true },
       { removeRasterImages: false },
-      // { mergePaths: true },
+      { mergePaths: false },
       { convertShapeToPath: true },
       { sortAttrs: true },
       { removeDimensions: true },

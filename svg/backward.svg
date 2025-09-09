@@ -1,3 +1,12 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.2502 4.33594V11.3359L18.2502 4.33594V19.6644L11.2502 12.6644V19.6644L3.58594 12.0002L11.2502 4.33594ZM6.41436 12.0002L9.25015 14.8359V9.16436L6.41436 12.0002ZM13.4144 12.0002L16.2502 14.8359V9.16436L13.4144 12.0002Z" fill="black"/>
+<g id="backward">
+<g id="fill1">
+<path d="M5 12L10.25 17.25V6.75L5 12Z" fill="white"/>
+<path d="M12 12L17.25 17.25V6.75L12 12Z" fill="white"/>
+</g>
+<g id="stroke1">
+<path d="M5 12L10.25 17.25V6.75L5 12Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M12 12L17.25 17.25V6.75L12 12Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</g>
 </svg>

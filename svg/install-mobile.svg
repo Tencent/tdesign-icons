@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 1H15V3H6V21H18V11H20V23H4V1ZM20 1V5.65732L21.5304 4.19136L22.9139 5.63564L19 9.38477L15.0861 5.63565L16.4696 4.19136L18 5.65734V1H20ZM11 17H13.0039V19.0039H11V17Z" fill="black"/>
+    <g id="install-mobile">
+        <path id="stroke1" d="M14 2H5V22H19V12M12 18H12.0039V18.0039H12V18Z" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+        <path id="stroke2" d="M16.498 5.49942L19.0006 8.00196L21.5012 5.50127M19.0006 7.25V2.00195" stroke="black"
+            stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

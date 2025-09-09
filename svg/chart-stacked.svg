@@ -1,3 +1,10 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 2V20H6V9H12V20H14V5H20V20H22V22H2V2H4ZM18 20V16.5H16V20H18ZM16 14.5H18V7H16V14.5ZM10 20V16.5H8V20H10ZM8 14.5H10V11H8V14.5Z" fill="black"/>
+<g id="chart-stacked">
+<g id="fill1">
+<path d="M7 21H11V15.5H7V21Z" fill="white"/>
+<path d="M15 21H19V15.5H15V21Z" fill="white"/>
+</g>
+<path id="stroke2" d="M19 21H15M19 21V6H15V21M19 21V15.5H15V21M11 21H7M11 21V10H7V21M11 21V15.5H7V21" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke1" d="M21 21H3V3" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

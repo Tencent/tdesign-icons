@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M23 3V21L1 21L1 3L23 3ZM21 5L3 5L3 9H21V5ZM21 11L3 11L3 19H21V11ZM10 16L5 16L5 14L10 14V16Z" fill="black"/>
+<g id="creditcard">
+<path id="fill1" d="M22 10V20H2L2 10L22 10Z" fill="white"/>
+<path id="fill2" d="M22 4H2V10H22V4Z" fill="white"/>
+<path id="stroke1" d="M22 4L2 4M22 4V20H2L2 4M22 4V10H2L2 4" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M9 15L6 15" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

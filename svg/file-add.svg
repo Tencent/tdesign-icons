@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 1H15.4142L21 6.58579V12H19V9H13V3H5V21H12V23H3V1ZM15 3.41421V7H18.5858L15 3.41421ZM20 14V18H24V20H20V24H18V20H14V18H18V14H20Z" fill="black"/>
+    <g id="file-add">
+        <path id="stroke1" d="M20 11V7L15 2H4V22H11M14 2V8H20" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+        <path id="stroke2" d="M19 15V19M19 19V23M19 19H15M19 19H23" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+    </g>
 </svg>

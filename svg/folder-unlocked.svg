@@ -1,3 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 2.5H9.48063L11.4806 5H23V10H21V7H10.5194L8.51937 4.5H3V19H13V21H1V2.5ZM19.5 13.5C18.8096 13.5 18.25 14.0596 18.25 14.75V15.5H23.999V22H14.999V15.5H16.25V14.75C16.25 12.9551 17.7051 11.5 19.5 11.5C20.3936 11.5 21.2045 11.8619 21.791 12.4448L22.5003 13.1498L21.0904 14.5683L20.3811 13.8634C20.1541 13.6377 19.8441 13.5 19.5 13.5ZM16.999 17.5V20H21.999V17.5H16.999Z" fill="black"/>
+<g id="folder-unlocked">
+<path id="fill2" d="M15.999 16.5H22.999V21H15.999V16.5Z" fill="white"/>
+<path id="stroke1" d="M12 20H2V3.5H9L11 6H22V9" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M17.25 16.5V14.75C17.25 13.5074 18.2574 12.5 19.5 12.5C20.1188 12.5 20.6793 12.7498 21.0861 13.1541M15.999 16.5H22.999V21H15.999V16.5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

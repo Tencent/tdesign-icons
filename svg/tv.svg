@@ -1,3 +1,9 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 2L23.0001 2L23.0001 19H17.0001V17H21.0001L21.0001 4L3.00013 4L3.00099 17L7.00006 17L7.00007 19L1.00112 19L1 2ZM12 15.5872L16.2421 19.8292L18.6618 22.2441H15.8286L14.8293 21.2448L12.0003 18.4159L9.17327 21.244L8.17313 22.2441H5.33987L7.75878 19.8301L12 15.5872Z" fill="black"/>
+    <g id="tv">
+        <path id="stroke1" d="M6 18L2.00099 18L2 3H22L22 18H18" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+        <path id="stroke2"
+            d="M8.46585 20.5375L7.75874 21.2446H7.75732L8.46585 20.5375ZM8.46585 20.5375L12 17.002L15.5355 20.5375M15.5355 20.5375L16.2426 21.2446H16.244L15.5355 20.5375Z"
+            stroke="black" stroke-width="2" stroke-linecap="round" />
+    </g>
 </svg>

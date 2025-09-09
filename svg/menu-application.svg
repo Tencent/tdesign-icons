@@ -1,3 +1,15 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 3H6V6H3V3ZM10.5 3H13.5V6H10.5V3ZM18 3H21V6H18V3ZM3 10.5H6V13.5H3V10.5ZM10.5 10.5H13.5V13.5H10.5V10.5ZM18 10.5H21V13.5H18V10.5ZM3 18H6V21H3V18ZM10.5 18H13.5V21H10.5V18ZM18 18H21V21H18V18Z" fill="black"/>
+<g id="menu-application">
+<g id="stroke1">
+<path d="M4 4H5V5H4V4Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M11.5 4H12.5V5H11.5V4Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M19 4H20V5H19V4Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M19 11.5H20V12.5H19V11.5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M19 19H20V20H19V19Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M11.5 11.5H12.5V12.5H11.5V11.5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M11.5 19H12.5V20H11.5V19Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M4 11.5H5V12.5H4V11.5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M4 19H5V20H4V19Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</g>
 </svg>

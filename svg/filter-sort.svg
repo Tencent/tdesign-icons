@@ -1,11 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-        d="M2.57007 3H21.4299L14.5 12.8174V21H9.49999V12.8174L2.57007 3ZM6.42991 5L11.5 12.1826V19H12.5V12.1826L17.5701 5H6.42991Z"
-        fill="black" />
-    <path
-        d="M18.3817 17.3513L20 18.9738L21.618 17.3513L23.0342 18.7634L20.0002 21.8062L16.9657 18.7636L18.3817 17.3513Z"
-        fill="black" />
-    <path
-        d="M18.3808 16.6366L20 15.0152L21.6189 16.6366L23.0342 15.2234L20.0002 12.1848L16.9657 15.2233L18.3808 16.6366Z"
-        fill="black" />
+<g id="filter-sort">
+<path id="fill1" fill-rule="evenodd" clip-rule="evenodd" d="M19.5 4H4.5L10.5 12.5V20H13.5V12.5L19.5 4Z" fill="white"/>
+<path id="stroke1" fill-rule="evenodd" clip-rule="evenodd" d="M19.5 4H4.5L10.5 12.5V20H13.5V12.5L19.5 4Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M21.62 18.7651L20.0001 20.3896L18.3799 18.7651M21.62 15.222L20.0001 13.5996L18.3799 15.222" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

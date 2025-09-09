@@ -1,3 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 4V1.5H8V4H16V1.5H18V4H22V22H2V4H6ZM4 6V9H20V6H4ZM20 11H4V20H20V11Z" fill="black"/>
+<g id="calendar">
+<path id="fill1" d="M21 10H3V21H21V10Z" fill="white"/>
+<path id="fill2" d="M21 10H3V5H21V10Z" fill="white"/>
+<path id="stroke1" d="M3 10H21M3 10V5H21V10M3 10V21H21V10M7 5V1.5M17 5V1.5" stroke="black" stroke-width="2"/>
+</g>
 </svg>

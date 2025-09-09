@@ -1,3 +1,5 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.5 11L16.0858 11L11.5858 6.50003L13 5.08582L19.9142 12L13 18.9142L11.5858 17.5L16.0858 13L4.5 13L4.5 11Z" fill="black"/>
+<g id="arrow-right">
+<path id="stroke1" d="M13 17.5L18.5 12L13 6.5M17.25 12L4.25 12" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

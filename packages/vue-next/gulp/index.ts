@@ -19,6 +19,7 @@ export function vueNextTask(source: string[]) {
         iconGenerator: vueGetIconFileContent,
         options: {
           replaceColor: true,
+          propsString: true,
         },
       }),
 

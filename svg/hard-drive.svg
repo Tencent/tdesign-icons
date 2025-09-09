@@ -1,3 +1,6 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 2H22V22H2V2ZM4 4V14H20V4H4ZM20 16H4V20H20V16ZM5.99805 16.998H8.00195V19.002H5.99805V16.998ZM8.99805 16.998H11.002V19.002H8.99805V16.998Z" fill="black"/>
+<g id="hard-drive">
+<path id="fill1" d="M3 21H21V15H3V21Z" fill="white"/>
+<path id="stroke1" d="M3 15H21M3 3H21V21H3V3ZM6.99805 17.998H7.00195V18.002H6.99805V17.998ZM9.99805 17.998H10.002V18.002H9.99805V17.998Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10.9996 2H3.9996V7.92353L1.83398 22H21.9996V10H11.3191L10.9996 7.92353V2ZM8.9996 4V8.07647L9.29552 10H7.9996V20H4.16521L5.9996 8.07647V4H8.9996ZM9.9996 20V12H19.9996V20H15.9996V16H13.9996V20H9.9996Z" fill="black"/>
+<g id="chimney-2">
+<path id="fill1" d="M21 21V11H9V21H21Z" fill="white"/>
+<path id="fill2" d="M3 21H9V11H10.4615L10 8V3H5V8L3 21Z" fill="white"/>
+<path id="stroke2" d="M15 17V21M9 21H3L5 8V3H10V8L10.4615 11H9V21Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke1" d="M21 21V11H9V21H21Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

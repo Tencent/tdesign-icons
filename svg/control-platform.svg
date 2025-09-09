@@ -1,3 +1,6 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 0.855957L22 6.41151V17.5883L12 23.1439L2 17.5883V6.41151L12 0.855957ZM4 8.89612V16.4115L11 20.3004V12.602L4 8.89612ZM13 20.3004L20 16.4115V8.89612L13 12.602V20.3004ZM12 10.8684L19.1196 7.09922L12 3.14387L4.88039 7.09922L12 10.8684Z" fill="black"/>
+<g id="control-platform">
+<path id="fill1" d="M12 2L21 7V17L12 22L3 17V7L12 2Z" fill="white"/>
+<path id="stroke1" d="M12 12L20.5 7.5M12 12V21.5M12 12L3.5 7.5M12 2L21 7V17L12 22L3 17V7L12 2Z" stroke="black" stroke-width="2"/>
+</g>
 </svg>

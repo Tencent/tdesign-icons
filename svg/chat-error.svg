@@ -1,3 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.5 2H22.5V18H6.87574L1.5 22.7038V2ZM3.5 4V18.2962L6.12426 16H20.5V4H3.5ZM13 6V11H11V6H13ZM11 12H13.0039V14.0039H11V12Z" fill="black"/>
+<g id="chat-error">
+<path id="fill1" d="M2.5 3H21.5V17H6.5L2.5 20.5L2.5 3Z" fill="white"/>
+<path id="stroke1" d="M2.5 3H21.5V17H6.5L2.5 20.5L2.5 3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M12 7V10M12 13H12.0039V13.0039H12V13Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

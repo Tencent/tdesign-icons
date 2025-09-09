@@ -20,6 +20,7 @@ export function reactTask(source: string[]) {
         iconGenerator: reactGetIconFileContent,
         options: {
           replaceColor: true,
+          propsString: true,
         },
       }),
 

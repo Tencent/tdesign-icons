@@ -1,5 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 15H11V13H16V15Z" fill="black" />
-    <path d="M12 2V0H10V2H6V19H21V2H17V0H15V2H12ZM15 6H17V4H19V17H8V4H10V6H12V4H15V6Z" fill="black" />
-    <path d="M4 21V6H2V23H15V21H4Z" fill="black" />
+<g id="task-double">
+<path id="fill1" d="M20 3H7V18H20V3Z" fill="white"/>
+<path id="stroke1" d="M12 14H15M16 1V5M11 1L11 5M7 3H20V18H7V3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M3 7V22H14" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

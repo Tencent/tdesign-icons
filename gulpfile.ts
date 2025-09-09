@@ -1,7 +1,6 @@
 import { parallel, series } from 'gulp';
 
 import { reactTask } from './packages/react/gulp';
-import { angularTask } from './packages/angular/gulp';
 import { svgTask } from './packages/svg/gulp';
 import { vueTask } from './packages/vue/gulp';
 import { vueNextTask } from './packages/vue-next/gulp';
@@ -21,10 +20,9 @@ export default series(
     vueTask(source),
     vueNextTask(source),
     svgTask(source),
-    angularTask(source),
     reactNativeTask(),
     svgSpriteTask(),
-    iconFontTask(source),
+    iconFontTask(),
     iconViewTask(),
     wcTask(source),
   ),

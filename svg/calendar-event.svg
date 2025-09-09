@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 1V4L16 4V1L18 1V4L22 4L22 22L2 22L2 4L6 4L6 1L8 1ZM4 6L4 9L20 9V6L4 6ZM20 11L4 11L4 20L20 20L20 11ZM12.5 12.5H18.5V18.5L12.5 18.5L12.5 12.5ZM14.5 14.5V16.5H16.5V14.5H14.5Z" fill="black"/>
+<g id="calendar-event">
+<path id="fill1" d="M3 21L21 21V10L3 10L3 21Z" fill="white"/>
+<path id="fill2" d="M21 10V5L3 5L3 10L21 10Z" fill="white"/>
+<path id="stroke1" d="M21 10V21H3V10M21 10H3M21 10V5H3V10M7 5V2M17 5V2" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M13.5 13.5H17.5V17.5H13.5V13.5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

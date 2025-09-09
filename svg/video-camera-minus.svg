@@ -1,3 +1,11 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M24 4.23381V19.7232L17 15.7232V20L0 20L6.9938e-07 4L17 4V8.43382L24 4.23381ZM17 10.7662V13.4197L22 16.2768V7.76619L17 10.7662ZM15 18V6L2 6L2 18H15ZM12.5 13L4.5 13V11H12.5V13Z" fill="black"/>
+<g id="video-camera-minus">
+<path id="fill1" d="M1 5L0.999999 19L16 19L16 5L1 5Z" fill="white"/>
+<path id="fill2" d="M23 6L16 10.2L16 14L23 18L23 6Z" fill="white"/>
+<g id="stroke1">
+<path d="M23 6L16 10.2V14L23 18V6Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M1 5L1 19H16V5L1 5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+<path id="stroke2" d="M5.5 12L11.5 12" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

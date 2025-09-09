@@ -1,3 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 2L15 2V7.5H13V4L4 4L4 13H7.5V15H2L2 2ZM9 9L22 9L22 22L9 22L9 9ZM11 11L11 20L20 20L20 11L11 11ZM19.4142 14L15 18.4142L12.0858 15.5L13.5 14.0858L15 15.5858L18 12.5858L19.4142 14Z" fill="black"/>
+<g id="component-checkbox">
+<path id="fill1" d="M10 10L21 10V21H10L10 10Z" fill="white"/>
+<path id="stroke1" d="M10 10L21 10V21H10L10 10Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M14 6.5V3H3V14H6.5M18 14L15 17L13.5 15.5" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

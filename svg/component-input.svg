@@ -1,3 +1,6 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 7L22 7V16L2 16L2 7ZM4 9L4 14L20 14V9L4 9ZM8 10V13H6V10H8Z" fill="black"/>
+<g id="component-input">
+<path id="fill1" d="M21 8L3 8L3 15L21 15V8Z" fill="white"/>
+<path id="stroke1" d="M7 11V12M3 8H21V15H3V8Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
 </svg>

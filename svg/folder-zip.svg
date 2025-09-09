@@ -1,3 +1,14 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 2.5H9.48063L11.4806 5H23V21H1V2.5ZM3 4.5V19H14V17H16V15.0039H14V13H16V11.0039H14V9H16V7H10.5194L8.51937 4.5H3ZM16.0039 9.00391V11H18.0039V13.0039H16.0039V15H18.0039V17.0039H16.0039V19H21V7H18.0039V9.00391H16.0039Z" fill="black"/>
+    <g id="folder-zip">
+        <path id="fill1" d="M2 3.5L9 3.5L11 6L22 6L22 20L2 20L2 3.5Z" fill="white" />
+        <path id="stroke1" d="M2 3.5H9L11 6H22V20H2V3.5Z" stroke="black" stroke-width="2" />
+        <g id="stroke2">
+            <path d="M15 10H15.0039V10.0039H15V10Z" stroke="black" stroke-width="2" />
+            <path d="M17 8H17.0039V8.00391H17V8Z" stroke="black" stroke-width="2" />
+            <path d="M15 18H15.0039V18.0039H15V18Z" stroke="black" stroke-width="2" />
+            <path d="M17 12H17.0039V12.0039H17V12Z" stroke="black" stroke-width="2" />
+            <path d="M15 14H15.0039V14.0039H15V14Z" stroke="black" stroke-width="2" />
+            <path d="M17 16H17.0039V16.0039H17V16Z" stroke="black" stroke-width="2" />
+        </g>
+    </g>
 </svg>

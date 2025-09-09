@@ -1,3 +1,12 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22 2H15V7H9V2H2V22H22V2ZM9 9H15V20H13V16H11V20H9V9ZM7 20H4V4H7V20ZM17 20V4H20V20H17ZM14 11H10V13H14V11Z" fill="black"/>
+    <g id="city-3">
+        <path id="fill1" d="M16 21V8H8V21H16Z" fill="white" />
+        <g id="fill2">
+            <path d="M3 21H8V3H3V21Z" fill="white" />
+            <path d="M21 21V3H16V21H21Z" fill="white" />
+        </g>
+        <path id="stroke2" d="M12 21V17M11 12H13" stroke="black" stroke-width="2" stroke-linecap="square" />
+        <path id="stroke1" d="M8 21H3V3H8V21ZM8 21V8H16V21M8 21H16M16 21H21V3H16V21Z" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+    </g>
 </svg>

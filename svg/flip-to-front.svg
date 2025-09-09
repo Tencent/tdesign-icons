@@ -1,3 +1,8 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7 3H21V17H7V3ZM9 5V15H19V5H9ZM5 7.5V10.5H3V7.5H5ZM5 12.5V15.5H3V12.5H5ZM5 17.5V19H6.5V21H3V17.5H5ZM11.5 19V21H8.5V19H11.5ZM13.5 19H16.5V21H13.5V19Z" fill="black"/>
+    <g id="flip-to-front">
+        <path id="stroke1" fill-rule="evenodd" clip-rule="evenodd" d="M20 4H8V16H20V4Z" stroke="black" stroke-width="2"
+            stroke-linecap="square" />
+        <path id="stroke2" d="M10.5 20H9.5M5.5 20H4V18.5M15.5 20H14.5M4 13.5V14.5M4 8.5V9.5" stroke="black"
+            stroke-width="2" stroke-linecap="square" />
+    </g>
 </svg>

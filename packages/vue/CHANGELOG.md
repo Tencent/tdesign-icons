@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.4.1
+
+### Patch Changes
+
+- fix: fix compatibility with previous icon version
+
 ## 0.4.0
 
 ### Minor Changes

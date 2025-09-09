@@ -103,7 +103,8 @@ export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGEleme
   return render(icon, `${id}`, {
     ref,
     className: cls,
-    style: { ...style, ...sizeStyle },
+    // fill none 是为了避免存在旧版本图标的 fill:currentColor 造成的样式污染
+    style: { fill: 'none', ...style, ...sizeStyle },
     ...restProps,
   });
 });

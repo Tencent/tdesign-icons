@@ -503,9 +503,6 @@ onMounted(() => {
     configuration.strokeColor1 = configCache.strokeColor1;
     configuration.fillColor1 = configCache.fillColor1;
     configuration.fillColor2 = configCache.fillColor2;
-    setTimeout(() => {
-      initialized.value = true;
-    });
   }
 
   Object.keys(manifest.value).forEach((renderType) => {
@@ -518,6 +515,7 @@ onMounted(() => {
   });
 
   nextTick(() => {
+    initialized.value = true;
     getHighlightRefValue();
     registerScrollEvent();
     appendStyleSheet();

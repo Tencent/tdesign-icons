@@ -293,8 +293,8 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
       tdesign-icons-vue:
-        specifier: ^0.3.6
-        version: 0.3.6(vue@2.7.14)
+        specifier: ^0.4.0
+        version: 0.4.0(vue@2.7.14)
       tdesign-vue:
         specifier: 1.13.1-naruto
         version: 1.13.1-naruto(vue@2.7.14)
@@ -9798,6 +9798,11 @@ packages:
 
   tdesign-icons-vue@0.3.6:
     resolution: {integrity: sha512-FXE5Ryihyamk0cYKY1wuppuAOtyV2W0k2HxgR4EaocbbdmnFUWIcSBL0buNeFAQqSi16HQOtr2KpP9v87IwLXw==}
+    peerDependencies:
+      vue: ^2.6.12
+
+  tdesign-icons-vue@0.4.0:
+    resolution: {integrity: sha512-3hIxRatBvAPknXE8KSYvYudreBzIIBA5XYM+jedvdzS1P9HE2pap4wP22qf3RIhTw50PHsQMjBOaW6XeeiSaEg==}
     peerDependencies:
       vue: ^2.6.12
 
@@ -22475,6 +22480,12 @@ snapshots:
       yallist: 4.0.0
 
   tdesign-icons-vue@0.3.6(vue@2.7.14):
+    dependencies:
+      '@babel/runtime': 7.24.7
+      classnames: 2.2.6
+      vue: 2.7.14
+
+  tdesign-icons-vue@0.4.0(vue@2.7.14):
     dependencies:
       '@babel/runtime': 7.24.7
       classnames: 2.2.6

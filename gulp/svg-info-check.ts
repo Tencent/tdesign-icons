@@ -1,6 +1,6 @@
 import { parse } from 'svg-parser';
 import camelCase from 'camelcase';
-
+import { specifiedIcons } from './util/const';
 import { createTransformStream } from './transform';
 
 export interface Attrs {
@@ -83,8 +83,8 @@ function normalizeColor(node: IconElement, options: SvgToElementOptions, nodeId?
         if (nodeId === 'fill1') attrs.fill = 'props.fillColor1';
         else if (nodeId === 'fill2') attrs.fill = 'props.fillColor2';
         else {
-          // 填充图标
-          attrs.fill = 'props.fillColor1';
+          // 填充图标，特殊处理，默认为 currentColor，支持通过 style color 直接注入
+          attrs.fill = 'props.strokeColor1';
         }
       }
     }

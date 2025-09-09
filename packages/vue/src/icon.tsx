@@ -63,7 +63,10 @@ export default Vue.extend({
 
     const finalCls = classNames('t-icon', `t-icon-${id}`, staticClass, customClassName, customStaticClassName);
 
-    const finalStyle = { ...style, ...(customStyle as Styles), ...(customStaticStyle as Styles) };
+    // fill none 是为了避免存在旧版本图标的 fill:currentColor 造成的样式污染
+    const finalStyle = {
+      fill: 'none', ...style, ...(customStyle as Styles), ...(customStaticStyle as Styles),
+    };
 
     jsonToUnderline(icon);
 

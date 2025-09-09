@@ -59,7 +59,8 @@ export default defineComponent({
     const { className, style } = useSizeProps(propsSize);
 
     const finalCls = computed(() => ['t-icon', 't-icon-$KEY', className.value]);
-    const finalStyle = computed(() => ({ ...style.value, ...(attrs.style as Styles) }));
+    // fill none 是为了避免存在旧版本图标的 fill:currentColor 造成的样式污染
+    const finalStyle = computed(() => ({ fill: 'none', ...style.value, ...(attrs.style as Styles) }));
     const finalProps = computed(() => ({
       class: finalCls.value,
       style: finalStyle.value,

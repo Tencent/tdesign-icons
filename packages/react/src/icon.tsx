@@ -38,26 +38,34 @@ export interface IconFulfilledProps extends IconProps {
 function render(node: IconElement, id: string, rootProps: IconProps & {
   ref: Ref<SVGElement>
 }): ReactElement {
-  const { strokeColor = 'currentColor', strokeWidth = 2, fillColor = 'transparent' } = rootProps;
+  const {
+    strokeColor = 'currentColor', strokeWidth = 2, fillColor = 'transparent', ...resetRootProps
+  } = rootProps;
+
+  // 填充图标处理
+  let filledColor: string;
+  if (!rootProps.fillColor) filledColor = 'currentColor';
+  else filledColor = Array.isArray(fillColor) ? fillColor[0] : fillColor;
   const childProps = {
     strokeWidth,
     strokeColor1: Array.isArray(strokeColor) ? strokeColor[0] : strokeColor,
     strokeColor2: Array.isArray(strokeColor) ? strokeColor[1] ?? strokeColor[0] : strokeColor,
     fillColor1: Array.isArray(fillColor) ? fillColor[0] : fillColor,
     fillColor2: Array.isArray(fillColor) ? fillColor[1] ?? fillColor[0] : fillColor,
+    filledColor,
   };
   return createElement(
     node.tag,
     {
       key: id,
       ...node.attrs,
-      ...rootProps,
+      ...resetRootProps,
     },
-    (node.children || []).map((child) => childRender(child, childProps)),
+    (node.children || []).map((child, index) => childRender(child, childProps, index)),
   );
 }
 
-function childRender(node: IconElement, childProps: IconProps): ReactElement {
+function childRender(node: IconElement, childProps: IconProps, index: number): ReactElement {
   const processedAttrs: Record<string, any> = {};
   if (node.attrs) {
     // eslint-disable-next-line no-restricted-syntax
@@ -74,9 +82,10 @@ function childRender(node: IconElement, childProps: IconProps): ReactElement {
   return createElement(
     node.tag,
     {
+      key: index,
       ...processedAttrs,
     },
-    (node.children || []).map((child) => childRender(child, childProps)),
+    (node.children || []).map((child, index) => childRender(child, childProps, index)),
   );
 }
 

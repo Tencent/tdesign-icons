@@ -20,24 +20,41 @@ export default defineComponent({
     },
     fillColor: {
       type: [Array, String] as PropType<IconProps['fillColor']>,
-      default: 'transparent'
     },
     strokeColor: {
       type: [Array, String] as PropType<IconProps['strokeColor']>,
-      default: 'currentColor'
     },
     strokeWidth: {
       type: Number as PropType<IconProps['strokeWidth']>,
-      default: 2
     }
   },
   setup(props, { attrs }) {
     const propsSize = computed(() => props.size);
 
-    const strokeColor1 = computed(() => Array.isArray(props.strokeColor) ? props.strokeColor[0] : props.strokeColor)
-    const strokeColor2 = computed(() => Array.isArray(props.strokeColor) ? props.strokeColor[1] ?? props.strokeColor[0] : props.strokeColor)
-    const fillColor1 = computed(() => Array.isArray(props.fillColor) ? props.fillColor[0] : props.fillColor)
-    const fillColor2 = computed(() => Array.isArray(props.fillColor) ? props.fillColor[1] ?? props.fillColor[0] : props.fillColor)
+    const strokeColor1 = computed(() => {
+      if (!props.strokeColor) return 'currentColor';
+      return Array.isArray(props.strokeColor) ? props.strokeColor[0] : props.strokeColor
+    })
+    const strokeColor2 = computed(() => {
+      if (!props.strokeColor) return 'currentColor';
+      return Array.isArray(props.strokeColor) ? props.strokeColor[1] ?? props.strokeColor[0] : props.strokeColor
+    })
+
+    const fillColor1 = computed(() => {
+      if (!props.fillColor) return 'transparent';
+      return Array.isArray(props.fillColor) ? props.fillColor[0] : props.fillColor
+    })
+    const fillColor2 = computed(() => {
+      if (!props.fillColor) return 'transparent';
+      return Array.isArray(props.fillColor) ? props.fillColor[1] ?? props.fillColor[0] : props.fillColor
+    })
+
+    // 填充类型图标
+    const filledColor = computed(() => {
+      if (!props.fillColor) return 'currentColor';
+      return Array.isArray(props.fillColor) ? props.fillColor[0] : props.fillColor;
+    })
+
 
     const { className, style } = useSizeProps(propsSize);
 
@@ -51,7 +68,8 @@ export default defineComponent({
       strokeColor2: strokeColor2.value,
       fillColor1: fillColor1.value,
       fillColor2: fillColor2.value,
-      strokeWidth: props.strokeWidth
+      strokeWidth: props.strokeWidth || 2,
+      filledColor: filledColor.value
     }));
     return () => renderFn(element, finalProps.value);
   },

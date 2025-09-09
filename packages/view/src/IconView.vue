@@ -151,8 +151,12 @@ import {
 
 import { SearchIcon } from 'tdesign-icons-vue';
 import {
-  onMounted, ref, computed, shallowRef,
-  reactive, watch,
+  onMounted,
+  ref,
+  computed,
+  shallowRef,
+  reactive,
+  watch,
   nextTick,
   defineProps,
 } from 'vue';
@@ -167,6 +171,7 @@ import { manifest as manifestSrc } from './manifest';
 import SvgSprite from '../gulp/template/svg-sprite.vue';
 
 let popperInstance = null;
+
 const initConfiguration = {
   currentType: 'outline',
   colorType: 'single',
@@ -189,6 +194,7 @@ const props = defineProps({
 
 const manifest = shallowRef(manifestSrc);
 const lang = ref(zhCN);
+const initialized = ref(false);
 const isEn = ref(false);
 const searchStr = ref('');
 const anchorArr = ref([]);
@@ -203,6 +209,7 @@ const configuration = reactive({
 });
 
 watch(() => configuration.currentType, (newType) => {
+  if (!initialized.value) return;
   if (newType === 'filled' && configuration.fillColor1 === 'transparent') { configuration.fillColor1 = 'currentColor'; } else if (newType === 'outline' && configuration.fillColor1 === 'currentColor') configuration.fillColor1 = 'transparent';
   activeCategory.value = getRoot()?.querySelector('.active').innerHTML;
   nextTick(() => {
@@ -228,18 +235,20 @@ watch(() => configuration.strokeColor1, (newColor) => {
 });
 
 watch(() => configuration.strokeTypes, (newType) => {
+  if (!initialized.value) return;
   configuration.colorType = 'double';
   if (newType === 'outlineFilled') {
     configuration.fillColor1 = '#bbd3fb';
     configuration.fillColor2 = '#bbd3fb';
     configuration.strokeColor2 = configuration.strokeColor1;
-  } else {
-    configuration.fillColor2 = 'transparent';
-    configuration.fillColor1 = 'transparent';
+    return;
   }
+  configuration.fillColor2 = 'transparent';
+  configuration.fillColor1 = 'transparent';
 });
 
 watch(() => configuration.colorType, (newColorType) => {
+  if (!initialized.value) return;
   if (newColorType === 'single') {
     configuration.strokeColor2 = configuration.strokeColor1;
   }
@@ -255,6 +264,13 @@ watch(() => configuration.colorType, (newColorType) => {
     configuration.fillColor2 = '#f78d94';
     configuration.strokeColor2 = '#0052d9';
   }
+});
+
+watch(() => configuration, () => {
+  if (isFrameworkContent.value) return;
+  localStorage.setItem('tdesign-icons-editor', JSON.stringify(configuration));
+}, {
+  deep: true,
 });
 
 // 是否为嵌入框架内展示，减少展示内容和配置功能
@@ -475,9 +491,23 @@ const hidePopover = () => {
 
 onMounted(() => {
   const en = window.location.pathname.endsWith('en');
+  const configCache = JSON.parse(localStorage.getItem('tdesign-icons-editor'));
+
   isEn.value = en;
   lang.value = en ? enUS : zhCN;
-  configuration.currentType = 'outline';
+  if (configCache && !isFrameworkContent.value) {
+    configuration.colorType = configCache.colorType;
+    configuration.strokeTypes = configCache.strokeTypes;
+    configuration.strokeWidth = configCache.strokeWidth;
+    configuration.strokeColor2 = configCache.strokeColor2;
+    configuration.strokeColor1 = configCache.strokeColor1;
+    configuration.fillColor1 = configCache.fillColor1;
+    configuration.fillColor2 = configCache.fillColor2;
+    setTimeout(() => {
+      initialized.value = true;
+    });
+  }
+
   Object.keys(manifest.value).forEach((renderType) => {
     const currentIcons = manifest.value[renderType];
     const types = Object.keys(currentIcons);

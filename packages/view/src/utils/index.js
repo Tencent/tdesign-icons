@@ -6,6 +6,14 @@ export function getRoot() {
   return document.querySelector('td-icons-view')?.shadowRoot || document;
 }
 
+export function kebabToPascal(str) {
+  const words = str.split('-');
+
+  const capitalizedWords = words.map((word) => word.charAt(0).toUpperCase() + word.slice(1));
+
+  return capitalizedWords.join('');
+}
+
 export function appendStyleSheet() {
   const componentVariablesExist = window
     .getComputedStyle(document.documentElement)

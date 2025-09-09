@@ -1,7 +1,10 @@
 <template>
   <div
-    :class="['t-icons-view', { 't-icons-view--framework-content': isFrameworkContent },'scrollbar']"
     :key="configuration.currentType"
+    :class="[
+      't-icons-view',
+      'scrollbar',
+      { 't-icons-view--framework-content': isFrameworkContent }]"
   >
     <div class="t-icons-view__header" @mouseenter="hidePopover">
       <div style="display:flex; justify-content: space-between;align-items: baseline;">
@@ -87,8 +90,7 @@
         </t-space>
 
   </div>
-
-         <!-- 中间图标展示 -->
+    <!-- 中间图标展示 -->
     <div class="t-icons-view__content scrollbar">
           <div>
           <div v-for="(icons,index) in allIcons" :key="index" @mousemove="(e)=>handleHoverIcon(e)">
@@ -159,7 +161,7 @@ import debounce from 'lodash/debounce';
 import { createPopper } from '@popperjs/core';
 import { zhCN, enUS } from './i18n';
 import {
-  calcNavHighlight, proxyTitleAnchor, getRoot, anchorHighlight, appendStyleSheet,
+  calcNavHighlight, proxyTitleAnchor, getRoot, anchorHighlight, appendStyleSheet, kebabToPascal,
 } from './utils/index';
 import { manifest as manifestSrc } from './manifest';
 import SvgSprite from '../gulp/template/svg-sprite.vue';
@@ -195,7 +197,7 @@ const currentIconName = ref('');
 const count = ref(0);
 const activeCategory = ref('');
 
-// icon configurations
+// default icon configurations
 const configuration = reactive({
   ...initConfiguration,
 });
@@ -255,14 +257,9 @@ watch(() => configuration.colorType, (newColorType) => {
   }
 });
 
-const kebabToPascal = (str) => {
-  const words = str.split('-');
-
-  const capitalizedWords = words.map((word) => word.charAt(0).toUpperCase() + word.slice(1));
-
-  return capitalizedWords.join('');
-};
+// 是否为嵌入框架内展示，减少展示内容和配置功能
 const isFrameworkContent = computed(() => !!props.frameworkContent);
+
 const categories = computed(
   () => ({
     ...manifest.value[configuration.currentType],

@@ -83,7 +83,7 @@ function normalizeColor(node: IconElement, options: SvgToElementOptions, nodeId?
         if (nodeId === 'fill1') attrs.fill = 'props.fillColor1';
         else if (nodeId === 'fill2') attrs.fill = 'props.fillColor2';
         else {
-        // 填充图标
+          // 填充图标
           attrs.fill = 'props.fillColor1';
         }
       }

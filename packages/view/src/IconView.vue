@@ -116,6 +116,7 @@
   <div class="t-icons-view__operation" id="tooltip" role="tooltip" style="display: none;"  v-if="!isFrameworkContent">
     <div @click="()=>handleCopyIcon('svg')">{{lang.operationText.copySvg}}</div>
     <div @click="()=>handleCopyIcon('png')">{{lang.operationText.copyPng}}</div>
+    <div @click="()=>handleCopyIcon('name')">{{lang.operationText.copyName}}</div>
     <div @click="()=>handleCopyIcon('react')">{{lang.operationText.copyReact}}</div>
     <div @click="()=>handleCopyIcon('vue')">{{lang.operationText.copyVue}}</div>
     <t-divider style="margin: 2px 0"/>
@@ -350,6 +351,8 @@ const handleCopyIcon = async (type) => {
     // copy svg content
       const resultString = getCurrentRawSvg();
       await navigator.clipboard.writeText(resultString);
+    } else if (type === 'name') {
+      await navigator.clipboard.writeText(currentIconName.value);
     } else {
       const resultString = getCurrentRawSvg();
       const svgBlob = new Blob([resultString], { type: 'image/svg+xml;charset=utf-8' });

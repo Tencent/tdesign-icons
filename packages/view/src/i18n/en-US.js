@@ -30,6 +30,7 @@ export default {
   operationText: {
     copySvg: 'Copy SVG',
     copyPng: 'Copy PNG',
+    copyName: 'Copy Name',
     copyReact: 'Copy React Code',
     copyVue: 'Copy Vue Code',
     downloadSvg: 'Download SVG',

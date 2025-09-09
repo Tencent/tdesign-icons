@@ -30,6 +30,7 @@ export default {
   operationText: {
     copySvg: '复制 SVG',
     copyPng: '复制 PNG',
+    copyName: '复制图标名',
     copyReact: '复制 React 代码',
     copyVue: '复制 Vue 代码',
     downloadSvg: '下载 SVG',

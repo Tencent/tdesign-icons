@@ -119,7 +119,7 @@ export function processSvgSpriteInNode(svgString) {
       // @ts-ignore
       if (symbolEle.tagName?.toLowerCase?.() === 'symbol') {
         // @ts-ignore
-        if (specifiedIcons.includes(symbolEle.getAttribute('id'))) {
+        if (specifiedIcons.includes(symbolEle.getAttribute('id').replace('t-icon-', ''))) {
           isSpecified = true;
         }
         const gElements = Array.from(symbolEle.childNodes);

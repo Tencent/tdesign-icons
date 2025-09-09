@@ -68,7 +68,7 @@ function normalizeClassName(node: IconElement) {
 /**
  * for single colored icons, we assume that #000 is placeholder for 'currentColor'
  */
-function normalizeColor(node: IconElement, options: SvgToElementOptions, nodeId?:string) {
+function normalizeColor(node: IconElement, options: SvgToElementOptions, nodeId?:string, isSpecified?:boolean) {
   if (!options.replaceColor) {
     return;
   }
@@ -77,6 +77,9 @@ function normalizeColor(node: IconElement, options: SvgToElementOptions, nodeId?
 
   if (options.propsString) {
     if (attrs.fill && attrs.fill !== 'none') {
+      if (isSpecified) {
+        attrs.fill = 'props.strokeColor1';
+      }
       if (attrs.id === 'fill1') attrs.fill = 'props.fillColor1';
       else if (attrs.id === 'fill2') attrs.fill = 'props.fillColor2';
       else if (!attrs.id) {
@@ -84,7 +87,7 @@ function normalizeColor(node: IconElement, options: SvgToElementOptions, nodeId?
         else if (nodeId === 'fill2') attrs.fill = 'props.fillColor2';
         else {
           // 填充图标，特殊处理，默认为 currentColor，支持通过 style color 直接注入
-          attrs.fill = 'props.strokeColor1';
+          attrs.fill = 'props.filledColor';
         }
       }
     }
@@ -109,7 +112,7 @@ function normalizeColor(node: IconElement, options: SvgToElementOptions, nodeId?
   }
 }
 
-function normalizeAttrs(node: IconElement, options: SvgToElementOptions, nodeId?:string) {
+function normalizeAttrs(node: IconElement, options: SvgToElementOptions, nodeId?:string, isSpecified?:boolean) {
   const { attrs } = node;
 
   Object.keys(attrs).forEach((key) => {
@@ -121,22 +124,22 @@ function normalizeAttrs(node: IconElement, options: SvgToElementOptions, nodeId?
 
   normalizeStyle(node);
   normalizeClassName(node);
-  normalizeColor(node, options, nodeId);
+  normalizeColor(node, options, nodeId, isSpecified);
 }
 
 /**
  * map svg-parser ast to React element, so it would be convenient to render
  */
-function astToElement(wrappedRoot: IconNode[], options: SvgToElementOptions, nodeId?:string): IconElement[] {
+function astToElement(wrappedRoot: IconNode[], options: SvgToElementOptions, nodeId?:string, isSpecified?:boolean): IconElement[] {
   return wrappedRoot
     .map((node) => ({
       tag: node.tagName,
       attrs: node.properties,
-      children: astToElement(node.children, options, ['fill1', 'fill2', 'stroke1', 'stroke2'].includes(node.properties.id as string) ? node.properties.id as string : ''),
+      children: astToElement(node.children, options, ['fill1', 'fill2', 'stroke1', 'stroke2'].includes(node.properties.id as string) ? node.properties.id as string : '', isSpecified),
     }))
     .map((node: IconElement) => {
       normalizeChildren(node);
-      normalizeAttrs(node, options, nodeId);
+      normalizeAttrs(node, options, nodeId, isSpecified);
       return node;
     });
 }
@@ -149,8 +152,8 @@ export function svgToElement(
 ) {
   return createTransformStream((svgString) => {
     const ast = parse(svgString);
-    const svgElement = astToElement((ast.children as any) as IconNode[], options)[0];
-
+    const isSpecified = specifiedIcons.includes(ast.children?.[0].children?.[0].properties.id);
+    const svgElement = astToElement((ast.children as any) as IconNode[], options, null, isSpecified)[0];
     normalizeWidthAndHeight(svgElement);
 
     return JSON.stringify(svgElement);

@@ -33,12 +33,16 @@ const renderFn = (createElement: CreateElement, node: SVGJson, rootData: VNodeDa
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { attrs, ...restProps } = rootData;
   const { strokeWidth = 2, strokeColor = 'currentColor', fillColor = 'transparent' } = rootData.props || {};
+  let filledColor;
+  if (!rootData.props.fillColor) filledColor = 'currentColor';
+  else filledColor = Array.isArray(fillColor) ? fillColor[0] : fillColor;
   const childProps = {
     strokeWidth,
     strokeColor1: Array.isArray(strokeColor) ? strokeColor[0] : strokeColor,
     strokeColor2: Array.isArray(strokeColor) ? strokeColor[1] ?? strokeColor[0] : strokeColor,
     fillColor1: Array.isArray(fillColor) ? fillColor[0] : fillColor,
     fillColor2: Array.isArray(fillColor) ? fillColor[1] ?? strokeColor[0] : fillColor,
+    filledColor,
   };
   return createElement(
     node.tag,

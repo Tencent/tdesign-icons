@@ -1,5 +1,18 @@
 # tdesign-icons-view
 
+## 0.4.0
+
+### Minor Changes
+
+- feat: add new icons `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no` 、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled`
+- refactor: remove icons `video-camera-3`、`video-camera-3-filled`、 `list`
+- feat: new icon editor
+
+### Patch Changes
+
+- Updated dependencies
+  - tdesign-icons-vue@0.4.0
+
 ## 0.3.7
 
 ### Patch Changes

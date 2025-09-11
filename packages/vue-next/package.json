@@ -65,8 +65,7 @@
     "rollup-plugin-styles": "catalog:",
     "rollup-plugin-terser": "catalog:",
     "rollup-plugin-vue": "catalog:",
-    "tslib": "catalog:",
-    "typescript": "4.4.4",
+    "typescript": "catalog:",
     "vue": "catalog:vue"
   },
   "dependencies": {

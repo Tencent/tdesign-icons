@@ -84,6 +84,7 @@ catalog:
   tailwind-merge: ^2.3.0
   ts-node: ^9.1.1
   tslib: ^2.1.0
+  typescript: ^5.7.3
   uppercamelcase: ^3.0.0
   vue-loader: ^17.0.0
   vue-template-compiler: 2.7.14

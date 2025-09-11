@@ -95,7 +95,7 @@ catalogs:
     "vue": "~2.6.12"
   vue27:
     "vue": "2.7.14"  
-  vue3:
+  vue:
     "vue": "^3.5.21"
   react:
     "react": "^19.0.0"

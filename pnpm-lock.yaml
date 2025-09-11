@@ -303,6 +303,10 @@ catalogs:
     '@types/uppercamelcase':
       specifier: ^3.0.0
       version: 3.0.2
+  vue:
+    vue:
+      specifier: ^3.5.21
+      version: 3.5.21
   vue26:
     vue:
       specifier: ~2.6.12
@@ -311,10 +315,6 @@ catalogs:
     vue:
       specifier: 2.7.14
       version: 2.7.14
-  vue3:
-    vue:
-      specifier: ^3.5.21
-      version: 3.5.21
 
 importers:
 
@@ -833,7 +833,7 @@ importers:
         specifier: 4.4.4
         version: 4.4.4
       vue:
-        specifier: catalog:vue3
+        specifier: catalog:vue
         version: 3.5.21(typescript@4.4.4)
 
   packages/web-components:
@@ -11152,7 +11152,7 @@ snapshots:
   '@babel/helper-function-name@7.23.0':
     dependencies:
       '@babel/template': 7.27.2
-      '@babel/types': 7.28.0
+      '@babel/types': 7.28.4
 
   '@babel/helper-globals@7.28.0': {}
 
@@ -11166,7 +11166,7 @@ snapshots:
 
   '@babel/helper-member-expression-to-functions@7.23.0':
     dependencies:
-      '@babel/types': 7.28.0
+      '@babel/types': 7.28.4
 
   '@babel/helper-module-imports@7.22.15':
     dependencies:
@@ -12501,7 +12501,7 @@ snapshots:
 
   '@jridgewell/gen-mapping@0.3.12':
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.4
+      '@jridgewell/sourcemap-codec': 1.5.5
       '@jridgewell/trace-mapping': 0.3.29
 
   '@jridgewell/gen-mapping@0.3.3':

@@ -66,7 +66,7 @@
     "rollup-plugin-vue": "catalog:",
     "tslib": "catalog:",
     "typescript": "4.4.4",
-    "vue": "catalog:vue3"
+    "vue": "catalog:vue"
   },
   "dependencies": {
     "@babel/runtime": "^7.16.3"

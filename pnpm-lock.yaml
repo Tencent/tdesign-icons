@@ -687,6 +687,9 @@ importers:
       '@rollup/plugin-replace':
         specifier: 'catalog:'
         version: 3.0.0(rollup@2.42.1)
+      '@types/node':
+        specifier: catalog:types
+        version: 22.13.10
       '@vue/babel-plugin-jsx':
         specifier: 'catalog:'
         version: 1.4.0(@babel/core@7.20.12)
@@ -781,6 +784,9 @@ importers:
       '@rollup/plugin-replace':
         specifier: 'catalog:'
         version: 3.0.0(rollup@2.42.1)
+      '@types/node':
+        specifier: catalog:types
+        version: 22.13.10
       '@vue/babel-plugin-jsx':
         specifier: 'catalog:'
         version: 1.4.0(@babel/core@7.20.12)

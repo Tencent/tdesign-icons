@@ -43,7 +43,7 @@
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",
     "camelcase": "catalog:dev",
-    "cross-env": "catalog:",
+    "cross-env": "catalog:dev",
     "decamelize": "catalog:",
     "del": "catalog:",
     "eslint": "^7.23.0",

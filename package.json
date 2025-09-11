@@ -28,7 +28,7 @@
     "generate": "cross-env gulp --require ts-node/register/transpile-only"
   },
   "devDependencies": {
-    "@changesets/cli": "catalog:",
+    "@changesets/cli": "catalog:dev",
     "@types/fs-extra": "catalog:types",
     "@types/gulp": "catalog:types",
     "@types/gulp-concat": "catalog:types",
@@ -42,7 +42,7 @@
     "@types/through2": "catalog:types",
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",
-    "camelcase": "catalog:",
+    "camelcase": "catalog:dev",
     "cross-env": "catalog:",
     "decamelize": "catalog:",
     "del": "catalog:",

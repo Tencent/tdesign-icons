@@ -32,7 +32,7 @@
     "lodash": "catalog:",
     "tdesign-icons-vue": "catalog:tdesign",
     "tdesign-vue": "catalog:tdesign",
-    "vue": "catalog:vue2",
+    "vue": "catalog:vue27",
     "@popperjs/core": "catalog:"
   },
   "devDependencies": {

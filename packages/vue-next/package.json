@@ -47,7 +47,7 @@
     "@rollup/plugin-node-resolve": "catalog:",
     "@rollup/plugin-replace": "catalog:",
     "@vue/babel-plugin-jsx": "catalog:",
-    "@vue/babel-preset-jsx": "^1.2.4",
+    "@vue/babel-preset-jsx": "catalog:",
     "@types/node": "catalog:types",
     "camelcase": "catalog:",
     "concurrently": "catalog:",

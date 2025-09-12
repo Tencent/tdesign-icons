@@ -282,14 +282,14 @@ catalogs:
       specifier: ^4.0.6
       version: 4.0.6
     '@types/gulp-concat':
-      specifier: ^0.0.32
-      version: 0.0.32
+      specifier: ^0.0.37
+      version: 0.0.37
     '@types/gulp-rename':
       specifier: ^0.0.33
       version: 0.0.33
     '@types/gulp-sourcemaps':
-      specifier: ^0.0.34
-      version: 0.0.34
+      specifier: ^0.0.38
+      version: 0.0.38
     '@types/gulp-svg-sprite':
       specifier: ^1.2.32
       version: 1.2.32
@@ -352,13 +352,13 @@ importers:
         version: 4.0.6
       '@types/gulp-concat':
         specifier: catalog:types
-        version: 0.0.32
+        version: 0.0.37
       '@types/gulp-rename':
         specifier: catalog:types
         version: 0.0.33
       '@types/gulp-sourcemaps':
         specifier: catalog:types
-        version: 0.0.34
+        version: 0.0.38
       '@types/gulp-svg-sprite':
         specifier: catalog:types
         version: 1.2.32
@@ -2562,14 +2562,14 @@ packages:
   '@types/glob@7.2.0':
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
 
-  '@types/gulp-concat@0.0.32':
-    resolution: {integrity: sha512-CUCFADlITzzBfBa2bdGzhKtvBr4eFh+evb+4igVbvPoO5RyPfHifmyQlZl6lM7q19+OKncRlFXDU7B4X9Ayo2g==}
+  '@types/gulp-concat@0.0.37':
+    resolution: {integrity: sha512-9u4JH3FtkqygduLUljI/jRZJ/yC0urfxUAQmlHWZaT1jGAtv9mxFiOuujE6fEIwdzMYkc0cLVJs0VW+SzXll3Q==}
 
   '@types/gulp-rename@0.0.33':
     resolution: {integrity: sha512-FIZQvbZJj6V1gHPTzO+g/BCWpDur7fJrroae4gwV3LaoHBQ+MrR9sB+2HssK8fHv4WdY6hVNxkcft9bYatuPIA==}
 
-  '@types/gulp-sourcemaps@0.0.34':
-    resolution: {integrity: sha512-FOn9QOQpiH27Ay6Gy7bEl465+TzJ/QmIXgXD/oYptyX5W8wy8DZ7ZacIBAIOUylC68RT8qIYo+5KJG4OUfiFQQ==}
+  '@types/gulp-sourcemaps@0.0.38':
+    resolution: {integrity: sha512-9wm+P44eM/VKZSYwGDwalOH6rnvNckwfPgz0gEUlTzjKH1OsSbexdvE8aKBt+8syEkq827Fu+4gV17/EyUtH9w==}
 
   '@types/gulp-svg-sprite@1.2.32':
     resolution: {integrity: sha512-5Ep96PgwrCYiVG5wu0CGJOUd6LZTZwWSGN5qJd3Vo+HsEhbnIGM+RiRtDlrD66Th+vvGCtdAJB/vMAZh27MrBA==}
@@ -11761,7 +11761,7 @@ snapshots:
       '@types/minimatch': 3.0.5
       '@types/node': 22.13.10
 
-  '@types/gulp-concat@0.0.32':
+  '@types/gulp-concat@0.0.37':
     dependencies:
       '@types/node': 22.13.10
 
@@ -11769,7 +11769,7 @@ snapshots:
     dependencies:
       '@types/node': 22.13.10
 
-  '@types/gulp-sourcemaps@0.0.34':
+  '@types/gulp-sourcemaps@0.0.38':
     dependencies:
       '@types/node': 22.13.10
       '@types/vinyl': 2.0.7

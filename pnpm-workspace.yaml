@@ -110,9 +110,9 @@ catalogs:
   types:
     "@types/fs-extra": ^9.0.9
     "@types/gulp": ^4.0.6
-    "@types/gulp-concat": ^0.0.32
+    "@types/gulp-concat": ^0.0.37
     "@types/gulp-rename": ^0.0.33
-    "@types/gulp-sourcemaps": ^0.0.34
+    "@types/gulp-sourcemaps": ^0.0.38
     "@types/gulp-svg-sprite": ^1.2.32
     "@types/node": ^22.10.2
     "@types/merge-stream": ^1.1.2

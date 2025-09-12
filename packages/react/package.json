@@ -56,9 +56,9 @@
     "@types/node": "catalog:types",
     "@types/react": "catalog:types",
     "@types/react-dom": "catalog:types",
-    "camelcase": "catalog:dev",
+    "camelcase": "catalog:",
     "concurrently": "catalog:",
-    "cross-env": "catalog:dev",
+    "cross-env": "catalog:",
     "esbuild": "catalog:",
     "less": "catalog:",
     "postcss": "catalog:",
@@ -76,7 +76,7 @@
     "typescript": "catalog:"
   },
   "dependencies": {
-    "@babel/runtime": "^7.16.5",
+    "@babel/runtime": "catalog:",
     "classnames": "catalog:"
   }
 }

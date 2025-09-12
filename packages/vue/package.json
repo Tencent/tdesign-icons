@@ -53,9 +53,9 @@
     "@vue/babel-plugin-jsx": "catalog:",
     "@vue/babel-preset-jsx": "^1.2.4",
     "@vue/compiler-sfc": "catalog:",
-    "camelcase": "catalog:dev",
+    "camelcase": "catalog:",
     "concurrently": "catalog:",
-    "cross-env": "catalog:dev",
+    "cross-env": "catalog:",
     "esbuild": "catalog:",
     "less": "catalog:",
     "postcss": "catalog:",
@@ -74,7 +74,7 @@
     "vue": "catalog:vue26"
   },
   "dependencies": {
-    "@babel/runtime": "^7.16.3",
+    "@babel/runtime": "catalog:",
     "classnames": "catalog:"
   }
 }

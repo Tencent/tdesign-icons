@@ -50,9 +50,9 @@
     "@rollup/plugin-node-resolve": "catalog:",
     "@rollup/plugin-replace": "catalog:",
     "@types/node": "catalog:types",
-    "camelcase": "catalog:dev",
+    "camelcase": "catalog:",
     "concurrently": "catalog:",
-    "cross-env": "catalog:dev",
+    "cross-env": "catalog:",
     "esbuild": "catalog:",
     "less": "catalog:",
     "postcss": "catalog:",
@@ -68,10 +68,10 @@
     "rollup-plugin-styles": "catalog:",
     "rollup-plugin-terser": "catalog:",
     "tslib": "catalog:",
-    "typescript": "5.5.3"
+    "typescript": "catalog:"
   },
   "dependencies": {
-    "@babel/runtime": "^7.16.5",
+    "@babel/runtime": "catalog:",
     "clsx": "catalog:",
     "omi": "catalog:",
     "tailwind-merge": "catalog:"

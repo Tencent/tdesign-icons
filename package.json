@@ -28,7 +28,7 @@
     "generate": "cross-env gulp --require ts-node/register/transpile-only"
   },
   "devDependencies": {
-    "@changesets/cli": "catalog:dev",
+    "@changesets/cli": "catalog:",
     "@types/fs-extra": "catalog:types",
     "@types/gulp": "catalog:types",
     "@types/gulp-concat": "catalog:types",
@@ -42,11 +42,11 @@
     "@types/through2": "catalog:types",
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",
-    "camelcase": "catalog:dev",
-    "cross-env": "catalog:dev",
+    "camelcase": "catalog:",
+    "cross-env": "catalog:",
     "decamelize": "catalog:",
     "del": "catalog:",
-    "eslint": "^7.23.0",
+    "eslint": "catalog:",
     "eslint-config-airbnb-base": "catalog:",
     "eslint-plugin-import": "catalog:",
     "fs-extra": "catalog:",
@@ -62,7 +62,6 @@
     "gulp-svg-sprite": "catalog:",
     "gulp-typescript": "catalog:",
     "husky": "catalog:",
-    "lerna": "catalog:",
     "lint-staged": "catalog:",
     "merge-stream": "catalog:",
     "merge2": "catalog:",
@@ -71,7 +70,7 @@
     "svg-parser": "catalog:",
     "svgo": "catalog:",
     "ts-node": "catalog:",
-    "typescript": "^4.1.3",
+    "typescript": "catalog:",
     "xmldom": "catalog:"
   },
   "dependencies": {

@@ -38,7 +38,6 @@
     "@types/merge-stream": "catalog:types",
     "@types/merge2": "catalog:types",
     "@types/svg-parser": "catalog:types",
-    "@types/svgo": "catalog:types",
     "@types/through2": "catalog:types",
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",

@@ -36,6 +36,7 @@
     "@types/gulp-svg-sprite": "catalog:types",
     "@types/svg-parser": "catalog:types",
     "@types/through2": "catalog:types",
+    "@types/xmldom": "catalog:types",
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",
     "camelcase": "catalog:",

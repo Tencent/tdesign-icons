@@ -68,7 +68,7 @@ catalog:
   postcss: ^8.4.4
   raw-loader: ^4.0.2
   react-native-svg: ^13.9.0
-  rimraf: ^5.0.7
+  rimraf: ^6.0.1
   rollup: ^2.42.1
   rollup-plugin-copy: ^3.5.0
   rollup-plugin-esbuild: ^4.7.2

@@ -100,8 +100,8 @@ catalogs:
       specifier: ^10.0.0
       version: 10.0.0
     decamelize:
-      specifier: ^5.0.0
-      version: 5.0.0
+      specifier: ^6.0.1
+      version: 6.0.1
     del:
       specifier: ^8.0.0
       version: 8.0.0
@@ -362,7 +362,7 @@ importers:
         version: 10.0.0
       decamelize:
         specifier: 'catalog:'
-        version: 5.0.0
+        version: 6.0.1
       del:
         specifier: 'catalog:'
         version: 8.0.0
@@ -4349,9 +4349,9 @@ packages:
     resolution: {integrity: sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==}
     engines: {node: '>=0.10.0'}
 
-  decamelize@5.0.0:
-    resolution: {integrity: sha512-U75DcT5hrio3KNtvdULAWnLiAPbFUC4191ldxMmj4FA/mRuBnmDwU0boNfPyFRhnan+Jm+haLeSn3P0afcBn4w==}
-    engines: {node: '>=10'}
+  decamelize@6.0.1:
+    resolution: {integrity: sha512-G7Cqgaelq68XHJNGlZ7lrNQyhZGsFqpwtGFexqUv4IQdjKoSYF7ipZ9UuTJZUSQXFj/XaoBLuEVIVqr8EJngEQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   decimal.js@10.6.0:
     resolution: {integrity: sha512-YpgQiITW3JXGntzdUmyUR1V812Hn8T1YVXhCu+wO3OpS4eU9l4YdD3qjyiKdV6mvV29zapkMeD390UVEf2lkUg==}
@@ -13904,7 +13904,7 @@ snapshots:
 
   decamelize@1.2.0: {}
 
-  decamelize@5.0.0: {}
+  decamelize@6.0.1: {}
 
   decimal.js@10.6.0: {}
 

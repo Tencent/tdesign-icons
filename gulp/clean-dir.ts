@@ -1,3 +1,3 @@
-import del from 'del';
+import { deleteAsync } from 'del';
 
-export const clearDir = (paths: string[]) => () => del(paths);
+export const clearDir = (paths: string[]) => () => deleteAsync(paths);

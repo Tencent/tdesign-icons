@@ -62,8 +62,6 @@ catalog:
   less: ^4.1.2
   lint-staged: ^16.1.6
   lodash: ^4.17.21
-  merge-stream: ^2.0.0
-  merge2: ^1.4.1
   omi: ^7.6.17
   oslllo-svg-fixer: ^5.0.0
   path: ^0.12.7
@@ -112,8 +110,6 @@ catalogs:
     "@types/gulp-sourcemaps": ^0.0.38
     "@types/gulp-svg-sprite": ^1.2.36
     "@types/node": ^22.10.2
-    "@types/merge-stream": ^1.1.2
-    "@types/merge2": ^1.4.4
     "@types/react": ^19.0.0
     "@types/react-dom": ^19.0.0
     "@types/svg-parser": ^2.0.6

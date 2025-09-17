@@ -45,7 +45,7 @@ catalog:
   eslint-config-airbnb-base: ^14.2.1
   eslint-plugin-import: ^2.25.2
   eslint-plugin-vue: ^8.0.3
-  fs-extra: ^9.1.0
+  fs-extra: ^11.3.2
   gulp: ^4.0.2
   gulp-clone: ^2.0.1
   gulp-concat: ^2.6.1
@@ -106,7 +106,7 @@ catalogs:
     "tdesign-vue": "1.13.1-naruto"
     "tdesign-icons-vue": "^0.4.0"
   types:
-    "@types/fs-extra": ^9.0.9
+    "@types/fs-extra": ^11.0.4
     "@types/gulp": ^4.0.17
     "@types/gulp-concat": ^0.0.37
     "@types/gulp-rename": ^0.0.33

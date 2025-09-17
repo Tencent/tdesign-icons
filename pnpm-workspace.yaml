@@ -39,7 +39,7 @@ catalog:
   core-js: ^3.8.3
   cross-env: ^10.0.0
   decamelize: ^5.0.0
-  del: ^6.0.0
+  del: ^8.0.0
   esbuild: ^0.14.0
   eslint: "^7.23.0"
   eslint-config-airbnb-base: ^14.2.1

@@ -21,8 +21,7 @@
   },
   "scripts": {
     "preinstall": "npx -y only-allow pnpm",
-    "husky": "husky",
-    "prepare": "husky install",
+    "prepare": "husky",
     "dev:icons": "pnpm -C packages/view dev ",
     "lint": "eslint ./packages --max-warnings 0 --ext .ts,.tsx --fix",
     "generate": "cross-env gulp --require ts-node/register/transpile-only"

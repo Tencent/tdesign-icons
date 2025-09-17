@@ -6,32 +6,33 @@ packages:
   - packages/vue
   - packages/react-native
   - packages/web-components
+
 catalog:
-  "@babel/core": ^7.20.12
-  "@babel/runtime": "^7.16.5"
-  "@babel/eslint-parser": ^7.12.16
-  "@babel/plugin-transform-react-jsx": ^7.16.0
-  "@babel/plugin-transform-runtime": ^7.16.4
-  "@babel/preset-env": ^7.16.4
-  "@babel/preset-react": ^7.16.0
-  "@changesets/cli": ^2.29.7
-  "@popperjs/core": ^2.11.0
-  "@rollup/plugin-babel": ^5.3.0
-  "@rollup/plugin-commonjs": ^20.0.0
-  "@rollup/plugin-json": ^6.1.0
-  "@rollup/plugin-node-resolve": ^13.0.4
-  "@rollup/plugin-replace": ^3.0.0
-  "@svgr/core": ^6.1.2
-  "@svgr/plugin-prettier": ^8.1.0
-  "@svgr/plugin-svgo": ^6.2.0
-  "@typescript-eslint/eslint-plugin": ^4.20.0
-  "@typescript-eslint/parser": ^4.20.0
-  "@vue/babel-plugin-jsx": ^1.1.1
-  "@vue/babel-preset-jsx": ^1.4.0
-  "@vue/cli-plugin-babel": ~5.0.0
-  "@vue/cli-plugin-eslint": ~5.0.0
-  "@vue/cli-service": ~5.0.0
-  "@vue/compiler-sfc": ^3.2.26
+  '@babel/core': ^7.20.12
+  '@babel/eslint-parser': ^7.12.16
+  '@babel/plugin-transform-react-jsx': ^7.16.0
+  '@babel/plugin-transform-runtime': ^7.16.4
+  '@babel/preset-env': ^7.16.4
+  '@babel/preset-react': ^7.16.0
+  '@babel/runtime': ^7.16.5
+  '@changesets/cli': ^2.29.7
+  '@popperjs/core': ^2.11.0
+  '@rollup/plugin-babel': ^5.3.0
+  '@rollup/plugin-commonjs': ^20.0.0
+  '@rollup/plugin-json': ^6.1.0
+  '@rollup/plugin-node-resolve': ^13.0.4
+  '@rollup/plugin-replace': ^3.0.0
+  '@svgr/core': ^6.1.2
+  '@svgr/plugin-prettier': ^8.1.0
+  '@svgr/plugin-svgo': ^6.2.0
+  '@typescript-eslint/eslint-plugin': ^4.20.0
+  '@typescript-eslint/parser': ^4.20.0
+  '@vue/babel-plugin-jsx': ^1.1.1
+  '@vue/babel-preset-jsx': ^1.4.0
+  '@vue/cli-plugin-babel': ~5.0.0
+  '@vue/cli-plugin-eslint': ~5.0.0
+  '@vue/cli-service': ~5.0.0
+  '@vue/compiler-sfc': ^3.2.26
   camelcase: ^8.0.0
   classnames: ^2.2.6
   clsx: ^2.1.1
@@ -41,7 +42,7 @@ catalog:
   decamelize: ^6.0.1
   del: ^8.0.0
   esbuild: ^0.14.0
-  eslint: "^7.23.0"
+  eslint: ^7.23.0
   eslint-config-airbnb-base: ^14.2.1
   eslint-plugin-import: ^2.25.2
   eslint-plugin-vue: ^8.0.3
@@ -50,7 +51,7 @@ catalog:
   gulp-clone: ^2.0.1
   gulp-concat: ^2.6.1
   gulp-header: ^2.0.9
-  gulp-iconfont: 10.0.3
+  gulp-iconfont: 12.0.0
   gulp-iconfont-css: ^3.0.0
   gulp-merge: ^0.1.1
   gulp-rename: ^2.1.0
@@ -89,28 +90,29 @@ catalog:
   vue-loader: ^17.0.0
   vue-template-compiler: 2.7.14
   xmldom: ^0.6.0
+
 catalogs:
-  vue26:
-    "vue": "~2.6.12"
-  vue27:
-    "vue": "2.7.14"
-  vue:
-    "vue": "^3.5.21"
   react:
-    "react": "^19.0.0"
-    "react-dom": "^19.0.0"
+    react: ^19.0.0
+    react-dom: ^19.0.0
   tdesign:
-    "tdesign-vue": "1.13.1-naruto"
-    "tdesign-icons-vue": "^0.4.0"
+    tdesign-icons-vue: ^0.4.0
+    tdesign-vue: 1.13.1-naruto
   types:
-    "@types/fs-extra": ^11.0.4
-    "@types/gulp": ^4.0.17
-    "@types/gulp-concat": ^0.0.37
-    "@types/gulp-rename": ^2.0.6
-    "@types/gulp-sourcemaps": ^0.0.38
-    "@types/gulp-svg-sprite": ^1.2.36
-    "@types/node": ^22.10.2
-    "@types/react": ^19.0.0
-    "@types/react-dom": ^19.0.0
-    "@types/svg-parser": ^2.0.6
-    "@types/through2": ^2.0.41
+    '@types/fs-extra': ^11.0.4
+    '@types/gulp': ^4.0.17
+    '@types/gulp-concat': ^0.0.37
+    '@types/gulp-rename': ^2.0.6
+    '@types/gulp-sourcemaps': ^0.0.38
+    '@types/gulp-svg-sprite': ^1.2.36
+    '@types/node': ^22.10.2
+    '@types/react': ^19.0.0
+    '@types/react-dom': ^19.0.0
+    '@types/svg-parser': ^2.0.6
+    '@types/through2': ^2.0.41
+  vue:
+    vue: ^3.5.21
+  vue26:
+    vue: ~2.6.12
+  vue27:
+    vue: 2.7.14

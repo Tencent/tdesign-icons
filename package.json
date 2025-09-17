@@ -24,7 +24,7 @@
     "prepare": "husky",
     "dev:icons": "pnpm -C packages/view dev ",
     "lint": "eslint ./packages --max-warnings 0 --ext .ts,.tsx --fix",
-    "generate": "cross-env gulp --require ts-node/register/transpile-only"
+    "generate": "cross-env gulp --preload ts-node/register/transpile-only"
   },
   "devDependencies": {
     "@changesets/cli": "catalog:",

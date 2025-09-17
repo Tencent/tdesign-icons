@@ -46,7 +46,7 @@ catalog:
   eslint-plugin-import: ^2.25.2
   eslint-plugin-vue: ^8.0.3
   fs-extra: ^11.3.2
-  gulp: ^4.0.2
+  gulp: ^5.0.1
   gulp-clone: ^2.0.1
   gulp-concat: ^2.6.1
   gulp-header: ^2.0.9

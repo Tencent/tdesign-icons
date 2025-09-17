@@ -145,8 +145,8 @@ catalogs:
       specifier: ^0.1.1
       version: 0.1.1
     gulp-rename:
-      specifier: ^2.0.0
-      version: 2.0.0
+      specifier: ^2.1.0
+      version: 2.1.0
     gulp-sourcemaps:
       specifier: ^3.0.0
       version: 3.0.0
@@ -286,8 +286,8 @@ catalogs:
       specifier: ^0.0.37
       version: 0.0.37
     '@types/gulp-rename':
-      specifier: ^0.0.33
-      version: 0.0.33
+      specifier: ^2.0.6
+      version: 2.0.6
     '@types/gulp-sourcemaps':
       specifier: ^0.0.38
       version: 0.0.38
@@ -353,7 +353,7 @@ importers:
         version: 0.0.37
       '@types/gulp-rename':
         specifier: catalog:types
-        version: 0.0.33
+        version: 2.0.6
       '@types/gulp-sourcemaps':
         specifier: catalog:types
         version: 0.0.38
@@ -425,7 +425,7 @@ importers:
         version: 0.1.1
       gulp-rename:
         specifier: 'catalog:'
-        version: 2.0.0
+        version: 2.1.0
       gulp-sourcemaps:
         specifier: 'catalog:'
         version: 3.0.0
@@ -2568,8 +2568,8 @@ packages:
   '@types/gulp-concat@0.0.37':
     resolution: {integrity: sha512-9u4JH3FtkqygduLUljI/jRZJ/yC0urfxUAQmlHWZaT1jGAtv9mxFiOuujE6fEIwdzMYkc0cLVJs0VW+SzXll3Q==}
 
-  '@types/gulp-rename@0.0.33':
-    resolution: {integrity: sha512-FIZQvbZJj6V1gHPTzO+g/BCWpDur7fJrroae4gwV3LaoHBQ+MrR9sB+2HssK8fHv4WdY6hVNxkcft9bYatuPIA==}
+  '@types/gulp-rename@2.0.6':
+    resolution: {integrity: sha512-pvZdJ004TpC4Ohk9l0CxEXzS9E0L72b5n6lkIEIaWUIy/RlqnkDMHVtEC6InDjd4rt0jZKcvTrDKxeT96WUYnw==}
 
   '@types/gulp-sourcemaps@0.0.38':
     resolution: {integrity: sha512-9wm+P44eM/VKZSYwGDwalOH6rnvNckwfPgz0gEUlTzjKH1OsSbexdvE8aKBt+8syEkq827Fu+4gV17/EyUtH9w==}
@@ -5425,8 +5425,8 @@ packages:
   gulp-merge@0.1.1:
     resolution: {integrity: sha512-jOK3EwmchqLJLueHH4yK/TWydUmqnYkZzkjIRtPs4J0ZGWT6R8zB/ibL1QQak0ghq+C4N1LgqlVko2Tn/skhVA==}
 
-  gulp-rename@2.0.0:
-    resolution: {integrity: sha512-97Vba4KBzbYmR5VBs9mWmK+HwIf5mj+/zioxfZhOKeXtx5ZjBk57KFlePf5nxq9QsTtFl0ejnHE3zTC9MHXqyQ==}
+  gulp-rename@2.1.0:
+    resolution: {integrity: sha512-dGuzuH8jQGqCMqC544IEPhs5+O2l+IkdoSZsgd4kY97M1CxQeI3qrmweQBIrxLBbjbe/8uEWK8HHcNBc3OCy4g==}
     engines: {node: '>=4'}
 
   gulp-sourcemaps@3.0.0:
@@ -11740,9 +11740,10 @@ snapshots:
     dependencies:
       '@types/node': 22.13.10
 
-  '@types/gulp-rename@0.0.33':
+  '@types/gulp-rename@2.0.6':
     dependencies:
       '@types/node': 22.13.10
+      '@types/vinyl': 2.0.7
 
   '@types/gulp-sourcemaps@0.0.38':
     dependencies:
@@ -15256,7 +15257,7 @@ snapshots:
     dependencies:
       through2: 1.1.1
 
-  gulp-rename@2.0.0: {}
+  gulp-rename@2.1.0: {}
 
   gulp-sourcemaps@3.0.0:
     dependencies:

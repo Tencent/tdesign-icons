@@ -60,7 +60,7 @@ catalog:
   husky: ^9.0.0
   jsdom: ^26.1.0
   less: ^4.1.2
-  lint-staged: ^10.5.4
+  lint-staged: ^16.1.6
   lodash: ^4.17.21
   merge-stream: ^2.0.0
   merge2: ^1.4.1

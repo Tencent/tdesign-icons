@@ -82,8 +82,8 @@ catalogs:
       specifier: ^3.2.26
       version: 3.5.17
     camelcase:
-      specifier: ^6.2.0
-      version: 6.2.0
+      specifier: ^8.0.0
+      version: 8.0.0
     classnames:
       specifier: ^2.2.6
       version: 2.2.6
@@ -249,9 +249,6 @@ catalogs:
     typescript:
       specifier: ^5.7.3
       version: 5.8.2
-    uppercamelcase:
-      specifier: ^3.0.0
-      version: 3.0.0
     vue-loader:
       specifier: ^17.0.0
       version: 17.0.0
@@ -315,9 +312,6 @@ catalogs:
     '@types/through2':
       specifier: ^2.0.41
       version: 2.0.41
-    '@types/uppercamelcase':
-      specifier: ^3.0.0
-      version: 3.0.2
   vue:
     vue:
       specifier: ^3.5.21
@@ -380,7 +374,7 @@ importers:
         version: 4.20.0(eslint@7.32.0)(typescript@5.8.2)
       camelcase:
         specifier: 'catalog:'
-        version: 6.2.0
+        version: 8.0.0
       cross-env:
         specifier: 'catalog:'
         version: 10.0.0
@@ -516,7 +510,7 @@ importers:
         version: 19.0.4(@types/react@19.0.12)
       camelcase:
         specifier: 'catalog:'
-        version: 6.2.0
+        version: 8.0.0
       concurrently:
         specifier: 'catalog:'
         version: 6.4.0
@@ -587,18 +581,12 @@ importers:
       '@svgr/plugin-svgo':
         specifier: 'catalog:'
         version: 6.5.1(@svgr/core@6.5.1)
-      '@types/uppercamelcase':
-        specifier: catalog:types
-        version: 3.0.2
       fs-extra:
         specifier: 'catalog:'
         version: 11.3.2
       path:
         specifier: 'catalog:'
         version: 0.12.7
-      uppercamelcase:
-        specifier: 'catalog:'
-        version: 3.0.0
 
   packages/svg: {}
 
@@ -701,7 +689,7 @@ importers:
         version: 3.5.17
       camelcase:
         specifier: 'catalog:'
-        version: 6.2.0
+        version: 8.0.0
       concurrently:
         specifier: 'catalog:'
         version: 6.4.0
@@ -795,7 +783,7 @@ importers:
         version: 1.4.0(@babel/core@7.20.12)(vue@3.5.21(typescript@5.8.2))
       camelcase:
         specifier: 'catalog:'
-        version: 6.2.0
+        version: 8.0.0
       concurrently:
         specifier: 'catalog:'
         version: 6.4.0
@@ -892,7 +880,7 @@ importers:
         version: 22.13.10
       camelcase:
         specifier: 'catalog:'
-        version: 6.2.0
+        version: 8.0.0
       concurrently:
         specifier: 'catalog:'
         version: 6.4.0
@@ -2730,9 +2718,6 @@ packages:
   '@types/undertaker@1.2.8':
     resolution: {integrity: sha512-gW3PRqCHYpo45XFQHJBhch7L6hytPsIe0QeLujlnFsjHPnXLhJcPdN6a9368d7aIQgH2I/dUTPFBlGeSNA3qOg==}
 
-  '@types/uppercamelcase@3.0.2':
-    resolution: {integrity: sha512-eN0uOi+ZnM0gLpzLo0vK6V6JVc66Co/AnHDE8othLYHqc/Txeo13Y3efRo+6GX/m5MHG4jaL7HciYgeF3xXd9A==}
-
   '@types/validator@13.11.1':
     resolution: {integrity: sha512-d/MUkJYdOeKycmm75Arql4M5+UuXmf4cHdHKsyw1GcvnNgL6s77UkgSgJ8TE/rI5PYsnwYq5jkcWBLuN/MpQ1A==}
 
@@ -3614,10 +3599,6 @@ packages:
     resolution: {integrity: sha512-4nhGqUkc4BqbBBB4Q6zLuD7lzzrHYrjKGeYaEji/3tFR5VdJu9v+LilhGIVe8wxEJPPOeWo7eg8dwY13TZ1BNg==}
     engines: {node: '>=0.10.0'}
 
-  camelcase@4.1.0:
-    resolution: {integrity: sha512-FxAv7HpHrXbh3aPo4o2qxHay2lkLY3x5Mw3KeE4KQE8ysVfziWeRZDwcjauvwBSGEC/nXUPzZy8zeh4HokqOnw==}
-    engines: {node: '>=4'}
-
   camelcase@5.3.1:
     resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
     engines: {node: '>=6'}
@@ -3625,6 +3606,10 @@ packages:
   camelcase@6.2.0:
     resolution: {integrity: sha512-c7wVvbw3f37nuobQNtgsgG9POC9qMbNuMQmTCqZv23b6MIz0fcYpBiOlv9gEN/hdLdnZTDQhg6e9Dq5M1vKvfg==}
     engines: {node: '>=10'}
+
+  camelcase@8.0.0:
+    resolution: {integrity: sha512-8WB3Jcas3swSvjIeA2yvCJ+Miyz5l1ZmB6HFb9R1317dt9LCQoswg/BGrmAmkWVEszSrrg4RwmO46qIm2OEnSA==}
+    engines: {node: '>=16'}
 
   caniuse-api@3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
@@ -9192,10 +9177,6 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  uppercamelcase@3.0.0:
-    resolution: {integrity: sha512-zTWmRiOJACCdFGWjzye3L5cjSuVdZ/c8C0iHIwVbfORFD8IhGNAO6BOWkZ+fj+SI6/aFbdjGXE6gwPG780H4gQ==}
-    engines: {node: '>=4'}
-
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
@@ -11937,8 +11918,6 @@ snapshots:
       '@types/undertaker-registry': 1.0.1
       async-done: 1.3.2
 
-  '@types/uppercamelcase@3.0.2': {}
-
   '@types/validator@13.11.1': {}
 
   '@types/vinyl-fs@3.0.2':
@@ -13229,11 +13208,11 @@ snapshots:
 
   camelcase@3.0.0: {}
 
-  camelcase@4.1.0: {}
-
   camelcase@5.3.1: {}
 
   camelcase@6.2.0: {}
+
+  camelcase@8.0.0: {}
 
   caniuse-api@3.0.0:
     dependencies:
@@ -19585,10 +19564,6 @@ snapshots:
       browserslist: 4.21.10
       escalade: 3.1.1
       picocolors: 1.1.1
-
-  uppercamelcase@3.0.0:
-    dependencies:
-      camelcase: 4.1.0
 
   uri-js@4.4.1:
     dependencies:

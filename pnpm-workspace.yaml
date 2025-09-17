@@ -32,7 +32,7 @@ catalog:
   "@vue/cli-plugin-eslint": ~5.0.0
   "@vue/cli-service": ~5.0.0
   "@vue/compiler-sfc": ^3.2.26
-  camelcase: ^6.2.0
+  camelcase: ^8.0.0
   classnames: ^2.2.6
   clsx: ^2.1.1
   concurrently: ^6.4.0
@@ -88,7 +88,6 @@ catalog:
   ts-node: ^10.9.2
   tslib: ^2.1.0
   typescript: ^5.7.3
-  uppercamelcase: ^3.0.0
   vue-loader: ^17.0.0
   vue-template-compiler: 2.7.14
   xmldom: ^0.6.0
@@ -119,4 +118,3 @@ catalogs:
     "@types/react-dom": ^19.0.0
     "@types/svg-parser": ^2.0.6
     "@types/through2": ^2.0.41
-    "@types/uppercamelcase": ^3.0.0

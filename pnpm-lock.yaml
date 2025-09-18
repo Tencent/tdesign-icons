@@ -48,6 +48,9 @@ catalogs:
     '@rollup/plugin-replace':
       specifier: ^3.0.0
       version: 3.0.0
+    '@rollup/plugin-terser':
+      specifier: ^0.4.4
+      version: 0.4.4
     '@svgr/core':
       specifier: ^6.1.2
       version: 6.5.1
@@ -219,9 +222,6 @@ catalogs:
     rollup-plugin-styles:
       specifier: ^3.14.1
       version: 3.14.1
-    rollup-plugin-terser:
-      specifier: ^7.0.2
-      version: 7.0.2
     rollup-plugin-vue:
       specifier: ^6.0.0
       version: 6.0.0
@@ -487,6 +487,9 @@ importers:
       '@rollup/plugin-replace':
         specifier: 'catalog:'
         version: 3.0.0(rollup@2.42.1)
+      '@rollup/plugin-terser':
+        specifier: 'catalog:'
+        version: 0.4.4(rollup@2.42.1)
       '@types/node':
         specifier: catalog:types
         version: 22.13.10
@@ -544,9 +547,6 @@ importers:
       rollup-plugin-styles:
         specifier: 'catalog:'
         version: 3.14.1(rollup@2.42.1)
-      rollup-plugin-terser:
-        specifier: 'catalog:'
-        version: 7.0.2(rollup@2.42.1)
       typescript:
         specifier: 'catalog:'
         version: 5.8.2
@@ -663,6 +663,9 @@ importers:
       '@rollup/plugin-replace':
         specifier: 'catalog:'
         version: 3.0.0(rollup@2.42.1)
+      '@rollup/plugin-terser':
+        specifier: 'catalog:'
+        version: 0.4.4(rollup@2.42.1)
       '@types/node':
         specifier: catalog:types
         version: 22.13.10
@@ -717,9 +720,6 @@ importers:
       rollup-plugin-styles:
         specifier: 'catalog:'
         version: 3.14.1(rollup@2.42.1)
-      rollup-plugin-terser:
-        specifier: 'catalog:'
-        version: 7.0.2(rollup@2.42.1)
       rollup-plugin-vue:
         specifier: 'catalog:'
         version: 6.0.0(@vue/compiler-sfc@3.5.17)
@@ -760,6 +760,9 @@ importers:
       '@rollup/plugin-replace':
         specifier: 'catalog:'
         version: 3.0.0(rollup@2.42.1)
+      '@rollup/plugin-terser':
+        specifier: 'catalog:'
+        version: 0.4.4(rollup@2.42.1)
       '@types/node':
         specifier: catalog:types
         version: 22.13.10
@@ -811,9 +814,6 @@ importers:
       rollup-plugin-styles:
         specifier: 'catalog:'
         version: 3.14.1(rollup@2.42.1)
-      rollup-plugin-terser:
-        specifier: 'catalog:'
-        version: 7.0.2(rollup@2.42.1)
       rollup-plugin-vue:
         specifier: 'catalog:'
         version: 6.0.0(@vue/compiler-sfc@3.5.21)
@@ -863,6 +863,9 @@ importers:
       '@rollup/plugin-replace':
         specifier: 'catalog:'
         version: 3.0.0(rollup@2.42.1)
+      '@rollup/plugin-terser':
+        specifier: 'catalog:'
+        version: 0.4.4(rollup@2.42.1)
       '@types/node':
         specifier: catalog:types
         version: 22.13.10
@@ -914,9 +917,6 @@ importers:
       rollup-plugin-styles:
         specifier: 'catalog:'
         version: 3.14.1(rollup@2.42.1)
-      rollup-plugin-terser:
-        specifier: 'catalog:'
-        version: 7.0.2(rollup@2.42.1)
       tslib:
         specifier: 'catalog:'
         version: 2.6.1
@@ -2396,6 +2396,15 @@ packages:
     resolution: {integrity: sha512-3c7JCbMuYXM4PbPWT4+m/4Y6U60SgsnDT/cCyAyUKwFHg7pTSfsSQzIpETha3a3ig6OdOKzZz87D9ZXIK3qsDg==}
     peerDependencies:
       rollup: ^1.20.0 || ^2.0.0
+
+  '@rollup/plugin-terser@0.4.4':
+    resolution: {integrity: sha512-XHeJC5Bgvs8LfukDwWZp7yeqin6ns8RTl2B9avbejt6tZqsqvVoWI7ZTQrcNsfKEDWBTnTxM8nMDkO2IFFbd0A==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
 
   '@rollup/pluginutils@3.1.0':
     resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
@@ -6224,10 +6233,6 @@ packages:
     resolution: {integrity: sha512-ZB7wHqaRGVw/9hST/OuFUReG7M8vKeq0/J2egIGLdvjHCmYqGARhzXmtgi+gVeZ5uXFF219aOc3Ls2yLg27tkw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
-  jest-worker@26.6.2:
-    resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
-    engines: {node: '>= 10.13.0'}
-
   jest-worker@27.5.1:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
@@ -8241,12 +8246,6 @@ packages:
     peerDependencies:
       rollup: ^2.2.0
 
-  rollup-plugin-terser@7.0.2:
-    resolution: {integrity: sha512-w3iIaU4OxcF52UUXiZNsNeuXIMDvFrr+ZXK6bFZ0Q60qyVfq4uLptoS4bbq3paG3x216eQllFZX7zt6TIImguQ==}
-    deprecated: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
-    peerDependencies:
-      rollup: ^2.0.0
-
   rollup-plugin-vue@6.0.0:
     resolution: {integrity: sha512-oVvUd84d5u73M2HYM3XsMDLtZRIA/tw2U0dmHlXU2UWP5JARYHzh/U9vcxaN/x/9MrepY7VH3pHFeOhrWpxs/Q==}
     peerDependencies:
@@ -8378,9 +8377,6 @@ packages:
     resolution: {integrity: sha512-ghgmKt5o4Tly5yEG/UJp8qTd0AN7Xalw4XBtDEKP655B699qMEtra1WlXeE6WIvdEG481JvRxULKsInq/iNysw==}
     engines: {node: '>=0.10.0'}
 
-  serialize-javascript@4.0.0:
-    resolution: {integrity: sha512-GaNA54380uFefWghODBWEGisLZFj00nS5ACs6yHa9nLqlLpVLO8ChDGeKRjZnV4Nh4n0Qi7nhYZD/9fCPzEqkw==}
-
   serialize-javascript@6.0.1:
     resolution: {integrity: sha512-owoXEFjWRllis8/M1Q+Cw5k8ZH40e3zhp/ovX+Xr/vi1qj6QesbyXXViFbpNvWvPNAD62SutwEXavefrLJWj7w==}
 
@@ -8495,6 +8491,9 @@ packages:
   smart-buffer@4.2.0:
     resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
     engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
+
+  smob@1.5.0:
+    resolution: {integrity: sha512-g6T+p7QO8npa+/hNx9ohv1E5pVCmWrVCUzUXJyLdMmftX6ER0oiWY/w9knEonLpnOp6b6FenKnMfR8gqwWdwig==}
 
   sockjs@0.3.24:
     resolution: {integrity: sha512-GJgLTZ7vYb/JtPSSZ10hsOYIvEYsjbNU+zPdIHcUaWVNUEPivzxku31865sSSud0Da0W4lEeOPlmw93zLQchuQ==}
@@ -11125,7 +11124,7 @@ snapshots:
   '@jridgewell/trace-mapping@0.3.29':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
-      '@jridgewell/sourcemap-codec': 1.5.4
+      '@jridgewell/sourcemap-codec': 1.5.5
 
   '@jridgewell/trace-mapping@0.3.9':
     dependencies:
@@ -11614,6 +11613,14 @@ snapshots:
     dependencies:
       '@rollup/pluginutils': 3.1.0(rollup@2.42.1)
       magic-string: 0.25.9
+      rollup: 2.42.1
+
+  '@rollup/plugin-terser@0.4.4(rollup@2.42.1)':
+    dependencies:
+      serialize-javascript: 6.0.1
+      smob: 1.5.0
+      terser: 5.19.2
+    optionalDependencies:
       rollup: 2.42.1
 
   '@rollup/pluginutils@3.1.0(rollup@2.42.1)':
@@ -16217,12 +16224,6 @@ snapshots:
       leven: 3.1.0
       pretty-format: 29.7.0
 
-  jest-worker@26.6.2:
-    dependencies:
-      '@types/node': 22.13.10
-      merge-stream: 2.0.0
-      supports-color: 7.2.0
-
   jest-worker@27.5.1:
     dependencies:
       '@types/node': 22.13.10
@@ -18606,14 +18607,6 @@ snapshots:
       source-map: 0.7.4
       tslib: 2.6.1
 
-  rollup-plugin-terser@7.0.2(rollup@2.42.1):
-    dependencies:
-      '@babel/code-frame': 7.27.1
-      jest-worker: 26.6.2
-      rollup: 2.42.1
-      serialize-javascript: 4.0.0
-      terser: 5.19.2
-
   rollup-plugin-vue@6.0.0(@vue/compiler-sfc@3.5.17):
     dependencies:
       '@vue/compiler-sfc': 3.5.17
@@ -18780,10 +18773,6 @@ snapshots:
 
   serialize-error@2.1.0: {}
 
-  serialize-javascript@4.0.0:
-    dependencies:
-      randombytes: 2.1.0
-
   serialize-javascript@6.0.1:
     dependencies:
       randombytes: 2.1.0
@@ -18927,6 +18916,8 @@ snapshots:
       is-fullwidth-code-point: 5.1.0
 
   smart-buffer@4.2.0: {}
+
+  smob@1.5.0: {}
 
   sockjs@0.3.24:
     dependencies:

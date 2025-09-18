@@ -7,7 +7,7 @@ import vuePlugin from 'rollup-plugin-vue';
 import esbuild from 'rollup-plugin-esbuild';
 import ignoreImport from 'rollup-plugin-ignore-import';
 import replace from '@rollup/plugin-replace';
-import { terser } from 'rollup-plugin-terser';
+import { terser } from '@rollup/plugin-terser';
 
 const extensions = ['.ts', '.tsx'];
 

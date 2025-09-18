@@ -1,3 +1,4 @@
+import type { TaskFunction } from 'undertaker';
 import { parallel, series } from 'gulp';
 
 import { reactTask } from './packages/react/gulp';
@@ -13,8 +14,7 @@ import { iconViewTask } from './packages/view/gulp';
 import { wcTask } from './packages/web-components/gulp';
 
 const source: string[] = ['svg/*.svg'];
-
-export default series(
+const defaultTask: TaskFunction = series(
   parallel(
     reactTask(source),
     vueTask(source),
@@ -27,3 +27,5 @@ export default series(
     wcTask(source),
   ),
 );
+
+export default defaultTask;

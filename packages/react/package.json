@@ -53,6 +53,7 @@
     "@rollup/plugin-commonjs": "catalog:",
     "@rollup/plugin-node-resolve": "catalog:",
     "@rollup/plugin-replace": "catalog:",
+    "@rollup/plugin-terser": "catalog:",
     "@types/node": "catalog:types",
     "@types/react": "catalog:types",
     "@types/react-dom": "catalog:types",
@@ -62,8 +63,8 @@
     "esbuild": "catalog:",
     "less": "catalog:",
     "postcss": "catalog:",
-    "react": "catalog:",
-    "react-dom": "catalog:",
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
     "rollup": "catalog:",
     "rollup-plugin-esbuild": "catalog:",
     "rollup-plugin-ignore-import": "catalog:",
@@ -72,7 +73,6 @@
     "rollup-plugin-postcss": "catalog:",
     "rollup-plugin-static-import": "catalog:",
     "rollup-plugin-styles": "catalog:",
-    "rollup-plugin-terser": "catalog:",
     "typescript": "catalog:"
   },
   "dependencies": {

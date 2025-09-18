@@ -5,8 +5,7 @@ import camelCase from 'camelcase';
 export { renderNode } from './render';
 
 export function upperCamelCase(name: string) {
-  const cased = camelCase.apply(camelCase, [name]);
-  return cased.charAt(0).toUpperCase() + cased.slice(1);
+  return camelCase(name, { pascalCase: true });
 }
 
 export function allSubDirsForLevel(rootPath: string, relativeLevel: number): string[] {

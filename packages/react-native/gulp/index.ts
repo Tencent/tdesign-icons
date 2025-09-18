@@ -2,9 +2,9 @@ import { series } from 'gulp';
 
 import { transform } from '@svgr/core';
 import fs from 'fs-extra';
-import upperCamelCase from 'uppercamelcase';
 import path from 'path';
 import { clearDir } from '../../../gulp/clean-dir';
+import { upperCamelCase } from '../../../gulp/util';
 
 const svgDir = path.join(__dirname, '../../../svg');
 const srcDir = path.join(__dirname, '../src');

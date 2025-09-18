@@ -26,9 +26,7 @@
     "@svgr/core": "catalog:",
     "@svgr/plugin-prettier": "catalog:",
     "@svgr/plugin-svgo": "catalog:",
-    "@types/uppercamelcase": "catalog:types",
     "fs-extra": "catalog:",
-    "path": "catalog:",
-    "uppercamelcase": "catalog:"
+    "path": "catalog:"
   }
 }

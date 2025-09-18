@@ -4,7 +4,7 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 import multiInput from 'rollup-plugin-multi-input';
 import postcss from 'rollup-plugin-postcss';
 import esbuild from 'rollup-plugin-esbuild';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 
 const extensions = ['.ts', '.tsx'];
 

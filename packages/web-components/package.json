@@ -49,6 +49,7 @@
     "@rollup/plugin-json": "catalog:",
     "@rollup/plugin-node-resolve": "catalog:",
     "@rollup/plugin-replace": "catalog:",
+    "@rollup/plugin-terser": "catalog:",
     "@types/node": "catalog:types",
     "camelcase": "catalog:",
     "concurrently": "catalog:",
@@ -66,7 +67,6 @@
     "rollup-plugin-postcss": "catalog:",
     "rollup-plugin-static-import": "catalog:",
     "rollup-plugin-styles": "catalog:",
-    "rollup-plugin-terser": "catalog:",
     "tslib": "catalog:",
     "typescript": "catalog:"
   },

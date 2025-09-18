@@ -46,6 +46,7 @@
     "@rollup/plugin-commonjs": "catalog:",
     "@rollup/plugin-node-resolve": "catalog:",
     "@rollup/plugin-replace": "catalog:",
+    "@rollup/plugin-terser": "catalog:",
     "@vue/babel-plugin-jsx": "catalog:",
     "@vue/babel-preset-jsx": "catalog:",
     "@types/node": "catalog:types",
@@ -63,7 +64,6 @@
     "rollup-plugin-postcss": "catalog:",
     "rollup-plugin-static-import": "catalog:",
     "rollup-plugin-styles": "catalog:",
-    "rollup-plugin-terser": "catalog:",
     "rollup-plugin-vue": "catalog:",
     "typescript": "catalog:",
     "vue": "catalog:vue"

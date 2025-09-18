@@ -21,11 +21,10 @@
   },
   "scripts": {
     "preinstall": "npx -y only-allow pnpm",
-    "husky": "husky",
-    "prepare": "husky install",
+    "prepare": "husky",
     "dev:icons": "pnpm -C packages/view dev ",
     "lint": "eslint ./packages --max-warnings 0 --ext .ts,.tsx --fix",
-    "generate": "cross-env gulp --require ts-node/register/transpile-only"
+    "generate": "cross-env gulp --preload ts-node/register/transpile-only"
   },
   "devDependencies": {
     "@changesets/cli": "catalog:",
@@ -35,11 +34,10 @@
     "@types/gulp-rename": "catalog:types",
     "@types/gulp-sourcemaps": "catalog:types",
     "@types/gulp-svg-sprite": "catalog:types",
-    "@types/merge-stream": "catalog:types",
-    "@types/merge2": "catalog:types",
     "@types/svg-parser": "catalog:types",
-    "@types/svgo": "catalog:types",
     "@types/through2": "catalog:types",
+    "@types/undertaker": "catalog:types",
+    "@types/xmldom": "catalog:types",
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",
     "camelcase": "catalog:",
@@ -63,8 +61,6 @@
     "gulp-typescript": "catalog:",
     "husky": "catalog:",
     "lint-staged": "catalog:",
-    "merge-stream": "catalog:",
-    "merge2": "catalog:",
     "oslllo-svg-fixer": "catalog:",
     "rimraf": "catalog:",
     "svg-parser": "catalog:",

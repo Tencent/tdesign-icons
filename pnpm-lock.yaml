@@ -139,7 +139,7 @@ catalogs:
       specifier: ^2.0.9
       version: 2.0.9
     gulp-iconfont:
-      specifier: ^11.0.1
+      specifier: 11.0.1
       version: 11.0.1
     gulp-iconfont-css:
       specifier: ^3.0.0

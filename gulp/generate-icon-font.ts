@@ -41,39 +41,41 @@ export const generateIconFont = ({
   iconGlob: string;
   targetDir: string;
   fontCssConfig: Object;
-}) => async function generateIconFont() {
-  await useSvgFixer();
-  return src([iconGlob])
-    .pipe(iconfontCss(fontCssConfig))
-    .pipe(
-      iconfont({
-        fontName: 't', // required
-        prependUnicode: true, // recommended option
-        formats: ['svg', 'ttf', 'eot', 'woff'], // default, 'woff2' and 'svg' are available
-        timestamp: runTimestamp, // recommended to get consistent builds when watching files
-        normalize: true,
-        fontHeight: 1024,
-      }),
-    )
-    .on('glyphs', (glyphs: GLYPHS[]) => {
-      glyphs.forEach((item) => {
-        svgMap[item.name] = item.unicode;
-      });
-    })
-    .pipe(dest(targetDir))
-    .on('end', () => {
-      // web-components 需要icon的字体文件，不需要使用cdn的方式
-      ['t.eot', 't.svg', 't.ttf', 't.woff'].forEach((fileName) => {
-        fs.copyFileSync(
-          path.resolve(targetDir, fileName),
-          path.resolve(webComponentsFontsDir, fileName),
+}) => function generateIconFont(done: () => void) {
+  useSvgFixer().then(() => {
+    src([iconGlob])
+      .pipe(iconfontCss(fontCssConfig))
+      .pipe(
+        iconfont({
+          fontName: 't', // required
+          prependUnicode: true, // recommended option
+          formats: ['svg', 'ttf', 'eot', 'woff'], // default, 'woff2' and 'svg' are available
+          timestamp: runTimestamp, // recommended to get consistent builds when watching files
+          normalize: true,
+          fontHeight: 1024,
+        }),
+      )
+      .on('glyphs', (glyphs: GLYPHS[]) => {
+        glyphs.forEach((item) => {
+          svgMap[item.name] = item.unicode;
+        });
+      })
+      .pipe(dest(targetDir))
+      .on('end', () => {
+        // web-components 需要icon的字体文件，不需要使用cdn的方式
+        ['t.eot', 't.svg', 't.ttf', 't.woff'].forEach((fileName) => {
+          fs.copyFileSync(
+            path.resolve(targetDir, fileName),
+            path.resolve(webComponentsFontsDir, fileName),
+          );
+        });
+        fs.writeFileSync(
+          path.resolve(webComponentsFontsDir, 'index.css'),
+          webComponentsCss,
         );
+        done();
       });
-      fs.writeFileSync(
-        path.resolve(webComponentsFontsDir, 'index.css'),
-        webComponentsCss,
-      );
-    });
+  });
 };
 
 function useItemJsonTemplate() {

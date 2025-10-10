@@ -93,7 +93,9 @@ function useItemJsonTemplate() {
 
 function useJsonTemplate() {
   function getContainer(content: string) {
-    return `{"iconName":"t","icons":[${content}]}`;
+    // Remove trailing comma to fix JSON syntax
+    const trimmedContent = content.replace(/,\s*$/, '');
+    return `{"iconName":"t","icons":[${trimmedContent}]}`;
   }
   return createTransformStream((content) => getContainer(content));
 }

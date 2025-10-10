@@ -35,3 +35,4 @@ package-lock.json
 
 # webstorm
 .idea/
+packages/flutter/output/

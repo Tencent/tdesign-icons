@@ -17,7 +17,11 @@ void main(){
     iconsJson.forEach((element) { 
       var model = IconModel();
       model.name = (element["name"] as String).replaceAll("-", '_');
-      model.codepoint = (element["codepoint"] as String).replaceAll("\\", '');
+      String rawCodePoint = element["codepoint"] as String;
+      if (!RegExp(r'^\\[A-Fa-f0-9]{4}$').hasMatch(rawCodePoint)) {
+        throw Exception("Invalid codepoint format: $rawCodePoint for icon name: ${element["name"]}. Expected format: \\\\E001");
+      }
+      model.codepoint = rawCodePoint.replaceAll("\\", '');
       iconList.add(model);
     });
 

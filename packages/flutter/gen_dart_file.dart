@@ -6,8 +6,7 @@ void main(){
   var outputPath = "output/td_icons.dart";
   var indexFile = File(indexPath);
   if(!indexFile.existsSync()){
-    print("indexFile is not exist");
-    return ;
+    throw Exception("indexFile is not exist");
   }
   var indexContent = indexFile.readAsStringSync();
   print("indexContent:\n$indexContent");

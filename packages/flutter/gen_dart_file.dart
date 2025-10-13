@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 void main(){
-  var indexPath = "../../resources/icon-font/dist/index.json";
+  var scriptDir = File.fromUri(Platform.script).parent.path;
+  var indexPath = "$scriptDir/../../resources/icon-font/dist/index.json";
   var outputPath = "output/td_icons.dart";
   var indexFile = File(indexPath);
   if(!indexFile.existsSync()){

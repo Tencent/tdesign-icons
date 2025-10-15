@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.3.2
+
+### Patch Changes
+
+- fix: fix size bug
+
 ## 0.3.1
 
 ### Patch Changes

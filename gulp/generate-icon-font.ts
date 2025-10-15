@@ -57,7 +57,10 @@ export const generateIconFont = ({
     )
     .on('glyphs', (glyphs: GLYPHS[]) => {
       glyphs.forEach((item) => {
-        svgMap[item.name] = item.unicode;
+        iconFonts.push({
+          name: item.name,
+          codepoint: `\\${escape(item.unicode).replace('%u', '')}`,
+        });
       });
     })
     .pipe(dest(targetDir))
@@ -78,11 +81,6 @@ export const generateIconFont = ({
 
 function useItemJsonTemplate() {
   function getItem(content: string, name: string) {
-    iconFonts.push({
-      name,
-      codepoint: `\\${escape(svgMap[name]).replace('%u', '')}`,
-    });
-
     return `{"name": "${name}","svgCode": ${JSON.stringify(content).replace(
       /(\r\n|\n|\r)/gm,
       '',

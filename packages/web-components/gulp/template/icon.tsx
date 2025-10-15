@@ -13,6 +13,7 @@ export default class $ICON_NAME extends IconBase<IconProps> {
     super();
     this.props = {
       ...this.props,
+      style: 'fill:none',
       id: '$KEY',
     }
   }

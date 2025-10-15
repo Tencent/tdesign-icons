@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.3.1
+
+### Patch Changes
+
+- fix: fix bundle bug
+
 ## 0.3.0
 
 ### Major Changes

@@ -1,5 +1,12 @@
 # tdesign-icons-web-components
 
+## 0.3.0
+
+### Major Changes
+
+- feat: add new icons `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no` 、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled`
+- refactor: remove icons `video-camera-3`、`video-camera-3-filled`、 `list`
+
 ## 0.2.7
 
 ### Patch Changes

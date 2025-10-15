@@ -73,7 +73,7 @@ export class IconBase<T extends IconProps> extends Component<T> {
     const combinCls = classname('t-icon', `t-icon-${id}`, sizeClassName, innerClass);
     return render((this.constructor as typeof IconBase).icon as VNode, `${id}`, {
       className: combinCls,
-      style: { ...sizeStyle, ...innerStyle },
+      style: { fill: 'none', ...sizeStyle, ...innerStyle },
       ...restProps,
     });
   }

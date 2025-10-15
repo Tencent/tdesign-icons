@@ -9,7 +9,7 @@ void main(){
     print("indexFile is not exist");
     return ;
   }
-  var indexContent = indexFile.readAsStringSync().replaceFirst('"\\\\E842"},]}', '"\\\\E842"}]}');
+  var indexContent = indexFile.readAsStringSync();
   print("indexContent:\n$indexContent");
   var jsonObj = jsonDecode(indexContent);
   var iconsJson = jsonObj["icons"];

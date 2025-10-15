@@ -127,8 +127,8 @@ export function processSvgSpriteInNode(svgString) {
           if (gEl.nodeType !== TEXT_NODE) {
             // @ts-ignore
             if (gEl.tagName?.toLowerCase?.() === 'g') {
-              const pathELements = Array.from(gEl.childNodes);
-              for (const pathEl of pathELements) {
+              const pathElements = Array.from(gEl.childNodes);
+              for (const pathEl of pathElements) {
                 traverseNodes(pathEl, isSpecified, null);
               }
             } else {

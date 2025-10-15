@@ -28,24 +28,24 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "core-js": "^3.8.3",
-    "lodash": "^4.17.21",
-    "tdesign-icons-vue": "^0.4.0",
-    "tdesign-vue": "1.13.1-naruto",
-    "vue": "2.7.14",
-    "@popperjs/core": "^2.11.0"
+    "core-js": "catalog:",
+    "lodash": "catalog:",
+    "tdesign-icons-vue": "catalog:tdesign",
+    "tdesign-vue": "catalog:tdesign",
+    "vue": "catalog:vue27",
+    "@popperjs/core": "catalog:"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.12",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
+    "@babel/core": "catalog:",
+    "@babel/eslint-parser": "catalog:",
+    "@vue/cli-plugin-babel": "catalog:",
+    "@vue/cli-plugin-eslint": "catalog:",
+    "@vue/cli-service": "catalog:",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "raw-loader": "^4.0.2",
-    "vue-loader": "^17.0.0",
-    "vue-template-compiler": "2.7.14",
-    "@vue/babel-preset-jsx": "^1.3.0"
+    "eslint-plugin-vue": "catalog:",
+    "raw-loader": "catalog:",
+    "vue-loader": "catalog:",
+    "vue-template-compiler": "catalog:",
+    "@vue/babel-preset-jsx": "catalog:"
   }
 }

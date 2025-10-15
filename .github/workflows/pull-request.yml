@@ -72,7 +72,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version-file: .node-version
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
       - run: pnpm run generate
@@ -89,7 +89,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version-file: .node-version
           cache: "pnpm"
 
       - run: pnpm install --frozen-lockfile

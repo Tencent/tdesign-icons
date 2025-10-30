@@ -21,12 +21,14 @@ export function wcTask(source: string[]) {
         iconGenerator: wcGetIconFileContent,
         options: {
           replaceColor: true,
+          propsString: true,
         },
       }),
 
       generateIconsJson({
         options: {
           replaceColor: true,
+          propsString: true,
         },
       }),
 

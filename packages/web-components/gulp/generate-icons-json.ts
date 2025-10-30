@@ -32,7 +32,7 @@ export const generateIconsJson = ({
       return JSON.stringify(iconsJson);
     }))
     .on('end', () => {
-      const svgJsonString = JSON.stringify(iconsJson, undefined, 2).replace(/strokeWidth/g, 'stroke-width').replace(/strokeLinecap/g, 'stroke-linecap');
+      const svgJsonString = JSON.stringify(iconsJson, undefined, 2);
       const iconJson = template.replace(/\$SVGJSON/g, svgJsonString);
       fs.writeFileSync(path.resolve(targetDir, 'svg-icon.ts'), iconJson);
     });

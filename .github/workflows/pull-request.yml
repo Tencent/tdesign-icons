@@ -62,6 +62,7 @@ jobs:
           - tdesign-icons-svg
           - tdesign-icons-view
           - tdesign-icons-web-components
+          - tdesign-icons-flutter
 
     steps:
       - uses: actions/checkout@v4
@@ -74,9 +75,21 @@ jobs:
         with:
           node-version-file: .node-version
           cache: "pnpm"
+
       - run: pnpm install --frozen-lockfile
+
       - run: pnpm run generate
-      - run: pnpm run --filter ${{ matrix.icons }} build  
+
+      - if: matrix.icons != 'tdesign-icons-flutter'
+        run: pnpm run --filter ${{ matrix.icons }} build
+      
+      - if: matrix.icons == 'tdesign-icons-flutter'
+        uses: dart-lang/setup-dart@v1
+
+      - if: matrix.icons == 'tdesign-icons-flutter'
+        run: dart gen_dart_file.dart
+        working-directory: ./packages/flutter  
+
   
   site:
     runs-on: ubuntu-latest

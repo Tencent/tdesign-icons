@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:io';
 
 void main(){
-  var indexPath = "../../resources/icon-font/dist/index.json";
+  var scriptDir = File.fromUri(Platform.script).parent.path;
+  var indexPath = "$scriptDir/../../resources/icon-font/dist/index.json";
   var outputPath = "output/td_icons.dart";
   var indexFile = File(indexPath);
   if(!indexFile.existsSync()){
-    print("indexFile is not exist");
-    return ;
+    throw Exception("indexFile is not exist");
   }
   var indexContent = indexFile.readAsStringSync();
   print("indexContent:\n$indexContent");
@@ -18,7 +18,11 @@ void main(){
     iconsJson.forEach((element) { 
       var model = IconModel();
       model.name = (element["name"] as String).replaceAll("-", '_');
-      model.codepoint = (element["codepoint"] as String).replaceAll("\\", '');
+      String rawCodePoint = (element["codepoint"] as String).replaceAll("\\", '');
+      if (!RegExp(r'^[A-Fa-f0-9]{4}$').hasMatch(rawCodePoint)) {
+        throw Exception("Invalid codepoint format: \\\\$rawCodePoint for icon name: ${element["name"].toString()}. Expected format: \\\\E001");
+      }
+      model.codepoint = rawCodePoint;
       iconList.add(model);
     });
 

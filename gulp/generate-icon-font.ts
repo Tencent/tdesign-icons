@@ -57,9 +57,11 @@ export const generateIconFont = ({
       )
       .on('glyphs', (glyphs: GLYPHS[]) => {
         glyphs.forEach((item) => {
+          const codepoint = `\\${escape(item.unicode).replace('%u', '')}`;
+          svgMap[item.name] = codepoint;
           iconFonts.push({
             name: item.name,
-            codepoint: `\\${escape(item.unicode).replace('%u', '')}`,
+            codepoint,
           });
         });
       })
@@ -86,7 +88,7 @@ function useItemJsonTemplate() {
     return `{"name": "${name}","svgCode": ${JSON.stringify(content).replace(
       /(\r\n|\n|\r)/gm,
       '',
-    )},"codepoint": "\\\\${escape(svgMap[name]).replace('%u', '')}"},`;
+    )},"codepoint": "\\${(svgMap[name])}"},`;
   }
   return createTransformStream((_, { stem: name }) => getItem(_, name));
 }

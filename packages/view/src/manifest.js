@@ -12,7 +12,7 @@ export const manifest = {
         {
           name: 'logo-android-filled',
 
-          keywords: ['安卓标志', 'Android徽标"'],
+          keywords: ['安卓标志', 'Android徽标'],
         },
         {
           name: 'logo-adobe-illustrate-filled',
@@ -82,7 +82,7 @@ export const manifest = {
         {
           name: 'logo-instagram-filled',
 
-          keywords: ['"logo-instagram', '标志Instagram"'],
+          keywords: ['logo-instagram', '标志Instagram'],
         },
         {
           name: 'logo-stackblitz-filled',
@@ -97,7 +97,7 @@ export const manifest = {
         {
           name: 'logo-qq-filled',
 
-          keywords: ['"QQ标志', 'QQ徽标"'],
+          keywords: ['QQ标志', 'QQ徽标'],
         },
         {
           name: 'logo-twitter-filled',
@@ -117,7 +117,7 @@ export const manifest = {
         {
           name: 'logo-youtube-filled',
 
-          keywords: ['"YouTube标志', 'YouTube徽标"'],
+          keywords: ['YouTube标志', 'YouTube徽标'],
         },
         {
           name: 'logo-cnb-filled',
@@ -415,7 +415,7 @@ export const manifest = {
         {
           name: 'cd-filled',
 
-          keywords: ['"进入目录', '转到目录"'],
+          keywords: ['进入目录', '转到目录'],
         },
         {
           name: 'backward-filled',
@@ -465,9 +465,7 @@ export const manifest = {
         {
           name: 'dart-board-filled',
 
-          keywords: [
-            '"dart board', 'dart board" 的两个可能的中文短语翻译为：“飞镖盘', '投镖靶”。',
-          ],
+          keywords: ['飞镖盘', '投镖靶'],
         },
         {
           name: 'gamepad-1-filled',
@@ -477,9 +475,7 @@ export const manifest = {
         {
           name: 'ipod-filled',
 
-          keywords: [
-            'iPod', '翻译为两个可能的中文短语为：\n1. 苹果音乐播放器,\n2. 苹果便携式音乐播放器。',
-          ],
+          keywords: ['苹果音乐播放器', '苹果便携式音乐播放器'],
         },
         {
           name: 'movie-clapper-filled',
@@ -554,9 +550,7 @@ export const manifest = {
         {
           name: 'play-demo-filled',
 
-          keywords: [
-            '"play-demo" 可以翻译为以下两个中文短语：\n\n1. 演示游戏', '演示程序\n2. 播放演示', '演示玩法',
-          ],
+          keywords: ['播放演示', '演示玩法'],
         },
         {
           name: 'radio-1-filled',
@@ -636,9 +630,7 @@ export const manifest = {
         {
           name: 'sound-up-filled',
 
-          keywords: [
-            '"sound-up" 可以翻译为以下两个中文短语：\n\n1. 扩音', '加大音量\n2. 闹钟响起', '发出声音',
-          ],
+          keywords: ['扩音', '加大音量', '闹钟响起', '发出声音'],
         },
         {
           name: 'stop-circle-stroke-filled',
@@ -819,9 +811,7 @@ export const manifest = {
         {
           name: 'table-add-filled',
 
-          keywords: [
-            'table-add 可以翻译为以下两个中文短语：\n\n1. 表格添加,\n2. 加入表格',
-          ],
+          keywords: ['表格添加', '加入表格'],
         },
       ],
     },
@@ -943,7 +933,7 @@ export const manifest = {
         {
           name: 'location-parking-place-filled',
 
-          keywords: ['"位置', '停车场"', '"地点', '停车位"'],
+          keywords: ['位置', '停车场', '地点', '停车位'],
         },
         {
           name: 'location-setting-filled',
@@ -1320,7 +1310,7 @@ export const manifest = {
         {
           name: 'wave-bye-filled',
 
-          keywords: ['"Wave goodbye', 'say goodbye"'],
+          keywords: ['挥手告别', '说再见'],
         },
         {
           name: 'thumb-up-1-filled',
@@ -1641,7 +1631,7 @@ export const manifest = {
         {
           name: 'ferris-wheel-filled',
 
-          keywords: ['"旋转木马', '摩天轮"'],
+          keywords: ['旋转木马', '摩天轮'],
         },
         {
           name: 'double-storey-filled',
@@ -1736,7 +1726,7 @@ export const manifest = {
         {
           name: 'pyramid-maya-filled',
 
-          keywords: ['金字塔-maya', '金字塔式maya'],
+          keywords: ['玛雅金字塔'],
         },
         {
           name: 'sailing-hotel-filled',
@@ -1841,7 +1831,7 @@ export const manifest = {
         {
           name: 'town-filled',
 
-          keywords: ['"town', 'city" 或 "township', 'urban area"'],
+          keywords: ['城镇', '市区'],
         },
         {
           name: 'temple-filled',
@@ -2496,7 +2486,7 @@ export const manifest = {
         {
           name: 'chevron-left-rectangle-filled',
 
-          keywords: ['"箭头左矩形', '左箭头矩形"'],
+          keywords: ['箭头左矩形', '左箭头矩形'],
         },
         {
           name: 'arrow-triangle-up-filled',
@@ -2506,9 +2496,7 @@ export const manifest = {
         {
           name: 'chevron-left-circle-filled',
 
-          keywords: [
-            '"chevron-left-circle" 可以翻译为以下两个中文短语：\n\n1. 左箭头的圆圈,\n2. 左向箭头的圆形符号',
-          ],
+          keywords: ['左箭头圆圈', '左向箭头圆形符号'],
         },
         {
           name: 'chevron-right-rectangle-filled',
@@ -2976,7 +2964,7 @@ export const manifest = {
         {
           name: 'logo-windows-filled',
 
-          keywords: ['"logo-windows', 'windows徽标"'],
+          keywords: ['Windows徽标'],
         },
         {
           name: 'minus-rectangle-filled',
@@ -3283,7 +3271,7 @@ export const manifest = {
         {
           name: 'giggle-filled',
 
-          keywords: ['“咯咯笑”', '“哈哈大笑”'],
+          keywords: ['咯咯笑', '哈哈大笑'],
         },
         {
           name: 'excited-1-filled',
@@ -3844,7 +3832,7 @@ export const manifest = {
         {
           name: 'money-filled',
 
-          keywords: ['"资金', '财富"'],
+          keywords: ['资金', '财富'],
         },
         {
           name: 'module-filled',
@@ -3869,7 +3857,7 @@ export const manifest = {
         {
           name: 'saving-pot-filled',
 
-          keywords: ['"saving pot', '储蓄罐"'],
+          keywords: ['储蓄罐'],
         },
         {
           name: 'search-filled',
@@ -3889,7 +3877,7 @@ export const manifest = {
         {
           name: 'secured-filled',
 
-          keywords: [],
+          keywords: ['已保护', '已安全', '已加密', '盾牌'],
         },
         {
           name: 'lightbulb-circle-filled',
@@ -4421,7 +4409,7 @@ export const manifest = {
         {
           name: 'pen-ball-filled',
 
-          keywords: ['"pen ball', '乒乓球', '弹球"'],
+          keywords: ['圆珠笔'],
         },
         {
           name: 'palette-1-filled',
@@ -4456,9 +4444,7 @@ export const manifest = {
         {
           name: 'sip-filled',
 
-          keywords: [
-            '"sip"可以翻译为以下两个中文短语：\n\n1. 小口喝', '啜饮\n2. 吸饮', '轻啜',
-          ],
+          keywords: ['小口喝', '啜饮', '吸饮', '轻啜'],
         },
         {
           name: 'textbox-filled',
@@ -4674,7 +4660,7 @@ export const manifest = {
         {
           name: 'meat-pepper-filled',
 
-          keywords: ['辣椒炒肉', '辣味肉类'],
+          keywords: ['辣椒炒肉', '青椒'],
         },
         {
           name: 'radish-filled',
@@ -4832,19 +4818,17 @@ export const manifest = {
         {
           name: 'logo-qq',
 
-          keywords: ['"QQ标志', 'QQ徽标"'],
+          keywords: ['QQ标志', 'QQ徽标'],
         },
         {
           name: 'logo-instagram',
 
-          keywords: ['"Instagram徽标', 'Instagram标志"'],
+          keywords: ['Instagram徽标', 'Instagram标志'],
         },
         {
           name: 'logo-facebook',
 
-          keywords: [
-            '"logo-facebook" 可以翻译为以下两个可能的中文短语：\n\n1. 脸书标志', 'Facebook标志\n2. 脸谱网徽标', 'Facebook图标',
-          ],
+          keywords: ['脸书标志', 'Facebook标志', '脸谱网徽标', 'Facebook图标'],
         },
         {
           name: 'logo-ie',
@@ -4859,9 +4843,7 @@ export const manifest = {
         {
           name: 'logo-twitter',
 
-          keywords: [
-            '"logo-twitter" 可以翻译为以下两个可能的中文短语：\n\n1. Twitter 的标志,\n2. 推特的徽标',
-          ],
+          keywords: ['Twitter 的标志', '推特的徽标'],
         },
         {
           name: 'logo-adobe-photoshop',
@@ -4876,7 +4858,7 @@ export const manifest = {
         {
           name: 'logo-youtube',
 
-          keywords: ['"YouTube标志', 'YouTube徽标"'],
+          keywords: ['YouTube标志', 'YouTube徽标'],
         },
         {
           name: 'logo-wechat-stroke',
@@ -5476,7 +5458,7 @@ export const manifest = {
         {
           name: 'location-parking-place',
 
-          keywords: ['"位置', '停车场"', '"地点', '停车位"'],
+          keywords: ['位置', '停车场', '地点', '停车位'],
         },
         {
           name: 'location',
@@ -5808,67 +5790,52 @@ export const manifest = {
         {
           name: 'letters-c',
 
-          keywords: [
-            '字母c可以翻译为以下两个中文短语：\n\n1. 字母C,\n2. c字母。',
-          ],
+          keywords: ['字母c'],
         },
         {
           name: 'letters-f',
 
-          keywords: [],
+          keywords: ['字母f'],
         },
         {
           name: 'letters-e',
 
-          keywords: ['字母-e可以翻译为以下两个中文短语：\n\n电子', '元素'],
+          keywords: ['字母e'],
         },
         {
           name: 'letters-a',
 
-          keywords: ['字母表-a', '字母a'],
+          keywords: ['字母a'],
         },
         {
           name: 'letters-d',
 
-          keywords: [],
+          keywords: ['字母d'],
         },
         {
           name: 'letters-g',
 
-          keywords: [],
+          keywords: ['字母g'],
         },
         {
           name: 'letters-b',
 
-          keywords: ['字母b的翻译可以是“字母b', 'b字母”。'],
+          keywords: ['字母b'],
         },
         {
           name: 'letters-h',
 
-          keywords: ['信函-H', '字母-H'],
+          keywords: ['字母h'],
         },
         {
           name: 'letters-k',
 
-          keywords: [],
+          keywords: ['字母k'],
         },
         {
           name: 'letters-l',
 
-          keywords: [
-            '字母-l 翻译为两个可能的中文短语是："字母l', '字母L"。\n\n首先',
-            '我分析了原始问题中的关键点：“letters-l”需要翻译成中文短语。由于“letters”是复数形式',
-            '而“-l”是一个常见的英文小写字母',
-            '因此这里的翻译应该保持原样',
-            '只是转换成中文。\n\n接着',
-            '我考虑到中文中对于英文单词的直接翻译通常就是其本身的发音加上相应的汉字',
-            '所以“letters”翻译为“字母”',
-            '“-l”作为字母l的表示',
-            '直接翻译为“l”。\n\n最后',
-            '根据任务要求',
-            '需要将翻译后的短语用逗号隔开',
-            '因此最终答案是：“字母l', '字母L”。',
-          ],
+          keywords: ['字母l'],
         },
         {
           name: 'letters-i',
@@ -5878,145 +5845,77 @@ export const manifest = {
         {
           name: 'letters-m',
 
-          keywords: ['字母m的翻译可以是“妈妈', '妈”'],
+          keywords: ['字母m'],
         },
         {
           name: 'letters-j',
 
-          keywords: [],
+          keywords: ['字母j'],
         },
         {
           name: 'letters-n',
 
-          keywords: ['信函-n', '字母表-n'],
+          keywords: ['字母n'],
         },
         {
           name: 'letters-q',
 
-          keywords: ['字母q', '字母q的中文翻译', '字母q的中文表示'],
+          keywords: ['字母q'],
         },
         {
           name: 'letters-p',
 
-          keywords: [
-            '字母p的翻译可以是“字母p', '字母P”。\n\n首先',
-            '我分析了原始问题中的关键点：“letters-p”需要翻译成中文短语。由于“letters”是“字母”的意思',
-            '而“-p”在这里指的是小写的英文字母“p”',
-            '所以翻译时应该保持原样',
-            '即“字母p”。但是',
-            '问题要求翻译成两个可能的中文短语',
-            '这里可能存在一个误解',
-            '因为单个英文单词通常只有一个标准的中文翻译。然而',
-            '为了满足问题的要求',
-            '我可以提供一个常见的翻译和一个不太常见的翻译',
-            '即用中文谐音或者意译的方式来表达。\n\n在这里',
-            '我选择了“字母p”作为最常见的翻译',
-            '并且为了满足两个短语的要求',
-            '我提供了“字母P”作为第二个翻译',
-            '这里的“P”是大写的形式',
-            '虽然在实际使用中大小写通常不会影响意义',
-            '但在某些情况下',
-            '如打字错误或者特定上下文中',
-            '大小写可能会被区分对待。\n\n因此',
-            '根据问题的要求',
-            '我提供了“字母p', '字母P”作为答案。',
-          ],
+          keywords: ['字母p'],
         },
         {
           name: 'letters-s',
 
-          keywords: [
-            '字母s可以翻译为以下两个中文短语：\n\n1. 字母S,\n2. s字母。',
-          ],
+          keywords: ['字母s'],
         },
         {
           name: 'letters-r',
 
-          keywords: [],
+          keywords: ['字母r'],
         },
         {
           name: 'letters-t',
 
-          keywords: [
-            '字母t的翻译可以是"字母T"或者"t字母"。\n首先',
-            '我分析了原始问题中的关键点：“letters-t”需要翻译成中文短语。这里的“letters”指的是英文字母',
-            '而“-t”是这个字母的一个变体',
-            '通常在英语中不单独作为一个字母使用',
-            '而是作为其他单词的一部分',
-            '比如在“water”中的“t”。但是',
-            '由于问题中没有提供更多的上下文信息',
-            '我假设这里的“-t”是指英文字母“t”。\n接着',
-            '我将“letters-t”翻译为中文。在中文中',
-            '“字母”是用来指代英文的“letters”',
-            '而“-t”作为字母“t”的表示',
-            '可以直接翻译为“字母T”。但是',
-            '由于“-t”在中文中没有特定的含义',
-            '它也可以被翻译为“t字母”',
-            '这样的翻译保留了“-t”作为字母的一部分的信息。\n最后',
-            '根据问题的要求',
-            '我将两个翻译后的短语用逗号隔开',
-            '得到最终答案：“字母T', 't字母”。',
-          ],
+          keywords: ['字母t'],
         },
         {
           name: 'letters-w',
 
-          keywords: [],
+          keywords: ['字母w'],
         },
         {
           name: 'letters-o',
 
-          keywords: [
-            '字母o的两种可能中文短语翻译为："字母o', '圆形符号"。\n首先',
-            '我分析了原始问题中的关键点：“letters-o”需要翻译成中文短语',
-            '并且要求是两个可能的短语。这里的“letters”指的是英文字母',
-            '而“-o”是字母o的形态。在中文中',
-            '字母o通常直接翻译为“字母o”',
-            '但考虑到可能需要两个不同的短语来描述它',
-            '我提供了两种可能的解释：一种是直接描述其作为字母的身份',
-            '即“字母o”；另一种是描述其形状',
-            '即“圆形符号”。这样的翻译既保留了原字母的特征',
-            '也提供了关于其形状的信息',
-            '满足了问题的要求。',
-          ],
+          keywords: ['字母o'],
         },
         {
           name: 'letters-v',
 
-          keywords: [],
+          keywords: ['字母v'],
         },
         {
           name: 'letters-z',
 
-          keywords: ['字母z的两种可能中文短语翻译为：\n\n子母字母', 'z字母'],
+          keywords: ['字母z'],
         },
         {
           name: 'letters-x',
 
-          keywords: [
-            '字母x的两种可能中文短语翻译为："神秘的X', '字母X"。\n首先',
-            '我分析了原始问题中的关键点：“letters-x”需要翻译成中文',
-            '并且要求翻译成两个可能的短语。这里的“letters”指的是字母',
-            '而“-x”是字母x。在中文中',
-            '字母x可以直接翻译成“X”',
-            '而要表达“神秘的X”这样的含义',
-            '可以将其翻译为“神秘的X”。因此',
-            '我提供了两种可能的中文短语',
-            '即用逗号隔开的“神秘的X', '字母X”。这样的翻译既保留了原字母的表示',
-            '也提供了对字母x的一种可能含义的翻译。',
-          ],
+          keywords: ['字母x'],
         },
         {
           name: 'letters-u',
 
-          keywords: [],
+          keywords: ['字母u'],
         },
         {
           name: 'letters-y',
 
-          keywords: [
-            '字母y可以翻译为以下两个中文短语：\n\n1. 字母y', '英文字母y\n2. y字母', '英语中的y字母',
-          ],
+          keywords: ['字母y'],
         },
       ],
     },
@@ -6062,7 +5961,7 @@ export const manifest = {
         {
           name: 'dart-board',
 
-          keywords: ['"dart board', '飞镖靶子"'],
+          keywords: ['飞镖靶子'],
         },
         {
           name: 'film-1',
@@ -6087,9 +5986,7 @@ export const manifest = {
         {
           name: 'dv',
 
-          keywords: [
-            '"dv" 可以翻译为两个可能的中文短语：\n\n1. 数字视频,\n2. 数码摄像机。',
-          ],
+          keywords: ['数字视频', '数码摄像机'],
         },
         {
           name: 'microphone-1',
@@ -6099,7 +5996,7 @@ export const manifest = {
         {
           name: 'ipod',
 
-          keywords: ['"ipod', '苹果音乐播放器"\n"ipod', '便携式音乐播放器"'],
+          keywords: ['苹果音乐播放器', '便携式音乐播放器'],
         },
         {
           name: 'microphone-2',
@@ -6184,7 +6081,7 @@ export const manifest = {
         {
           name: 'play-demo',
 
-          keywords: ['"运行演示', '演示游戏"'],
+          keywords: ['运行演示', '演示游戏'],
         },
         {
           name: 'page-first',
@@ -6334,7 +6231,7 @@ export const manifest = {
         {
           name: 'video-camera-off',
 
-          keywords: ['"关闭摄像机', '摄像机关"'],
+          keywords: ['关闭摄像机', '摄像机关'],
         },
       ],
     },
@@ -6480,7 +6377,7 @@ export const manifest = {
         {
           name: 'wave-bye',
 
-          keywords: ['"Wave Goodbye', '挥手告别"'],
+          keywords: ['Wave Goodbye', '挥手告别'],
         },
         {
           name: 'gesture-press',
@@ -6516,7 +6413,7 @@ export const manifest = {
         {
           name: 'archway-1',
 
-          keywords: ['拱道,拱形通道'],
+          keywords: ['拱道', '拱形通道'],
         },
         {
           name: 'attic',
@@ -6526,7 +6423,7 @@ export const manifest = {
         {
           name: 'architecture-hui-style',
 
-          keywords: ['架构汇风格', '架构hui风格'],
+          keywords: ['徽派建筑', '徽式建筑'],
         },
         {
           name: 'archway',
@@ -6821,7 +6718,7 @@ export const manifest = {
         {
           name: 'ferris-wheel',
 
-          keywords: ['"旋转木马', '摩天轮"'],
+          keywords: ['旋转木马', '摩天轮'],
         },
         {
           name: 'hospital-1',
@@ -6951,7 +6848,7 @@ export const manifest = {
         {
           name: 'pyramid-maya',
 
-          keywords: ['金字塔式maya', '金字塔结构maya'],
+          keywords: ['玛雅金字塔'],
         },
         {
           name: 'shop-3',
@@ -7011,9 +6908,7 @@ export const manifest = {
         {
           name: 'town',
 
-          keywords: [
-            '"town," 可以翻译为以下两个中文短语：\n\n1. "城镇,"\n2. "市镇,"',
-          ],
+          keywords: ['城镇', '市镇'],
         },
         {
           name: 'shop-5',
@@ -7466,9 +7361,7 @@ export const manifest = {
         {
           name: 'alpha',
 
-          keywords: [
-            'α 可以翻译为两个可能的中文短语：\n1. 阿尔法', '\n2. α（希腊字母）。',
-          ],
+          keywords: ['阿尔法', '希腊字母α'],
         },
         {
           name: 'centimeter',
@@ -7533,7 +7426,7 @@ export const manifest = {
         {
           name: 'greater-than',
 
-          keywords: ['大于', '比...大'],
+          keywords: ['大于'],
         },
         {
           name: 'less-than-or-equal',
@@ -8523,7 +8416,7 @@ export const manifest = {
         {
           name: 'logo-windows',
 
-          keywords: ['"logo-windows', 'windows徽标"'],
+          keywords: ['Windows 徽标', 'Windows 标志'],
         },
         {
           name: 'menu-unfold',
@@ -8543,7 +8436,7 @@ export const manifest = {
         {
           name: 'more',
 
-          keywords: ['"更多', '额外"\n"另外', '增添"'],
+          keywords: ['更多', '额外', '另外'],
         },
         {
           name: 'menu-application',
@@ -8834,7 +8727,7 @@ export const manifest = {
         {
           name: 'backtop',
 
-          keywords: ['"back to top"', '"回到顶部"'],
+          keywords: ['back to top', '回到顶部'],
         },
         {
           name: 'caret-left-small',
@@ -8884,9 +8777,7 @@ export const manifest = {
         {
           name: 'chevron-left-circle',
 
-          keywords: [
-            '"chevron-left-circle" 可以翻译为以下两个中文短语：\n\n1. 左箭头的圆圈,\n2. 左向箭头圆圈',
-          ],
+          keywords: ['左箭头的圆圈', '左向箭头圆圈'],
         },
         {
           name: 'chevron-down',
@@ -8906,7 +8797,7 @@ export const manifest = {
         {
           name: 'chevron-left-double-s',
 
-          keywords: ['"双箭头向左', '双S形向左"'],
+          keywords: ['双箭头向左', '双S形向左'],
         },
         {
           name: 'caret-up',
@@ -8916,17 +8807,17 @@ export const manifest = {
         {
           name: 'chevron-left-double',
 
-          keywords: ['"双箭头向左', '箭头向左双"'],
+          keywords: ['双箭头向左', '箭头向左双'],
         },
         {
           name: 'chevron-left-rectangle',
 
-          keywords: ['"箭头左矩形', '左箭头矩形"'],
+          keywords: ['箭头左矩形', '左箭头矩形'],
         },
         {
           name: 'chevron-left-s',
 
-          keywords: ['"箭头向左', '小箭头左"'],
+          keywords: ['箭头向左', '小箭头左'],
         },
         {
           name: 'chevron-left',
@@ -9202,9 +9093,7 @@ export const manifest = {
         {
           name: 'bad-laugh',
 
-          keywords: [
-            '"bad laugh," 可以翻译为两个可能的中文短语：\n1. "不好的笑"\n2. "笑声不好"',
-          ],
+          keywords: ['不好的笑', '笑声不好'],
         },
         {
           name: 'calm',
@@ -9294,7 +9183,7 @@ export const manifest = {
         {
           name: 'giggle',
 
-          keywords: ['“咯咯笑', '嬉皮笑脸”'],
+          keywords: ['咯咯笑', '嬉皮笑脸'],
         },
         {
           name: 'excited',
@@ -9470,9 +9359,7 @@ export const manifest = {
         {
           name: 'api',
 
-          keywords: [
-            '"api 的中文短语1：应用程序编程接口', 'api 的中文短语2：应用程序接口"',
-          ],
+          keywords: ['应用程序编程接口', '应用程序接口'],
         },
         {
           name: 'article',
@@ -9627,7 +9514,7 @@ export const manifest = {
         {
           name: 'check-double',
 
-          keywords: ['"检查重复项,核实双重"'],
+          keywords: ['检查重复项', '核实双重'],
         },
         {
           name: 'copyright',
@@ -9987,7 +9874,7 @@ export const manifest = {
         {
           name: 'saving-pot',
 
-          keywords: ['"saving pot', '储蓄罐"\n"saving pot', '存钱罐"'],
+          keywords: ['储蓄罐', '存钱罐'],
         },
         {
           name: 'search-error',
@@ -10037,7 +9924,7 @@ export const manifest = {
         {
           name: 'secured',
 
-          keywords: [],
+          keywords: ['已保护', '已安全', '已加密', '盾牌'],
         },
         {
           name: 'server',
@@ -10368,9 +10255,7 @@ export const manifest = {
         {
           name: 'sip',
 
-          keywords: [
-            '"sip"可以翻译为以下两个中文短语：\n\n1. 小口喝', '啜饮\n2. 吸饮', '轻啜',
-          ],
+          keywords: ['小口喝', '啜饮', '吸饮', '轻啜'],
         },
         {
           name: 'table-1',
@@ -10782,7 +10667,7 @@ export const manifest = {
         {
           name: 'cast',
 
-          keywords: ['"cast', '投射"\n"cast', '铸造"'],
+          keywords: ['投屏', '投影仪'],
         },
         {
           name: 'data-checked',

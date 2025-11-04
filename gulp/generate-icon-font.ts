@@ -88,7 +88,7 @@ function useItemJsonTemplate() {
     return `{"name": "${name}","svgCode": ${JSON.stringify(content).replace(
       /(\r\n|\n|\r)/gm,
       '',
-    )},"codepoint": "\\${(svgMap[name])}"},`;
+    )},"codepoint": "\\${svgMap[name]}"},`;
   }
   return createTransformStream((_, { stem: name }) => getItem(_, name));
 }

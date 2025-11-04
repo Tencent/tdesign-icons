@@ -7,7 +7,7 @@ import vnodeConvert from './vnode-convert';
 const template = fs.readFileSync(path.resolve(__dirname, 'template/icon.tsx'), 'utf-8');
 
 export function wcGetIconFileContent({ name, element }: { name: string; element: string }): string {
-  const ele = JSON.stringify(vnodeConvert(JSON.parse(element)));
+  const ele = JSON.stringify(vnodeConvert(JSON.parse(element))).replace(/strokeWidth/g, 'stroke-width').replace(/strokeLinecap/g, 'stroke-linecap');
 
   return template
     .replace(/\$ICON_TAG_NAME/g, `t-icon-${name.toLocaleLowerCase()}`)

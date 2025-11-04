@@ -34,6 +34,7 @@ export function wcTask(source: string[]) {
         from: source,
         to: 'packages/web-components/src',
       }),
+
       generateTypeMap({
         from: source,
         to: 'packages/web-components/src',

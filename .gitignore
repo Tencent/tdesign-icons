@@ -9,6 +9,7 @@ converted_svg
 # build
 dist/
 esm/
+packages/flutter/output/
 
 # node_modules
 **/node_modules
@@ -35,3 +36,4 @@ package-lock.json
 
 # webstorm
 .idea/
+

@@ -324,7 +324,7 @@ export const manifest = {
         {
           name: 'fog-night-filled',
 
-          keywords: ['雾夜,雾中夜'],
+          keywords: ['雾夜', '雾中夜'],
         },
         {
           name: 'cloudy-night-rain-filled',
@@ -660,7 +660,7 @@ export const manifest = {
         {
           name: 'video-camera-music-filled',
 
-          keywords: ['视频,相机,音乐,摄像机,音频'],
+          keywords: ['视频', '相机', '音乐', '摄像机', '音频'],
         },
         {
           name: 'video-camera-minus-filled',
@@ -736,7 +736,7 @@ export const manifest = {
         {
           name: 'chart-ring-1-filled',
 
-          keywords: ['圆环图,环形图'],
+          keywords: ['圆环图', '环形图'],
         },
         {
           name: 'chart-radar-filled',
@@ -898,7 +898,7 @@ export const manifest = {
         {
           name: 'compass-1-filled',
 
-          keywords: ['罗盘,指南针'],
+          keywords: ['罗盘', '指南针'],
         },
         {
           name: 'earth-filled',
@@ -923,7 +923,7 @@ export const manifest = {
         {
           name: 'compass-filled',
 
-          keywords: ['罗盘,指南针,导航,定位'],
+          keywords: ['罗盘', '指南针', '导航', '定位'],
         },
         {
           name: 'location-reduction-filled',
@@ -1346,7 +1346,7 @@ export const manifest = {
         {
           name: 'archway-filled',
 
-          keywords: ['拱道,拱形通道'],
+          keywords: ['拱道', '拱形通道'],
         },
         {
           name: 'attic-1-filled',
@@ -1356,7 +1356,7 @@ export const manifest = {
         {
           name: 'archway-1-filled',
 
-          keywords: ['拱道,拱形通道'],
+          keywords: ['拱道', '拱形通道'],
         },
         {
           name: 'bridge-1-filled',
@@ -1616,7 +1616,7 @@ export const manifest = {
         {
           name: 'forest-filled',
 
-          keywords: ['森林,树林'],
+          keywords: ['森林', '树林'],
         },
         {
           name: 'dam-2-filled',
@@ -1651,7 +1651,7 @@ export const manifest = {
         {
           name: 'monument-filled',
 
-          keywords: ['纪念碑,纪念建筑物'],
+          keywords: ['纪念碑', '纪念建筑物'],
         },
         {
           name: 'houses-2-filled',
@@ -1811,7 +1811,7 @@ export const manifest = {
         {
           name: 'tower-clock-filled',
 
-          keywords: ['钟楼,塔钟'],
+          keywords: ['钟楼', '塔钟'],
         },
         {
           name: 'window-1-filled',
@@ -1989,7 +1989,7 @@ export const manifest = {
         {
           name: 'chat-off-filled',
 
-          keywords: ['聊关闭,聊天关闭'],
+          keywords: ['聊关闭', '聊天关闭'],
         },
         {
           name: 'questionnaire-double-filled',
@@ -2045,7 +2045,7 @@ export const manifest = {
         {
           name: 'copy-filled',
 
-          keywords: ['复制,拷贝'],
+          keywords: ['复制', '拷贝'],
         },
         {
           name: 'coupon-filled',
@@ -2085,7 +2085,7 @@ export const manifest = {
         {
           name: 'file-1-filled',
 
-          keywords: ['文件,档案'],
+          keywords: ['文件', '档案'],
         },
         {
           name: 'file-blocked-filled',
@@ -2120,7 +2120,7 @@ export const manifest = {
         {
           name: 'file-filled',
 
-          keywords: ['文件,档案'],
+          keywords: ['文件', '档案'],
         },
         {
           name: 'file-icon-filled',
@@ -2175,7 +2175,7 @@ export const manifest = {
         {
           name: 'file-powerpoint-filled',
 
-          keywords: ['文件,PowerPoint,演示文稿'],
+          keywords: ['文件', 'PowerPoint', '演示文稿'],
         },
         {
           name: 'file-paste-filled',
@@ -2245,7 +2245,7 @@ export const manifest = {
         {
           name: 'folder-filled',
 
-          keywords: ['文件夹,档案夹'],
+          keywords: ['文件夹', '档案夹'],
         },
         {
           name: 'folder-details-filled',
@@ -2335,7 +2335,7 @@ export const manifest = {
         {
           name: 'screen-4k-filled',
 
-          keywords: ['screen', '屏蔽', '筛选'],
+          keywords: ['4K屏幕', '超高清屏幕'],
         },
         {
           name: 'folder-shared-filled',
@@ -3115,7 +3115,7 @@ export const manifest = {
         {
           name: 'close-octagon-filled',
 
-          keywords: ['八角形闭口,闭式八角形'],
+          keywords: ['八角形闭口', '闭式八角形'],
         },
         {
           name: 'error-circle-filled',
@@ -3135,7 +3135,7 @@ export const manifest = {
         {
           name: 'minus-circle-filled',
 
-          keywords: ['负圈,减圆'],
+          keywords: ['负圈', '减圆'],
         },
         {
           name: 'error-triangle-filled',
@@ -3497,7 +3497,7 @@ export const manifest = {
         {
           name: 'book-filled',
 
-          keywords: ['书,书籍'],
+          keywords: ['书', '书籍'],
         },
         {
           name: 'bookmark-minus-filled',
@@ -3732,7 +3732,7 @@ export const manifest = {
         {
           name: 'https-filled',
 
-          keywords: ['超文本传输协议,安全超文本传输协议'],
+          keywords: ['超文本传输协议', '安全超文本传输协议'],
         },
         {
           name: 'help-rectangle-filled',
@@ -3937,7 +3937,7 @@ export const manifest = {
         {
           name: 'theaters-filled',
 
-          keywords: ['剧院,电影院,演出场所,剧场'],
+          keywords: ['剧院', '电影院', '演出场所', '剧场'],
         },
         {
           name: 'thumb-down-filled',
@@ -4213,7 +4213,7 @@ export const manifest = {
         {
           name: 'mode-dark-filled',
 
-          keywords: ['暗黑模式,深色主题'],
+          keywords: ['暗黑模式', '深色主题'],
         },
         {
           name: 'phone-locked-filled',
@@ -4369,7 +4369,7 @@ export const manifest = {
         {
           name: 'edit-2-filled',
 
-          keywords: ['编辑,校订'],
+          keywords: ['编辑', '校订'],
         },
         {
           name: 'focus-filled',
@@ -4545,7 +4545,7 @@ export const manifest = {
         {
           name: 'corn-filled',
 
-          keywords: ['玉米,玉蜀黍'],
+          keywords: ['玉米', '玉蜀黍'],
         },
         {
           name: 'chinese-cabbage-filled',
@@ -5382,7 +5382,7 @@ export const manifest = {
         {
           name: 'thunder',
 
-          keywords: ['雷声,打雷'],
+          keywords: ['雷声', '打雷'],
         },
         {
           name: 'thunderstorm-sunny',
@@ -5413,7 +5413,7 @@ export const manifest = {
         {
           name: 'compass-1',
 
-          keywords: ['罗盘,指南针,导航,导航仪'],
+          keywords: ['罗盘', '指南针', '导航', '导航仪'],
         },
         {
           name: 'indicator',
@@ -5438,7 +5438,7 @@ export const manifest = {
         {
           name: 'compass',
 
-          keywords: ['罗盘,指南针,导航,定位'],
+          keywords: ['罗盘', '指南针', '导航', '定位'],
         },
         {
           name: 'location-reduction',
@@ -6181,7 +6181,7 @@ export const manifest = {
         {
           name: 'video-camera-2',
 
-          keywords: ['video camera', '摄像机'],
+          keywords: ['摄像机'],
         },
         {
           name: 'sound-high',
@@ -6196,7 +6196,7 @@ export const manifest = {
         {
           name: 'video-camera-music',
 
-          keywords: ['video camera music', '摄像机音乐'],
+          keywords: ['摄像机音乐'],
         },
         {
           name: 'stop-circle',
@@ -6428,7 +6428,7 @@ export const manifest = {
         {
           name: 'archway',
 
-          keywords: ['拱道,拱形通道'],
+          keywords: ['拱道', '拱形通道'],
         },
         {
           name: 'bridge-2',
@@ -6703,7 +6703,7 @@ export const manifest = {
         {
           name: 'forest',
 
-          keywords: ['森林,树林'],
+          keywords: ['森林', '树林'],
         },
         {
           name: 'hospital',
@@ -6758,7 +6758,7 @@ export const manifest = {
         {
           name: 'monument',
 
-          keywords: ['纪念碑,纪念建筑物'],
+          keywords: ['纪念碑', '纪念建筑物'],
         },
         {
           name: 'mosque',
@@ -6888,7 +6888,7 @@ export const manifest = {
         {
           name: 'tower-clock',
 
-          keywords: ['钟楼,塔钟'],
+          keywords: ['钟楼', '塔钟'],
         },
         {
           name: 'temple',
@@ -7100,7 +7100,7 @@ export const manifest = {
         {
           name: 'chat-off',
 
-          keywords: ['聊关闭,聊天关闭'],
+          keywords: ['聊关闭', '聊天关闭'],
         },
         {
           name: 'chat',
@@ -7325,7 +7325,7 @@ export const manifest = {
         {
           name: 'textformat-underline',
 
-          keywords: ['文本格式-下划线,文本格式-底线'],
+          keywords: ['文本格式-下划线', '文本格式-底线'],
         },
       ],
     },
@@ -7778,7 +7778,7 @@ export const manifest = {
         {
           name: 'copy',
 
-          keywords: ['复制,拷贝'],
+          keywords: ['复制', '拷贝'],
         },
         {
           name: 'file-add',
@@ -7818,7 +7818,7 @@ export const manifest = {
         {
           name: 'file-1',
 
-          keywords: ['文件,档案'],
+          keywords: ['文件', '档案'],
         },
         {
           name: 'file-download',
@@ -7883,7 +7883,7 @@ export const manifest = {
         {
           name: 'file-powerpoint',
 
-          keywords: ['文件,PowerPoint,演示文稿'],
+          keywords: ['文件', 'PowerPoint', '演示文稿'],
         },
         {
           name: 'file-teams',
@@ -7938,7 +7938,7 @@ export const manifest = {
         {
           name: 'file',
 
-          keywords: ['文件,档案'],
+          keywords: ['文件', '档案'],
         },
         {
           name: 'file-unlocked',
@@ -8063,7 +8063,7 @@ export const manifest = {
         {
           name: 'screen-4k',
 
-          keywords: ['screen', '屏蔽', '筛选'],
+          keywords: ['4K屏幕', '超高清屏幕'],
         },
         {
           name: 'folder-zip',
@@ -8335,7 +8335,7 @@ export const manifest = {
         {
           name: 'loading',
 
-          keywords: ['装货中,加载中'],
+          keywords: ['装货中', '加载中'],
         },
       ],
     },
@@ -9018,7 +9018,7 @@ export const manifest = {
         {
           name: 'close-octagon',
 
-          keywords: ['闭合八角形,闭式八角形'],
+          keywords: ['闭合八角形', '闭式八角形'],
         },
         {
           name: 'info-circle',
@@ -9028,7 +9028,7 @@ export const manifest = {
         {
           name: 'minus-circle',
 
-          keywords: ['负圈,减圆'],
+          keywords: ['负圈', '减圆'],
         },
         {
           name: 'no-result',
@@ -9694,7 +9694,7 @@ export const manifest = {
         {
           name: 'https',
 
-          keywords: ['超文本传输协议,安全超文本传输协议'],
+          keywords: ['超文本传输协议', '安全超文本传输协议'],
         },
         {
           name: 'home',
@@ -9754,7 +9754,7 @@ export const manifest = {
         {
           name: 'lightbulb-circle',
 
-          keywords: ['电灯泡,圆形,电灯泡,环形'],
+          keywords: ['电灯泡', '圆形', '电灯泡', '环形'],
         },
         {
           name: 'key',
@@ -9969,7 +9969,7 @@ export const manifest = {
         {
           name: 'theaters',
 
-          keywords: ['剧院,电影院,演出场所,剧场'],
+          keywords: ['剧院', '电影院', '演出场所', '剧场'],
         },
         {
           name: 'terminal-rectangle-1',
@@ -10095,7 +10095,7 @@ export const manifest = {
         {
           name: 'artboard',
 
-          keywords: ['画板,美术板'],
+          keywords: ['画板', '美术板'],
         },
         {
           name: 'contrast',
@@ -10140,7 +10140,7 @@ export const manifest = {
         {
           name: 'edit-2',
 
-          keywords: ['编辑,校订'],
+          keywords: ['编辑', '校订'],
         },
         {
           name: 'focus',
@@ -10150,7 +10150,7 @@ export const manifest = {
         {
           name: 'edit-1',
 
-          keywords: ['编辑,校订'],
+          keywords: ['编辑', '校订'],
         },
         {
           name: 'format-horizontal-align-center',
@@ -10351,7 +10351,7 @@ export const manifest = {
         {
           name: 'cabbage',
 
-          keywords: ['卷心菜,洋白菜'],
+          keywords: ['卷心菜', '洋白菜'],
         },
         {
           name: 'chicken',
@@ -10371,7 +10371,7 @@ export const manifest = {
         {
           name: 'corn',
 
-          keywords: ['玉米,玉蜀黍,苞谷'],
+          keywords: ['玉米', '玉蜀黍', '苞谷'],
         },
         {
           name: 'cucumber',
@@ -10757,7 +10757,7 @@ export const manifest = {
         {
           name: 'mode-dark',
 
-          keywords: ['暗黑模式,深色主题'],
+          keywords: ['暗黑模式', '深色主题'],
         },
         {
           name: 'mobile',

@@ -13,6 +13,9 @@ export interface IconProps extends OmiDOMAttributes {
    */
   innerClass?: string;
   size?: 'small' | 'medium' | 'large' | string | number;
+  strokeWidth?: number;
+  strokeColor?: string | string[];
+  fillColor?: string | string[];
 }
 
 export interface Attrs {
@@ -31,7 +34,7 @@ export interface IconFulfilledProps extends IconProps {
 /**
  * use omi createElement to render an IconElement with other props
  */
-function render(node: VNode, id: string, rootProps?: { [key: string]: any }): VNode {
+function render(node: VNode, id: string, rootProps?: { [key: string]: any }, childProps?: { [key: string]: any }): VNode {
   return createElement(
     node.nodeName as string,
     {
@@ -41,7 +44,34 @@ function render(node: VNode, id: string, rootProps?: { [key: string]: any }): VN
     },
     (node.children || []).map((child, index) => {
       if (typeof child === 'string') return child;
-      return render(child, `${id}-${node.nodeName}-${index}`);
+      return childRender(child, `${id}-${node.nodeName}-${index}`, childProps);
+    }),
+  );
+}
+
+function childRender(node: VNode, id: string, childProps?: { [key: string]: any }): VNode {
+  const processedAttrs: Record<string, any> = {};
+  if (node.attributes) {
+    // eslint-disable-next-line no-restricted-syntax
+    for (const [key, value] of Object.entries(node.attributes)) {
+      if (typeof value === 'string' && value.startsWith('props.')) {
+        const propName = value.split('.')[1] as keyof IconProps;
+        processedAttrs[key] = childProps?.[propName];
+      } else {
+        processedAttrs[key] = value;
+      }
+    }
+  }
+
+  return createElement(
+    node.nodeName as string,
+    {
+      key: id,
+      ...processedAttrs,
+    },
+    (node.children || []).map((child, index) => {
+      if (typeof child === 'string') return child;
+      return childRender(child, `${id}-${node.nodeName}-${index}`, childProps);
     }),
   );
 }
@@ -55,6 +85,9 @@ export class IconBase<T extends IconProps> extends Component<T> {
     innerClass: String,
     innerStyle: Object,
     size: String,
+    strokeWidth: Number,
+    strokeColor: [Array, String],
+    fillColor: [Array, String],
   }
 
   render(props) {
@@ -63,11 +96,28 @@ export class IconBase<T extends IconProps> extends Component<T> {
       size,
       innerClass,
       innerStyle,
+      strokeWidth = 2,
+      strokeColor = 'currentColor',
+      fillColor = 'transparent',
       ...restProps
     } = props;
 
     delete restProps.cls;
     delete (restProps as any)?.className;
+
+    // 填充图标处理
+    let filledColor: string;
+    if (!props.fillColor) filledColor = 'currentColor';
+    else filledColor = Array.isArray(fillColor) ? fillColor[0] : fillColor;
+
+    const childProps = {
+      strokeWidth,
+      strokeColor1: Array.isArray(strokeColor) ? strokeColor[0] : strokeColor,
+      strokeColor2: Array.isArray(strokeColor) ? strokeColor[1] ?? strokeColor[0] : strokeColor,
+      fillColor1: Array.isArray(fillColor) ? fillColor[0] : fillColor,
+      fillColor2: Array.isArray(fillColor) ? fillColor[1] ?? fillColor[0] : fillColor,
+      filledColor,
+    };
 
     const { className: sizeClassName, style: sizeStyle } = getSizeProps(size);
     const combinCls = classname('t-icon', `t-icon-${id}`, sizeClassName, innerClass);
@@ -75,6 +125,6 @@ export class IconBase<T extends IconProps> extends Component<T> {
       className: combinCls,
       style: { fill: 'none', ...sizeStyle, ...innerStyle },
       ...restProps,
-    });
+    }, childProps);
   }
 }

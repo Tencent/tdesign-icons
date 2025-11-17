@@ -64,7 +64,7 @@ catalog:
   lodash: ^4.17.21
   merge-stream: ^2.0.0
   merge2: ^1.4.1
-  omi: ^7.6.17
+  omi: ^7.7.13
   oslllo-svg-fixer: ^5.0.0
   path: ^0.12.7
   postcss: ^8.4.4

@@ -1,5 +1,6 @@
 export default {
   title: 'Icon 图标资源',
+  icon: '图标',
   figmaFileText: 'Figma 源文件',
   iconTypeText: 'Icon 类型',
   strokeTypes: {

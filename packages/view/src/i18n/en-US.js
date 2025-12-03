@@ -1,5 +1,6 @@
 export default {
   title: 'TDesign Icon',
+  icon: 'Icons',
   figmaFileText: 'Figma Source File',
   iconTypeText: 'Icon Type',
   strokeTypes: {

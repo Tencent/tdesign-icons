@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import themeVariables from '!raw-loader!../styles/vars.css';
+import themeVariables from '../styles/vars.css?raw';
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import tdesignVariables from '!raw-loader!../../node_modules/tdesign-vue/es/style/index.css';
+import tdesignVariables from '../../node_modules/tdesign-vue-next/es/style/index.css?raw';
 
 const iconViewId = 'TDESIGN_ICON_VIEW';
 export function getRoot() {

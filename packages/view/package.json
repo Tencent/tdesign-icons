@@ -26,13 +26,13 @@
   "dependencies": {
     "@popperjs/core": "catalog:",
     "lodash": "catalog:",
-    "tdesign-icons-vue-next": "^0.4.1",
-    "tdesign-vue-next": "~1.17.3",
-    "vue": "~3.5.0"
+    "tdesign-icons-vue-next": "catalog:tdesign",
+    "tdesign-vue-next": "catalog:tdesign",
+    "vue": "catalog:vue"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.1",
-    "@vitejs/plugin-vue-jsx": "^4.1.2",
-    "vite": "^6.2.0"
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "vite": "catalog:"
   }
 }

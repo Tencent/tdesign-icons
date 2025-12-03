@@ -74,7 +74,6 @@
     "xmldom": "catalog:"
   },
   "dependencies": {
-    "jsdom": "catalog:",
-    "tdesign-icons-view": "^0.5.0-alpha.1"
+    "jsdom": "catalog:"
   }
 }

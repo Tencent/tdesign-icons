@@ -259,7 +259,7 @@
         <empty-svg />
         <p class="title">{{ lang.empty.title }}</p>
         <p class="description">{{ lang.empty.description }}</p>
-        <t-button>{{ lang.empty.buttonText }}</t-button>
+        <t-button @click="handleCreateIssue">{{ lang.empty.buttonText }}</t-button>
       </div>
     </div>
 
@@ -734,6 +734,10 @@ const hidePopover = () => {
     popperInstance.destroy();
     popperInstance = null;
   }
+};
+
+const handleCreateIssue = () => {
+  window.open('https://github.com/Tencent/tdesign-icons/issues', '_blank');
 };
 
 onMounted(() => {

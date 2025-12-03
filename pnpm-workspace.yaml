@@ -28,10 +28,10 @@ catalog:
   "@typescript-eslint/parser": ^4.20.0
   "@vue/babel-plugin-jsx": ^1.1.1
   "@vue/babel-preset-jsx": ^1.4.0
-  "@vue/cli-plugin-babel": ~5.0.0
-  "@vue/cli-plugin-eslint": ~5.0.0
-  "@vue/cli-service": ~5.0.0
   "@vue/compiler-sfc": ^3.2.26
+  "@vitejs/plugin-vue": "^5.2.1"
+  "@vitejs/plugin-vue-jsx": "^4.1.2"
+  "vite": "^6.2.0"
   camelcase: ^6.2.0
   classnames: ^2.2.6
   clsx: ^2.1.1
@@ -68,7 +68,6 @@ catalog:
   oslllo-svg-fixer: ^5.0.0
   path: ^0.12.7
   postcss: ^8.4.4
-  raw-loader: ^4.0.2
   react: ^19.0.0
   react-dom: ^19.0.0
   react-native-svg: ^13.9.0
@@ -91,8 +90,6 @@ catalog:
   tslib: ^2.1.0
   typescript: ^5.7.3
   uppercamelcase: ^3.0.0
-  vue-loader: ^17.0.0
-  vue-template-compiler: 2.7.14
   xmldom: ^0.6.0
 catalogs:
   vue26:
@@ -105,8 +102,8 @@ catalogs:
     "react": "^19.0.0"
     "react-dom": "^19.0.0"
   tdesign:
-    "tdesign-vue": "1.13.1-naruto"
-    "tdesign-icons-vue": "^0.4.0"
+    "tdesign-vue-next": "~1.17.3"
+    "tdesign-icons-vue-next": "^0.4.1"
   types:
     "@types/fs-extra": ^9.0.9
     "@types/gulp": ^4.0.6

@@ -37,4 +37,9 @@ export default {
     downloadSvg: '下载 SVG',
     downloadPng: '下载 PNG',
   },
+  empty: {
+    title: '暂无数据',
+    description: '找不到合适的图标？请前往仓库提 issue',
+    buttonText: '提需求',
+  },
 };

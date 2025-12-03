@@ -302,6 +302,9 @@ importers:
       jsdom:
         specifier: 'catalog:'
         version: 26.1.0
+      tdesign-icons-view:
+        specifier: ^0.5.0-alpha.1
+        version: 0.5.0-alpha.1(typescript@5.8.2)
     devDependencies:
       '@changesets/cli':
         specifier: 'catalog:'
@@ -578,7 +581,7 @@ importers:
         specifier: 'catalog:'
         version: 4.17.21
       tdesign-icons-vue-next:
-        specifier: ^0.4.0
+        specifier: ^0.4.1
         version: 0.4.1(vue@3.5.21(typescript@5.8.2))
       tdesign-vue-next:
         specifier: ~1.17.3
@@ -587,12 +590,6 @@ importers:
         specifier: ~3.5.0
         version: 3.5.21(typescript@5.8.2)
     devDependencies:
-      '@babel/core':
-        specifier: 'catalog:'
-        version: 7.20.12
-      '@babel/eslint-parser':
-        specifier: latest
-        version: 7.28.5(@babel/core@7.20.12)(eslint@7.32.0)
       '@vitejs/plugin-vue':
         specifier: ^5.2.1
         version: 5.2.4(vite@6.4.1(@types/node@22.13.10)(less@4.1.2)(terser@5.19.2))(vue@3.5.21(typescript@5.8.2))
@@ -929,13 +926,6 @@ packages:
   '@babel/core@7.28.5':
     resolution: {integrity: sha512-e7jT4DxYvIDLk1ZHmU/m/mB19rex9sv0c2ftBtjSBv+kVM/902eh0fINUzD7UwLLNR+jU585GxUJ8/EBfAM5fw==}
     engines: {node: '>=6.9.0'}
-
-  '@babel/eslint-parser@7.28.5':
-    resolution: {integrity: sha512-fcdRcWahONYo+JRnJg1/AekOacGvKx12Gu0qXJXFi2WBqQA1i7+O5PaxRB7kxE/Op94dExnCiiar6T09pvdHpA==}
-    engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
-    peerDependencies:
-      '@babel/core': ^7.11.0
-      eslint: ^7.5.0 || ^8.0.0 || ^9.0.0
 
   '@babel/generator@7.28.0':
     resolution: {integrity: sha512-lJjzvrbEeWrhB4P3QBsH7tey117PjLZnDbLiQEKjQ/fNJTjuq4HSqgFA+UNSwZT8D7dxxbnuSBMsa1lrWzKlQg==}
@@ -1343,12 +1333,6 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/plugin-syntax-typescript@7.23.3':
-    resolution: {integrity: sha512-9EiNjVJOMwCO+43TqoTrgQ8jMwcAd0sWyXi9RPfIsLTj4R2MADDDQXELhffaUx/uJv2AYcxBgPwH6j4TIA4ytQ==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
   '@babel/plugin-syntax-typescript@7.27.1':
     resolution: {integrity: sha512-xfYCBMxveHrRMnAWl1ZlPXOZjzkN82THFvLhQhFXFt81Z5HnN+EtUkZhv/zcKpmT3fzmWZB0ywiBrbC3vogbwQ==}
     engines: {node: '>=6.9.0'}
@@ -1597,12 +1581,6 @@ packages:
 
   '@babel/plugin-transform-typeof-symbol@7.22.5':
     resolution: {integrity: sha512-bYkI5lMzL4kPii4HHEEChkD0rkc+nvnlR6+o/qdqR6zrm0Sv/nodmyLhlq2DO0YKLUNd2VePmPRjJXSBh9OIdA==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-
-  '@babel/plugin-transform-typescript@7.23.6':
-    resolution: {integrity: sha512-6cBG5mBvUu4VUD04OHKnYzbuHNP8huDsD3EDqqpIpsswTDoqHCjLoHb6+QgsV1WsT2nipRqCPgxD3LXnEO7XfA==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -2285,9 +2263,6 @@ packages:
   '@napi-rs/nice@1.0.1':
     resolution: {integrity: sha512-zM0mVWSXE0a0h9aKACLwKmD6nHcRiKrPpCfvaKqG1CqDEyjEawId0ocXxVzPMCAm6kkWr2P025msfxXEnt8UGQ==}
     engines: {node: '>= 10'}
-
-  '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
-    resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -8206,6 +8181,9 @@ packages:
     resolution: {integrity: sha512-a20gEsvHnWe0ygBY8JbxoM4w3SJdhc7ZAuxkLqh+nvNQN2IOt0B5lLgM490X5Hl8FF0dl0tOf2ewFYAlIFgzVA==}
     engines: {node: '>=4.5'}
 
+  tdesign-icons-view@0.5.0-alpha.1:
+    resolution: {integrity: sha512-FyQlOx6d6gD31QJ/QGD/Msp0uC2AseGRIdV6BuqsnvmB5lMt54ahcK5E7PN0pdXF7pUx7JW0R9SFwdErSakNzQ==}
+
   tdesign-icons-vue-next@0.4.1:
     resolution: {integrity: sha512-uDPuTLRORnGcTyVGNoentNaK4V+ZcBmhYwcY3KqDaQQ5rrPeLMxu0ZVmgOEf0JtF2QZiqAxY7vodNEiLUdoRKA==}
     peerDependencies:
@@ -8996,14 +8974,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/eslint-parser@7.28.5(@babel/core@7.20.12)(eslint@7.32.0)':
-    dependencies:
-      '@babel/core': 7.20.12
-      '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
-      eslint: 7.32.0
-      eslint-visitor-keys: 2.1.0
-      semver: 6.3.1
-
   '@babel/generator@7.28.0':
     dependencies:
       '@babel/parser': 7.28.4
@@ -9073,6 +9043,19 @@ snapshots:
       '@babel/helper-skip-transparent-expression-wrappers': 7.22.5
       '@babel/helper-split-export-declaration': 7.22.6
       semver: 6.3.1
+
+  '@babel/helper-create-class-features-plugin@7.28.5(@babel/core@7.20.12)':
+    dependencies:
+      '@babel/core': 7.20.12
+      '@babel/helper-annotate-as-pure': 7.27.3
+      '@babel/helper-member-expression-to-functions': 7.28.5
+      '@babel/helper-optimise-call-expression': 7.27.1
+      '@babel/helper-replace-supers': 7.27.1(@babel/core@7.20.12)
+      '@babel/helper-skip-transparent-expression-wrappers': 7.27.1
+      '@babel/traverse': 7.28.5
+      semver: 6.3.1
+    transitivePeerDependencies:
+      - supports-color
 
   '@babel/helper-create-class-features-plugin@7.28.5(@babel/core@7.28.5)':
     dependencies:
@@ -9209,6 +9192,15 @@ snapshots:
       '@babel/helper-environment-visitor': 7.22.20
       '@babel/helper-member-expression-to-functions': 7.23.0
       '@babel/helper-optimise-call-expression': 7.22.5
+
+  '@babel/helper-replace-supers@7.27.1(@babel/core@7.20.12)':
+    dependencies:
+      '@babel/core': 7.20.12
+      '@babel/helper-member-expression-to-functions': 7.28.5
+      '@babel/helper-optimise-call-expression': 7.27.1
+      '@babel/traverse': 7.28.5
+    transitivePeerDependencies:
+      - supports-color
 
   '@babel/helper-replace-supers@7.27.1(@babel/core@7.28.5)':
     dependencies:
@@ -9520,14 +9512,9 @@ snapshots:
       '@babel/core': 7.20.12
       '@babel/helper-plugin-utils': 7.27.1
 
-  '@babel/plugin-syntax-typescript@7.23.3(@babel/core@7.20.12)':
+  '@babel/plugin-syntax-typescript@7.27.1(@babel/core@7.20.12)':
     dependencies:
       '@babel/core': 7.20.12
-      '@babel/helper-plugin-utils': 7.27.1
-
-  '@babel/plugin-syntax-typescript@7.23.3(@babel/core@7.28.5)':
-    dependencies:
-      '@babel/core': 7.28.5
       '@babel/helper-plugin-utils': 7.27.1
 
   '@babel/plugin-syntax-typescript@7.27.1(@babel/core@7.28.5)':
@@ -9710,16 +9697,20 @@ snapshots:
   '@babel/plugin-transform-private-methods@7.23.3(@babel/core@7.20.12)':
     dependencies:
       '@babel/core': 7.20.12
-      '@babel/helper-create-class-features-plugin': 7.23.7(@babel/core@7.20.12)
+      '@babel/helper-create-class-features-plugin': 7.28.5(@babel/core@7.20.12)
       '@babel/helper-plugin-utils': 7.27.1
+    transitivePeerDependencies:
+      - supports-color
 
   '@babel/plugin-transform-private-property-in-object@7.23.4(@babel/core@7.20.12)':
     dependencies:
       '@babel/core': 7.20.12
-      '@babel/helper-annotate-as-pure': 7.22.5
-      '@babel/helper-create-class-features-plugin': 7.23.7(@babel/core@7.20.12)
+      '@babel/helper-annotate-as-pure': 7.27.3
+      '@babel/helper-create-class-features-plugin': 7.28.5(@babel/core@7.20.12)
       '@babel/helper-plugin-utils': 7.27.1
       '@babel/plugin-syntax-private-property-in-object': 7.14.5(@babel/core@7.20.12)
+    transitivePeerDependencies:
+      - supports-color
 
   '@babel/plugin-transform-property-literals@7.22.5(@babel/core@7.20.12)':
     dependencies:
@@ -9814,21 +9805,16 @@ snapshots:
       '@babel/core': 7.20.12
       '@babel/helper-plugin-utils': 7.27.1
 
-  '@babel/plugin-transform-typescript@7.23.6(@babel/core@7.20.12)':
+  '@babel/plugin-transform-typescript@7.28.5(@babel/core@7.20.12)':
     dependencies:
       '@babel/core': 7.20.12
-      '@babel/helper-annotate-as-pure': 7.22.5
-      '@babel/helper-create-class-features-plugin': 7.23.7(@babel/core@7.20.12)
+      '@babel/helper-annotate-as-pure': 7.27.3
+      '@babel/helper-create-class-features-plugin': 7.28.5(@babel/core@7.20.12)
       '@babel/helper-plugin-utils': 7.27.1
-      '@babel/plugin-syntax-typescript': 7.23.3(@babel/core@7.20.12)
-
-  '@babel/plugin-transform-typescript@7.23.6(@babel/core@7.28.5)':
-    dependencies:
-      '@babel/core': 7.28.5
-      '@babel/helper-annotate-as-pure': 7.22.5
-      '@babel/helper-create-class-features-plugin': 7.23.7(@babel/core@7.28.5)
-      '@babel/helper-plugin-utils': 7.27.1
-      '@babel/plugin-syntax-typescript': 7.23.3(@babel/core@7.28.5)
+      '@babel/helper-skip-transparent-expression-wrappers': 7.27.1
+      '@babel/plugin-syntax-typescript': 7.27.1(@babel/core@7.20.12)
+    transitivePeerDependencies:
+      - supports-color
 
   '@babel/plugin-transform-typescript@7.28.5(@babel/core@7.28.5)':
     dependencies:
@@ -9967,7 +9953,7 @@ snapshots:
       '@babel/helper-validator-option': 7.27.1
       '@babel/plugin-syntax-jsx': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-modules-commonjs': 7.23.3(@babel/core@7.28.5)
-      '@babel/plugin-transform-typescript': 7.23.6(@babel/core@7.28.5)
+      '@babel/plugin-transform-typescript': 7.28.5(@babel/core@7.28.5)
     transitivePeerDependencies:
       - supports-color
 
@@ -10707,10 +10693,6 @@ snapshots:
       '@napi-rs/nice-win32-x64-msvc': 1.0.1
     optional: true
 
-  '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
-    dependencies:
-      eslint-scope: 5.1.1
-
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -10918,7 +10900,7 @@ snapshots:
       '@babel/plugin-transform-shorthand-properties': 7.22.5(@babel/core@7.20.12)
       '@babel/plugin-transform-spread': 7.22.5(@babel/core@7.20.12)
       '@babel/plugin-transform-sticky-regex': 7.22.5(@babel/core@7.20.12)
-      '@babel/plugin-transform-typescript': 7.23.6(@babel/core@7.20.12)
+      '@babel/plugin-transform-typescript': 7.28.5(@babel/core@7.20.12)
       '@babel/plugin-transform-unicode-regex': 7.22.5(@babel/core@7.20.12)
       '@babel/template': 7.27.2
       '@react-native/babel-plugin-codegen': 0.71.3(@babel/preset-env@7.16.5(@babel/core@7.20.12))
@@ -15398,7 +15380,7 @@ snapshots:
       nullthrows: 1.1.1
       walker: 1.0.8
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     transitivePeerDependencies:
       - supports-color
 
@@ -17715,6 +17697,16 @@ snapshots:
       mkdirp: 0.5.6
       safe-buffer: 5.2.1
       yallist: 3.1.1
+
+  tdesign-icons-view@0.5.0-alpha.1(typescript@5.8.2):
+    dependencies:
+      '@popperjs/core': 2.11.8
+      lodash: 4.17.21
+      tdesign-icons-vue-next: 0.4.1(vue@3.5.21(typescript@5.8.2))
+      tdesign-vue-next: 1.17.3(vue@3.5.21(typescript@5.8.2))
+      vue: 3.5.21(typescript@5.8.2)
+    transitivePeerDependencies:
+      - typescript
 
   tdesign-icons-vue-next@0.4.1(vue@3.5.21(typescript@5.8.2)):
     dependencies:

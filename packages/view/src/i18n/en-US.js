@@ -37,4 +37,9 @@ export default {
     downloadSvg: 'Download SVG',
     downloadPng: 'Download PNG',
   },
+  empty: {
+    title: 'No Icon Found',
+    description: 'If you cannot find a suitable icon, please create an issue to the repository.',
+    buttonText: 'create an issue',
+  },
 };

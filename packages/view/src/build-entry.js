@@ -5,6 +5,15 @@ import tdesignStyle from './styles/tdesign.min.css?raw';
 import siteStyle from './styles/vars.css?raw';
 import iconView from './styles/icon-view.css?raw';
 
-export const TdIconView = defineCustomElement({ ...IconView, styles: [tdesignStyle, siteStyle, iconView] });
+export const TdIconView = defineCustomElement({
+  ...IconView,
+  props: {
+    frameworkContent: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  styles: [tdesignStyle, siteStyle, iconView],
+});
 
 customElements.define('td-icons-view', TdIconView);

@@ -666,20 +666,15 @@ const handleSearchIcon = debounce((searchStr) => {
     manifest.value = manifestSrc;
   } else {
     const searchManifest = {};
+    const lowerSearchStr = searchStr.toLowerCase();
     forEach(manifestSrc, (categories, key) => {
       searchManifest[key] = {};
       forEach(categories, (ctx, category) => {
-        if (
-          ctx.labelCN.indexOf(searchStr) > -1
-          || ctx.labelEn.indexOf(searchStr) > -1
-        ) {
+        if (ctx.labelCN.toLowerCase().indexOf(lowerSearchStr) > -1 || ctx.labelEn.toLowerCase().indexOf(lowerSearchStr) > -1) {
           searchManifest[key][category] = ctx;
         } else {
           ctx.icons.forEach((icon) => {
-            if (
-              icon.name.indexOf(searchStr) > -1
-              || icon.keywords.find((keyword) => keyword.indexOf(searchStr) > -1)
-            ) {
+            if (icon.name.toLowerCase().indexOf(lowerSearchStr) > -1 || icon.keywords.find((keyword) => keyword.toLowerCase().indexOf(lowerSearchStr) > -1)) {
               if (!searchManifest[key][category]) {
                 searchManifest[key][category] = {
                   labelCN: ctx.labelCN,

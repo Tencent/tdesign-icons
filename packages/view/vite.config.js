@@ -4,13 +4,17 @@ import { resolve } from 'path';
 
 import { defineConfig } from 'vite';
 
-export default defineConfig(() => ({
-  plugins: [vue(), vueJsx()],
-  build: {
+const buildMap = {
+  preview: null,
+  production: {
     lib: {
       entry: resolve(__dirname, 'src/build-entry.js'),
       name: 'td-icons-view',
       fileName: (format) => `td-icons-view.${format}.js`,
     },
   },
+};
+export default defineConfig(({ mode }) => ({
+  plugins: [vue(), vueJsx()],
+  build: buildMap[mode],
 }));

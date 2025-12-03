@@ -82,15 +82,14 @@ jobs:
 
       - if: matrix.icons != 'tdesign-icons-flutter'
         run: pnpm run --filter ${{ matrix.icons }} build
-      
+
       - if: matrix.icons == 'tdesign-icons-flutter'
         uses: dart-lang/setup-dart@v1
 
       - if: matrix.icons == 'tdesign-icons-flutter'
         run: dart gen_dart_file.dart
-        working-directory: ./packages/flutter  
+        working-directory: ./packages/flutter
 
-  
   site:
     runs-on: ubuntu-latest
     steps:
@@ -109,12 +108,12 @@ jobs:
 
       - run: pnpm run generate
 
-      - run: pnpm run --filter tdesign-icons-view build
+      - run: pnpm run --filter tdesign-icons-view preview
 
       - run: mv packages/view/dist _site
 
       - run: zip -r _site.zip _site
-      
+
       - name: upload _site artifact
         uses: actions/upload-artifact@v4
         with:
@@ -123,7 +122,7 @@ jobs:
           retention-days: 5
 
       - name: Save PR number
-        if: always() 
+        if: always()
         run: echo ${{ github.event.number }} > ./pr-id.txt
 
       - name: Upload PR number

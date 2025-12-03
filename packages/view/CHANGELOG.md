@@ -1,5 +1,12 @@
 # tdesign-icons-view
 
+## 0.5.0
+
+### Minor Changes
+
+- refactor: migrate from vue 2 to vue 3
+- feat: add empty result and optimize dark mode
+
 ## 0.4.0
 
 ### Minor Changes

@@ -215,7 +215,7 @@
             </div>
           </div>
         </div>
-        <t-button theme="default" @click="handleReset">{{
+        <t-button theme="default" @click="handleReset" style="border-color:var(--td-border-level-2-color)">{{
           lang.resetText
         }}</t-button>
       </t-space>

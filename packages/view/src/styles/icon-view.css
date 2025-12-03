@@ -26,7 +26,6 @@
 
 .t-input {
     background-color: transparent;
-    border-color: #DCDCDC;
 }
 
 .t-button {
@@ -133,8 +132,7 @@
 
 .categories-link.active {
     color: var(--brand-main);
-    background: #F2F3FF;
-
+    background: var(--td-brand-color-light)
 }
 
 .t-icons-view__content {
@@ -183,7 +181,7 @@
 
 .t-icons-view__actions div:hover {
     color: var(--brand-main);
-    background: #F2F3FF;
+    background: var(--td-brand-color-light);
 }
 
 .t-icons-view__operations {
@@ -240,7 +238,7 @@
 
 .t-icons-view__operation div:hover {
     color: var(--brand-main);
-    background: #F2F3FF;
+    background: var(--td-brand-color-light);
 
 }
 

@@ -8,7 +8,7 @@
   >
     <path
       d="M30 62H118V122H30V62Z"
-      fill="#E7E7E7"
+      fill="var(--bg-color-navigation-select)"
     />
     <path
       d="M63 20H151V80H63V20Z"

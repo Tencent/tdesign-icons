@@ -1,5 +1,6 @@
 export default {
   title: 'TDesign Icon',
+  icon: 'Icons',
   figmaFileText: 'Figma Source File',
   iconTypeText: 'Icon Type',
   strokeTypes: {
@@ -35,5 +36,10 @@ export default {
     copyVue: 'Copy Vue Code',
     downloadSvg: 'Download SVG',
     downloadPng: 'Download PNG',
+  },
+  empty: {
+    title: 'No Icon Found',
+    description: 'If you cannot find a suitable icon, please create an issue to the repository.',
+    buttonText: 'create an issue',
   },
 };

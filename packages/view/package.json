@@ -1,7 +1,14 @@
 {
   "name": "tdesign-icons-view",
-  "version": "0.4.0",
-  "description": "A web-component package for display all icons in any UI framework",
+  "version": "0.5.0",
+  "description": "A Webcomponents package for display all tdesign icons in any UI framework",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:watch": "vite build --watch",
+    "preview": "vite build --mode preview"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Tencent/tdesign-icons.git",
@@ -11,41 +18,22 @@
   "bugs": {
     "url": "https://github.com/Tencent/tdesign-icons/issues"
   },
-  "main": "dist/td-icons-view.js",
-  "files": [
-    "dist/td-icons-view.js",
-    "LICENSE"
-  ],
-  "scripts": {
-    "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build --target wc --inline-vue --name td-icons-view src/IconView.vue",
-    "build:watch": "vue-cli-service build --target wc --inline-vue --name td-icons-view src/IconView.vue --watch",
-    "lint": "vue-cli-service lint"
-  },
+  "main": "dist/td-icons-view.es.js",
   "keywords": [
     "icons",
-    "web component"
+    "web-components"
   ],
   "license": "MIT",
   "dependencies": {
-    "core-js": "catalog:",
+    "@popperjs/core": "catalog:",
     "lodash": "catalog:",
-    "tdesign-icons-vue": "catalog:tdesign",
-    "tdesign-vue": "catalog:tdesign",
-    "vue": "catalog:vue27",
-    "@popperjs/core": "catalog:"
+    "tdesign-icons-vue-next": "catalog:tdesign",
+    "tdesign-vue-next": "catalog:tdesign",
+    "vue": "catalog:vue"
   },
   "devDependencies": {
-    "@babel/core": "catalog:",
-    "@babel/eslint-parser": "catalog:",
-    "@vue/cli-plugin-babel": "catalog:",
-    "@vue/cli-plugin-eslint": "catalog:",
-    "@vue/cli-service": "catalog:",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "catalog:",
-    "raw-loader": "catalog:",
-    "vue-loader": "catalog:",
-    "vue-template-compiler": "catalog:",
-    "@vue/babel-preset-jsx": "catalog:"
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "vite": "catalog:"
   }
 }

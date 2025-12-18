@@ -1,5 +1,6 @@
 export default {
   title: 'Icon 图标资源',
+  icon: '图标',
   figmaFileText: 'Figma 源文件',
   iconTypeText: 'Icon 类型',
   strokeTypes: {
@@ -35,5 +36,10 @@ export default {
     copyVue: '复制 Vue 代码',
     downloadSvg: '下载 SVG',
     downloadPng: '下载 PNG',
+  },
+  empty: {
+    title: '暂无数据',
+    description: '找不到合适的图标？请前往仓库提 issue',
+    buttonText: '提需求',
   },
 };

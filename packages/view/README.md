@@ -1,20 +1,20 @@
 # TDesign Icons View
 
-## 介绍
+## 🧐 Introduction
 
-- 一个用于解决跨所有框架展示 Icon 的 基于 web component 的包。
+- A package for display all TDesign icons in any UI framework
 
-## 安装
+## 📦 Installation
 
 - `npm i tdesign-icons-view`
 
-## 使用
+## 🔨 Usage
 
 ```js
 import "tdesign-icons-view";
 
-// 开发侧 展示复制name和<NameIcon />的操作
-<td-icons-view show-type="develop" />;
-// 设计侧 展示复制svg和下载svg的操作
-<td-icons-view show-type="design" />;
+// single page
+<td-icons-view />;
+// inserted as part of page
+<td-icons-view framework-content />;
 ```

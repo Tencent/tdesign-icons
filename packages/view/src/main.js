@@ -1,9 +1,7 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 
-import IconView from './IconView.vue';
+import IconView from './icon-view.vue';
 
-Vue.config.productionTip = false;
+const app = createApp(IconView);
 
-new Vue({
-  render: (h) => h(IconView),
-}).$mount('#app');
+app.mount('#app');

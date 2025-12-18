@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import themeVariables from '!raw-loader!../styles/vars.css';
+import themeVariables from '../styles/vars.css?raw';
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import tdesignVariables from '!raw-loader!../../node_modules/tdesign-vue/es/style/index.css';
+import tdesignVariables from '../../node_modules/tdesign-vue-next/es/style/index.css?raw';
 
 const iconViewId = 'TDESIGN_ICON_VIEW';
 export function getRoot() {
@@ -39,10 +39,11 @@ export function calcNavHighlight() {
       const [, id] = decodeURIComponent(anchor.href).split('#');
       return getRoot().getElementById(id);
     });
+    const container = getRoot()?.querySelector('.t-icons-view');
+    const containerTop = container ? container.getBoundingClientRect().top : 0;
     return linkList.map((link) => {
       if (!link) return 0;
       const { top } = link.getBoundingClientRect();
-      const containerTop = getRoot()?.querySelector('.t-icons-view').getBoundingClientRect().top;
       return top - containerTop;
     });
   }
@@ -56,8 +57,11 @@ export function calcNavHighlight() {
 }
 
 export function anchorHighlight(anchorList, linkTopList, scrollElementSelector) {
-  const { scrollTop } = getRoot()?.querySelector(scrollElementSelector);
+  const scrollContainer = getRoot()?.querySelector(scrollElementSelector);
+  const scrollTop = scrollContainer ? scrollContainer.scrollTop : 0;
   const categoriesEle = getRoot()?.querySelector('.t-icons-view__categories');
+
+  if (!categoriesEle) return;
 
   // eslint-disable-next-line no-plusplus
   for (let i = 0; i < linkTopList.length; i++) {
@@ -84,10 +88,12 @@ export function proxyTitleAnchor(e, scrollElementSelector) {
 
     if (!idTarget) return;
 
-    const containerTop = getRoot()?.querySelector('.t-icons-view').getBoundingClientRect().top;
+    const container = getRoot()?.querySelector('.t-icons-view');
+    const containerTop = container ? container.getBoundingClientRect().top : 0;
 
     const { top } = idTarget.getBoundingClientRect();
     const target = getRoot()?.querySelector(scrollElementSelector);
+    if (!target) return;
     const { scrollTop } = target;
 
     const offsetTop = top + scrollTop - containerTop;

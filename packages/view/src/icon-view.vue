@@ -38,6 +38,7 @@
           }"
           @change="handleSearchIcon"
           v-model="searchStr"
+          clearable
         >
           <template #prefix-icon>
             <search-icon />
@@ -540,7 +541,7 @@ const getCurrentRawSvg = () => {
   const svg = getRoot()?.querySelector(`#t-icon-${currentIconName.value}`);
   const svgString = new XMLSerializer().serializeToString(svg);
   // eslint-disable-next-line no-useless-escape
-  const regex = new RegExp('<symbol[^>]*>|<\/symbol>', 'g');
+  const regex = /<symbol[^>]*>|<\/symbol>/g;
   const resultString = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">${svgString.replace(
     regex,
     '',

@@ -5,10 +5,6 @@ export const manifest = {
       labelEn: 'Brand',
       icons: [
         {
-          name:'draft',
-          keywords:["草稿"],
-        },
-        {
           name: 'logo-adobe-lightroom-filled',
 
           keywords: ['Adobe Lightroom 标志', 'Adobe Lightroom徽标'],
@@ -6690,6 +6686,9 @@ export const manifest = {
           keywords: ['堤坝', '水坝'],
         },
         {
+          name:'draft',
+          keywords:["草稿"],
+        },        {
           name: 'dam-3',
 
           keywords: ['堤坝', '水坝'],

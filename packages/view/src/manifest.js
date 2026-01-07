@@ -4741,6 +4741,10 @@ export const manifest = {
       labelEn: 'Brand',
       icons: [
         {
+          name:"draft",
+          keywords:['草稿'],
+        },
+        {
           name: 'logo-adobe-illustrate',
 
           keywords: ['Adobe Illustrator的logo', 'Adobe标志Illustrator'],

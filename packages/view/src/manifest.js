@@ -7327,6 +7327,131 @@ export const manifest = {
 
           keywords: ['文本格式-下划线', '文本格式-底线'],
         },
+        {
+          name: 'order',
+
+          keywords: ['排序', '顺序', '排序方式'],
+        },
+        {
+          name: 'chinese-rectangle',
+
+          keywords: ['中文方框', '中文矩形', '中文标签'],
+        },
+        {
+          name: 'english-rectangle',
+
+          keywords: ['英文方框', '英文矩形', '英文字标签'],
+        },
+        {
+          name: 'japanese-rectangle',
+
+          keywords: ['日文方框', '日文矩形', '日文字标签'],
+        },
+        {
+          name: 'korean-rectangle',
+
+          keywords: ['韩文方框', '韩文矩形', '韩文字标签'],
+        },
+        {
+          name: 'document-popular',
+
+          keywords: ['文档热门', '热门文档', '常用文档'],
+        },
+        {
+          name: 'document-update',
+
+          keywords: ['文档更新', '更新日志', '文档变更'],
+        },
+        {
+          name: 'document-location',
+
+          keywords: ['文档位置', '定位文档', '文档定位'],
+        },
+        {
+          name: 'textformat-longer',
+
+          keywords: ['加长文本', '增加长度', '延长文本'],
+        },
+        {
+          name: 'textformat-shorter',
+
+          keywords: ['缩短文本', '减少长度', '文本变短'],
+        },
+        {
+          name: 'mode-text',
+
+          keywords: ['文本模式', '文字模式', '编辑模式'],
+        },
+        {
+          name: 'text',
+
+          keywords: ['文本', '文字', '正文'],
+        },
+        {
+          name: 'list-demand',
+
+          keywords: ['需求列表', '需求清单', '功能需求'],
+        },
+        {
+          name: 'list-bug',
+
+          keywords: ['缺陷列表', 'Bug清单', '故障列表'],
+        },
+        {
+          name: 'font-background',
+
+          keywords: ['字体背景', '文字背景', '字体底色'],
+        },
+        {
+          name: 'text-style',
+
+          keywords: ['文本样式', '文字格式', '字体样式'],
+        },
+        {
+          name: 'automatic-numbering',
+
+          keywords: ['自动编号', '序号自动', '自动序号'],
+        },
+        {
+          name: 'abstract',
+
+          keywords: ['摘要', '概述', '摘要内容'],
+        },
+        {
+          name: 'collapsible-block',
+
+          keywords: ['折叠块', '可折叠区域', '收起面板'],
+        },
+        {
+          name: 'attachment-list',
+
+          keywords: ['附件列表', '文件附件', '附件清单'],
+        },
+        {
+          name: 'catalog',
+
+          keywords: ['目录', '目录结构', '章节目录'],
+        },
+        {
+          name: 'highlighted-block',
+
+          keywords: ['高亮块', '突出显示', '强调块'],
+        },
+        {
+          name: 'format-painter',
+
+          keywords: ['格式刷', '复制格式', '样式刷'],
+        },
+        {
+          name: 'order-list',
+
+          keywords: ['有序列表', '编号列表', '顺序清单'],
+        },
+        {
+          name: 'text-drawing',
+
+          keywords: ['文本绘制', '文字绘图', '文字渲染'],
+        },
       ],
     },
     Math: {

@@ -1,4 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+. "$(dirname "$0")/cleanup-svg.sh"
+
 pnpm lint-staged
+
+

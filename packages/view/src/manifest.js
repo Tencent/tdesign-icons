@@ -7816,6 +7816,11 @@ export const manifest = {
           keywords: ['文件代码', '代码文件'],
         },
         {
+          name: 'file-markdown',
+
+          keywords: ['文件-markdown', 'Markdown 文件', 'md 文件'],
+        },
+        {
           name: 'file-1',
 
           keywords: ['文件', '档案'],

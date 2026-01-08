@@ -10081,6 +10081,61 @@ export const manifest = {
 
           keywords: ['缩小', '缩小尺寸'],
         },
+        {
+          name: 'contribute',
+
+          keywords: ['贡献', '投稿', '捐赠'],
+        },
+        {
+          name: 'calendar-3',
+
+          keywords: ['日历', '日程', '时间安排'],
+        },
+        {
+          name: 'ability-open',
+
+          keywords: ['开启能力', '启用', '开放权限'],
+        },
+        {
+          name: 'feedback',
+
+          keywords: ['反馈', '意见', '建议'],
+        },
+        {
+          name: 'shortcut',
+
+          keywords: ['快捷方式', '快捷键', '热键'],
+        },
+        {
+          name: 'high-level',
+
+          keywords: ['高级', '高层', '高级别'],
+        },
+        {
+          name: 'collection-1',
+
+          keywords: ['集合', '收藏', '合集'],
+        },
+        {
+          name: 'import',
+
+          keywords: ['导入', '引入', '输入'],
+        },
+        {
+          name: 'export',
+
+          keywords: ['导出', '输出', '导出文件'],
+        },
+        {
+          name: 'authorize',
+
+          keywords: ['授权', '许可', '认证'],
+        },
+        {
+          name: 'correct',
+
+          keywords: ['纠正', '修正', '校正'],
+        },
       ],
     },
     Design: {

@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="pen-fluorescence">
+<path id="fill2" d="M5.863 14.9658L8.69125 17.7937L7.24227 19.2427L4.41385 19.2427L2.99963 17.8285L5.863 14.9658Z" fill="white"/>
+<path id="fill1" d="M13.044 5.05664L4.5 13.6013L10.0002 19.1016L18.5442 10.557L13.044 5.05664Z" fill="white"/>
+<path id="stroke2" d="M5.863 14.9658L8.69125 17.7937L7.24227 19.2427L4.41385 19.2427L2.99963 17.8285L5.863 14.9658Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke1" d="M13.044 5.05701L4.5 13.6016L10.0002 19.102L18.5442 10.5574M13.044 5.05701L18.5442 10.5574M13.044 5.05701L16.1007 2L21.601 7.50036L18.5442 10.5574" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</svg>

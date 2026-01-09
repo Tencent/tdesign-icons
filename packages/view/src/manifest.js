@@ -5727,6 +5727,26 @@ export const manifest = {
           keywords: ['拉取请求', '合并请求'],
         },
         {
+          name: 'plantuml',
+
+          keywords: ['PlantUML', 'uml图', '类图'],
+        },
+        {
+          name: 'mermaid',
+
+          keywords: ['Mermaid', '流程图', '图表脚本'],
+        },
+        {
+          name: 'flowchart',
+
+          keywords: ['流程图', '流程可视化', '流程设计'],
+        },
+        {
+          name: 'graphviz',
+
+          keywords: ['Graphviz', '有向图', 'dot'],
+        },
+        {
           name: 'git-branch',
 
           keywords: ['git分支', 'Git的支'],
@@ -6232,6 +6252,16 @@ export const manifest = {
           name: 'video-camera-off',
 
           keywords: ['关闭摄像机', '摄像机关'],
+        },
+        {
+          name: 'screen-mirroring',
+
+          keywords: ['屏幕镜像', '投屏', '屏幕同步'],
+        },
+        {
+          name: 'play-chart',
+
+          keywords: ['播放图表', '播放统计', '播放数据'],
         },
       ],
     },
@@ -7131,6 +7161,21 @@ export const manifest = {
           name: 'tips',
 
           keywords: ['小费', '小费建议'],
+        },
+        {
+          name: 'chat-history',
+
+          keywords: ['聊天历史', '聊天记录', '对话历史'],
+        },
+        {
+          name: 'mentioned',
+
+          keywords: ['被@', '提及', '被提到'],
+        },
+        {
+          name: 'forum',
+
+          keywords: ['论坛', '讨论区', '社区'],
         },
       ],
     },
@@ -8326,6 +8371,36 @@ export const manifest = {
 
           keywords: ['表格', '表单'],
         },
+        {
+          name: 'component-stickytool',
+
+          keywords: ['粘贴工具组件', '浮动工具', '工具栏'],
+        },
+        {
+          name: 'image-carousel',
+
+          keywords: ['图片轮播', '轮播图', '轮播组件'],
+        },
+        {
+          name: 'column-layout',
+
+          keywords: ['列布局', '多列布局', '网格列'],
+        },
+        {
+          name: 'page-tab',
+
+          keywords: ['页面标签', '分页标签', '选项卡'],
+        },
+        {
+          name: 'tag-state',
+
+          keywords: ['标签状态', '状态标记', 'Tag 状态'],
+        },
+        {
+          name: 'component-steps-1',
+
+          keywords: ['步骤组件', '进度步骤', '步骤指示'],
+        },
       ],
     },
     Else: {
@@ -8572,6 +8647,16 @@ export const manifest = {
           name: 'mail',
 
           keywords: ['邮件', '邮件通讯'],
+        },
+        {
+          name: 'shortcut',
+
+          keywords: ['快捷方式', '热键', '快捷键'],
+        },
+        {
+          name: 'web',
+
+          keywords: ['网页', '网络', '网页应用'],
         },
       ],
     },
@@ -8998,6 +9083,11 @@ export const manifest = {
           name: 'unfold-less',
 
           keywords: ['展开式', '无折叠'],
+        },
+        {
+          name: 'size-change',
+
+          keywords: ['尺寸变化', '大小调整', '缩放箭头'],
         },
       ],
     },
@@ -10282,6 +10372,26 @@ export const manifest = {
 
           keywords: ['切片', '片段'],
         },
+        {
+          name: 'placeholder',
+
+          keywords: ['占位符', '占位', '占位元素'],
+        },
+        {
+          name: 'pen-fluorescence',
+
+          keywords: ['荧光笔', '高亮笔', '荧光标记'],
+        },
+        {
+          name: 'mosaic',
+
+          keywords: ['马赛克', '像素化', '打码'],
+        },
+        {
+          name: 'draft',
+
+          keywords: ['草稿', '草稿箱', '草稿模式'],
+        },
       ],
     },
     Foods: {
@@ -10908,6 +11018,16 @@ export const manifest = {
           name: 'wifi',
 
           keywords: ['无线保真', '无线互联网'],
+        },
+        {
+          name: 'automation',
+
+          keywords: ['自动化', '自动任务', '自动化设置'],
+        },
+        {
+          name: 'mode-preview',
+
+          keywords: ['模式预览', '预览模式', '查看模式'],
         },
         {
           name: 'wifi-no',

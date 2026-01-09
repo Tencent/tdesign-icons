@@ -5066,6 +5066,36 @@ export const manifest = {
 
           keywords: ['桌子', '餐桌'],
         },
+        {
+          name: 'chart-line-board',
+
+          keywords: ['折线看板', '趋势仪表板', 'line board'],
+        },
+        {
+          name: 'view-gantt',
+
+          keywords: ['甘特图', '项目计划', '任务进度'],
+        },
+        {
+          name: 'view-image',
+
+          keywords: ['视图图片', '图像展示'],
+        },
+        {
+          name: 'view-organization',
+
+          keywords: ['组织结构图', '组织视图', '组织架构'],
+        },
+        {
+          name: 'tree-catalog',
+
+          keywords: ['树状目录', '分类目录', '目录树'],
+        },
+        {
+          name: 'mind-map',
+
+          keywords: ['思维导图', '脑图', '概念图'],
+        },
       ],
     },
     Image: {

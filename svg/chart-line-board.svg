@@ -1,0 +1,7 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="chart-line-board">
+<path id="fill1" d="M22 3H2V17H22V3Z" fill="white"/>
+<path id="stroke2" d="M17 8L13.4286 11.3333L10.5714 8.66667L7 12" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke1" d="M4 21H20M2 3H22V17H2V3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</svg>

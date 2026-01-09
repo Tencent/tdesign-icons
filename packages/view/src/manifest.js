@@ -7801,6 +7801,46 @@ export const manifest = {
           keywords: ['折扣', '降价'],
         },
         {
+          name: 'discount-list',
+
+          keywords: ['折扣列表', '优惠清单'],
+        },
+        {
+          name: 'link-transform',
+
+          keywords: ['链接转换', '链接变换'],
+        },
+        {
+          name: 'rename',
+
+          keywords: ['重命名', '改名'],
+        },
+        {
+          name: 'file-markdown',
+
+          keywords: ['Markdown 文件', 'md 文件'],
+        },
+        {
+          name: 'file-txt',
+
+          keywords: ['文本文件', 'txt 文件'],
+        },
+        {
+          name: 'file-yaml',
+
+          keywords: ['YAML 文件', 'yml 文件'],
+        },
+        {
+          name: 'file-json',
+
+          keywords: ['JSON 文件', 'json 文件'],
+        },
+        {
+          name: 'file-csv',
+
+          keywords: ['CSV 文件', '逗号分隔值'],
+        },
+        {
           name: 'file-add-1',
 
           keywords: ['文件添加', '添加文件'],

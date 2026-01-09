@@ -4880,6 +4880,21 @@ export const manifest = {
 
           keywords: ['小程序', '微信小程序'],
         },
+        {
+          name: 'logo-iwiki',
+
+          keywords: ['iWiki', '知识库', 'Wiki'],
+        },
+        {
+          name: 'logo-markdown',
+
+          keywords: ['Markdown', '标记语言', '文档'],
+        },
+        {
+          name: 'logo-draw-io',
+
+          keywords: ['Draw.io', '画图', '流程图'],
+        },
       ],
     },
     Charts: {
@@ -5780,6 +5795,11 @@ export const manifest = {
           name: 'terminal-window',
 
           keywords: ['终端窗口', '终端视窗'],
+        },
+        {
+          name: 'git-commit-1',
+
+          keywords: ['提交', 'Git 提交记录', '版本控制'],
         },
       ],
     },
@@ -7031,6 +7051,26 @@ export const manifest = {
 
           keywords: ['数字', '数目'],
         },
+        {
+          name: 'numbers-circle-1',
+
+          keywords: ['数字', '圆形数字', '数字1'],
+        },
+        {
+          name: 'numbers-circle-2',
+
+          keywords: ['数字', '圆形数字', '数字2'],
+        },
+        {
+          name: 'numbers-circle-3',
+
+          keywords: ['数字', '圆形数字', '数字3'],
+        },
+        {
+          name: 'numbers-circle-4',
+
+          keywords: ['数字', '圆形数字', '数字4'],
+        },
       ],
     },
     Communication: {
@@ -7714,6 +7754,11 @@ export const manifest = {
 
           keywords: ['用户安全', '安全性'],
         },
+        {
+          name: 'usergroup-circle',
+
+          keywords: ['用户组', '圆形用户组', '团队'],
+        },
       ],
     },
     File: {
@@ -8336,6 +8381,132 @@ export const manifest = {
           name: 'loading',
 
           keywords: ['装货中', '加载中'],
+        },
+      ],
+    },
+    AI: {
+      labelCN: '智能',
+      labelEn: 'AI',
+      icons: [
+        {
+          name: 'ai-1',
+
+          keywords: ['智能'],
+        },
+        {
+          name: 'cai-edit-1',
+
+          keywords: ['AI编辑', '智能编辑', '编辑'],
+        },
+        {
+          name: 'ai-search',
+
+          keywords: ['AI搜索', '智能搜索', '搜索'],
+        },
+        {
+          name: 'ai-image',
+
+          keywords: ['AI图像', '智能图像', '图片'],
+        },
+        {
+          name: 'ai-edit',
+
+          keywords: ['AI编辑', '智能编辑', '编辑'],
+        },
+        {
+          name: 'ai-book-open',
+
+          keywords: ['AI书籍', '智能阅读', '书籍'],
+        },
+        {
+          name: 'ai-chart-bar',
+
+          keywords: ['AI图表', '智能分析', '图表'],
+        },
+        {
+          name: 'ai-education',
+
+          keywords: ['AI教育', '智能教学', '教育'],
+        },
+        {
+          name: 'ai-article',
+
+          keywords: ['AI文章', '智能写作', '文档'],
+        },
+        {
+          name: 'ai-music',
+
+          keywords: ['AI音乐', '智能音乐', '音频'],
+        },
+        {
+          name: 'ai-terminal',
+
+          keywords: ['AI终端', '智能命令', '终端'],
+        },
+        {
+          name: 'ai-terminal-1',
+
+          keywords: ['AI终端', '智能命令', '控制台'],
+        },
+        {
+          name: 'ai-video',
+
+          keywords: ['AI视频', '智能视频', '视频处理'],
+        },
+        {
+          name: 'ai-image-1',
+
+          keywords: ['AI图像', '智能图片', '图像处理'],
+        },
+        {
+          name: 'ai-coordinate-system',
+
+          keywords: ['AI坐标', '智能分析', '数据'],
+        },
+        {
+          name: 'ai-textformat-italic',
+
+          keywords: ['AI文本', '智能格式', '排版'],
+        },
+        {
+          name: 'ai-layout',
+
+          keywords: ['AI布局', '智能排版', '设计'],
+        },
+        {
+          name: 'ai-git-branch',
+
+          keywords: ['AI版本', '智能分支', '代码管理'],
+        },
+        {
+          name: 'ai-cut',
+
+          keywords: ['AI裁剪', '智能切割', '图像'],
+        },
+        {
+          name: 'ai-more-2',
+
+          keywords: ['AI更多', '智能扩展', '功能'],
+        },
+        {
+          name: 'ai-2',
+
+          keywords: ['AI智能', '人工智能', '机器学习'],
+        },
+        {
+          name: 'robot-1',
+
+          keywords: ['机器人', '自动化', '智能'],
+        },
+        {
+          name: 'robot-2',
+
+          keywords: ['机器人', '自动化', '智能'],
+        },
+        {
+          name: 'robot-3',
+
+          keywords: ['机器人', '自动化', '智能'],
         },
       ],
     },

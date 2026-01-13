@@ -4882,6 +4882,132 @@ export const manifest = {
         },
       ],
     },
+    Test: {
+      labelCN: '测试',
+      labelEn: 'Test',
+      icons: [
+        {
+          name: 'ai-book-open',
+
+          keywords: ['书', '打开的书'],
+        },
+        {
+          name: 'ai-edit-1-filled',
+
+          keywords: ['AI 编辑', '文本编辑'],
+        },
+        {
+          name: 'ai-search',
+
+          keywords: ['AI 搜索', '智能搜索'],
+        },
+        {
+          name: 'automation-filled',
+
+          keywords: ['自动化', '流程自动化'],
+        },
+        {
+          name: 'chart-draw-io',
+
+          keywords: ['Draw.io 图表', '流程图', '图表绘制'],
+        },
+        {
+          name: 'column-layout',
+
+          keywords: ['列布局', '栏目布局'],
+        },
+        {
+          name: 'contribute',
+
+          keywords: ['贡献', '参与', '提交'],
+        },
+        {
+          name: 'dialog-history',
+
+          keywords: ['对话历史', '聊天记录'],
+        },
+        {
+          name: 'flowchart-filled',
+
+          keywords: ['流程图', '流程图标'],
+        },
+        {
+          name: 'forum',
+
+          keywords: ['论坛', '讨论区', '社区'],
+        },
+        {
+          name: 'graphviz-filled',
+
+          keywords: ['Graphviz', '图生成'],
+        },
+        {
+          name: 'korean-rectangle',
+
+          keywords: ['韩文矩形', '韩国矩形'],
+        },
+        {
+          name: 'logo-markdown',
+
+          keywords: ['Markdown 标志', 'MD 徽标'],
+        },
+        {
+          name: 'mermaid-filled',
+
+          keywords: ['Mermaid', '图表语法', '流程图'],
+        },
+        {
+          name: 'mode-preview-filled',
+
+          keywords: ['预览模式', '模式预览'],
+        },
+        {
+          name: 'numbers-circle-1-filled',
+
+          keywords: ['数字 1 圆', '编号 1'],
+        },
+        {
+          name: 'numbers-circle-2-filled',
+
+          keywords: ['数字 2 圆', '编号 2'],
+        },
+        {
+          name: 'numbers-circle-3-filled',
+
+          keywords: ['数字 3 圆', '编号 3'],
+        },
+        {
+          name: 'numbers-circle-4-filled',
+
+          keywords: ['数字 4 圆', '编号 4'],
+        },
+        {
+          name: 'plantuml-filled',
+
+          keywords: ['PlantUML', 'UML 图'],
+        },
+        {
+          name: 'rename',
+
+          keywords: ['重命名', '修改名称'],
+        },
+        {
+          name: 'text-drawing-filled',
+
+          keywords: ['文字绘制', '文本绘图'],
+        },
+        {
+          name: 'usergroup-circle-filled',
+
+          keywords: ['用户组', '群组', '用户圈'],
+        },
+        {
+          name: 'view-image',
+
+          keywords: ['查看图片', '预览图像'],
+        },
+      ],
+    },
     Charts: {
       labelCN: '图表',
       labelEn: 'Charts',

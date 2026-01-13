@@ -131,6 +131,17 @@ export const manifest = {
         },
       ],
     },
+    Else: {
+      labelCN: '其他',
+      labelEn: 'Else',
+      icons: [
+        {
+          name: 'ai-book-open',
+
+          keywords: ['书', '打开的书本'],
+        },
+      ],
+    },
     Image: {
       labelCN: '图片',
       labelEn: 'Image',
@@ -4033,6 +4044,121 @@ export const manifest = {
           name: 'zoom-out-filled',
 
           keywords: ['缩小', '缩小尺寸'],
+        },
+        {
+          name: 'ai-edit-1-filled',
+
+          keywords: ['AI 编辑', '人工智能 编辑'],
+        },
+        {
+          name: 'ai-search',
+
+          keywords: ['AI 搜索', '智能搜索', '人工智能'],
+        },
+        {
+          name: 'automation-filled',
+
+          keywords: ['自动化', '流程自动化'],
+        },
+        {
+          name: 'chart-draw-io',
+
+          keywords: ['绘制图表', 'draw.io'],
+        },
+        {
+          name: 'column-layout',
+
+          keywords: ['列布局', '栏布局'],
+        },
+        {
+          name: 'contribute',
+
+          keywords: ['贡献', '参与贡献'],
+        },
+        {
+          name: 'dialog-history',
+
+          keywords: ['对话历史', '聊天记录'],
+        },
+        {
+          name: 'flowchart-filled',
+
+          keywords: ['流程图', '流程建模'],
+        },
+        {
+          name: 'forum',
+
+          keywords: ['论坛', '讨论区'],
+        },
+        {
+          name: 'graphviz-filled',
+
+          keywords: ['Graphviz', '图形可视化'],
+        },
+        {
+          name: 'korean-rectangle',
+
+          keywords: ['韩国矩形', '韩文版布局'],
+        },
+        {
+          name: 'logo-markdown',
+
+          keywords: ['Markdown 徽标', 'Markdown 标识'],
+        },
+        {
+          name: 'mermaid-filled',
+
+          keywords: ['Mermaid', '流程图工具'],
+        },
+        {
+          name: 'mode-preview-filled',
+
+          keywords: ['预览模式', '模式预览'],
+        },
+        {
+          name: 'numbers-circle-1-filled',
+
+          keywords: ['数字 1', '圆圈数字 1'],
+        },
+        {
+          name: 'numbers-circle-2-filled',
+
+          keywords: ['数字 2', '圆圈数字 2'],
+        },
+        {
+          name: 'numbers-circle-3-filled',
+
+          keywords: ['数字 3', '圆圈数字 3'],
+        },
+        {
+          name: 'numbers-circle-4-filled',
+
+          keywords: ['数字 4', '圆圈数字 4'],
+        },
+        {
+          name: 'plantuml-filled',
+
+          keywords: ['PlantUML', 'UML 生成'],
+        },
+        {
+          name: 'rename',
+
+          keywords: ['重命名', '改名'],
+        },
+        {
+          name: 'text-drawing-filled',
+
+          keywords: ['文本绘制', '文字绘制'],
+        },
+        {
+          name: 'usergroup-circle-filled',
+
+          keywords: ['用户组', '群组'],
+        },
+        {
+          name: 'view-image',
+
+          keywords: ['查看图片', '预览图像'],
         },
       ],
     },

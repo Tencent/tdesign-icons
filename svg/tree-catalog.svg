@@ -1,0 +1,9 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="tree-catalog">
+<path id="stroke1" d="M21 5L13 5M21 12H13M21 19H13" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<g id="stroke2">
+<path d="M3 3H9V9H3V3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M3 15H9V21H3V15Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</g>
+</svg>

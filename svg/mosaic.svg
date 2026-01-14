@@ -1,0 +1,13 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="mosaic">
+<path id="fill1" d="M3 3H21V21H3V3Z" fill="white"/>
+<path id="stroke1" d="M3 3H21V21H3V3Z" stroke="black" stroke-width="2"/>
+<g id="stroke2">
+<path d="M7 7H9V9H7V7Z" stroke="black" stroke-width="2"/>
+<path d="M11 11H13V13H11V11Z" stroke="black" stroke-width="2"/>
+<path d="M7 15H9V17H7V15Z" stroke="black" stroke-width="2"/>
+<path d="M15 7H17V9H15V7Z" stroke="black" stroke-width="2"/>
+<path d="M15 15H17V17H15V15Z" stroke="black" stroke-width="2"/>
+</g>
+</g>
+</svg>

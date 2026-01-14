@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="mermaid">
+<g id="fill1">
+<path d="M16 17.5H21V21.0002H16V17.5Z" fill="white"/>
+<path d="M3 17.5H8V21.0002H3V17.5Z" fill="white"/>
+<path d="M16 6.50016H21V3H16V6.50016Z" fill="white"/>
+<path d="M3 6.50016H8V3H3V6.50016Z" fill="white"/>
+<path d="M9.50006 13.5002H14.5001V10H9.50006V13.5002Z" fill="white"/>
+</g>
+<path id="stroke1" d="M5.5 17.5V12H9.50006M18.5 17.5V12H14.5001M5.5 6.50016V13.5003M18.5 6.50016V13.5003M16 17.5H21V21.0002H16V17.5ZM3 17.5H8V21.0002H3V17.5ZM16 6.50016H21V3H16V6.50016ZM3 6.50016H8V3H3V6.50016ZM9.50006 13.5002H14.5001V10H9.50006V13.5002Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</svg>

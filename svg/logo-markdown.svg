@@ -1,0 +1,7 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="logo-markdown">
+<path id="fill1" d="M1 5H23V19H1V5Z" fill="white"/>
+<path id="stroke1" d="M1 5H23V19H1V5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M14 12.4975L16.5025 15L19.0031 12.4993M16.5025 9V14.2521M11 15V10C11 9.44772 10.5523 9 10 9L8 9M8 9L8 15M8 9L5 9L5 15" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</svg>

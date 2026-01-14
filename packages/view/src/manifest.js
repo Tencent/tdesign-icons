@@ -131,6 +131,441 @@ export const manifest = {
         },
       ],
     },
+    Test: {
+      labelCN: '测试',
+      labelEn: 'Test',
+      icons: [
+        {
+          name: 'ai-1-filled',
+
+          keywords: ['智能', '自动化'],
+        },
+        {
+          name: 'order',
+          keywords: ['顺序', '排序'],
+        },
+        {
+          name: 'chinese-rectangle',
+          keywords: ['中文', '矩形'],
+        },
+        {
+          name: 'english-rectangle',
+          keywords: ['英文', '矩形'],
+        },
+        {
+          name: 'japanese-rectangle',
+          keywords: ['日文', '矩形'],
+        },
+        {
+          name: 'korean-rectangle',
+          keywords: ['韩文', '矩形'],
+        },
+        {
+          name: 'document-popular',
+          keywords: ['文档', '流行'],
+        },
+        {
+          name: 'document-update',
+          keywords: ['文档', '更新'],
+        },
+        {
+          name: 'document-location',
+          keywords: ['文档', '位置'],
+        },
+        {
+          name: 'textformat-longer',
+          keywords: ['文本格式', '加长'],
+        },
+        {
+          name: 'textformat-shorter',
+          keywords: ['文本格式', '缩短'],
+        },
+        {
+          name: 'mode-text',
+          keywords: ['模式', '文本'],
+        },
+        {
+          name: 'text',
+          keywords: ['文本'],
+        },
+        {
+          name: 'list-demand',
+          keywords: ['列表', '需求'],
+        },
+        {
+          name: 'list-bug',
+          keywords: ['列表', 'bug'],
+        },
+        {
+          name: 'font-background',
+          keywords: ['字体', '背景'],
+        },
+        {
+          name: 'text-style',
+          keywords: ['文本', '样式'],
+        },
+        {
+          name: 'automatic-numbering',
+          keywords: ['自动', '编号'],
+        },
+        {
+          name: 'abstract',
+          keywords: ['抽象'],
+        },
+        {
+          name: 'collapsible-block',
+          keywords: ['可折叠', '块'],
+        },
+        {
+          name: 'attachment-list',
+          keywords: ['附件', '列表'],
+        },
+        {
+          name: 'catalog',
+          keywords: ['目录'],
+        },
+        {
+          name: 'highlighted-block',
+          keywords: ['高亮', '块'],
+        },
+        {
+          name: 'format-painter',
+          keywords: ['格式', '画笔'],
+        },
+        {
+          name: 'order-list',
+          keywords: ['有序', '列表'],
+        },
+        {
+          name: 'text-drawing',
+          keywords: ['文本', '绘图'],
+        },
+        {
+          name: 'file-edit',
+          keywords: ['文件', '编辑'],
+        },
+        {
+          name: 'contribute',
+          keywords: ['贡献'],
+        },
+        {
+          name: 'calendar-3',
+          keywords: ['日历', '3'],
+        },
+        {
+          name: 'ability-open',
+          keywords: ['能力', '开放'],
+        },
+        {
+          name: 'feedback',
+          keywords: ['反馈'],
+        },
+        {
+          name: 'high-level',
+          keywords: ['高级'],
+        },
+        {
+          name: 'collection-1',
+          keywords: ['收藏', '1'],
+        },
+        {
+          name: 'import',
+          keywords: ['导入'],
+        },
+        {
+          name: 'export',
+          keywords: ['导出'],
+        },
+        {
+          name: 'authorize',
+          keywords: ['授权'],
+        },
+        {
+          name: 'correct',
+          keywords: ['正确'],
+        },
+        {
+          name: 'discount-list',
+          keywords: ['折扣', '列表'],
+        },
+        {
+          name: 'link-transform',
+          keywords: ['链接', '转换'],
+        },
+        {
+          name: 'rename',
+          keywords: ['重命名'],
+        },
+        {
+          name: 'file-markdown',
+          keywords: ['文件', 'markdown'],
+        },
+        {
+          name: 'file-txt',
+          keywords: ['文件', 'txt'],
+        },
+        {
+          name: 'file-yaml',
+          keywords: ['文件', 'yaml'],
+        },
+        {
+          name: 'file-json',
+          keywords: ['文件', 'json'],
+        },
+        {
+          name: 'file-csv',
+          keywords: ['文件', 'csv'],
+        },
+        {
+          name: 'chart-line-board',
+          keywords: ['图表', '线', '板'],
+        },
+        {
+          name: 'view-gantt',
+          keywords: ['视图', '甘特'],
+        },
+        {
+          name: 'view-image',
+          keywords: ['视图', '图像'],
+        },
+        {
+          name: 'view-organization',
+          keywords: ['视图', '组织'],
+        },
+        {
+          name: 'tree-catalog',
+          keywords: ['树', '目录'],
+        },
+        {
+          name: 'mind-map',
+          keywords: ['思维导图'],
+        },
+        {
+          name: 'chart-draw-io',
+          keywords: ['图表', 'draw.io'],
+        },
+        {
+          name: 'placeholder',
+          keywords: ['占位符'],
+        },
+        {
+          name: 'pen-fluorescence',
+          keywords: ['笔', '荧光'],
+        },
+        {
+          name: 'mosaic',
+          keywords: ['马赛克'],
+        },
+        {
+          name: 'draft',
+          keywords: ['草稿'],
+        },
+        {
+          name: 'component-stickytool',
+          keywords: ['组件', '粘性工具'],
+        },
+        {
+          name: 'image-carousel',
+          keywords: ['图像', '轮播'],
+        },
+        {
+          name: 'column-layout',
+          keywords: ['列', '布局'],
+        },
+        {
+          name: 'page-tab',
+          keywords: ['页面', '标签'],
+        },
+        {
+          name: 'tag-state',
+          keywords: ['标签', '状态'],
+        },
+        {
+          name: 'component-steps-1',
+          keywords: ['组件', '步骤', '1'],
+        },
+        {
+          name: 'automation',
+          keywords: ['自动化'],
+        },
+        {
+          name: 'mode-preview',
+          keywords: ['模式', '预览'],
+        },
+        {
+          name: 'dialog-history',
+          keywords: ['对话', '历史'],
+        },
+        {
+          name: 'mentioned',
+          keywords: ['提及'],
+        },
+        {
+          name: 'forum',
+          keywords: ['论坛'],
+        },
+        {
+          name: 'shortcut',
+          keywords: ['快捷方式'],
+        },
+        {
+          name: 'web',
+          keywords: ['网页'],
+        },
+        {
+          name: 'size-change',
+          keywords: ['大小', '改变'],
+        },
+        {
+          name: 'plantuml',
+          keywords: ['PlantUML'],
+        },
+        {
+          name: 'mermaid',
+          keywords: ['Mermaid'],
+        },
+        {
+          name: 'flowchart',
+          keywords: ['流程图'],
+        },
+        {
+          name: 'graphviz',
+          keywords: ['Graphviz'],
+        },
+        {
+          name: 'git-commit-1',
+          keywords: ['Git', '提交', '1'],
+        },
+        {
+          name: 'numbers-circle-1',
+          keywords: ['数字', '圆圈', '1'],
+        },
+        {
+          name: 'numbers-circle-2',
+          keywords: ['数字', '圆圈', '2'],
+        },
+        {
+          name: 'numbers-circle-3',
+          keywords: ['数字', '圆圈', '3'],
+        },
+        {
+          name: 'numbers-circle-4',
+          keywords: ['数字', '圆圈', '4'],
+        },
+        {
+          name: 'usergroup-circle',
+          keywords: ['用户组', '圆圈'],
+        },
+        {
+          name: 'logo-iwiki',
+          keywords: ['logo', 'iWiki'],
+        },
+        {
+          name: 'logo-markdown',
+          keywords: ['logo', 'Markdown'],
+        },
+        {
+          name: 'formula',
+          keywords: ['公式'],
+        },
+        {
+          name: 'ai-edit-1',
+          keywords: ['AI', '编辑', '1'],
+        },
+        {
+          name: 'ai-search',
+          keywords: ['AI', '搜索'],
+        },
+        {
+          name: 'ai-image',
+          keywords: ['AI', '图像'],
+        },
+        {
+          name: 'ai-edit',
+          keywords: ['AI', '编辑'],
+        },
+        {
+          name: 'ai-book-open',
+          keywords: ['AI', '书籍', '打开'],
+        },
+        {
+          name: 'ai-chart-bar',
+          keywords: ['AI', '图表', '条形'],
+        },
+        {
+          name: 'ai-education',
+          keywords: ['AI', '教育'],
+        },
+        {
+          name: 'ai-article',
+          keywords: ['AI', '文章'],
+        },
+        {
+          name: 'ai-music',
+          keywords: ['AI', '音乐'],
+        },
+        {
+          name: 'ai-terminal',
+          keywords: ['AI', '终端'],
+        },
+        {
+          name: 'ai-terminal-1',
+          keywords: ['AI', '终端', '1'],
+        },
+        {
+          name: 'ai-video',
+          keywords: ['AI', '视频'],
+        },
+        {
+          name: 'ai-image-1',
+          keywords: ['AI', '图像', '1'],
+        },
+        {
+          name: 'ai-coordinate-system',
+          keywords: ['AI', '坐标系'],
+        },
+        {
+          name: 'ai-textformat-italic',
+          keywords: ['AI', '文本格式', '斜体'],
+        },
+        {
+          name: 'ai-layout',
+          keywords: ['AI', '布局'],
+        },
+        {
+          name: 'ai-git-branch',
+          keywords: ['AI', 'Git', '分支'],
+        },
+        {
+          name: 'ai-screenshot',
+          keywords: ['AI', '截图'],
+        },
+        {
+          name: 'ai-cut',
+          keywords: ['AI', '剪切'],
+        },
+        {
+          name: 'ai-more-2',
+          keywords: ['AI', '更多', '2'],
+        },
+        {
+          name: 'ai',
+          keywords: ['AI'],
+        },
+        {
+          name: 'robot',
+          keywords: ['机器人'],
+        },
+        {
+          name: 'robot-1',
+          keywords: ['机器人', '1'],
+        },
+        {
+          name: 'robot-2',
+          keywords: ['机器人', '2'],
+        },
+      ],
+    },
     Image: {
       labelCN: '图片',
       labelEn: 'Image',
@@ -4879,6 +5314,389 @@ export const manifest = {
           name: 'logo-miniprogram',
 
           keywords: ['小程序', '微信小程序'],
+        },
+      ],
+    },
+    Test: {
+      labelCN: '测试',
+      labelEn: 'Test',
+      icons: [
+        {
+          name: 'ai-1',
+
+          keywords: ['智能', '自动化'],
+        },
+        {
+          name: 'chinese-rectangle-filled',
+          keywords: ['中文', '矩形', '填充'],
+        },
+        {
+          name: 'english-rectangle-filled',
+          keywords: ['英文', '矩形', '填充'],
+        },
+        {
+          name: 'japanese-rectangle-filled',
+          keywords: ['日文', '矩形', '填充'],
+        },
+        {
+          name: 'korean-rectangle-filled',
+          keywords: ['韩文', '矩形', '填充'],
+        },
+        {
+          name: 'document-popular-filled',
+          keywords: ['文档', '流行', '填充'],
+        },
+        {
+          name: 'document-update-filled',
+          keywords: ['文档', '更新', '填充'],
+        },
+        {
+          name: 'document-location-filled',
+          keywords: ['文档', '位置', '填充'],
+        },
+        {
+          name: 'mode-text-filled',
+          keywords: ['模式', '文本', '填充'],
+        },
+        {
+          name: 'list-bug-filled',
+          keywords: ['列表', 'bug', '填充'],
+        },
+        {
+          name: 'font-background-filled',
+          keywords: ['字体', '背景', '填充'],
+        },
+        {
+          name: 'abstract-filled',
+          keywords: ['抽象', '填充'],
+        },
+        {
+          name: 'highlighted-block-filled',
+          keywords: ['高亮', '块', '填充'],
+        },
+        {
+          name: 'format-painter-filled',
+          keywords: ['格式', '画笔', '填充'],
+        },
+        {
+          name: 'text-drawing-filled',
+          keywords: ['文本', '绘图', '填充'],
+        },
+        {
+          name: 'file-edit-filled',
+          keywords: ['文件', '编辑', '填充'],
+        },
+        {
+          name: 'contribute-filled',
+          keywords: ['贡献', '填充'],
+        },
+        {
+          name: 'calendar-3-filled',
+          keywords: ['日历', '3', '填充'],
+        },
+        {
+          name: 'feedback-filled',
+          keywords: ['反馈', '填充'],
+        },
+        {
+          name: 'high-level-filled',
+          keywords: ['高级', '填充'],
+        },
+        {
+          name: 'collection-1-filled',
+          keywords: ['收藏', '1', '填充'],
+        },
+        {
+          name: 'authorize-filled',
+          keywords: ['授权', '填充'],
+        },
+        {
+          name: 'correct-filled',
+          keywords: ['正确', '填充'],
+        },
+        {
+          name: 'discount-list-filled',
+          keywords: ['折扣', '列表', '填充'],
+        },
+        {
+          name: 'rename-filled',
+          keywords: ['重命名', '填充'],
+        },
+        {
+          name: 'file-markdown-filled',
+          keywords: ['文件', 'markdown', '填充'],
+        },
+        {
+          name: 'file-txt-filled',
+          keywords: ['文件', 'txt', '填充'],
+        },
+        {
+          name: 'file-yaml-filled',
+          keywords: ['文件', 'yaml', '填充'],
+        },
+        {
+          name: 'file-json-filled',
+          keywords: ['文件', 'json', '填充'],
+        },
+        {
+          name: 'file-csv-filled',
+          keywords: ['文件', 'csv', '填充'],
+        },
+        {
+          name: 'chart-line-board-filled',
+          keywords: ['图表', '线', '板', '填充'],
+        },
+        {
+          name: 'view-gantt-filled',
+          keywords: ['视图', '甘特', '填充'],
+        },
+        {
+          name: 'view-image-filled',
+          keywords: ['视图', '图像', '填充'],
+        },
+        {
+          name: 'view-organization-filled',
+          keywords: ['视图', '组织', '填充'],
+        },
+        {
+          name: 'tree-catalog-filled',
+          keywords: ['树', '目录', '填充'],
+        },
+        {
+          name: 'mind-map-filled',
+          keywords: ['思维导图', '填充'],
+        },
+        {
+          name: 'chart-draw-io-filled',
+          keywords: ['图表', 'draw.io', '填充'],
+        },
+        {
+          name: 'screen-mirroring-filled',
+          keywords: ['屏幕', '镜像', '填充'],
+        },
+        {
+          name: 'play-chart-filled',
+          keywords: ['播放', '图表', '填充'],
+        },
+        {
+          name: 'placeholder-filled',
+          keywords: ['占位符', '填充'],
+        },
+        {
+          name: 'pen-fluorescence-filled',
+          keywords: ['笔', '荧光', '填充'],
+        },
+        {
+          name: 'mosaic-filled',
+          keywords: ['马赛克', '填充'],
+        },
+        {
+          name: 'draft-filled',
+          keywords: ['草稿', '填充'],
+        },
+        {
+          name: 'component-stickytool-filled',
+          keywords: ['组件', '粘性工具', '填充'],
+        },
+        {
+          name: 'image-carousel-filled',
+          keywords: ['图像', '轮播', '填充'],
+        },
+        {
+          name: 'column-layout-filled',
+          keywords: ['列', '布局', '填充'],
+        },
+        {
+          name: 'page-tab-filled',
+          keywords: ['页面', '标签', '填充'],
+        },
+        {
+          name: 'tag-state-filled',
+          keywords: ['标签', '状态', '填充'],
+        },
+        {
+          name: 'component-steps-1-filled',
+          keywords: ['组件', '步骤', '1', '填充'],
+        },
+        {
+          name: 'automation-filled',
+          keywords: ['自动化', '填充'],
+        },
+        {
+          name: 'mode-preview-filled',
+          keywords: ['模式', '预览', '填充'],
+        },
+        {
+          name: 'dialog-history-filled',
+          keywords: ['对话', '历史', '填充'],
+        },
+        {
+          name: 'mentioned-filled',
+          keywords: ['提及', '填充'],
+        },
+        {
+          name: 'forum-filled',
+          keywords: ['论坛', '填充'],
+        },
+        {
+          name: 'web-filled',
+          keywords: ['网页', '填充'],
+        },
+        {
+          name: 'plantuml-filled',
+          keywords: ['PlantUML', '填充'],
+        },
+        {
+          name: 'mermaid-filled',
+          keywords: ['Mermaid', '填充'],
+        },
+        {
+          name: 'flowchart-filled',
+          keywords: ['流程图', '填充'],
+        },
+        {
+          name: 'graphviz-filled',
+          keywords: ['Graphviz', '填充'],
+        },
+        {
+          name: 'git-commit-filled',
+          keywords: ['Git', '提交', '填充'],
+        },
+        {
+          name: 'numbers-circle-1-filled',
+          keywords: ['数字', '圆圈', '1', '填充'],
+        },
+        {
+          name: 'numbers-circle-2-filled',
+          keywords: ['数字', '圆圈', '2', '填充'],
+        },
+        {
+          name: 'numbers-circle-3-filled',
+          keywords: ['数字', '圆圈', '3', '填充'],
+        },
+        {
+          name: 'numbers-circle-4-filled',
+          keywords: ['数字', '圆圈', '4', '填充'],
+        },
+        {
+          name: 'usergroup-circle-filled',
+          keywords: ['用户组', '圆圈', '填充'],
+        },
+        {
+          name: 'logo-tbeacon-filled',
+          keywords: ['logo', 'TBeacon', '填充'],
+        },
+        {
+          name: 'logo-xiaoma-report-filled',
+          keywords: ['logo', '小马报表', '填充'],
+        },
+        {
+          name: 'logo-hiflow-filled',
+          keywords: ['logo', 'HiFlow', '填充'],
+        },
+        {
+          name: 'logo-wechat-work-docs-filled',
+          keywords: ['logo', '微信工作文档', '填充'],
+        },
+        {
+          name: 'logo-tencent-meeting-filled',
+          keywords: ['logo', '腾讯会议', '填充'],
+        },
+        {
+          name: 'logo-tapd-filled',
+          keywords: ['logo', 'TAPD', '填充'],
+        },
+        {
+          name: 'logo-iwiki-filled',
+          keywords: ['logo', 'iWiki', '填充'],
+        },
+        {
+          name: 'logo-markdown-filled',
+          keywords: ['logo', 'Markdown', '填充'],
+        },
+        {
+          name: 'logo-tdesign-filled',
+          keywords: ['logo', 'TDesign', '填充'],
+        },
+        {
+          name: 'ai-edit-1-filled',
+          keywords: ['AI', '编辑', '1', '填充'],
+        },
+        {
+          name: 'ai-search-filled',
+          keywords: ['AI', '搜索', '填充'],
+        },
+        {
+          name: 'ai-image-filled',
+          keywords: ['AI', '图像', '填充'],
+        },
+        {
+          name: 'ai-edit-filled',
+          keywords: ['AI', '编辑', '填充'],
+        },
+        {
+          name: 'ai-book-open-filled',
+          keywords: ['AI', '书籍', '打开', '填充'],
+        },
+        {
+          name: 'ai-chart-bar-filled',
+          keywords: ['AI', '图表', '条形', '填充'],
+        },
+        {
+          name: 'ai-education-filled',
+          keywords: ['AI', '教育', '填充'],
+        },
+        {
+          name: 'ai-article-filled',
+          keywords: ['AI', '文章', '填充'],
+        },
+        {
+          name: 'ai-music-filled',
+          keywords: ['AI', '音乐', '填充'],
+        },
+        {
+          name: 'ai-terminal-filled',
+          keywords: ['AI', '终端', '填充'],
+        },
+        {
+          name: 'ai-terminal-1-filled',
+          keywords: ['AI', '终端', '1', '填充'],
+        },
+        {
+          name: 'ai-video-filled',
+          keywords: ['AI', '视频', '填充'],
+        },
+        {
+          name: 'ai-image-1-filled',
+          keywords: ['AI', '图像', '1', '填充'],
+        },
+        {
+          name: 'ai-coordinate-system-filled',
+          keywords: ['AI', '坐标系', '填充'],
+        },
+        {
+          name: 'ai-layout-filled',
+          keywords: ['AI', '布局', '填充'],
+        },
+        {
+          name: 'ai-git-branch-filled',
+          keywords: ['AI', 'Git', '分支', '填充'],
+        },
+        {
+          name: 'ai-more-2-filled',
+          keywords: ['AI', '更多', '2', '填充'],
+        },
+        {
+          name: 'robot-filled',
+          keywords: ['机器人', '填充'],
+        },
+        {
+          name: 'robot-1-filled',
+          keywords: ['机器人', '1', '填充'],
+        },
+        {
+          name: 'robot-2-filled',
+          keywords: ['机器人', '2', '填充'],
         },
       ],
     },

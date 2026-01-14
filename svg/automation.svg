@@ -1,0 +1,7 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="automation">
+<path id="fill1" d="M22 3H2V17H22V3Z" fill="white"/>
+<path id="stroke1" d="M4 21H20M2 3H22V17H2V3Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M9 13L11.7692 7H12.2308L15 13M10.5 10.9169H13.5" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</svg>

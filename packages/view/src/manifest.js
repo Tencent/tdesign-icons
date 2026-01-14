@@ -2277,6 +2277,18 @@ export const manifest = {
 
           keywords: ['提示双份', '提示双重'],
         },
+        {
+          name: 'dialog-history-filled',
+          keywords: ['对话历史填充', '聊天历史填充', '会话记录填充'],
+        },
+        {
+          name: 'forum-filled',
+          keywords: ['论坛填充', '讨论区填充', '社区论坛填充'],
+        },
+        {
+          name: 'mentioned-filled',
+          keywords: ['提及填充', '@提及填充', '提到填充'],
+        },
       ],
     },
     File: {
@@ -3197,6 +3209,30 @@ export const manifest = {
           name: 'component-grid-filled',
 
           keywords: ['组件网格', '组件布局'],
+        },
+        {
+          name: 'column-layout-filled',
+          keywords: ['列布局填充', '栏目布局填充', '分栏布局填充'],
+        },
+        {
+          name: 'component-steps-1-filled',
+          keywords: ['组件步骤1填充', '步骤组件1填充', '流程步骤1填充'],
+        },
+        {
+          name: 'component-stickytool-filled',
+          keywords: ['组件粘性工具填充', '粘性工具组件填充', '便签工具组件填充'],
+        },
+        {
+          name: 'image-carousel-filled',
+          keywords: ['图片轮播填充', '图像轮播组件填充', '轮播图组件填充'],
+        },
+        {
+          name: 'page-tab-filled',
+          keywords: ['页面标签填充', '标签页填充', '选项卡填充'],
+        },
+        {
+          name: 'tag-state-filled',
+          keywords: ['标签状态填充', '状态标签填充', '标签状态组件填充'],
         },
       ],
     },
@@ -4368,6 +4404,22 @@ export const manifest = {
           name: 'page-included-filled',
           keywords: ['页面包含填充', '包含页面填充', '页面嵌入填充'],
         },
+        {
+          name: 'draft-filled',
+          keywords: ['草稿填充', '草图填充', '草案填充'],
+        },
+        {
+          name: 'mosaic-filled',
+          keywords: ['马赛克填充', '拼图填充', '镶嵌图填充'],
+        },
+        {
+          name: 'pen-fluorescence-filled',
+          keywords: ['荧光笔填充', '荧光标记笔填充', '高亮笔填充'],
+        },
+        {
+          name: 'placeholder-filled',
+          keywords: ['占位符填充', '占位图填充', '预留位置填充'],
+        },
       ],
     },
     Device: {
@@ -4663,6 +4715,14 @@ export const manifest = {
           name: 'video-camera-filled',
 
           keywords: ['video camera', '摄像机'],
+        },
+        {
+          name: 'automation-filled',
+          keywords: ['自动化填充', '自动化系统填充', '自动控制填充'],
+        },
+        {
+          name: 'mode-preview-filled',
+          keywords: ['预览模式填充', '预览模式填充', '预览界面填充'],
         },
       ],
     },
@@ -7653,6 +7713,18 @@ export const manifest = {
 
           keywords: ['小费', '小费建议'],
         },
+        {
+          name: 'dialog-history',
+          keywords: ['对话历史', '聊天历史', '会话记录'],
+        },
+        {
+          name: 'forum',
+          keywords: ['论坛', '讨论区', '社区论坛'],
+        },
+        {
+          name: 'mentioned',
+          keywords: ['提及', '@提及', '提到'],
+        },
       ],
     },
     Document: {
@@ -8990,6 +9062,30 @@ export const manifest = {
           name: 'form',
 
           keywords: ['表格', '表单'],
+        },
+        {
+          name: 'column-layout',
+          keywords: ['列布局', '栏目布局', '分栏布局'],
+        },
+        {
+          name: 'component-steps-1',
+          keywords: ['组件步骤1', '步骤组件1', '流程步骤1'],
+        },
+        {
+          name: 'component-stickytool',
+          keywords: ['组件粘性工具', '粘性工具组件', '便签工具组件'],
+        },
+        {
+          name: 'image-carousel',
+          keywords: ['图片轮播', '图像轮播组件', '轮播图组件'],
+        },
+        {
+          name: 'page-tab',
+          keywords: ['页面标签', '标签页', '选项卡'],
+        },
+        {
+          name: 'tag-state',
+          keywords: ['标签状态', '状态标签', '标签状态组件'],
         },
       ],
     },
@@ -10802,6 +10898,22 @@ export const manifest = {
           name: 'page-included',
           keywords: ['页面包含', '包含页面', '页面嵌入'],
         },
+        {
+          name: 'draft',
+          keywords: ['草稿', '草图', '草案'],
+        },
+        {
+          name: 'mosaic',
+          keywords: ['马赛克', '拼图', '镶嵌图'],
+        },
+        {
+          name: 'pen-fluorescence',
+          keywords: ['荧光笔', '荧光标记笔', '高亮笔'],
+        },
+        {
+          name: 'placeholder',
+          keywords: ['占位符', '占位图', '预留位置'],
+        },
       ],
     },
     Design: {
@@ -11633,6 +11745,14 @@ export const manifest = {
         {
           name: 'wifi-no',
           keywords: ['无网络', '无wifi'],
+        },
+        {
+          name: 'automation',
+          keywords: ['自动化', '自动化系统', '自动控制'],
+        },
+        {
+          name: 'mode-preview',
+          keywords: ['预览模式', '预览模式', '预览界面'],
         },
       ],
     },

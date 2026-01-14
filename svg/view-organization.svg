@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="view-organization">
+<rect id="fill1" x="3" y="3" width="18" height="18" fill="white"/>
+<g id="fill2">
+<path d="M9 6H15V9H9V6Z" fill="white"/>
+<path d="M6 15H10V18H6V15Z" fill="white"/>
+<path d="M14 15H18V18H14V15Z" fill="white"/>
+</g>
+<rect id="stroke1" x="3" y="3" width="18" height="18" stroke="black" stroke-width="2"/>
+<path id="stroke2" d="M12 9V12M8 15V12H16V15M9 6H15V9H9V6ZM6 15H10V18H6V15ZM14 15H18V18H14V15Z" stroke="black" stroke-width="2"/>
+</g>
+</svg>

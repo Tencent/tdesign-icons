@@ -65,7 +65,6 @@ export function processSvgSpriteInNode(svgString) {
 
   const traverseNodes = (node, isSpecified, id) => {
     const element = node;
-
     if (element.nodeType === TEXT_NODE) return;
     const nodeId = element.getAttribute('id') || id;
 
@@ -122,6 +121,11 @@ export function processSvgSpriteInNode(svgString) {
         if (specifiedIcons.includes(symbolEle.getAttribute('id').replace('t-icon-', ''))) {
           isSpecified = true;
         }
+
+        // 品牌图标统一不展示修改效果，保持原样
+        // eslint-disable-next-line no-continue
+        if (symbolEle.getAttribute('id').includes('logo-')) continue;
+
         const gElements = Array.from(symbolEle.childNodes);
         for (const gEl of gElements) {
           if (gEl.nodeType !== TEXT_NODE) {

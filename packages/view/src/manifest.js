@@ -3,6 +3,8 @@ export const manifest = {
     Brand: {
       labelCN: '品牌',
       labelEn: 'Brand',
+      descriptionCN: '品牌图标因其特殊性不展示修改效果',
+      descriptionEn: 'Brand icons do not show modification effects due to their particularity',
       icons: [
         {
           name: 'logo-adobe-lightroom-filled',
@@ -2175,6 +2177,14 @@ export const manifest = {
         {
           name: 'file-edit-filled',
           keywords: ['文件编辑填充', '编辑文件填充', '文档编辑填充'],
+        },
+        {
+          name: 'subscript',
+          keywords: ['下标', '下标文本'],
+        },
+        {
+          name: 'superscript',
+          keywords: ['上标', '上标文本'],
         },
       ],
     },
@@ -4404,22 +4414,6 @@ export const manifest = {
           name: 'page-included-filled',
           keywords: ['页面包含填充', '包含页面填充', '页面嵌入填充'],
         },
-        {
-          name: 'draft-filled',
-          keywords: ['草稿填充', '草图填充', '草案填充'],
-        },
-        {
-          name: 'mosaic-filled',
-          keywords: ['马赛克填充', '拼图填充', '镶嵌图填充'],
-        },
-        {
-          name: 'pen-fluorescence-filled',
-          keywords: ['荧光笔填充', '荧光标记笔填充', '高亮笔填充'],
-        },
-        {
-          name: 'placeholder-filled',
-          keywords: ['占位符填充', '占位图填充', '预留位置填充'],
-        },
       ],
     },
     Device: {
@@ -4865,6 +4859,22 @@ export const manifest = {
 
           keywords: ['桌子', '餐桌'],
         },
+        {
+          name: 'draft-filled',
+          keywords: ['草稿填充', '草图填充', '草案填充'],
+        },
+        {
+          name: 'mosaic-filled',
+          keywords: ['马赛克填充', '拼图填充', '镶嵌图填充'],
+        },
+        {
+          name: 'pen-fluorescence-filled',
+          keywords: ['荧光笔填充', '荧光标记笔填充', '高亮笔填充'],
+        },
+        {
+          name: 'placeholder-filled',
+          keywords: ['占位符填充', '占位图填充', '预留位置填充'],
+        },
       ],
     },
     Foods: {
@@ -5133,10 +5143,11 @@ export const manifest = {
     Brand: {
       labelCN: '品牌',
       labelEn: 'Brand',
+      descriptionCN: '品牌图标因其特殊性不展示修改效果',
+      descriptionEn: 'Brand icons do not show modification effects due to their particularity',
       icons: [
         {
           name: 'logo-adobe-illustrate',
-
           keywords: ['Adobe Illustrator的logo', 'Adobe标志Illustrator'],
         },
         {
@@ -5281,6 +5292,42 @@ export const manifest = {
         {
           name: 'logo-markdown',
           keywords: ['Markdown标志', 'Markdown徽标', 'Markdown图标'],
+        },
+        {
+          name: 'logo-tbeacon',
+          keywords: ['TBeacon标志', 'TBeacon徽标', 'TBeacon图标'],
+        },
+        {
+          name: 'logo-xiaomareport',
+          keywords: ['小马报告标志', '小马报告徽标', '小马报告图标'],
+        },
+        {
+          name: 'logo-hiflow',
+          keywords: ['Hiflow标志', 'Hiflow徽标', 'Hiflow图标'],
+        },
+        {
+          name: 'logo-wechat-workdocs',
+          keywords: ['企业微信文档标志', '企业微信文档徽标', '企业微信文档图标'],
+        },
+        {
+          name: 'logo-tencentmeeting',
+          keywords: ['腾讯会议标志', '腾讯会议徽标', '腾讯会议图标'],
+        },
+        {
+          name: 'logo-tapd',
+          keywords: ['腾讯TAPD标志', '腾讯TAPD徽标', '腾讯TAPD图标'],
+        },
+        {
+          name: 'logo-tencentcode',
+          keywords: ['工蜂', '腾讯代码'],
+        },
+        {
+          name: 'logo-codesign',
+          keywords: ['codesign'],
+        },
+        {
+          name: 'logo-tdesign',
+          keywords: ['tdesign'],
         },
       ],
     },
@@ -6318,6 +6365,26 @@ export const manifest = {
 
           keywords: ['终端窗口', '终端视窗'],
         },
+        {
+          name: 'plantuml',
+          keywords: ['PlantUML', 'UML图表', '统一建模语言'],
+        },
+        {
+          name: 'mermaid',
+          keywords: ['Mermaid', '流程图', '图表工具'],
+        },
+        {
+          name: 'flowchart',
+          keywords: ['流程图', '流程图表', '流程设计'],
+        },
+        {
+          name: 'graphviz',
+          keywords: ['Graphviz', '图形可视化', '图表生成'],
+        },
+        {
+          name: 'git-commit-1',
+          keywords: ['Git提交', '代码提交', '版本控制提交'],
+        },
       ],
     },
     Letters: {
@@ -6453,26 +6520,6 @@ export const manifest = {
           name: 'letters-y',
 
           keywords: ['字母y'],
-        },
-        {
-          name: 'plantuml',
-          keywords: ['PlantUML', 'UML图表', '统一建模语言'],
-        },
-        {
-          name: 'mermaid',
-          keywords: ['Mermaid', '流程图', '图表工具'],
-        },
-        {
-          name: 'flowchart',
-          keywords: ['流程图', '流程图表', '流程设计'],
-        },
-        {
-          name: 'graphviz',
-          keywords: ['Graphviz', '图形可视化', '图表生成'],
-        },
-        {
-          name: 'git-commit-1',
-          keywords: ['Git提交', '代码提交', '版本控制提交'],
         },
       ],
     },
@@ -8019,6 +8066,10 @@ export const manifest = {
         {
           name: 'file-edit',
           keywords: ['文件编辑', '编辑文件', '文档编辑'],
+        },
+        {
+          name: 'summary',
+          keywords: ['总结', '概要', '摘要'],
         },
       ],
     },
@@ -10898,22 +10949,6 @@ export const manifest = {
           name: 'page-included',
           keywords: ['页面包含', '包含页面', '页面嵌入'],
         },
-        {
-          name: 'draft',
-          keywords: ['草稿', '草图', '草案'],
-        },
-        {
-          name: 'mosaic',
-          keywords: ['马赛克', '拼图', '镶嵌图'],
-        },
-        {
-          name: 'pen-fluorescence',
-          keywords: ['荧光笔', '荧光标记笔', '高亮笔'],
-        },
-        {
-          name: 'placeholder',
-          keywords: ['占位符', '占位图', '预留位置'],
-        },
       ],
     },
     Design: {
@@ -11114,6 +11149,22 @@ export const manifest = {
           name: 'slice',
 
           keywords: ['切片', '片段'],
+        },
+        {
+          name: 'draft',
+          keywords: ['草稿', '草图', '草案'],
+        },
+        {
+          name: 'mosaic',
+          keywords: ['马赛克', '拼图', '镶嵌图'],
+        },
+        {
+          name: 'pen-fluorescence',
+          keywords: ['荧光笔', '荧光标记笔', '高亮笔'],
+        },
+        {
+          name: 'placeholder',
+          keywords: ['占位符', '占位图', '预留位置'],
         },
       ],
     },

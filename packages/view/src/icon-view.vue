@@ -238,6 +238,7 @@
               isEn ? icons.labelEn : icons.title
             }}</span>
             <t-tag>{{ icons.count }}</t-tag>
+            <span style="margin-left: 8px; font-size: 10px; color: var(--text-secondary)">{{   isEn ? icons.descriptionEn : icons.descriptionCN }}</span>
           </p>
           <li
             v-for="(icon, index) in icons.icons"
@@ -492,6 +493,8 @@ const allIcons = computed(() => {
       type,
       labelEn: categories.value[type].labelEn,
       title: categories.value[type].labelCN,
+      descriptionCN: categories.value[type].descriptionCN,
+      descriptionEn: categories.value[type].descriptionEN,
       icons: categories.value[type].icons,
       count: categories.value[type].icons.length,
     }),

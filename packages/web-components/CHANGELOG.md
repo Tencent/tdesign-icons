@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.3.3
+
+### Patch Changes
+
+- feat: add 217 new icons related to AI, documents, and files
+
 ## 0.3.2
 
 ### Patch Changes

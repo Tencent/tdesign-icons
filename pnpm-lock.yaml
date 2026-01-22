@@ -253,9 +253,6 @@ catalogs:
       specifier: ^0.6.0
       version: 0.6.0
   tdesign:
-    tdesign-icons-vue-next:
-      specifier: ^0.4.1
-      version: 0.4.1
     tdesign-vue-next:
       specifier: ~1.17.3
       version: 1.17.3
@@ -597,7 +594,7 @@ importers:
         specifier: 'catalog:'
         version: 4.17.21
       tdesign-icons-vue-next:
-        specifier: catalog:tdesign
+        specifier: ^0.4.1
         version: 0.4.1(vue@3.5.21(typescript@5.8.2))
       tdesign-vue-next:
         specifier: catalog:tdesign
@@ -4519,12 +4516,12 @@ packages:
     os: [freebsd]
 
   esbuild-freebsd-arm64@0.14.0:
-    resolution: {integrity: sha512-iM8u+zTagh0WGn2FTTxi7DII/ycVzYyuf2Df6eP2ZX+vlx2FjaduhagRkpyhjfmEyhfJOrYSAR5R1biNPcA+VA==}
+    resolution: {integrity: sha512-iM8u+zTagh0WGn2FTTxi7DII/ycVzYyuf2Df6eP2ZX+vlx2FjaduhagRkpyhjfmEyhfJOrYSAR5R1biNPcA+VA==, tarball: https://mirrors.cloud.tencent.com/npm/esbuild-freebsd-arm64/-/esbuild-freebsd-arm64-0.14.0.tgz}
     cpu: [arm64]
     os: [freebsd]
 
   esbuild-linux-32@0.14.0:
-    resolution: {integrity: sha512-dWHotI2qlXWZyza7n85UubBj0asjpM7FTtQYDaRQKxoCJpCnSzq3aD55IJthiggZHXj2tAML9Bc5xjVLsBJR0w==}
+    resolution: {integrity: sha512-dWHotI2qlXWZyza7n85UubBj0asjpM7FTtQYDaRQKxoCJpCnSzq3aD55IJthiggZHXj2tAML9Bc5xjVLsBJR0w==, tarball: https://mirrors.cloud.tencent.com/npm/esbuild-linux-32/-/esbuild-linux-32-0.14.0.tgz}
     cpu: [ia32]
     os: [linux]
 
@@ -4544,7 +4541,7 @@ packages:
     os: [linux]
 
   esbuild-linux-mips64le@0.14.0:
-    resolution: {integrity: sha512-Xz7soOqWeCWcLp15biPM08To+s0k1E/2q0pQZNQ+SY9S5H2vU4ujDXqKjxFc24G9CrOeUNEOXTkh+JldBGbTCA==}
+    resolution: {integrity: sha512-Xz7soOqWeCWcLp15biPM08To+s0k1E/2q0pQZNQ+SY9S5H2vU4ujDXqKjxFc24G9CrOeUNEOXTkh+JldBGbTCA==, tarball: https://mirrors.cloud.tencent.com/npm/esbuild-linux-mips64le/-/esbuild-linux-mips64le-0.14.0.tgz}
     cpu: [mips64el]
     os: [linux]
 

@@ -1,12 +1,17 @@
 # tdesign-icons-svg
 
+## 0.4.1
+
+### Patch Changes
+
+- feat: add 217 new icons related to AI, documents, and files
+
 ## 0.4.0
 
 ### Minor Changes
 
 - feat: add new icons `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no` 、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled`
 - refactor: remove icons `video-camera-3`、`video-camera-3-filled`、 `list`
-
 
 ## 0.3.4
 

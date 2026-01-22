@@ -236,7 +236,7 @@
           >
             <span :id="icons.type" style="margin-right: 8px; font-size: 16px">{{
               isEn ? icons.labelEn : icons.title
-            }}({{ icons.count }})</span>
+            }} ({{ icons.count }})</span>
             <t-tooltip :content="isEn ? icons.descriptionEN : icons.descriptionCN" >
                <info-circle-icon style="color: var(--text-disabled)" v-if="icons.descriptionCN" />
             </t-tooltip>

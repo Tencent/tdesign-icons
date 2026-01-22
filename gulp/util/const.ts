@@ -5,8 +5,6 @@ export const specifiedIcons = [
   'caret-left-small',
   'caret-right-small',
   'drag-drop',
-  'expand-down',
-  'expand-up',
   'loading',
   'logo-alipay',
   'logo-behance',

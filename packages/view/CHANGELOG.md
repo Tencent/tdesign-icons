@@ -1,12 +1,10 @@
 # tdesign-icons-view
 
-## 0.6.1
+## 0.5.1
 
 ### Patch Changes
 
-- feat: add 217 new icons related to AI, documents, and files
-- Updated dependencies
-  - tdesign-icons-vue-next@0.4.2
+- feat: add 217 new icons related to AI, documents, logo and files
 
 ## 0.5.0
 

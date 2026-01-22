@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.4.2
+
+### Patch Changes
+
+- feat: add 217 new icons related to AI, documents, logo and files
+
 ## 0.4.1
 
 ### Patch Changes

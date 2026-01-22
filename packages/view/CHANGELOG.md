@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 0.5.1
+
+### Patch Changes
+
+- feat: add 217 new icons related to AI, documents, logo and files
+
 ## 0.5.0
 
 ### Minor Changes

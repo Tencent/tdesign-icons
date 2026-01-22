@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-view",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A Webcomponents package for display all tdesign icons in any UI framework",
   "type": "module",
   "scripts": {
@@ -31,7 +31,7 @@
   "dependencies": {
     "@popperjs/core": "catalog:",
     "lodash": "catalog:",
-    "tdesign-icons-vue-next": "catalog:tdesign",
+    "tdesign-icons-vue-next": "^0.4.1",
     "tdesign-vue-next": "catalog:tdesign",
     "vue": "catalog:vue"
   },
@@ -39,6 +39,6 @@
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
     "vite": "catalog:",
-    "eslint-plugin-vue":"catalog:"
+    "eslint-plugin-vue": "catalog:"
   }
 }

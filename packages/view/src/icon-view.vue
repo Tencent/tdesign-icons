@@ -236,9 +236,10 @@
           >
             <span :id="icons.type" style="margin-right: 8px; font-size: 16px">{{
               isEn ? icons.labelEn : icons.title
-            }}</span>
-            <t-tag>{{ icons.count }}</t-tag>
-            <span style="margin-left: 8px; font-size: 10px; color: var(--text-secondary)">{{   isEn ? icons.descriptionEn : icons.descriptionCN }}</span>
+            }}({{ icons.count }})</span>
+            <t-tooltip :content="isEn ? icons.descriptionEN : icons.descriptionCN" >
+               <info-circle-icon style="color: var(--text-disabled)" v-if="icons.descriptionCN" />
+            </t-tooltip>
           </p>
           <li
             v-for="(icon, index) in icons.icons"
@@ -316,13 +317,13 @@ import {
   Input as TInput,
   Slider as TSlider,
   ColorPicker as TColorPicker,
-  Tag as TTag,
   Divider as TDivider,
   Button as TButton,
   Link as TLink,
+  Tooltip as TTooltip,
 } from 'tdesign-vue-next';
 
-import { SearchIcon } from 'tdesign-icons-vue-next';
+import { SearchIcon, InfoCircleIcon } from 'tdesign-icons-vue-next';
 import {
   onMounted,
   ref,

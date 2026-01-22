@@ -167,6 +167,11 @@ export const manifest = {
           name: 'logo-tdesign-filled',
           keywords: ['TDesign标志填充', 'TDesign徽标填充', 'TDesign图标填充'],
         },
+        {
+          name: 'logo-windows-filled',
+
+          keywords: ['Windows徽标'],
+        },
       ],
     },
     AI: {
@@ -2178,14 +2183,6 @@ export const manifest = {
           name: 'file-edit-filled',
           keywords: ['文件编辑填充', '编辑文件填充', '文档编辑填充'],
         },
-        {
-          name: 'subscript',
-          keywords: ['下标', '下标文本'],
-        },
-        {
-          name: 'superscript',
-          keywords: ['上标', '上标文本'],
-        },
       ],
     },
     Communication: {
@@ -3304,11 +3301,6 @@ export const manifest = {
           name: 'mail-filled',
 
           keywords: ['邮件', '邮件通讯'],
-        },
-        {
-          name: 'logo-windows-filled',
-
-          keywords: ['Windows徽标'],
         },
         {
           name: 'minus-rectangle-filled',
@@ -5328,6 +5320,11 @@ export const manifest = {
         {
           name: 'logo-tdesign',
           keywords: ['tdesign'],
+        },
+        {
+          name: 'logo-windows',
+
+          keywords: ['Windows 徽标', 'Windows 标志'],
         },
       ],
     },
@@ -8071,6 +8068,14 @@ export const manifest = {
           name: 'summary',
           keywords: ['总结', '概要', '摘要'],
         },
+        {
+          name: 'subscript',
+          keywords: ['下标', '下标文本'],
+        },
+        {
+          name: 'superscript',
+          keywords: ['上标', '上标文本'],
+        },
       ],
     },
     Math: {
@@ -9224,11 +9229,6 @@ export const manifest = {
           name: 'load',
 
           keywords: ['负载', '负荷'],
-        },
-        {
-          name: 'logo-windows',
-
-          keywords: ['Windows 徽标', 'Windows 标志'],
         },
         {
           name: 'menu-unfold',

@@ -1,0 +1,7 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="chinese-rectangle">
+<path id="fill1" d="M22 4V20H2L2 4L22 4Z" fill="white"/>
+<path id="stroke1" d="M22 4V20L2 20L2 4L22 4Z" stroke="black" stroke-width="2"/>
+<path id="stroke2" d="M10 15H7C6.44772 15 6 14.5523 6 14V10C6 9.44772 6.44772 9 7 9H10M14 15V9H17.5556C17.801 9 18 9.19188 18 9.42857V15" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</svg>

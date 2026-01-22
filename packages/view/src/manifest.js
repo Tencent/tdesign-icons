@@ -3,6 +3,8 @@ export const manifest = {
     Brand: {
       labelCN: '品牌',
       labelEn: 'Brand',
+      descriptionCN: '品牌图标因其特殊性不展示修改效果',
+      descriptionEn: 'Brand icons do not show modification effects due to their particularity',
       icons: [
         {
           name: 'logo-adobe-lightroom-filled',
@@ -128,6 +130,161 @@ export const manifest = {
           name: 'logo-miniprogram-filled',
 
           keywords: ['小程序', '微信小程序'],
+        },
+        {
+          name: 'logo-tbeacon-filled',
+          keywords: ['TBeacon标志填充', 'TBeacon徽标填充', 'TBeacon图标填充'],
+        },
+        {
+          name: 'logo-xiaomareport-filled',
+          keywords: ['小马报表标志填充', '小马报表徽标填充', '小马报表图标填充'],
+        },
+        {
+          name: 'logo-hiflow-filled',
+          keywords: ['HiFlow标志填充', 'HiFlow徽标填充', 'HiFlow图标填充'],
+        },
+        {
+          name: 'logo-wechat-workdocs-filled',
+          keywords: ['微信工作文档标志填充', '微信工作文档徽标填充', '微信工作文档图标填充'],
+        },
+        {
+          name: 'logo-tencentmeeting-filled',
+          keywords: ['腾讯会议标志填充', '腾讯会议徽标填充', '腾讯会议图标填充'],
+        },
+        {
+          name: 'logo-tapd-filled',
+          keywords: ['TAPD标志填充', 'TAPD徽标填充', 'TAPD图标填充'],
+        },
+        {
+          name: 'logo-iwiki-filled',
+          keywords: ['iWiki标志填充', 'iWiki徽标填充', 'iWiki图标填充'],
+        },
+        {
+          name: 'logo-markdown-filled',
+          keywords: ['Markdown标志填充', 'Markdown徽标填充', 'Markdown图标填充'],
+        },
+        {
+          name: 'logo-tdesign-filled',
+          keywords: ['TDesign标志填充', 'TDesign徽标填充', 'TDesign图标填充'],
+        },
+        {
+          name: 'logo-windows-filled',
+
+          keywords: ['Windows徽标'],
+        },
+      ],
+    },
+    AI: {
+      labelCN: '智能',
+      labelEn: 'AI',
+      icons: [
+        {
+          name: 'ai-edit-1-filled',
+
+          keywords: ['AI编辑填充', '智能编辑填充', 'AI修改填充'],
+        },
+        {
+          name: 'ai-search-filled',
+          keywords: ['AI搜索填充', '智能搜索填充', 'AI查找填充'],
+        },
+        {
+          name: 'ai-image-filled',
+          keywords: ['AI图像填充', '智能图像填充', 'AI图片填充'],
+        },
+        {
+          name: 'ai-edit-filled',
+          keywords: ['AI编辑填充', '智能编辑填充', 'AI修改填充'],
+        },
+        {
+          name: 'ai-book-open-filled',
+          keywords: ['AI书籍打开填充', '智能书籍填充', 'AI阅读填充'],
+        },
+        {
+          name: 'ai-chart-bar-filled',
+          keywords: ['AI条形图填充', '智能图表填充', 'AI柱状图填充'],
+        },
+        {
+          name: 'ai-education-filled',
+          keywords: ['AI教育填充', '智能教育填充', 'AI学习填充'],
+        },
+        {
+          name: 'ai-article-filled',
+          keywords: ['AI文章填充', '智能文章填充', 'AI写作填充'],
+        },
+        {
+          name: 'ai-music-filled',
+          keywords: ['AI音乐填充', '智能音乐填充', 'AI作曲填充'],
+        },
+        {
+          name: 'ai-terminal-filled',
+          keywords: ['AI终端填充', '智能终端填充', 'AI命令行填充'],
+        },
+        {
+          name: 'ai-terminal-1-filled',
+          keywords: ['AI终端1填充', '智能终端1填充', 'AI命令行1填充'],
+        },
+        {
+          name: 'ai-video-filled',
+          keywords: ['AI视频填充', '智能视频填充', 'AI录像填充'],
+        },
+        {
+          name: 'ai-image-1-filled',
+          keywords: ['AI图像1填充', '智能图像1填充', 'AI图片1填充'],
+        },
+        {
+          name: 'ai-coordinate-system-filled',
+          keywords: ['AI坐标系填充', '智能坐标系填充', 'AI坐标系统填充'],
+        },
+        {
+          name: 'ai-layout-filled',
+          keywords: ['AI布局填充', '智能布局填充', 'AI设计填充'],
+        },
+        {
+          name: 'ai-git-branch-filled',
+          keywords: ['AI Git分支填充', '智能Git分支填充', 'AI版本控制填充'],
+        },
+        {
+          name: 'ai-tool-filled',
+          keywords: ['AI工具填充', '智能工具填充', 'AI辅助工具填充'],
+        },
+        {
+          name: 'ai-1-filled',
+          keywords: ['AI 1填充', '智能1填充', '人工智能1填充'],
+        },
+        {
+          name: 'robot-filled',
+          keywords: ['机器人填充', '机械人填充', '自动化填充'],
+        },
+        {
+          name: 'robot-1-filled',
+          keywords: ['机器人1填充', '机械人1填充', '自动化1填充'],
+        },
+        {
+          name: 'robot-2-filled',
+          keywords: ['机器人2填充', '机械人2填充', '自动化2填充'],
+        },
+      ],
+    },
+    Numbers: {
+      labelCN: '数字',
+      labelEn: 'Numbers',
+      icons: [
+        {
+          name: 'numbers-circle-1-filled',
+
+          keywords: ['圆形数字1填充', '数字1圆圈填充', '圆圈数字1填充'],
+        },
+        {
+          name: 'numbers-circle-2-filled',
+          keywords: ['圆形数字2填充', '数字2圆圈填充', '圆圈数字2填充'],
+        },
+        {
+          name: 'numbers-circle-3-filled',
+          keywords: ['圆形数字3填充', '数字3圆圈填充', '圆圈数字3填充'],
+        },
+        {
+          name: 'numbers-circle-4-filled',
+          keywords: ['圆形数字4填充', '数字4圆圈填充', '圆圈数字4填充'],
         },
       ],
     },
@@ -687,6 +844,14 @@ export const manifest = {
 
           keywords: ['视频', '录像'],
         },
+        {
+          name: 'screen-mirroring-filled',
+          keywords: ['屏幕镜像填充', '屏幕投射填充', '屏幕镜像传输填充'],
+        },
+        {
+          name: 'play-chart-filled',
+          keywords: ['播放图表填充', '图表播放填充', '播放统计图填充'],
+        },
       ],
     },
     Charts: {
@@ -813,6 +978,34 @@ export const manifest = {
 
           keywords: ['表格添加', '加入表格'],
         },
+        {
+          name: 'chart-line-board-filled',
+          keywords: ['折线图板填充', '线图面板填充', '折线图仪表板填充'],
+        },
+        {
+          name: 'view-gantt-filled',
+          keywords: ['甘特图视图填充', '甘特图显示填充', '甘特图界面填充'],
+        },
+        {
+          name: 'view-image-filled',
+          keywords: ['图像视图填充', '图片显示填充', '图像界面填充'],
+        },
+        {
+          name: 'view-organization-filled',
+          keywords: ['组织视图填充', '组织结构图填充', '组织界面填充'],
+        },
+        {
+          name: 'tree-catalog-filled',
+          keywords: ['树形目录填充', '目录树填充', '树状目录填充'],
+        },
+        {
+          name: 'mind-map-filled',
+          keywords: ['思维导图填充', '脑图填充', '思维地图填充'],
+        },
+        {
+          name: 'chart-draw-io-filled',
+          keywords: ['绘图图表填充', 'Draw.io图表填充', '绘图工具图表填充'],
+        },
       ],
     },
     Development: {
@@ -888,6 +1081,26 @@ export const manifest = {
           name: 'terminal-window-filled',
 
           keywords: ['终端窗口', '终端视窗'],
+        },
+        {
+          name: 'plantuml-filled',
+          keywords: ['PlantUML填充', 'UML图表填充', '统一建模语言填充'],
+        },
+        {
+          name: 'mermaid-filled',
+          keywords: ['Mermaid填充', '流程图填充', '图表工具填充'],
+        },
+        {
+          name: 'flowchart-filled',
+          keywords: ['流程图填充', '流程图表填充', '流程设计填充'],
+        },
+        {
+          name: 'graphviz-filled',
+          keywords: ['Graphviz填充', '图形可视化填充', '图表生成填充'],
+        },
+        {
+          name: 'git-commit-1-filled',
+          keywords: ['Git提交填充', '代码提交填充', '版本控制提交填充'],
         },
       ],
     },
@@ -1910,6 +2123,66 @@ export const manifest = {
 
           keywords: ['印章', '封印'],
         },
+        {
+          name: 'chinese-rectangle-filled',
+          keywords: ['中文矩形填充', '中文框填充', '中文文本框填充'],
+        },
+        {
+          name: 'english-rectangle-filled',
+          keywords: ['英文矩形填充', '英文框填充', '英文文本框填充'],
+        },
+        {
+          name: 'japanese-rectangle-filled',
+          keywords: ['日文矩形填充', '日文框填充', '日文文本框填充'],
+        },
+        {
+          name: 'korean-rectangle-filled',
+          keywords: ['韩文矩形填充', '韩文框填充', '韩文文本框填充'],
+        },
+        {
+          name: 'document-popular-filled',
+          keywords: ['热门文档填充', '流行文档填充', '文档热门填充'],
+        },
+        {
+          name: 'document-update-filled',
+          keywords: ['文档更新填充', '更新文档填充', '文档修改填充'],
+        },
+        {
+          name: 'document-location-filled',
+          keywords: ['文档位置填充', '文档定位填充', '文档地址填充'],
+        },
+        {
+          name: 'mode-text-filled',
+          keywords: ['文本模式填充', '文字模式填充', '文本编辑模式填充'],
+        },
+        {
+          name: 'list-bug-filled',
+          keywords: ['错误列表填充', 'bug列表填充', '缺陷清单填充'],
+        },
+        {
+          name: 'font-background-filled',
+          keywords: ['字体背景填充', '文字背景填充', '字体底色填充'],
+        },
+        {
+          name: 'abstract-filled',
+          keywords: ['摘要填充', '抽象填充', '概要填充'],
+        },
+        {
+          name: 'highlighted-block-filled',
+          keywords: ['高亮块填充', '高亮区块填充', '突出显示块填充'],
+        },
+        {
+          name: 'format-painter-filled',
+          keywords: ['格式刷填充', '样式刷填充', '格式复制填充'],
+        },
+        {
+          name: 'text-drawing-filled',
+          keywords: ['文本绘图填充', '文字绘制填充', '文本图形填充'],
+        },
+        {
+          name: 'file-edit-filled',
+          keywords: ['文件编辑填充', '编辑文件填充', '文档编辑填充'],
+        },
       ],
     },
     Communication: {
@@ -2010,6 +2283,18 @@ export const manifest = {
           name: 'tips-double-filled',
 
           keywords: ['提示双份', '提示双重'],
+        },
+        {
+          name: 'dialog-history-filled',
+          keywords: ['对话历史填充', '聊天历史填充', '会话记录填充'],
+        },
+        {
+          name: 'forum-filled',
+          keywords: ['论坛填充', '讨论区填充', '社区论坛填充'],
+        },
+        {
+          name: 'mentioned-filled',
+          keywords: ['提及填充', '@提及填充', '提到填充'],
         },
       ],
     },
@@ -2422,6 +2707,34 @@ export const manifest = {
 
           keywords: ['任务地点', '工作地点'],
         },
+        {
+          name: 'discount-list-filled',
+          keywords: ['折扣列表填充', '优惠清单填充', '折扣目录填充'],
+        },
+        {
+          name: 'rename-filled',
+          keywords: ['重命名填充', '改名填充', '重新命名填充'],
+        },
+        {
+          name: 'file-markdown-filled',
+          keywords: ['Markdown文件填充', '标记文件填充', 'Markdown文档填充'],
+        },
+        {
+          name: 'file-txt-filled',
+          keywords: ['文本文件填充', 'TXT文件填充', '纯文本文件填充'],
+        },
+        {
+          name: 'file-yaml-filled',
+          keywords: ['YAML文件填充', '配置文件填充', 'YAML文档填充'],
+        },
+        {
+          name: 'file-json-filled',
+          keywords: ['JSON文件填充', '数据文件填充', 'JSON文档填充'],
+        },
+        {
+          name: 'file-csv-filled',
+          keywords: ['CSV文件填充', '表格文件填充', 'CSV文档填充'],
+        },
       ],
     },
     Arrows: {
@@ -2749,6 +3062,10 @@ export const manifest = {
 
           keywords: ['用户会员', 'VIP用户'],
         },
+        {
+          name: 'usergroup-circle-filled',
+          keywords: ['用户组圆圈填充', '用户群组圆形填充', '用户组圈填充'],
+        },
       ],
     },
     Component: {
@@ -2900,6 +3217,30 @@ export const manifest = {
 
           keywords: ['组件网格', '组件布局'],
         },
+        {
+          name: 'column-layout-filled',
+          keywords: ['列布局填充', '栏目布局填充', '分栏布局填充'],
+        },
+        {
+          name: 'component-steps-1-filled',
+          keywords: ['组件步骤1填充', '步骤组件1填充', '流程步骤1填充'],
+        },
+        {
+          name: 'component-stickytool-filled',
+          keywords: ['组件粘性工具填充', '粘性工具组件填充', '便签工具组件填充'],
+        },
+        {
+          name: 'image-carousel-filled',
+          keywords: ['图片轮播填充', '图像轮播组件填充', '轮播图组件填充'],
+        },
+        {
+          name: 'page-tab-filled',
+          keywords: ['页面标签填充', '标签页填充', '选项卡填充'],
+        },
+        {
+          name: 'tag-state-filled',
+          keywords: ['标签状态填充', '状态标签填充', '标签状态组件填充'],
+        },
       ],
     },
     System: {
@@ -2960,11 +3301,6 @@ export const manifest = {
           name: 'mail-filled',
 
           keywords: ['邮件', '邮件通讯'],
-        },
-        {
-          name: 'logo-windows-filled',
-
-          keywords: ['Windows徽标'],
         },
         {
           name: 'minus-rectangle-filled',
@@ -3095,6 +3431,10 @@ export const manifest = {
           name: 'system-storage-filled',
 
           keywords: ['系统存储', '储存系统'],
+        },
+        {
+          name: 'web-filled',
+          keywords: ['网页填充', '网站填充', '网络填充'],
         },
       ],
     },
@@ -4034,6 +4374,38 @@ export const manifest = {
 
           keywords: ['缩小', '缩小尺寸'],
         },
+        {
+          name: 'contribute-filled',
+          keywords: ['贡献填充', '奉献填充', '参与填充'],
+        },
+        {
+          name: 'calendar-3-filled',
+          keywords: ['日历填充', '日程表填充', '时间表填充'],
+        },
+        {
+          name: 'high-level-filled',
+          keywords: ['高级填充', '高层填充', '高水平填充'],
+        },
+        {
+          name: 'collection-1-filled',
+          keywords: ['收藏填充', '收集填充', '收藏夹填充'],
+        },
+        {
+          name: 'lock-checked-filled',
+          keywords: ['锁定检查填充', '锁已验证填充', '锁定确认填充'],
+        },
+        {
+          name: 'correct-filled',
+          keywords: ['正确填充', '对的填充', '准确填充'],
+        },
+        {
+          name: 'mode-embedding-filled',
+          keywords: ['嵌入模式填充', '嵌入式模式填充', '内嵌模式填充'],
+        },
+        {
+          name: 'page-included-filled',
+          keywords: ['页面包含填充', '包含页面填充', '页面嵌入填充'],
+        },
       ],
     },
     Device: {
@@ -4330,6 +4702,14 @@ export const manifest = {
 
           keywords: ['video camera', '摄像机'],
         },
+        {
+          name: 'automation-filled',
+          keywords: ['自动化填充', '自动化系统填充', '自动控制填充'],
+        },
+        {
+          name: 'mode-preview-filled',
+          keywords: ['预览模式填充', '预览模式填充', '预览界面填充'],
+        },
       ],
     },
     Design: {
@@ -4470,6 +4850,22 @@ export const manifest = {
           name: 'table-1-filled',
 
           keywords: ['桌子', '餐桌'],
+        },
+        {
+          name: 'draft-filled',
+          keywords: ['草稿填充', '草图填充', '草案填充'],
+        },
+        {
+          name: 'mosaic-filled',
+          keywords: ['马赛克填充', '拼图填充', '镶嵌图填充'],
+        },
+        {
+          name: 'pen-fluorescence-filled',
+          keywords: ['荧光笔填充', '荧光标记笔填充', '高亮笔填充'],
+        },
+        {
+          name: 'placeholder-filled',
+          keywords: ['占位符填充', '占位图填充', '预留位置填充'],
         },
       ],
     },
@@ -4739,10 +5135,11 @@ export const manifest = {
     Brand: {
       labelCN: '品牌',
       labelEn: 'Brand',
+      descriptionCN: '品牌图标因其特殊性不展示修改效果',
+      descriptionEn: 'Brand icons do not show modification effects due to their particularity',
       icons: [
         {
           name: 'logo-adobe-illustrate',
-
           keywords: ['Adobe Illustrator的logo', 'Adobe标志Illustrator'],
         },
         {
@@ -4879,6 +5276,162 @@ export const manifest = {
           name: 'logo-miniprogram',
 
           keywords: ['小程序', '微信小程序'],
+        },
+        {
+          name: 'logo-iwiki',
+          keywords: ['iWiki标志', 'iWiki徽标', 'iWiki图标'],
+        },
+        {
+          name: 'logo-markdown',
+          keywords: ['Markdown标志', 'Markdown徽标', 'Markdown图标'],
+        },
+        {
+          name: 'logo-tbeacon',
+          keywords: ['TBeacon标志', 'TBeacon徽标', 'TBeacon图标'],
+        },
+        {
+          name: 'logo-xiaomareport',
+          keywords: ['小马报告标志', '小马报告徽标', '小马报告图标'],
+        },
+        {
+          name: 'logo-hiflow',
+          keywords: ['Hiflow标志', 'Hiflow徽标', 'Hiflow图标'],
+        },
+        {
+          name: 'logo-wechat-workdocs',
+          keywords: ['企业微信文档标志', '企业微信文档徽标', '企业微信文档图标'],
+        },
+        {
+          name: 'logo-tencentmeeting',
+          keywords: ['腾讯会议标志', '腾讯会议徽标', '腾讯会议图标'],
+        },
+        {
+          name: 'logo-tapd',
+          keywords: ['腾讯TAPD标志', '腾讯TAPD徽标', '腾讯TAPD图标'],
+        },
+        {
+          name: 'logo-tencentcode',
+          keywords: ['工蜂', '腾讯代码'],
+        },
+        {
+          name: 'logo-codesign',
+          keywords: ['codesign'],
+        },
+        {
+          name: 'logo-tdesign',
+          keywords: ['tdesign'],
+        },
+        {
+          name: 'logo-windows',
+
+          keywords: ['Windows 徽标', 'Windows 标志'],
+        },
+      ],
+    },
+    AI: {
+      labelCN: '智能',
+      labelEn: 'AI',
+      icons: [
+        {
+          name: 'ai-edit-1',
+
+          keywords: ['AI编辑', '智能编辑', 'AI修改'],
+        },
+        {
+          name: 'ai-search',
+          keywords: ['AI搜索', '智能搜索', 'AI查找'],
+        },
+        {
+          name: 'ai-image',
+          keywords: ['AI图像', '智能图像', 'AI图片'],
+        },
+        {
+          name: 'ai-edit',
+          keywords: ['AI编辑', '智能编辑', 'AI修改'],
+        },
+        {
+          name: 'ai-book-open',
+          keywords: ['AI书籍打开', '智能书籍', 'AI阅读'],
+        },
+        {
+          name: 'ai-chart-bar',
+          keywords: ['AI条形图', '智能图表', 'AI柱状图'],
+        },
+        {
+          name: 'ai-education',
+          keywords: ['AI教育', '智能教育', 'AI学习'],
+        },
+        {
+          name: 'ai-article',
+          keywords: ['AI文章', '智能文章', 'AI写作'],
+        },
+        {
+          name: 'ai-music',
+          keywords: ['AI音乐', '智能音乐', 'AI作曲'],
+        },
+        {
+          name: 'ai-terminal',
+          keywords: ['AI终端', '智能终端', 'AI命令行'],
+        },
+        {
+          name: 'ai-terminal-1',
+          keywords: ['AI终端1', '智能终端1', 'AI命令行1'],
+        },
+        {
+          name: 'ai-video',
+          keywords: ['AI视频', '智能视频', 'AI录像'],
+        },
+        {
+          name: 'ai-image-1',
+          keywords: ['AI图像1', '智能图像1', 'AI图片1'],
+        },
+        {
+          name: 'ai-coordinate-system',
+          keywords: ['AI坐标系', '智能坐标系', 'AI坐标系统'],
+        },
+        {
+          name: 'ai-textformat-italic',
+          keywords: ['AI文本斜体', '智能文本斜体', 'AI斜体格式'],
+        },
+        {
+          name: 'ai-layout',
+          keywords: ['AI布局', '智能布局', 'AI设计'],
+        },
+        {
+          name: 'ai-git-branch',
+          keywords: ['AI Git分支', '智能Git分支', 'AI版本控制'],
+        },
+        {
+          name: 'ai-screenshot',
+          keywords: ['AI截图', '智能截图', 'AI屏幕截图'],
+        },
+        {
+          name: 'ai-cut',
+          keywords: ['AI剪切', '智能剪切', 'AI裁剪'],
+        },
+        {
+          name: 'ai-tool',
+          keywords: ['AI工具', '智能工具', 'AI辅助工具'],
+        },
+        {
+          name: 'ai-1',
+          keywords: ['AI 1', '智能1', '人工智能1'],
+        },
+        {
+          name: 'ai',
+          keywords: ['AI', '人工智能', '智能'],
+        },
+        {
+          name: 'robot',
+          keywords: ['机器人', '机械人', '自动化'],
+        },
+        {
+          name: 'robot-1',
+          keywords: ['机器人1', '机械人1', '自动化1'],
+        },
+        {
+          name: 'robot-2',
+          keywords: ['机器人2', '机械人2', '自动化2'],
         },
       ],
     },
@@ -5065,6 +5618,34 @@ export const manifest = {
           name: 'table',
 
           keywords: ['桌子', '餐桌'],
+        },
+        {
+          name: 'chart-line-board',
+          keywords: ['折线图板', '线图面板', '折线图仪表板'],
+        },
+        {
+          name: 'view-gantt',
+          keywords: ['甘特图视图', '甘特图显示', '甘特图界面'],
+        },
+        {
+          name: 'view-image',
+          keywords: ['图像视图', '图片显示', '图像界面'],
+        },
+        {
+          name: 'view-organization',
+          keywords: ['组织视图', '组织结构图', '组织界面'],
+        },
+        {
+          name: 'tree-catalog',
+          keywords: ['树形目录', '目录树', '树状目录'],
+        },
+        {
+          name: 'mind-map',
+          keywords: ['思维导图', '脑图', '思维地图'],
+        },
+        {
+          name: 'chart-draw-io',
+          keywords: ['绘图图表', 'Draw.io图表', '绘图工具图表'],
         },
       ],
     },
@@ -5781,6 +6362,26 @@ export const manifest = {
 
           keywords: ['终端窗口', '终端视窗'],
         },
+        {
+          name: 'plantuml',
+          keywords: ['PlantUML', 'UML图表', '统一建模语言'],
+        },
+        {
+          name: 'mermaid',
+          keywords: ['Mermaid', '流程图', '图表工具'],
+        },
+        {
+          name: 'flowchart',
+          keywords: ['流程图', '流程图表', '流程设计'],
+        },
+        {
+          name: 'graphviz',
+          keywords: ['Graphviz', '图形可视化', '图表生成'],
+        },
+        {
+          name: 'git-commit-1',
+          keywords: ['Git提交', '代码提交', '版本控制提交'],
+        },
       ],
     },
     Letters: {
@@ -6232,6 +6833,14 @@ export const manifest = {
           name: 'video-camera-off',
 
           keywords: ['关闭摄像机', '摄像机关'],
+        },
+        {
+          name: 'screen-mirroring',
+          keywords: ['屏幕镜像', '屏幕投射', '屏幕镜像传输'],
+        },
+        {
+          name: 'play-chart',
+          keywords: ['播放图表', '图表播放', '播放统计图'],
         },
       ],
     },
@@ -7031,6 +7640,22 @@ export const manifest = {
 
           keywords: ['数字', '数目'],
         },
+        {
+          name: 'numbers-circle-1',
+          keywords: ['圆形数字1', '数字1圆圈', '圆圈数字1'],
+        },
+        {
+          name: 'numbers-circle-2',
+          keywords: ['圆形数字2', '数字2圆圈', '圆圈数字2'],
+        },
+        {
+          name: 'numbers-circle-3',
+          keywords: ['圆形数字3', '数字3圆圈', '圆圈数字3'],
+        },
+        {
+          name: 'numbers-circle-4',
+          keywords: ['圆形数字4', '数字4圆圈', '圆圈数字4'],
+        },
       ],
     },
     Communication: {
@@ -7131,6 +7756,18 @@ export const manifest = {
           name: 'tips',
 
           keywords: ['小费', '小费建议'],
+        },
+        {
+          name: 'dialog-history',
+          keywords: ['对话历史', '聊天历史', '会话记录'],
+        },
+        {
+          name: 'forum',
+          keywords: ['论坛', '讨论区', '社区论坛'],
+        },
+        {
+          name: 'mentioned',
+          keywords: ['提及', '@提及', '提到'],
         },
       ],
     },
@@ -7327,6 +7964,118 @@ export const manifest = {
 
           keywords: ['文本格式-下划线', '文本格式-底线'],
         },
+        {
+          name: 'order',
+          keywords: ['排序', '顺序', '排列'],
+        },
+        {
+          name: 'chinese-rectangle',
+          keywords: ['中文矩形', '中文框', '中文文本框'],
+        },
+        {
+          name: 'english-rectangle',
+          keywords: ['英文矩形', '英文框', '英文文本框'],
+        },
+        {
+          name: 'japanese-rectangle',
+          keywords: ['日文矩形', '日文框', '日文文本框'],
+        },
+        {
+          name: 'korean-rectangle',
+          keywords: ['韩文矩形', '韩文框', '韩文文本框'],
+        },
+        {
+          name: 'document-popular',
+          keywords: ['热门文档', '流行文档', '文档热门'],
+        },
+        {
+          name: 'document-update',
+          keywords: ['文档更新', '更新文档', '文档修改'],
+        },
+        {
+          name: 'document-location',
+          keywords: ['文档位置', '文档定位', '文档地址'],
+        },
+        {
+          name: 'textformat-longer',
+          keywords: ['文本延长', '文本拉长', '文本格式延长'],
+        },
+        {
+          name: 'textformat-shorter',
+          keywords: ['文本缩短', '文本压缩', '文本格式缩短'],
+        },
+        {
+          name: 'mode-text',
+          keywords: ['文本模式', '文字模式', '文本编辑模式'],
+        },
+        {
+          name: 'text',
+          keywords: ['文本', '文字', '内容'],
+        },
+        {
+          name: 'list-demand',
+          keywords: ['需求列表', '列表需求', '需求清单'],
+        },
+        {
+          name: 'list-bug',
+          keywords: ['错误列表', 'bug列表', '缺陷清单'],
+        },
+        {
+          name: 'font-background',
+          keywords: ['字体背景', '文字背景', '字体底色'],
+        },
+        {
+          name: 'text-style',
+          keywords: ['文本样式', '文字样式', '文本风格'],
+        },
+        {
+          name: 'automatic-numbering',
+          keywords: ['自动编号', '自动排序', '编号自动'],
+        },
+        {
+          name: 'abstract',
+          keywords: ['摘要', '抽象', '概要'],
+        },
+        {
+          name: 'collapsible-block',
+          keywords: ['可折叠块', '折叠区块', '可展开块'],
+        },
+        {
+          name: 'attachment-list',
+          keywords: ['附件列表', '附件清单', '文件列表'],
+        },
+        {
+          name: 'highlighted-block',
+          keywords: ['高亮块', '高亮区块', '突出显示块'],
+        },
+        {
+          name: 'format-painter',
+          keywords: ['格式刷', '样式刷', '格式复制'],
+        },
+        {
+          name: 'order-list',
+          keywords: ['有序列表', '顺序列表', '编号列表'],
+        },
+        {
+          name: 'text-drawing',
+          keywords: ['文本绘图', '文字绘制', '文本图形'],
+        },
+        {
+          name: 'file-edit',
+          keywords: ['文件编辑', '编辑文件', '文档编辑'],
+        },
+        {
+          name: 'summary',
+          keywords: ['总结', '概要', '摘要'],
+        },
+        {
+          name: 'subscript',
+          keywords: ['下标', '下标文本'],
+        },
+        {
+          name: 'superscript',
+          keywords: ['上标', '上标文本'],
+        },
       ],
     },
     Math: {
@@ -7492,6 +8241,10 @@ export const manifest = {
           name: 'slash',
 
           keywords: ['斜杠', '正斜杠'],
+        },
+        {
+          name: 'formula',
+          keywords: ['公式', '方程式', '数学公式'],
         },
       ],
     },
@@ -7713,6 +8466,10 @@ export const manifest = {
           name: 'user-safety',
 
           keywords: ['用户安全', '安全性'],
+        },
+        {
+          name: 'usergroup-circle',
+          keywords: ['用户组圆圈', '用户群组圆形', '用户组圈'],
         },
       ],
     },
@@ -8155,6 +8912,42 @@ export const manifest = {
 
           keywords: ['上传', '上传文件'],
         },
+        {
+          name: 'discount-list',
+          keywords: ['折扣列表', '优惠清单', '折扣目录'],
+        },
+        {
+          name: 'link-transform',
+          keywords: ['链接转换', '链接变换', '链接转化'],
+        },
+        {
+          name: 'rename',
+          keywords: ['重命名', '改名', '重新命名'],
+        },
+        {
+          name: 'file-markdown',
+          keywords: ['Markdown文件', '标记文件', 'Markdown文档'],
+        },
+        {
+          name: 'file-txt',
+          keywords: ['文本文件', 'TXT文件', '纯文本文件'],
+        },
+        {
+          name: 'file-yaml',
+          keywords: ['YAML文件', '配置文件', 'YAML文档'],
+        },
+        {
+          name: 'file-json',
+          keywords: ['JSON文件', '数据文件', 'JSON文档'],
+        },
+        {
+          name: 'file-csv',
+          keywords: ['CSV文件', '表格文件', 'CSV文档'],
+        },
+        {
+          name: 'catalog-1',
+          keywords: ['目录', '目录表', '分类目录'],
+        },
       ],
     },
     Component: {
@@ -8326,6 +9119,30 @@ export const manifest = {
 
           keywords: ['表格', '表单'],
         },
+        {
+          name: 'column-layout',
+          keywords: ['列布局', '栏目布局', '分栏布局'],
+        },
+        {
+          name: 'component-steps-1',
+          keywords: ['组件步骤1', '步骤组件1', '流程步骤1'],
+        },
+        {
+          name: 'component-stickytool',
+          keywords: ['组件粘性工具', '粘性工具组件', '便签工具组件'],
+        },
+        {
+          name: 'image-carousel',
+          keywords: ['图片轮播', '图像轮播组件', '轮播图组件'],
+        },
+        {
+          name: 'page-tab',
+          keywords: ['页面标签', '标签页', '选项卡'],
+        },
+        {
+          name: 'tag-state',
+          keywords: ['标签状态', '状态标签', '标签状态组件'],
+        },
       ],
     },
     Else: {
@@ -8412,11 +9229,6 @@ export const manifest = {
           name: 'load',
 
           keywords: ['负载', '负荷'],
-        },
-        {
-          name: 'logo-windows',
-
-          keywords: ['Windows 徽标', 'Windows 标志'],
         },
         {
           name: 'menu-unfold',
@@ -8572,6 +9384,14 @@ export const manifest = {
           name: 'mail',
 
           keywords: ['邮件', '邮件通讯'],
+        },
+        {
+          name: 'shortcut',
+          keywords: ['快捷方式', '快捷键', '快捷入口'],
+        },
+        {
+          name: 'web',
+          keywords: ['网页', '网站', '网络'],
         },
       ],
     },
@@ -8998,6 +9818,10 @@ export const manifest = {
           name: 'unfold-less',
 
           keywords: ['展开式', '无折叠'],
+        },
+        {
+          name: 'size-change',
+          keywords: ['尺寸改变', '大小调整', '尺寸变换'],
         },
       ],
     },
@@ -10081,6 +10905,50 @@ export const manifest = {
 
           keywords: ['缩小', '缩小尺寸'],
         },
+        {
+          name: 'contribute',
+          keywords: ['贡献', '奉献', '参与'],
+        },
+        {
+          name: 'calendar-3',
+          keywords: ['日历', '日程表', '时间表'],
+        },
+        {
+          name: 'ability-open',
+          keywords: ['能力开放', '技能开放', '功能开放'],
+        },
+        {
+          name: 'high-level',
+          keywords: ['高级', '高层', '高水平'],
+        },
+        {
+          name: 'collection-1',
+          keywords: ['收藏', '收集', '收藏夹'],
+        },
+        {
+          name: 'import',
+          keywords: ['导入', '引入', '输入'],
+        },
+        {
+          name: 'export',
+          keywords: ['导出', '输出', '导出数据'],
+        },
+        {
+          name: 'lock-checked',
+          keywords: ['锁定检查', '锁已验证', '锁定确认'],
+        },
+        {
+          name: 'correct',
+          keywords: ['正确', '对的', '准确'],
+        },
+        {
+          name: 'mode-embedding',
+          keywords: ['嵌入模式', '嵌入式模式', '内嵌模式'],
+        },
+        {
+          name: 'page-included',
+          keywords: ['页面包含', '包含页面', '页面嵌入'],
+        },
       ],
     },
     Design: {
@@ -10281,6 +11149,22 @@ export const manifest = {
           name: 'slice',
 
           keywords: ['切片', '片段'],
+        },
+        {
+          name: 'draft',
+          keywords: ['草稿', '草图', '草案'],
+        },
+        {
+          name: 'mosaic',
+          keywords: ['马赛克', '拼图', '镶嵌图'],
+        },
+        {
+          name: 'pen-fluorescence',
+          keywords: ['荧光笔', '荧光标记笔', '高亮笔'],
+        },
+        {
+          name: 'placeholder',
+          keywords: ['占位符', '占位图', '预留位置'],
         },
       ],
     },
@@ -10912,6 +11796,14 @@ export const manifest = {
         {
           name: 'wifi-no',
           keywords: ['无网络', '无wifi'],
+        },
+        {
+          name: 'automation',
+          keywords: ['自动化', '自动化系统', '自动控制'],
+        },
+        {
+          name: 'mode-preview',
+          keywords: ['预览模式', '预览模式', '预览界面'],
         },
       ],
     },

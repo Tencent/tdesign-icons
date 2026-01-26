@@ -496,7 +496,7 @@ const allIcons = computed(() => {
       title: categories.value[type].labelCN,
       descriptionCN: categories.value[type].descriptionCN,
       descriptionEn: categories.value[type].descriptionEN,
-      icons: categories.value[type].icons,
+      icons: categories.value[type].icons.sort((a, b) => a.name.localeCompare(b.name)),
       count: categories.value[type].icons.length,
     }),
     [],

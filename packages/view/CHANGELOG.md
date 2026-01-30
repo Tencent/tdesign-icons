@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 0.5.3
+
+### Patch Changes
+
+- fix: optimize logo icon display in dark mode
+
 ## 0.5.1
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-view",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "A Webcomponents package for display all tdesign icons in any UI framework",
   "type": "module",
   "scripts": {

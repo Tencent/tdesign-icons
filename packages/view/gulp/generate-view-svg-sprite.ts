@@ -114,6 +114,8 @@ export function processSvgSpriteInNode(svgString) {
           element.removeAttribute('fill');
           element.setAttribute(':fill', isSpecified ? `strokeColor${fillContent[1]}` : `fillColor${fillContent[1]}`);
         }
+      } else if (isLogo) {
+        element.setAttribute('fill', isSpecified ? 'currentColor' : 'transparent');
       }
     } else {
       // 填充图标处理逻辑

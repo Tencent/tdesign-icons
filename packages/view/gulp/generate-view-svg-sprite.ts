@@ -63,7 +63,7 @@ export function processSvgSpriteInNode(svgString) {
     throw new Error(`SVG 解析失败: ${parseError.textContent.trim()}`);
   }
 
-  const traverseNodes = (node, isSpecified, id) => {
+  const traverseNodes = (node, isSpecified, isLogo, id) => {
     const element = node;
     if (element.nodeType === TEXT_NODE) return;
     const nodeId = element.getAttribute('id') || id;
@@ -75,36 +75,57 @@ export function processSvgSpriteInNode(svgString) {
         // @ts-ignore
         .filter((child) => child.nodeType !== TEXT_NODE);
       for (const child of childElements) {
-        traverseNodes(child, false, nodeId); // 递归处理子元素
+        traverseNodes(child, false, isLogo, nodeId); // 递归处理子元素
       }
     } else if (nodeId) {
+      // 描边图标处理逻辑
       if (/^.*?(stroke\d+)$/.test(nodeId)) {
-        const strokeId = nodeId.replace(/^.*?(stroke\d+)$/, '$1');
-        const strokeContent = strokeId.split('stroke');
+        // 处理描边路径
 
-        element.setAttribute('id', strokeId);
-        if (element.getAttribute('stroke')) {
-          element.removeAttribute('stroke');
-          element.removeAttribute('stroke-width');
-          element.setAttribute(':stroke-width', 'strokeWidth');
-          element.setAttribute(':stroke', `strokeColor${strokeContent[1]}`);
-        } else if (element.getAttribute('fill')) {
-          element.removeAttribute('fill');
-          element.setAttribute(':fill', `strokeColor${strokeContent[1]}`);
+        if (isLogo) {
+          // 品牌图标统一不展示修改效果，保持原样
+          element.setAttribute('stroke', 'currentColor');
+        } else {
+          const strokeId = nodeId.replace(/^.*?(stroke\d+)$/, '$1');
+          const strokeContent = strokeId.split('stroke');
+
+          element.setAttribute('id', strokeId);
+          if (element.getAttribute('stroke')) {
+            element.removeAttribute('stroke');
+            element.removeAttribute('stroke-width');
+            element.setAttribute(':stroke-width', 'strokeWidth');
+            element.setAttribute(':stroke', `strokeColor${strokeContent[1]}`);
+          } else if (element.getAttribute('fill')) {
+            element.removeAttribute('fill');
+            element.setAttribute(':fill', `strokeColor${strokeContent[1]}`);
+          }
         }
       } else if (/^.*?(fill\d+)$/.test(nodeId)) {
-        const fillId = nodeId.replace(/^.*?(fill\d+)$/, '$1');
-        const fillContent = fillId.split('fill');
+        // 处理填充路径
 
-        element.setAttribute('id', fillId);
-        element.removeAttribute('fill');
+        if (isLogo) {
+          // 品牌图标统一不展示修改效果，保持原样
+          element.setAttribute('fill', isSpecified ? 'currentColor' : 'transparent');
+        } else {
+          const fillId = nodeId.replace(/^.*?(fill\d+)$/, '$1');
+          const fillContent = fillId.split('fill');
 
-        element.setAttribute(':fill', isSpecified ? `strokeColor${fillContent[1]}` : `fillColor${fillContent[1]}`);
+          element.setAttribute('id', fillId);
+          element.removeAttribute('fill');
+          element.setAttribute(':fill', isSpecified ? `strokeColor${fillContent[1]}` : `fillColor${fillContent[1]}`);
+        }
+      } else if (isLogo) {
+        element.setAttribute('fill', isSpecified ? 'currentColor' : 'transparent');
       }
     } else {
-      // 填充替换
+      // 填充图标处理逻辑
       element.removeAttribute('fill');
-      element.setAttribute(':fill', isSpecified ? 'strokeColor1' : 'fillColor1');
+      // 品牌图标统一不展示修改效果，保持原样
+      if (isLogo) {
+        element.setAttribute('fill', 'currentColor');
+      } else {
+        element.setAttribute(':fill', isSpecified ? 'strokeColor1' : 'fillColor1');
+      }
     }
   };
 
@@ -114,6 +135,7 @@ export function processSvgSpriteInNode(svgString) {
   const childElements = Array.from(svgRoot.childNodes);
   for (const symbolEle of childElements) {
     let isSpecified = false;
+    let isLogo = false;
     if (symbolEle.nodeType !== TEXT_NODE) {
       // @ts-ignore
       if (symbolEle.tagName?.toLowerCase?.() === 'symbol') {
@@ -122,9 +144,10 @@ export function processSvgSpriteInNode(svgString) {
           isSpecified = true;
         }
 
-        // 品牌图标统一不展示修改效果，保持原样
         // eslint-disable-next-line no-continue
-        if (symbolEle.getAttribute('id').includes('logo-')) continue;
+        if (symbolEle.getAttribute('id').includes('logo-')) {
+          isLogo = true;
+        }
 
         const gElements = Array.from(symbolEle.childNodes);
         for (const gEl of gElements) {
@@ -133,10 +156,10 @@ export function processSvgSpriteInNode(svgString) {
             if (gEl.tagName?.toLowerCase?.() === 'g') {
               const pathElements = Array.from(gEl.childNodes);
               for (const pathEl of pathElements) {
-                traverseNodes(pathEl, isSpecified, null);
+                traverseNodes(pathEl, isSpecified, isLogo, null);
               }
             } else {
-              traverseNodes(gEl, isSpecified, null);
+              traverseNodes(gEl, isSpecified, isLogo, null);
             }
           }
         }

@@ -8141,7 +8141,7 @@ export const manifest = {
         },
         {
           name: 'no-result',
-          keywords: ['无结果'],
+          keywords: ['无结果', '无数据', '空', 'empty'],
         },
         {
           name: 'notification',

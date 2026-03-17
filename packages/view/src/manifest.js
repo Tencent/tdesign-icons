@@ -5654,6 +5654,10 @@ export const manifest = {
           name: 'video-library',
           keywords: ['视频库', '影视资料馆'],
         },
+        {
+          name: 'voice-wave',
+          keywords: ['语音波形', '音频波', '声音波'],
+        },
       ],
     },
     Gestures: {
@@ -9704,6 +9708,10 @@ export const manifest = {
         {
           name: 'wifi-off-1',
           keywords: ['关闭Wi-Fi', '关闭无线网络'],
+        },
+        {
+          name: 'keyboard-1',
+          keywords: ['键盘', '输入设备', '打字', '键入'],
         },
       ],
     },

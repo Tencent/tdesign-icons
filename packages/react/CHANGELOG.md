@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.6.3
+
+### Patch Changes
+
+- feat: add divider-1,voice-wave,keyboard-1 icons
+
 ## 0.6.2
 
 ### Patch Changes

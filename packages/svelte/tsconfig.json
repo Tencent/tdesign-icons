@@ -1,0 +1,17 @@
+{
+  "extends": "./.svelte-kit/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "lib": ["esnext", "dom"],
+    "sourceMap": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "types": ["node"]
+  },
+  "include": ["src"]
+}

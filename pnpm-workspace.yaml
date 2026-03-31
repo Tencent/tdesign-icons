@@ -6,6 +6,7 @@ packages:
   - packages/vue
   - packages/react-native
   - packages/web-components
+  - packages/svelte
 catalog:
   "@babel/core": ^7.20.12
   "@babel/runtime": "^7.16.5"
@@ -101,6 +102,13 @@ catalogs:
   react:
     "react": "^19.0.0"
     "react-dom": "^19.0.0"
+  svelte:
+    "svelte": "^5.0.0"
+    "@sveltejs/adapter-auto": "^6.0.0"
+    "@sveltejs/kit": "^2.0.0"
+    "@sveltejs/package": "^2.0.0"
+    "@sveltejs/vite-plugin-svelte": "^5.0.0"
+    "svelte-check": "^4.0.0"
   tdesign:
     "tdesign-vue-next": "~1.17.3"
     "tdesign-icons-vue-next": "^0.4.1"

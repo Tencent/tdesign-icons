@@ -12,12 +12,18 @@ export const generateEntry = ({
   to,
   extName = '',
   withStyle = false,
+  framework = '',
 }: {
   from: string;
   to: string;
   extName?: string;
   withStyle?: boolean;
+  framework?: string;
 }) => function generateEntry() {
+  if (framework === 'svelte') {
+    const template = 'export { default as $ICON_NAMEIcon } from \'./components/$FILE_NAME.svelte\';';
+    return src(from).pipe(useEntryTemplate(template)).pipe(concat('icons.ts')).pipe(dest(to));
+  }
   if (!withStyle) {
     const template = 'export { default as $ICON_NAMEIcon } from \'./components/$FILE_NAME';
     const templateWithExt = `${template + extName}';`;

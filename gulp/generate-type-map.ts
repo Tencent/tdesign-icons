@@ -28,9 +28,22 @@ ${content}
 `;
 }
 
-function useWrapperTemplate(type: 'react' | 'vue') {
+function getSvelteWrapper(content: string) {
+  return `import type { Component } from 'svelte';\n
+export type GlobalIconType = Component<Record<string, unknown>>;
+export type GlobalIconConfig = {
+${content}
+};
+`;
+}
+
+function useWrapperTemplate(type: 'react' | 'vue' | 'svelte' | 'web-components') {
   if (type === 'react') {
     return createTransformStream((content) => getReactWrapper(content));
+  }
+
+  if (type === 'svelte') {
+    return createTransformStream((content) => getSvelteWrapper(content));
   }
 
   return createTransformStream((content) => getVueWrapper(content));
@@ -44,7 +57,7 @@ export const generateTypeMap = ({
 }: {
   from: string[];
   to: string;
-  type: 'react' | 'vue' | 'web-components';
+  type: 'react' | 'vue' | 'web-components' | 'svelte';
 }) => function generateManifest() {
   return src(from)
     .pipe(useItemTemplate())

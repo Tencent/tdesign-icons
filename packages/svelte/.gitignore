@@ -1,0 +1,17 @@
+.DS_Store
+
+# auto generated icons
+src/lib/components/*.svelte
+src/lib/manifest.ts
+src/lib/icons.ts
+src/lib/global-config.ts
+
+# build
+dist/
+.svelte-kit/
+
+# yarn
+yarn-error.log
+
+# eslint
+.eslintcache

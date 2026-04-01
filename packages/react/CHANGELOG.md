@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.6.4
+
+### Patch Changes
+
+- fix: fix iconfont and svgsprite link
+
 ## 0.6.3
 
 ### Patch Changes

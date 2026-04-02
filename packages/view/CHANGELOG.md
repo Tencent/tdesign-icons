@@ -1,5 +1,25 @@
 # tdesign-icons-view
 
+## 0.5.4
+
+### Patch Changes
+
+- feat: add divider-1,voice-wave,keyboard-1 icons
+- Updated dependencies
+  - tdesign-icons-vue-next@0.4.3
+
+## 0.5.3
+
+### Patch Changes
+
+- fix: optimize logo icon display in dark mode
+
+## 0.5.1
+
+### Patch Changes
+
+- feat: add 217 new icons related to AI, documents, logo and files
+
 ## 0.5.0
 
 ### Minor Changes

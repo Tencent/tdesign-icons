@@ -1,0 +1,13 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="keyboard-1">
+<g id="stroke1">
+<path d="M4.9996 5C5.55206 5 5.99985 5.44782 6 5.9996C6 6.55185 5.55183 7 4.9996 7C4.44786 6.99992 4 6.55222 4 5.9996C4.00015 5.44745 4.44763 5.00008 4.9996 5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M4.9996 11C5.55206 11 5.99985 11.4478 6 11.9996C6 12.5519 5.55183 13 4.9996 13C4.44786 12.9999 4 12.5522 4 11.9996C4.00015 11.4475 4.44763 11.0001 4.9996 11Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M11.9996 5C12.5521 5 12.9998 5.44782 13 5.9996C13 6.55185 12.5518 7 11.9996 7C11.4479 6.99992 11 6.55222 11 5.9996C11.0002 5.44745 11.4476 5.00008 11.9996 5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M11.9996 11C12.5521 11 12.9998 11.4478 13 11.9996C13 12.5519 12.5518 13 11.9996 13C11.4479 12.9999 11 12.5522 11 11.9996C11.0002 11.4475 11.4476 11.0001 11.9996 11Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M18.9996 5C19.5521 5 19.9998 5.44782 20 5.9996C20 6.55185 19.5518 7 18.9996 7C18.4479 6.99992 18 6.55222 18 5.9996C18.0002 5.44745 18.4476 5.00008 18.9996 5Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path d="M18.9996 11C19.5521 11 19.9998 11.4478 20 11.9996C20 12.5519 19.5518 13 18.9996 13C18.4479 12.9999 18 12.5522 18 11.9996C18.0002 11.4475 18.4476 11.0001 18.9996 11Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+<path id="stroke2" d="M6 19H18" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</svg>

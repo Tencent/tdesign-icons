@@ -1,1 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/cleanup-svg.sh"
+
 pnpm lint-staged
+
+

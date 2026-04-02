@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="web">
+<path id="fill2" d="M2 4H22V10H2V4Z" fill="white"/>
+<path id="fill1" d="M22 20H2V10H22V20Z" fill="white"/>
+<path id="stroke1" d="M22 20V4H2V20M22 20H2M22 20V10H2V20" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M6 14L16 14M6.00391 7.00391H6V7M10.0039 7.00391H10V7M14.0039 7.00391H14V7" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</svg>

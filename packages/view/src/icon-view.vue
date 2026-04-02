@@ -38,6 +38,7 @@
           }"
           @change="handleSearchIcon"
           v-model="searchStr"
+          clearable
         >
           <template #prefix-icon>
             <search-icon />
@@ -235,8 +236,10 @@
           >
             <span :id="icons.type" style="margin-right: 8px; font-size: 16px">{{
               isEn ? icons.labelEn : icons.title
-            }}</span>
-            <t-tag>{{ icons.count }}</t-tag>
+            }} ({{ icons.count }})</span>
+            <t-tooltip :content="isEn ? icons.descriptionEN : icons.descriptionCN" >
+               <info-circle-icon style="color: var(--text-disabled)" v-if="icons.descriptionCN" />
+            </t-tooltip>
           </p>
           <li
             v-for="(icon, index) in icons.icons"
@@ -314,13 +317,13 @@ import {
   Input as TInput,
   Slider as TSlider,
   ColorPicker as TColorPicker,
-  Tag as TTag,
   Divider as TDivider,
   Button as TButton,
   Link as TLink,
+  Tooltip as TTooltip,
 } from 'tdesign-vue-next';
 
-import { SearchIcon } from 'tdesign-icons-vue-next';
+import { SearchIcon, InfoCircleIcon } from 'tdesign-icons-vue-next';
 import {
   onMounted,
   ref,
@@ -491,6 +494,8 @@ const allIcons = computed(() => {
       type,
       labelEn: categories.value[type].labelEn,
       title: categories.value[type].labelCN,
+      descriptionCN: categories.value[type].descriptionCN,
+      descriptionEn: categories.value[type].descriptionEN,
       icons: categories.value[type].icons,
       count: categories.value[type].icons.length,
     }),
@@ -539,6 +544,7 @@ const handleHoverIcon = (e) => {
 const getCurrentRawSvg = () => {
   const svg = getRoot()?.querySelector(`#t-icon-${currentIconName.value}`);
   const svgString = new XMLSerializer().serializeToString(svg);
+  // eslint-disable-next-line no-useless-escape
   const regex = /<symbol[^>]*>|<\/symbol>/g;
   const resultString = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">${svgString.replace(
     regex,

@@ -9,11 +9,15 @@ on:
 jobs:
   auto-pr:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged 
+    if: github.event.pull_request.merged
     steps:
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
         with:
-          node-version: 18
+          sparse-checkout: .node-version
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
       - name: Auto PR
         uses: TDesignOteam/tdesign-pr-trigger-action@develop
         with:

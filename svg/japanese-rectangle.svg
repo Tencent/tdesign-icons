@@ -1,0 +1,7 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="japanese-rectangle">
+<path id="fill1" d="M22 4V20H2L2 4L22 4Z" fill="white"/>
+<path id="stroke1" d="M22 4V20L2 20L2 4L22 4Z" stroke="black" stroke-width="2"/>
+<path id="stroke2" d="M14 12.2143V9H17.5C17.7761 9 18 9.19188 18 9.42857V11.7857C18 12.0224 17.7761 12.2143 17.5 12.2143H14ZM14 12.2143V15M6 15H9.6C9.82091 15 10 14.9041 10 14.7857V9H7.5" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</svg>

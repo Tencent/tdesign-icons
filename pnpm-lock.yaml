@@ -637,8 +637,8 @@ importers:
         specifier: 'catalog:'
         version: 4.17.21
       tdesign-icons-vue-next:
-        specifier: ^0.4.1
-        version: 0.4.1(vue@3.5.21(typescript@5.8.2))
+        specifier: ^0.4.3
+        version: 0.4.3(vue@3.5.21(typescript@5.8.2))
       tdesign-vue-next:
         specifier: catalog:tdesign
         version: 1.17.3(vue@3.5.21(typescript@5.8.2))
@@ -8428,8 +8428,8 @@ packages:
     resolution: {integrity: sha512-a20gEsvHnWe0ygBY8JbxoM4w3SJdhc7ZAuxkLqh+nvNQN2IOt0B5lLgM490X5Hl8FF0dl0tOf2ewFYAlIFgzVA==}
     engines: {node: '>=4.5'}
 
-  tdesign-icons-vue-next@0.4.1:
-    resolution: {integrity: sha512-uDPuTLRORnGcTyVGNoentNaK4V+ZcBmhYwcY3KqDaQQ5rrPeLMxu0ZVmgOEf0JtF2QZiqAxY7vodNEiLUdoRKA==}
+  tdesign-icons-vue-next@0.4.3:
+    resolution: {integrity: sha512-Lo31kmv8WFn3GTI+os21vRvwTmKnySTeUXw0dlKe784mKKLGXg4tGhmhRfFlVB04WVeQ9T/nE8sLh4LV51e0rw==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -18167,7 +18167,7 @@ snapshots:
       safe-buffer: 5.2.1
       yallist: 3.1.1
 
-  tdesign-icons-vue-next@0.4.1(vue@3.5.21(typescript@5.8.2)):
+  tdesign-icons-vue-next@0.4.3(vue@3.5.21(typescript@5.8.2)):
     dependencies:
       '@babel/runtime': 7.24.7
       vue: 3.5.21(typescript@5.8.2)
@@ -18184,7 +18184,7 @@ snapshots:
       lodash-es: 4.17.21
       mitt: 3.0.1
       sortablejs: 1.15.0
-      tdesign-icons-vue-next: 0.4.1(vue@3.5.21(typescript@5.8.2))
+      tdesign-icons-vue-next: 0.4.3(vue@3.5.21(typescript@5.8.2))
       tinycolor2: 1.6.0
       validator: 13.11.0
       vue: 3.5.21(typescript@5.8.2)

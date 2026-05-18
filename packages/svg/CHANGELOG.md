@@ -1,5 +1,11 @@
 # tdesign-icons-svg
 
+## 0.4.2
+
+### Patch Changes
+
+- feat: add divider-1,voice-wave,keyboard-1 icons
+
 ## 0.4.1
 
 ### Patch Changes

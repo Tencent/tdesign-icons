@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 0.4.4
+
+### Patch Changes
+
+- fix: fix iconfont and svgsprite link
+
+## 0.4.3
+
+### Patch Changes
+
+- feat: add divider-1,voice-wave,keyboard-1 icons
+
 ## 0.4.2
 
 ### Patch Changes

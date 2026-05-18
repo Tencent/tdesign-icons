@@ -407,7 +407,7 @@ export const manifest = {
         },
         {
           name: 'saturation-filled',
-          keywords: ['饱和度', '饱和度'],
+          keywords: ['饱和度'],
         },
         {
           name: 'sharpness-filled',
@@ -555,7 +555,7 @@ export const manifest = {
         },
         {
           name: 'guitar-filled',
-          keywords: ['吉他', '吉他', 'electric guitar', '电吉他'],
+          keywords: ['吉他', 'electric guitar', '电吉他'],
         },
         {
           name: 'ipod-filled',
@@ -583,7 +583,7 @@ export const manifest = {
         },
         {
           name: 'music-filled',
-          keywords: ['音乐', '音乐'],
+          keywords: ['音乐'],
         },
         {
           name: 'music-rectangle-add-filled',
@@ -603,7 +603,7 @@ export const manifest = {
         },
         {
           name: 'piano-filled',
-          keywords: ['钢琴', '钢琴', '钢琴'],
+          keywords: ['钢琴'],
         },
         {
           name: 'play-chart-filled',
@@ -969,7 +969,7 @@ export const manifest = {
         },
         {
           name: 'indicator-filled',
-          keywords: ['指标', '指标', '指标', '指标'],
+          keywords: ['指标'],
         },
         {
           name: 'location-enlargement-filled',
@@ -1375,15 +1375,15 @@ export const manifest = {
         },
         {
           name: 'castle-1-filled',
-          keywords: ['城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'castle-2-filled',
-          keywords: ['城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'castle-3-filled',
-          keywords: ['城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'castle-4-filled',
@@ -1391,19 +1391,19 @@ export const manifest = {
         },
         {
           name: 'castle-5-filled',
-          keywords: ['城堡', '城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'castle-6-filled',
-          keywords: ['城堡', '城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'castle-7-filled',
-          keywords: ['城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'castle-filled',
-          keywords: ['城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'chimney-1-filled',
@@ -1583,15 +1583,15 @@ export const manifest = {
         },
         {
           name: 'mosque-1-filled',
-          keywords: ['清真寺', '清真寺'],
+          keywords: ['清真寺'],
         },
         {
           name: 'mosque-filled',
-          keywords: ['清真寺', '清真寺'],
+          keywords: ['清真寺'],
         },
         {
           name: 'museum-1-filled',
-          keywords: ['博物馆', '博物馆', '美术馆'],
+          keywords: ['博物馆', '美术馆'],
         },
         {
           name: 'museum-2-filled',
@@ -1707,11 +1707,11 @@ export const manifest = {
         },
         {
           name: 'window-1-filled',
-          keywords: ['窗户', '窗户'],
+          keywords: ['窗户'],
         },
         {
           name: 'window-filled',
-          keywords: ['窗户', '窗户'],
+          keywords: ['窗户'],
         },
       ],
     },
@@ -2021,7 +2021,7 @@ export const manifest = {
         },
         {
           name: 'file-icon-filled',
-          keywords: ['文件图标', '文件图标'],
+          keywords: ['文件图标'],
         },
         {
           name: 'file-image-filled',
@@ -2273,7 +2273,7 @@ export const manifest = {
         },
         {
           name: 'template-filled',
-          keywords: ['模板', '模板', '模板', '模板', '模板'],
+          keywords: ['模板'],
         },
         {
           name: 'ticket-filled',
@@ -2555,7 +2555,7 @@ export const manifest = {
       icons: [
         {
           name: 'button-filled',
-          keywords: ['按钮', '按钮'],
+          keywords: ['按钮'],
         },
         {
           name: 'calendar-filled',
@@ -2647,7 +2647,7 @@ export const manifest = {
         },
         {
           name: 'icon-filled',
-          keywords: ['图标', '图标', '图标', '图标'],
+          keywords: ['图标'],
         },
         {
           name: 'image-carousel-filled',
@@ -2667,7 +2667,7 @@ export const manifest = {
         },
         {
           name: 'scroll-bar-filled',
-          keywords: ['滚动条', '滚动条'],
+          keywords: ['滚动条'],
         },
         {
           name: 'slideshow-filled',
@@ -2683,7 +2683,7 @@ export const manifest = {
         },
         {
           name: 'tag-filled',
-          keywords: ['标签', '标签'],
+          keywords: ['标签'],
         },
         {
           name: 'tag-state-filled',
@@ -3187,7 +3187,7 @@ export const manifest = {
         },
         {
           name: 'bookmark-filled',
-          keywords: ['书签', '书签'],
+          keywords: ['书签'],
         },
         {
           name: 'bookmark-minus-filled',
@@ -3207,7 +3207,7 @@ export const manifest = {
         },
         {
           name: 'bug-report-filled',
-          keywords: ['错误报告', '错误报告'],
+          keywords: ['错误报告'],
         },
         {
           name: 'calendar-1-filled',
@@ -3539,7 +3539,7 @@ export const manifest = {
         },
         {
           name: 'server-filled',
-          keywords: ['服务器', '服务器'],
+          keywords: ['服务器'],
         },
         {
           name: 'setting-1-filled',
@@ -3753,7 +3753,7 @@ export const manifest = {
         },
         {
           name: 'flashlight-filled',
-          keywords: ['手电筒', '手电筒'],
+          keywords: ['手电筒'],
         },
         {
           name: 'gamepad-filled',
@@ -3777,7 +3777,7 @@ export const manifest = {
         },
         {
           name: 'keyboard-filled',
-          keywords: ['键盘', '键盘', '键盘', '键盘'],
+          keywords: ['键盘'],
         },
         {
           name: 'laptop-filled',
@@ -3801,7 +3801,7 @@ export const manifest = {
         },
         {
           name: 'mode-preview-filled',
-          keywords: ['预览模式填充', '预览模式填充', '预览界面填充'],
+          keywords: ['预览模式填充', '预览界面填充'],
         },
         {
           name: 'mouse-filled',
@@ -3825,7 +3825,7 @@ export const manifest = {
         },
         {
           name: 'router-wave-filled',
-          keywords: ['路由波动', '路由波动'],
+          keywords: ['路由波动'],
         },
         {
           name: 'save-filled',
@@ -3899,7 +3899,7 @@ export const manifest = {
         },
         {
           name: 'brush-filled',
-          keywords: ['画笔', '画笔', '毛笔'],
+          keywords: ['画笔', '毛笔'],
         },
         {
           name: 'clear-formatting-1-filled',
@@ -3939,7 +3939,7 @@ export const manifest = {
         },
         {
           name: 'ink-filled',
-          keywords: ['墨水', '墨水', '染料', '颜料'],
+          keywords: ['墨水', '染料', '颜料'],
         },
         {
           name: 'layers-filled',
@@ -4033,7 +4033,7 @@ export const manifest = {
         },
         {
           name: 'banana-filled',
-          keywords: ['香蕉', '香蕉的'],
+          keywords: ['香蕉'],
         },
         {
           name: 'barbecue-filled',
@@ -4045,7 +4045,7 @@ export const manifest = {
         },
         {
           name: 'beer-filled',
-          keywords: ['啤酒', '啤酒', '啤酒'],
+          keywords: ['啤酒'],
         },
         {
           name: 'bone-filled',
@@ -4053,7 +4053,7 @@ export const manifest = {
         },
         {
           name: 'bread-filled',
-          keywords: ['面包', '面包'],
+          keywords: ['面包'],
         },
         {
           name: 'broccoli-filled',
@@ -4069,7 +4069,7 @@ export const manifest = {
         },
         {
           name: 'candy-filled',
-          keywords: ['糖果', '糖果', '甜蜜', '甜美的食品'],
+          keywords: ['糖果', '甜蜜', '甜美的食品'],
         },
         {
           name: 'cheese-filled',
@@ -4105,7 +4105,7 @@ export const manifest = {
         },
         {
           name: 'eggplant-filled',
-          keywords: ['茄子', '茄子'],
+          keywords: ['茄子'],
         },
         {
           name: 'fish-filled',
@@ -4129,7 +4129,7 @@ export const manifest = {
         },
         {
           name: 'ice-cream-filled',
-          keywords: ['冰淇淋', '冰琪淋'],
+          keywords: ['冰淇淋', '冰琪淋', '冰激凌'],
         },
         {
           name: 'lemon-filled',
@@ -4149,7 +4149,7 @@ export const manifest = {
         },
         {
           name: 'milk-filled',
-          keywords: ['牛奶', '牛奶', '乳制品'],
+          keywords: ['牛奶', '乳制品'],
         },
         {
           name: 'mushroom-1-filled',
@@ -4173,7 +4173,7 @@ export const manifest = {
         },
         {
           name: 'peach-filled',
-          keywords: ['桃子', '桃子'],
+          keywords: ['桃子'],
         },
         {
           name: 'pear-filled',
@@ -4818,7 +4818,7 @@ export const manifest = {
         },
         {
           name: 'saturation',
-          keywords: ['饱和度', '饱和度'],
+          keywords: ['饱和度'],
         },
         {
           name: 'sharpness',
@@ -4982,11 +4982,11 @@ export const manifest = {
         },
         {
           name: 'earth',
-          keywords: ['地球', '', '蓝球'],
+          keywords: ['地球'],
         },
         {
           name: 'indicator',
-          keywords: ['指标', '指标', '指标', '指标'],
+          keywords: ['指标'],
         },
         {
           name: 'location',
@@ -5050,7 +5050,7 @@ export const manifest = {
         },
         {
           name: 'map-collection',
-          keywords: ['映射集合', '映射-集合'],
+          keywords: ['映射集合'],
         },
         {
           name: 'map-connection',
@@ -5180,7 +5180,7 @@ export const manifest = {
         },
         {
           name: 'brackets',
-          keywords: ['括号', '括号'],
+          keywords: ['括号'],
         },
         {
           name: 'bug',
@@ -5260,7 +5260,7 @@ export const manifest = {
         },
         {
           name: 'parentheses',
-          keywords: ['括号', '括号'],
+          keywords: ['括号'],
         },
         {
           name: 'plantuml',
@@ -5432,7 +5432,7 @@ export const manifest = {
         },
         {
           name: 'earphone',
-          keywords: ['耳机', '耳机'],
+          keywords: ['耳机'],
         },
         {
           name: 'film-1',
@@ -5464,7 +5464,7 @@ export const manifest = {
         },
         {
           name: 'microphone-1',
-          keywords: ['麦克风', '麦克风', '扩音器'],
+          keywords: ['麦克风', '扩音器'],
         },
         {
           name: 'microphone-2',
@@ -5476,7 +5476,7 @@ export const manifest = {
         },
         {
           name: 'music',
-          keywords: ['音乐', '音乐'],
+          keywords: ['音乐'],
         },
         {
           name: 'music-rectangle-add',
@@ -5508,7 +5508,7 @@ export const manifest = {
         },
         {
           name: 'piano',
-          keywords: ['钢琴', '钢琴', '钢琴', '钢琴'],
+          keywords: ['钢琴'],
         },
         {
           name: 'play',
@@ -5876,7 +5876,7 @@ export const manifest = {
         },
         {
           name: 'castle',
-          keywords: ['城堡', '城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'castle-1',
@@ -5884,7 +5884,7 @@ export const manifest = {
         },
         {
           name: 'castle-2',
-          keywords: ['城堡', '城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'castle-3',
@@ -5892,19 +5892,19 @@ export const manifest = {
         },
         {
           name: 'castle-4',
-          keywords: ['城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'castle-5',
-          keywords: ['城堡', '城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'castle-6',
-          keywords: ['城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'castle-7',
-          keywords: ['城堡', '城堡'],
+          keywords: ['城堡'],
         },
         {
           name: 'chimney',
@@ -6084,11 +6084,11 @@ export const manifest = {
         },
         {
           name: 'mosque',
-          keywords: ['清真寺', '清真寺'],
+          keywords: ['清真寺'],
         },
         {
           name: 'mosque-1',
-          keywords: ['清真寺', '清真寺'],
+          keywords: ['清真寺'],
         },
         {
           name: 'museum',
@@ -6148,7 +6148,7 @@ export const manifest = {
         },
         {
           name: 'shimen',
-          keywords: ['石们', '石门'],
+          keywords: ['石门'],
         },
         {
           name: 'shop-1',
@@ -6208,7 +6208,7 @@ export const manifest = {
         },
         {
           name: 'window',
-          keywords: ['窗户', '窗户'],
+          keywords: ['窗户'],
         },
         {
           name: 'window-1',
@@ -6654,7 +6654,7 @@ export const manifest = {
         },
         {
           name: 'textformat-italic',
-          keywords: ['文本格式斜体', '文本格式斜体'],
+          keywords: ['文本格式斜体'],
         },
         {
           name: 'textformat-longer',
@@ -6679,6 +6679,10 @@ export const manifest = {
         {
           name: 'view-list',
           keywords: ['视图列表', '查看清单'],
+        },
+        {
+          name: 'divider-1',
+          keywords: ['分隔符', '分割线', 'divider', '分界线'],
         },
       ],
     },
@@ -6788,7 +6792,7 @@ export const manifest = {
         },
         {
           name: 'parabola',
-          keywords: ['抛物线', '抛物线'],
+          keywords: ['抛物线'],
         },
         {
           name: 'pi',
@@ -7120,7 +7124,7 @@ export const manifest = {
         },
         {
           name: 'file-icon',
-          keywords: ['文件图标', '文件图标'],
+          keywords: ['文件图标'],
         },
         {
           name: 'file-image',
@@ -7152,7 +7156,7 @@ export const manifest = {
         },
         {
           name: 'file-onenote',
-          keywords: ['文件-onenote', '文件-onenote'],
+          keywords: ['文件 onenote', 'OneNote 文件'],
         },
         {
           name: 'file-outlook',
@@ -7164,11 +7168,11 @@ export const manifest = {
         },
         {
           name: 'file-pdf',
-          keywords: ['文件-PDF', 'PDF文件'],
+          keywords: ['文件 PDF', 'PDF文件'],
         },
         {
           name: 'file-powerpoint',
-          keywords: ['文件', 'PowerPoint', '演示文稿'],
+          keywords: ['文件', 'PowerPoint', 'PPT', '演示文稿'],
         },
         {
           name: 'file-safety',
@@ -7300,7 +7304,7 @@ export const manifest = {
         },
         {
           name: 'link-1',
-          keywords: ['链接', '链接'],
+          keywords: ['链接'],
         },
         {
           name: 'link-transform',
@@ -7312,11 +7316,11 @@ export const manifest = {
         },
         {
           name: 'music-1',
-          keywords: ['乐谱', '歌曲'],
+          keywords: ['音乐', '乐谱', '歌曲'],
         },
         {
           name: 'music-2',
-          keywords: ['音乐', '音乐'],
+          keywords: ['音乐', '乐谱', '歌曲'],
         },
         {
           name: 'paste',
@@ -7398,7 +7402,7 @@ export const manifest = {
       icons: [
         {
           name: 'button',
-          keywords: ['按钮', '按钮'],
+          keywords: ['按钮'],
         },
         {
           name: 'calendar',
@@ -7494,7 +7498,7 @@ export const manifest = {
         },
         {
           name: 'icon',
-          keywords: ['图标', '图标', '图标', '图标'],
+          keywords: ['图标'],
         },
         {
           name: 'image-carousel',
@@ -7502,7 +7506,7 @@ export const manifest = {
         },
         {
           name: 'link',
-          keywords: ['链接', '链接', '链接', '链接'],
+          keywords: ['链接'],
         },
         {
           name: 'link-unlink',
@@ -7522,7 +7526,7 @@ export const manifest = {
         },
         {
           name: 'scroll-bar',
-          keywords: ['滚动条', '滚动条'],
+          keywords: ['滚动条'],
         },
         {
           name: 'slideshow',
@@ -7661,7 +7665,7 @@ export const manifest = {
         },
         {
           name: 'share',
-          keywords: ['分享', '分享'],
+          keywords: ['分享'],
         },
         {
           name: 'shortcut',
@@ -8003,7 +8007,7 @@ export const manifest = {
         },
         {
           name: 'chevron-up-s',
-          keywords: ['箭头向上', '箭头向上', '箭头向上', '箭头向上'],
+          keywords: ['箭头向上'],
         },
         {
           name: 'download',
@@ -8043,7 +8047,7 @@ export const manifest = {
         },
         {
           name: 'login',
-          keywords: ['登录', '登录'],
+          keywords: ['登录'],
         },
         {
           name: 'logout',
@@ -8145,7 +8149,7 @@ export const manifest = {
         },
         {
           name: 'no-result',
-          keywords: ['无结果'],
+          keywords: ['无结果', '无数据', '空', 'empty'],
         },
         {
           name: 'notification',
@@ -8283,7 +8287,7 @@ export const manifest = {
         },
         {
           name: 'roast',
-          keywords: ['烤', '炙'],
+          keywords: ['吐槽', '批评'],
         },
         {
           name: 'serenity',
@@ -8445,7 +8449,7 @@ export const manifest = {
         },
         {
           name: 'bookmark',
-          keywords: ['书签', '书签'],
+          keywords: ['书签'],
         },
         {
           name: 'bookmark-add',
@@ -8477,7 +8481,7 @@ export const manifest = {
         },
         {
           name: 'bug-report',
-          keywords: ['错误报告', '错误报告'],
+          keywords: ['错误报告'],
         },
         {
           name: 'calendar-1',
@@ -8753,7 +8757,7 @@ export const manifest = {
         },
         {
           name: 'lightbulb-circle',
-          keywords: ['电灯泡', '圆形', '电灯泡', '环形'],
+          keywords: ['电灯泡', '圆形', '环形'],
         },
         {
           name: 'lighting-circle',
@@ -8889,7 +8893,7 @@ export const manifest = {
         },
         {
           name: 'server',
-          keywords: ['服务器', '服务器'],
+          keywords: ['服务器'],
         },
         {
           name: 'setting',
@@ -8945,11 +8949,11 @@ export const manifest = {
         },
         {
           name: 'tools',
-          keywords: ['工具', '工具'],
+          keywords: ['工具'],
         },
         {
           name: 'tools-circle',
-          keywords: ['工具圈', '工具圈'],
+          keywords: ['工具圈'],
         },
         {
           name: 'translate',
@@ -9099,7 +9103,7 @@ export const manifest = {
         },
         {
           name: 'ink',
-          keywords: ['墨水', '墨水', '染料', '颜料'],
+          keywords: ['墨水', '染料', '颜料'],
         },
         {
           name: 'layers',
@@ -9221,7 +9225,7 @@ export const manifest = {
         },
         {
           name: 'beer',
-          keywords: ['啤酒', '啤酒', '啤酒'],
+          keywords: ['啤酒'],
         },
         {
           name: 'bone',
@@ -9229,7 +9233,7 @@ export const manifest = {
         },
         {
           name: 'bread',
-          keywords: ['面包', '面包'],
+          keywords: ['面包'],
         },
         {
           name: 'broccoli',
@@ -9245,7 +9249,7 @@ export const manifest = {
         },
         {
           name: 'candy',
-          keywords: ['糖果', '糖果', '甜蜜', '甜美的食品'],
+          keywords: ['糖果', '甜蜜', '甜美的食品'],
         },
         {
           name: 'cheese',
@@ -9289,7 +9293,7 @@ export const manifest = {
         },
         {
           name: 'eggplant',
-          keywords: ['茄子', '茄子'],
+          keywords: ['茄子'],
         },
         {
           name: 'fish',
@@ -9337,7 +9341,7 @@ export const manifest = {
         },
         {
           name: 'milk',
-          keywords: ['牛奶', '牛奶', '乳制品'],
+          keywords: ['牛奶', '乳制品'],
         },
         {
           name: 'mushroom',
@@ -9361,7 +9365,7 @@ export const manifest = {
         },
         {
           name: 'peach',
-          keywords: ['桃子', '桃子'],
+          keywords: ['桃子'],
         },
         {
           name: 'pear',
@@ -9539,7 +9543,7 @@ export const manifest = {
         },
         {
           name: 'flashlight',
-          keywords: ['手电筒', '手电筒'],
+          keywords: ['手电筒'],
         },
         {
           name: 'gamepad',
@@ -9563,7 +9567,7 @@ export const manifest = {
         },
         {
           name: 'keyboard',
-          keywords: ['键盘', '键盘', '键盘', '键盘'],
+          keywords: ['键盘'],
         },
         {
           name: 'laptop',
@@ -9587,7 +9591,7 @@ export const manifest = {
         },
         {
           name: 'mode-preview',
-          keywords: ['预览模式', '预览模式', '预览界面'],
+          keywords: ['预览模式', '预览界面'],
         },
         {
           name: 'mouse',
@@ -9623,7 +9627,7 @@ export const manifest = {
         },
         {
           name: 'router-wave',
-          keywords: ['路由波动', '路由波动'],
+          keywords: ['路由波动'],
         },
         {
           name: 'rss',
@@ -9635,7 +9639,7 @@ export const manifest = {
         },
         {
           name: 'scan',
-          keywords: ['扫描', '扫描成'],
+          keywords: ['扫描'],
         },
         {
           name: 'sd-card',

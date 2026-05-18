@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.3.4
+
+### Patch Changes
+
+- feat: add divider-1,voice-wave,keyboard-1 icons
+
 ## 0.3.3
 
 ### Patch Changes

@@ -38,7 +38,7 @@ void main() {
     var mapSb = StringBuffer("  static const all = <String, IconData>{\n");
     iconList.forEach((model) {
       varSb.writeln(
-        "  static const ${model.name} = IconData(0x${model.codepoint}, fontFamily: 'TDIcons', fontPackage: 'tdesign_flutter');",
+        "  static const ${model.name} = IconData(0x${model.codepoint}, fontFamily: 'TIcons', fontPackage: 'tdesign_flutter');",
       );
       mapSb.writeln("    '${model.name}': ${model.name},");
     });
@@ -67,10 +67,10 @@ import 'package:flutter/widgets.dart';
 // ignore_for_file: non_constant_identifier_names
 // ignore_for_file: constant_identifier_names
 
-class TDIcons {
+class TIcons {
 
   /// 私有构造方法，不支持外部创建，仅提供静态常量给外部使用
-  const TDIcons._();
+  const TIcons._();
 ''';
 
 var fileEnd = '''

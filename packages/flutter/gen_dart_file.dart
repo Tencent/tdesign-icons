@@ -4,7 +4,7 @@ import 'dart:io';
 void main() {
   var scriptDir = File.fromUri(Platform.script).parent.path;
   var indexPath = "$scriptDir/../../resources/icon-font/dist/index.json";
-  var outputPath = "output/td_icons.dart";
+  var outputPath = "output/t_icons.dart";
   var indexFile = File(indexPath);
   if (!indexFile.existsSync()) {
     throw Exception("indexFile is not exist");
@@ -35,7 +35,6 @@ void main() {
 
     var fileSb = StringBuffer(fileStart);
     var varSb = StringBuffer();
-    // static const accessibility_filled = IconData(0xE001, fontFamily: 'TDIcons', fontPackage: 'tdesign_flutter',);
     var mapSb = StringBuffer("  static const all = <String, IconData>{\n");
     iconList.forEach((model) {
       varSb.writeln(

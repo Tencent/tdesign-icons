@@ -28,7 +28,7 @@ jobs:
         if: steps.assignees.outputs.contributors != ''
         uses: actions-cool/issues-helper@v3
         with:
-          actions: 'add-assignees'
+          actions: "add-assignees"
           token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
           assignees: ${{ steps.assignees.outputs.contributors }}
@@ -41,7 +41,7 @@ jobs:
 
       - name: 通知贡献者
         if: steps.assignees.outputs.contributors != ''
-        uses: actions-cool/maintain-one-comment@v2.0.0
+        uses: TDesignOteam/workflows/actions/maintain-one-comment@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |

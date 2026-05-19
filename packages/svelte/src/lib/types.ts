@@ -1,8 +1,8 @@
-import type { SVGAttributes } from 'svelte/elements';
+import type { SVGAttributes, ClassValue } from 'svelte/elements';
 
 export interface IconProps extends SVGAttributes<SVGSVGElement> {
   style?: string;
-  class?: string;
+  class?: ClassValue;
   size?: 'small' | 'medium' | 'large' | string | number;
   strokeWidth?: number;
   strokeColor?: string | string[];

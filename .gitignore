@@ -9,10 +9,13 @@ converted_svg
 # build
 dist/
 esm/
-packages/flutter/output/
+packages/flutter/build/
 
 # node_modules
 **/node_modules
+
+# dart_tool
+packages/flutter/.dart_tool/
 
 # legacy
 /gallery
@@ -28,6 +31,7 @@ yarn-error.log
 packages/**/yarn.lock
 packages/**/package-lock.json
 packages/**/pnpm-lock.yaml
+packages/**/pubspec.lock
 resources/**/yarn.lock
 resources/**/package-lock.json
 resources/**/pnpm-lock.yaml

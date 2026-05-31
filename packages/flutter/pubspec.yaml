@@ -1,0 +1,32 @@
+name: tdesign_icons
+description: "TDesign Icons is a mono-repo for TDesign Icons packages and resources management."
+version: 1.0.0
+homepage: https://tdesign.tencent.com/icons
+repository: https://github.com/Tencent/tdesign-icons/tree/develop/packages/flutter
+issue_tracker: https://github.com/Tencent/tdesign-icons/issues
+topics:
+  - assets
+  - icons
+  - tdesign
+  - symbol
+
+environment:
+  sdk: ^3.10.7
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  code_builder: ^4.11.1
+  dart_style: ^3.1.4
+
+flutter:
+   fonts:
+     - family: TDIcons
+       fonts:
+         - asset: fonts/t.ttf

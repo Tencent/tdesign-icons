@@ -76,7 +76,7 @@ void generate(List<IconModel> icons) {
               for (final icon in icons)
                 (FieldBuilder()
                       ..docs.addAll([
-                        '/// "${fontFamily}" named "${icon.originalName}". ',
+                        '/// "$fontFamily" named "${icon.originalName}". ',
                       ])
                       ..static = true
                       ..modifier = FieldModifier.constant
@@ -92,6 +92,21 @@ void generate(List<IconModel> icons) {
                           )
                           .code)
                     .build(),
+
+              (FieldBuilder()
+                    ..docs.addAll(['/// "$fontFamily" all icons. '])
+                    ..static = true
+                    ..modifier = FieldModifier.constant
+                    ..name = 'allIconsMap'
+                    ..assignment = literalMap(
+                      {
+                        for (final icon in icons)
+                          literalString(icon.name): refer(icon.name),
+                      },
+                      refer('String'),
+                      refer('IconData'),
+                    ).code)
+                  .build(),
             ]))
           .build(),
     ]);
@@ -128,7 +143,7 @@ class IconModel {
 
     if (!RegExp(r'^[A-Fa-f0-9]{4,6}$').hasMatch(codepoint)) {
       throw Exception(
-        "Invalid codepoint format: \\\\${codepoint} for icon name: ${name}. Expected format: \\\\E001",
+        "Invalid codepoint format: \\\\$codepoint for icon name: $name. Expected format: \\\\E001",
       );
     }
 

@@ -50,6 +50,7 @@ void generate(List<IconModel> icons) {
     ..body.addAll([
       (ClassBuilder()
             ..docs.addAll([
+              '/// @formatter:off',
               '/// TDesign icon collection. Use with [Icon] widget, e.g. [TDIcons.homeFilled].',
             ])
             /// Tree Shaking 支持
@@ -111,6 +112,7 @@ void generate(List<IconModel> icons) {
 
   final code =
       DartFormatter(
+        pageWidth: 120,
         languageVersion: DartFormatter.latestLanguageVersion,
       ).format(
         DartEmitter(
@@ -119,10 +121,17 @@ void generate(List<IconModel> icons) {
         ).visitLibrary(library.build()).toString(),
       );
 
+  final finalCode =
+      '''
+// dart format off
+$code
+// dart format on
+''';
+
   // 脚本在 tool/ 目录下，需要写到包根目录的 lib/src/
   final outputDir = Directory(scriptDir).parent;
   final outputFile = File('${outputDir.path}/lib/src/assets.g.dart');
-  outputFile.writeAsStringSync(code);
+  outputFile.writeAsStringSync(finalCode);
 }
 
 class IconModel {

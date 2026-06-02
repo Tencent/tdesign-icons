@@ -50,6 +50,7 @@ void generate(List<IconModel> icons) {
     ..body.addAll([
       (ClassBuilder()
             ..docs.addAll([
+              '/// @formatter:off',
               '/// TDesign icon collection. Use with [Icon] widget, e.g. [TDIcons.homeFilled].',
             ])
             /// Tree Shaking 支持
@@ -111,7 +112,7 @@ void generate(List<IconModel> icons) {
 
   final code =
       DartFormatter(
-        pageWidth: 100,
+        pageWidth: 120,
         languageVersion: DartFormatter.latestLanguageVersion,
       ).format(
         DartEmitter(
@@ -124,16 +125,6 @@ void generate(List<IconModel> icons) {
   final outputDir = Directory(scriptDir).parent;
   final outputFile = File('${outputDir.path}/lib/src/assets.g.dart');
   outputFile.writeAsStringSync(code);
-
-  // 使用 dart format 格式化生成的代码
-  final process = Process.runSync(
-    'dart',
-    ['format', outputFile.path],
-    workingDirectory: outputDir.path,
-  );
-  if (process.exitCode != 0) {
-    throw Exception('Failed to format generated code: ${process.stderr}');
-  }
 }
 
 class IconModel {

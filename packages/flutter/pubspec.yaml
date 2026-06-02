@@ -4,7 +4,6 @@ version: 0.0.1
 homepage: https://tdesign.tencent.com/icons
 repository: https://github.com/Tencent/tdesign-icons/tree/develop/packages/flutter
 issue_tracker: https://github.com/Tencent/tdesign-icons/issues
-publish_to: https://pub.dev
 topics:
   - assets
   - icons

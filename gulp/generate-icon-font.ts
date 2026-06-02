@@ -49,7 +49,8 @@ export const generateIconFont = ({
           fontName: 't', // required
           prependUnicode: true, // recommended option
           formats: ['svg', 'ttf', 'eot', 'woff'], // default, 'woff2' and 'svg' are available
-          // 不填 timestamp，使用 gulp-iconfont 默认值
+          // 使用固定时间戳，确保字体文件每次生成都一致
+          timestamp: 1704067200, // 2024-01-01 00:00:00 UTC
           normalize: true,
           fontHeight: 1024,
         }),

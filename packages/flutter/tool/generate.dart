@@ -39,7 +39,8 @@ void main() {
   generate(icons);
 }
 
-const header = 'GENERATED CODE - TDesign Icons for Flutter';
+const header = '''TDesign Icons for Flutter
+// GENERATED CODE - DO NOT MODIFY BY HAND''';
 
 void generate(List<IconModel> icons) {
   final scriptDir = File.fromUri(Platform.script).parent.path;
@@ -164,8 +165,9 @@ String toCamelCase(String input) {
   final parts = input
       .replaceAll('-', '_')
       .split('_')
-      .map((p) =>
-        p.isEmpty ? '' : p[0].toUpperCase() + p.substring(1).toLowerCase()
+      .map(
+        (p) =>
+            p.isEmpty ? '' : p[0].toUpperCase() + p.substring(1).toLowerCase(),
       )
       .join('');
   return parts.isEmpty ? parts : parts[0].toLowerCase() + parts.substring(1);

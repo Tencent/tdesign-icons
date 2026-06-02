@@ -8,7 +8,7 @@ converted_svg
 
 # Flutter generated files
 packages/flutter/fonts/*.ttf
-packages/flutter/lib/src/*.g.dart
+packages/flutter/lib/src/assets.g.dart.bak
 
 # build
 dist/

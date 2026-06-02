@@ -29,18 +29,10 @@ void main() {
   generate(icons);
 }
 
-const header =
-    ''' GENERATED CODE - DO NOT MODIFY BY HAND
-// 
-// **************************************************************************
-// $fontPackage
-// 
-// TDesign Icons is a mono-repo for TDesign Icons packages and resources management.
-// **************************************************************************
-//
-''';
+const header = 'GENERATED CODE - TDesign Icons for Flutter';
 
 void generate(List<IconModel> icons) {
+  final scriptDir = File.fromUri(Platform.script).parent.path;
   final library = LibraryBuilder()
     ..directives.add(Directive.import('package:flutter/widgets.dart'))
     ..body
@@ -121,7 +113,10 @@ void generate(List<IconModel> icons) {
         ).visitLibrary(library.build()).toString(),
       );
 
-  File('./lib/src/assets.g.dart').writeAsStringSync(code);
+  // 脚本在 tool/ 目录下，需要写到包根目录的 lib/src/
+  final outputDir = Directory(scriptDir).parent;
+  final outputFile = File('${outputDir.path}/lib/src/assets.g.dart');
+  outputFile.writeAsStringSync(code);
 }
 
 class IconModel {

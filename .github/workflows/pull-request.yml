@@ -87,7 +87,7 @@ jobs:
         uses: dart-lang/setup-dart@v1
 
       - if: matrix.icons == 'tdesign-icons-flutter'
-        run: flutter pub get
+        run: dart pub get
         working-directory: ./packages/flutter
 
       - if: matrix.icons == 'tdesign-icons-flutter'

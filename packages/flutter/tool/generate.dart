@@ -50,7 +50,6 @@ void generate(List<IconModel> icons) {
     ..body.addAll([
       (ClassBuilder()
             ..docs.addAll([
-              '/// @formatter:off',
               '/// TDesign icon collection. Use with [Icon] widget, e.g. [TDIcons.homeFilled].',
             ])
             /// Tree Shaking 支持
@@ -112,7 +111,6 @@ void generate(List<IconModel> icons) {
 
   final code =
       DartFormatter(
-        pageWidth: 120,
         languageVersion: DartFormatter.latestLanguageVersion,
       ).format(
         DartEmitter(

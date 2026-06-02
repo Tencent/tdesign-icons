@@ -4,6 +4,7 @@ version: 1.0.0
 homepage: https://tdesign.tencent.com/icons
 repository: https://github.com/Tencent/tdesign-icons/tree/develop/packages/flutter
 issue_tracker: https://github.com/Tencent/tdesign-icons/issues
+publish_to: pubdev
 topics:
   - assets
   - icons
@@ -11,7 +12,7 @@ topics:
   - symbol
 
 environment:
-  sdk: ^3.10.7
+  sdk: '>=3.8.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
@@ -23,7 +24,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^6.0.0
   code_builder: ^4.11.1
-  dart_style: ^3.1.4
+  dart_style: ^3.1.2
 
 flutter:
    fonts:

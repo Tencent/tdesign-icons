@@ -80,7 +80,7 @@ void generate(List<IconModel> icons) {
                       ])
                       ..static = true
                       ..modifier = FieldModifier.constant
-                      ..type
+                      ..type = refer('IconData')
                       ..name = icon.name
                       ..assignment = refer('IconData')
                           .newInstance(
@@ -97,6 +97,7 @@ void generate(List<IconModel> icons) {
                     ..docs.addAll(['/// "$fontFamily" all icons. '])
                     ..static = true
                     ..modifier = FieldModifier.constant
+                    ..type = refer('<String, IconData>')
                     ..name = 'allIconsMap'
                     ..assignment = literalMap(
                       {

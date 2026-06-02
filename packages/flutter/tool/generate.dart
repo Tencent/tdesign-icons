@@ -50,7 +50,7 @@ void generate(List<IconModel> icons) {
             ..docs.addAll([
               '/// ',
               '/// Use with the [Icon] class to show specific icons. Icons are identified by their name as listed below, e.g. ',
-              '/// [TDIcons.logo_tdesign].',
+              '/// [TDIcons.logoTdesign].',
               '/// ',
             ])
             /// Tree Shaking 支持
@@ -137,12 +137,12 @@ class IconModel {
 
   factory IconModel.fromJson(Map<String, dynamic> json) {
     final originalName = json['name'];
-    final name = originalName.replaceAll("-", '_');
+    final name = toCamelCase(originalName);
     final codepoint = (json['codepoint'] as String).replaceAll("\\", '');
 
     if (!RegExp(r'^[A-Fa-f0-9]{4,6}$').hasMatch(codepoint)) {
       throw Exception(
-        "Invalid codepoint format: \\\\$codepoint for icon name: $name. Expected format: \\\\E001",
+        "Invalid codepoint format: \\$codepoint for icon name: $name. Expected format: \\E001",
       );
     }
 
@@ -156,4 +156,16 @@ class IconModel {
   @override
   String toString() =>
       'IconItem(name: $name, originalName: $originalName, codepoint: $codepoint)';
+}
+
+/// Convert snake_case or kebab-case to camelCase
+String toCamelCase(String input) {
+  final parts = input
+      .replaceAll('-', '_')
+      .split('_')
+      .map((p) =>
+        p.isEmpty ? '' : p[0].toUpperCase() + p.substring(1).toLowerCase()
+      )
+      .join('');
+  return parts.isEmpty ? parts : parts[0].toLowerCase() + parts.substring(1);
 }

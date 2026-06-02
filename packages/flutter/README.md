@@ -1,19 +1,51 @@
 ## TDesign Icons
 
-TDesign Icons is a mono-repo for TDesign Icons packages and resources management.
+TDesign Icons for Flutter - 2350+ beautiful icons.
+
+[![Pub Version](https://img.shields.io/pub/v/tdesign_icons.svg)](https://pub.dev/packages/tdesign_icons)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+## Installation
+
+Add dependency in your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  tdesign_icons: ^1.0.0
+```
 
 ## Usage
-
-Use with the [Icon](https://api.flutter.dev/flutter/widgets/Icon-class.html) class to show specific icons.
-
-Icons are identified by their name as listed below, e.g.
 
 ```dart
 import 'package:tdesign_icons/tdesign_icons.dart';
 
-const Icon(TDIcons.logo_tdesign_filled);
+// Basic icon
+Icon(TDIcons.logo_tdesign_filled)
+
+// With color and size
+Icon(TDIcons.logo_tdesign_filled, color: Colors.blue, size: 24)
+
+// In widget tree
+child: Icon(TDIcons.home_filled)
 ```
 
-## Design Guides & Resources
+## Available Icons
+
+All icons are available as static constants in `TDIcons` class:
+
+```dart
+TDIcons.ability_open
+TDIcons.abstract
+TDIcons.home_filled
+// ... more icons
+```
+
+Complete icon list: https://tdesign.tencent.com/design/icon
+
+## Design Guidelines
 
 https://tdesign.tencent.com/design/icon
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details

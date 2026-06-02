@@ -6,6 +6,10 @@ src/manifest.ts
 src/icons.ts
 converted_svg
 
+# Flutter generated files
+packages/flutter/fonts/*.ttf
+packages/flutter/lib/src/*.g.dart
+
 # build
 dist/
 esm/

@@ -24,7 +24,6 @@ const webComponentsCss = `@font-face {
   font-style: normal;
 }`;
 
-const runTimestamp = Math.round(Date.now() / 1000);
 const svgMap: any = {};
 interface GLYPHS {
   name: string;
@@ -50,7 +49,7 @@ export const generateIconFont = ({
           fontName: 't', // required
           prependUnicode: true, // recommended option
           formats: ['svg', 'ttf', 'eot', 'woff'], // default, 'woff2' and 'svg' are available
-          timestamp: runTimestamp, // recommended to get consistent builds when watching files
+          // 不填 timestamp，使用 gulp-iconfont 默认值
           normalize: true,
           fontHeight: 1024,
         }),

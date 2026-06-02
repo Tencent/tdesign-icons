@@ -2,10 +2,7 @@
 
 import 'package:flutter/widgets.dart';
 
-///
-/// Use with the [Icon] class to show specific icons. Icons are identified by their name as listed below, e.g.
-/// [TDIcons.logoTdesign].
-///
+/// TDesign icon collection. Use with [Icon] widget, e.g. [TDIcons.homeFilled].
 @staticIconProvider
 abstract final class TDIcons {
   static const iconFont = 'TDIcons';

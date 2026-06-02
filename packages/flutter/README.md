@@ -20,13 +20,13 @@ dependencies:
 import 'package:tdesign_icons/tdesign_icons.dart';
 
 // Basic icon
-Icon(TDIcons.logo_tdesign_filled)
+Icon(TDIcons.logoTdesignFilled)
 
 // With color and size
-Icon(TDIcons.logo_tdesign_filled, color: Colors.blue, size: 24)
+Icon(TDIcons.logoTdesignFilled, color: Colors.blue, size: 24)
 
 // In widget tree
-child: Icon(TDIcons.home_filled)
+child: Icon(TDIcons.homeFilled)
 ```
 
 ## Available Icons
@@ -34,9 +34,9 @@ child: Icon(TDIcons.home_filled)
 All icons are available as static constants in `TDIcons` class:
 
 ```dart
-TDIcons.ability_open
+TDIcons.abilityOpen
 TDIcons.abstract
-TDIcons.home_filled
+TDIcons.homeFilled
 // ... more icons
 ```
 

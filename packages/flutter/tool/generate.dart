@@ -10,12 +10,22 @@ const fontPackage = 'tdesign_icons';
 void main() {
   final scriptDir = File.fromUri(Platform.script).parent.path;
 
-  final indexPath = "$scriptDir/../../../resources/icon-font/dist/index.json";
+  final indexPath = '$scriptDir/../../../resources/icon-font/dist/index.json';
+  final fontPath = '$scriptDir/../../../resources/icon-font/dist/t.ttf';
 
   final indexFile = File(indexPath);
   if (!indexFile.existsSync()) {
-    throw Exception("Index file not found at: ${indexFile.path}");
+    throw Exception('Index file not found at: ${indexFile.path}');
   }
+
+  final fontFile = File(fontPath);
+  if (!fontFile.existsSync()) {
+    throw Exception('Font file not found at: ${fontFile.path}');
+  }
+
+  final fontDestFile = File('$scriptDir/../fonts/t.ttf');
+  fontDestFile.parent.createSync(recursive: true);
+  fontFile.copySync(fontDestFile.path);
 
   final indexJsonString = indexFile.readAsStringSync();
 
@@ -35,15 +45,11 @@ void generate(List<IconModel> icons) {
   final scriptDir = File.fromUri(Platform.script).parent.path;
   final library = LibraryBuilder()
     ..directives.add(Directive.import('package:flutter/widgets.dart'))
-    ..body
     ..comments.add(header)
     ..body.addAll([
       (ClassBuilder()
             ..docs.addAll([
-              '/// ',
-              '/// Use with the [Icon] class to show specific icons. Icons are identified by their name as listed below, e.g. ',
-              '/// [TDIcons.logoTdesign].',
-              '/// ',
+              '/// TDesign icon collection. Use with [Icon] widget, e.g. [TDIcons.homeFilled].',
             ])
             /// Tree Shaking 支持
             ..annotations.add(refer('staticIconProvider'))

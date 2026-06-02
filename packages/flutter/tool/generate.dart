@@ -111,7 +111,7 @@ void generate(List<IconModel> icons) {
 
   final code =
       DartFormatter(
-        pageWidth: 120,
+        pageWidth: 100,
         languageVersion: DartFormatter.latestLanguageVersion,
       ).format(
         DartEmitter(
@@ -124,6 +124,16 @@ void generate(List<IconModel> icons) {
   final outputDir = Directory(scriptDir).parent;
   final outputFile = File('${outputDir.path}/lib/src/assets.g.dart');
   outputFile.writeAsStringSync(code);
+
+  // 使用 dart format 格式化生成的代码
+  final process = Process.runSync(
+    'dart',
+    ['format', outputFile.path],
+    workingDirectory: outputDir.path,
+  );
+  if (process.exitCode != 0) {
+    throw Exception('Failed to format generated code: ${process.stderr}');
+  }
 }
 
 class IconModel {

@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.4] - 2026-06-03
+
+- fix: 将 pubspec 字体族名 `TDIcons` 改为 `TIcons`，与生成代码 `IconData.fontFamily` 一致
+
 ## [0.0.3] - 2026-06-03
 
 - `TDIcons` 类名改为 `TIcons`

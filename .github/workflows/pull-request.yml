@@ -84,11 +84,24 @@ jobs:
         run: pnpm run --filter ${{ matrix.icons }} build
 
       - if: matrix.icons == 'tdesign-icons-flutter'
-        uses: dart-lang/setup-dart@v1
+        uses: TDesignOteam/workflows/actions/setup-flutter@main
+        with:
+          flutter-version: 3.32.0
 
       - if: matrix.icons == 'tdesign-icons-flutter'
-        run: dart gen_dart_file.dart
         working-directory: ./packages/flutter
+        run: |
+          flutter pub get
+          dart ./tool/generate.dart
+          
+          # 验证
+          [ -f "lib/src/assets.g.dart" ] || (echo "❌ assets.g.dart 不存在" && exit 1)
+          [ -f "fonts/t.ttf" ] || (echo "❌ t.ttf 不存在" && exit 1)
+          icon_count=$(grep -c "static const " lib/src/assets.g.dart || echo "0")
+          echo "✅ Flutter 包构建成功，共 $icon_count 个图标"
+          
+          flutter analyze
+          flutter pub publish --dry-run
 
   site:
     runs-on: ubuntu-latest

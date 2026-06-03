@@ -6,7076 +6,7076 @@
 import 'package:flutter/widgets.dart';
 
 /// @formatter:off
-/// TDesign icon collection. Use with [Icon] widget, e.g. [TDIcons.home_filled].
+/// TDesign icon collection. Use with [Icon] widget, e.g. [TIcons.home_filled].
 @staticIconProvider
-abstract final class TDIcons {
-  static const iconFont = 'TDIcons';
+abstract final class TIcons {
+  static const iconFont = 'TIcons';
 
   static const iconFontPackage = 'tdesign_icons';
 
-  /// "TDIcons" named "ability-open".
+  /// "TIcons" named "ability-open".
   static const ability_open = IconData(57345, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "abstract-filled".
+  /// "TIcons" named "abstract-filled".
   static const abstract_filled = IconData(57346, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "abstract".
+  /// "TIcons" named "abstract".
   static const abstract = IconData(57347, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "accessibility-filled".
+  /// "TIcons" named "accessibility-filled".
   static const accessibility_filled = IconData(57348, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "accessibility".
+  /// "TIcons" named "accessibility".
   static const accessibility = IconData(57349, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "activity-filled".
+  /// "TIcons" named "activity-filled".
   static const activity_filled = IconData(57350, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "activity".
+  /// "TIcons" named "activity".
   static const activity = IconData(57351, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "add-and-subtract".
+  /// "TIcons" named "add-and-subtract".
   static const add_and_subtract = IconData(57352, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "add-circle-filled".
+  /// "TIcons" named "add-circle-filled".
   static const add_circle_filled = IconData(57353, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "add-circle".
+  /// "TIcons" named "add-circle".
   static const add_circle = IconData(57354, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "add-rectangle-filled".
+  /// "TIcons" named "add-rectangle-filled".
   static const add_rectangle_filled = IconData(57355, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "add-rectangle".
+  /// "TIcons" named "add-rectangle".
   static const add_rectangle = IconData(57356, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "add".
+  /// "TIcons" named "add".
   static const add = IconData(57357, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "address-book-filled".
+  /// "TIcons" named "address-book-filled".
   static const address_book_filled = IconData(57358, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "address-book".
+  /// "TIcons" named "address-book".
   static const address_book = IconData(57359, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "adjustment-filled".
+  /// "TIcons" named "adjustment-filled".
   static const adjustment_filled = IconData(57360, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "adjustment".
+  /// "TIcons" named "adjustment".
   static const adjustment = IconData(57361, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-1-filled".
+  /// "TIcons" named "ai-1-filled".
   static const ai_1_filled = IconData(57362, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-1".
+  /// "TIcons" named "ai-1".
   static const ai_1 = IconData(57363, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-article-filled".
+  /// "TIcons" named "ai-article-filled".
   static const ai_article_filled = IconData(57364, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-article".
+  /// "TIcons" named "ai-article".
   static const ai_article = IconData(57365, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-book-open-filled".
+  /// "TIcons" named "ai-book-open-filled".
   static const ai_book_open_filled = IconData(57366, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-book-open".
+  /// "TIcons" named "ai-book-open".
   static const ai_book_open = IconData(57367, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-chart-bar-filled".
+  /// "TIcons" named "ai-chart-bar-filled".
   static const ai_chart_bar_filled = IconData(57368, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-chart-bar".
+  /// "TIcons" named "ai-chart-bar".
   static const ai_chart_bar = IconData(57369, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-coordinate-system-filled".
+  /// "TIcons" named "ai-coordinate-system-filled".
   static const ai_coordinate_system_filled = IconData(57370, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-coordinate-system".
+  /// "TIcons" named "ai-coordinate-system".
   static const ai_coordinate_system = IconData(57371, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-cut".
+  /// "TIcons" named "ai-cut".
   static const ai_cut = IconData(57372, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-edit-1-filled".
+  /// "TIcons" named "ai-edit-1-filled".
   static const ai_edit_1_filled = IconData(57373, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-edit-1".
+  /// "TIcons" named "ai-edit-1".
   static const ai_edit_1 = IconData(57374, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-edit-filled".
+  /// "TIcons" named "ai-edit-filled".
   static const ai_edit_filled = IconData(57375, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-edit".
+  /// "TIcons" named "ai-edit".
   static const ai_edit = IconData(57376, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-education-filled".
+  /// "TIcons" named "ai-education-filled".
   static const ai_education_filled = IconData(57377, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-education".
+  /// "TIcons" named "ai-education".
   static const ai_education = IconData(57378, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-git-branch-filled".
+  /// "TIcons" named "ai-git-branch-filled".
   static const ai_git_branch_filled = IconData(57379, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-git-branch".
+  /// "TIcons" named "ai-git-branch".
   static const ai_git_branch = IconData(57380, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-image-1-filled".
+  /// "TIcons" named "ai-image-1-filled".
   static const ai_image_1_filled = IconData(57381, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-image-1".
+  /// "TIcons" named "ai-image-1".
   static const ai_image_1 = IconData(57382, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-image-filled".
+  /// "TIcons" named "ai-image-filled".
   static const ai_image_filled = IconData(57383, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-image".
+  /// "TIcons" named "ai-image".
   static const ai_image = IconData(57384, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-layout-filled".
+  /// "TIcons" named "ai-layout-filled".
   static const ai_layout_filled = IconData(57385, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-layout".
+  /// "TIcons" named "ai-layout".
   static const ai_layout = IconData(57386, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-music-filled".
+  /// "TIcons" named "ai-music-filled".
   static const ai_music_filled = IconData(57387, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-music".
+  /// "TIcons" named "ai-music".
   static const ai_music = IconData(57388, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-screenshot".
+  /// "TIcons" named "ai-screenshot".
   static const ai_screenshot = IconData(57389, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-search-filled".
+  /// "TIcons" named "ai-search-filled".
   static const ai_search_filled = IconData(57390, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-search".
+  /// "TIcons" named "ai-search".
   static const ai_search = IconData(57391, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-terminal-1-filled".
+  /// "TIcons" named "ai-terminal-1-filled".
   static const ai_terminal_1_filled = IconData(57392, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-terminal-1".
+  /// "TIcons" named "ai-terminal-1".
   static const ai_terminal_1 = IconData(57393, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-terminal-filled".
+  /// "TIcons" named "ai-terminal-filled".
   static const ai_terminal_filled = IconData(57394, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-terminal".
+  /// "TIcons" named "ai-terminal".
   static const ai_terminal = IconData(57395, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-textformat-italic".
+  /// "TIcons" named "ai-textformat-italic".
   static const ai_textformat_italic = IconData(57396, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-tool-filled".
+  /// "TIcons" named "ai-tool-filled".
   static const ai_tool_filled = IconData(57397, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-tool".
+  /// "TIcons" named "ai-tool".
   static const ai_tool = IconData(57398, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-video-filled".
+  /// "TIcons" named "ai-video-filled".
   static const ai_video_filled = IconData(57399, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai-video".
+  /// "TIcons" named "ai-video".
   static const ai_video = IconData(57400, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ai".
+  /// "TIcons" named "ai".
   static const ai = IconData(57401, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "airplay-wave-filled".
+  /// "TIcons" named "airplay-wave-filled".
   static const airplay_wave_filled = IconData(57402, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "airplay-wave".
+  /// "TIcons" named "airplay-wave".
   static const airplay_wave = IconData(57403, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "alarm-add-filled".
+  /// "TIcons" named "alarm-add-filled".
   static const alarm_add_filled = IconData(57404, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "alarm-add".
+  /// "TIcons" named "alarm-add".
   static const alarm_add = IconData(57405, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "alarm-filled".
+  /// "TIcons" named "alarm-filled".
   static const alarm_filled = IconData(57406, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "alarm-off-filled".
+  /// "TIcons" named "alarm-off-filled".
   static const alarm_off_filled = IconData(57407, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "alarm-off".
+  /// "TIcons" named "alarm-off".
   static const alarm_off = IconData(57408, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "alarm".
+  /// "TIcons" named "alarm".
   static const alarm = IconData(57409, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "align-bottom".
+  /// "TIcons" named "align-bottom".
   static const align_bottom = IconData(57410, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "align-top".
+  /// "TIcons" named "align-top".
   static const align_top = IconData(57411, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "align-vertical".
+  /// "TIcons" named "align-vertical".
   static const align_vertical = IconData(57412, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "alpha".
+  /// "TIcons" named "alpha".
   static const alpha = IconData(57413, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "analytics-filled".
+  /// "TIcons" named "analytics-filled".
   static const analytics_filled = IconData(57414, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "analytics".
+  /// "TIcons" named "analytics".
   static const analytics = IconData(57415, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "anchor".
+  /// "TIcons" named "anchor".
   static const anchor = IconData(57416, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "angry-filled".
+  /// "TIcons" named "angry-filled".
   static const angry_filled = IconData(57417, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "angry".
+  /// "TIcons" named "angry".
   static const angry = IconData(57418, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "animation-1-filled".
+  /// "TIcons" named "animation-1-filled".
   static const animation_1_filled = IconData(57419, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "animation-1".
+  /// "TIcons" named "animation-1".
   static const animation_1 = IconData(57420, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "animation-filled".
+  /// "TIcons" named "animation-filled".
   static const animation_filled = IconData(57421, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "animation".
+  /// "TIcons" named "animation".
   static const animation = IconData(57422, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "anticlockwise-filled".
+  /// "TIcons" named "anticlockwise-filled".
   static const anticlockwise_filled = IconData(57423, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "anticlockwise".
+  /// "TIcons" named "anticlockwise".
   static const anticlockwise = IconData(57424, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "api".
+  /// "TIcons" named "api".
   static const api = IconData(57425, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "app-filled".
+  /// "TIcons" named "app-filled".
   static const app_filled = IconData(57426, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "app".
+  /// "TIcons" named "app".
   static const app = IconData(57427, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "apple-filled".
+  /// "TIcons" named "apple-filled".
   static const apple_filled = IconData(57428, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "apple".
+  /// "TIcons" named "apple".
   static const apple = IconData(57429, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "application-filled".
+  /// "TIcons" named "application-filled".
   static const application_filled = IconData(57430, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "application".
+  /// "TIcons" named "application".
   static const application = IconData(57431, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "architecture-hui-style-filled".
+  /// "TIcons" named "architecture-hui-style-filled".
   static const architecture_hui_style_filled = IconData(57432, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "architecture-hui-style".
+  /// "TIcons" named "architecture-hui-style".
   static const architecture_hui_style = IconData(57433, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "archway-1-filled".
+  /// "TIcons" named "archway-1-filled".
   static const archway_1_filled = IconData(57434, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "archway-1".
+  /// "TIcons" named "archway-1".
   static const archway_1 = IconData(57435, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "archway-filled".
+  /// "TIcons" named "archway-filled".
   static const archway_filled = IconData(57436, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "archway".
+  /// "TIcons" named "archway".
   static const archway = IconData(57437, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-down-circle-filled".
+  /// "TIcons" named "arrow-down-circle-filled".
   static const arrow_down_circle_filled = IconData(57438, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-down-circle".
+  /// "TIcons" named "arrow-down-circle".
   static const arrow_down_circle = IconData(57439, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-down-rectangle-filled".
+  /// "TIcons" named "arrow-down-rectangle-filled".
   static const arrow_down_rectangle_filled = IconData(57440, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-down-rectangle".
+  /// "TIcons" named "arrow-down-rectangle".
   static const arrow_down_rectangle = IconData(57441, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-down".
+  /// "TIcons" named "arrow-down".
   static const arrow_down = IconData(57442, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-circle-filled".
+  /// "TIcons" named "arrow-left-circle-filled".
   static const arrow_left_circle_filled = IconData(57443, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-circle".
+  /// "TIcons" named "arrow-left-circle".
   static const arrow_left_circle = IconData(57444, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-down-circle-filled".
+  /// "TIcons" named "arrow-left-down-circle-filled".
   static const arrow_left_down_circle_filled = IconData(57445, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-down-circle".
+  /// "TIcons" named "arrow-left-down-circle".
   static const arrow_left_down_circle = IconData(57446, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-down".
+  /// "TIcons" named "arrow-left-down".
   static const arrow_left_down = IconData(57447, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-right-1".
+  /// "TIcons" named "arrow-left-right-1".
   static const arrow_left_right_1 = IconData(57448, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-right-2".
+  /// "TIcons" named "arrow-left-right-2".
   static const arrow_left_right_2 = IconData(57449, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-right-3".
+  /// "TIcons" named "arrow-left-right-3".
   static const arrow_left_right_3 = IconData(57450, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-right-circle-filled".
+  /// "TIcons" named "arrow-left-right-circle-filled".
   static const arrow_left_right_circle_filled = IconData(57451, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-right-circle".
+  /// "TIcons" named "arrow-left-right-circle".
   static const arrow_left_right_circle = IconData(57452, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-up-circle-filled".
+  /// "TIcons" named "arrow-left-up-circle-filled".
   static const arrow_left_up_circle_filled = IconData(57453, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-up-circle".
+  /// "TIcons" named "arrow-left-up-circle".
   static const arrow_left_up_circle = IconData(57454, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left-up".
+  /// "TIcons" named "arrow-left-up".
   static const arrow_left_up = IconData(57455, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-left".
+  /// "TIcons" named "arrow-left".
   static const arrow_left = IconData(57456, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-right-circle-filled".
+  /// "TIcons" named "arrow-right-circle-filled".
   static const arrow_right_circle_filled = IconData(57457, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-right-circle".
+  /// "TIcons" named "arrow-right-circle".
   static const arrow_right_circle = IconData(57458, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-right-down-circle-filled".
+  /// "TIcons" named "arrow-right-down-circle-filled".
   static const arrow_right_down_circle_filled = IconData(57459, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-right-down-circle".
+  /// "TIcons" named "arrow-right-down-circle".
   static const arrow_right_down_circle = IconData(57460, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-right-down".
+  /// "TIcons" named "arrow-right-down".
   static const arrow_right_down = IconData(57461, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-right-up-circle-filled".
+  /// "TIcons" named "arrow-right-up-circle-filled".
   static const arrow_right_up_circle_filled = IconData(57462, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-right-up-circle".
+  /// "TIcons" named "arrow-right-up-circle".
   static const arrow_right_up_circle = IconData(57463, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-right-up".
+  /// "TIcons" named "arrow-right-up".
   static const arrow_right_up = IconData(57464, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-right".
+  /// "TIcons" named "arrow-right".
   static const arrow_right = IconData(57465, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-triangle-down-filled".
+  /// "TIcons" named "arrow-triangle-down-filled".
   static const arrow_triangle_down_filled = IconData(57466, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-triangle-down".
+  /// "TIcons" named "arrow-triangle-down".
   static const arrow_triangle_down = IconData(57467, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-triangle-up-filled".
+  /// "TIcons" named "arrow-triangle-up-filled".
   static const arrow_triangle_up_filled = IconData(57468, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-triangle-up".
+  /// "TIcons" named "arrow-triangle-up".
   static const arrow_triangle_up = IconData(57469, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-up-circle-filled".
+  /// "TIcons" named "arrow-up-circle-filled".
   static const arrow_up_circle_filled = IconData(57470, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-up-circle".
+  /// "TIcons" named "arrow-up-circle".
   static const arrow_up_circle = IconData(57471, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-up-down-1".
+  /// "TIcons" named "arrow-up-down-1".
   static const arrow_up_down_1 = IconData(57472, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-up-down-2".
+  /// "TIcons" named "arrow-up-down-2".
   static const arrow_up_down_2 = IconData(57473, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-up-down-3".
+  /// "TIcons" named "arrow-up-down-3".
   static const arrow_up_down_3 = IconData(57474, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-up-down-circle-filled".
+  /// "TIcons" named "arrow-up-down-circle-filled".
   static const arrow_up_down_circle_filled = IconData(57475, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-up-down-circle".
+  /// "TIcons" named "arrow-up-down-circle".
   static const arrow_up_down_circle = IconData(57476, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "arrow-up".
+  /// "TIcons" named "arrow-up".
   static const arrow_up = IconData(57477, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "artboard".
+  /// "TIcons" named "artboard".
   static const artboard = IconData(57478, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "article-filled".
+  /// "TIcons" named "article-filled".
   static const article_filled = IconData(57479, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "article".
+  /// "TIcons" named "article".
   static const article = IconData(57480, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "assignment-checked-filled".
+  /// "TIcons" named "assignment-checked-filled".
   static const assignment_checked_filled = IconData(57481, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "assignment-checked".
+  /// "TIcons" named "assignment-checked".
   static const assignment_checked = IconData(57482, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "assignment-code-filled".
+  /// "TIcons" named "assignment-code-filled".
   static const assignment_code_filled = IconData(57483, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "assignment-code".
+  /// "TIcons" named "assignment-code".
   static const assignment_code = IconData(57484, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "assignment-error-filled".
+  /// "TIcons" named "assignment-error-filled".
   static const assignment_error_filled = IconData(57485, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "assignment-error".
+  /// "TIcons" named "assignment-error".
   static const assignment_error = IconData(57486, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "assignment-filled".
+  /// "TIcons" named "assignment-filled".
   static const assignment_filled = IconData(57487, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "assignment-user-filled".
+  /// "TIcons" named "assignment-user-filled".
   static const assignment_user_filled = IconData(57488, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "assignment-user".
+  /// "TIcons" named "assignment-user".
   static const assignment_user = IconData(57489, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "assignment".
+  /// "TIcons" named "assignment".
   static const assignment = IconData(57490, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "attach".
+  /// "TIcons" named "attach".
   static const attach = IconData(57491, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "attachment-list".
+  /// "TIcons" named "attachment-list".
   static const attachment_list = IconData(57492, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "attic-1-filled".
+  /// "TIcons" named "attic-1-filled".
   static const attic_1_filled = IconData(57493, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "attic-1".
+  /// "TIcons" named "attic-1".
   static const attic_1 = IconData(57494, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "attic-filled".
+  /// "TIcons" named "attic-filled".
   static const attic_filled = IconData(57495, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "attic".
+  /// "TIcons" named "attic".
   static const attic = IconData(57496, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "audio-filled".
+  /// "TIcons" named "audio-filled".
   static const audio_filled = IconData(57497, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "audio".
+  /// "TIcons" named "audio".
   static const audio = IconData(57498, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "automatic-numbering".
+  /// "TIcons" named "automatic-numbering".
   static const automatic_numbering = IconData(57499, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "automation-filled".
+  /// "TIcons" named "automation-filled".
   static const automation_filled = IconData(57500, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "automation".
+  /// "TIcons" named "automation".
   static const automation = IconData(57501, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "awkward-filled".
+  /// "TIcons" named "awkward-filled".
   static const awkward_filled = IconData(57502, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "awkward".
+  /// "TIcons" named "awkward".
   static const awkward = IconData(57503, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "backtop-rectangle-filled".
+  /// "TIcons" named "backtop-rectangle-filled".
   static const backtop_rectangle_filled = IconData(57504, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "backtop-rectangle".
+  /// "TIcons" named "backtop-rectangle".
   static const backtop_rectangle = IconData(57505, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "backtop".
+  /// "TIcons" named "backtop".
   static const backtop = IconData(57506, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "backup-filled".
+  /// "TIcons" named "backup-filled".
   static const backup_filled = IconData(57507, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "backup".
+  /// "TIcons" named "backup".
   static const backup = IconData(57508, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "backward-filled".
+  /// "TIcons" named "backward-filled".
   static const backward_filled = IconData(57509, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "backward".
+  /// "TIcons" named "backward".
   static const backward = IconData(57510, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bad-laugh-filled".
+  /// "TIcons" named "bad-laugh-filled".
   static const bad_laugh_filled = IconData(57511, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bad-laugh".
+  /// "TIcons" named "bad-laugh".
   static const bad_laugh = IconData(57512, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bamboo-shoot-filled".
+  /// "TIcons" named "bamboo-shoot-filled".
   static const bamboo_shoot_filled = IconData(57513, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bamboo-shoot".
+  /// "TIcons" named "bamboo-shoot".
   static const bamboo_shoot = IconData(57514, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "banana-filled".
+  /// "TIcons" named "banana-filled".
   static const banana_filled = IconData(57515, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "banana".
+  /// "TIcons" named "banana".
   static const banana = IconData(57516, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "barbecue-filled".
+  /// "TIcons" named "barbecue-filled".
   static const barbecue_filled = IconData(57517, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "barbecue".
+  /// "TIcons" named "barbecue".
   static const barbecue = IconData(57518, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "barcode-1".
+  /// "TIcons" named "barcode-1".
   static const barcode_1 = IconData(57519, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "barcode".
+  /// "TIcons" named "barcode".
   static const barcode = IconData(57520, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "base-station".
+  /// "TIcons" named "base-station".
   static const base_station = IconData(57521, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "battery-add-filled".
+  /// "TIcons" named "battery-add-filled".
   static const battery_add_filled = IconData(57522, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "battery-add".
+  /// "TIcons" named "battery-add".
   static const battery_add = IconData(57523, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "battery-charging-filled".
+  /// "TIcons" named "battery-charging-filled".
   static const battery_charging_filled = IconData(57524, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "battery-charging".
+  /// "TIcons" named "battery-charging".
   static const battery_charging = IconData(57525, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "battery-filled".
+  /// "TIcons" named "battery-filled".
   static const battery_filled = IconData(57526, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "battery-low-filled".
+  /// "TIcons" named "battery-low-filled".
   static const battery_low_filled = IconData(57527, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "battery-low".
+  /// "TIcons" named "battery-low".
   static const battery_low = IconData(57528, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "battery".
+  /// "TIcons" named "battery".
   static const battery = IconData(57529, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bean-filled".
+  /// "TIcons" named "bean-filled".
   static const bean_filled = IconData(57530, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bean".
+  /// "TIcons" named "bean".
   static const bean = IconData(57531, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "beer-filled".
+  /// "TIcons" named "beer-filled".
   static const beer_filled = IconData(57532, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "beer".
+  /// "TIcons" named "beer".
   static const beer = IconData(57533, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "beta".
+  /// "TIcons" named "beta".
   static const beta = IconData(57534, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bifurcate-filled".
+  /// "TIcons" named "bifurcate-filled".
   static const bifurcate_filled = IconData(57535, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bifurcate".
+  /// "TIcons" named "bifurcate".
   static const bifurcate = IconData(57536, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bill-filled".
+  /// "TIcons" named "bill-filled".
   static const bill_filled = IconData(57537, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bill".
+  /// "TIcons" named "bill".
   static const bill = IconData(57538, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bluetooth".
+  /// "TIcons" named "bluetooth".
   static const bluetooth = IconData(57539, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bone-filled".
+  /// "TIcons" named "bone-filled".
   static const bone_filled = IconData(57540, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bone".
+  /// "TIcons" named "bone".
   static const bone = IconData(57541, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "book-filled".
+  /// "TIcons" named "book-filled".
   static const book_filled = IconData(57542, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "book-open-filled".
+  /// "TIcons" named "book-open-filled".
   static const book_open_filled = IconData(57543, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "book-open".
+  /// "TIcons" named "book-open".
   static const book_open = IconData(57544, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "book-unknown-filled".
+  /// "TIcons" named "book-unknown-filled".
   static const book_unknown_filled = IconData(57545, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "book-unknown".
+  /// "TIcons" named "book-unknown".
   static const book_unknown = IconData(57546, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "book".
+  /// "TIcons" named "book".
   static const book = IconData(57547, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bookmark-add-filled".
+  /// "TIcons" named "bookmark-add-filled".
   static const bookmark_add_filled = IconData(57548, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bookmark-add".
+  /// "TIcons" named "bookmark-add".
   static const bookmark_add = IconData(57549, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bookmark-checked-filled".
+  /// "TIcons" named "bookmark-checked-filled".
   static const bookmark_checked_filled = IconData(57550, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bookmark-checked".
+  /// "TIcons" named "bookmark-checked".
   static const bookmark_checked = IconData(57551, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bookmark-double-filled".
+  /// "TIcons" named "bookmark-double-filled".
   static const bookmark_double_filled = IconData(57552, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bookmark-double".
+  /// "TIcons" named "bookmark-double".
   static const bookmark_double = IconData(57553, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bookmark-filled".
+  /// "TIcons" named "bookmark-filled".
   static const bookmark_filled = IconData(57554, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bookmark-minus-filled".
+  /// "TIcons" named "bookmark-minus-filled".
   static const bookmark_minus_filled = IconData(57555, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bookmark-minus".
+  /// "TIcons" named "bookmark-minus".
   static const bookmark_minus = IconData(57556, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bookmark".
+  /// "TIcons" named "bookmark".
   static const bookmark = IconData(57557, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "braces".
+  /// "TIcons" named "braces".
   static const braces = IconData(57558, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "brackets".
+  /// "TIcons" named "brackets".
   static const brackets = IconData(57559, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bread-filled".
+  /// "TIcons" named "bread-filled".
   static const bread_filled = IconData(57560, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bread".
+  /// "TIcons" named "bread".
   static const bread = IconData(57561, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bridge-1-filled".
+  /// "TIcons" named "bridge-1-filled".
   static const bridge_1_filled = IconData(57562, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bridge-1".
+  /// "TIcons" named "bridge-1".
   static const bridge_1 = IconData(57563, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bridge-2-filled".
+  /// "TIcons" named "bridge-2-filled".
   static const bridge_2_filled = IconData(57564, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bridge-2".
+  /// "TIcons" named "bridge-2".
   static const bridge_2 = IconData(57565, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bridge-3".
+  /// "TIcons" named "bridge-3".
   static const bridge_3 = IconData(57566, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bridge-4".
+  /// "TIcons" named "bridge-4".
   static const bridge_4 = IconData(57567, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bridge-5-filled".
+  /// "TIcons" named "bridge-5-filled".
   static const bridge_5_filled = IconData(57568, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bridge-5".
+  /// "TIcons" named "bridge-5".
   static const bridge_5 = IconData(57569, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bridge-6-filled".
+  /// "TIcons" named "bridge-6-filled".
   static const bridge_6_filled = IconData(57570, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bridge-6".
+  /// "TIcons" named "bridge-6".
   static const bridge_6 = IconData(57571, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bridge".
+  /// "TIcons" named "bridge".
   static const bridge = IconData(57572, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "brightness-1-filled".
+  /// "TIcons" named "brightness-1-filled".
   static const brightness_1_filled = IconData(57573, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "brightness-1".
+  /// "TIcons" named "brightness-1".
   static const brightness_1 = IconData(57574, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "brightness-filled".
+  /// "TIcons" named "brightness-filled".
   static const brightness_filled = IconData(57575, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "brightness".
+  /// "TIcons" named "brightness".
   static const brightness = IconData(57576, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "broccoli-filled".
+  /// "TIcons" named "broccoli-filled".
   static const broccoli_filled = IconData(57577, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "broccoli".
+  /// "TIcons" named "broccoli".
   static const broccoli = IconData(57578, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "browse-filled".
+  /// "TIcons" named "browse-filled".
   static const browse_filled = IconData(57579, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "browse-gallery-filled".
+  /// "TIcons" named "browse-gallery-filled".
   static const browse_gallery_filled = IconData(57580, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "browse-gallery".
+  /// "TIcons" named "browse-gallery".
   static const browse_gallery = IconData(57581, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "browse-off-filled".
+  /// "TIcons" named "browse-off-filled".
   static const browse_off_filled = IconData(57582, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "browse-off".
+  /// "TIcons" named "browse-off".
   static const browse_off = IconData(57583, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "browse".
+  /// "TIcons" named "browse".
   static const browse = IconData(57584, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "brush-filled".
+  /// "TIcons" named "brush-filled".
   static const brush_filled = IconData(57585, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "brush".
+  /// "TIcons" named "brush".
   static const brush = IconData(57586, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bug-filled".
+  /// "TIcons" named "bug-filled".
   static const bug_filled = IconData(57587, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bug-report-filled".
+  /// "TIcons" named "bug-report-filled".
   static const bug_report_filled = IconData(57588, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bug-report".
+  /// "TIcons" named "bug-report".
   static const bug_report = IconData(57589, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bug".
+  /// "TIcons" named "bug".
   static const bug = IconData(57590, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building-1-filled".
+  /// "TIcons" named "building-1-filled".
   static const building_1_filled = IconData(57591, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building-1".
+  /// "TIcons" named "building-1".
   static const building_1 = IconData(57592, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building-2-filled".
+  /// "TIcons" named "building-2-filled".
   static const building_2_filled = IconData(57593, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building-2".
+  /// "TIcons" named "building-2".
   static const building_2 = IconData(57594, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building-3-filled".
+  /// "TIcons" named "building-3-filled".
   static const building_3_filled = IconData(57595, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building-3".
+  /// "TIcons" named "building-3".
   static const building_3 = IconData(57596, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building-4-filled".
+  /// "TIcons" named "building-4-filled".
   static const building_4_filled = IconData(57597, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building-4".
+  /// "TIcons" named "building-4".
   static const building_4 = IconData(57598, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building-5-filled".
+  /// "TIcons" named "building-5-filled".
   static const building_5_filled = IconData(57599, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building-5".
+  /// "TIcons" named "building-5".
   static const building_5 = IconData(57600, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building-filled".
+  /// "TIcons" named "building-filled".
   static const building_filled = IconData(57601, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "building".
+  /// "TIcons" named "building".
   static const building = IconData(57602, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "bulletpoint".
+  /// "TIcons" named "bulletpoint".
   static const bulletpoint = IconData(57603, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "button-filled".
+  /// "TIcons" named "button-filled".
   static const button_filled = IconData(57604, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "button".
+  /// "TIcons" named "button".
   static const button = IconData(57605, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cabbage-filled".
+  /// "TIcons" named "cabbage-filled".
   static const cabbage_filled = IconData(57606, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cabbage".
+  /// "TIcons" named "cabbage".
   static const cabbage = IconData(57607, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cake-filled".
+  /// "TIcons" named "cake-filled".
   static const cake_filled = IconData(57608, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cake".
+  /// "TIcons" named "cake".
   static const cake = IconData(57609, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calculation-1-filled".
+  /// "TIcons" named "calculation-1-filled".
   static const calculation_1_filled = IconData(57610, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calculation-1".
+  /// "TIcons" named "calculation-1".
   static const calculation_1 = IconData(57611, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calculation".
+  /// "TIcons" named "calculation".
   static const calculation = IconData(57612, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calculator-1".
+  /// "TIcons" named "calculator-1".
   static const calculator_1 = IconData(57613, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calculator-filled".
+  /// "TIcons" named "calculator-filled".
   static const calculator_filled = IconData(57614, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calculator".
+  /// "TIcons" named "calculator".
   static const calculator = IconData(57615, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar-1-filled".
+  /// "TIcons" named "calendar-1-filled".
   static const calendar_1_filled = IconData(57616, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar-1".
+  /// "TIcons" named "calendar-1".
   static const calendar_1 = IconData(57617, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar-2-filled".
+  /// "TIcons" named "calendar-2-filled".
   static const calendar_2_filled = IconData(57618, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar-2".
+  /// "TIcons" named "calendar-2".
   static const calendar_2 = IconData(57619, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar-3-filled".
+  /// "TIcons" named "calendar-3-filled".
   static const calendar_3_filled = IconData(57620, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar-3".
+  /// "TIcons" named "calendar-3".
   static const calendar_3 = IconData(57621, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar-edit-filled".
+  /// "TIcons" named "calendar-edit-filled".
   static const calendar_edit_filled = IconData(57622, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar-edit".
+  /// "TIcons" named "calendar-edit".
   static const calendar_edit = IconData(57623, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar-event-filled".
+  /// "TIcons" named "calendar-event-filled".
   static const calendar_event_filled = IconData(57624, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar-event".
+  /// "TIcons" named "calendar-event".
   static const calendar_event = IconData(57625, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar-filled".
+  /// "TIcons" named "calendar-filled".
   static const calendar_filled = IconData(57626, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calendar".
+  /// "TIcons" named "calendar".
   static const calendar = IconData(57627, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call-1-filled".
+  /// "TIcons" named "call-1-filled".
   static const call_1_filled = IconData(57628, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call-1".
+  /// "TIcons" named "call-1".
   static const call_1 = IconData(57629, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call-cancel-filled".
+  /// "TIcons" named "call-cancel-filled".
   static const call_cancel_filled = IconData(57630, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call-cancel".
+  /// "TIcons" named "call-cancel".
   static const call_cancel = IconData(57631, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call-filled".
+  /// "TIcons" named "call-filled".
   static const call_filled = IconData(57632, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call-forwarded-filled".
+  /// "TIcons" named "call-forwarded-filled".
   static const call_forwarded_filled = IconData(57633, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call-forwarded".
+  /// "TIcons" named "call-forwarded".
   static const call_forwarded = IconData(57634, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call-incoming-filled".
+  /// "TIcons" named "call-incoming-filled".
   static const call_incoming_filled = IconData(57635, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call-incoming".
+  /// "TIcons" named "call-incoming".
   static const call_incoming = IconData(57636, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call-off-filled".
+  /// "TIcons" named "call-off-filled".
   static const call_off_filled = IconData(57637, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call-off".
+  /// "TIcons" named "call-off".
   static const call_off = IconData(57638, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "call".
+  /// "TIcons" named "call".
   static const call = IconData(57639, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calm-1-filled".
+  /// "TIcons" named "calm-1-filled".
   static const calm_1_filled = IconData(57640, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calm-1".
+  /// "TIcons" named "calm-1".
   static const calm_1 = IconData(57641, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calm-filled".
+  /// "TIcons" named "calm-filled".
   static const calm_filled = IconData(57642, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "calm".
+  /// "TIcons" named "calm".
   static const calm = IconData(57643, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "camera-1-filled".
+  /// "TIcons" named "camera-1-filled".
   static const camera_1_filled = IconData(57644, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "camera-1".
+  /// "TIcons" named "camera-1".
   static const camera_1 = IconData(57645, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "camera-2-filled".
+  /// "TIcons" named "camera-2-filled".
   static const camera_2_filled = IconData(57646, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "camera-2".
+  /// "TIcons" named "camera-2".
   static const camera_2 = IconData(57647, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "camera-filled".
+  /// "TIcons" named "camera-filled".
   static const camera_filled = IconData(57648, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "camera-off-filled".
+  /// "TIcons" named "camera-off-filled".
   static const camera_off_filled = IconData(57649, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "camera-off".
+  /// "TIcons" named "camera-off".
   static const camera_off = IconData(57650, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "camera".
+  /// "TIcons" named "camera".
   static const camera = IconData(57651, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "candy-filled".
+  /// "TIcons" named "candy-filled".
   static const candy_filled = IconData(57652, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "candy".
+  /// "TIcons" named "candy".
   static const candy = IconData(57653, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "card-filled".
+  /// "TIcons" named "card-filled".
   static const card_filled = IconData(57654, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "card".
+  /// "TIcons" named "card".
   static const card = IconData(57655, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cardmembership-filled".
+  /// "TIcons" named "cardmembership-filled".
   static const cardmembership_filled = IconData(57656, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cardmembership".
+  /// "TIcons" named "cardmembership".
   static const cardmembership = IconData(57657, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "caret-down-small".
+  /// "TIcons" named "caret-down-small".
   static const caret_down_small = IconData(57658, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "caret-down".
+  /// "TIcons" named "caret-down".
   static const caret_down = IconData(57659, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "caret-left-small".
+  /// "TIcons" named "caret-left-small".
   static const caret_left_small = IconData(57660, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "caret-left".
+  /// "TIcons" named "caret-left".
   static const caret_left = IconData(57661, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "caret-right-small".
+  /// "TIcons" named "caret-right-small".
   static const caret_right_small = IconData(57662, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "caret-right".
+  /// "TIcons" named "caret-right".
   static const caret_right = IconData(57663, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "caret-up-small".
+  /// "TIcons" named "caret-up-small".
   static const caret_up_small = IconData(57664, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "caret-up".
+  /// "TIcons" named "caret-up".
   static const caret_up = IconData(57665, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cart-add-filled".
+  /// "TIcons" named "cart-add-filled".
   static const cart_add_filled = IconData(57666, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cart-add".
+  /// "TIcons" named "cart-add".
   static const cart_add = IconData(57667, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cart-filled".
+  /// "TIcons" named "cart-filled".
   static const cart_filled = IconData(57668, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cart".
+  /// "TIcons" named "cart".
   static const cart = IconData(57669, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cast-filled".
+  /// "TIcons" named "cast-filled".
   static const cast_filled = IconData(57670, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cast".
+  /// "TIcons" named "cast".
   static const cast = IconData(57671, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-1-filled".
+  /// "TIcons" named "castle-1-filled".
   static const castle_1_filled = IconData(57672, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-1".
+  /// "TIcons" named "castle-1".
   static const castle_1 = IconData(57673, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-2-filled".
+  /// "TIcons" named "castle-2-filled".
   static const castle_2_filled = IconData(57674, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-2".
+  /// "TIcons" named "castle-2".
   static const castle_2 = IconData(57675, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-3-filled".
+  /// "TIcons" named "castle-3-filled".
   static const castle_3_filled = IconData(57676, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-3".
+  /// "TIcons" named "castle-3".
   static const castle_3 = IconData(57677, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-4-filled".
+  /// "TIcons" named "castle-4-filled".
   static const castle_4_filled = IconData(57678, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-4".
+  /// "TIcons" named "castle-4".
   static const castle_4 = IconData(57679, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-5-filled".
+  /// "TIcons" named "castle-5-filled".
   static const castle_5_filled = IconData(57680, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-5".
+  /// "TIcons" named "castle-5".
   static const castle_5 = IconData(57681, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-6-filled".
+  /// "TIcons" named "castle-6-filled".
   static const castle_6_filled = IconData(57682, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-6".
+  /// "TIcons" named "castle-6".
   static const castle_6 = IconData(57683, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-7-filled".
+  /// "TIcons" named "castle-7-filled".
   static const castle_7_filled = IconData(57684, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-7".
+  /// "TIcons" named "castle-7".
   static const castle_7 = IconData(57685, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle-filled".
+  /// "TIcons" named "castle-filled".
   static const castle_filled = IconData(57686, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "castle".
+  /// "TIcons" named "castle".
   static const castle = IconData(57687, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cat-filled".
+  /// "TIcons" named "cat-filled".
   static const cat_filled = IconData(57688, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cat".
+  /// "TIcons" named "cat".
   static const cat = IconData(57689, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "catalog-1".
+  /// "TIcons" named "catalog-1".
   static const catalog_1 = IconData(57690, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "catalog-filled".
+  /// "TIcons" named "catalog-filled".
   static const catalog_filled = IconData(57691, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "catalog".
+  /// "TIcons" named "catalog".
   static const catalog = IconData(57692, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cd-filled".
+  /// "TIcons" named "cd-filled".
   static const cd_filled = IconData(57693, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cd".
+  /// "TIcons" named "cd".
   static const cd = IconData(57694, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "celsius".
+  /// "TIcons" named "celsius".
   static const celsius = IconData(57695, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "center-focus-strong-filled".
+  /// "TIcons" named "center-focus-strong-filled".
   static const center_focus_strong_filled = IconData(57696, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "center-focus-strong".
+  /// "TIcons" named "center-focus-strong".
   static const center_focus_strong = IconData(57697, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "centimeter".
+  /// "TIcons" named "centimeter".
   static const centimeter = IconData(57698, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "certificate-1-filled".
+  /// "TIcons" named "certificate-1-filled".
   static const certificate_1_filled = IconData(57699, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "certificate-1".
+  /// "TIcons" named "certificate-1".
   static const certificate_1 = IconData(57700, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "certificate-filled".
+  /// "TIcons" named "certificate-filled".
   static const certificate_filled = IconData(57701, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "certificate".
+  /// "TIcons" named "certificate".
   static const certificate = IconData(57702, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-3d-filled".
+  /// "TIcons" named "chart-3d-filled".
   static const chart_3d_filled = IconData(57703, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-3d".
+  /// "TIcons" named "chart-3d".
   static const chart_3d = IconData(57704, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-add-filled".
+  /// "TIcons" named "chart-add-filled".
   static const chart_add_filled = IconData(57705, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-add".
+  /// "TIcons" named "chart-add".
   static const chart_add = IconData(57706, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-analytics".
+  /// "TIcons" named "chart-analytics".
   static const chart_analytics = IconData(57707, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-area-filled".
+  /// "TIcons" named "chart-area-filled".
   static const chart_area_filled = IconData(57708, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-area-multi-filled".
+  /// "TIcons" named "chart-area-multi-filled".
   static const chart_area_multi_filled = IconData(57709, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-area-multi".
+  /// "TIcons" named "chart-area-multi".
   static const chart_area_multi = IconData(57710, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-area".
+  /// "TIcons" named "chart-area".
   static const chart_area = IconData(57711, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-bar-filled".
+  /// "TIcons" named "chart-bar-filled".
   static const chart_bar_filled = IconData(57712, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-bar".
+  /// "TIcons" named "chart-bar".
   static const chart_bar = IconData(57713, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-bubble-filled".
+  /// "TIcons" named "chart-bubble-filled".
   static const chart_bubble_filled = IconData(57714, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-bubble".
+  /// "TIcons" named "chart-bubble".
   static const chart_bubble = IconData(57715, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-column-filled".
+  /// "TIcons" named "chart-column-filled".
   static const chart_column_filled = IconData(57716, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-column".
+  /// "TIcons" named "chart-column".
   static const chart_column = IconData(57717, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-combo-filled".
+  /// "TIcons" named "chart-combo-filled".
   static const chart_combo_filled = IconData(57718, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-combo".
+  /// "TIcons" named "chart-combo".
   static const chart_combo = IconData(57719, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-draw-io-filled".
+  /// "TIcons" named "chart-draw-io-filled".
   static const chart_draw_io_filled = IconData(57720, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-draw-io".
+  /// "TIcons" named "chart-draw-io".
   static const chart_draw_io = IconData(57721, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-filled".
+  /// "TIcons" named "chart-filled".
   static const chart_filled = IconData(57722, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-line-board-filled".
+  /// "TIcons" named "chart-line-board-filled".
   static const chart_line_board_filled = IconData(57723, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-line-board".
+  /// "TIcons" named "chart-line-board".
   static const chart_line_board = IconData(57724, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-line-data-1".
+  /// "TIcons" named "chart-line-data-1".
   static const chart_line_data_1 = IconData(57725, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-line-data".
+  /// "TIcons" named "chart-line-data".
   static const chart_line_data = IconData(57726, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-line-multi".
+  /// "TIcons" named "chart-line-multi".
   static const chart_line_multi = IconData(57727, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-line".
+  /// "TIcons" named "chart-line".
   static const chart_line = IconData(57728, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-maximum".
+  /// "TIcons" named "chart-maximum".
   static const chart_maximum = IconData(57729, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-median".
+  /// "TIcons" named "chart-median".
   static const chart_median = IconData(57730, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-minimum".
+  /// "TIcons" named "chart-minimum".
   static const chart_minimum = IconData(57731, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-pie-filled".
+  /// "TIcons" named "chart-pie-filled".
   static const chart_pie_filled = IconData(57732, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-pie".
+  /// "TIcons" named "chart-pie".
   static const chart_pie = IconData(57733, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-radar-filled".
+  /// "TIcons" named "chart-radar-filled".
   static const chart_radar_filled = IconData(57734, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-radar".
+  /// "TIcons" named "chart-radar".
   static const chart_radar = IconData(57735, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-radial".
+  /// "TIcons" named "chart-radial".
   static const chart_radial = IconData(57736, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-ring-1-filled".
+  /// "TIcons" named "chart-ring-1-filled".
   static const chart_ring_1_filled = IconData(57737, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-ring-1".
+  /// "TIcons" named "chart-ring-1".
   static const chart_ring_1 = IconData(57738, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-ring-filled".
+  /// "TIcons" named "chart-ring-filled".
   static const chart_ring_filled = IconData(57739, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-ring".
+  /// "TIcons" named "chart-ring".
   static const chart_ring = IconData(57740, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-scatter".
+  /// "TIcons" named "chart-scatter".
   static const chart_scatter = IconData(57741, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-stacked-filled".
+  /// "TIcons" named "chart-stacked-filled".
   static const chart_stacked_filled = IconData(57742, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart-stacked".
+  /// "TIcons" named "chart-stacked".
   static const chart_stacked = IconData(57743, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chart".
+  /// "TIcons" named "chart".
   static const chart = IconData(57744, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-add-filled".
+  /// "TIcons" named "chat-add-filled".
   static const chat_add_filled = IconData(57745, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-add".
+  /// "TIcons" named "chat-add".
   static const chat_add = IconData(57746, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-1-filled".
+  /// "TIcons" named "chat-bubble-1-filled".
   static const chat_bubble_1_filled = IconData(57747, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-1".
+  /// "TIcons" named "chat-bubble-1".
   static const chat_bubble_1 = IconData(57748, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-add-filled".
+  /// "TIcons" named "chat-bubble-add-filled".
   static const chat_bubble_add_filled = IconData(57749, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-add".
+  /// "TIcons" named "chat-bubble-add".
   static const chat_bubble_add = IconData(57750, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-error-filled".
+  /// "TIcons" named "chat-bubble-error-filled".
   static const chat_bubble_error_filled = IconData(57751, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-error".
+  /// "TIcons" named "chat-bubble-error".
   static const chat_bubble_error = IconData(57752, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-filled".
+  /// "TIcons" named "chat-bubble-filled".
   static const chat_bubble_filled = IconData(57753, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-help-filled".
+  /// "TIcons" named "chat-bubble-help-filled".
   static const chat_bubble_help_filled = IconData(57754, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-help".
+  /// "TIcons" named "chat-bubble-help".
   static const chat_bubble_help = IconData(57755, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-history-filled".
+  /// "TIcons" named "chat-bubble-history-filled".
   static const chat_bubble_history_filled = IconData(57756, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-history".
+  /// "TIcons" named "chat-bubble-history".
   static const chat_bubble_history = IconData(57757, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-locked-filled".
+  /// "TIcons" named "chat-bubble-locked-filled".
   static const chat_bubble_locked_filled = IconData(57758, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-locked".
+  /// "TIcons" named "chat-bubble-locked".
   static const chat_bubble_locked = IconData(57759, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-smile-filled".
+  /// "TIcons" named "chat-bubble-smile-filled".
   static const chat_bubble_smile_filled = IconData(57760, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble-smile".
+  /// "TIcons" named "chat-bubble-smile".
   static const chat_bubble_smile = IconData(57761, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-bubble".
+  /// "TIcons" named "chat-bubble".
   static const chat_bubble = IconData(57762, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-checked-filled".
+  /// "TIcons" named "chat-checked-filled".
   static const chat_checked_filled = IconData(57763, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-checked".
+  /// "TIcons" named "chat-checked".
   static const chat_checked = IconData(57764, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-clear-filled".
+  /// "TIcons" named "chat-clear-filled".
   static const chat_clear_filled = IconData(57765, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-clear".
+  /// "TIcons" named "chat-clear".
   static const chat_clear = IconData(57766, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-double-filled".
+  /// "TIcons" named "chat-double-filled".
   static const chat_double_filled = IconData(57767, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-double".
+  /// "TIcons" named "chat-double".
   static const chat_double = IconData(57768, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-error-filled".
+  /// "TIcons" named "chat-error-filled".
   static const chat_error_filled = IconData(57769, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-error".
+  /// "TIcons" named "chat-error".
   static const chat_error = IconData(57770, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-filled".
+  /// "TIcons" named "chat-filled".
   static const chat_filled = IconData(57771, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-heart-filled".
+  /// "TIcons" named "chat-heart-filled".
   static const chat_heart_filled = IconData(57772, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-heart".
+  /// "TIcons" named "chat-heart".
   static const chat_heart = IconData(57773, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-message-filled".
+  /// "TIcons" named "chat-message-filled".
   static const chat_message_filled = IconData(57774, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-message".
+  /// "TIcons" named "chat-message".
   static const chat_message = IconData(57775, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-off-filled".
+  /// "TIcons" named "chat-off-filled".
   static const chat_off_filled = IconData(57776, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-off".
+  /// "TIcons" named "chat-off".
   static const chat_off = IconData(57777, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-poll-filled".
+  /// "TIcons" named "chat-poll-filled".
   static const chat_poll_filled = IconData(57778, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-poll".
+  /// "TIcons" named "chat-poll".
   static const chat_poll = IconData(57779, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-setting-filled".
+  /// "TIcons" named "chat-setting-filled".
   static const chat_setting_filled = IconData(57780, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat-setting".
+  /// "TIcons" named "chat-setting".
   static const chat_setting = IconData(57781, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chat".
+  /// "TIcons" named "chat".
   static const chat = IconData(57782, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "check-circle-filled".
+  /// "TIcons" named "check-circle-filled".
   static const check_circle_filled = IconData(57783, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "check-circle".
+  /// "TIcons" named "check-circle".
   static const check_circle = IconData(57784, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "check-double".
+  /// "TIcons" named "check-double".
   static const check_double = IconData(57785, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "check-rectangle-filled".
+  /// "TIcons" named "check-rectangle-filled".
   static const check_rectangle_filled = IconData(57786, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "check-rectangle".
+  /// "TIcons" named "check-rectangle".
   static const check_rectangle = IconData(57787, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "check".
+  /// "TIcons" named "check".
   static const check = IconData(57788, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cheese-filled".
+  /// "TIcons" named "cheese-filled".
   static const cheese_filled = IconData(57789, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cheese".
+  /// "TIcons" named "cheese".
   static const cheese = IconData(57790, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cherry-filled".
+  /// "TIcons" named "cherry-filled".
   static const cherry_filled = IconData(57791, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cherry".
+  /// "TIcons" named "cherry".
   static const cherry = IconData(57792, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-down-circle-filled".
+  /// "TIcons" named "chevron-down-circle-filled".
   static const chevron_down_circle_filled = IconData(57793, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-down-circle".
+  /// "TIcons" named "chevron-down-circle".
   static const chevron_down_circle = IconData(57794, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-down-double-s".
+  /// "TIcons" named "chevron-down-double-s".
   static const chevron_down_double_s = IconData(57795, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-down-double".
+  /// "TIcons" named "chevron-down-double".
   static const chevron_down_double = IconData(57796, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-down-rectangle-filled".
+  /// "TIcons" named "chevron-down-rectangle-filled".
   static const chevron_down_rectangle_filled = IconData(57797, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-down-rectangle".
+  /// "TIcons" named "chevron-down-rectangle".
   static const chevron_down_rectangle = IconData(57798, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-down-s".
+  /// "TIcons" named "chevron-down-s".
   static const chevron_down_s = IconData(57799, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-down".
+  /// "TIcons" named "chevron-down".
   static const chevron_down = IconData(57800, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-left-circle-filled".
+  /// "TIcons" named "chevron-left-circle-filled".
   static const chevron_left_circle_filled = IconData(57801, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-left-circle".
+  /// "TIcons" named "chevron-left-circle".
   static const chevron_left_circle = IconData(57802, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-left-double-s".
+  /// "TIcons" named "chevron-left-double-s".
   static const chevron_left_double_s = IconData(57803, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-left-double".
+  /// "TIcons" named "chevron-left-double".
   static const chevron_left_double = IconData(57804, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-left-rectangle-filled".
+  /// "TIcons" named "chevron-left-rectangle-filled".
   static const chevron_left_rectangle_filled = IconData(57805, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-left-rectangle".
+  /// "TIcons" named "chevron-left-rectangle".
   static const chevron_left_rectangle = IconData(57806, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-left-s".
+  /// "TIcons" named "chevron-left-s".
   static const chevron_left_s = IconData(57807, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-left".
+  /// "TIcons" named "chevron-left".
   static const chevron_left = IconData(57808, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-right-circle-filled".
+  /// "TIcons" named "chevron-right-circle-filled".
   static const chevron_right_circle_filled = IconData(57809, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-right-circle".
+  /// "TIcons" named "chevron-right-circle".
   static const chevron_right_circle = IconData(57810, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-right-double-s".
+  /// "TIcons" named "chevron-right-double-s".
   static const chevron_right_double_s = IconData(57811, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-right-double".
+  /// "TIcons" named "chevron-right-double".
   static const chevron_right_double = IconData(57812, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-right-rectangle-filled".
+  /// "TIcons" named "chevron-right-rectangle-filled".
   static const chevron_right_rectangle_filled = IconData(57813, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-right-rectangle".
+  /// "TIcons" named "chevron-right-rectangle".
   static const chevron_right_rectangle = IconData(57814, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-right-s".
+  /// "TIcons" named "chevron-right-s".
   static const chevron_right_s = IconData(57815, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-right".
+  /// "TIcons" named "chevron-right".
   static const chevron_right = IconData(57816, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-up-circle-filled".
+  /// "TIcons" named "chevron-up-circle-filled".
   static const chevron_up_circle_filled = IconData(57817, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-up-circle".
+  /// "TIcons" named "chevron-up-circle".
   static const chevron_up_circle = IconData(57818, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-up-double-s".
+  /// "TIcons" named "chevron-up-double-s".
   static const chevron_up_double_s = IconData(57819, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-up-double".
+  /// "TIcons" named "chevron-up-double".
   static const chevron_up_double = IconData(57820, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-up-rectangle-filled".
+  /// "TIcons" named "chevron-up-rectangle-filled".
   static const chevron_up_rectangle_filled = IconData(57821, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-up-rectangle".
+  /// "TIcons" named "chevron-up-rectangle".
   static const chevron_up_rectangle = IconData(57822, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-up-s".
+  /// "TIcons" named "chevron-up-s".
   static const chevron_up_s = IconData(57823, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chevron-up".
+  /// "TIcons" named "chevron-up".
   static const chevron_up = IconData(57824, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chicken".
+  /// "TIcons" named "chicken".
   static const chicken = IconData(57825, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chili-filled".
+  /// "TIcons" named "chili-filled".
   static const chili_filled = IconData(57826, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chili".
+  /// "TIcons" named "chili".
   static const chili = IconData(57827, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chimney-1-filled".
+  /// "TIcons" named "chimney-1-filled".
   static const chimney_1_filled = IconData(57828, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chimney-1".
+  /// "TIcons" named "chimney-1".
   static const chimney_1 = IconData(57829, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chimney-2-filled".
+  /// "TIcons" named "chimney-2-filled".
   static const chimney_2_filled = IconData(57830, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chimney-2".
+  /// "TIcons" named "chimney-2".
   static const chimney_2 = IconData(57831, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chimney-filled".
+  /// "TIcons" named "chimney-filled".
   static const chimney_filled = IconData(57832, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chimney".
+  /// "TIcons" named "chimney".
   static const chimney = IconData(57833, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chinese-cabbage-filled".
+  /// "TIcons" named "chinese-cabbage-filled".
   static const chinese_cabbage_filled = IconData(57834, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chinese-cabbage".
+  /// "TIcons" named "chinese-cabbage".
   static const chinese_cabbage = IconData(57835, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chinese-rectangle-filled".
+  /// "TIcons" named "chinese-rectangle-filled".
   static const chinese_rectangle_filled = IconData(57836, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "chinese-rectangle".
+  /// "TIcons" named "chinese-rectangle".
   static const chinese_rectangle = IconData(57837, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "church-filled".
+  /// "TIcons" named "church-filled".
   static const church_filled = IconData(57838, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "church".
+  /// "TIcons" named "church".
   static const church = IconData(57839, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "circle-filled".
+  /// "TIcons" named "circle-filled".
   static const circle_filled = IconData(57840, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "circle".
+  /// "TIcons" named "circle".
   static const circle = IconData(57841, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-1-filled".
+  /// "TIcons" named "city-1-filled".
   static const city_1_filled = IconData(57842, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-1".
+  /// "TIcons" named "city-1".
   static const city_1 = IconData(57843, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-10-filled".
+  /// "TIcons" named "city-10-filled".
   static const city_10_filled = IconData(57844, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-10".
+  /// "TIcons" named "city-10".
   static const city_10 = IconData(57845, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-11-filled".
+  /// "TIcons" named "city-11-filled".
   static const city_11_filled = IconData(57846, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-11".
+  /// "TIcons" named "city-11".
   static const city_11 = IconData(57847, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-12-filled".
+  /// "TIcons" named "city-12-filled".
   static const city_12_filled = IconData(57848, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-12".
+  /// "TIcons" named "city-12".
   static const city_12 = IconData(57849, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-13-filled".
+  /// "TIcons" named "city-13-filled".
   static const city_13_filled = IconData(57850, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-13".
+  /// "TIcons" named "city-13".
   static const city_13 = IconData(57851, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-14-filled".
+  /// "TIcons" named "city-14-filled".
   static const city_14_filled = IconData(57852, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-14".
+  /// "TIcons" named "city-14".
   static const city_14 = IconData(57853, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-15-filled".
+  /// "TIcons" named "city-15-filled".
   static const city_15_filled = IconData(57854, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-15".
+  /// "TIcons" named "city-15".
   static const city_15 = IconData(57855, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-2-filled".
+  /// "TIcons" named "city-2-filled".
   static const city_2_filled = IconData(57856, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-2".
+  /// "TIcons" named "city-2".
   static const city_2 = IconData(57857, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-3-filled".
+  /// "TIcons" named "city-3-filled".
   static const city_3_filled = IconData(57858, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-3".
+  /// "TIcons" named "city-3".
   static const city_3 = IconData(57859, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-4-filled".
+  /// "TIcons" named "city-4-filled".
   static const city_4_filled = IconData(57860, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-4".
+  /// "TIcons" named "city-4".
   static const city_4 = IconData(57861, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-5-filled".
+  /// "TIcons" named "city-5-filled".
   static const city_5_filled = IconData(57862, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-5".
+  /// "TIcons" named "city-5".
   static const city_5 = IconData(57863, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-6-filled".
+  /// "TIcons" named "city-6-filled".
   static const city_6_filled = IconData(57864, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-6".
+  /// "TIcons" named "city-6".
   static const city_6 = IconData(57865, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-7-filled".
+  /// "TIcons" named "city-7-filled".
   static const city_7_filled = IconData(57866, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-7".
+  /// "TIcons" named "city-7".
   static const city_7 = IconData(57867, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-8-filled".
+  /// "TIcons" named "city-8-filled".
   static const city_8_filled = IconData(57868, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-8".
+  /// "TIcons" named "city-8".
   static const city_8 = IconData(57869, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-9-filled".
+  /// "TIcons" named "city-9-filled".
   static const city_9_filled = IconData(57870, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-9".
+  /// "TIcons" named "city-9".
   static const city_9 = IconData(57871, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-ancient-1-filled".
+  /// "TIcons" named "city-ancient-1-filled".
   static const city_ancient_1_filled = IconData(57872, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-ancient-1".
+  /// "TIcons" named "city-ancient-1".
   static const city_ancient_1 = IconData(57873, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-ancient-2-filled".
+  /// "TIcons" named "city-ancient-2-filled".
   static const city_ancient_2_filled = IconData(57874, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-ancient-2".
+  /// "TIcons" named "city-ancient-2".
   static const city_ancient_2 = IconData(57875, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-ancient-filled".
+  /// "TIcons" named "city-ancient-filled".
   static const city_ancient_filled = IconData(57876, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-ancient".
+  /// "TIcons" named "city-ancient".
   static const city_ancient = IconData(57877, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city-filled".
+  /// "TIcons" named "city-filled".
   static const city_filled = IconData(57878, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "city".
+  /// "TIcons" named "city".
   static const city = IconData(57879, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "clear-filled".
+  /// "TIcons" named "clear-filled".
   static const clear_filled = IconData(57880, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "clear-formatting-1-filled".
+  /// "TIcons" named "clear-formatting-1-filled".
   static const clear_formatting_1_filled = IconData(57881, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "clear-formatting-1".
+  /// "TIcons" named "clear-formatting-1".
   static const clear_formatting_1 = IconData(57882, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "clear-formatting-filled".
+  /// "TIcons" named "clear-formatting-filled".
   static const clear_formatting_filled = IconData(57883, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "clear-formatting".
+  /// "TIcons" named "clear-formatting".
   static const clear_formatting = IconData(57884, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "clear".
+  /// "TIcons" named "clear".
   static const clear = IconData(57885, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "close-circle-filled".
+  /// "TIcons" named "close-circle-filled".
   static const close_circle_filled = IconData(57886, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "close-circle".
+  /// "TIcons" named "close-circle".
   static const close_circle = IconData(57887, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "close-octagon-filled".
+  /// "TIcons" named "close-octagon-filled".
   static const close_octagon_filled = IconData(57888, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "close-octagon".
+  /// "TIcons" named "close-octagon".
   static const close_octagon = IconData(57889, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "close-rectangle-filled".
+  /// "TIcons" named "close-rectangle-filled".
   static const close_rectangle_filled = IconData(57890, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "close-rectangle".
+  /// "TIcons" named "close-rectangle".
   static const close_rectangle = IconData(57891, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "close".
+  /// "TIcons" named "close".
   static const close = IconData(57892, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloud-download".
+  /// "TIcons" named "cloud-download".
   static const cloud_download = IconData(57893, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloud-filled".
+  /// "TIcons" named "cloud-filled".
   static const cloud_filled = IconData(57894, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloud-upload".
+  /// "TIcons" named "cloud-upload".
   static const cloud_upload = IconData(57895, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloud".
+  /// "TIcons" named "cloud".
   static const cloud = IconData(57896, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloudy-day-filled".
+  /// "TIcons" named "cloudy-day-filled".
   static const cloudy_day_filled = IconData(57897, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloudy-day".
+  /// "TIcons" named "cloudy-day".
   static const cloudy_day = IconData(57898, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloudy-night-filled".
+  /// "TIcons" named "cloudy-night-filled".
   static const cloudy_night_filled = IconData(57899, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloudy-night-rain-filled".
+  /// "TIcons" named "cloudy-night-rain-filled".
   static const cloudy_night_rain_filled = IconData(57900, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloudy-night-rain".
+  /// "TIcons" named "cloudy-night-rain".
   static const cloudy_night_rain = IconData(57901, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloudy-night".
+  /// "TIcons" named "cloudy-night".
   static const cloudy_night = IconData(57902, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloudy-rain-filled".
+  /// "TIcons" named "cloudy-rain-filled".
   static const cloudy_rain_filled = IconData(57903, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloudy-rain".
+  /// "TIcons" named "cloudy-rain".
   static const cloudy_rain = IconData(57904, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloudy-sunny-filled".
+  /// "TIcons" named "cloudy-sunny-filled".
   static const cloudy_sunny_filled = IconData(57905, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cloudy-sunny".
+  /// "TIcons" named "cloudy-sunny".
   static const cloudy_sunny = IconData(57906, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "code-1".
+  /// "TIcons" named "code-1".
   static const code_1 = IconData(57907, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "code-off".
+  /// "TIcons" named "code-off".
   static const code_off = IconData(57908, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "code".
+  /// "TIcons" named "code".
   static const code = IconData(57909, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cola-filled".
+  /// "TIcons" named "cola-filled".
   static const cola_filled = IconData(57910, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cola".
+  /// "TIcons" named "cola".
   static const cola = IconData(57911, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "collage-filled".
+  /// "TIcons" named "collage-filled".
   static const collage_filled = IconData(57912, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "collage".
+  /// "TIcons" named "collage".
   static const collage = IconData(57913, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "collapsible-block".
+  /// "TIcons" named "collapsible-block".
   static const collapsible_block = IconData(57914, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "collection-1-filled".
+  /// "TIcons" named "collection-1-filled".
   static const collection_1_filled = IconData(57915, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "collection-1".
+  /// "TIcons" named "collection-1".
   static const collection_1 = IconData(57916, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "collection-filled".
+  /// "TIcons" named "collection-filled".
   static const collection_filled = IconData(57917, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "collection".
+  /// "TIcons" named "collection".
   static const collection = IconData(57918, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "color-invert-filled".
+  /// "TIcons" named "color-invert-filled".
   static const color_invert_filled = IconData(57919, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "color-invert".
+  /// "TIcons" named "color-invert".
   static const color_invert = IconData(57920, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "column-layout-filled".
+  /// "TIcons" named "column-layout-filled".
   static const column_layout_filled = IconData(57921, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "column-layout".
+  /// "TIcons" named "column-layout".
   static const column_layout = IconData(57922, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "combination-filled".
+  /// "TIcons" named "combination-filled".
   static const combination_filled = IconData(57923, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "combination".
+  /// "TIcons" named "combination".
   static const combination = IconData(57924, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "command".
+  /// "TIcons" named "command".
   static const command = IconData(57925, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "compass-1-filled".
+  /// "TIcons" named "compass-1-filled".
   static const compass_1_filled = IconData(57926, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "compass-1".
+  /// "TIcons" named "compass-1".
   static const compass_1 = IconData(57927, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "compass-filled".
+  /// "TIcons" named "compass-filled".
   static const compass_filled = IconData(57928, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "compass".
+  /// "TIcons" named "compass".
   static const compass = IconData(57929, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-breadcrumb-filled".
+  /// "TIcons" named "component-breadcrumb-filled".
   static const component_breadcrumb_filled = IconData(57930, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-breadcrumb".
+  /// "TIcons" named "component-breadcrumb".
   static const component_breadcrumb = IconData(57931, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-checkbox-filled".
+  /// "TIcons" named "component-checkbox-filled".
   static const component_checkbox_filled = IconData(57932, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-checkbox".
+  /// "TIcons" named "component-checkbox".
   static const component_checkbox = IconData(57933, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-divider-horizontal-filled".
+  /// "TIcons" named "component-divider-horizontal-filled".
   static const component_divider_horizontal_filled = IconData(
     57934,
     fontFamily: iconFont,
     fontPackage: iconFontPackage,
   );
 
-  /// "TDIcons" named "component-divider-horizontal".
+  /// "TIcons" named "component-divider-horizontal".
   static const component_divider_horizontal = IconData(57935, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-divider-vertical-filled".
+  /// "TIcons" named "component-divider-vertical-filled".
   static const component_divider_vertical_filled = IconData(57936, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-divider-vertical".
+  /// "TIcons" named "component-divider-vertical".
   static const component_divider_vertical = IconData(57937, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-dropdown-filled".
+  /// "TIcons" named "component-dropdown-filled".
   static const component_dropdown_filled = IconData(57938, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-dropdown".
+  /// "TIcons" named "component-dropdown".
   static const component_dropdown = IconData(57939, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-grid-filled".
+  /// "TIcons" named "component-grid-filled".
   static const component_grid_filled = IconData(57940, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-grid".
+  /// "TIcons" named "component-grid".
   static const component_grid = IconData(57941, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-input-filled".
+  /// "TIcons" named "component-input-filled".
   static const component_input_filled = IconData(57942, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-input".
+  /// "TIcons" named "component-input".
   static const component_input = IconData(57943, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-layout-filled".
+  /// "TIcons" named "component-layout-filled".
   static const component_layout_filled = IconData(57944, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-layout".
+  /// "TIcons" named "component-layout".
   static const component_layout = IconData(57945, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-radio".
+  /// "TIcons" named "component-radio".
   static const component_radio = IconData(57946, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-space-filled".
+  /// "TIcons" named "component-space-filled".
   static const component_space_filled = IconData(57947, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-space".
+  /// "TIcons" named "component-space".
   static const component_space = IconData(57948, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-steps-1-filled".
+  /// "TIcons" named "component-steps-1-filled".
   static const component_steps_1_filled = IconData(57949, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-steps-1".
+  /// "TIcons" named "component-steps-1".
   static const component_steps_1 = IconData(57950, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-steps-filled".
+  /// "TIcons" named "component-steps-filled".
   static const component_steps_filled = IconData(57951, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-steps".
+  /// "TIcons" named "component-steps".
   static const component_steps = IconData(57952, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-stickytool-filled".
+  /// "TIcons" named "component-stickytool-filled".
   static const component_stickytool_filled = IconData(57953, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-stickytool".
+  /// "TIcons" named "component-stickytool".
   static const component_stickytool = IconData(57954, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-switch-filled".
+  /// "TIcons" named "component-switch-filled".
   static const component_switch_filled = IconData(57955, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "component-switch".
+  /// "TIcons" named "component-switch".
   static const component_switch = IconData(57956, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "constraint".
+  /// "TIcons" named "constraint".
   static const constraint = IconData(57957, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "contrast-1-filled".
+  /// "TIcons" named "contrast-1-filled".
   static const contrast_1_filled = IconData(57958, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "contrast-1".
+  /// "TIcons" named "contrast-1".
   static const contrast_1 = IconData(57959, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "contrast-filled".
+  /// "TIcons" named "contrast-filled".
   static const contrast_filled = IconData(57960, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "contrast".
+  /// "TIcons" named "contrast".
   static const contrast = IconData(57961, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "contribute-filled".
+  /// "TIcons" named "contribute-filled".
   static const contribute_filled = IconData(57962, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "contribute".
+  /// "TIcons" named "contribute".
   static const contribute = IconData(57963, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "control-platform-filled".
+  /// "TIcons" named "control-platform-filled".
   static const control_platform_filled = IconData(57964, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "control-platform".
+  /// "TIcons" named "control-platform".
   static const control_platform = IconData(57965, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cooperate-filled".
+  /// "TIcons" named "cooperate-filled".
   static const cooperate_filled = IconData(57966, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cooperate".
+  /// "TIcons" named "cooperate".
   static const cooperate = IconData(57967, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "coordinate-system-filled".
+  /// "TIcons" named "coordinate-system-filled".
   static const coordinate_system_filled = IconData(57968, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "coordinate-system".
+  /// "TIcons" named "coordinate-system".
   static const coordinate_system = IconData(57969, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "copy-filled".
+  /// "TIcons" named "copy-filled".
   static const copy_filled = IconData(57970, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "copy".
+  /// "TIcons" named "copy".
   static const copy = IconData(57971, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "copyright-filled".
+  /// "TIcons" named "copyright-filled".
   static const copyright_filled = IconData(57972, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "copyright".
+  /// "TIcons" named "copyright".
   static const copyright = IconData(57973, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "corn-filled".
+  /// "TIcons" named "corn-filled".
   static const corn_filled = IconData(57974, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "corn".
+  /// "TIcons" named "corn".
   static const corn = IconData(57975, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "correct-filled".
+  /// "TIcons" named "correct-filled".
   static const correct_filled = IconData(57976, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "correct".
+  /// "TIcons" named "correct".
   static const correct = IconData(57977, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "coupon-filled".
+  /// "TIcons" named "coupon-filled".
   static const coupon_filled = IconData(57978, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "coupon".
+  /// "TIcons" named "coupon".
   static const coupon = IconData(57979, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "course-filled".
+  /// "TIcons" named "course-filled".
   static const course_filled = IconData(57980, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "course".
+  /// "TIcons" named "course".
   static const course = IconData(57981, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cpu-filled".
+  /// "TIcons" named "cpu-filled".
   static const cpu_filled = IconData(57982, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cpu".
+  /// "TIcons" named "cpu".
   static const cpu = IconData(57983, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "crack-filled".
+  /// "TIcons" named "crack-filled".
   static const crack_filled = IconData(57984, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "crack".
+  /// "TIcons" named "crack".
   static const crack = IconData(57985, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "creditcard-add-filled".
+  /// "TIcons" named "creditcard-add-filled".
   static const creditcard_add_filled = IconData(57986, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "creditcard-add".
+  /// "TIcons" named "creditcard-add".
   static const creditcard_add = IconData(57987, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "creditcard-filled".
+  /// "TIcons" named "creditcard-filled".
   static const creditcard_filled = IconData(57988, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "creditcard-off-filled".
+  /// "TIcons" named "creditcard-off-filled".
   static const creditcard_off_filled = IconData(57989, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "creditcard-off".
+  /// "TIcons" named "creditcard-off".
   static const creditcard_off = IconData(57990, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "creditcard".
+  /// "TIcons" named "creditcard".
   static const creditcard = IconData(57991, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "crooked-smile-filled".
+  /// "TIcons" named "crooked-smile-filled".
   static const crooked_smile_filled = IconData(57992, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "crooked-smile".
+  /// "TIcons" named "crooked-smile".
   static const crooked_smile = IconData(57993, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cry-and-laugh-filled".
+  /// "TIcons" named "cry-and-laugh-filled".
   static const cry_and_laugh_filled = IconData(57994, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cry-and-laugh".
+  /// "TIcons" named "cry-and-laugh".
   static const cry_and_laugh = IconData(57995, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cry-loudly-filled".
+  /// "TIcons" named "cry-loudly-filled".
   static const cry_loudly_filled = IconData(57996, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cry-loudly".
+  /// "TIcons" named "cry-loudly".
   static const cry_loudly = IconData(57997, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "css3-filled".
+  /// "TIcons" named "css3-filled".
   static const css3_filled = IconData(57998, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "css3".
+  /// "TIcons" named "css3".
   static const css3 = IconData(57999, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cucumber".
+  /// "TIcons" named "cucumber".
   static const cucumber = IconData(58000, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "currency-exchange".
+  /// "TIcons" named "currency-exchange".
   static const currency_exchange = IconData(58001, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cursor-filled".
+  /// "TIcons" named "cursor-filled".
   static const cursor_filled = IconData(58002, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cursor".
+  /// "TIcons" named "cursor".
   static const cursor = IconData(58003, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "curtain-filled".
+  /// "TIcons" named "curtain-filled".
   static const curtain_filled = IconData(58004, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "curtain".
+  /// "TIcons" named "curtain".
   static const curtain = IconData(58005, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "curve".
+  /// "TIcons" named "curve".
   static const curve = IconData(58006, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cut-1".
+  /// "TIcons" named "cut-1".
   static const cut_1 = IconData(58007, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "cut".
+  /// "TIcons" named "cut".
   static const cut = IconData(58008, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-1-filled".
+  /// "TIcons" named "dam-1-filled".
   static const dam_1_filled = IconData(58009, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-1".
+  /// "TIcons" named "dam-1".
   static const dam_1 = IconData(58010, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-2-filled".
+  /// "TIcons" named "dam-2-filled".
   static const dam_2_filled = IconData(58011, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-2".
+  /// "TIcons" named "dam-2".
   static const dam_2 = IconData(58012, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-3-filled".
+  /// "TIcons" named "dam-3-filled".
   static const dam_3_filled = IconData(58013, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-3".
+  /// "TIcons" named "dam-3".
   static const dam_3 = IconData(58014, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-4-filled".
+  /// "TIcons" named "dam-4-filled".
   static const dam_4_filled = IconData(58015, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-4".
+  /// "TIcons" named "dam-4".
   static const dam_4 = IconData(58016, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-5-filled".
+  /// "TIcons" named "dam-5-filled".
   static const dam_5_filled = IconData(58017, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-5".
+  /// "TIcons" named "dam-5".
   static const dam_5 = IconData(58018, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-6-filled".
+  /// "TIcons" named "dam-6-filled".
   static const dam_6_filled = IconData(58019, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-6".
+  /// "TIcons" named "dam-6".
   static const dam_6 = IconData(58020, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-7-filled".
+  /// "TIcons" named "dam-7-filled".
   static const dam_7_filled = IconData(58021, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-7".
+  /// "TIcons" named "dam-7".
   static const dam_7 = IconData(58022, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam-filled".
+  /// "TIcons" named "dam-filled".
   static const dam_filled = IconData(58023, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dam".
+  /// "TIcons" named "dam".
   static const dam = IconData(58024, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dart-board-filled".
+  /// "TIcons" named "dart-board-filled".
   static const dart_board_filled = IconData(58025, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dart-board".
+  /// "TIcons" named "dart-board".
   static const dart_board = IconData(58026, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dashboard-1-filled".
+  /// "TIcons" named "dashboard-1-filled".
   static const dashboard_1_filled = IconData(58027, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dashboard-1".
+  /// "TIcons" named "dashboard-1".
   static const dashboard_1 = IconData(58028, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dashboard-filled".
+  /// "TIcons" named "dashboard-filled".
   static const dashboard_filled = IconData(58029, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dashboard".
+  /// "TIcons" named "dashboard".
   static const dashboard = IconData(58030, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "data-base-filled".
+  /// "TIcons" named "data-base-filled".
   static const data_base_filled = IconData(58031, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "data-base".
+  /// "TIcons" named "data-base".
   static const data_base = IconData(58032, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "data-checked-filled".
+  /// "TIcons" named "data-checked-filled".
   static const data_checked_filled = IconData(58033, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "data-checked".
+  /// "TIcons" named "data-checked".
   static const data_checked = IconData(58034, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "data-display".
+  /// "TIcons" named "data-display".
   static const data_display = IconData(58035, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "data-error-filled".
+  /// "TIcons" named "data-error-filled".
   static const data_error_filled = IconData(58036, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "data-error".
+  /// "TIcons" named "data-error".
   static const data_error = IconData(58037, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "data-filled".
+  /// "TIcons" named "data-filled".
   static const data_filled = IconData(58038, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "data-search-filled".
+  /// "TIcons" named "data-search-filled".
   static const data_search_filled = IconData(58039, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "data-search".
+  /// "TIcons" named "data-search".
   static const data_search = IconData(58040, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "data".
+  /// "TIcons" named "data".
   static const data = IconData(58041, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "delete-1-filled".
+  /// "TIcons" named "delete-1-filled".
   static const delete_1_filled = IconData(58042, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "delete-1".
+  /// "TIcons" named "delete-1".
   static const delete_1 = IconData(58043, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "delete-filled".
+  /// "TIcons" named "delete-filled".
   static const delete_filled = IconData(58044, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "delete-time-filled".
+  /// "TIcons" named "delete-time-filled".
   static const delete_time_filled = IconData(58045, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "delete-time".
+  /// "TIcons" named "delete-time".
   static const delete_time = IconData(58046, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "delete".
+  /// "TIcons" named "delete".
   static const delete = IconData(58047, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "delta-filled".
+  /// "TIcons" named "delta-filled".
   static const delta_filled = IconData(58048, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "delta".
+  /// "TIcons" named "delta".
   static const delta = IconData(58049, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "depressed-filled".
+  /// "TIcons" named "depressed-filled".
   static const depressed_filled = IconData(58050, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "depressed".
+  /// "TIcons" named "depressed".
   static const depressed = IconData(58051, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "desktop-1-filled".
+  /// "TIcons" named "desktop-1-filled".
   static const desktop_1_filled = IconData(58052, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "desktop-1".
+  /// "TIcons" named "desktop-1".
   static const desktop_1 = IconData(58053, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "desktop-filled".
+  /// "TIcons" named "desktop-filled".
   static const desktop_filled = IconData(58054, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "desktop".
+  /// "TIcons" named "desktop".
   static const desktop = IconData(58055, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "despise-filled".
+  /// "TIcons" named "despise-filled".
   static const despise_filled = IconData(58056, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "despise".
+  /// "TIcons" named "despise".
   static const despise = IconData(58057, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "device-filled".
+  /// "TIcons" named "device-filled".
   static const device_filled = IconData(58058, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "device".
+  /// "TIcons" named "device".
   static const device = IconData(58059, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dialog-history-filled".
+  /// "TIcons" named "dialog-history-filled".
   static const dialog_history_filled = IconData(58060, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dialog-history".
+  /// "TIcons" named "dialog-history".
   static const dialog_history = IconData(58061, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "discount-filled".
+  /// "TIcons" named "discount-filled".
   static const discount_filled = IconData(58062, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "discount-list-filled".
+  /// "TIcons" named "discount-list-filled".
   static const discount_list_filled = IconData(58063, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "discount-list".
+  /// "TIcons" named "discount-list".
   static const discount_list = IconData(58064, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "discount".
+  /// "TIcons" named "discount".
   static const discount = IconData(58065, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dissatisfaction-filled".
+  /// "TIcons" named "dissatisfaction-filled".
   static const dissatisfaction_filled = IconData(58066, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dissatisfaction".
+  /// "TIcons" named "dissatisfaction".
   static const dissatisfaction = IconData(58067, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "divide".
+  /// "TIcons" named "divide".
   static const divide = IconData(58068, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "divider-1".
+  /// "TIcons" named "divider-1".
   static const divider_1 = IconData(58069, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dividers-1".
+  /// "TIcons" named "dividers-1".
   static const dividers_1 = IconData(58070, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dividers".
+  /// "TIcons" named "dividers".
   static const dividers = IconData(58071, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "document-location-filled".
+  /// "TIcons" named "document-location-filled".
   static const document_location_filled = IconData(58072, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "document-location".
+  /// "TIcons" named "document-location".
   static const document_location = IconData(58073, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "document-popular-filled".
+  /// "TIcons" named "document-popular-filled".
   static const document_popular_filled = IconData(58074, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "document-popular".
+  /// "TIcons" named "document-popular".
   static const document_popular = IconData(58075, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "document-update-filled".
+  /// "TIcons" named "document-update-filled".
   static const document_update_filled = IconData(58076, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "document-update".
+  /// "TIcons" named "document-update".
   static const document_update = IconData(58077, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "doge-filled".
+  /// "TIcons" named "doge-filled".
   static const doge_filled = IconData(58078, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "doge".
+  /// "TIcons" named "doge".
   static const doge = IconData(58079, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "double-storey-filled".
+  /// "TIcons" named "double-storey-filled".
   static const double_storey_filled = IconData(58080, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "double-storey".
+  /// "TIcons" named "double-storey".
   static const double_storey = IconData(58081, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "download-1".
+  /// "TIcons" named "download-1".
   static const download_1 = IconData(58082, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "download-2-filled".
+  /// "TIcons" named "download-2-filled".
   static const download_2_filled = IconData(58083, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "download-2".
+  /// "TIcons" named "download-2".
   static const download_2 = IconData(58084, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "download".
+  /// "TIcons" named "download".
   static const download = IconData(58085, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "downscale".
+  /// "TIcons" named "downscale".
   static const downscale = IconData(58086, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "draft-filled".
+  /// "TIcons" named "draft-filled".
   static const draft_filled = IconData(58087, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "draft".
+  /// "TIcons" named "draft".
   static const draft = IconData(58088, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "drag-drop".
+  /// "TIcons" named "drag-drop".
   static const drag_drop = IconData(58089, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "drag-move".
+  /// "TIcons" named "drag-move".
   static const drag_move = IconData(58090, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "drink-filled".
+  /// "TIcons" named "drink-filled".
   static const drink_filled = IconData(58091, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "drink".
+  /// "TIcons" named "drink".
   static const drink = IconData(58092, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "drumstick-filled".
+  /// "TIcons" named "drumstick-filled".
   static const drumstick_filled = IconData(58093, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "drumstick".
+  /// "TIcons" named "drumstick".
   static const drumstick = IconData(58094, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dv-filled".
+  /// "TIcons" named "dv-filled".
   static const dv_filled = IconData(58095, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dv".
+  /// "TIcons" named "dv".
   static const dv = IconData(58096, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dvd-filled".
+  /// "TIcons" named "dvd-filled".
   static const dvd_filled = IconData(58097, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "dvd".
+  /// "TIcons" named "dvd".
   static const dvd = IconData(58098, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "earphone-filled".
+  /// "TIcons" named "earphone-filled".
   static const earphone_filled = IconData(58099, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "earphone".
+  /// "TIcons" named "earphone".
   static const earphone = IconData(58100, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "earth-filled".
+  /// "TIcons" named "earth-filled".
   static const earth_filled = IconData(58101, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "earth".
+  /// "TIcons" named "earth".
   static const earth = IconData(58102, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "edit-1-filled".
+  /// "TIcons" named "edit-1-filled".
   static const edit_1_filled = IconData(58103, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "edit-1".
+  /// "TIcons" named "edit-1".
   static const edit_1 = IconData(58104, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "edit-2-filled".
+  /// "TIcons" named "edit-2-filled".
   static const edit_2_filled = IconData(58105, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "edit-2".
+  /// "TIcons" named "edit-2".
   static const edit_2 = IconData(58106, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "edit-filled".
+  /// "TIcons" named "edit-filled".
   static const edit_filled = IconData(58107, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "edit-off-filled".
+  /// "TIcons" named "edit-off-filled".
   static const edit_off_filled = IconData(58108, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "edit-off".
+  /// "TIcons" named "edit-off".
   static const edit_off = IconData(58109, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "edit".
+  /// "TIcons" named "edit".
   static const edit = IconData(58110, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "education-filled".
+  /// "TIcons" named "education-filled".
   static const education_filled = IconData(58111, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "education".
+  /// "TIcons" named "education".
   static const education = IconData(58112, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "eggplant-filled".
+  /// "TIcons" named "eggplant-filled".
   static const eggplant_filled = IconData(58113, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "eggplant".
+  /// "TIcons" named "eggplant".
   static const eggplant = IconData(58114, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ellipsis".
+  /// "TIcons" named "ellipsis".
   static const ellipsis = IconData(58115, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "emo-emotional-filled".
+  /// "TIcons" named "emo-emotional-filled".
   static const emo_emotional_filled = IconData(58116, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "emo-emotional".
+  /// "TIcons" named "emo-emotional".
   static const emo_emotional = IconData(58117, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "english-rectangle-filled".
+  /// "TIcons" named "english-rectangle-filled".
   static const english_rectangle_filled = IconData(58118, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "english-rectangle".
+  /// "TIcons" named "english-rectangle".
   static const english_rectangle = IconData(58119, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "enter".
+  /// "TIcons" named "enter".
   static const enter = IconData(58120, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "equal".
+  /// "TIcons" named "equal".
   static const equal = IconData(58121, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "error-circle-filled".
+  /// "TIcons" named "error-circle-filled".
   static const error_circle_filled = IconData(58122, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "error-circle".
+  /// "TIcons" named "error-circle".
   static const error_circle = IconData(58123, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "error-triangle-filled".
+  /// "TIcons" named "error-triangle-filled".
   static const error_triangle_filled = IconData(58124, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "error-triangle".
+  /// "TIcons" named "error-triangle".
   static const error_triangle = IconData(58125, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "error".
+  /// "TIcons" named "error".
   static const error = IconData(58126, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "excited-1-filled".
+  /// "TIcons" named "excited-1-filled".
   static const excited_1_filled = IconData(58127, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "excited-1".
+  /// "TIcons" named "excited-1".
   static const excited_1 = IconData(58128, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "excited-filled".
+  /// "TIcons" named "excited-filled".
   static const excited_filled = IconData(58129, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "excited".
+  /// "TIcons" named "excited".
   static const excited = IconData(58130, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "expand-down-filled".
+  /// "TIcons" named "expand-down-filled".
   static const expand_down_filled = IconData(58131, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "expand-down".
+  /// "TIcons" named "expand-down".
   static const expand_down = IconData(58132, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "expand-horizontal".
+  /// "TIcons" named "expand-horizontal".
   static const expand_horizontal = IconData(58133, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "expand-up-filled".
+  /// "TIcons" named "expand-up-filled".
   static const expand_up_filled = IconData(58134, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "expand-up".
+  /// "TIcons" named "expand-up".
   static const expand_up = IconData(58135, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "expand-vertical".
+  /// "TIcons" named "expand-vertical".
   static const expand_vertical = IconData(58136, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "explore-filled".
+  /// "TIcons" named "explore-filled".
   static const explore_filled = IconData(58137, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "explore-off-filled".
+  /// "TIcons" named "explore-off-filled".
   static const explore_off_filled = IconData(58138, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "explore-off".
+  /// "TIcons" named "explore-off".
   static const explore_off = IconData(58139, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "explore".
+  /// "TIcons" named "explore".
   static const explore = IconData(58140, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "export".
+  /// "TIcons" named "export".
   static const export = IconData(58141, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "exposure-filled".
+  /// "TIcons" named "exposure-filled".
   static const exposure_filled = IconData(58142, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "exposure".
+  /// "TIcons" named "exposure".
   static const exposure = IconData(58143, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "extension-filled".
+  /// "TIcons" named "extension-filled".
   static const extension_filled = IconData(58144, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "extension-off-filled".
+  /// "TIcons" named "extension-off-filled".
   static const extension_off_filled = IconData(58145, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "extension-off".
+  /// "TIcons" named "extension-off".
   static const extension_off = IconData(58146, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "extension".
+  /// "TIcons" named "extension".
   static const extension = IconData(58147, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "face-retouching-filled".
+  /// "TIcons" named "face-retouching-filled".
   static const face_retouching_filled = IconData(58148, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "face-retouching".
+  /// "TIcons" named "face-retouching".
   static const face_retouching = IconData(58149, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fact-check-filled".
+  /// "TIcons" named "fact-check-filled".
   static const fact_check_filled = IconData(58150, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fact-check".
+  /// "TIcons" named "fact-check".
   static const fact_check = IconData(58151, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fahrenheit-scale".
+  /// "TIcons" named "fahrenheit-scale".
   static const fahrenheit_scale = IconData(58152, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "feel-at-ease-filled".
+  /// "TIcons" named "feel-at-ease-filled".
   static const feel_at_ease_filled = IconData(58153, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "feel-at-ease".
+  /// "TIcons" named "feel-at-ease".
   static const feel_at_ease = IconData(58154, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ferocious-filled".
+  /// "TIcons" named "ferocious-filled".
   static const ferocious_filled = IconData(58155, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ferocious".
+  /// "TIcons" named "ferocious".
   static const ferocious = IconData(58156, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ferris-wheel-filled".
+  /// "TIcons" named "ferris-wheel-filled".
   static const ferris_wheel_filled = IconData(58157, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ferris-wheel".
+  /// "TIcons" named "ferris-wheel".
   static const ferris_wheel = IconData(58158, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-1-filled".
+  /// "TIcons" named "file-1-filled".
   static const file_1_filled = IconData(58159, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-1".
+  /// "TIcons" named "file-1".
   static const file_1 = IconData(58160, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-add-1-filled".
+  /// "TIcons" named "file-add-1-filled".
   static const file_add_1_filled = IconData(58161, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-add-1".
+  /// "TIcons" named "file-add-1".
   static const file_add_1 = IconData(58162, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-add-filled".
+  /// "TIcons" named "file-add-filled".
   static const file_add_filled = IconData(58163, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-add".
+  /// "TIcons" named "file-add".
   static const file_add = IconData(58164, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-attachment-filled".
+  /// "TIcons" named "file-attachment-filled".
   static const file_attachment_filled = IconData(58165, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-attachment".
+  /// "TIcons" named "file-attachment".
   static const file_attachment = IconData(58166, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-blocked-filled".
+  /// "TIcons" named "file-blocked-filled".
   static const file_blocked_filled = IconData(58167, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-blocked".
+  /// "TIcons" named "file-blocked".
   static const file_blocked = IconData(58168, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-code-1-filled".
+  /// "TIcons" named "file-code-1-filled".
   static const file_code_1_filled = IconData(58169, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-code-1".
+  /// "TIcons" named "file-code-1".
   static const file_code_1 = IconData(58170, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-code-filled".
+  /// "TIcons" named "file-code-filled".
   static const file_code_filled = IconData(58171, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-code".
+  /// "TIcons" named "file-code".
   static const file_code = IconData(58172, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-copy-filled".
+  /// "TIcons" named "file-copy-filled".
   static const file_copy_filled = IconData(58173, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-copy".
+  /// "TIcons" named "file-copy".
   static const file_copy = IconData(58174, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-csv-filled".
+  /// "TIcons" named "file-csv-filled".
   static const file_csv_filled = IconData(58175, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-csv".
+  /// "TIcons" named "file-csv".
   static const file_csv = IconData(58176, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-download-filled".
+  /// "TIcons" named "file-download-filled".
   static const file_download_filled = IconData(58177, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-download".
+  /// "TIcons" named "file-download".
   static const file_download = IconData(58178, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-edit-filled".
+  /// "TIcons" named "file-edit-filled".
   static const file_edit_filled = IconData(58179, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-edit".
+  /// "TIcons" named "file-edit".
   static const file_edit = IconData(58180, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-excel-filled".
+  /// "TIcons" named "file-excel-filled".
   static const file_excel_filled = IconData(58181, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-excel".
+  /// "TIcons" named "file-excel".
   static const file_excel = IconData(58182, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-export-filled".
+  /// "TIcons" named "file-export-filled".
   static const file_export_filled = IconData(58183, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-export".
+  /// "TIcons" named "file-export".
   static const file_export = IconData(58184, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-filled".
+  /// "TIcons" named "file-filled".
   static const file_filled = IconData(58185, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-icon-filled".
+  /// "TIcons" named "file-icon-filled".
   static const file_icon_filled = IconData(58186, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-icon".
+  /// "TIcons" named "file-icon".
   static const file_icon = IconData(58187, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-image-filled".
+  /// "TIcons" named "file-image-filled".
   static const file_image_filled = IconData(58188, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-image".
+  /// "TIcons" named "file-image".
   static const file_image = IconData(58189, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-import-filled".
+  /// "TIcons" named "file-import-filled".
   static const file_import_filled = IconData(58190, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-import".
+  /// "TIcons" named "file-import".
   static const file_import = IconData(58191, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-json-filled".
+  /// "TIcons" named "file-json-filled".
   static const file_json_filled = IconData(58192, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-json".
+  /// "TIcons" named "file-json".
   static const file_json = IconData(58193, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-locked-filled".
+  /// "TIcons" named "file-locked-filled".
   static const file_locked_filled = IconData(58194, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-locked".
+  /// "TIcons" named "file-locked".
   static const file_locked = IconData(58195, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-markdown-filled".
+  /// "TIcons" named "file-markdown-filled".
   static const file_markdown_filled = IconData(58196, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-markdown".
+  /// "TIcons" named "file-markdown".
   static const file_markdown = IconData(58197, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-minus-filled".
+  /// "TIcons" named "file-minus-filled".
   static const file_minus_filled = IconData(58198, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-minus".
+  /// "TIcons" named "file-minus".
   static const file_minus = IconData(58199, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-music-filled".
+  /// "TIcons" named "file-music-filled".
   static const file_music_filled = IconData(58200, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-music".
+  /// "TIcons" named "file-music".
   static const file_music = IconData(58201, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-onenote-filled".
+  /// "TIcons" named "file-onenote-filled".
   static const file_onenote_filled = IconData(58202, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-onenote".
+  /// "TIcons" named "file-onenote".
   static const file_onenote = IconData(58203, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-outlook-filled".
+  /// "TIcons" named "file-outlook-filled".
   static const file_outlook_filled = IconData(58204, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-outlook".
+  /// "TIcons" named "file-outlook".
   static const file_outlook = IconData(58205, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-paste-filled".
+  /// "TIcons" named "file-paste-filled".
   static const file_paste_filled = IconData(58206, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-paste".
+  /// "TIcons" named "file-paste".
   static const file_paste = IconData(58207, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-pdf-filled".
+  /// "TIcons" named "file-pdf-filled".
   static const file_pdf_filled = IconData(58208, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-pdf".
+  /// "TIcons" named "file-pdf".
   static const file_pdf = IconData(58209, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-powerpoint-filled".
+  /// "TIcons" named "file-powerpoint-filled".
   static const file_powerpoint_filled = IconData(58210, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-powerpoint".
+  /// "TIcons" named "file-powerpoint".
   static const file_powerpoint = IconData(58211, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-restore-filled".
+  /// "TIcons" named "file-restore-filled".
   static const file_restore_filled = IconData(58212, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-restore".
+  /// "TIcons" named "file-restore".
   static const file_restore = IconData(58213, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-safety-filled".
+  /// "TIcons" named "file-safety-filled".
   static const file_safety_filled = IconData(58214, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-safety".
+  /// "TIcons" named "file-safety".
   static const file_safety = IconData(58215, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-search-filled".
+  /// "TIcons" named "file-search-filled".
   static const file_search_filled = IconData(58216, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-search".
+  /// "TIcons" named "file-search".
   static const file_search = IconData(58217, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-setting-filled".
+  /// "TIcons" named "file-setting-filled".
   static const file_setting_filled = IconData(58218, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-setting".
+  /// "TIcons" named "file-setting".
   static const file_setting = IconData(58219, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-teams-filled".
+  /// "TIcons" named "file-teams-filled".
   static const file_teams_filled = IconData(58220, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-teams".
+  /// "TIcons" named "file-teams".
   static const file_teams = IconData(58221, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-transmit-double-filled".
+  /// "TIcons" named "file-transmit-double-filled".
   static const file_transmit_double_filled = IconData(58222, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-transmit-double".
+  /// "TIcons" named "file-transmit-double".
   static const file_transmit_double = IconData(58223, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-transmit-filled".
+  /// "TIcons" named "file-transmit-filled".
   static const file_transmit_filled = IconData(58224, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-transmit".
+  /// "TIcons" named "file-transmit".
   static const file_transmit = IconData(58225, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-txt-filled".
+  /// "TIcons" named "file-txt-filled".
   static const file_txt_filled = IconData(58226, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-txt".
+  /// "TIcons" named "file-txt".
   static const file_txt = IconData(58227, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-unknown-filled".
+  /// "TIcons" named "file-unknown-filled".
   static const file_unknown_filled = IconData(58228, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-unknown".
+  /// "TIcons" named "file-unknown".
   static const file_unknown = IconData(58229, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-unlocked-filled".
+  /// "TIcons" named "file-unlocked-filled".
   static const file_unlocked_filled = IconData(58230, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-unlocked".
+  /// "TIcons" named "file-unlocked".
   static const file_unlocked = IconData(58231, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-word-filled".
+  /// "TIcons" named "file-word-filled".
   static const file_word_filled = IconData(58232, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-word".
+  /// "TIcons" named "file-word".
   static const file_word = IconData(58233, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-yaml-filled".
+  /// "TIcons" named "file-yaml-filled".
   static const file_yaml_filled = IconData(58234, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-yaml".
+  /// "TIcons" named "file-yaml".
   static const file_yaml = IconData(58235, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-zip-filled".
+  /// "TIcons" named "file-zip-filled".
   static const file_zip_filled = IconData(58236, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file-zip".
+  /// "TIcons" named "file-zip".
   static const file_zip = IconData(58237, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "file".
+  /// "TIcons" named "file".
   static const file = IconData(58238, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fill-color-1-filled".
+  /// "TIcons" named "fill-color-1-filled".
   static const fill_color_1_filled = IconData(58239, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fill-color-1".
+  /// "TIcons" named "fill-color-1".
   static const fill_color_1 = IconData(58240, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fill-color-filled".
+  /// "TIcons" named "fill-color-filled".
   static const fill_color_filled = IconData(58241, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fill-color".
+  /// "TIcons" named "fill-color".
   static const fill_color = IconData(58242, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "film-1-filled".
+  /// "TIcons" named "film-1-filled".
   static const film_1_filled = IconData(58243, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "film-1".
+  /// "TIcons" named "film-1".
   static const film_1 = IconData(58244, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "film-filled".
+  /// "TIcons" named "film-filled".
   static const film_filled = IconData(58245, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "film".
+  /// "TIcons" named "film".
   static const film = IconData(58246, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-1-filled".
+  /// "TIcons" named "filter-1-filled".
   static const filter_1_filled = IconData(58247, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-1".
+  /// "TIcons" named "filter-1".
   static const filter_1 = IconData(58248, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-2-filled".
+  /// "TIcons" named "filter-2-filled".
   static const filter_2_filled = IconData(58249, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-2".
+  /// "TIcons" named "filter-2".
   static const filter_2 = IconData(58250, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-3-filled".
+  /// "TIcons" named "filter-3-filled".
   static const filter_3_filled = IconData(58251, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-3".
+  /// "TIcons" named "filter-3".
   static const filter_3 = IconData(58252, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-clear-filled".
+  /// "TIcons" named "filter-clear-filled".
   static const filter_clear_filled = IconData(58253, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-clear".
+  /// "TIcons" named "filter-clear".
   static const filter_clear = IconData(58254, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-filled".
+  /// "TIcons" named "filter-filled".
   static const filter_filled = IconData(58255, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-off-filled".
+  /// "TIcons" named "filter-off-filled".
   static const filter_off_filled = IconData(58256, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-off".
+  /// "TIcons" named "filter-off".
   static const filter_off = IconData(58257, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-sort-filled".
+  /// "TIcons" named "filter-sort-filled".
   static const filter_sort_filled = IconData(58258, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter-sort".
+  /// "TIcons" named "filter-sort".
   static const filter_sort = IconData(58259, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "filter".
+  /// "TIcons" named "filter".
   static const filter = IconData(58260, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fingerprint-1".
+  /// "TIcons" named "fingerprint-1".
   static const fingerprint_1 = IconData(58261, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fingerprint-2".
+  /// "TIcons" named "fingerprint-2".
   static const fingerprint_2 = IconData(58262, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fingerprint-3".
+  /// "TIcons" named "fingerprint-3".
   static const fingerprint_3 = IconData(58263, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fingerprint".
+  /// "TIcons" named "fingerprint".
   static const fingerprint = IconData(58264, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fish-filled".
+  /// "TIcons" named "fish-filled".
   static const fish_filled = IconData(58265, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fish".
+  /// "TIcons" named "fish".
   static const fish = IconData(58266, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flag-1-filled".
+  /// "TIcons" named "flag-1-filled".
   static const flag_1_filled = IconData(58267, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flag-1".
+  /// "TIcons" named "flag-1".
   static const flag_1 = IconData(58268, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flag-2-filled".
+  /// "TIcons" named "flag-2-filled".
   static const flag_2_filled = IconData(58269, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flag-2".
+  /// "TIcons" named "flag-2".
   static const flag_2 = IconData(58270, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flag-3-filled".
+  /// "TIcons" named "flag-3-filled".
   static const flag_3_filled = IconData(58271, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flag-3".
+  /// "TIcons" named "flag-3".
   static const flag_3 = IconData(58272, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flag-4-filled".
+  /// "TIcons" named "flag-4-filled".
   static const flag_4_filled = IconData(58273, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flag-4".
+  /// "TIcons" named "flag-4".
   static const flag_4 = IconData(58274, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flag-filled".
+  /// "TIcons" named "flag-filled".
   static const flag_filled = IconData(58275, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flag".
+  /// "TIcons" named "flag".
   static const flag = IconData(58276, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flashlight-filled".
+  /// "TIcons" named "flashlight-filled".
   static const flashlight_filled = IconData(58277, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flashlight".
+  /// "TIcons" named "flashlight".
   static const flashlight = IconData(58278, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flight-landing-filled".
+  /// "TIcons" named "flight-landing-filled".
   static const flight_landing_filled = IconData(58279, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flight-landing".
+  /// "TIcons" named "flight-landing".
   static const flight_landing = IconData(58280, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flight-takeoff-filled".
+  /// "TIcons" named "flight-takeoff-filled".
   static const flight_takeoff_filled = IconData(58281, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flight-takeoff".
+  /// "TIcons" named "flight-takeoff".
   static const flight_takeoff = IconData(58282, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flip-smiling-face-filled".
+  /// "TIcons" named "flip-smiling-face-filled".
   static const flip_smiling_face_filled = IconData(58283, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flip-smiling-face".
+  /// "TIcons" named "flip-smiling-face".
   static const flip_smiling_face = IconData(58284, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flip-to-back-filled".
+  /// "TIcons" named "flip-to-back-filled".
   static const flip_to_back_filled = IconData(58285, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flip-to-back".
+  /// "TIcons" named "flip-to-back".
   static const flip_to_back = IconData(58286, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flip-to-front-filled".
+  /// "TIcons" named "flip-to-front-filled".
   static const flip_to_front_filled = IconData(58287, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flip-to-front".
+  /// "TIcons" named "flip-to-front".
   static const flip_to_front = IconData(58288, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flowchart-filled".
+  /// "TIcons" named "flowchart-filled".
   static const flowchart_filled = IconData(58289, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "flowchart".
+  /// "TIcons" named "flowchart".
   static const flowchart = IconData(58290, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "focus-filled".
+  /// "TIcons" named "focus-filled".
   static const focus_filled = IconData(58291, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "focus".
+  /// "TIcons" named "focus".
   static const focus = IconData(58292, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fog-filled".
+  /// "TIcons" named "fog-filled".
   static const fog_filled = IconData(58293, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fog-night-filled".
+  /// "TIcons" named "fog-night-filled".
   static const fog_night_filled = IconData(58294, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fog-night".
+  /// "TIcons" named "fog-night".
   static const fog_night = IconData(58295, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fog-sunny-filled".
+  /// "TIcons" named "fog-sunny-filled".
   static const fog_sunny_filled = IconData(58296, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fog-sunny".
+  /// "TIcons" named "fog-sunny".
   static const fog_sunny = IconData(58297, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fog".
+  /// "TIcons" named "fog".
   static const fog = IconData(58298, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-1-filled".
+  /// "TIcons" named "folder-1-filled".
   static const folder_1_filled = IconData(58299, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-1".
+  /// "TIcons" named "folder-1".
   static const folder_1 = IconData(58300, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-add-1-filled".
+  /// "TIcons" named "folder-add-1-filled".
   static const folder_add_1_filled = IconData(58301, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-add-1".
+  /// "TIcons" named "folder-add-1".
   static const folder_add_1 = IconData(58302, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-add-filled".
+  /// "TIcons" named "folder-add-filled".
   static const folder_add_filled = IconData(58303, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-add".
+  /// "TIcons" named "folder-add".
   static const folder_add = IconData(58304, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-blocked-filled".
+  /// "TIcons" named "folder-blocked-filled".
   static const folder_blocked_filled = IconData(58305, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-blocked".
+  /// "TIcons" named "folder-blocked".
   static const folder_blocked = IconData(58306, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-details-filled".
+  /// "TIcons" named "folder-details-filled".
   static const folder_details_filled = IconData(58307, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-details".
+  /// "TIcons" named "folder-details".
   static const folder_details = IconData(58308, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-export-filled".
+  /// "TIcons" named "folder-export-filled".
   static const folder_export_filled = IconData(58309, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-export".
+  /// "TIcons" named "folder-export".
   static const folder_export = IconData(58310, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-filled".
+  /// "TIcons" named "folder-filled".
   static const folder_filled = IconData(58311, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-import-filled".
+  /// "TIcons" named "folder-import-filled".
   static const folder_import_filled = IconData(58312, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-import".
+  /// "TIcons" named "folder-import".
   static const folder_import = IconData(58313, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-locked-filled".
+  /// "TIcons" named "folder-locked-filled".
   static const folder_locked_filled = IconData(58314, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-locked".
+  /// "TIcons" named "folder-locked".
   static const folder_locked = IconData(58315, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-minus-filled".
+  /// "TIcons" named "folder-minus-filled".
   static const folder_minus_filled = IconData(58316, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-minus".
+  /// "TIcons" named "folder-minus".
   static const folder_minus = IconData(58317, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-move-filled".
+  /// "TIcons" named "folder-move-filled".
   static const folder_move_filled = IconData(58318, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-move".
+  /// "TIcons" named "folder-move".
   static const folder_move = IconData(58319, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-off-filled".
+  /// "TIcons" named "folder-off-filled".
   static const folder_off_filled = IconData(58320, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-off".
+  /// "TIcons" named "folder-off".
   static const folder_off = IconData(58321, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-open-1-filled".
+  /// "TIcons" named "folder-open-1-filled".
   static const folder_open_1_filled = IconData(58322, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-open-1".
+  /// "TIcons" named "folder-open-1".
   static const folder_open_1 = IconData(58323, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-open-filled".
+  /// "TIcons" named "folder-open-filled".
   static const folder_open_filled = IconData(58324, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-open".
+  /// "TIcons" named "folder-open".
   static const folder_open = IconData(58325, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-search-filled".
+  /// "TIcons" named "folder-search-filled".
   static const folder_search_filled = IconData(58326, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-search".
+  /// "TIcons" named "folder-search".
   static const folder_search = IconData(58327, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-setting-filled".
+  /// "TIcons" named "folder-setting-filled".
   static const folder_setting_filled = IconData(58328, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-setting".
+  /// "TIcons" named "folder-setting".
   static const folder_setting = IconData(58329, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-shared-filled".
+  /// "TIcons" named "folder-shared-filled".
   static const folder_shared_filled = IconData(58330, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-shared".
+  /// "TIcons" named "folder-shared".
   static const folder_shared = IconData(58331, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-unlocked-filled".
+  /// "TIcons" named "folder-unlocked-filled".
   static const folder_unlocked_filled = IconData(58332, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-unlocked".
+  /// "TIcons" named "folder-unlocked".
   static const folder_unlocked = IconData(58333, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-zip-filled".
+  /// "TIcons" named "folder-zip-filled".
   static const folder_zip_filled = IconData(58334, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder-zip".
+  /// "TIcons" named "folder-zip".
   static const folder_zip = IconData(58335, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "folder".
+  /// "TIcons" named "folder".
   static const folder = IconData(58336, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "font-background-filled".
+  /// "TIcons" named "font-background-filled".
   static const font_background_filled = IconData(58337, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "font-background".
+  /// "TIcons" named "font-background".
   static const font_background = IconData(58338, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "forest-filled".
+  /// "TIcons" named "forest-filled".
   static const forest_filled = IconData(58339, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "forest".
+  /// "TIcons" named "forest".
   static const forest = IconData(58340, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fork-filled".
+  /// "TIcons" named "fork-filled".
   static const fork_filled = IconData(58341, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fork".
+  /// "TIcons" named "fork".
   static const fork = IconData(58342, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "form-filled".
+  /// "TIcons" named "form-filled".
   static const form_filled = IconData(58343, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "form".
+  /// "TIcons" named "form".
   static const form = IconData(58344, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "format-horizontal-align-bottom".
+  /// "TIcons" named "format-horizontal-align-bottom".
   static const format_horizontal_align_bottom = IconData(58345, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "format-horizontal-align-center".
+  /// "TIcons" named "format-horizontal-align-center".
   static const format_horizontal_align_center = IconData(58346, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "format-horizontal-align-top".
+  /// "TIcons" named "format-horizontal-align-top".
   static const format_horizontal_align_top = IconData(58347, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "format-painter-filled".
+  /// "TIcons" named "format-painter-filled".
   static const format_painter_filled = IconData(58348, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "format-painter".
+  /// "TIcons" named "format-painter".
   static const format_painter = IconData(58349, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "format-vertical-align-center".
+  /// "TIcons" named "format-vertical-align-center".
   static const format_vertical_align_center = IconData(58350, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "format-vertical-align-left".
+  /// "TIcons" named "format-vertical-align-left".
   static const format_vertical_align_left = IconData(58351, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "format-vertical-align-right".
+  /// "TIcons" named "format-vertical-align-right".
   static const format_vertical_align_right = IconData(58352, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "formula".
+  /// "TIcons" named "formula".
   static const formula = IconData(58353, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "forum-filled".
+  /// "TIcons" named "forum-filled".
   static const forum_filled = IconData(58354, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "forum".
+  /// "TIcons" named "forum".
   static const forum = IconData(58355, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "forward-filled".
+  /// "TIcons" named "forward-filled".
   static const forward_filled = IconData(58356, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "forward".
+  /// "TIcons" named "forward".
   static const forward = IconData(58357, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "frame-1-filled".
+  /// "TIcons" named "frame-1-filled".
   static const frame_1_filled = IconData(58358, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "frame-1".
+  /// "TIcons" named "frame-1".
   static const frame_1 = IconData(58359, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "frame-filled".
+  /// "TIcons" named "frame-filled".
   static const frame_filled = IconData(58360, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "frame".
+  /// "TIcons" named "frame".
   static const frame = IconData(58361, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fries-filled".
+  /// "TIcons" named "fries-filled".
   static const fries_filled = IconData(58362, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fries".
+  /// "TIcons" named "fries".
   static const fries = IconData(58363, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fullscreen-1".
+  /// "TIcons" named "fullscreen-1".
   static const fullscreen_1 = IconData(58364, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fullscreen-2".
+  /// "TIcons" named "fullscreen-2".
   static const fullscreen_2 = IconData(58365, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fullscreen-exit-1".
+  /// "TIcons" named "fullscreen-exit-1".
   static const fullscreen_exit_1 = IconData(58366, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fullscreen-exit".
+  /// "TIcons" named "fullscreen-exit".
   static const fullscreen_exit = IconData(58367, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "fullscreen".
+  /// "TIcons" named "fullscreen".
   static const fullscreen = IconData(58368, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "function-curve".
+  /// "TIcons" named "function-curve".
   static const function_curve = IconData(58369, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "functions-1".
+  /// "TIcons" named "functions-1".
   static const functions_1 = IconData(58370, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "functions".
+  /// "TIcons" named "functions".
   static const functions = IconData(58371, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gamepad-1-filled".
+  /// "TIcons" named "gamepad-1-filled".
   static const gamepad_1_filled = IconData(58372, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gamepad-1".
+  /// "TIcons" named "gamepad-1".
   static const gamepad_1 = IconData(58373, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gamepad-filled".
+  /// "TIcons" named "gamepad-filled".
   static const gamepad_filled = IconData(58374, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gamepad".
+  /// "TIcons" named "gamepad".
   static const gamepad = IconData(58375, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gamma".
+  /// "TIcons" named "gamma".
   static const gamma = IconData(58376, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "garlic-filled".
+  /// "TIcons" named "garlic-filled".
   static const garlic_filled = IconData(58377, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "garlic".
+  /// "TIcons" named "garlic".
   static const garlic = IconData(58378, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gender-female".
+  /// "TIcons" named "gender-female".
   static const gender_female = IconData(58379, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gender-male".
+  /// "TIcons" named "gender-male".
   static const gender_male = IconData(58380, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-applause-filled".
+  /// "TIcons" named "gesture-applause-filled".
   static const gesture_applause_filled = IconData(58381, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-applause".
+  /// "TIcons" named "gesture-applause".
   static const gesture_applause = IconData(58382, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-click-filled".
+  /// "TIcons" named "gesture-click-filled".
   static const gesture_click_filled = IconData(58383, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-click".
+  /// "TIcons" named "gesture-click".
   static const gesture_click = IconData(58384, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-down-filled".
+  /// "TIcons" named "gesture-down-filled".
   static const gesture_down_filled = IconData(58385, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-down".
+  /// "TIcons" named "gesture-down".
   static const gesture_down = IconData(58386, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-expansion-filled".
+  /// "TIcons" named "gesture-expansion-filled".
   static const gesture_expansion_filled = IconData(58387, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-expansion".
+  /// "TIcons" named "gesture-expansion".
   static const gesture_expansion = IconData(58388, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-left-filled".
+  /// "TIcons" named "gesture-left-filled".
   static const gesture_left_filled = IconData(58389, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-left-slip-filled".
+  /// "TIcons" named "gesture-left-slip-filled".
   static const gesture_left_slip_filled = IconData(58390, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-left-slip".
+  /// "TIcons" named "gesture-left-slip".
   static const gesture_left_slip = IconData(58391, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-left".
+  /// "TIcons" named "gesture-left".
   static const gesture_left = IconData(58392, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-open-filled".
+  /// "TIcons" named "gesture-open-filled".
   static const gesture_open_filled = IconData(58393, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-open".
+  /// "TIcons" named "gesture-open".
   static const gesture_open = IconData(58394, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-pray-filled".
+  /// "TIcons" named "gesture-pray-filled".
   static const gesture_pray_filled = IconData(58395, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-pray".
+  /// "TIcons" named "gesture-pray".
   static const gesture_pray = IconData(58396, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-press-filled".
+  /// "TIcons" named "gesture-press-filled".
   static const gesture_press_filled = IconData(58397, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-press".
+  /// "TIcons" named "gesture-press".
   static const gesture_press = IconData(58398, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-ranslation-filled".
+  /// "TIcons" named "gesture-ranslation-filled".
   static const gesture_ranslation_filled = IconData(58399, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-ranslation".
+  /// "TIcons" named "gesture-ranslation".
   static const gesture_ranslation = IconData(58400, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-right-filled".
+  /// "TIcons" named "gesture-right-filled".
   static const gesture_right_filled = IconData(58401, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-right-slip-filled".
+  /// "TIcons" named "gesture-right-slip-filled".
   static const gesture_right_slip_filled = IconData(58402, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-right-slip".
+  /// "TIcons" named "gesture-right-slip".
   static const gesture_right_slip = IconData(58403, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-right".
+  /// "TIcons" named "gesture-right".
   static const gesture_right = IconData(58404, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-slide-left-and-right-filled".
+  /// "TIcons" named "gesture-slide-left-and-right-filled".
   static const gesture_slide_left_and_right_filled = IconData(
     58405,
     fontFamily: iconFont,
     fontPackage: iconFontPackage,
   );
 
-  /// "TDIcons" named "gesture-slide-left-and-right".
+  /// "TIcons" named "gesture-slide-left-and-right".
   static const gesture_slide_left_and_right = IconData(58406, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-slide-up-filled".
+  /// "TIcons" named "gesture-slide-up-filled".
   static const gesture_slide_up_filled = IconData(58407, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-slide-up".
+  /// "TIcons" named "gesture-slide-up".
   static const gesture_slide_up = IconData(58408, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-typing-filled".
+  /// "TIcons" named "gesture-typing-filled".
   static const gesture_typing_filled = IconData(58409, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-typing".
+  /// "TIcons" named "gesture-typing".
   static const gesture_typing = IconData(58410, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-up-and-down-filled".
+  /// "TIcons" named "gesture-up-and-down-filled".
   static const gesture_up_and_down_filled = IconData(58411, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-up-and-down".
+  /// "TIcons" named "gesture-up-and-down".
   static const gesture_up_and_down = IconData(58412, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-up-filled".
+  /// "TIcons" named "gesture-up-filled".
   static const gesture_up_filled = IconData(58413, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-up".
+  /// "TIcons" named "gesture-up".
   static const gesture_up = IconData(58414, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-wipe-down-filled".
+  /// "TIcons" named "gesture-wipe-down-filled".
   static const gesture_wipe_down_filled = IconData(58415, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gesture-wipe-down".
+  /// "TIcons" named "gesture-wipe-down".
   static const gesture_wipe_down = IconData(58416, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gift-filled".
+  /// "TIcons" named "gift-filled".
   static const gift_filled = IconData(58417, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gift".
+  /// "TIcons" named "gift".
   static const gift = IconData(58418, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "giggle-filled".
+  /// "TIcons" named "giggle-filled".
   static const giggle_filled = IconData(58419, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "giggle".
+  /// "TIcons" named "giggle".
   static const giggle = IconData(58420, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-branch-filled".
+  /// "TIcons" named "git-branch-filled".
   static const git_branch_filled = IconData(58421, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-branch".
+  /// "TIcons" named "git-branch".
   static const git_branch = IconData(58422, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-commit-1-filled".
+  /// "TIcons" named "git-commit-1-filled".
   static const git_commit_1_filled = IconData(58423, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-commit-1".
+  /// "TIcons" named "git-commit-1".
   static const git_commit_1 = IconData(58424, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-commit-filled".
+  /// "TIcons" named "git-commit-filled".
   static const git_commit_filled = IconData(58425, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-commit".
+  /// "TIcons" named "git-commit".
   static const git_commit = IconData(58426, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-merge-filled".
+  /// "TIcons" named "git-merge-filled".
   static const git_merge_filled = IconData(58427, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-merge".
+  /// "TIcons" named "git-merge".
   static const git_merge = IconData(58428, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-pull-request-filled".
+  /// "TIcons" named "git-pull-request-filled".
   static const git_pull_request_filled = IconData(58429, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-pull-request".
+  /// "TIcons" named "git-pull-request".
   static const git_pull_request = IconData(58430, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-repository-commits-filled".
+  /// "TIcons" named "git-repository-commits-filled".
   static const git_repository_commits_filled = IconData(58431, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-repository-commits".
+  /// "TIcons" named "git-repository-commits".
   static const git_repository_commits = IconData(58432, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-repository-filled".
+  /// "TIcons" named "git-repository-filled".
   static const git_repository_filled = IconData(58433, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-repository-private-filled".
+  /// "TIcons" named "git-repository-private-filled".
   static const git_repository_private_filled = IconData(58434, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-repository-private".
+  /// "TIcons" named "git-repository-private".
   static const git_repository_private = IconData(58435, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "git-repository".
+  /// "TIcons" named "git-repository".
   static const git_repository = IconData(58436, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gps-filled".
+  /// "TIcons" named "gps-filled".
   static const gps_filled = IconData(58437, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "gps".
+  /// "TIcons" named "gps".
   static const gps = IconData(58438, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "grape-filled".
+  /// "TIcons" named "grape-filled".
   static const grape_filled = IconData(58439, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "grape".
+  /// "TIcons" named "grape".
   static const grape = IconData(58440, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "graphviz-filled".
+  /// "TIcons" named "graphviz-filled".
   static const graphviz_filled = IconData(58441, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "graphviz".
+  /// "TIcons" named "graphviz".
   static const graphviz = IconData(58442, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "greater-than-or-equal".
+  /// "TIcons" named "greater-than-or-equal".
   static const greater_than_or_equal = IconData(58443, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "greater-than".
+  /// "TIcons" named "greater-than".
   static const greater_than = IconData(58444, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "green-onion".
+  /// "TIcons" named "green-onion".
   static const green_onion = IconData(58445, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "grid-add-filled".
+  /// "TIcons" named "grid-add-filled".
   static const grid_add_filled = IconData(58446, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "grid-add".
+  /// "TIcons" named "grid-add".
   static const grid_add = IconData(58447, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "grid-view-filled".
+  /// "TIcons" named "grid-view-filled".
   static const grid_view_filled = IconData(58448, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "grid-view".
+  /// "TIcons" named "grid-view".
   static const grid_view = IconData(58449, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "guitar-filled".
+  /// "TIcons" named "guitar-filled".
   static const guitar_filled = IconData(58450, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "guitar".
+  /// "TIcons" named "guitar".
   static const guitar = IconData(58451, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hamburger-filled".
+  /// "TIcons" named "hamburger-filled".
   static const hamburger_filled = IconData(58452, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hamburger".
+  /// "TIcons" named "hamburger".
   static const hamburger = IconData(58453, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "happy-filled".
+  /// "TIcons" named "happy-filled".
   static const happy_filled = IconData(58454, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "happy".
+  /// "TIcons" named "happy".
   static const happy = IconData(58455, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hard-disk-storage-filled".
+  /// "TIcons" named "hard-disk-storage-filled".
   static const hard_disk_storage_filled = IconData(58456, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hard-disk-storage".
+  /// "TIcons" named "hard-disk-storage".
   static const hard_disk_storage = IconData(58457, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hard-drive-filled".
+  /// "TIcons" named "hard-drive-filled".
   static const hard_drive_filled = IconData(58458, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hard-drive".
+  /// "TIcons" named "hard-drive".
   static const hard_drive = IconData(58459, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hashtag".
+  /// "TIcons" named "hashtag".
   static const hashtag = IconData(58460, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hd-filled".
+  /// "TIcons" named "hd-filled".
   static const hd_filled = IconData(58461, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hd".
+  /// "TIcons" named "hd".
   static const hd = IconData(58462, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "heart-filled".
+  /// "TIcons" named "heart-filled".
   static const heart_filled = IconData(58463, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "heart".
+  /// "TIcons" named "heart".
   static const heart = IconData(58464, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "help-circle-filled".
+  /// "TIcons" named "help-circle-filled".
   static const help_circle_filled = IconData(58465, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "help-circle".
+  /// "TIcons" named "help-circle".
   static const help_circle = IconData(58466, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "help-rectangle-filled".
+  /// "TIcons" named "help-rectangle-filled".
   static const help_rectangle_filled = IconData(58467, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "help-rectangle".
+  /// "TIcons" named "help-rectangle".
   static const help_rectangle = IconData(58468, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "help".
+  /// "TIcons" named "help".
   static const help = IconData(58469, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "high-level-filled".
+  /// "TIcons" named "high-level-filled".
   static const high_level_filled = IconData(58470, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "high-level".
+  /// "TIcons" named "high-level".
   static const high_level = IconData(58471, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "highlight-1-filled".
+  /// "TIcons" named "highlight-1-filled".
   static const highlight_1_filled = IconData(58472, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "highlight-1".
+  /// "TIcons" named "highlight-1".
   static const highlight_1 = IconData(58473, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "highlight".
+  /// "TIcons" named "highlight".
   static const highlight = IconData(58474, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "highlighted-block-filled".
+  /// "TIcons" named "highlighted-block-filled".
   static const highlighted_block_filled = IconData(58475, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "highlighted-block".
+  /// "TIcons" named "highlighted-block".
   static const highlighted_block = IconData(58476, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "history-setting".
+  /// "TIcons" named "history-setting".
   static const history_setting = IconData(58477, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "history".
+  /// "TIcons" named "history".
   static const history = IconData(58478, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "home-filled".
+  /// "TIcons" named "home-filled".
   static const home_filled = IconData(58479, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "home".
+  /// "TIcons" named "home".
   static const home = IconData(58480, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "horizontal-filled".
+  /// "TIcons" named "horizontal-filled".
   static const horizontal_filled = IconData(58481, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "horizontal".
+  /// "TIcons" named "horizontal".
   static const horizontal = IconData(58482, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hospital-1-filled".
+  /// "TIcons" named "hospital-1-filled".
   static const hospital_1_filled = IconData(58483, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hospital-1".
+  /// "TIcons" named "hospital-1".
   static const hospital_1 = IconData(58484, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hospital-filled".
+  /// "TIcons" named "hospital-filled".
   static const hospital_filled = IconData(58485, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hospital".
+  /// "TIcons" named "hospital".
   static const hospital = IconData(58486, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hotspot-wave-filled".
+  /// "TIcons" named "hotspot-wave-filled".
   static const hotspot_wave_filled = IconData(58487, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hotspot-wave".
+  /// "TIcons" named "hotspot-wave".
   static const hotspot_wave = IconData(58488, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hourglass-filled".
+  /// "TIcons" named "hourglass-filled".
   static const hourglass_filled = IconData(58489, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "hourglass".
+  /// "TIcons" named "hourglass".
   static const hourglass = IconData(58490, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "houses-1-filled".
+  /// "TIcons" named "houses-1-filled".
   static const houses_1_filled = IconData(58491, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "houses-1".
+  /// "TIcons" named "houses-1".
   static const houses_1 = IconData(58492, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "houses-2-filled".
+  /// "TIcons" named "houses-2-filled".
   static const houses_2_filled = IconData(58493, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "houses-2".
+  /// "TIcons" named "houses-2".
   static const houses_2 = IconData(58494, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "houses-filled".
+  /// "TIcons" named "houses-filled".
   static const houses_filled = IconData(58495, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "houses".
+  /// "TIcons" named "houses".
   static const houses = IconData(58496, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "html5-filled".
+  /// "TIcons" named "html5-filled".
   static const html5_filled = IconData(58497, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "html5".
+  /// "TIcons" named "html5".
   static const html5 = IconData(58498, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "https-filled".
+  /// "TIcons" named "https-filled".
   static const https_filled = IconData(58499, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "https".
+  /// "TIcons" named "https".
   static const https = IconData(58500, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ice-cream-filled".
+  /// "TIcons" named "ice-cream-filled".
   static const ice_cream_filled = IconData(58501, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ice-cream".
+  /// "TIcons" named "ice-cream".
   static const ice_cream = IconData(58502, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "icon-filled".
+  /// "TIcons" named "icon-filled".
   static const icon_filled = IconData(58503, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "icon".
+  /// "TIcons" named "icon".
   static const icon = IconData(58504, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-1-filled".
+  /// "TIcons" named "image-1-filled".
   static const image_1_filled = IconData(58505, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-1".
+  /// "TIcons" named "image-1".
   static const image_1 = IconData(58506, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-add-filled".
+  /// "TIcons" named "image-add-filled".
   static const image_add_filled = IconData(58507, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-add".
+  /// "TIcons" named "image-add".
   static const image_add = IconData(58508, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-carousel-filled".
+  /// "TIcons" named "image-carousel-filled".
   static const image_carousel_filled = IconData(58509, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-carousel".
+  /// "TIcons" named "image-carousel".
   static const image_carousel = IconData(58510, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-edit-filled".
+  /// "TIcons" named "image-edit-filled".
   static const image_edit_filled = IconData(58511, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-edit".
+  /// "TIcons" named "image-edit".
   static const image_edit = IconData(58512, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-error-filled".
+  /// "TIcons" named "image-error-filled".
   static const image_error_filled = IconData(58513, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-error".
+  /// "TIcons" named "image-error".
   static const image_error = IconData(58514, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-filled".
+  /// "TIcons" named "image-filled".
   static const image_filled = IconData(58515, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-off-filled".
+  /// "TIcons" named "image-off-filled".
   static const image_off_filled = IconData(58516, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-off".
+  /// "TIcons" named "image-off".
   static const image_off = IconData(58517, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-search-filled".
+  /// "TIcons" named "image-search-filled".
   static const image_search_filled = IconData(58518, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image-search".
+  /// "TIcons" named "image-search".
   static const image_search = IconData(58519, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "image".
+  /// "TIcons" named "image".
   static const image = IconData(58520, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "import".
+  /// "TIcons" named "import".
   static const import = IconData(58521, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "indent-left".
+  /// "TIcons" named "indent-left".
   static const indent_left = IconData(58522, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "indent-right".
+  /// "TIcons" named "indent-right".
   static const indent_right = IconData(58523, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "indicator-filled".
+  /// "TIcons" named "indicator-filled".
   static const indicator_filled = IconData(58524, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "indicator".
+  /// "TIcons" named "indicator".
   static const indicator = IconData(58525, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "info-circle-filled".
+  /// "TIcons" named "info-circle-filled".
   static const info_circle_filled = IconData(58526, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "info-circle".
+  /// "TIcons" named "info-circle".
   static const info_circle = IconData(58527, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ink-filled".
+  /// "TIcons" named "ink-filled".
   static const ink_filled = IconData(58528, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ink".
+  /// "TIcons" named "ink".
   static const ink = IconData(58529, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "install-desktop-filled".
+  /// "TIcons" named "install-desktop-filled".
   static const install_desktop_filled = IconData(58530, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "install-desktop".
+  /// "TIcons" named "install-desktop".
   static const install_desktop = IconData(58531, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "install-filled".
+  /// "TIcons" named "install-filled".
   static const install_filled = IconData(58532, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "install-mobile-filled".
+  /// "TIcons" named "install-mobile-filled".
   static const install_mobile_filled = IconData(58533, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "install-mobile".
+  /// "TIcons" named "install-mobile".
   static const install_mobile = IconData(58534, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "install".
+  /// "TIcons" named "install".
   static const install = IconData(58535, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "institution-checked-filled".
+  /// "TIcons" named "institution-checked-filled".
   static const institution_checked_filled = IconData(58536, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "institution-checked".
+  /// "TIcons" named "institution-checked".
   static const institution_checked = IconData(58537, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "institution-filled".
+  /// "TIcons" named "institution-filled".
   static const institution_filled = IconData(58538, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "institution".
+  /// "TIcons" named "institution".
   static const institution = IconData(58539, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "internet-filled".
+  /// "TIcons" named "internet-filled".
   static const internet_filled = IconData(58540, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "internet".
+  /// "TIcons" named "internet".
   static const internet = IconData(58541, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ipod-filled".
+  /// "TIcons" named "ipod-filled".
   static const ipod_filled = IconData(58542, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ipod".
+  /// "TIcons" named "ipod".
   static const ipod = IconData(58543, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "japanese-rectangle-filled".
+  /// "TIcons" named "japanese-rectangle-filled".
   static const japanese_rectangle_filled = IconData(58544, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "japanese-rectangle".
+  /// "TIcons" named "japanese-rectangle".
   static const japanese_rectangle = IconData(58545, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "joyful-filled".
+  /// "TIcons" named "joyful-filled".
   static const joyful_filled = IconData(58546, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "joyful".
+  /// "TIcons" named "joyful".
   static const joyful = IconData(58547, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "jump-double".
+  /// "TIcons" named "jump-double".
   static const jump_double = IconData(58548, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "jump-off".
+  /// "TIcons" named "jump-off".
   static const jump_off = IconData(58549, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "jump".
+  /// "TIcons" named "jump".
   static const jump = IconData(58550, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "key-filled".
+  /// "TIcons" named "key-filled".
   static const key_filled = IconData(58551, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "key".
+  /// "TIcons" named "key".
   static const key = IconData(58552, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "keyboard-1".
+  /// "TIcons" named "keyboard-1".
   static const keyboard_1 = IconData(58553, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "keyboard-filled".
+  /// "TIcons" named "keyboard-filled".
   static const keyboard_filled = IconData(58554, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "keyboard".
+  /// "TIcons" named "keyboard".
   static const keyboard = IconData(58555, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "korean-rectangle-filled".
+  /// "TIcons" named "korean-rectangle-filled".
   static const korean_rectangle_filled = IconData(58556, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "korean-rectangle".
+  /// "TIcons" named "korean-rectangle".
   static const korean_rectangle = IconData(58557, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "laptop-filled".
+  /// "TIcons" named "laptop-filled".
   static const laptop_filled = IconData(58558, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "laptop".
+  /// "TIcons" named "laptop".
   static const laptop = IconData(58559, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "layers-filled".
+  /// "TIcons" named "layers-filled".
   static const layers_filled = IconData(58560, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "layers".
+  /// "TIcons" named "layers".
   static const layers = IconData(58561, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "layout-filled".
+  /// "TIcons" named "layout-filled".
   static const layout_filled = IconData(58562, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "layout".
+  /// "TIcons" named "layout".
   static const layout = IconData(58563, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "leaderboard-filled".
+  /// "TIcons" named "leaderboard-filled".
   static const leaderboard_filled = IconData(58564, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "leaderboard".
+  /// "TIcons" named "leaderboard".
   static const leaderboard = IconData(58565, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lemon-filled".
+  /// "TIcons" named "lemon-filled".
   static const lemon_filled = IconData(58566, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lemon-slice-filled".
+  /// "TIcons" named "lemon-slice-filled".
   static const lemon_slice_filled = IconData(58567, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lemon-slice".
+  /// "TIcons" named "lemon-slice".
   static const lemon_slice = IconData(58568, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lemon".
+  /// "TIcons" named "lemon".
   static const lemon = IconData(58569, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "less-than-or-equal".
+  /// "TIcons" named "less-than-or-equal".
   static const less_than_or_equal = IconData(58570, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "less-than".
+  /// "TIcons" named "less-than".
   static const less_than = IconData(58571, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-a".
+  /// "TIcons" named "letters-a".
   static const letters_a = IconData(58572, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-b".
+  /// "TIcons" named "letters-b".
   static const letters_b = IconData(58573, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-c".
+  /// "TIcons" named "letters-c".
   static const letters_c = IconData(58574, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-d".
+  /// "TIcons" named "letters-d".
   static const letters_d = IconData(58575, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-e".
+  /// "TIcons" named "letters-e".
   static const letters_e = IconData(58576, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-f".
+  /// "TIcons" named "letters-f".
   static const letters_f = IconData(58577, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-g".
+  /// "TIcons" named "letters-g".
   static const letters_g = IconData(58578, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-h".
+  /// "TIcons" named "letters-h".
   static const letters_h = IconData(58579, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-i".
+  /// "TIcons" named "letters-i".
   static const letters_i = IconData(58580, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-j".
+  /// "TIcons" named "letters-j".
   static const letters_j = IconData(58581, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-k".
+  /// "TIcons" named "letters-k".
   static const letters_k = IconData(58582, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-l".
+  /// "TIcons" named "letters-l".
   static const letters_l = IconData(58583, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-m".
+  /// "TIcons" named "letters-m".
   static const letters_m = IconData(58584, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-n".
+  /// "TIcons" named "letters-n".
   static const letters_n = IconData(58585, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-o".
+  /// "TIcons" named "letters-o".
   static const letters_o = IconData(58586, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-p".
+  /// "TIcons" named "letters-p".
   static const letters_p = IconData(58587, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-q".
+  /// "TIcons" named "letters-q".
   static const letters_q = IconData(58588, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-r".
+  /// "TIcons" named "letters-r".
   static const letters_r = IconData(58589, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-s".
+  /// "TIcons" named "letters-s".
   static const letters_s = IconData(58590, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-t".
+  /// "TIcons" named "letters-t".
   static const letters_t = IconData(58591, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-u".
+  /// "TIcons" named "letters-u".
   static const letters_u = IconData(58592, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-v".
+  /// "TIcons" named "letters-v".
   static const letters_v = IconData(58593, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-w".
+  /// "TIcons" named "letters-w".
   static const letters_w = IconData(58594, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-x".
+  /// "TIcons" named "letters-x".
   static const letters_x = IconData(58595, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-y".
+  /// "TIcons" named "letters-y".
   static const letters_y = IconData(58596, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "letters-z".
+  /// "TIcons" named "letters-z".
   static const letters_z = IconData(58597, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lightbulb-circle-filled".
+  /// "TIcons" named "lightbulb-circle-filled".
   static const lightbulb_circle_filled = IconData(58598, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lightbulb-circle".
+  /// "TIcons" named "lightbulb-circle".
   static const lightbulb_circle = IconData(58599, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lightbulb-filled".
+  /// "TIcons" named "lightbulb-filled".
   static const lightbulb_filled = IconData(58600, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lightbulb".
+  /// "TIcons" named "lightbulb".
   static const lightbulb = IconData(58601, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lighthouse-1-filled".
+  /// "TIcons" named "lighthouse-1-filled".
   static const lighthouse_1_filled = IconData(58602, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lighthouse-1".
+  /// "TIcons" named "lighthouse-1".
   static const lighthouse_1 = IconData(58603, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lighthouse-2-filled".
+  /// "TIcons" named "lighthouse-2-filled".
   static const lighthouse_2_filled = IconData(58604, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lighthouse-2".
+  /// "TIcons" named "lighthouse-2".
   static const lighthouse_2 = IconData(58605, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lighthouse-filled".
+  /// "TIcons" named "lighthouse-filled".
   static const lighthouse_filled = IconData(58606, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lighthouse".
+  /// "TIcons" named "lighthouse".
   static const lighthouse = IconData(58607, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lighting-circle-filled".
+  /// "TIcons" named "lighting-circle-filled".
   static const lighting_circle_filled = IconData(58608, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lighting-circle".
+  /// "TIcons" named "lighting-circle".
   static const lighting_circle = IconData(58609, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "line-height".
+  /// "TIcons" named "line-height".
   static const line_height = IconData(58610, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "link-1".
+  /// "TIcons" named "link-1".
   static const link_1 = IconData(58611, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "link-transform".
+  /// "TIcons" named "link-transform".
   static const link_transform = IconData(58612, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "link-unlink".
+  /// "TIcons" named "link-unlink".
   static const link_unlink = IconData(58613, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "link".
+  /// "TIcons" named "link".
   static const link = IconData(58614, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "liquor-filled".
+  /// "TIcons" named "liquor-filled".
   static const liquor_filled = IconData(58615, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "liquor".
+  /// "TIcons" named "liquor".
   static const liquor = IconData(58616, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "list-bug-filled".
+  /// "TIcons" named "list-bug-filled".
   static const list_bug_filled = IconData(58617, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "list-bug".
+  /// "TIcons" named "list-bug".
   static const list_bug = IconData(58618, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "list-demand".
+  /// "TIcons" named "list-demand".
   static const list_demand = IconData(58619, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "list-numbered".
+  /// "TIcons" named "list-numbered".
   static const list_numbered = IconData(58620, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "load".
+  /// "TIcons" named "load".
   static const load = IconData(58621, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "loading".
+  /// "TIcons" named "loading".
   static const loading = IconData(58622, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-1-filled".
+  /// "TIcons" named "location-1-filled".
   static const location_1_filled = IconData(58623, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-1".
+  /// "TIcons" named "location-1".
   static const location_1 = IconData(58624, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-enlargement-filled".
+  /// "TIcons" named "location-enlargement-filled".
   static const location_enlargement_filled = IconData(58625, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-enlargement".
+  /// "TIcons" named "location-enlargement".
   static const location_enlargement = IconData(58626, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-error-filled".
+  /// "TIcons" named "location-error-filled".
   static const location_error_filled = IconData(58627, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-error".
+  /// "TIcons" named "location-error".
   static const location_error = IconData(58628, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-filled".
+  /// "TIcons" named "location-filled".
   static const location_filled = IconData(58629, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-parking-place-filled".
+  /// "TIcons" named "location-parking-place-filled".
   static const location_parking_place_filled = IconData(58630, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-parking-place".
+  /// "TIcons" named "location-parking-place".
   static const location_parking_place = IconData(58631, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-reduction-filled".
+  /// "TIcons" named "location-reduction-filled".
   static const location_reduction_filled = IconData(58632, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-reduction".
+  /// "TIcons" named "location-reduction".
   static const location_reduction = IconData(58633, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-setting-filled".
+  /// "TIcons" named "location-setting-filled".
   static const location_setting_filled = IconData(58634, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location-setting".
+  /// "TIcons" named "location-setting".
   static const location_setting = IconData(58635, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "location".
+  /// "TIcons" named "location".
   static const location = IconData(58636, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lock-checked-filled".
+  /// "TIcons" named "lock-checked-filled".
   static const lock_checked_filled = IconData(58637, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lock-checked".
+  /// "TIcons" named "lock-checked".
   static const lock_checked = IconData(58638, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lock-off-filled".
+  /// "TIcons" named "lock-off-filled".
   static const lock_off_filled = IconData(58639, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lock-off".
+  /// "TIcons" named "lock-off".
   static const lock_off = IconData(58640, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lock-on-filled".
+  /// "TIcons" named "lock-on-filled".
   static const lock_on_filled = IconData(58641, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lock-on".
+  /// "TIcons" named "lock-on".
   static const lock_on = IconData(58642, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lock-time-filled".
+  /// "TIcons" named "lock-time-filled".
   static const lock_time_filled = IconData(58643, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "lock-time".
+  /// "TIcons" named "lock-time".
   static const lock_time = IconData(58644, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "login".
+  /// "TIcons" named "login".
   static const login = IconData(58645, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-adobe-illustrate-filled".
+  /// "TIcons" named "logo-adobe-illustrate-filled".
   static const logo_adobe_illustrate_filled = IconData(58646, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-adobe-illustrate".
+  /// "TIcons" named "logo-adobe-illustrate".
   static const logo_adobe_illustrate = IconData(58647, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-adobe-lightroom-filled".
+  /// "TIcons" named "logo-adobe-lightroom-filled".
   static const logo_adobe_lightroom_filled = IconData(58648, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-adobe-lightroom".
+  /// "TIcons" named "logo-adobe-lightroom".
   static const logo_adobe_lightroom = IconData(58649, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-adobe-photoshop-filled".
+  /// "TIcons" named "logo-adobe-photoshop-filled".
   static const logo_adobe_photoshop_filled = IconData(58650, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-adobe-photoshop".
+  /// "TIcons" named "logo-adobe-photoshop".
   static const logo_adobe_photoshop = IconData(58651, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-alipay-filled".
+  /// "TIcons" named "logo-alipay-filled".
   static const logo_alipay_filled = IconData(58652, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-alipay".
+  /// "TIcons" named "logo-alipay".
   static const logo_alipay = IconData(58653, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-android-filled".
+  /// "TIcons" named "logo-android-filled".
   static const logo_android_filled = IconData(58654, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-android".
+  /// "TIcons" named "logo-android".
   static const logo_android = IconData(58655, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-apple-filled".
+  /// "TIcons" named "logo-apple-filled".
   static const logo_apple_filled = IconData(58656, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-apple".
+  /// "TIcons" named "logo-apple".
   static const logo_apple = IconData(58657, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-behance-filled".
+  /// "TIcons" named "logo-behance-filled".
   static const logo_behance_filled = IconData(58658, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-behance".
+  /// "TIcons" named "logo-behance".
   static const logo_behance = IconData(58659, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-chrome-filled".
+  /// "TIcons" named "logo-chrome-filled".
   static const logo_chrome_filled = IconData(58660, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-chrome".
+  /// "TIcons" named "logo-chrome".
   static const logo_chrome = IconData(58661, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-cinema4d-filled".
+  /// "TIcons" named "logo-cinema4d-filled".
   static const logo_cinema4d_filled = IconData(58662, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-cinema4d".
+  /// "TIcons" named "logo-cinema4d".
   static const logo_cinema4d = IconData(58663, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-cnb-filled".
+  /// "TIcons" named "logo-cnb-filled".
   static const logo_cnb_filled = IconData(58664, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-cnb".
+  /// "TIcons" named "logo-cnb".
   static const logo_cnb = IconData(58665, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-codepen".
+  /// "TIcons" named "logo-codepen".
   static const logo_codepen = IconData(58666, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-codesandbox".
+  /// "TIcons" named "logo-codesandbox".
   static const logo_codesandbox = IconData(58667, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-codesign".
+  /// "TIcons" named "logo-codesign".
   static const logo_codesign = IconData(58668, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-dribbble-filled".
+  /// "TIcons" named "logo-dribbble-filled".
   static const logo_dribbble_filled = IconData(58669, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-dribbble".
+  /// "TIcons" named "logo-dribbble".
   static const logo_dribbble = IconData(58670, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-facebook-filled".
+  /// "TIcons" named "logo-facebook-filled".
   static const logo_facebook_filled = IconData(58671, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-facebook".
+  /// "TIcons" named "logo-facebook".
   static const logo_facebook = IconData(58672, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-figma-filled".
+  /// "TIcons" named "logo-figma-filled".
   static const logo_figma_filled = IconData(58673, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-figma".
+  /// "TIcons" named "logo-figma".
   static const logo_figma = IconData(58674, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-framer-filled".
+  /// "TIcons" named "logo-framer-filled".
   static const logo_framer_filled = IconData(58675, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-framer".
+  /// "TIcons" named "logo-framer".
   static const logo_framer = IconData(58676, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-github-filled".
+  /// "TIcons" named "logo-github-filled".
   static const logo_github_filled = IconData(58677, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-github".
+  /// "TIcons" named "logo-github".
   static const logo_github = IconData(58678, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-gitlab-filled".
+  /// "TIcons" named "logo-gitlab-filled".
   static const logo_gitlab_filled = IconData(58679, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-gitlab".
+  /// "TIcons" named "logo-gitlab".
   static const logo_gitlab = IconData(58680, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-hiflow-filled".
+  /// "TIcons" named "logo-hiflow-filled".
   static const logo_hiflow_filled = IconData(58681, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-hiflow".
+  /// "TIcons" named "logo-hiflow".
   static const logo_hiflow = IconData(58682, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-ie-filled".
+  /// "TIcons" named "logo-ie-filled".
   static const logo_ie_filled = IconData(58683, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-ie".
+  /// "TIcons" named "logo-ie".
   static const logo_ie = IconData(58684, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-instagram-filled".
+  /// "TIcons" named "logo-instagram-filled".
   static const logo_instagram_filled = IconData(58685, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-instagram".
+  /// "TIcons" named "logo-instagram".
   static const logo_instagram = IconData(58686, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-iwiki-filled".
+  /// "TIcons" named "logo-iwiki-filled".
   static const logo_iwiki_filled = IconData(58687, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-iwiki".
+  /// "TIcons" named "logo-iwiki".
   static const logo_iwiki = IconData(58688, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-markdown-filled".
+  /// "TIcons" named "logo-markdown-filled".
   static const logo_markdown_filled = IconData(58689, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-markdown".
+  /// "TIcons" named "logo-markdown".
   static const logo_markdown = IconData(58690, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-miniprogram-filled".
+  /// "TIcons" named "logo-miniprogram-filled".
   static const logo_miniprogram_filled = IconData(58691, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-miniprogram".
+  /// "TIcons" named "logo-miniprogram".
   static const logo_miniprogram = IconData(58692, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-qq-filled".
+  /// "TIcons" named "logo-qq-filled".
   static const logo_qq_filled = IconData(58693, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-qq".
+  /// "TIcons" named "logo-qq".
   static const logo_qq = IconData(58694, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-stackblitz-filled".
+  /// "TIcons" named "logo-stackblitz-filled".
   static const logo_stackblitz_filled = IconData(58695, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-stackblitz".
+  /// "TIcons" named "logo-stackblitz".
   static const logo_stackblitz = IconData(58696, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-tapd-filled".
+  /// "TIcons" named "logo-tapd-filled".
   static const logo_tapd_filled = IconData(58697, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-tapd".
+  /// "TIcons" named "logo-tapd".
   static const logo_tapd = IconData(58698, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-tbeacon-filled".
+  /// "TIcons" named "logo-tbeacon-filled".
   static const logo_tbeacon_filled = IconData(58699, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-tbeacon".
+  /// "TIcons" named "logo-tbeacon".
   static const logo_tbeacon = IconData(58700, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-tdesign-filled".
+  /// "TIcons" named "logo-tdesign-filled".
   static const logo_tdesign_filled = IconData(58701, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-tdesign".
+  /// "TIcons" named "logo-tdesign".
   static const logo_tdesign = IconData(58702, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-tencentcode".
+  /// "TIcons" named "logo-tencentcode".
   static const logo_tencentcode = IconData(58703, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-tencentmeeting-filled".
+  /// "TIcons" named "logo-tencentmeeting-filled".
   static const logo_tencentmeeting_filled = IconData(58704, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-tencentmeeting".
+  /// "TIcons" named "logo-tencentmeeting".
   static const logo_tencentmeeting = IconData(58705, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-twitter-filled".
+  /// "TIcons" named "logo-twitter-filled".
   static const logo_twitter_filled = IconData(58706, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-twitter".
+  /// "TIcons" named "logo-twitter".
   static const logo_twitter = IconData(58707, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-wechat-stroke-filled".
+  /// "TIcons" named "logo-wechat-stroke-filled".
   static const logo_wechat_stroke_filled = IconData(58708, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-wechat-stroke".
+  /// "TIcons" named "logo-wechat-stroke".
   static const logo_wechat_stroke = IconData(58709, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-wechat-workdocs-filled".
+  /// "TIcons" named "logo-wechat-workdocs-filled".
   static const logo_wechat_workdocs_filled = IconData(58710, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-wechat-workdocs".
+  /// "TIcons" named "logo-wechat-workdocs".
   static const logo_wechat_workdocs = IconData(58711, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-wechatpay-filled".
+  /// "TIcons" named "logo-wechatpay-filled".
   static const logo_wechatpay_filled = IconData(58712, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-wechatpay".
+  /// "TIcons" named "logo-wechatpay".
   static const logo_wechatpay = IconData(58713, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-wecom-filled".
+  /// "TIcons" named "logo-wecom-filled".
   static const logo_wecom_filled = IconData(58714, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-wecom".
+  /// "TIcons" named "logo-wecom".
   static const logo_wecom = IconData(58715, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-windows-filled".
+  /// "TIcons" named "logo-windows-filled".
   static const logo_windows_filled = IconData(58716, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-windows".
+  /// "TIcons" named "logo-windows".
   static const logo_windows = IconData(58717, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-xiaomareport-filled".
+  /// "TIcons" named "logo-xiaomareport-filled".
   static const logo_xiaomareport_filled = IconData(58718, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-xiaomareport".
+  /// "TIcons" named "logo-xiaomareport".
   static const logo_xiaomareport = IconData(58719, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-youtube-filled".
+  /// "TIcons" named "logo-youtube-filled".
   static const logo_youtube_filled = IconData(58720, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logo-youtube".
+  /// "TIcons" named "logo-youtube".
   static const logo_youtube = IconData(58721, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "logout".
+  /// "TIcons" named "logout".
   static const logout = IconData(58722, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "look-around-filled".
+  /// "TIcons" named "look-around-filled".
   static const look_around_filled = IconData(58723, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "look-around".
+  /// "TIcons" named "look-around".
   static const look_around = IconData(58724, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "loudspeaker-filled".
+  /// "TIcons" named "loudspeaker-filled".
   static const loudspeaker_filled = IconData(58725, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "loudspeaker".
+  /// "TIcons" named "loudspeaker".
   static const loudspeaker = IconData(58726, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mail-filled".
+  /// "TIcons" named "mail-filled".
   static const mail_filled = IconData(58727, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mail".
+  /// "TIcons" named "mail".
   static const mail = IconData(58728, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-3d-filled".
+  /// "TIcons" named "map-3d-filled".
   static const map_3d_filled = IconData(58729, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-3d".
+  /// "TIcons" named "map-3d".
   static const map_3d = IconData(58730, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-add-filled".
+  /// "TIcons" named "map-add-filled".
   static const map_add_filled = IconData(58731, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-add".
+  /// "TIcons" named "map-add".
   static const map_add = IconData(58732, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-aiming-filled".
+  /// "TIcons" named "map-aiming-filled".
   static const map_aiming_filled = IconData(58733, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-aiming".
+  /// "TIcons" named "map-aiming".
   static const map_aiming = IconData(58734, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-blocked-filled".
+  /// "TIcons" named "map-blocked-filled".
   static const map_blocked_filled = IconData(58735, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-blocked".
+  /// "TIcons" named "map-blocked".
   static const map_blocked = IconData(58736, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-bubble-filled".
+  /// "TIcons" named "map-bubble-filled".
   static const map_bubble_filled = IconData(58737, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-bubble".
+  /// "TIcons" named "map-bubble".
   static const map_bubble = IconData(58738, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-cancel-filled".
+  /// "TIcons" named "map-cancel-filled".
   static const map_cancel_filled = IconData(58739, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-cancel".
+  /// "TIcons" named "map-cancel".
   static const map_cancel = IconData(58740, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-chat-filled".
+  /// "TIcons" named "map-chat-filled".
   static const map_chat_filled = IconData(58741, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-chat".
+  /// "TIcons" named "map-chat".
   static const map_chat = IconData(58742, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-checked-filled".
+  /// "TIcons" named "map-checked-filled".
   static const map_checked_filled = IconData(58743, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-checked".
+  /// "TIcons" named "map-checked".
   static const map_checked = IconData(58744, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-collection-filled".
+  /// "TIcons" named "map-collection-filled".
   static const map_collection_filled = IconData(58745, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-collection".
+  /// "TIcons" named "map-collection".
   static const map_collection = IconData(58746, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-connection-filled".
+  /// "TIcons" named "map-connection-filled".
   static const map_connection_filled = IconData(58747, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-connection".
+  /// "TIcons" named "map-connection".
   static const map_connection = IconData(58748, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-distance-filled".
+  /// "TIcons" named "map-distance-filled".
   static const map_distance_filled = IconData(58749, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-distance".
+  /// "TIcons" named "map-distance".
   static const map_distance = IconData(58750, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-double-filled".
+  /// "TIcons" named "map-double-filled".
   static const map_double_filled = IconData(58751, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-double".
+  /// "TIcons" named "map-double".
   static const map_double = IconData(58752, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-edit-filled".
+  /// "TIcons" named "map-edit-filled".
   static const map_edit_filled = IconData(58753, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-edit".
+  /// "TIcons" named "map-edit".
   static const map_edit = IconData(58754, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-filled".
+  /// "TIcons" named "map-filled".
   static const map_filled = IconData(58755, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-grid-filled".
+  /// "TIcons" named "map-grid-filled".
   static const map_grid_filled = IconData(58756, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-grid".
+  /// "TIcons" named "map-grid".
   static const map_grid = IconData(58757, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-information-1-filled".
+  /// "TIcons" named "map-information-1-filled".
   static const map_information_1_filled = IconData(58758, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-information-1".
+  /// "TIcons" named "map-information-1".
   static const map_information_1 = IconData(58759, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-information-2-filled".
+  /// "TIcons" named "map-information-2-filled".
   static const map_information_2_filled = IconData(58760, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-information-2".
+  /// "TIcons" named "map-information-2".
   static const map_information_2 = IconData(58761, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-information-filled".
+  /// "TIcons" named "map-information-filled".
   static const map_information_filled = IconData(58762, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-information".
+  /// "TIcons" named "map-information".
   static const map_information = IconData(58763, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-location-filled".
+  /// "TIcons" named "map-location-filled".
   static const map_location_filled = IconData(58764, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-location".
+  /// "TIcons" named "map-location".
   static const map_location = IconData(58765, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-locked-filled".
+  /// "TIcons" named "map-locked-filled".
   static const map_locked_filled = IconData(58766, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-locked".
+  /// "TIcons" named "map-locked".
   static const map_locked = IconData(58767, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-marked-filled".
+  /// "TIcons" named "map-marked-filled".
   static const map_marked_filled = IconData(58768, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-marked".
+  /// "TIcons" named "map-marked".
   static const map_marked = IconData(58769, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-navigation-filled".
+  /// "TIcons" named "map-navigation-filled".
   static const map_navigation_filled = IconData(58770, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-navigation".
+  /// "TIcons" named "map-navigation".
   static const map_navigation = IconData(58771, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-outline-filled".
+  /// "TIcons" named "map-outline-filled".
   static const map_outline_filled = IconData(58772, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-outline".
+  /// "TIcons" named "map-outline".
   static const map_outline = IconData(58773, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-route-planning-filled".
+  /// "TIcons" named "map-route-planning-filled".
   static const map_route_planning_filled = IconData(58774, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-route-planning".
+  /// "TIcons" named "map-route-planning".
   static const map_route_planning = IconData(58775, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-ruler-filled".
+  /// "TIcons" named "map-ruler-filled".
   static const map_ruler_filled = IconData(58776, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-ruler".
+  /// "TIcons" named "map-ruler".
   static const map_ruler = IconData(58777, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-safety-filled".
+  /// "TIcons" named "map-safety-filled".
   static const map_safety_filled = IconData(58778, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-safety".
+  /// "TIcons" named "map-safety".
   static const map_safety = IconData(58779, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-search-1-filled".
+  /// "TIcons" named "map-search-1-filled".
   static const map_search_1_filled = IconData(58780, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-search-1".
+  /// "TIcons" named "map-search-1".
   static const map_search_1 = IconData(58781, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-search-filled".
+  /// "TIcons" named "map-search-filled".
   static const map_search_filled = IconData(58782, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-search".
+  /// "TIcons" named "map-search".
   static const map_search = IconData(58783, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-setting-filled".
+  /// "TIcons" named "map-setting-filled".
   static const map_setting_filled = IconData(58784, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-setting".
+  /// "TIcons" named "map-setting".
   static const map_setting = IconData(58785, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-unlocked-filled".
+  /// "TIcons" named "map-unlocked-filled".
   static const map_unlocked_filled = IconData(58786, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map-unlocked".
+  /// "TIcons" named "map-unlocked".
   static const map_unlocked = IconData(58787, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "map".
+  /// "TIcons" named "map".
   static const map = IconData(58788, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mark-as-unread-filled".
+  /// "TIcons" named "mark-as-unread-filled".
   static const mark_as_unread_filled = IconData(58789, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mark-as-unread".
+  /// "TIcons" named "mark-as-unread".
   static const mark_as_unread = IconData(58790, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "markup-filled".
+  /// "TIcons" named "markup-filled".
   static const markup_filled = IconData(58791, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "markup".
+  /// "TIcons" named "markup".
   static const markup = IconData(58792, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mathematics-filled".
+  /// "TIcons" named "mathematics-filled".
   static const mathematics_filled = IconData(58793, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mathematics".
+  /// "TIcons" named "mathematics".
   static const mathematics = IconData(58794, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "measurement-1-filled".
+  /// "TIcons" named "measurement-1-filled".
   static const measurement_1_filled = IconData(58795, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "measurement-1".
+  /// "TIcons" named "measurement-1".
   static const measurement_1 = IconData(58796, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "measurement-2-filled".
+  /// "TIcons" named "measurement-2-filled".
   static const measurement_2_filled = IconData(58797, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "measurement-2".
+  /// "TIcons" named "measurement-2".
   static const measurement_2 = IconData(58798, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "measurement-filled".
+  /// "TIcons" named "measurement-filled".
   static const measurement_filled = IconData(58799, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "measurement".
+  /// "TIcons" named "measurement".
   static const measurement = IconData(58800, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "meat-pepper-filled".
+  /// "TIcons" named "meat-pepper-filled".
   static const meat_pepper_filled = IconData(58801, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "meat-pepper".
+  /// "TIcons" named "meat-pepper".
   static const meat_pepper = IconData(58802, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "media-library-filled".
+  /// "TIcons" named "media-library-filled".
   static const media_library_filled = IconData(58803, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "media-library".
+  /// "TIcons" named "media-library".
   static const media_library = IconData(58804, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "member-filled".
+  /// "TIcons" named "member-filled".
   static const member_filled = IconData(58805, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "member".
+  /// "TIcons" named "member".
   static const member = IconData(58806, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mentioned-filled".
+  /// "TIcons" named "mentioned-filled".
   static const mentioned_filled = IconData(58807, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mentioned".
+  /// "TIcons" named "mentioned".
   static const mentioned = IconData(58808, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "menu-application".
+  /// "TIcons" named "menu-application".
   static const menu_application = IconData(58809, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "menu-filled".
+  /// "TIcons" named "menu-filled".
   static const menu_filled = IconData(58810, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "menu-fold".
+  /// "TIcons" named "menu-fold".
   static const menu_fold = IconData(58811, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "menu-unfold".
+  /// "TIcons" named "menu-unfold".
   static const menu_unfold = IconData(58812, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "menu".
+  /// "TIcons" named "menu".
   static const menu = IconData(58813, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "merge-cells-filled".
+  /// "TIcons" named "merge-cells-filled".
   static const merge_cells_filled = IconData(58814, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "merge-cells".
+  /// "TIcons" named "merge-cells".
   static const merge_cells = IconData(58815, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mermaid-filled".
+  /// "TIcons" named "mermaid-filled".
   static const mermaid_filled = IconData(58816, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mermaid".
+  /// "TIcons" named "mermaid".
   static const mermaid = IconData(58817, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "microphone-1-filled".
+  /// "TIcons" named "microphone-1-filled".
   static const microphone_1_filled = IconData(58818, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "microphone-1".
+  /// "TIcons" named "microphone-1".
   static const microphone_1 = IconData(58819, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "microphone-2-filled".
+  /// "TIcons" named "microphone-2-filled".
   static const microphone_2_filled = IconData(58820, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "microphone-2".
+  /// "TIcons" named "microphone-2".
   static const microphone_2 = IconData(58821, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "microphone-filled".
+  /// "TIcons" named "microphone-filled".
   static const microphone_filled = IconData(58822, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "microphone".
+  /// "TIcons" named "microphone".
   static const microphone = IconData(58823, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "milk-filled".
+  /// "TIcons" named "milk-filled".
   static const milk_filled = IconData(58824, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "milk".
+  /// "TIcons" named "milk".
   static const milk = IconData(58825, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mind-map-filled".
+  /// "TIcons" named "mind-map-filled".
   static const mind_map_filled = IconData(58826, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mind-map".
+  /// "TIcons" named "mind-map".
   static const mind_map = IconData(58827, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "minus-circle-filled".
+  /// "TIcons" named "minus-circle-filled".
   static const minus_circle_filled = IconData(58828, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "minus-circle".
+  /// "TIcons" named "minus-circle".
   static const minus_circle = IconData(58829, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "minus-rectangle-filled".
+  /// "TIcons" named "minus-rectangle-filled".
   static const minus_rectangle_filled = IconData(58830, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "minus-rectangle".
+  /// "TIcons" named "minus-rectangle".
   static const minus_rectangle = IconData(58831, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "minus".
+  /// "TIcons" named "minus".
   static const minus = IconData(58832, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mirror-filled".
+  /// "TIcons" named "mirror-filled".
   static const mirror_filled = IconData(58833, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mirror".
+  /// "TIcons" named "mirror".
   static const mirror = IconData(58834, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile-blocked-filled".
+  /// "TIcons" named "mobile-blocked-filled".
   static const mobile_blocked_filled = IconData(58835, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile-blocked".
+  /// "TIcons" named "mobile-blocked".
   static const mobile_blocked = IconData(58836, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile-filled".
+  /// "TIcons" named "mobile-filled".
   static const mobile_filled = IconData(58837, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile-list-filled".
+  /// "TIcons" named "mobile-list-filled".
   static const mobile_list_filled = IconData(58838, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile-list".
+  /// "TIcons" named "mobile-list".
   static const mobile_list = IconData(58839, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile-navigation-filled".
+  /// "TIcons" named "mobile-navigation-filled".
   static const mobile_navigation_filled = IconData(58840, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile-navigation".
+  /// "TIcons" named "mobile-navigation".
   static const mobile_navigation = IconData(58841, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile-shortcut-filled".
+  /// "TIcons" named "mobile-shortcut-filled".
   static const mobile_shortcut_filled = IconData(58842, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile-shortcut".
+  /// "TIcons" named "mobile-shortcut".
   static const mobile_shortcut = IconData(58843, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile-vibrate-filled".
+  /// "TIcons" named "mobile-vibrate-filled".
   static const mobile_vibrate_filled = IconData(58844, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile-vibrate".
+  /// "TIcons" named "mobile-vibrate".
   static const mobile_vibrate = IconData(58845, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mobile".
+  /// "TIcons" named "mobile".
   static const mobile = IconData(58846, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mode-dark-filled".
+  /// "TIcons" named "mode-dark-filled".
   static const mode_dark_filled = IconData(58847, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mode-dark".
+  /// "TIcons" named "mode-dark".
   static const mode_dark = IconData(58848, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mode-embedding-filled".
+  /// "TIcons" named "mode-embedding-filled".
   static const mode_embedding_filled = IconData(58849, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mode-embedding".
+  /// "TIcons" named "mode-embedding".
   static const mode_embedding = IconData(58850, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mode-light-filled".
+  /// "TIcons" named "mode-light-filled".
   static const mode_light_filled = IconData(58851, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mode-light".
+  /// "TIcons" named "mode-light".
   static const mode_light = IconData(58852, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mode-preview-filled".
+  /// "TIcons" named "mode-preview-filled".
   static const mode_preview_filled = IconData(58853, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mode-preview".
+  /// "TIcons" named "mode-preview".
   static const mode_preview = IconData(58854, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mode-text-filled".
+  /// "TIcons" named "mode-text-filled".
   static const mode_text_filled = IconData(58855, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mode-text".
+  /// "TIcons" named "mode-text".
   static const mode_text = IconData(58856, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "module-filled".
+  /// "TIcons" named "module-filled".
   static const module_filled = IconData(58857, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "module".
+  /// "TIcons" named "module".
   static const module = IconData(58858, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "money-filled".
+  /// "TIcons" named "money-filled".
   static const money_filled = IconData(58859, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "money".
+  /// "TIcons" named "money".
   static const money = IconData(58860, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "monument-filled".
+  /// "TIcons" named "monument-filled".
   static const monument_filled = IconData(58861, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "monument".
+  /// "TIcons" named "monument".
   static const monument = IconData(58862, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "moon-fall-filled".
+  /// "TIcons" named "moon-fall-filled".
   static const moon_fall_filled = IconData(58863, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "moon-fall".
+  /// "TIcons" named "moon-fall".
   static const moon_fall = IconData(58864, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "moon-filled".
+  /// "TIcons" named "moon-filled".
   static const moon_filled = IconData(58865, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "moon-rising-filled".
+  /// "TIcons" named "moon-rising-filled".
   static const moon_rising_filled = IconData(58866, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "moon-rising".
+  /// "TIcons" named "moon-rising".
   static const moon_rising = IconData(58867, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "moon".
+  /// "TIcons" named "moon".
   static const moon = IconData(58868, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "more".
+  /// "TIcons" named "more".
   static const more = IconData(58869, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mosaic-filled".
+  /// "TIcons" named "mosaic-filled".
   static const mosaic_filled = IconData(58870, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mosaic".
+  /// "TIcons" named "mosaic".
   static const mosaic = IconData(58871, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mosque-1-filled".
+  /// "TIcons" named "mosque-1-filled".
   static const mosque_1_filled = IconData(58872, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mosque-1".
+  /// "TIcons" named "mosque-1".
   static const mosque_1 = IconData(58873, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mosque-filled".
+  /// "TIcons" named "mosque-filled".
   static const mosque_filled = IconData(58874, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mosque".
+  /// "TIcons" named "mosque".
   static const mosque = IconData(58875, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mouse-filled".
+  /// "TIcons" named "mouse-filled".
   static const mouse_filled = IconData(58876, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mouse".
+  /// "TIcons" named "mouse".
   static const mouse = IconData(58877, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "move-1".
+  /// "TIcons" named "move-1".
   static const move_1 = IconData(58878, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "move".
+  /// "TIcons" named "move".
   static const move = IconData(58879, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "movie-clapper-filled".
+  /// "TIcons" named "movie-clapper-filled".
   static const movie_clapper_filled = IconData(58880, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "movie-clapper".
+  /// "TIcons" named "movie-clapper".
   static const movie_clapper = IconData(58881, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "multiply".
+  /// "TIcons" named "multiply".
   static const multiply = IconData(58882, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "museum-1-filled".
+  /// "TIcons" named "museum-1-filled".
   static const museum_1_filled = IconData(58883, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "museum-1".
+  /// "TIcons" named "museum-1".
   static const museum_1 = IconData(58884, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "museum-2-filled".
+  /// "TIcons" named "museum-2-filled".
   static const museum_2_filled = IconData(58885, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "museum-2".
+  /// "TIcons" named "museum-2".
   static const museum_2 = IconData(58886, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "museum-filled".
+  /// "TIcons" named "museum-filled".
   static const museum_filled = IconData(58887, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "museum".
+  /// "TIcons" named "museum".
   static const museum = IconData(58888, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mushroom-1-filled".
+  /// "TIcons" named "mushroom-1-filled".
   static const mushroom_1_filled = IconData(58889, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mushroom-1".
+  /// "TIcons" named "mushroom-1".
   static const mushroom_1 = IconData(58890, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mushroom-filled".
+  /// "TIcons" named "mushroom-filled".
   static const mushroom_filled = IconData(58891, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "mushroom".
+  /// "TIcons" named "mushroom".
   static const mushroom = IconData(58892, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "music-1-filled".
+  /// "TIcons" named "music-1-filled".
   static const music_1_filled = IconData(58893, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "music-1".
+  /// "TIcons" named "music-1".
   static const music_1 = IconData(58894, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "music-2-filled".
+  /// "TIcons" named "music-2-filled".
   static const music_2_filled = IconData(58895, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "music-2".
+  /// "TIcons" named "music-2".
   static const music_2 = IconData(58896, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "music-filled".
+  /// "TIcons" named "music-filled".
   static const music_filled = IconData(58897, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "music-rectangle-add-filled".
+  /// "TIcons" named "music-rectangle-add-filled".
   static const music_rectangle_add_filled = IconData(58898, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "music-rectangle-add".
+  /// "TIcons" named "music-rectangle-add".
   static const music_rectangle_add = IconData(58899, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "music".
+  /// "TIcons" named "music".
   static const music = IconData(58900, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "navigation-arrow-filled".
+  /// "TIcons" named "navigation-arrow-filled".
   static const navigation_arrow_filled = IconData(58901, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "navigation-arrow".
+  /// "TIcons" named "navigation-arrow".
   static const navigation_arrow = IconData(58902, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "next-filled".
+  /// "TIcons" named "next-filled".
   static const next_filled = IconData(58903, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "next".
+  /// "TIcons" named "next".
   static const next = IconData(58904, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "no-expression-filled".
+  /// "TIcons" named "no-expression-filled".
   static const no_expression_filled = IconData(58905, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "no-expression".
+  /// "TIcons" named "no-expression".
   static const no_expression = IconData(58906, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "no-result-filled".
+  /// "TIcons" named "no-result-filled".
   static const no_result_filled = IconData(58907, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "no-result".
+  /// "TIcons" named "no-result".
   static const no_result = IconData(58908, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "noodle-filled".
+  /// "TIcons" named "noodle-filled".
   static const noodle_filled = IconData(58909, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "noodle".
+  /// "TIcons" named "noodle".
   static const noodle = IconData(58910, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "notification-add-filled".
+  /// "TIcons" named "notification-add-filled".
   static const notification_add_filled = IconData(58911, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "notification-add".
+  /// "TIcons" named "notification-add".
   static const notification_add = IconData(58912, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "notification-circle-filled".
+  /// "TIcons" named "notification-circle-filled".
   static const notification_circle_filled = IconData(58913, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "notification-circle".
+  /// "TIcons" named "notification-circle".
   static const notification_circle = IconData(58914, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "notification-error-filled".
+  /// "TIcons" named "notification-error-filled".
   static const notification_error_filled = IconData(58915, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "notification-error".
+  /// "TIcons" named "notification-error".
   static const notification_error = IconData(58916, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "notification-filled".
+  /// "TIcons" named "notification-filled".
   static const notification_filled = IconData(58917, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "notification".
+  /// "TIcons" named "notification".
   static const notification = IconData(58918, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-0-1".
+  /// "TIcons" named "numbers-0-1".
   static const numbers_0_1 = IconData(58919, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-0".
+  /// "TIcons" named "numbers-0".
   static const numbers_0 = IconData(58920, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-1-1".
+  /// "TIcons" named "numbers-1-1".
   static const numbers_1_1 = IconData(58921, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-1".
+  /// "TIcons" named "numbers-1".
   static const numbers_1 = IconData(58922, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-2-1".
+  /// "TIcons" named "numbers-2-1".
   static const numbers_2_1 = IconData(58923, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-2".
+  /// "TIcons" named "numbers-2".
   static const numbers_2 = IconData(58924, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-3-1".
+  /// "TIcons" named "numbers-3-1".
   static const numbers_3_1 = IconData(58925, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-3".
+  /// "TIcons" named "numbers-3".
   static const numbers_3 = IconData(58926, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-4-1".
+  /// "TIcons" named "numbers-4-1".
   static const numbers_4_1 = IconData(58927, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-4".
+  /// "TIcons" named "numbers-4".
   static const numbers_4 = IconData(58928, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-5-1".
+  /// "TIcons" named "numbers-5-1".
   static const numbers_5_1 = IconData(58929, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-5".
+  /// "TIcons" named "numbers-5".
   static const numbers_5 = IconData(58930, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-6-1".
+  /// "TIcons" named "numbers-6-1".
   static const numbers_6_1 = IconData(58931, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-6".
+  /// "TIcons" named "numbers-6".
   static const numbers_6 = IconData(58932, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-7-1".
+  /// "TIcons" named "numbers-7-1".
   static const numbers_7_1 = IconData(58933, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-7".
+  /// "TIcons" named "numbers-7".
   static const numbers_7 = IconData(58934, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-8-1".
+  /// "TIcons" named "numbers-8-1".
   static const numbers_8_1 = IconData(58935, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-8".
+  /// "TIcons" named "numbers-8".
   static const numbers_8 = IconData(58936, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-9-1".
+  /// "TIcons" named "numbers-9-1".
   static const numbers_9_1 = IconData(58937, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-9".
+  /// "TIcons" named "numbers-9".
   static const numbers_9 = IconData(58938, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-circle-1-filled".
+  /// "TIcons" named "numbers-circle-1-filled".
   static const numbers_circle_1_filled = IconData(58939, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-circle-1".
+  /// "TIcons" named "numbers-circle-1".
   static const numbers_circle_1 = IconData(58940, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-circle-2-filled".
+  /// "TIcons" named "numbers-circle-2-filled".
   static const numbers_circle_2_filled = IconData(58941, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-circle-2".
+  /// "TIcons" named "numbers-circle-2".
   static const numbers_circle_2 = IconData(58942, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-circle-3-filled".
+  /// "TIcons" named "numbers-circle-3-filled".
   static const numbers_circle_3_filled = IconData(58943, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-circle-3".
+  /// "TIcons" named "numbers-circle-3".
   static const numbers_circle_3 = IconData(58944, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-circle-4-filled".
+  /// "TIcons" named "numbers-circle-4-filled".
   static const numbers_circle_4_filled = IconData(58945, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "numbers-circle-4".
+  /// "TIcons" named "numbers-circle-4".
   static const numbers_circle_4 = IconData(58946, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "nut-filled".
+  /// "TIcons" named "nut-filled".
   static const nut_filled = IconData(58947, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "nut".
+  /// "TIcons" named "nut".
   static const nut = IconData(58948, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "object-storage".
+  /// "TIcons" named "object-storage".
   static const object_storage = IconData(58949, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "open-mouth-filled".
+  /// "TIcons" named "open-mouth-filled".
   static const open_mouth_filled = IconData(58950, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "open-mouth".
+  /// "TIcons" named "open-mouth".
   static const open_mouth = IconData(58951, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "opera-filled".
+  /// "TIcons" named "opera-filled".
   static const opera_filled = IconData(58952, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "opera".
+  /// "TIcons" named "opera".
   static const opera = IconData(58953, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "order-adjustment-column".
+  /// "TIcons" named "order-adjustment-column".
   static const order_adjustment_column = IconData(58954, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "order-ascending".
+  /// "TIcons" named "order-ascending".
   static const order_ascending = IconData(58955, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "order-descending".
+  /// "TIcons" named "order-descending".
   static const order_descending = IconData(58956, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "order-list".
+  /// "TIcons" named "order-list".
   static const order_list = IconData(58957, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "order".
+  /// "TIcons" named "order".
   static const order = IconData(58958, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "outbox-filled".
+  /// "TIcons" named "outbox-filled".
   static const outbox_filled = IconData(58959, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "outbox".
+  /// "TIcons" named "outbox".
   static const outbox = IconData(58960, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "page-first".
+  /// "TIcons" named "page-first".
   static const page_first = IconData(58961, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "page-head-filled".
+  /// "TIcons" named "page-head-filled".
   static const page_head_filled = IconData(58962, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "page-head".
+  /// "TIcons" named "page-head".
   static const page_head = IconData(58963, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "page-included-filled".
+  /// "TIcons" named "page-included-filled".
   static const page_included_filled = IconData(58964, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "page-included".
+  /// "TIcons" named "page-included".
   static const page_included = IconData(58965, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "page-last".
+  /// "TIcons" named "page-last".
   static const page_last = IconData(58966, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "page-tab-filled".
+  /// "TIcons" named "page-tab-filled".
   static const page_tab_filled = IconData(58967, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "page-tab".
+  /// "TIcons" named "page-tab".
   static const page_tab = IconData(58968, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palace-1-filled".
+  /// "TIcons" named "palace-1-filled".
   static const palace_1_filled = IconData(58969, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palace-1".
+  /// "TIcons" named "palace-1".
   static const palace_1 = IconData(58970, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palace-2-filled".
+  /// "TIcons" named "palace-2-filled".
   static const palace_2_filled = IconData(58971, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palace-2".
+  /// "TIcons" named "palace-2".
   static const palace_2 = IconData(58972, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palace-3-filled".
+  /// "TIcons" named "palace-3-filled".
   static const palace_3_filled = IconData(58973, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palace-3".
+  /// "TIcons" named "palace-3".
   static const palace_3 = IconData(58974, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palace-4-filled".
+  /// "TIcons" named "palace-4-filled".
   static const palace_4_filled = IconData(58975, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palace-4".
+  /// "TIcons" named "palace-4".
   static const palace_4 = IconData(58976, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palace-filled".
+  /// "TIcons" named "palace-filled".
   static const palace_filled = IconData(58977, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palace".
+  /// "TIcons" named "palace".
   static const palace = IconData(58978, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palette-1-filled".
+  /// "TIcons" named "palette-1-filled".
   static const palette_1_filled = IconData(58979, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palette-1".
+  /// "TIcons" named "palette-1".
   static const palette_1 = IconData(58980, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palette-filled".
+  /// "TIcons" named "palette-filled".
   static const palette_filled = IconData(58981, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "palette".
+  /// "TIcons" named "palette".
   static const palette = IconData(58982, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "panorama-horizontal-filled".
+  /// "TIcons" named "panorama-horizontal-filled".
   static const panorama_horizontal_filled = IconData(58983, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "panorama-horizontal".
+  /// "TIcons" named "panorama-horizontal".
   static const panorama_horizontal = IconData(58984, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "panorama-vertical-filled".
+  /// "TIcons" named "panorama-vertical-filled".
   static const panorama_vertical_filled = IconData(58985, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "panorama-vertical".
+  /// "TIcons" named "panorama-vertical".
   static const panorama_vertical = IconData(58986, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pantone-filled".
+  /// "TIcons" named "pantone-filled".
   static const pantone_filled = IconData(58987, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pantone".
+  /// "TIcons" named "pantone".
   static const pantone = IconData(58988, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "parabola".
+  /// "TIcons" named "parabola".
   static const parabola = IconData(58989, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "parentheses".
+  /// "TIcons" named "parentheses".
   static const parentheses = IconData(58990, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "paste-filled".
+  /// "TIcons" named "paste-filled".
   static const paste_filled = IconData(58991, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "paste".
+  /// "TIcons" named "paste".
   static const paste = IconData(58992, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "patio-filled".
+  /// "TIcons" named "patio-filled".
   static const patio_filled = IconData(58993, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "patio".
+  /// "TIcons" named "patio".
   static const patio = IconData(58994, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pause-circle-filled".
+  /// "TIcons" named "pause-circle-filled".
   static const pause_circle_filled = IconData(58995, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pause-circle-stroke-filled".
+  /// "TIcons" named "pause-circle-stroke-filled".
   static const pause_circle_stroke_filled = IconData(58996, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pause-circle-stroke".
+  /// "TIcons" named "pause-circle-stroke".
   static const pause_circle_stroke = IconData(58997, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pause-circle".
+  /// "TIcons" named "pause-circle".
   static const pause_circle = IconData(58998, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pause".
+  /// "TIcons" named "pause".
   static const pause = IconData(58999, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pea-filled".
+  /// "TIcons" named "pea-filled".
   static const pea_filled = IconData(59000, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pea".
+  /// "TIcons" named "pea".
   static const pea = IconData(59001, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "peach-filled".
+  /// "TIcons" named "peach-filled".
   static const peach_filled = IconData(59002, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "peach".
+  /// "TIcons" named "peach".
   static const peach = IconData(59003, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pear-filled".
+  /// "TIcons" named "pear-filled".
   static const pear_filled = IconData(59004, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pear".
+  /// "TIcons" named "pear".
   static const pear = IconData(59005, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pearl-of-the-orient-filled".
+  /// "TIcons" named "pearl-of-the-orient-filled".
   static const pearl_of_the_orient_filled = IconData(59006, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pearl-of-the-orient".
+  /// "TIcons" named "pearl-of-the-orient".
   static const pearl_of_the_orient = IconData(59007, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen-ball-filled".
+  /// "TIcons" named "pen-ball-filled".
   static const pen_ball_filled = IconData(59008, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen-ball".
+  /// "TIcons" named "pen-ball".
   static const pen_ball = IconData(59009, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen-brush-filled".
+  /// "TIcons" named "pen-brush-filled".
   static const pen_brush_filled = IconData(59010, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen-brush".
+  /// "TIcons" named "pen-brush".
   static const pen_brush = IconData(59011, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen-filled".
+  /// "TIcons" named "pen-filled".
   static const pen_filled = IconData(59012, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen-fluorescence-filled".
+  /// "TIcons" named "pen-fluorescence-filled".
   static const pen_fluorescence_filled = IconData(59013, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen-fluorescence".
+  /// "TIcons" named "pen-fluorescence".
   static const pen_fluorescence = IconData(59014, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen-mark-filled".
+  /// "TIcons" named "pen-mark-filled".
   static const pen_mark_filled = IconData(59015, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen-mark".
+  /// "TIcons" named "pen-mark".
   static const pen_mark = IconData(59016, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen-quill-filled".
+  /// "TIcons" named "pen-quill-filled".
   static const pen_quill_filled = IconData(59017, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen-quill".
+  /// "TIcons" named "pen-quill".
   static const pen_quill = IconData(59018, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pen".
+  /// "TIcons" named "pen".
   static const pen = IconData(59019, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pending-filled".
+  /// "TIcons" named "pending-filled".
   static const pending_filled = IconData(59020, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pending".
+  /// "TIcons" named "pending".
   static const pending = IconData(59021, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "percent".
+  /// "TIcons" named "percent".
   static const percent = IconData(59022, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "personal-information-filled".
+  /// "TIcons" named "personal-information-filled".
   static const personal_information_filled = IconData(59023, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "personal-information".
+  /// "TIcons" named "personal-information".
   static const personal_information = IconData(59024, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "phone-locked-filled".
+  /// "TIcons" named "phone-locked-filled".
   static const phone_locked_filled = IconData(59025, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "phone-locked".
+  /// "TIcons" named "phone-locked".
   static const phone_locked = IconData(59026, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "phone-search-filled".
+  /// "TIcons" named "phone-search-filled".
   static const phone_search_filled = IconData(59027, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "phone-search".
+  /// "TIcons" named "phone-search".
   static const phone_search = IconData(59028, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pi".
+  /// "TIcons" named "pi".
   static const pi = IconData(59029, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "piano-filled".
+  /// "TIcons" named "piano-filled".
   static const piano_filled = IconData(59030, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "piano".
+  /// "TIcons" named "piano".
   static const piano = IconData(59031, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pin-filled".
+  /// "TIcons" named "pin-filled".
   static const pin_filled = IconData(59032, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pin".
+  /// "TIcons" named "pin".
   static const pin = IconData(59033, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "placeholder-filled".
+  /// "TIcons" named "placeholder-filled".
   static const placeholder_filled = IconData(59034, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "placeholder".
+  /// "TIcons" named "placeholder".
   static const placeholder = IconData(59035, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "plantuml-filled".
+  /// "TIcons" named "plantuml-filled".
   static const plantuml_filled = IconData(59036, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "plantuml".
+  /// "TIcons" named "plantuml".
   static const plantuml = IconData(59037, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-chart-filled".
+  /// "TIcons" named "play-chart-filled".
   static const play_chart_filled = IconData(59038, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-chart".
+  /// "TIcons" named "play-chart".
   static const play_chart = IconData(59039, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-circle-filled".
+  /// "TIcons" named "play-circle-filled".
   static const play_circle_filled = IconData(59040, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-circle-stroke-add-filled".
+  /// "TIcons" named "play-circle-stroke-add-filled".
   static const play_circle_stroke_add_filled = IconData(59041, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-circle-stroke-add".
+  /// "TIcons" named "play-circle-stroke-add".
   static const play_circle_stroke_add = IconData(59042, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-circle-stroke-filled".
+  /// "TIcons" named "play-circle-stroke-filled".
   static const play_circle_stroke_filled = IconData(59043, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-circle-stroke".
+  /// "TIcons" named "play-circle-stroke".
   static const play_circle_stroke = IconData(59044, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-circle".
+  /// "TIcons" named "play-circle".
   static const play_circle = IconData(59045, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-demo-filled".
+  /// "TIcons" named "play-demo-filled".
   static const play_demo_filled = IconData(59046, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-demo".
+  /// "TIcons" named "play-demo".
   static const play_demo = IconData(59047, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-rectangle-filled".
+  /// "TIcons" named "play-rectangle-filled".
   static const play_rectangle_filled = IconData(59048, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play-rectangle".
+  /// "TIcons" named "play-rectangle".
   static const play_rectangle = IconData(59049, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "play".
+  /// "TIcons" named "play".
   static const play = IconData(59050, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "plus".
+  /// "TIcons" named "plus".
   static const plus = IconData(59051, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "popsicle-filled".
+  /// "TIcons" named "popsicle-filled".
   static const popsicle_filled = IconData(59052, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "popsicle".
+  /// "TIcons" named "popsicle".
   static const popsicle = IconData(59053, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "portrait-filled".
+  /// "TIcons" named "portrait-filled".
   static const portrait_filled = IconData(59054, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "portrait".
+  /// "TIcons" named "portrait".
   static const portrait = IconData(59055, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pout-filled".
+  /// "TIcons" named "pout-filled".
   static const pout_filled = IconData(59056, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pout".
+  /// "TIcons" named "pout".
   static const pout = IconData(59057, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "poweroff".
+  /// "TIcons" named "poweroff".
   static const poweroff = IconData(59058, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "precise-monitor".
+  /// "TIcons" named "precise-monitor".
   static const precise_monitor = IconData(59059, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "previous-filled".
+  /// "TIcons" named "previous-filled".
   static const previous_filled = IconData(59060, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "previous".
+  /// "TIcons" named "previous".
   static const previous = IconData(59061, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "print-filled".
+  /// "TIcons" named "print-filled".
   static const print_filled = IconData(59062, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "print".
+  /// "TIcons" named "print".
   static const print = IconData(59063, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pumpkin-filled".
+  /// "TIcons" named "pumpkin-filled".
   static const pumpkin_filled = IconData(59064, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pumpkin".
+  /// "TIcons" named "pumpkin".
   static const pumpkin = IconData(59065, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pyramid-filled".
+  /// "TIcons" named "pyramid-filled".
   static const pyramid_filled = IconData(59066, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pyramid-maya-filled".
+  /// "TIcons" named "pyramid-maya-filled".
   static const pyramid_maya_filled = IconData(59067, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pyramid-maya".
+  /// "TIcons" named "pyramid-maya".
   static const pyramid_maya = IconData(59068, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "pyramid".
+  /// "TIcons" named "pyramid".
   static const pyramid = IconData(59069, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "qrcode".
+  /// "TIcons" named "qrcode".
   static const qrcode = IconData(59070, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "quadratic".
+  /// "TIcons" named "quadratic".
   static const quadratic = IconData(59071, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "questionnaire-double-filled".
+  /// "TIcons" named "questionnaire-double-filled".
   static const questionnaire_double_filled = IconData(59072, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "questionnaire-double".
+  /// "TIcons" named "questionnaire-double".
   static const questionnaire_double = IconData(59073, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "questionnaire-filled".
+  /// "TIcons" named "questionnaire-filled".
   static const questionnaire_filled = IconData(59074, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "questionnaire".
+  /// "TIcons" named "questionnaire".
   static const questionnaire = IconData(59075, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "queue-filled".
+  /// "TIcons" named "queue-filled".
   static const queue_filled = IconData(59076, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "queue".
+  /// "TIcons" named "queue".
   static const queue = IconData(59077, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "quote-filled".
+  /// "TIcons" named "quote-filled".
   static const quote_filled = IconData(59078, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "quote".
+  /// "TIcons" named "quote".
   static const quote = IconData(59079, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "radar".
+  /// "TIcons" named "radar".
   static const radar = IconData(59080, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "radio-1-filled".
+  /// "TIcons" named "radio-1-filled".
   static const radio_1_filled = IconData(59081, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "radio-1".
+  /// "TIcons" named "radio-1".
   static const radio_1 = IconData(59082, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "radio-2-filled".
+  /// "TIcons" named "radio-2-filled".
   static const radio_2_filled = IconData(59083, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "radio-2".
+  /// "TIcons" named "radio-2".
   static const radio_2 = IconData(59084, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "radish-filled".
+  /// "TIcons" named "radish-filled".
   static const radish_filled = IconData(59085, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "radish".
+  /// "TIcons" named "radish".
   static const radish = IconData(59086, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rain-heavy".
+  /// "TIcons" named "rain-heavy".
   static const rain_heavy = IconData(59087, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rain-light-filled".
+  /// "TIcons" named "rain-light-filled".
   static const rain_light_filled = IconData(59088, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rain-light".
+  /// "TIcons" named "rain-light".
   static const rain_light = IconData(59089, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rain-medium".
+  /// "TIcons" named "rain-medium".
   static const rain_medium = IconData(59090, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rainbow".
+  /// "TIcons" named "rainbow".
   static const rainbow = IconData(59091, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rectangle-filled".
+  /// "TIcons" named "rectangle-filled".
   static const rectangle_filled = IconData(59092, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rectangle".
+  /// "TIcons" named "rectangle".
   static const rectangle = IconData(59093, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "refresh".
+  /// "TIcons" named "refresh".
   static const refresh = IconData(59094, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "relation".
+  /// "TIcons" named "relation".
   static const relation = IconData(59095, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "relativity-filled".
+  /// "TIcons" named "relativity-filled".
   static const relativity_filled = IconData(59096, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "relativity".
+  /// "TIcons" named "relativity".
   static const relativity = IconData(59097, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "remote-wave-filled".
+  /// "TIcons" named "remote-wave-filled".
   static const remote_wave_filled = IconData(59098, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "remote-wave".
+  /// "TIcons" named "remote-wave".
   static const remote_wave = IconData(59099, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "remove".
+  /// "TIcons" named "remove".
   static const remove = IconData(59100, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rename-filled".
+  /// "TIcons" named "rename-filled".
   static const rename_filled = IconData(59101, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rename".
+  /// "TIcons" named "rename".
   static const rename = IconData(59102, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "replay-filled".
+  /// "TIcons" named "replay-filled".
   static const replay_filled = IconData(59103, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "replay".
+  /// "TIcons" named "replay".
   static const replay = IconData(59104, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rice-ball-filled".
+  /// "TIcons" named "rice-ball-filled".
   static const rice_ball_filled = IconData(59105, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rice-ball".
+  /// "TIcons" named "rice-ball".
   static const rice_ball = IconData(59106, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rice-filled".
+  /// "TIcons" named "rice-filled".
   static const rice_filled = IconData(59107, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rice".
+  /// "TIcons" named "rice".
   static const rice = IconData(59108, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "roast-filled".
+  /// "TIcons" named "roast-filled".
   static const roast_filled = IconData(59109, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "roast".
+  /// "TIcons" named "roast".
   static const roast = IconData(59110, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "robot-1-filled".
+  /// "TIcons" named "robot-1-filled".
   static const robot_1_filled = IconData(59111, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "robot-1".
+  /// "TIcons" named "robot-1".
   static const robot_1 = IconData(59112, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "robot-2-filled".
+  /// "TIcons" named "robot-2-filled".
   static const robot_2_filled = IconData(59113, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "robot-2".
+  /// "TIcons" named "robot-2".
   static const robot_2 = IconData(59114, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "robot-filled".
+  /// "TIcons" named "robot-filled".
   static const robot_filled = IconData(59115, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "robot".
+  /// "TIcons" named "robot".
   static const robot = IconData(59116, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rocket-filled".
+  /// "TIcons" named "rocket-filled".
   static const rocket_filled = IconData(59117, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rocket".
+  /// "TIcons" named "rocket".
   static const rocket = IconData(59118, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rollback".
+  /// "TIcons" named "rollback".
   static const rollback = IconData(59119, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rollfront".
+  /// "TIcons" named "rollfront".
   static const rollfront = IconData(59120, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "root-list-filled".
+  /// "TIcons" named "root-list-filled".
   static const root_list_filled = IconData(59121, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "root-list".
+  /// "TIcons" named "root-list".
   static const root_list = IconData(59122, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rotate-locked-filled".
+  /// "TIcons" named "rotate-locked-filled".
   static const rotate_locked_filled = IconData(59123, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rotate-locked".
+  /// "TIcons" named "rotate-locked".
   static const rotate_locked = IconData(59124, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rotate".
+  /// "TIcons" named "rotate".
   static const rotate = IconData(59125, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rotation".
+  /// "TIcons" named "rotation".
   static const rotation = IconData(59126, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "round-filled".
+  /// "TIcons" named "round-filled".
   static const round_filled = IconData(59127, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "round".
+  /// "TIcons" named "round".
   static const round = IconData(59128, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "router-wave-filled".
+  /// "TIcons" named "router-wave-filled".
   static const router_wave_filled = IconData(59129, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "router-wave".
+  /// "TIcons" named "router-wave".
   static const router_wave = IconData(59130, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "rss".
+  /// "TIcons" named "rss".
   static const rss = IconData(59131, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ruler-filled".
+  /// "TIcons" named "ruler-filled".
   static const ruler_filled = IconData(59132, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ruler".
+  /// "TIcons" named "ruler".
   static const ruler = IconData(59133, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sailing-hotel-filled".
+  /// "TIcons" named "sailing-hotel-filled".
   static const sailing_hotel_filled = IconData(59134, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sailing-hotel".
+  /// "TIcons" named "sailing-hotel".
   static const sailing_hotel = IconData(59135, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sandwich-filled".
+  /// "TIcons" named "sandwich-filled".
   static const sandwich_filled = IconData(59136, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sandwich".
+  /// "TIcons" named "sandwich".
   static const sandwich = IconData(59137, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "saturation-filled".
+  /// "TIcons" named "saturation-filled".
   static const saturation_filled = IconData(59138, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "saturation".
+  /// "TIcons" named "saturation".
   static const saturation = IconData(59139, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sausage-filled".
+  /// "TIcons" named "sausage-filled".
   static const sausage_filled = IconData(59140, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sausage".
+  /// "TIcons" named "sausage".
   static const sausage = IconData(59141, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "save-filled".
+  /// "TIcons" named "save-filled".
   static const save_filled = IconData(59142, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "save".
+  /// "TIcons" named "save".
   static const save = IconData(59143, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "saving-pot-filled".
+  /// "TIcons" named "saving-pot-filled".
   static const saving_pot_filled = IconData(59144, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "saving-pot".
+  /// "TIcons" named "saving-pot".
   static const saving_pot = IconData(59145, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "scan".
+  /// "TIcons" named "scan".
   static const scan = IconData(59146, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "screen-4k-filled".
+  /// "TIcons" named "screen-4k-filled".
   static const screen_4k_filled = IconData(59147, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "screen-4k".
+  /// "TIcons" named "screen-4k".
   static const screen_4k = IconData(59148, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "screen-mirroring-filled".
+  /// "TIcons" named "screen-mirroring-filled".
   static const screen_mirroring_filled = IconData(59149, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "screen-mirroring".
+  /// "TIcons" named "screen-mirroring".
   static const screen_mirroring = IconData(59150, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "screencast-filled".
+  /// "TIcons" named "screencast-filled".
   static const screencast_filled = IconData(59151, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "screencast".
+  /// "TIcons" named "screencast".
   static const screencast = IconData(59152, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "screenshot".
+  /// "TIcons" named "screenshot".
   static const screenshot = IconData(59153, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "scroll-bar-filled".
+  /// "TIcons" named "scroll-bar-filled".
   static const scroll_bar_filled = IconData(59154, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "scroll-bar".
+  /// "TIcons" named "scroll-bar".
   static const scroll_bar = IconData(59155, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sd-card-1-filled".
+  /// "TIcons" named "sd-card-1-filled".
   static const sd_card_1_filled = IconData(59156, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sd-card-1".
+  /// "TIcons" named "sd-card-1".
   static const sd_card_1 = IconData(59157, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sd-card-filled".
+  /// "TIcons" named "sd-card-filled".
   static const sd_card_filled = IconData(59158, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sd-card".
+  /// "TIcons" named "sd-card".
   static const sd_card = IconData(59159, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "seal-filled".
+  /// "TIcons" named "seal-filled".
   static const seal_filled = IconData(59160, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "seal".
+  /// "TIcons" named "seal".
   static const seal = IconData(59161, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "search-error-filled".
+  /// "TIcons" named "search-error-filled".
   static const search_error_filled = IconData(59162, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "search-error".
+  /// "TIcons" named "search-error".
   static const search_error = IconData(59163, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "search-filled".
+  /// "TIcons" named "search-filled".
   static const search_filled = IconData(59164, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "search".
+  /// "TIcons" named "search".
   static const search = IconData(59165, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "secured-filled".
+  /// "TIcons" named "secured-filled".
   static const secured_filled = IconData(59166, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "secured".
+  /// "TIcons" named "secured".
   static const secured = IconData(59167, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "send-cancel-filled".
+  /// "TIcons" named "send-cancel-filled".
   static const send_cancel_filled = IconData(59168, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "send-cancel".
+  /// "TIcons" named "send-cancel".
   static const send_cancel = IconData(59169, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "send-filled".
+  /// "TIcons" named "send-filled".
   static const send_filled = IconData(59170, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "send".
+  /// "TIcons" named "send".
   static const send = IconData(59171, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sensors-1".
+  /// "TIcons" named "sensors-1".
   static const sensors_1 = IconData(59172, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sensors-2".
+  /// "TIcons" named "sensors-2".
   static const sensors_2 = IconData(59173, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sensors-off".
+  /// "TIcons" named "sensors-off".
   static const sensors_off = IconData(59174, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sensors".
+  /// "TIcons" named "sensors".
   static const sensors = IconData(59175, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sequence-filled".
+  /// "TIcons" named "sequence-filled".
   static const sequence_filled = IconData(59176, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sequence".
+  /// "TIcons" named "sequence".
   static const sequence = IconData(59177, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "serenity-filled".
+  /// "TIcons" named "serenity-filled".
   static const serenity_filled = IconData(59178, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "serenity".
+  /// "TIcons" named "serenity".
   static const serenity = IconData(59179, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "server-filled".
+  /// "TIcons" named "server-filled".
   static const server_filled = IconData(59180, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "server".
+  /// "TIcons" named "server".
   static const server = IconData(59181, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "service-filled".
+  /// "TIcons" named "service-filled".
   static const service_filled = IconData(59182, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "service".
+  /// "TIcons" named "service".
   static const service = IconData(59183, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "setting-1-filled".
+  /// "TIcons" named "setting-1-filled".
   static const setting_1_filled = IconData(59184, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "setting-1".
+  /// "TIcons" named "setting-1".
   static const setting_1 = IconData(59185, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "setting-filled".
+  /// "TIcons" named "setting-filled".
   static const setting_filled = IconData(59186, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "setting".
+  /// "TIcons" named "setting".
   static const setting = IconData(59187, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "share-1-filled".
+  /// "TIcons" named "share-1-filled".
   static const share_1_filled = IconData(59188, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "share-1".
+  /// "TIcons" named "share-1".
   static const share_1 = IconData(59189, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "share-filled".
+  /// "TIcons" named "share-filled".
   static const share_filled = IconData(59190, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "share".
+  /// "TIcons" named "share".
   static const share = IconData(59191, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sharpness-filled".
+  /// "TIcons" named "sharpness-filled".
   static const sharpness_filled = IconData(59192, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sharpness".
+  /// "TIcons" named "sharpness".
   static const sharpness = IconData(59193, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shield-error-filled".
+  /// "TIcons" named "shield-error-filled".
   static const shield_error_filled = IconData(59194, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shield-error".
+  /// "TIcons" named "shield-error".
   static const shield_error = IconData(59195, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shimen-filled".
+  /// "TIcons" named "shimen-filled".
   static const shimen_filled = IconData(59196, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shimen".
+  /// "TIcons" named "shimen".
   static const shimen = IconData(59197, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop-1-filled".
+  /// "TIcons" named "shop-1-filled".
   static const shop_1_filled = IconData(59198, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop-1".
+  /// "TIcons" named "shop-1".
   static const shop_1 = IconData(59199, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop-2-filled".
+  /// "TIcons" named "shop-2-filled".
   static const shop_2_filled = IconData(59200, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop-2".
+  /// "TIcons" named "shop-2".
   static const shop_2 = IconData(59201, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop-3-filled".
+  /// "TIcons" named "shop-3-filled".
   static const shop_3_filled = IconData(59202, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop-3".
+  /// "TIcons" named "shop-3".
   static const shop_3 = IconData(59203, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop-4-filled".
+  /// "TIcons" named "shop-4-filled".
   static const shop_4_filled = IconData(59204, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop-4".
+  /// "TIcons" named "shop-4".
   static const shop_4 = IconData(59205, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop-5-filled".
+  /// "TIcons" named "shop-5-filled".
   static const shop_5_filled = IconData(59206, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop-5".
+  /// "TIcons" named "shop-5".
   static const shop_5 = IconData(59207, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop-filled".
+  /// "TIcons" named "shop-filled".
   static const shop_filled = IconData(59208, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shop".
+  /// "TIcons" named "shop".
   static const shop = IconData(59209, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shortcut".
+  /// "TIcons" named "shortcut".
   static const shortcut = IconData(59210, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shrimp-filled".
+  /// "TIcons" named "shrimp-filled".
   static const shrimp_filled = IconData(59211, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shrimp".
+  /// "TIcons" named "shrimp".
   static const shrimp = IconData(59212, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shrink-horizontal".
+  /// "TIcons" named "shrink-horizontal".
   static const shrink_horizontal = IconData(59213, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shrink-vertical".
+  /// "TIcons" named "shrink-vertical".
   static const shrink_vertical = IconData(59214, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shutter-filled".
+  /// "TIcons" named "shutter-filled".
   static const shutter_filled = IconData(59215, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shutter".
+  /// "TIcons" named "shutter".
   static const shutter = IconData(59216, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shutup-filled".
+  /// "TIcons" named "shutup-filled".
   static const shutup_filled = IconData(59217, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "shutup".
+  /// "TIcons" named "shutup".
   static const shutup = IconData(59218, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sim-card-1-filled".
+  /// "TIcons" named "sim-card-1-filled".
   static const sim_card_1_filled = IconData(59219, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sim-card-1".
+  /// "TIcons" named "sim-card-1".
   static const sim_card_1 = IconData(59220, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sim-card-2-filled".
+  /// "TIcons" named "sim-card-2-filled".
   static const sim_card_2_filled = IconData(59221, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sim-card-2".
+  /// "TIcons" named "sim-card-2".
   static const sim_card_2 = IconData(59222, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sim-card-filled".
+  /// "TIcons" named "sim-card-filled".
   static const sim_card_filled = IconData(59223, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sim-card".
+  /// "TIcons" named "sim-card".
   static const sim_card = IconData(59224, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sinister-smile-filled".
+  /// "TIcons" named "sinister-smile-filled".
   static const sinister_smile_filled = IconData(59225, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sinister-smile".
+  /// "TIcons" named "sinister-smile".
   static const sinister_smile = IconData(59226, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sip-filled".
+  /// "TIcons" named "sip-filled".
   static const sip_filled = IconData(59227, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sip".
+  /// "TIcons" named "sip".
   static const sip = IconData(59228, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sitemap-filled".
+  /// "TIcons" named "sitemap-filled".
   static const sitemap_filled = IconData(59229, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sitemap".
+  /// "TIcons" named "sitemap".
   static const sitemap = IconData(59230, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "size-change".
+  /// "TIcons" named "size-change".
   static const size_change = IconData(59231, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "slash".
+  /// "TIcons" named "slash".
   static const slash = IconData(59232, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sleep-filled".
+  /// "TIcons" named "sleep-filled".
   static const sleep_filled = IconData(59233, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sleep".
+  /// "TIcons" named "sleep".
   static const sleep = IconData(59234, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "slice-filled".
+  /// "TIcons" named "slice-filled".
   static const slice_filled = IconData(59235, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "slice".
+  /// "TIcons" named "slice".
   static const slice = IconData(59236, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "slideshow-filled".
+  /// "TIcons" named "slideshow-filled".
   static const slideshow_filled = IconData(59237, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "slideshow".
+  /// "TIcons" named "slideshow".
   static const slideshow = IconData(59238, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "smile-filled".
+  /// "TIcons" named "smile-filled".
   static const smile_filled = IconData(59239, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "smile".
+  /// "TIcons" named "smile".
   static const smile = IconData(59240, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sneer-filled".
+  /// "TIcons" named "sneer-filled".
   static const sneer_filled = IconData(59241, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sneer".
+  /// "TIcons" named "sneer".
   static const sneer = IconData(59242, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "snowflake".
+  /// "TIcons" named "snowflake".
   static const snowflake = IconData(59243, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sonic".
+  /// "TIcons" named "sonic".
   static const sonic = IconData(59244, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-down-filled".
+  /// "TIcons" named "sound-down-filled".
   static const sound_down_filled = IconData(59245, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-down".
+  /// "TIcons" named "sound-down".
   static const sound_down = IconData(59246, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-filled".
+  /// "TIcons" named "sound-filled".
   static const sound_filled = IconData(59247, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-high-filled".
+  /// "TIcons" named "sound-high-filled".
   static const sound_high_filled = IconData(59248, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-high".
+  /// "TIcons" named "sound-high".
   static const sound_high = IconData(59249, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-low-filled".
+  /// "TIcons" named "sound-low-filled".
   static const sound_low_filled = IconData(59250, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-low".
+  /// "TIcons" named "sound-low".
   static const sound_low = IconData(59251, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-mute-1-filled".
+  /// "TIcons" named "sound-mute-1-filled".
   static const sound_mute_1_filled = IconData(59252, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-mute-1".
+  /// "TIcons" named "sound-mute-1".
   static const sound_mute_1 = IconData(59253, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-mute-filled".
+  /// "TIcons" named "sound-mute-filled".
   static const sound_mute_filled = IconData(59254, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-mute".
+  /// "TIcons" named "sound-mute".
   static const sound_mute = IconData(59255, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-up-filled".
+  /// "TIcons" named "sound-up-filled".
   static const sound_up_filled = IconData(59256, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound-up".
+  /// "TIcons" named "sound-up".
   static const sound_up = IconData(59257, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sound".
+  /// "TIcons" named "sound".
   static const sound = IconData(59258, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "space".
+  /// "TIcons" named "space".
   static const space = IconData(59259, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "speechless-1-filled".
+  /// "TIcons" named "speechless-1-filled".
   static const speechless_1_filled = IconData(59260, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "speechless-1".
+  /// "TIcons" named "speechless-1".
   static const speechless_1 = IconData(59261, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "speechless-filled".
+  /// "TIcons" named "speechless-filled".
   static const speechless_filled = IconData(59262, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "speechless".
+  /// "TIcons" named "speechless".
   static const speechless = IconData(59263, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "star-filled".
+  /// "TIcons" named "star-filled".
   static const star_filled = IconData(59264, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "star".
+  /// "TIcons" named "star".
   static const star = IconData(59265, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "statue-of-jesus-filled".
+  /// "TIcons" named "statue-of-jesus-filled".
   static const statue_of_jesus_filled = IconData(59266, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "statue-of-jesus".
+  /// "TIcons" named "statue-of-jesus".
   static const statue_of_jesus = IconData(59267, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sticky-note-filled".
+  /// "TIcons" named "sticky-note-filled".
   static const sticky_note_filled = IconData(59268, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sticky-note".
+  /// "TIcons" named "sticky-note".
   static const sticky_note = IconData(59269, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "stop-circle-filled".
+  /// "TIcons" named "stop-circle-filled".
   static const stop_circle_filled = IconData(59270, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "stop-circle-stroke-filled".
+  /// "TIcons" named "stop-circle-stroke-filled".
   static const stop_circle_stroke_filled = IconData(59271, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "stop-circle-stroke".
+  /// "TIcons" named "stop-circle-stroke".
   static const stop_circle_stroke = IconData(59272, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "stop-circle".
+  /// "TIcons" named "stop-circle".
   static const stop_circle = IconData(59273, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "stop".
+  /// "TIcons" named "stop".
   static const stop = IconData(59274, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "store-filled".
+  /// "TIcons" named "store-filled".
   static const store_filled = IconData(59275, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "store".
+  /// "TIcons" named "store".
   static const store = IconData(59276, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "street-road-1-filled".
+  /// "TIcons" named "street-road-1-filled".
   static const street_road_1_filled = IconData(59277, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "street-road-1".
+  /// "TIcons" named "street-road-1".
   static const street_road_1 = IconData(59278, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "street-road-filled".
+  /// "TIcons" named "street-road-filled".
   static const street_road_filled = IconData(59279, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "street-road".
+  /// "TIcons" named "street-road".
   static const street_road = IconData(59280, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "subscript".
+  /// "TIcons" named "subscript".
   static const subscript = IconData(59281, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "subtitle-filled".
+  /// "TIcons" named "subtitle-filled".
   static const subtitle_filled = IconData(59282, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "subtitle".
+  /// "TIcons" named "subtitle".
   static const subtitle = IconData(59283, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "subway-line-filled".
+  /// "TIcons" named "subway-line-filled".
   static const subway_line_filled = IconData(59284, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "subway-line".
+  /// "TIcons" named "subway-line".
   static const subway_line = IconData(59285, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sum".
+  /// "TIcons" named "sum".
   static const sum = IconData(59286, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "summary".
+  /// "TIcons" named "summary".
   static const summary = IconData(59287, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sun-fall-filled".
+  /// "TIcons" named "sun-fall-filled".
   static const sun_fall_filled = IconData(59288, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sun-fall".
+  /// "TIcons" named "sun-fall".
   static const sun_fall = IconData(59289, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sun-rising-filled".
+  /// "TIcons" named "sun-rising-filled".
   static const sun_rising_filled = IconData(59290, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sun-rising".
+  /// "TIcons" named "sun-rising".
   static const sun_rising = IconData(59291, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sunny-filled".
+  /// "TIcons" named "sunny-filled".
   static const sunny_filled = IconData(59292, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "sunny".
+  /// "TIcons" named "sunny".
   static const sunny = IconData(59293, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "superscript".
+  /// "TIcons" named "superscript".
   static const superscript = IconData(59294, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "support-filled".
+  /// "TIcons" named "support-filled".
   static const support_filled = IconData(59295, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "support".
+  /// "TIcons" named "support".
   static const support = IconData(59296, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "surprised-1-filled".
+  /// "TIcons" named "surprised-1-filled".
   static const surprised_1_filled = IconData(59297, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "surprised-1".
+  /// "TIcons" named "surprised-1".
   static const surprised_1 = IconData(59298, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "surprised-filled".
+  /// "TIcons" named "surprised-filled".
   static const surprised_filled = IconData(59299, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "surprised".
+  /// "TIcons" named "surprised".
   static const surprised = IconData(59300, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "swap-left".
+  /// "TIcons" named "swap-left".
   static const swap_left = IconData(59301, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "swap-right".
+  /// "TIcons" named "swap-right".
   static const swap_right = IconData(59302, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "swap".
+  /// "TIcons" named "swap".
   static const swap = IconData(59303, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "swear-1-filled".
+  /// "TIcons" named "swear-1-filled".
   static const swear_1_filled = IconData(59304, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "swear-1".
+  /// "TIcons" named "swear-1".
   static const swear_1 = IconData(59305, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "swear-2-filled".
+  /// "TIcons" named "swear-2-filled".
   static const swear_2_filled = IconData(59306, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "swear-2".
+  /// "TIcons" named "swear-2".
   static const swear_2 = IconData(59307, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-2".
+  /// "TIcons" named "system-2".
   static const system_2 = IconData(59308, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-3-filled".
+  /// "TIcons" named "system-3-filled".
   static const system_3_filled = IconData(59309, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-3".
+  /// "TIcons" named "system-3".
   static const system_3 = IconData(59310, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-application-filled".
+  /// "TIcons" named "system-application-filled".
   static const system_application_filled = IconData(59311, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-application".
+  /// "TIcons" named "system-application".
   static const system_application = IconData(59312, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-blocked-filled".
+  /// "TIcons" named "system-blocked-filled".
   static const system_blocked_filled = IconData(59313, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-blocked".
+  /// "TIcons" named "system-blocked".
   static const system_blocked = IconData(59314, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-code-filled".
+  /// "TIcons" named "system-code-filled".
   static const system_code_filled = IconData(59315, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-code".
+  /// "TIcons" named "system-code".
   static const system_code = IconData(59316, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-components-filled".
+  /// "TIcons" named "system-components-filled".
   static const system_components_filled = IconData(59317, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-components".
+  /// "TIcons" named "system-components".
   static const system_components = IconData(59318, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-coordinate-filled".
+  /// "TIcons" named "system-coordinate-filled".
   static const system_coordinate_filled = IconData(59319, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-coordinate".
+  /// "TIcons" named "system-coordinate".
   static const system_coordinate = IconData(59320, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-device-filled".
+  /// "TIcons" named "system-device-filled".
   static const system_device_filled = IconData(59321, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-device".
+  /// "TIcons" named "system-device".
   static const system_device = IconData(59322, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-interface-filled".
+  /// "TIcons" named "system-interface-filled".
   static const system_interface_filled = IconData(59323, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-interface".
+  /// "TIcons" named "system-interface".
   static const system_interface = IconData(59324, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-location-filled".
+  /// "TIcons" named "system-location-filled".
   static const system_location_filled = IconData(59325, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-location".
+  /// "TIcons" named "system-location".
   static const system_location = IconData(59326, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-locked-filled".
+  /// "TIcons" named "system-locked-filled".
   static const system_locked_filled = IconData(59327, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-locked".
+  /// "TIcons" named "system-locked".
   static const system_locked = IconData(59328, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-log-filled".
+  /// "TIcons" named "system-log-filled".
   static const system_log_filled = IconData(59329, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-log".
+  /// "TIcons" named "system-log".
   static const system_log = IconData(59330, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-marked-filled".
+  /// "TIcons" named "system-marked-filled".
   static const system_marked_filled = IconData(59331, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-marked".
+  /// "TIcons" named "system-marked".
   static const system_marked = IconData(59332, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-messages-filled".
+  /// "TIcons" named "system-messages-filled".
   static const system_messages_filled = IconData(59333, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-messages".
+  /// "TIcons" named "system-messages".
   static const system_messages = IconData(59334, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-regulation-filled".
+  /// "TIcons" named "system-regulation-filled".
   static const system_regulation_filled = IconData(59335, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-regulation".
+  /// "TIcons" named "system-regulation".
   static const system_regulation = IconData(59336, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-search-filled".
+  /// "TIcons" named "system-search-filled".
   static const system_search_filled = IconData(59337, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-search".
+  /// "TIcons" named "system-search".
   static const system_search = IconData(59338, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-setting-filled".
+  /// "TIcons" named "system-setting-filled".
   static const system_setting_filled = IconData(59339, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-setting".
+  /// "TIcons" named "system-setting".
   static const system_setting = IconData(59340, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-storage-filled".
+  /// "TIcons" named "system-storage-filled".
   static const system_storage_filled = IconData(59341, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-storage".
+  /// "TIcons" named "system-storage".
   static const system_storage = IconData(59342, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-sum".
+  /// "TIcons" named "system-sum".
   static const system_sum = IconData(59343, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-unlocked-filled".
+  /// "TIcons" named "system-unlocked-filled".
   static const system_unlocked_filled = IconData(59344, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "system-unlocked".
+  /// "TIcons" named "system-unlocked".
   static const system_unlocked = IconData(59345, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tab-filled".
+  /// "TIcons" named "tab-filled".
   static const tab_filled = IconData(59346, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tab".
+  /// "TIcons" named "tab".
   static const tab = IconData(59347, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "table-1-filled".
+  /// "TIcons" named "table-1-filled".
   static const table_1_filled = IconData(59348, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "table-1".
+  /// "TIcons" named "table-1".
   static const table_1 = IconData(59349, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "table-2-filled".
+  /// "TIcons" named "table-2-filled".
   static const table_2_filled = IconData(59350, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "table-2".
+  /// "TIcons" named "table-2".
   static const table_2 = IconData(59351, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "table-add-filled".
+  /// "TIcons" named "table-add-filled".
   static const table_add_filled = IconData(59352, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "table-add".
+  /// "TIcons" named "table-add".
   static const table_add = IconData(59353, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "table-filled".
+  /// "TIcons" named "table-filled".
   static const table_filled = IconData(59354, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "table-split-filled".
+  /// "TIcons" named "table-split-filled".
   static const table_split_filled = IconData(59355, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "table-split".
+  /// "TIcons" named "table-split".
   static const table_split = IconData(59356, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "table".
+  /// "TIcons" named "table".
   static const table = IconData(59357, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tag-filled".
+  /// "TIcons" named "tag-filled".
   static const tag_filled = IconData(59358, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tag-state-filled".
+  /// "TIcons" named "tag-state-filled".
   static const tag_state_filled = IconData(59359, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tag-state".
+  /// "TIcons" named "tag-state".
   static const tag_state = IconData(59360, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tag".
+  /// "TIcons" named "tag".
   static const tag = IconData(59361, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tangerinr-filled".
+  /// "TIcons" named "tangerinr-filled".
   static const tangerinr_filled = IconData(59362, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tangerinr".
+  /// "TIcons" named "tangerinr".
   static const tangerinr = IconData(59363, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tape-filled".
+  /// "TIcons" named "tape-filled".
   static const tape_filled = IconData(59364, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tape".
+  /// "TIcons" named "tape".
   static const tape = IconData(59365, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-1-filled".
+  /// "TIcons" named "task-1-filled".
   static const task_1_filled = IconData(59366, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-1".
+  /// "TIcons" named "task-1".
   static const task_1 = IconData(59367, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-add-1".
+  /// "TIcons" named "task-add-1".
   static const task_add_1 = IconData(59368, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-add-filled".
+  /// "TIcons" named "task-add-filled".
   static const task_add_filled = IconData(59369, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-add".
+  /// "TIcons" named "task-add".
   static const task_add = IconData(59370, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-checked-1".
+  /// "TIcons" named "task-checked-1".
   static const task_checked_1 = IconData(59371, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-checked-filled".
+  /// "TIcons" named "task-checked-filled".
   static const task_checked_filled = IconData(59372, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-checked".
+  /// "TIcons" named "task-checked".
   static const task_checked = IconData(59373, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-double-filled".
+  /// "TIcons" named "task-double-filled".
   static const task_double_filled = IconData(59374, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-double".
+  /// "TIcons" named "task-double".
   static const task_double = IconData(59375, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-error-filled".
+  /// "TIcons" named "task-error-filled".
   static const task_error_filled = IconData(59376, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-error".
+  /// "TIcons" named "task-error".
   static const task_error = IconData(59377, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-filled".
+  /// "TIcons" named "task-filled".
   static const task_filled = IconData(59378, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-location-filled".
+  /// "TIcons" named "task-location-filled".
   static const task_location_filled = IconData(59379, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-location".
+  /// "TIcons" named "task-location".
   static const task_location = IconData(59380, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-marked-filled".
+  /// "TIcons" named "task-marked-filled".
   static const task_marked_filled = IconData(59381, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-marked".
+  /// "TIcons" named "task-marked".
   static const task_marked = IconData(59382, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-setting-filled".
+  /// "TIcons" named "task-setting-filled".
   static const task_setting_filled = IconData(59383, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-setting".
+  /// "TIcons" named "task-setting".
   static const task_setting = IconData(59384, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-time-filled".
+  /// "TIcons" named "task-time-filled".
   static const task_time_filled = IconData(59385, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-time".
+  /// "TIcons" named "task-time".
   static const task_time = IconData(59386, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-visible-filled".
+  /// "TIcons" named "task-visible-filled".
   static const task_visible_filled = IconData(59387, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task-visible".
+  /// "TIcons" named "task-visible".
   static const task_visible = IconData(59388, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "task".
+  /// "TIcons" named "task".
   static const task = IconData(59389, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tea-filled".
+  /// "TIcons" named "tea-filled".
   static const tea_filled = IconData(59390, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tea".
+  /// "TIcons" named "tea".
   static const tea = IconData(59391, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "teahouse-filled".
+  /// "TIcons" named "teahouse-filled".
   static const teahouse_filled = IconData(59392, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "teahouse".
+  /// "TIcons" named "teahouse".
   static const teahouse = IconData(59393, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "template-filled".
+  /// "TIcons" named "template-filled".
   static const template_filled = IconData(59394, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "template".
+  /// "TIcons" named "template".
   static const template = IconData(59395, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "temple-filled".
+  /// "TIcons" named "temple-filled".
   static const temple_filled = IconData(59396, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "temple".
+  /// "TIcons" named "temple".
   static const temple = IconData(59397, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "terminal-rectangle-1-filled".
+  /// "TIcons" named "terminal-rectangle-1-filled".
   static const terminal_rectangle_1_filled = IconData(59398, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "terminal-rectangle-1".
+  /// "TIcons" named "terminal-rectangle-1".
   static const terminal_rectangle_1 = IconData(59399, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "terminal-rectangle-filled".
+  /// "TIcons" named "terminal-rectangle-filled".
   static const terminal_rectangle_filled = IconData(59400, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "terminal-rectangle".
+  /// "TIcons" named "terminal-rectangle".
   static const terminal_rectangle = IconData(59401, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "terminal-window-filled".
+  /// "TIcons" named "terminal-window-filled".
   static const terminal_window_filled = IconData(59402, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "terminal-window".
+  /// "TIcons" named "terminal-window".
   static const terminal_window = IconData(59403, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "terminal".
+  /// "TIcons" named "terminal".
   static const terminal = IconData(59404, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "text-drawing-filled".
+  /// "TIcons" named "text-drawing-filled".
   static const text_drawing_filled = IconData(59405, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "text-drawing".
+  /// "TIcons" named "text-drawing".
   static const text_drawing = IconData(59406, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "text-style".
+  /// "TIcons" named "text-style".
   static const text_style = IconData(59407, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "text".
+  /// "TIcons" named "text".
   static const text = IconData(59408, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "textbox-filled".
+  /// "TIcons" named "textbox-filled".
   static const textbox_filled = IconData(59409, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "textbox".
+  /// "TIcons" named "textbox".
   static const textbox = IconData(59410, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "textformat-bold".
+  /// "TIcons" named "textformat-bold".
   static const textformat_bold = IconData(59411, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "textformat-color".
+  /// "TIcons" named "textformat-color".
   static const textformat_color = IconData(59412, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "textformat-italic".
+  /// "TIcons" named "textformat-italic".
   static const textformat_italic = IconData(59413, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "textformat-longer".
+  /// "TIcons" named "textformat-longer".
   static const textformat_longer = IconData(59414, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "textformat-shorter".
+  /// "TIcons" named "textformat-shorter".
   static const textformat_shorter = IconData(59415, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "textformat-strikethrough".
+  /// "TIcons" named "textformat-strikethrough".
   static const textformat_strikethrough = IconData(59416, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "textformat-underline".
+  /// "TIcons" named "textformat-underline".
   static const textformat_underline = IconData(59417, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "textformat-wrap".
+  /// "TIcons" named "textformat-wrap".
   static const textformat_wrap = IconData(59418, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "theaters-filled".
+  /// "TIcons" named "theaters-filled".
   static const theaters_filled = IconData(59419, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "theaters".
+  /// "TIcons" named "theaters".
   static const theaters = IconData(59420, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-down-1-filled".
+  /// "TIcons" named "thumb-down-1-filled".
   static const thumb_down_1_filled = IconData(59421, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-down-1".
+  /// "TIcons" named "thumb-down-1".
   static const thumb_down_1 = IconData(59422, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-down-2-filled".
+  /// "TIcons" named "thumb-down-2-filled".
   static const thumb_down_2_filled = IconData(59423, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-down-2".
+  /// "TIcons" named "thumb-down-2".
   static const thumb_down_2 = IconData(59424, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-down-filled".
+  /// "TIcons" named "thumb-down-filled".
   static const thumb_down_filled = IconData(59425, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-down".
+  /// "TIcons" named "thumb-down".
   static const thumb_down = IconData(59426, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-up-1-filled".
+  /// "TIcons" named "thumb-up-1-filled".
   static const thumb_up_1_filled = IconData(59427, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-up-1".
+  /// "TIcons" named "thumb-up-1".
   static const thumb_up_1 = IconData(59428, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-up-2-filled".
+  /// "TIcons" named "thumb-up-2-filled".
   static const thumb_up_2_filled = IconData(59429, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-up-2".
+  /// "TIcons" named "thumb-up-2".
   static const thumb_up_2 = IconData(59430, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-up-filled".
+  /// "TIcons" named "thumb-up-filled".
   static const thumb_up_filled = IconData(59431, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thumb-up".
+  /// "TIcons" named "thumb-up".
   static const thumb_up = IconData(59432, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thunder".
+  /// "TIcons" named "thunder".
   static const thunder = IconData(59433, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thunderstorm-night-filled".
+  /// "TIcons" named "thunderstorm-night-filled".
   static const thunderstorm_night_filled = IconData(59434, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thunderstorm-night".
+  /// "TIcons" named "thunderstorm-night".
   static const thunderstorm_night = IconData(59435, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thunderstorm-sunny-filled".
+  /// "TIcons" named "thunderstorm-sunny-filled".
   static const thunderstorm_sunny_filled = IconData(59436, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thunderstorm-sunny".
+  /// "TIcons" named "thunderstorm-sunny".
   static const thunderstorm_sunny = IconData(59437, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "thunderstorm".
+  /// "TIcons" named "thunderstorm".
   static const thunderstorm = IconData(59438, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ticket-filled".
+  /// "TIcons" named "ticket-filled".
   static const ticket_filled = IconData(59439, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "ticket".
+  /// "TIcons" named "ticket".
   static const ticket = IconData(59440, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "time-filled".
+  /// "TIcons" named "time-filled".
   static const time_filled = IconData(59441, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "time".
+  /// "TIcons" named "time".
   static const time = IconData(59442, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tips-double-filled".
+  /// "TIcons" named "tips-double-filled".
   static const tips_double_filled = IconData(59443, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tips-double".
+  /// "TIcons" named "tips-double".
   static const tips_double = IconData(59444, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tips-filled".
+  /// "TIcons" named "tips-filled".
   static const tips_filled = IconData(59445, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tips".
+  /// "TIcons" named "tips".
   static const tips = IconData(59446, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tomato-filled".
+  /// "TIcons" named "tomato-filled".
   static const tomato_filled = IconData(59447, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tomato".
+  /// "TIcons" named "tomato".
   static const tomato = IconData(59448, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tools-circle-filled".
+  /// "TIcons" named "tools-circle-filled".
   static const tools_circle_filled = IconData(59449, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tools-circle".
+  /// "TIcons" named "tools-circle".
   static const tools_circle = IconData(59450, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tools-filled".
+  /// "TIcons" named "tools-filled".
   static const tools_filled = IconData(59451, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tools".
+  /// "TIcons" named "tools".
   static const tools = IconData(59452, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tornado".
+  /// "TIcons" named "tornado".
   static const tornado = IconData(59453, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tower-1-filled".
+  /// "TIcons" named "tower-1-filled".
   static const tower_1_filled = IconData(59454, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tower-1".
+  /// "TIcons" named "tower-1".
   static const tower_1 = IconData(59455, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tower-2-filled".
+  /// "TIcons" named "tower-2-filled".
   static const tower_2_filled = IconData(59456, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tower-2".
+  /// "TIcons" named "tower-2".
   static const tower_2 = IconData(59457, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tower-3-filled".
+  /// "TIcons" named "tower-3-filled".
   static const tower_3_filled = IconData(59458, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tower-3".
+  /// "TIcons" named "tower-3".
   static const tower_3 = IconData(59459, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tower-clock-filled".
+  /// "TIcons" named "tower-clock-filled".
   static const tower_clock_filled = IconData(59460, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tower-clock".
+  /// "TIcons" named "tower-clock".
   static const tower_clock = IconData(59461, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tower-filled".
+  /// "TIcons" named "tower-filled".
   static const tower_filled = IconData(59462, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tower".
+  /// "TIcons" named "tower".
   static const tower = IconData(59463, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "town-filled".
+  /// "TIcons" named "town-filled".
   static const town_filled = IconData(59464, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "town".
+  /// "TIcons" named "town".
   static const town = IconData(59465, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "traffic-events-filled".
+  /// "TIcons" named "traffic-events-filled".
   static const traffic_events_filled = IconData(59466, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "traffic-events".
+  /// "TIcons" named "traffic-events".
   static const traffic_events = IconData(59467, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "traffic-filled".
+  /// "TIcons" named "traffic-filled".
   static const traffic_filled = IconData(59468, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "traffic".
+  /// "TIcons" named "traffic".
   static const traffic = IconData(59469, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "transform-1-filled".
+  /// "TIcons" named "transform-1-filled".
   static const transform_1_filled = IconData(59470, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "transform-1".
+  /// "TIcons" named "transform-1".
   static const transform_1 = IconData(59471, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "transform-2".
+  /// "TIcons" named "transform-2".
   static const transform_2 = IconData(59472, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "transform-3".
+  /// "TIcons" named "transform-3".
   static const transform_3 = IconData(59473, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "transform-filled".
+  /// "TIcons" named "transform-filled".
   static const transform_filled = IconData(59474, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "transform".
+  /// "TIcons" named "transform".
   static const transform = IconData(59475, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "translate-1".
+  /// "TIcons" named "translate-1".
   static const translate_1 = IconData(59476, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "translate".
+  /// "TIcons" named "translate".
   static const translate = IconData(59477, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tree-catalog-filled".
+  /// "TIcons" named "tree-catalog-filled".
   static const tree_catalog_filled = IconData(59478, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tree-catalog".
+  /// "TIcons" named "tree-catalog".
   static const tree_catalog = IconData(59479, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tree-list".
+  /// "TIcons" named "tree-list".
   static const tree_list = IconData(59480, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tree-round-dot-filled".
+  /// "TIcons" named "tree-round-dot-filled".
   static const tree_round_dot_filled = IconData(59481, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tree-round-dot-vertical-filled".
+  /// "TIcons" named "tree-round-dot-vertical-filled".
   static const tree_round_dot_vertical_filled = IconData(59482, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tree-round-dot-vertical".
+  /// "TIcons" named "tree-round-dot-vertical".
   static const tree_round_dot_vertical = IconData(59483, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tree-round-dot".
+  /// "TIcons" named "tree-round-dot".
   static const tree_round_dot = IconData(59484, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tree-square-dot-filled".
+  /// "TIcons" named "tree-square-dot-filled".
   static const tree_square_dot_filled = IconData(59485, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tree-square-dot-vertical-filled".
+  /// "TIcons" named "tree-square-dot-vertical-filled".
   static const tree_square_dot_vertical_filled = IconData(59486, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tree-square-dot-vertical".
+  /// "TIcons" named "tree-square-dot-vertical".
   static const tree_square_dot_vertical = IconData(59487, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tree-square-dot".
+  /// "TIcons" named "tree-square-dot".
   static const tree_square_dot = IconData(59488, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "trending-down".
+  /// "TIcons" named "trending-down".
   static const trending_down = IconData(59489, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "trending-up".
+  /// "TIcons" named "trending-up".
   static const trending_up = IconData(59490, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tv-1-filled".
+  /// "TIcons" named "tv-1-filled".
   static const tv_1_filled = IconData(59491, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tv-1".
+  /// "TIcons" named "tv-1".
   static const tv_1 = IconData(59492, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tv-2-filled".
+  /// "TIcons" named "tv-2-filled".
   static const tv_2_filled = IconData(59493, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tv-2".
+  /// "TIcons" named "tv-2".
   static const tv_2 = IconData(59494, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tv-filled".
+  /// "TIcons" named "tv-filled".
   static const tv_filled = IconData(59495, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "tv".
+  /// "TIcons" named "tv".
   static const tv = IconData(59496, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "typography-filled".
+  /// "TIcons" named "typography-filled".
   static const typography_filled = IconData(59497, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "typography".
+  /// "TIcons" named "typography".
   static const typography = IconData(59498, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "uncomfortable-1-filled".
+  /// "TIcons" named "uncomfortable-1-filled".
   static const uncomfortable_1_filled = IconData(59499, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "uncomfortable-1".
+  /// "TIcons" named "uncomfortable-1".
   static const uncomfortable_1 = IconData(59500, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "uncomfortable-2-filled".
+  /// "TIcons" named "uncomfortable-2-filled".
   static const uncomfortable_2_filled = IconData(59501, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "uncomfortable-2".
+  /// "TIcons" named "uncomfortable-2".
   static const uncomfortable_2 = IconData(59502, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "uncomfortable-filled".
+  /// "TIcons" named "uncomfortable-filled".
   static const uncomfortable_filled = IconData(59503, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "uncomfortable".
+  /// "TIcons" named "uncomfortable".
   static const uncomfortable = IconData(59504, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "undertake-delivery-filled".
+  /// "TIcons" named "undertake-delivery-filled".
   static const undertake_delivery_filled = IconData(59505, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "undertake-delivery".
+  /// "TIcons" named "undertake-delivery".
   static const undertake_delivery = IconData(59506, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "undertake-environment-protection-filled".
+  /// "TIcons" named "undertake-environment-protection-filled".
   static const undertake_environment_protection_filled = IconData(
     59507,
     fontFamily: iconFont,
     fontPackage: iconFontPackage,
   );
 
-  /// "TDIcons" named "undertake-environment-protection".
+  /// "TIcons" named "undertake-environment-protection".
   static const undertake_environment_protection = IconData(59508, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "undertake-filled".
+  /// "TIcons" named "undertake-filled".
   static const undertake_filled = IconData(59509, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "undertake-hold-up-filled".
+  /// "TIcons" named "undertake-hold-up-filled".
   static const undertake_hold_up_filled = IconData(59510, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "undertake-hold-up".
+  /// "TIcons" named "undertake-hold-up".
   static const undertake_hold_up = IconData(59511, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "undertake-transaction-filled".
+  /// "TIcons" named "undertake-transaction-filled".
   static const undertake_transaction_filled = IconData(59512, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "undertake-transaction".
+  /// "TIcons" named "undertake-transaction".
   static const undertake_transaction = IconData(59513, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "undertake".
+  /// "TIcons" named "undertake".
   static const undertake = IconData(59514, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "unfold-less".
+  /// "TIcons" named "unfold-less".
   static const unfold_less = IconData(59515, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "unfold-more".
+  /// "TIcons" named "unfold-more".
   static const unfold_more = IconData(59516, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "unhappy-1-filled".
+  /// "TIcons" named "unhappy-1-filled".
   static const unhappy_1_filled = IconData(59517, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "unhappy-1".
+  /// "TIcons" named "unhappy-1".
   static const unhappy_1 = IconData(59518, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "unhappy-filled".
+  /// "TIcons" named "unhappy-filled".
   static const unhappy_filled = IconData(59519, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "unhappy".
+  /// "TIcons" named "unhappy".
   static const unhappy = IconData(59520, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "uninstall-filled".
+  /// "TIcons" named "uninstall-filled".
   static const uninstall_filled = IconData(59521, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "uninstall".
+  /// "TIcons" named "uninstall".
   static const uninstall = IconData(59522, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "upload-1".
+  /// "TIcons" named "upload-1".
   static const upload_1 = IconData(59523, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "upload".
+  /// "TIcons" named "upload".
   static const upload = IconData(59524, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "upscale".
+  /// "TIcons" named "upscale".
   static const upscale = IconData(59525, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usb-filled".
+  /// "TIcons" named "usb-filled".
   static const usb_filled = IconData(59526, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usb".
+  /// "TIcons" named "usb".
   static const usb = IconData(59527, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-1-filled".
+  /// "TIcons" named "user-1-filled".
   static const user_1_filled = IconData(59528, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-1".
+  /// "TIcons" named "user-1".
   static const user_1 = IconData(59529, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-add-filled".
+  /// "TIcons" named "user-add-filled".
   static const user_add_filled = IconData(59530, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-add".
+  /// "TIcons" named "user-add".
   static const user_add = IconData(59531, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-arrow-down-filled".
+  /// "TIcons" named "user-arrow-down-filled".
   static const user_arrow_down_filled = IconData(59532, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-arrow-down".
+  /// "TIcons" named "user-arrow-down".
   static const user_arrow_down = IconData(59533, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-arrow-left-filled".
+  /// "TIcons" named "user-arrow-left-filled".
   static const user_arrow_left_filled = IconData(59534, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-arrow-left".
+  /// "TIcons" named "user-arrow-left".
   static const user_arrow_left = IconData(59535, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-arrow-right-filled".
+  /// "TIcons" named "user-arrow-right-filled".
   static const user_arrow_right_filled = IconData(59536, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-arrow-right".
+  /// "TIcons" named "user-arrow-right".
   static const user_arrow_right = IconData(59537, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-arrow-up-filled".
+  /// "TIcons" named "user-arrow-up-filled".
   static const user_arrow_up_filled = IconData(59538, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-arrow-up".
+  /// "TIcons" named "user-arrow-up".
   static const user_arrow_up = IconData(59539, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-avatar-filled".
+  /// "TIcons" named "user-avatar-filled".
   static const user_avatar_filled = IconData(59540, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-avatar".
+  /// "TIcons" named "user-avatar".
   static const user_avatar = IconData(59541, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-blocked-filled".
+  /// "TIcons" named "user-blocked-filled".
   static const user_blocked_filled = IconData(59542, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-blocked".
+  /// "TIcons" named "user-blocked".
   static const user_blocked = IconData(59543, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-business-filled".
+  /// "TIcons" named "user-business-filled".
   static const user_business_filled = IconData(59544, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-business".
+  /// "TIcons" named "user-business".
   static const user_business = IconData(59545, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-checked-1-filled".
+  /// "TIcons" named "user-checked-1-filled".
   static const user_checked_1_filled = IconData(59546, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-checked-1".
+  /// "TIcons" named "user-checked-1".
   static const user_checked_1 = IconData(59547, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-checked-filled".
+  /// "TIcons" named "user-checked-filled".
   static const user_checked_filled = IconData(59548, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-checked".
+  /// "TIcons" named "user-checked".
   static const user_checked = IconData(59549, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-circle-filled".
+  /// "TIcons" named "user-circle-filled".
   static const user_circle_filled = IconData(59550, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-circle".
+  /// "TIcons" named "user-circle".
   static const user_circle = IconData(59551, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-clear-filled".
+  /// "TIcons" named "user-clear-filled".
   static const user_clear_filled = IconData(59552, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-clear".
+  /// "TIcons" named "user-clear".
   static const user_clear = IconData(59553, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-error-1-filled".
+  /// "TIcons" named "user-error-1-filled".
   static const user_error_1_filled = IconData(59554, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-error-1".
+  /// "TIcons" named "user-error-1".
   static const user_error_1 = IconData(59555, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-filled".
+  /// "TIcons" named "user-filled".
   static const user_filled = IconData(59556, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-invisible-filled".
+  /// "TIcons" named "user-invisible-filled".
   static const user_invisible_filled = IconData(59557, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-invisible".
+  /// "TIcons" named "user-invisible".
   static const user_invisible = IconData(59558, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-list-filled".
+  /// "TIcons" named "user-list-filled".
   static const user_list_filled = IconData(59559, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-list".
+  /// "TIcons" named "user-list".
   static const user_list = IconData(59560, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-locked-filled".
+  /// "TIcons" named "user-locked-filled".
   static const user_locked_filled = IconData(59561, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-locked".
+  /// "TIcons" named "user-locked".
   static const user_locked = IconData(59562, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-marked-filled".
+  /// "TIcons" named "user-marked-filled".
   static const user_marked_filled = IconData(59563, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-marked".
+  /// "TIcons" named "user-marked".
   static const user_marked = IconData(59564, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-password-filled".
+  /// "TIcons" named "user-password-filled".
   static const user_password_filled = IconData(59565, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-password".
+  /// "TIcons" named "user-password".
   static const user_password = IconData(59566, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-safety-filled".
+  /// "TIcons" named "user-safety-filled".
   static const user_safety_filled = IconData(59567, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-safety".
+  /// "TIcons" named "user-safety".
   static const user_safety = IconData(59568, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-search-filled".
+  /// "TIcons" named "user-search-filled".
   static const user_search_filled = IconData(59569, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-search".
+  /// "TIcons" named "user-search".
   static const user_search = IconData(59570, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-setting-filled".
+  /// "TIcons" named "user-setting-filled".
   static const user_setting_filled = IconData(59571, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-setting".
+  /// "TIcons" named "user-setting".
   static const user_setting = IconData(59572, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-talk-1-filled".
+  /// "TIcons" named "user-talk-1-filled".
   static const user_talk_1_filled = IconData(59573, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-talk-1".
+  /// "TIcons" named "user-talk-1".
   static const user_talk_1 = IconData(59574, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-talk-filled".
+  /// "TIcons" named "user-talk-filled".
   static const user_talk_filled = IconData(59575, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-talk-off-1-filled".
+  /// "TIcons" named "user-talk-off-1-filled".
   static const user_talk_off_1_filled = IconData(59576, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-talk-off-1".
+  /// "TIcons" named "user-talk-off-1".
   static const user_talk_off_1 = IconData(59577, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-talk".
+  /// "TIcons" named "user-talk".
   static const user_talk = IconData(59578, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-time-filled".
+  /// "TIcons" named "user-time-filled".
   static const user_time_filled = IconData(59579, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-time".
+  /// "TIcons" named "user-time".
   static const user_time = IconData(59580, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-transmit-filled".
+  /// "TIcons" named "user-transmit-filled".
   static const user_transmit_filled = IconData(59581, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-transmit".
+  /// "TIcons" named "user-transmit".
   static const user_transmit = IconData(59582, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-unknown-filled".
+  /// "TIcons" named "user-unknown-filled".
   static const user_unknown_filled = IconData(59583, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-unknown".
+  /// "TIcons" named "user-unknown".
   static const user_unknown = IconData(59584, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-unlocked-filled".
+  /// "TIcons" named "user-unlocked-filled".
   static const user_unlocked_filled = IconData(59585, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-unlocked".
+  /// "TIcons" named "user-unlocked".
   static const user_unlocked = IconData(59586, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-vip-filled".
+  /// "TIcons" named "user-vip-filled".
   static const user_vip_filled = IconData(59587, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-vip".
+  /// "TIcons" named "user-vip".
   static const user_vip = IconData(59588, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-visible-filled".
+  /// "TIcons" named "user-visible-filled".
   static const user_visible_filled = IconData(59589, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user-visible".
+  /// "TIcons" named "user-visible".
   static const user_visible = IconData(59590, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "user".
+  /// "TIcons" named "user".
   static const user = IconData(59591, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usercase-filled".
+  /// "TIcons" named "usercase-filled".
   static const usercase_filled = IconData(59592, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usercase-link-filled".
+  /// "TIcons" named "usercase-link-filled".
   static const usercase_link_filled = IconData(59593, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usercase-link".
+  /// "TIcons" named "usercase-link".
   static const usercase_link = IconData(59594, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usercase".
+  /// "TIcons" named "usercase".
   static const usercase = IconData(59595, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usergroup-add-filled".
+  /// "TIcons" named "usergroup-add-filled".
   static const usergroup_add_filled = IconData(59596, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usergroup-add".
+  /// "TIcons" named "usergroup-add".
   static const usergroup_add = IconData(59597, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usergroup-circle-filled".
+  /// "TIcons" named "usergroup-circle-filled".
   static const usergroup_circle_filled = IconData(59598, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usergroup-circle".
+  /// "TIcons" named "usergroup-circle".
   static const usergroup_circle = IconData(59599, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usergroup-clear-filled".
+  /// "TIcons" named "usergroup-clear-filled".
   static const usergroup_clear_filled = IconData(59600, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usergroup-clear".
+  /// "TIcons" named "usergroup-clear".
   static const usergroup_clear = IconData(59601, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usergroup-filled".
+  /// "TIcons" named "usergroup-filled".
   static const usergroup_filled = IconData(59602, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "usergroup".
+  /// "TIcons" named "usergroup".
   static const usergroup = IconData(59603, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "vehicle-filled".
+  /// "TIcons" named "vehicle-filled".
   static const vehicle_filled = IconData(59604, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "vehicle".
+  /// "TIcons" named "vehicle".
   static const vehicle = IconData(59605, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "verified-filled".
+  /// "TIcons" named "verified-filled".
   static const verified_filled = IconData(59606, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "verified".
+  /// "TIcons" named "verified".
   static const verified = IconData(59607, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "verify-filled".
+  /// "TIcons" named "verify-filled".
   static const verify_filled = IconData(59608, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "verify".
+  /// "TIcons" named "verify".
   static const verify = IconData(59609, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "vertical-filled".
+  /// "TIcons" named "vertical-filled".
   static const vertical_filled = IconData(59610, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "vertical".
+  /// "TIcons" named "vertical".
   static const vertical = IconData(59611, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-1-filled".
+  /// "TIcons" named "video-camera-1-filled".
   static const video_camera_1_filled = IconData(59612, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-1".
+  /// "TIcons" named "video-camera-1".
   static const video_camera_1 = IconData(59613, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-2-filled".
+  /// "TIcons" named "video-camera-2-filled".
   static const video_camera_2_filled = IconData(59614, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-2".
+  /// "TIcons" named "video-camera-2".
   static const video_camera_2 = IconData(59615, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-dollar-filled".
+  /// "TIcons" named "video-camera-dollar-filled".
   static const video_camera_dollar_filled = IconData(59616, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-dollar".
+  /// "TIcons" named "video-camera-dollar".
   static const video_camera_dollar = IconData(59617, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-filled".
+  /// "TIcons" named "video-camera-filled".
   static const video_camera_filled = IconData(59618, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-minus-filled".
+  /// "TIcons" named "video-camera-minus-filled".
   static const video_camera_minus_filled = IconData(59619, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-minus".
+  /// "TIcons" named "video-camera-minus".
   static const video_camera_minus = IconData(59620, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-music-filled".
+  /// "TIcons" named "video-camera-music-filled".
   static const video_camera_music_filled = IconData(59621, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-music".
+  /// "TIcons" named "video-camera-music".
   static const video_camera_music = IconData(59622, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-off-filled".
+  /// "TIcons" named "video-camera-off-filled".
   static const video_camera_off_filled = IconData(59623, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera-off".
+  /// "TIcons" named "video-camera-off".
   static const video_camera_off = IconData(59624, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-camera".
+  /// "TIcons" named "video-camera".
   static const video_camera = IconData(59625, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-filled".
+  /// "TIcons" named "video-filled".
   static const video_filled = IconData(59626, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-library-filled".
+  /// "TIcons" named "video-library-filled".
   static const video_library_filled = IconData(59627, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video-library".
+  /// "TIcons" named "video-library".
   static const video_library = IconData(59628, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "video".
+  /// "TIcons" named "video".
   static const video = IconData(59629, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-agenda-filled".
+  /// "TIcons" named "view-agenda-filled".
   static const view_agenda_filled = IconData(59630, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-agenda".
+  /// "TIcons" named "view-agenda".
   static const view_agenda = IconData(59631, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-column".
+  /// "TIcons" named "view-column".
   static const view_column = IconData(59632, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-gantt-filled".
+  /// "TIcons" named "view-gantt-filled".
   static const view_gantt_filled = IconData(59633, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-gantt".
+  /// "TIcons" named "view-gantt".
   static const view_gantt = IconData(59634, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-image-filled".
+  /// "TIcons" named "view-image-filled".
   static const view_image_filled = IconData(59635, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-image".
+  /// "TIcons" named "view-image".
   static const view_image = IconData(59636, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-in-ar-filled".
+  /// "TIcons" named "view-in-ar-filled".
   static const view_in_ar_filled = IconData(59637, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-in-ar".
+  /// "TIcons" named "view-in-ar".
   static const view_in_ar = IconData(59638, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-list".
+  /// "TIcons" named "view-list".
   static const view_list = IconData(59639, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-module-filled".
+  /// "TIcons" named "view-module-filled".
   static const view_module_filled = IconData(59640, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-module".
+  /// "TIcons" named "view-module".
   static const view_module = IconData(59641, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-organization-filled".
+  /// "TIcons" named "view-organization-filled".
   static const view_organization_filled = IconData(59642, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "view-organization".
+  /// "TIcons" named "view-organization".
   static const view_organization = IconData(59643, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "visual-recognition-filled".
+  /// "TIcons" named "visual-recognition-filled".
   static const visual_recognition_filled = IconData(59644, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "visual-recognition".
+  /// "TIcons" named "visual-recognition".
   static const visual_recognition = IconData(59645, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "voice-wave".
+  /// "TIcons" named "voice-wave".
   static const voice_wave = IconData(59646, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wallet-filled".
+  /// "TIcons" named "wallet-filled".
   static const wallet_filled = IconData(59647, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wallet".
+  /// "TIcons" named "wallet".
   static const wallet = IconData(59648, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "watch-filled".
+  /// "TIcons" named "watch-filled".
   static const watch_filled = IconData(59649, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "watch".
+  /// "TIcons" named "watch".
   static const watch = IconData(59650, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "watermelon-filled".
+  /// "TIcons" named "watermelon-filled".
   static const watermelon_filled = IconData(59651, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "watermelon".
+  /// "TIcons" named "watermelon".
   static const watermelon = IconData(59652, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wave-bye-filled".
+  /// "TIcons" named "wave-bye-filled".
   static const wave_bye_filled = IconData(59653, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wave-bye".
+  /// "TIcons" named "wave-bye".
   static const wave_bye = IconData(59654, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wave-left-filled".
+  /// "TIcons" named "wave-left-filled".
   static const wave_left_filled = IconData(59655, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wave-left".
+  /// "TIcons" named "wave-left".
   static const wave_left = IconData(59656, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wave-right-filled".
+  /// "TIcons" named "wave-right-filled".
   static const wave_right_filled = IconData(59657, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wave-right".
+  /// "TIcons" named "wave-right".
   static const wave_right = IconData(59658, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wealth-1-filled".
+  /// "TIcons" named "wealth-1-filled".
   static const wealth_1_filled = IconData(59659, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wealth-1".
+  /// "TIcons" named "wealth-1".
   static const wealth_1 = IconData(59660, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wealth-filled".
+  /// "TIcons" named "wealth-filled".
   static const wealth_filled = IconData(59661, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wealth".
+  /// "TIcons" named "wealth".
   static const wealth = IconData(59662, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "web-filled".
+  /// "TIcons" named "web-filled".
   static const web_filled = IconData(59663, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "web".
+  /// "TIcons" named "web".
   static const web = IconData(59664, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "widget-filled".
+  /// "TIcons" named "widget-filled".
   static const widget_filled = IconData(59665, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "widget".
+  /// "TIcons" named "widget".
   static const widget = IconData(59666, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wifi-1-filled".
+  /// "TIcons" named "wifi-1-filled".
   static const wifi_1_filled = IconData(59667, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wifi-1".
+  /// "TIcons" named "wifi-1".
   static const wifi_1 = IconData(59668, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wifi-no-filled".
+  /// "TIcons" named "wifi-no-filled".
   static const wifi_no_filled = IconData(59669, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wifi-no".
+  /// "TIcons" named "wifi-no".
   static const wifi_no = IconData(59670, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wifi-off-1-filled".
+  /// "TIcons" named "wifi-off-1-filled".
   static const wifi_off_1_filled = IconData(59671, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wifi-off-1".
+  /// "TIcons" named "wifi-off-1".
   static const wifi_off_1 = IconData(59672, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wifi-off".
+  /// "TIcons" named "wifi-off".
   static const wifi_off = IconData(59673, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wifi".
+  /// "TIcons" named "wifi".
   static const wifi = IconData(59674, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "window-1-filled".
+  /// "TIcons" named "window-1-filled".
   static const window_1_filled = IconData(59675, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "window-1".
+  /// "TIcons" named "window-1".
   static const window_1 = IconData(59676, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "window-filled".
+  /// "TIcons" named "window-filled".
   static const window_filled = IconData(59677, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "window".
+  /// "TIcons" named "window".
   static const window = IconData(59678, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "windy-rain".
+  /// "TIcons" named "windy-rain".
   static const windy_rain = IconData(59679, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "windy".
+  /// "TIcons" named "windy".
   static const windy = IconData(59680, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wink-filled".
+  /// "TIcons" named "wink-filled".
   static const wink_filled = IconData(59681, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wink".
+  /// "TIcons" named "wink".
   static const wink = IconData(59682, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "work-filled".
+  /// "TIcons" named "work-filled".
   static const work_filled = IconData(59683, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "work-history-filled".
+  /// "TIcons" named "work-history-filled".
   static const work_history_filled = IconData(59684, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "work-history".
+  /// "TIcons" named "work-history".
   static const work_history = IconData(59685, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "work-off-filled".
+  /// "TIcons" named "work-off-filled".
   static const work_off_filled = IconData(59686, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "work-off".
+  /// "TIcons" named "work-off".
   static const work_off = IconData(59687, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "work".
+  /// "TIcons" named "work".
   static const work = IconData(59688, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wry-smile-filled".
+  /// "TIcons" named "wry-smile-filled".
   static const wry_smile_filled = IconData(59689, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "wry-smile".
+  /// "TIcons" named "wry-smile".
   static const wry_smile = IconData(59690, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "zoom-in-filled".
+  /// "TIcons" named "zoom-in-filled".
   static const zoom_in_filled = IconData(59691, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "zoom-in".
+  /// "TIcons" named "zoom-in".
   static const zoom_in = IconData(59692, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "zoom-out-filled".
+  /// "TIcons" named "zoom-out-filled".
   static const zoom_out_filled = IconData(59693, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" named "zoom-out".
+  /// "TIcons" named "zoom-out".
   static const zoom_out = IconData(59694, fontFamily: iconFont, fontPackage: iconFontPackage);
 
-  /// "TDIcons" all icons.
+  /// "TIcons" all icons.
   static const allIconsMap = <String, IconData>{
     'ability_open': ability_open,
     'abstract_filled': abstract_filled,

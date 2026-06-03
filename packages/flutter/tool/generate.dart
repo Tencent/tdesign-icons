@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
 
-const fontFamily = 'TDIcons';
+const fontFamily = 'TIcons';
 const fontPackage = 'tdesign_icons';
 
 void main() {
@@ -52,7 +52,7 @@ void generate(List<IconModel> icons) {
       (ClassBuilder()
             ..docs.addAll([
               '/// @formatter:off',
-              '/// TDesign icon collection. Use with [Icon] widget, e.g. [TDIcons.home_filled].',
+              '/// TDesign icon collection. Use with [Icon] widget, e.g. [TIcons.home_filled].',
             ])
             /// Tree Shaking 支持
             ..annotations.add(refer('staticIconProvider'))

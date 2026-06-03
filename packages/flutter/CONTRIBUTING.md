@@ -9,19 +9,21 @@ pnpm install
 # 2. 生成资源
 pnpm run generate  # 在根目录
 
-# 3. 安装 Flutter 依赖
+# 3. 进入 Flutter 包目录
+cd packages/flutter
+
+# 4. 安装 Flutter 依赖
 flutter pub get
 
-# 4. 生成代码
+# 5. 生成代码
 dart run tool/generate.dart
 
-# 5. 代码检查
+# 6. 代码检查
 flutter analyze
-dart format lib/
 
-# 6. 更新版本号 (编辑 pubspec.yaml)
+# 7. 更新版本号 (编辑 pubspec.yaml)
 
-# 7. 发布
+# 8. 发布
 flutter pub publish
 ```
 

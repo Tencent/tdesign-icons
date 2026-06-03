@@ -1,7 +1,7 @@
 // dart format off
 // TDesign Icons for Flutter
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: constant_identifier_names
+// ignore_for_file: constant_identifier_names, unused_element
 
 import 'package:flutter/widgets.dart';
 

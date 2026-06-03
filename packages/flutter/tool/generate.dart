@@ -40,7 +40,8 @@ void main() {
 }
 
 const header = '''TDesign Icons for Flutter
-// GENERATED CODE - DO NOT MODIFY BY HAND''';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: constant_identifier_names''';
 
 void generate(List<IconModel> icons) {
   final scriptDir = File.fromUri(Platform.script).parent.path;

@@ -1,6 +1,6 @@
 name: tdesign_icons
-description: "TDesign Icons"
-version: 0.0.1
+description: "TDesign Icons for Flutter."
+version: 0.0.2
 homepage: https://tdesign.tencent.com/icons
 repository: https://github.com/Tencent/tdesign-icons/tree/develop/packages/flutter
 issue_tracker: https://github.com/Tencent/tdesign-icons/issues

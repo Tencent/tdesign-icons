@@ -39,7 +39,6 @@ packages/flutter/
 │       └── assets.g.dart    # 图标常量 (自动生成)
 ├── tool/
 │   └── generate.dart        # 代码生成器
-├── scripts/                # 脚本目录
 ├── pubspec.yaml            # 包配置
 ├── CHANGELOG.md            # 版本记录
 └── README.md               # 使用说明
@@ -49,5 +48,4 @@ packages/flutter/
 
 ## 注意事项
 
-- `fonts/t.ttf` 和 `lib/src/assets.g.dart` 是**生成文件**，已加入 `.gitignore`
 - 发布后创建 Git Tag: `git tag v{version}`

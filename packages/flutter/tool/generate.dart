@@ -147,7 +147,7 @@ class IconModel {
 
   factory IconModel.fromJson(Map<String, dynamic> json) {
     final originalName = json['name'];
-    final name = toSnakeCase(originalName);
+    final name = originalName.replaceAll("-", '_');
     final codepoint = (json['codepoint'] as String).replaceAll("\\", '');
 
     if (!RegExp(r'^[A-Fa-f0-9]{4,6}$').hasMatch(codepoint)) {
@@ -166,26 +166,4 @@ class IconModel {
   @override
   String toString() =>
       'IconItem(name: $name, originalName: $originalName, codepoint: $codepoint)';
-}
-
-/// Convert camelCase or kebab-case to snake_case
-String toSnakeCase(String input) {
-  // First, handle kebab-case: "add-circle" -> "add_circle"
-  String result = input.replaceAll('-', '_');
-
-  // Then, handle camelCase: "addCircle" -> "add_circle"
-  // Insert underscore before uppercase letters
-  result = result.replaceAll(RegExp(r'([a-z0-9])([A-Z])'), r'$1_$2');
-
-  // Convert to lowercase
-  result = result.toLowerCase();
-
-  // Clean up consecutive underscores
-  result = result.replaceAll('___', '_');
-  result = result.replaceAll('__', '_');
-
-  // Remove leading/trailing underscores
-  result = result.replaceAll(RegExp(r'^_+|_+$'), '');
-
-  return result;
 }

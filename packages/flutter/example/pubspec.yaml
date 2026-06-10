@@ -1,0 +1,23 @@
+name: tdesign_icons_example
+description: "TDesign Icons Flutter 本地开发演示应用"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0
+  flutter: ">=3.44.1"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  tdesign_icons:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

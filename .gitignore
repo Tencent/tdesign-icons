@@ -14,6 +14,16 @@ converted_svg
 dist/
 esm/
 packages/flutter/build/
+# FVM：提交 .fvmrc 与 .fvm/fvm_config.json，忽略 SDK 软链与本地缓存
+packages/flutter/.fvm/flutter_sdk
+packages/flutter/.fvm/release
+packages/flutter/.fvm/version
+packages/flutter/example/build/
+packages/flutter/example/.dart_tool/
+packages/flutter/example/.flutter-plugins-dependencies
+packages/flutter/example/android/.gradle/
+packages/flutter/example/android/local.properties
+packages/flutter/example/**/GeneratedPluginRegistrant.java
 
 # node_modules
 **/node_modules

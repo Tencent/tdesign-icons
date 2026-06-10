@@ -14,7 +14,9 @@ fvm install
 fvm use
 ```
 
-版本配置见 `.fvmrc`（当前为 Flutter 3.44.1）。
+版本配置见 `.fvmrc`（当前为 Flutter 3.44.1，本地开发推荐版本）。
+
+包与 example 的 `pubspec.yaml` 最低要求为 **Flutter 3.32+ / Dart 3.8+**；CI 会在 **3.32.0** 与 **3.44.1** 两个版本下分别验证。
 
 ---
 

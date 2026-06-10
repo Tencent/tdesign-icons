@@ -8,7 +8,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: check_github_primary_email
         run: |
@@ -28,7 +28,7 @@ jobs:
               echo "邮箱 $log_emails 校验通过";
           fi
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
@@ -62,16 +62,15 @@ jobs:
           - tdesign-icons-svg
           - tdesign-icons-view
           - tdesign-icons-web-components
-          - tdesign-icons-flutter
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         with:
           version: 9
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: "pnpm"
@@ -80,39 +79,63 @@ jobs:
 
       - run: pnpm run generate
 
-      - if: matrix.icons != 'tdesign-icons-flutter'
-        run: pnpm run --filter ${{ matrix.icons }} build
+      - run: pnpm run --filter ${{ matrix.icons }} build
 
-      - if: matrix.icons == 'tdesign-icons-flutter'
-        uses: TDesignOteam/workflows/actions/setup-flutter@main
+  build-flutter:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        flutter-version: ["3.32.0", "3.44.1"]
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v6
         with:
-          flutter-version: 3.32.0
+          version: 9
 
-      - if: matrix.icons == 'tdesign-icons-flutter'
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: "pnpm"
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm run generate
+
+      - uses: TDesignOteam/workflows/actions/setup-flutter@main
+        with:
+          flutter-version: ${{ matrix.flutter-version }}
+
+      - name: build and verify flutter package
         working-directory: ./packages/flutter
         run: |
+          echo "Flutter ${{ matrix.flutter-version }}"
+          flutter --version
           flutter pub get
           dart ./tool/generate.dart
-          
+
           # 验证
           [ -f "lib/src/assets.g.dart" ] || (echo "❌ assets.g.dart 不存在" && exit 1)
           [ -f "fonts/t.ttf" ] || (echo "❌ t.ttf 不存在" && exit 1)
           icon_count=$(grep -c "static const " lib/src/assets.g.dart || echo "0")
           echo "✅ Flutter 包构建成功，共 $icon_count 个图标"
-          
+
           flutter analyze
-          flutter pub publish --dry-run
+          cd example && flutter pub get && flutter analyze
+          cd .. && flutter pub publish --dry-run
 
   site:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         with:
           version: 9
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: "pnpm"
@@ -128,7 +151,7 @@ jobs:
       - run: zip -r _site.zip _site
 
       - name: upload _site artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: _site
           path: _site.zip
@@ -140,7 +163,7 @@ jobs:
 
       - name: Upload PR number
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pr
           path: ./pr-id.txt

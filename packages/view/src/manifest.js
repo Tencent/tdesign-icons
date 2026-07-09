@@ -3554,6 +3554,10 @@ export const manifest = {
           keywords: ['商店', '铺子'],
         },
         {
+          name: 'star-1-filled',
+          keywords: ['星星', '加星标', '收藏'],
+        },
+        {
           name: 'star-filled',
           keywords: ['星星', '星星们'],
         },
@@ -5755,6 +5759,10 @@ export const manifest = {
         {
           name: 'thumb-down-2',
           keywords: ['点赞', '点踩'],
+        },
+        {
+          name: 'thumb-up',
+          keywords: ['点赞', '竖起大拇指', '赞'],
         },
         {
           name: 'thumb-up-1',
@@ -8906,6 +8914,10 @@ export const manifest = {
         {
           name: 'shop',
           keywords: ['商店', '店铺'],
+        },
+        {
+          name: 'star-1',
+          keywords: ['星星', '加星标', '收藏'],
         },
         {
           name: 'star',

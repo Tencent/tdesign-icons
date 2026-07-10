@@ -5762,7 +5762,7 @@ export const manifest = {
         },
         {
           name: 'thumb-up',
-          keywords: ['点赞', '竖起大拇指', '赞'],
+          keywords: ['点赞', '竖起大拇指', '赞', '好'],
         },
         {
           name: 'thumb-up-1',
@@ -5770,7 +5770,7 @@ export const manifest = {
         },
         {
           name: 'thumb-up-2',
-          keywords: ['点赞', '翘起大拇指'],
+          keywords: ['点赞', '翘起大拇指', '赞', '好评'],
         },
         {
           name: 'undertake',

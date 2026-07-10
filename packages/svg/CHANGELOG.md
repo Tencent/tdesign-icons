@@ -1,5 +1,11 @@
 # tdesign-icons-svg
 
+## 0.4.3
+
+### Patch Changes
+
+- feat: add star-1, star-1-filled icon, update chat, thumb-up icon
+
 ## 0.4.2
 
 ### Patch Changes

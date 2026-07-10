@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.3.5
+
+### Patch Changes
+
+- feat: add star-1, star-1-filled icon, update chat, thumb-up icon
+
 ## 0.3.4
 
 ### Patch Changes

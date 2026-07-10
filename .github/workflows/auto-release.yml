@@ -1,0 +1,35 @@
+name: auto-release
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    if: github.event.pull_request.merged && startsWith(github.head_ref, 'release/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+
+      - run: pnpm install
+
+      - run: pnpm run '/build:*/'
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - uses: TDesignOteam/flow-pilot-action@develop
+        with:
+          token: ${{ secrets.TDESIGN_BOT_TOKEN }}
+          packages: "tdesign-icons-vue-next,tdesign-icons-react,tdesign-icons-view,tdesign-icons-svg,tdesign-icons-vue,tdesign-icons-web-components"

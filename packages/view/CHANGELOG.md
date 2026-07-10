@@ -1,5 +1,13 @@
 # tdesign-icons-view
 
+## 0.5.5
+
+### Patch Changes
+
+- feat: add star-1, star-1-filled icon, update chat, thumb-up icon
+- Updated dependencies
+  - tdesign-icons-vue-next@0.4.5
+
 ## 0.5.4
 
 ### Patch Changes

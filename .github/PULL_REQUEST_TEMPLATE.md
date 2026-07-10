@@ -34,13 +34,43 @@ PR 在维护者审核通过后会合并，谢谢！
 
 ### 📝 更新日志
 
+- [ ] 本条 PR 不需要纳入 Changelog
+
+#### tdesign-icons-vue-next
+
 <!--
-从用户角度描述具体变化，以及可能的 breaking change 和其他风险。
+- feat(组件名称): 处理问题或特性描述
 -->
 
-- fix(组件名称): 处理问题或特性描述 ...
+#### tdesign-icons-react
 
-- [ ] 本条 PR 不需要纳入 Changelog
+<!--
+- feat(组件名称): 处理问题或特性描述
+-->
+
+#### tdesign-icons-vue
+
+<!--
+- feat(组件名称): 处理问题或特性描述
+-->
+
+#### tdesign-icons-web-components
+
+<!--
+- feat(组件名称): 处理问题或特性描述
+-->
+
+#### tdesign-icons-svg
+
+<!--
+- feat(组件名称): 处理问题或特性描述
+-->
+
+#### tdesign-icons-view
+
+<!--
+- feat(组件名称): 处理问题或特性描述
+-->
 
 ### ☑️ 请求合并前的自查清单
 

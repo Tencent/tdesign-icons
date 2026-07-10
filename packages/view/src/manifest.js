@@ -5761,10 +5761,6 @@ export const manifest = {
           keywords: ['点赞', '点踩'],
         },
         {
-          name: 'thumb-up',
-          keywords: ['点赞', '竖起大拇指', '赞', '好'],
-        },
-        {
           name: 'thumb-up-1',
           keywords: ['点赞', '竖起大拇指'],
         },

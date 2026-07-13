@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 0.3.6
+
+### Patch Changes
+
+- feat: optimize icon path
+
 ## 0.3.5
 
 ### Patch Changes

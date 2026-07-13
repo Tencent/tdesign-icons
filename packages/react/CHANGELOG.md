@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.6.6
+
+### Patch Changes
+
+- feat: optimize icon path
+
 ## 0.6.5
 
 ### Patch Changes

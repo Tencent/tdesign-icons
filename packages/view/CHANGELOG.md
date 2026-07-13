@@ -1,5 +1,13 @@
 # tdesign-icons-view
 
+## 0.5.6
+
+### Patch Changes
+
+- feat: optimize icon path
+- Updated dependencies
+  - tdesign-icons-vue-next@0.4.6
+
 ## 0.5.5
 
 ### Patch Changes

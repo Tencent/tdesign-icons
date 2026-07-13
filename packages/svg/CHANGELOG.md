@@ -1,5 +1,11 @@
 # tdesign-icons-svg
 
+## 0.4.4
+
+### Patch Changes
+
+- feat: optimize icon path
+
 ## 0.4.3
 
 ### Patch Changes

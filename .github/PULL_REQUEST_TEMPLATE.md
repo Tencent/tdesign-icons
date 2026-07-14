@@ -36,6 +36,12 @@ PR 在维护者审核通过后会合并，谢谢！
 
 - [ ] 本条 PR 不需要纳入 Changelog
 
+#### all
+
+<!--
+- feat(组件名称): 处理问题或特性描述
+-->
+
 #### tdesign-icons-vue-next
 
 <!--

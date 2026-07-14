@@ -1,0 +1,18 @@
+name: auto-pr
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  call-tag-is-tdesign-icons-view:
+    if: startsWith(github.event.release.tag_name,'tdesign-icons-view')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TDesignOteam/workflows/actions/upgrade-deps@main
+        with:
+          token: ${{ secrets.TDESIGN_BOT_TOKEN }}
+          owner: Tencent
+          repo: tdesign
+          deps: tdesign-icons-view
+          package-manager: pnpm

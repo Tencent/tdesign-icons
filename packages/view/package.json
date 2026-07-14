@@ -31,7 +31,7 @@
   "dependencies": {
     "@popperjs/core": "catalog:",
     "lodash": "catalog:",
-    "tdesign-icons-vue-next": "^0.4.6",
+    "tdesign-icons-vue-next": "workspace:^",
     "tdesign-vue-next": "catalog:tdesign",
     "vue": "catalog:vue"
   },

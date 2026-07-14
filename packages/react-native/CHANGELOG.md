@@ -1,18 +1,21 @@
 # tdesign-icons-react-native
 
-## 0.0.3
+### 🐞 Bug Fixes
 
-### Patch Changes
+- 修复 `lock-on` 图标路径
 
-- fix: fix lock-on icon path
+## 🌈 0.0.2 `2024-07-05`
 
-## 0.0.2
+### 🚀 Features
 
-### Patch Changes
+- 新增 `list-numbered` 图标，优化 `lock-off` 路径
 
-- feat: add `list-numbered` icon, optimize path of `lock-off`;
-- fix: fix `chart-column` naming;
+### 🐞 Bug Fixes
 
-## 0.0.1
+- 修复 `chart-column` 命名
 
-- feat: release 0.0.1
+## 🌈 0.0.1 `2024-01-08`
+
+### 🚀 Features
+
+- 发布 0.0.1

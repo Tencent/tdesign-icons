@@ -1,194 +1,169 @@
 # tdesign-icons-view
 
-## 0.5.6
+## 🌈 0.5.6 `2026-07-13`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: optimize icon path
-- Updated dependencies
-  - tdesign-icons-vue-next@0.4.6
+- optimize icon path
 
-## 0.5.5
+## 🌈 0.5.5 `2026-07-10`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add star-1, star-1-filled icon, update chat, thumb-up icon
-- Updated dependencies
-  - tdesign-icons-vue-next@0.4.5
+- add `star-1`, `star-1-filled` icon, update `chat`, `thumb-up` icon
 
-## 0.5.4
+## 🌈 0.5.4 `2026-03-31`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add divider-1,voice-wave,keyboard-1 icons
-- Updated dependencies
-  - tdesign-icons-vue-next@0.4.3
+- add `divider-1`, `voice-wave`, `keyboard-1` icons
 
-## 0.5.3
+## 🌈 0.5.3 `2026-01-30`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: optimize logo icon display in dark mode
+- optimize logo icon display in dark mode
 
-## 0.5.1
+## 🌈 0.5.1 `2026-01-22`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add 217 new icons related to AI, documents, logo and files
+- add 217 new icons related to AI, documents, logo and files
 
-## 0.5.0
+## 🌈 0.5.0 `2025-12-03`
 
-### Minor Changes
+### 🚀 Features
 
-- refactor: migrate from vue 2 to vue 3
-- feat: add empty result and optimize dark mode
+- migrate from vue 2 to vue 3
+- add empty result and optimize dark mode
 
-## 0.4.0
+## 🌈 0.4.0 `2025-09-09`
 
-### Minor Changes
+### 🚀 Features
 
-- feat: add new icons `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no` 、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled`
-- refactor: remove icons `video-camera-3`、`video-camera-3-filled`、 `list`
-- feat: new icon editor
+- add new icons `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no`、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled`
+- remove icons `video-camera-3`、`video-camera-3-filled`、`list`
+- new icon editor
 
-### Patch Changes
+## 🌈 0.3.7 `2025-08-04`
 
-- Updated dependencies
-  - tdesign-icons-vue@0.4.0
+### 🐞 Bug Fixes
 
-## 0.3.7
+- add LICENSE
 
-### Patch Changes
+## 🌈 0.3.6 `2025-04-23`
 
-- fix: add LICENSE
-- Updated dependencies
-  - tdesign-icons-vue@0.3.6
+### 🚀 Features
 
-## 0.3.6
+- 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- feat: 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标
-  fix: 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题
-- Updated dependencies
-  - tdesign-icons-vue@0.3.5
+- 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题
 
-## 0.3.5
+## 🌈 0.3.5 `2025-03-20`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: fix path covert bug
-- Updated dependencies
-  - tdesign-icons-vue@0.3.4
+- fix path covert bug
 
-## 0.3.4
+## 🌈 0.3.4 `2025-01-07`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: 新增 logo-alipay、logo-behance-filled 等图标，修改 logo-wecom 图标，移除不合理的 logo-wecom-filled 图标
-- Updated dependencies
-  - tdesign-icons-vue@0.3.3
+- 新增 logo-alipay、logo-behance-filled 等图标，修改 logo-wecom 图标，移除不合理的 logo-wecom-filled 图标
 
-## 0.3.3
+## 🌈 0.3.3 `2024-12-27`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: fix search keywords
+- fix search keywords
 
-## 0.3.2
+## 🌈 0.3.2 `2024-11-12`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: fix filled-icon naming
-- Updated dependencies
-  - tdesign-icons-vue@0.3.2
+- fix filled-icon naming
 
-## 0.3.1
+## 🌈 0.3.1 `2024-11-12`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: fix video-camera naming
-- Updated dependencies
-  - tdesign-icons-vue@0.3.1
+- fix video-camera naming
 
-## 0.3.0
+## 🌈 0.3.0 `2024-11-12`
 
-### Major Changes
+### 🚀 Features
 
-- feat: 新增 907 个新图标
-- feat: `blockchain` 重命名改为`transform-1`,`gesture-pray-1`重命名为`gesture-open`,
-  `gesture-ranslation-1`重命名为`wave-bye`, `gesture-up-1`重命名为`gesture-typing`,`gesture-up-2`重命名为`gesture-right-slip`,`logo-wechat`重命名为`logo-wechat-stroke-filled`
-- feat: 移除`tree-list`、`logo-adobe-photoshop-1` 图标
+- 新增 907 个新图标
+- `blockchain` 重命名改为 `transform-1`，`gesture-pray-1` 重命名为 `gesture-open`，`gesture-ranslation-1` 重命名为 `wave-bye`，`gesture-up-1` 重命名为 `gesture-typing`，`gesture-up-2` 重命名为 `gesture-right-slip`，`logo-wechat` 重命名为 `logo-wechat-stroke-filled`
 
-## 0.2.8
+## 🌈 0.2.8 `2024-08-29`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: fix lock-on icon path
-- Updated dependencies
-  - tdesign-icons-vue@0.2.5
+- fix lock-on icon path
 
-## 0.2.7
+## 🌈 0.2.7 `2024-07-05`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add `list-numbered` icon, optimize path of `lock-off`;
-- fix: fix `chart-column` naming;
+- add `list-numbered` icon, optimize path of `lock-off`
 
-## 0.2.5
+### 🐞 Bug Fixes
 
-### Patch Changes
+- fix `chart-column` naming
 
-- fix: fix style detail
+## 🌈 0.2.5 `2023-10-25`
 
-## 0.2.4
+### 🐞 Bug Fixes
 
-### Patch Changes
+- fix style detail
 
-- fix: fix icon draw path
-- Updated dependencies
-  - tdesign-icons-vue@0.2.2
+## 🌈 0.2.4 `2023-08-17`
 
-## 0.2.3
+### 🐞 Bug Fixes
 
-### Patch Changes
+- fix icon draw path
 
-- fix: fix evenodd fill-rule render error when transformed to iconfont
-- Updated dependencies
-  - tdesign-icons-vue@0.2.1
+## 🌈 0.2.3 `2023-08-17`
 
-## 0.2.2
+### 🐞 Bug Fixes
 
-### Patch Changes
+- fix evenodd fill-rule render error when transformed to iconfont
 
-- fix: fix variables missing
+## 🌈 0.2.2 `2023-08-15`
 
-## 0.2.1
+### 🐞 Bug Fixes
 
-### Patch Changes
+- fix variables missing
 
-- feat: support name search
+## 🌈 0.2.1 `2023-08-10`
 
-## 0.2.0
+### 🚀 Features
 
-### Minor Changes
+- support name search
 
-- feat: increase 900 + new icons
+## 🌈 0.2.0 `2023-08-10`
 
-## 0.1.9
+### 🚀 Features
 
-### Patch Changes
+- increase 900+ new icons
+
+## 🌈 0.1.9 `2023-05-12`
+
+### 🚀 Features
 
 - add repository info
 
-## 0.1.8
+## 🌈 0.1.8 `2023-05-10`
 
-### Patch Changes
+### 🚀 Features
 
-- 更名`arrow-triangle` 相关的 4 个图标
+- 更名 `arrow-triangle` 相关的 4 个图标
 
-## 0.1.7
+## 🌈 0.1.7 `2023-05-08`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add `translate` `translate-1` `arrow-down-triangle` `arrow-down-triangle-filled` `arrow-up-triangle` `arrow-up-triangle-filled` icons
+- add `translate`、`translate-1`、`arrow-down-triangle`、`arrow-down-triangle-filled`、`arrow-up-triangle`、`arrow-up-triangle-filled` icons

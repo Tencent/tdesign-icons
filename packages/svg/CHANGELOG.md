@@ -1,103 +1,108 @@
 # tdesign-icons-svg
 
-## 0.4.4
+## 🌈 0.4.4 `2026-07-13`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: optimize icon path
+- optimize icon path
 
-## 0.4.3
+## 🌈 0.4.3 `2026-07-10`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add star-1, star-1-filled icon, update chat, thumb-up icon
+- add `star-1`, `star-1-filled` icon, update `chat`, `thumb-up` icon
 
-## 0.4.2
+## 🌈 0.4.2 `2026-03-31`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add divider-1,voice-wave,keyboard-1 icons
+- add `divider-1`, `voice-wave`, `keyboard-1` icons
 
-## 0.4.1
+## 🌈 0.4.1 `2026-01-22`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add 217 new icons related to AI, documents, logo and files
+- add 217 new icons related to AI, documents, logo and files
 
-## 0.4.0
+## 🌈 0.4.0 `2025-09-09`
 
-### Minor Changes
+### 🚀 Features
 
-- feat: add new icons `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no` 、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled`
-- refactor: remove icons `video-camera-3`、`video-camera-3-filled`、 `list`
+- add new icons `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no`、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled`
+- remove icons `video-camera-3`、`video-camera-3-filled`、`list`
 
-## 0.3.4
+## 🌈 0.3.4 `2025-08-04`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: add LICENSE
+- add LICENSE
 
-## 0.3.3
+## 🌈 0.3.3 `2025-04-23`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标
-  fix: 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题
+- 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标
 
-## 0.3.2
+### 🐞 Bug Fixes
 
-### Patch Changes
+- 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题
 
-- fix: fix filled-icon naming
+## 🌈 0.3.2 `2024-11-12`
 
-## 0.3.1
+### 🐞 Bug Fixes
 
-### Patch Changes
+- fix filled-icon naming
 
-- fix: fix video-camera naming
+## 🌈 0.3.1 `2024-11-12`
 
-## 0.3.0
+### 🐞 Bug Fixes
 
-### Major Changes
+- fix video-camera naming
 
-- feat: 新增 907 个新图标
-- feat: `blockchain` 重命名改为`transform-1`,`gesture-pray-1`重命名为`gesture-open`,
-  `gesture-ranslation-1`重命名为`wave-bye`, `gesture-up-1`重命名为`gesture-typing`,`gesture-up-2`重命名为`gesture-right-slip`,`logo-wechat`重命名为`logo-wechat-stroke-filled`
-- feat: 移除`tree-list`、`logo-adobe-photoshop-1` 图标
+## 🌈 0.3.0 `2024-11-12`
 
-## 0.2.2
+### 🚀 Features
 
-### Patch Changes
+- 新增 907 个新图标
+- `blockchain` 重命名改为 `transform-1`，`gesture-pray-1` 重命名为 `gesture-open`，`gesture-ranslation-1` 重命名为 `wave-bye`，`gesture-up-1` 重命名为 `gesture-typing`，`gesture-up-2` 重命名为 `gesture-right-slip`，`logo-wechat` 重命名为 `logo-wechat-stroke-filled`
+- 移除 `tree-list`、`logo-adobe-photoshop-1` 图标
 
-- fix: fix lock-on icon path
+## 🌈 0.2.2 `2024-08-29`
 
-## 0.2.1
+### 🐞 Bug Fixes
 
-### Patch Changes
+- fix lock-on icon path
 
-- feat: add `list-numbered` icon, optimize path of `lock-off`;
-- fix: fix `chart-column` naming;
+## 🌈 0.2.1 `2024-07-05`
 
-## 0.2.0
+### 🚀 Features
 
-### Minor Changes
+- add `list-numbered` icon, optimize path of `lock-off`
 
-- feat: increase 900 + new icons
+### 🐞 Bug Fixes
 
-## 0.1.8
+- fix `chart-column` naming
 
-### Patch Changes
+## 🌈 0.2.0 `2023-08-17`
+
+### 🚀 Features
+
+- increase 900+ new icons
+
+## 🌈 0.1.8 `2023-05-12`
+
+### 🚀 Features
 
 - add repository info
 
-## 0.1.7
+## 🌈 0.1.7 `2023-05-10`
 
-### Patch Changes
+### 🚀 Features
 
-- 更名`arrow-triangle` 相关的 4 个图标
+- 更名 `arrow-triangle` 相关的 4 个图标
 
-## 0.1.6
+## 🌈 0.1.6 `2023-05-08`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add `translate` `translate-1` `arrow-down-triangle` `arrow-down-triangle-filled` `arrow-up-triangle` `arrow-up-triangle-filled` icons
+- add `translate`、`translate-1`、`arrow-down-triangle`、`arrow-down-triangle-filled`、`arrow-up-triangle`、`arrow-up-triangle-filled` icons

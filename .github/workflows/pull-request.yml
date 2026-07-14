@@ -80,7 +80,7 @@ jobs:
 
       - run: pnpm run generate
 
-      - if: matrix.icons == 'tdesign-icons-vue'
+      - if: matrix.icons == 'tdesign-icons-view'
         run: pnpm run --filter tdesign-icons-vue-next build
 
       - if: matrix.icons != 'tdesign-icons-flutter'

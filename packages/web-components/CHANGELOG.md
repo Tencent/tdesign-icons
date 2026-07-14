@@ -4,50 +4,50 @@
 
 ### 🚀 Features
 
-- optimize icon path
+- 优化图标路径
 
 ## 🌈 0.3.5 `2026-07-10`
 
 ### 🚀 Features
 
-- add `star-1`, `star-1-filled` icon, update `chat`, `thumb-up` icon
+- 新增 `star-1`、`star-1-filled` 图标，更新 `chat`、`thumb-up` 图标
 
 ## 🌈 0.3.4 `2026-03-31`
 
 ### 🚀 Features
 
-- add `divider-1`, `voice-wave`, `keyboard-1` icons
+- 新增 `divider-1`、`voice-wave`、`keyboard-1` 图标
 
 ## 🌈 0.3.3 `2026-01-22`
 
 ### 🚀 Features
 
-- add 217 new icons related to AI, documents, logo and files
+- 新增 217 个与 AI、文档、logo 及文件相关的新图标
 
 ## 🌈 0.3.2 `2025-10-15`
 
 ### 🐞 Bug Fixes
 
-- fix size bug
+- 修复尺寸（size）异常
 
 ## 🌈 0.3.1 `2025-10-15`
 
 ### 🐞 Bug Fixes
 
-- fix bundle bug
+- 修复打包（bundle）异常
 
 ## 🌈 0.3.0 `2025-10-15`
 
 ### 🚀 Features
 
-- add new icons `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no`、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled`
-- remove icons `video-camera-3`、`video-camera-3-filled`、`list`
+- 新增 `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no`、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled` 图标
+- 移除 `video-camera-3`、`video-camera-3-filled`、`list` 图标
 
 ## 🌈 0.2.7 `2025-08-04`
 
 ### 🐞 Bug Fixes
 
-- add LICENSE
+- 补充 LICENSE
 
 ## 🌈 0.2.6 `2025-04-23`
 
@@ -63,7 +63,7 @@
 
 ### 🐞 Bug Fixes
 
-- fix path covert bug
+- 修复 path 转换 bug
 
 ## 🌈 0.2.4 `2025-01-07`
 
@@ -75,19 +75,19 @@
 
 ### 🐞 Bug Fixes
 
-- fix sideEffect
+- 修复 sideEffect（副作用）配置
 
 ## 🌈 0.2.2 `2024-11-12`
 
 ### 🐞 Bug Fixes
 
-- fix filled-icon naming
+- 修复 filled-icon 命名
 
 ## 🌈 0.2.1 `2024-11-12`
 
 ### 🐞 Bug Fixes
 
-- fix video-camera naming
+- 修复 video-camera 命名
 
 ## 🌈 0.2.0 `2024-11-12`
 
@@ -101,34 +101,34 @@
 
 ### 🚀 Features
 
-- add innerClass and innerStyle
+- 新增 innerClass 和 innerStyle
 
 ## 🌈 0.1.4 `2024-09-19`
 
 ### 🐞 Bug Fixes
 
-- upgrade omi to fix icon repeated rendering
+- 升级 omi 修复图标重复渲染
 
 ## 🌈 0.1.3 `2024-08-29`
 
 ### 🐞 Bug Fixes
 
-- fix lock-on icon path
+- 修复 `lock-on` 图标路径
 
 ## 🌈 0.1.2 `2024-08-14`
 
 ### 🐞 Bug Fixes
 
-- fix icon center position and duplicated class
+- 修复图标居中位置和重复 class
 
 ## 🌈 0.1.1 `2024-08-01`
 
 ### 🐞 Bug Fixes
 
-- fix `clip-rule` and `fill-rule` bug
+- 修复 `clip-rule` 和 `fill-rule` bug
 
 ## 🌈 0.1.0 `2024-07-09`
 
 ### 🚀 Features
 
-- release tdesign-icons-web-components `v0.1.0`
+- 发布 tdesign-icons-web-components `v0.1.0`

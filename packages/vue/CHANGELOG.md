@@ -4,51 +4,51 @@
 
 ### 🚀 Features
 
-- optimize icon path
+- 优化图标路径
 
 ## 🌈 0.4.5 `2026-07-10`
 
 ### 🚀 Features
 
-- add `star-1`, `star-1-filled` icon, update `chat`, `thumb-up` icon
+- 新增 `star-1`、`star-1-filled` 图标，更新 `chat`、`thumb-up` 图标
 
 ## 🌈 0.4.4 `2026-04-01`
 
 ### 🐞 Bug Fixes
 
-- fix iconfont and svgsprite link
+- 修复 iconfont 和 svgsprite 链接
 
 ## 🌈 0.4.3 `2026-03-31`
 
 ### 🚀 Features
 
-- add `divider-1`, `voice-wave`, `keyboard-1` icons
+- 新增 `divider-1`、`voice-wave`、`keyboard-1` 图标
 
 ## 🌈 0.4.2 `2026-01-22`
 
 ### 🚀 Features
 
-- add 217 new icons related to AI, documents, logo and files
+- 新增 217 个与 AI、文档、logo 及文件相关的新图标
 
 ## 🌈 0.4.1 `2025-09-09`
 
 ### 🐞 Bug Fixes
 
-- fix compatibility with previous icon version
+- 修复与历史版本图标的兼容性问题
 
 ## 🌈 0.4.0 `2025-09-09`
 
 ### 🚀 Features
 
-- add new icons `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no`、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled`
-- remove icons `video-camera-3`、`video-camera-3-filled`、`list`
-- support `strokeWidth`、`strokeColor` and `fillColor`
+- 新增 `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no`、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled` 图标
+- 移除 `video-camera-3`、`video-camera-3-filled`、`list` 图标
+- 支持 `strokeWidth`、`strokeColor` 和 `fillColor`
 
 ## 🌈 0.3.6 `2025-08-04`
 
 ### 🐞 Bug Fixes
 
-- add LICENSE
+- 补充 LICENSE
 
 ## 🌈 0.3.5 `2025-04-23`
 
@@ -64,7 +64,7 @@
 
 ### 🐞 Bug Fixes
 
-- fix path covert bug
+- 修复 path 转换 bug
 
 ## 🌈 0.3.3 `2025-01-07`
 
@@ -76,13 +76,13 @@
 
 ### 🐞 Bug Fixes
 
-- fix filled-icon naming
+- 修复 filled-icon 命名
 
 ## 🌈 0.3.1 `2024-11-12`
 
 ### 🐞 Bug Fixes
 
-- fix video-camera naming
+- 修复 video-camera 命名
 
 ## 🌈 0.3.0 `2024-11-12`
 
@@ -96,53 +96,53 @@
 
 ### 🐞 Bug Fixes
 
-- fix lock-on icon path
+- 修复 `lock-on` 图标路径
 
 ## 🌈 0.2.4 `2024-07-05`
 
 ### 🚀 Features
 
-- update iconfont and svgsprite address
+- 更新 iconfont 和 svgsprite 地址
 
 ## 🌈 0.2.3 `2024-07-05`
 
 ### 🚀 Features
 
-- add `list-numbered` icon, optimize path of `lock-off`
+- 新增 `list-numbered` 图标，优化 `lock-off` 路径
 
 ### 🐞 Bug Fixes
 
-- fix `chart-column` naming
+- 修复 `chart-column` 命名
 
 ## 🌈 0.2.2 `2023-08-17`
 
 ### 🐞 Bug Fixes
 
-- fix icon draw path
+- 修复图标绘制路径
 
 ## 🌈 0.2.1 `2023-08-17`
 
 ### 🐞 Bug Fixes
 
-- fix evenodd fill-rule render error when transformed to iconfont
+- 修复转换为 iconfont 时 evenodd fill-rule 渲染错误
 
 ## 🌈 0.2.0 `2023-08-10`
 
 ### 🚀 Features
 
-- increase 900+ new icons
+- 新增 900+ 个新图标
 
 ## 🌈 0.1.11 `2023-07-17`
 
 ### 🐞 Bug Fixes
 
-- fix manifest effects chunk load
+- 修复 manifest 影响 chunk 加载的问题
 
 ## 🌈 0.1.10 `2023-05-12`
 
 ### 🚀 Features
 
-- add repository info
+- 增加 repository 信息
 
 ## 🌈 0.1.9 `2023-05-10`
 
@@ -154,7 +154,7 @@
 
 ### 🚀 Features
 
-- add `translate`、`translate-1`、`arrow-down-triangle`、`arrow-down-triangle-filled`、`arrow-up-triangle`、`arrow-up-triangle-filled` icons
+- 新增 `translate`、`translate-1`、`arrow-down-triangle`、`arrow-down-triangle-filled`、`arrow-up-triangle`、`arrow-up-triangle-filled` 图标
 
 ## 🌈 0.1.7 `2023-03-07`
 

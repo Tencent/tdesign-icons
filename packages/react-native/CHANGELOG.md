@@ -1,5 +1,7 @@
 # tdesign-icons-react-native
 
+## 🌈 0.0.3 `2024-08-29`
+
 ### 🐞 Bug Fixes
 
 - 修复 `lock-on` 图标路径

@@ -80,6 +80,9 @@ jobs:
 
       - run: pnpm run generate
 
+      - if: matrix.icons == 'tdesign-icons-vue'
+        run: pnpm run --filter tdesign-icons-vue-next build
+
       - if: matrix.icons != 'tdesign-icons-flutter'
         run: pnpm run --filter ${{ matrix.icons }} build
 
@@ -93,13 +96,13 @@ jobs:
         run: |
           flutter pub get
           dart ./tool/generate.dart
-          
+
           # 验证
           [ -f "lib/src/assets.g.dart" ] || (echo "❌ assets.g.dart 不存在" && exit 1)
           [ -f "fonts/t.ttf" ] || (echo "❌ t.ttf 不存在" && exit 1)
           icon_count=$(grep -c "static const " lib/src/assets.g.dart || echo "0")
           echo "✅ Flutter 包构建成功，共 $icon_count 个图标"
-          
+
           flutter analyze
           # flutter pub publish --dry-run
 
@@ -120,6 +123,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - run: pnpm run generate
+
+      - run: pnpm run --filter tdesign-icons-vue-next build
 
       - run: pnpm run --filter tdesign-icons-view preview
 

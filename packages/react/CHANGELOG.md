@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 0.6.6
+
+### Patch Changes
+
+- feat: optimize icon path
+
+## 0.6.5
+
+### Patch Changes
+
+- feat: add star-1, star-1-filled icon, update chat, thumb-up icon
+
 ## 0.6.4
 
 ### Patch Changes

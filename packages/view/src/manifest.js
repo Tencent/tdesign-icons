@@ -2923,7 +2923,7 @@ export const manifest = {
         },
         {
           name: 'no-result-filled',
-          keywords: ['无结果', '空状态'],
+          keywords: ['无结果', '无数据', '空', 'empty'],
         },
       ],
     },

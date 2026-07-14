@@ -9,8 +9,9 @@ jobs:
     if: startsWith(github.event.release.tag_name,'tdesign-icons-view')
     runs-on: ubuntu-latest
     steps:
-      - uses: TDesignOteam/workflows/.github/workflows/upgrade-deps.yml@main
+      - uses: TDesignOteam/workflows/actions/upgrade-deps.yml@main
         with:
+          token: ${{ secrets.TDESIGN_BOT_TOKEN }}
           owner: Tencent
           repo: tdesign
           deps: tdesign-icons-view

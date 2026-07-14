@@ -39,10 +39,13 @@
 
 ## 🌈 0.4.0 `2025-09-09`
 
+### 🚨 Breaking Changes
+
+- 移除 `video-camera-3`、`video-camera-3-filled`、`list` 图标
+
 ### 🚀 Features
 
 - 新增 `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no`、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled` 图标
-- 移除 `video-camera-3`、`video-camera-3-filled`、`list` 图标
 - 新增图标编辑器
 
 ## 🌈 0.3.7 `2025-08-04`
@@ -97,6 +100,7 @@
 
 - 新增 907 个新图标
 - `blockchain` 重命名改为 `transform-1`，`gesture-pray-1` 重命名为 `gesture-open`，`gesture-ranslation-1` 重命名为 `wave-bye`，`gesture-up-1` 重命名为 `gesture-typing`，`gesture-up-2` 重命名为 `gesture-right-slip`，`logo-wechat` 重命名为 `logo-wechat-stroke-filled`
+- 移除 `tree-list`、`logo-adobe-photoshop-1` 图标
 
 ## 🌈 0.2.8 `2024-08-29`
 

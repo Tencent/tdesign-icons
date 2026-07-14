@@ -16,7 +16,8 @@
   },
   "files": [
     "dist/td-icons-view.es.js",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "homepage": "https://github.com/Tencent/tdesign-icons/blob/develop/README.md",
   "bugs": {

@@ -38,10 +38,13 @@
 
 ## 🌈 0.4.0 `2025-09-09`
 
+### 🚨 Breaking Changes
+
+- 移除 `video-camera-3`、`video-camera-3-filled`、`list` 图标
+
 ### 🚀 Features
 
 - 新增 `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no`、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled` 图标
-- 移除 `video-camera-3`、`video-camera-3-filled`、`list` 图标
 - 支持 `strokeWidth`、`strokeColor` 和 `fillColor`
 
 ## 🌈 0.3.6 `2025-08-04`

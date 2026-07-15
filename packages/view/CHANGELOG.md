@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 🌈 0.5.7 `2026-07-15`
+
+### 🐞 Bug Fixes
+
+- 修复 fullscreen、logo-wecom-filled、no-result-filled、tree-list、wifi-no-filled 5 个图标搜索缺失 @liweijie0812 ([#264](https://github.com/Tencent/tdesign-icons/pull/264))
+
 ## 🌈 0.5.6 `2026-07-13`
 
 ### 🚀 Features

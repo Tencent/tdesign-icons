@@ -1,132 +1,134 @@
 # tdesign-icons-web-components
 
-## 0.3.6
+## 🌈 0.3.6 `2026-07-13`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: optimize icon path
+- 优化图标路径
 
-## 0.3.5
+## 🌈 0.3.5 `2026-07-10`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add star-1, star-1-filled icon, update chat, thumb-up icon
+- 新增 `star-1`、`star-1-filled` 图标，更新 `chat`、`thumb-up` 图标
 
-## 0.3.4
+## 🌈 0.3.4 `2026-03-31`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add divider-1,voice-wave,keyboard-1 icons
+- 新增 `divider-1`、`voice-wave`、`keyboard-1` 图标
 
-## 0.3.3
+## 🌈 0.3.3 `2026-01-22`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add 217 new icons related to AI, documents, logo and files
+- 新增 217 个与 AI、文档、logo 及文件相关的新图标
 
-## 0.3.2
+## 🌈 0.3.2 `2025-10-15`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: fix size bug
+- 修复尺寸（size）异常
 
-## 0.3.1
+## 🌈 0.3.1 `2025-10-15`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: fix bundle bug
+- 修复打包（bundle）异常
 
-## 0.3.0
+## 🌈 0.3.0 `2025-10-15`
 
-### Major Changes
+### 🚀 Features
 
-- feat: add new icons `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no` 、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled`
-- refactor: remove icons `video-camera-3`、`video-camera-3-filled`、 `list`
+- 新增 `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no`、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled` 图标
+- 移除 `video-camera-3`、`video-camera-3-filled`、`list` 图标
 
-## 0.2.7
+## 🌈 0.2.7 `2025-08-04`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: add LICENSE
+- 补充 LICENSE
 
-## 0.2.6
+## 🌈 0.2.6 `2025-04-23`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标
-  fix: 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题
+- 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标
 
-## 0.2.5
+### 🐞 Bug Fixes
 
-### Patch Changes
+- 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题
 
-- fix: fix path covert bug
+## 🌈 0.2.5 `2025-03-20`
 
-## 0.2.4
+### 🐞 Bug Fixes
 
-### Patch Changes
+- 修复 path 转换 bug
 
-- feat: 新增 logo-alipay、logo-behance-filled 等图标，修改 logo-wecom 图标，移除不合理的 logo-wecom-filled 图标
+## 🌈 0.2.4 `2025-01-07`
 
-## 0.2.3
+### 🚀 Features
 
-### Patch Changes
+- 新增 logo-alipay、logo-behance-filled 等图标，修改 logo-wecom 图标，移除不合理的 logo-wecom-filled 图标
 
-- fix: fix sideEffect
+## 🌈 0.2.3 `2024-12-27`
 
-## 0.2.2
+### 🐞 Bug Fixes
 
-### Patch Changes
+- 修复 sideEffect（副作用）配置
 
-- fix: fix filled-icon naming
+## 🌈 0.2.2 `2024-11-12`
 
-## 0.2.1
+### 🐞 Bug Fixes
 
-### Patch Changes
+- 修复 filled-icon 命名
 
-- fix: fix video-camera naming
+## 🌈 0.2.1 `2024-11-12`
 
-## 0.2.0
+### 🐞 Bug Fixes
 
-### Major Changes
+- 修复 video-camera 命名
 
-- feat: 新增 907 个新图标
-- feat: `blockchain` 重命名改为`transform-1`,`gesture-pray-1`重命名为`gesture-open`,
-  `gesture-ranslation-1`重命名为`wave-bye`, `gesture-up-1`重命名为`gesture-typing`,`gesture-up-2`重命名为`gesture-right-slip`,`logo-wechat`重命名为`logo-wechat-stroke-filled`
-- feat: 移除`tree-list`、`logo-adobe-photoshop-1` 图标
+## 🌈 0.2.0 `2024-11-12`
 
-## 0.1.5
+### 🚀 Features
 
-### Patch Changes
+- 新增 907 个新图标
+- `blockchain` 重命名改为 `transform-1`，`gesture-pray-1` 重命名为 `gesture-open`，`gesture-ranslation-1` 重命名为 `wave-bye`，`gesture-up-1` 重命名为 `gesture-typing`，`gesture-up-2` 重命名为 `gesture-right-slip`，`logo-wechat` 重命名为 `logo-wechat-stroke-filled`
+- 移除 `tree-list`、`logo-adobe-photoshop-1` 图标
 
-- feat: add innerClass and innerStyle
+## 🌈 0.1.5 `2024-10-16`
 
-## 0.1.4
+### 🚀 Features
 
-### Patch Changes
+- 新增 innerClass 和 innerStyle
 
-- fix: fix: upgrade omi to fix icon repeated rendering
+## 🌈 0.1.4 `2024-09-19`
 
-## 0.1.3
+### 🐞 Bug Fixes
 
-### Patch Changes
+- 升级 omi 修复图标重复渲染
 
-- fix: fix lock-on icon path
+## 🌈 0.1.3 `2024-08-29`
 
-## 0.1.2
+### 🐞 Bug Fixes
 
-### Patch Changes
+- 修复 `lock-on` 图标路径
 
-- fix: fix icon center position and duplicated class
+## 🌈 0.1.2 `2024-08-14`
 
-## 0.1.1
+### 🐞 Bug Fixes
 
-### Minor Changes
+- 修复图标居中位置和重复 class
 
-- fix: fix `clip-rule` and `fill-rule` bug
+## 🌈 0.1.1 `2024-08-01`
 
-## 0.1.0
+### 🐞 Bug Fixes
 
-### Major Changes
+- 修复 `clip-rule` 和 `fill-rule` bug
 
-- release tdesign-icons-web-components `v0.1.0`
+## 🌈 0.1.0 `2024-07-09`
+
+### 🚀 Features
+
+- 发布 tdesign-icons-web-components `v0.1.0`

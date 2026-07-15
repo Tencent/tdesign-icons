@@ -82,7 +82,7 @@ jobs:
         run: pnpm run --filter tdesign-icons-vue-next build
 
       - if: matrix.icons != 'tdesign-icons-flutter'
-        run: pnpm run --filter ${{ matrix.icons }} build --if-present
+        run: pnpm run --if-present --filter ${{ matrix.icons }} build
 
       - if: matrix.icons == 'tdesign-icons-flutter'
         uses: TDesignOteam/workflows/actions/setup-flutter@main

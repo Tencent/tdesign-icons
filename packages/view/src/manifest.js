@@ -6704,10 +6704,6 @@ export const manifest = {
           name: 'divider-1',
           keywords: ['分隔符', '分割线', 'divider', '分界线'],
         },
-        {
-          name: 'list-numbered',
-          keywords: ['有序列表', '数字列表'],
-        },
       ],
     },
     Math: {

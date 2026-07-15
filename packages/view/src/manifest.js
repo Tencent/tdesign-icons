@@ -163,6 +163,10 @@ export const manifest = {
           name: 'logo-youtube-filled',
           keywords: ['YouTube标志', 'YouTube徽标'],
         },
+        {
+          name: 'logo-wecom-filled',
+          keywords: ['企业微信标志', 'WeCom徽标'],
+        },
       ],
     },
     AI: {
@@ -2917,6 +2921,10 @@ export const manifest = {
           name: 'time-filled',
           keywords: ['时光', '时间'],
         },
+        {
+          name: 'no-result-filled',
+          keywords: ['无结果', '无数据', '空', 'empty'],
+        },
       ],
     },
     Emoji: {
@@ -3891,6 +3899,10 @@ export const manifest = {
           name: 'wifi-off-1-filled',
           keywords: ['关闭wifi', '关闭无线网络'],
         },
+        {
+          name: 'wifi-no-filled',
+          keywords: ['无wifi', '禁用无线网络'],
+        },
       ],
     },
     Design: {
@@ -4689,6 +4701,10 @@ export const manifest = {
         {
           name: 'view-organization',
           keywords: ['组织视图', '组织结构图', '组织界面'],
+        },
+        {
+          name: 'tree-list',
+          keywords: ['树形列表', '树列表'],
         },
       ],
     },
@@ -8108,6 +8124,10 @@ export const manifest = {
         {
           name: 'upload',
           keywords: ['上传', '上传文件'],
+        },
+        {
+          name: 'fullscreen',
+          keywords: ['全屏', '全屏显示'],
         },
       ],
     },

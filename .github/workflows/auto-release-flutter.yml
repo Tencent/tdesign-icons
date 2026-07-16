@@ -1,0 +1,32 @@
+name: auto-release-flutter
+
+on:
+  push:
+    tags:
+      - "tdesign_icons@*"
+
+publish:
+  permissions:
+    id-token: write
+
+jobs:
+  publish:
+    permissions:
+      id-token: write # Required for authentication using OIDC
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: TDesignOteam/workflows/actions/setup-flutter@main
+        with:
+          flutter-version: 3.32.0
+
+      - name: install
+        working-directory: ./packages/flutter
+        run: |
+          flutter pub get
+
+      - name: install
+        working-directory: ./packages/flutter
+        run: |
+          flutter pub publish --force

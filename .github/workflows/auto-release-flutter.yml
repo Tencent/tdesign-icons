@@ -26,7 +26,7 @@ jobs:
         run: |
           flutter pub get
 
-      - name: install
+      - name: publish
         working-directory: ./packages/flutter
         run: |
           flutter pub publish --force

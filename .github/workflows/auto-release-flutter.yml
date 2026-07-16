@@ -23,10 +23,12 @@ jobs:
 
       - name: install
         working-directory: ./packages/flutter
-        run: |
-          flutter pub get
+        run: flutter pub get
+
+      - name: build
+        working-directory: ./packages/flutter
+        run: dart ./tool/generate.dart
 
       - name: publish
         working-directory: ./packages/flutter
-        run: |
-          flutter pub publish --force
+        run: flutter pub publish --force

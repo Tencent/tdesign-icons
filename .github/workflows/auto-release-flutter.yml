@@ -13,6 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: "pnpm"
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm run generate
+
       - uses: TDesignOteam/workflows/actions/setup-flutter@main
         with:
           flutter-version: 3.32.0

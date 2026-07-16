@@ -31,7 +31,14 @@ jobs:
         uses: TDesignOteam/flow-pilot-action@develop
         with:
           token: ${{ secrets.TDESIGN_BOT_TOKEN }}
-          packages: "tdesign-icons-vue-next,tdesign-icons-react,tdesign-icons-view,tdesign-icons-svg,tdesign-icons-vue,tdesign-icons-web-components,tdesign_icons"
+          packages: |
+            tdesign-icons-vue-next
+            tdesign-icons-react
+            tdesign-icons-view
+            tdesign-icons-svg
+            tdesign-icons-vue
+            tdesign-icons-web-components
+            tdesign_icons
 
   commit-changelog:
     if: github.event.issue.pull_request
@@ -41,4 +48,11 @@ jobs:
         uses: TDesignOteam/flow-pilot-action@develop
         with:
           token: ${{ secrets.TDESIGN_BOT_TOKEN }}
-          packages: "tdesign-icons-vue-next,tdesign-icons-react,tdesign-icons-view,tdesign-icons-svg,tdesign-icons-vue,tdesign-icons-web-components,tdesign_icons"
+          packages: |
+            tdesign-icons-vue-next
+            tdesign-icons-react
+            tdesign-icons-view
+            tdesign-icons-svg
+            tdesign-icons-vue
+            tdesign-icons-web-components
+            tdesign_icons

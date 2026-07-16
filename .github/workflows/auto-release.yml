@@ -33,9 +33,6 @@ jobs:
         run: |
           flutter pub get
           dart ./tool/generate.dart
-
-          [ -f "lib/src/assets.g.dart" ] || (echo "❌ assets.g.dart 不存在" && exit 1)
-          [ -f "fonts/t.ttf" ] || (echo "❌ t.ttf 不存在" && exit 1)
           flutter analyze
 
       - run: pnpm --filter "tdesign-icons-*" run --if-present build

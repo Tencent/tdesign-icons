@@ -13,9 +13,6 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     environment: pub.dev
-    defaults:
-      run:
-        shell: bash
     steps:
       - uses: actions/checkout@v7
 
@@ -34,10 +31,9 @@ jobs:
         with:
           flutter-version: 3.32.0
 
-      - uses: dart-lang/setup-dart@v1
-
       - name: Publish tdesign_icons to pub.dev
         working-directory: ./packages/flutter
+        shell: bash
         run: |
           tag_version="${GITHUB_REF_NAME#tdesign_icons-v}"
           pubspec_version="$(grep '^version:' pubspec.yaml | awk '{print $2}')"
@@ -49,10 +45,6 @@ jobs:
 
           flutter pub get
           dart ./tool/generate.dart
-
-          [ -f "lib/src/assets.g.dart" ] || (echo "❌ assets.g.dart 不存在" && exit 1)
-          [ -f "fonts/t.ttf" ] || (echo "❌ t.ttf 不存在" && exit 1)
-
           flutter analyze
           flutter pub publish --dry-run
           flutter pub publish --force

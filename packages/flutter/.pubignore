@@ -1,0 +1,15 @@
+.DS_Store
+.changelog
+.dart_tool/
+build/
+pubspec.lock
+example/pubspec.lock
+example/.dart_tool/
+example/build/
+example/android/.gradle/
+example/android/.kotlin/
+
+!fonts/
+!fonts/t.ttf
+!lib/src/
+!lib/src/assets.g.dart

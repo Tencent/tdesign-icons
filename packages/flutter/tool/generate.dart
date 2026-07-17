@@ -131,6 +131,7 @@ $code
 
   // 脚本在 tool/ 目录下，需要写到包根目录的 lib/src/
   final outputDir = Directory(scriptDir).parent;
+  Directory('${outputDir.path}/lib/src').createSync(recursive: true);
   final outputFile = File('${outputDir.path}/lib/src/assets.g.dart');
   outputFile.writeAsStringSync(finalCode);
 }

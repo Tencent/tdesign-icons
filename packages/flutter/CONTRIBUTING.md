@@ -24,8 +24,8 @@ flutter analyze
 # 7. 更新版本号 (编辑 pubspec.yaml 和 CHANGELOG.md)
 
 # 8. 提交并合并发布分支后，创建 Git Tag 触发自动发布
-git tag tdesign_icons-v{version}
-git push origin tdesign_icons-v{version}
+git tag tdesign_icons@{version}
+git push origin tdesign_icons@{version}
 ```
 
 ---
@@ -51,5 +51,5 @@ packages/flutter/
 
 ## 注意事项
 
-- 发布前需要在 pub.dev 配置 Automated publishing，仓库为 `Tencent/tdesign-icons`，Tag pattern 为 `tdesign_icons-v{{version}}`
+- 发布前需要在 pub.dev 配置 Automated publishing，仓库为 `Tencent/tdesign-icons`，Tag pattern 为 `tdesign_icons@{{version}}`
 - 自动发布 workflow 会重新生成 `fonts/t.ttf` 和 `lib/src/assets.g.dart`，这两个产物不需要提交到 Git

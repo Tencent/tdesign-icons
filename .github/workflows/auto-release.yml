@@ -25,16 +25,6 @@ jobs:
 
       - run: pnpm run generate
 
-      - uses: TDesignOteam/workflows/actions/setup-flutter@main
-        with:
-          flutter-version: 3.32.0
-
-      - working-directory: ./packages/flutter
-        run: |
-          flutter pub get
-          dart ./tool/generate.dart
-          flutter analyze
-
       - run: pnpm --filter "tdesign-icons-*" run --if-present build
 
       - uses: actions/setup-node@v7

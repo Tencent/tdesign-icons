@@ -102,7 +102,8 @@ jobs:
           echo "✅ Flutter 包构建成功，共 $icon_count 个图标"
 
           flutter analyze
-          # flutter pub publish --dry-run
+
+          flutter pub publish --dry-run
 
   site:
     runs-on: ubuntu-latest

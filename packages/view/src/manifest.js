@@ -3538,6 +3538,10 @@ export const manifest = {
           keywords: ['已保护', '已安全', '已加密', '盾牌'],
         },
         {
+          name: 'send-1-filled',
+          keywords: ['发送', '传送', '发送消息'],
+        },
+        {
           name: 'send-cancel-filled',
           keywords: ['发送取消', '发出取消'],
         },
@@ -8902,6 +8906,10 @@ export const manifest = {
         {
           name: 'send',
           keywords: ['发送', '传送'],
+        },
+        {
+          name: 'send-1',
+          keywords: ['发送', '传送', '发送消息'],
         },
         {
           name: 'send-cancel',

@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 🌈 0.5.8 `2026-07-23`
+
+### 🚀 Features
+
+- 新增 `send-1-filled` 和 `send-1` 图标 @RADWIMPS426 ([#270](https://github.com/Tencent/tdesign-icons/pull/270))
+
 ## 🌈 0.5.7 `2026-07-15`
 
 ### 🐞 Bug Fixes

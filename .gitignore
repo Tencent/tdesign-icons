@@ -16,6 +16,7 @@ esm/
 packages/flutter/build/
 # FVM：提交 .fvmrc 与 .fvm/fvm_config.json，忽略 SDK 软链与本地缓存
 packages/flutter/.fvm/flutter_sdk
+packages/flutter/.fvm/versions/
 packages/flutter/.fvm/release
 packages/flutter/.fvm/version
 packages/flutter/example/build/

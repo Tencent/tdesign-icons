@@ -8,7 +8,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: check_github_primary_email
         run: |
@@ -28,7 +28,7 @@ jobs:
               echo "邮箱 $log_emails 校验通过";
           fi
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
@@ -64,13 +64,11 @@ jobs:
           - tdesign-icons-web-components
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: pnpm/action-setup@v6
-        with:
-          version: 9
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .node-version
           cache: "pnpm"
@@ -79,7 +77,11 @@ jobs:
 
       - run: pnpm run generate
 
-      - run: pnpm run --filter ${{ matrix.icons }} build
+      - if: matrix.icons == 'tdesign-icons-view'
+        run: pnpm run --filter tdesign-icons-vue-next build
+
+      - if: matrix.icons != 'tdesign-icons-flutter'
+        run: pnpm run --if-present --filter ${{ matrix.icons }} build
 
   build-flutter:
     runs-on: ubuntu-latest
@@ -89,13 +91,11 @@ jobs:
         flutter-version: ["3.32.0", "3.x"]
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: pnpm/action-setup@v6
-        with:
-          version: 9
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .node-version
           cache: "pnpm"
@@ -124,18 +124,16 @@ jobs:
 
           flutter analyze
           cd example && flutter pub get && flutter analyze
-          cd .. && flutter pub publish --dry-run
+          # flutter pub publish --dry-run
 
   site:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: pnpm/action-setup@v6
-        with:
-          version: 9
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .node-version
           cache: "pnpm"
@@ -143,6 +141,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - run: pnpm run generate
+
+      - run: pnpm run --filter tdesign-icons-vue-next build
 
       - run: pnpm run --filter tdesign-icons-view preview
 

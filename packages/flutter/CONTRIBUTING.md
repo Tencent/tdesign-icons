@@ -71,14 +71,15 @@ dart run tool/generate.dart
 # 6. 代码检查
 fvm flutter analyze
 
-# 7. 更新版本号（编辑 pubspec.yaml）
+# 7. 更新版本号 (编辑 pubspec.yaml 和 CHANGELOG.md)
 
 # 8. 本地预览（在 packages/flutter 目录下执行）
 fvm flutter pub get
 cd example && fvm flutter pub get && fvm flutter run
 
-# 9. 发布（在 packages/flutter 目录下执行）
-fvm flutter pub publish
+# 9. 提交并合并发布分支后，创建 Git Tag 触发自动发布
+git tag tdesign_icons@{version}
+git push origin tdesign_icons@{version}
 ```
 
 ---
@@ -109,4 +110,5 @@ packages/flutter/
 
 ## 注意事项
 
-- 发布后创建 Git Tag: `git tag v{version}`
+- 发布前需要在 pub.dev 配置 Automated publishing，仓库为 `Tencent/tdesign-icons`，Tag pattern 为 `tdesign_icons@{{version}}`
+- 自动发布 workflow 会重新生成 `fonts/t.ttf` 和 `lib/src/assets.g.dart`，这两个产物不需要提交到 Git

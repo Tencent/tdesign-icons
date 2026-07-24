@@ -4,7 +4,7 @@ import { reactTask } from './packages/react/gulp';
 import { svgTask } from './packages/svg/gulp';
 import { vueTask } from './packages/vue/gulp';
 import { vueNextTask } from './packages/vue-next/gulp';
-import { reactNativeTask } from './packages/react-native/gulp';
+// import { reactNativeTask } from './packages/react-native/gulp';
 
 import { svgSpriteTask } from './resources/svg-sprite/gulp';
 import { iconFontTask } from './resources/icon-font/gulp';
@@ -20,7 +20,7 @@ export default series(
     vueTask(source),
     vueNextTask(source),
     svgTask(source),
-    reactNativeTask(),
+    // reactNativeTask(),
     svgSpriteTask(),
     iconFontTask(),
     iconViewTask(),

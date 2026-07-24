@@ -163,6 +163,10 @@ export const manifest = {
           name: 'logo-youtube-filled',
           keywords: ['YouTube标志', 'YouTube徽标'],
         },
+        {
+          name: 'logo-wecom-filled',
+          keywords: ['企业微信标志', 'WeCom徽标'],
+        },
       ],
     },
     AI: {
@@ -2917,6 +2921,10 @@ export const manifest = {
           name: 'time-filled',
           keywords: ['时光', '时间'],
         },
+        {
+          name: 'no-result-filled',
+          keywords: ['无结果', '无数据', '空', 'empty'],
+        },
       ],
     },
     Emoji: {
@@ -3530,6 +3538,10 @@ export const manifest = {
           keywords: ['已保护', '已安全', '已加密', '盾牌'],
         },
         {
+          name: 'send-1-filled',
+          keywords: ['发送', '传送', '发送消息'],
+        },
+        {
           name: 'send-cancel-filled',
           keywords: ['发送取消', '发出取消'],
         },
@@ -3552,6 +3564,10 @@ export const manifest = {
         {
           name: 'shop-filled',
           keywords: ['商店', '铺子'],
+        },
+        {
+          name: 'star-1-filled',
+          keywords: ['星星', '加星标', '收藏'],
         },
         {
           name: 'star-filled',
@@ -3886,6 +3902,10 @@ export const manifest = {
         {
           name: 'wifi-off-1-filled',
           keywords: ['关闭wifi', '关闭无线网络'],
+        },
+        {
+          name: 'wifi-no-filled',
+          keywords: ['无wifi', '禁用无线网络'],
         },
       ],
     },
@@ -4685,6 +4705,10 @@ export const manifest = {
         {
           name: 'view-organization',
           keywords: ['组织视图', '组织结构图', '组织界面'],
+        },
+        {
+          name: 'tree-list',
+          keywords: ['树形列表', '树列表'],
         },
       ],
     },
@@ -5762,7 +5786,7 @@ export const manifest = {
         },
         {
           name: 'thumb-up-2',
-          keywords: ['点赞', '翘起大拇指'],
+          keywords: ['点赞', '翘起大拇指', '赞', '好评'],
         },
         {
           name: 'undertake',
@@ -8105,6 +8129,10 @@ export const manifest = {
           name: 'upload',
           keywords: ['上传', '上传文件'],
         },
+        {
+          name: 'fullscreen',
+          keywords: ['全屏', '全屏显示'],
+        },
       ],
     },
     Alert: {
@@ -8880,6 +8908,10 @@ export const manifest = {
           keywords: ['发送', '传送'],
         },
         {
+          name: 'send-1',
+          keywords: ['发送', '传送', '发送消息'],
+        },
+        {
           name: 'send-cancel',
           keywords: ['发送取消', '发出取消'],
         },
@@ -8906,6 +8938,10 @@ export const manifest = {
         {
           name: 'shop',
           keywords: ['商店', '店铺'],
+        },
+        {
+          name: 'star-1',
+          keywords: ['星星', '加星标', '收藏'],
         },
         {
           name: 'star',

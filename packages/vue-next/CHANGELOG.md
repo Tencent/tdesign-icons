@@ -1,236 +1,256 @@
-# CHANGELOG
+# tdesign-icons-vue-next
 
-## 0.4.4
+## 🌈 0.4.6 `2026-07-13`
 
-### Patch Changes
+### 🚀 Features
 
-- fix: fix iconfont and svgsprite link
+- 优化 icon path
 
-## 0.4.3
+## 🌈 0.4.5 `2026-07-10`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add divider-1,voice-wave,keyboard-1 icons
+- 新增 `star-1`、`star-1-filled` 图标，更新 `chat`、`thumb-up` 图标
 
-## 0.4.2
+## 🌈 0.4.4 `2026-04-01`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- feat: add 217 new icons related to AI, documents, logo and files
+- 修复 iconfont 和 svgsprite 链接
 
-## 0.4.1
+## 🌈 0.4.3 `2026-03-31`
 
-### Patch Changes
+### 🚀 Features
 
-- fix: fix compatibility with previous icon version
+- 新增 `divider-1`、`voice-wave`、`keyboard-1` 图标
 
-## 0.4.0
+## 🌈 0.4.2 `2026-01-22`
 
-### Minor Changes
+### 🚀 Features
 
-- feat: add new icons `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no` 、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled`
-- refactor: remove icons `video-camera-3`、`video-camera-3-filled`、 `list`
-- feat: support `strokeWidth`、`strokeColor` and `fillColor`
+- 新增 217 个与 AI、文档、logo 及文件相关的新图标
 
-## 0.3.7
+## 🌈 0.4.1 `2025-09-09`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: add LICENSE
+- 修复与历史版本图标的兼容性问题
 
-## 0.3.6
+## 🌈 0.4.0 `2025-09-09`
 
-### Patch Changes
+### 🚨 Breaking Changes
 
-- feat: 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标
-  fix: 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题
+- 移除 `video-camera-3`、`video-camera-3-filled`、`list` 图标
 
-## 0.3.5
+### 🚀 Features
 
-### Patch Changes
+- 新增 `align-bottom`、`no-result`、`no-result-filled`、`tree-list`、`wifi-no`、`wifi-no-filled`、`logo-stackblitz-filled`、`logo-stackblitz`、`logo-wecom-filled` 图标
+- 支持 `strokeWidth`、`strokeColor` 和 `fillColor`
 
-- fix: fix path covert bug
+## 🌈 0.3.7 `2025-08-04`
 
-## 0.3.4
+### 🐞 Bug Fixes
 
-### Patch Changes
+- 补充 LICENSE
 
-- feat: 新增 logo-alipay、logo-behance-filled 等图标，修改 logo-wecom 图标，移除不合理的 logo-wecom-filled 图标
+## 🌈 0.3.6 `2025-04-23`
 
-## 0.3.3
+### 🚀 Features
 
-### Patch Changes
+- 新增 `logo-miniprogram`、`logo-cnb`、`seal`、`quote` 图标
 
-- fix: fix filled-icon naming
+### 🐞 Bug Fixes
 
-## 0.3.2
+- 优化多个文件相关图标的绘制效果，修复 `gesture-right-slip` 的绘制问题
 
-### Patch Changes
+## 🌈 0.3.5 `2025-03-20`
 
-- fix: fix video-camera naming
+### 🐞 Bug Fixes
 
-## 0.3.0
+- 修复 path 转换 bug
 
-### Major Changes
+## 🌈 0.3.4 `2025-01-07`
 
-- feat: 新增 907 个新图标
-- feat: `blockchain` 重命名改为`transform-1`,`gesture-pray-1`重命名为`gesture-open`,
-  `gesture-ranslation-1`重命名为`wave-bye`, `gesture-up-1`重命名为`gesture-typing`,`gesture-up-2`重命名为`gesture-right-slip`,`logo-wechat`重命名为`logo-wechat-stroke-filled`
-- feat: 移除`tree-list`、`logo-adobe-photoshop-1` 图标
+### 🚀 Features
 
-## 0.2.6
+- 新增 `logo-alipay`、`logo-behance-filled` 等图标，修改 `logo-wecom` 图标，移除不合理的 `logo-wecom-filled` 图标
 
-### Patch Changes
+## 🌈 0.3.3 `2024-11-12`
 
-- fix: fix lock-on icon path
+### 🐞 Bug Fixes
 
-## 0.2.5
+- 修复 filled-icon 命名
 
-### Patch Changes
+## 🌈 0.3.2 `2024-11-12`
 
-- fix: fix umd usage
+### 🐞 Bug Fixes
 
-## 0.2.4
+- 修复 video-camera 命名
 
-### Patch Changes
+## 🌈 0.3.0 `2024-11-07`
 
-- feat: update iconfont and svgsprite address
+### 🚀 Features
 
-## 0.2.3
+- 新增 907 个新图标
+- `blockchain` 重命名为 `transform-1`，`gesture-pray-1` 重命名为 `gesture-open`，`gesture-ranslation-1` 重命名为 `wave-bye`，`gesture-up-1` 重命名为 `gesture-typing`，`gesture-up-2` 重命名为 `gesture-right-slip`，`logo-wechat` 重命名为 `logo-wechat-stroke-filled`
+- 移除 `tree-list`、`logo-adobe-photoshop-1` 图标
 
-### Patch Changes
+## 🌈 0.2.6 `2024-08-29`
 
-- feat: add `list-numbered` icon, optimize path of `lock-off`;
-- fix: fix `chart-column` naming;
+### 🐞 Bug Fixes
 
-## 0.2.2
+- 修复 `lock-on` 图标路径
 
-### Patch Changes
+## 🌈 0.2.5 `2024-08-29`
 
-- fix: fix icon draw path
+### 🐞 Bug Fixes
 
-## 0.2.1
+- 修复 umd 用法
 
-### Patch Changes
+## 🌈 0.2.4 `2024-07-05`
 
-- fix: fix evenodd fill-rule render error when transformed to iconfont
+### 🚀 Features
 
-## 0.2.0
+- 更新 iconfont 和 svgsprite 地址
 
-### Minor Changes
+## 🌈 0.2.3 `2024-07-05`
 
-- feat: increase 900 + new icons
+### 🚀 Features
 
-## 0.1.12
+- 新增 `list-numbered` 图标，优化 `lock-off` 路径
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- fix: fix manifest effects chunk load
+- 修复 `chart-column` 命名
 
-## 0.1.11
+## 🌈 0.2.2 `2023-08-17`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- add repository info
+- 修复图标绘制路径
 
-## 0.1.10
+## 🌈 0.2.1 `2023-08-17`
 
-### Patch Changes
+### 🐞 Bug Fixes
 
-- 更名`arrow-triangle` 相关的 4 个图标
+- 修复转换为 iconfont 时 evenodd fill-rule 渲染错误
 
-## 0.1.9
+## 🌈 0.2.0 `2023-08-10`
 
-### Patch Changes
+### 🚀 Features
 
-- feat: add `translate` `translate-1` `arrow-down-triangle` `arrow-down-triangle-filled` `arrow-up-triangle` `arrow-up-triangle-filled` icons
+- 新增 900+ 个新图标
 
-## 0.1.8 `2023-03-07`
+## 🌈 0.1.12 `2023-07-17`
 
-### Features
+### 🐞 Bug Fixes
+
+- 修复 manifest 影响 chunk 加载的问题
+
+## 🌈 0.1.11 `2023-05-12`
+
+### 🚀 Features
+
+- 增加 repository 信息
+
+## 🌈 0.1.10 `2023-05-10`
+
+### 🚀 Features
+
+- 更名 `arrow-triangle` 相关的 4 个图标
+
+## 🌈 0.1.9 `2023-05-08`
+
+### 🚀 Features
+
+- 新增 `translate`、`translate-1`、`arrow-down-triangle`、`arrow-down-triangle-filled`、`arrow-up-triangle`、`arrow-up-triangle-filled` 图标
+
+## 🌈 0.1.8 `2023-03-07`
+
+### 🚀 Features
 
 - manifest 文件增加 path 属性
 
-## 0.1.7 `2022-12-19`
+## 🌈 0.1.7 `2022-12-19`
 
-### Features
+### 🚀 Features
 
 - 新增全部图标的枚举类型
 
-## 0.1.6 `2022-12-05`
+## 🌈 0.1.6 `2022-12-05`
 
-### Features
+### 🚀 Features
 
 - 新增 `minus-rectangle-filled` 图标
 
-## 0.1.5 `2022-08-10`
+## 🌈 0.1.5 `2022-08-10`
 
-### Features
+### 🚀 Features
 
-- 新增`qq`、`wechat`、`wecom`、`relativity`和`pin-filled`等图标
+- 新增 `qq`、`wechat`、`wecom`、`relativity` 和 `pin-filled` 等图标
 
-## 0.1.4 `2022-07-20`
+## 🌈 0.1.4 `2022-07-20`
 
-### Features
+### 🚀 Features
 
-- 新增`image-error`图标
+- 新增 `image-error` 图标
 
-## 0.1.3 `2022-07-12`
+## 🌈 0.1.3 `2022-07-12`
 
-### Features
+### 🚀 Features
 
-- 新增`mirror`和`rotation`图标
+- 新增 `mirror` 和 `rotation` 图标
 
-### Bug Fixes
+### 🐞 Bug Fixes
 
-- 修复 iconfont 高级用法因为 t-icon 导致不显示的异常
+- 修复 iconfont 高级用法因为 `t-icon` 导致不显示的异常
 
-## 0.1.2 `2022-06-24`
+## 🌈 0.1.2 `2022-06-24`
 
-### Features
+### 🚀 Features
 
-- 新增`rollfront`图标
+- 新增 `rollfront` 图标
 
-## 0.1.1 `2022-05-11`
+## 🌈 0.1.1 `2022-05-11`
 
-### Bug Fixes
+### 🐞 Bug Fixes
 
 - 修复 SSR 问题
 
-## 0.1.0 `2022-05-09`
+## 🌈 0.1.0 `2022-05-09`
 
-### Features
+### 🚀 Features
 
-- 新增`file-icon`图标，优化部分图标路径
+- 新增 `file-icon` 图标，优化部分图标路径
 
-## 0.0.7 `2022-02-25`
+## 🌈 0.0.7 `2022-02-25`
 
-### Bug Fixes
+### 🐞 Bug Fixes
 
-- 修复按需引入方式使用部分图标，由于`fillOpacity`, `fillRule`, `clipRule`属性加载异常导致的问题
+- 修复按需引入方式使用部分图标，由于 `fillOpacity`、`fillRule`、`clipRule` 属性加载异常导致的问题
 
-## 0.0.6 `2022-01-18`
+## 🌈 0.0.6 `2022-01-18`
 
-### Bug Fixes
+### 🐞 Bug Fixes
 
 - 修复 SSR 渲染问题
 - 修复 `medium` size 渲染错误问题
 
-## 0.0.5 `2022-01-10`
+## 🌈 0.0.5 `2022-01-10`
 
-### Bug Fixes
+### 🐞 Bug Fixes
 
 - 修复 props 变化没有重新渲染 icon 的错误
 - 移除重复添加的 class
 
-## 0.0.4 `2021-12-21`
+## 🌈 0.0.4 `2021-12-21`
 
-### Bug Fixes
+### 🐞 Bug Fixes
 
 - 支持 es-check es5
 
-## 0.0.3 `2021-12-14`
+## 🌈 0.0.3 `2021-12-14`
 
-### Bug Fixes
+### 🐞 Bug Fixes
 
 - Iconfont 默认 `size` 调整为 `undefined`，由 1em 控制当前图标大小，更满足大部分通用场景

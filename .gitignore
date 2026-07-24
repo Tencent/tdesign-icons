@@ -6,9 +6,9 @@ src/manifest.ts
 src/icons.ts
 converted_svg
 
-# Flutter generated files (需要提交到 git 以便发布)
-# packages/flutter/fonts/*.ttf
-# packages/flutter/lib/src/assets.g.dart
+# Flutter generated files
+packages/flutter/fonts/*.ttf
+packages/flutter/lib/src/assets.g.dart
 
 # build
 dist/

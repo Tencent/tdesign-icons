@@ -123,7 +123,10 @@ jobs:
           echo "✅ Flutter 包构建成功，共 $icon_count 个图标"
 
           flutter analyze
-          cd example && flutter pub get && flutter analyze
+          cd example
+          flutter pub get
+          flutter analyze
+          flutter build web --release --no-pub
           # flutter pub publish --dry-run
 
   site:
@@ -142,11 +145,26 @@ jobs:
 
       - run: pnpm run generate
 
+      - uses: TDesignOteam/workflows/actions/setup-flutter@main
+        with:
+          flutter-version: 3.32.0
+
       - run: pnpm run --filter tdesign-icons-vue-next build
 
       - run: pnpm run --filter tdesign-icons-view preview
 
       - run: mv packages/view/dist _site
+
+      - name: build flutter web demo
+        working-directory: ./packages/flutter
+        run: |
+          flutter pub get
+          dart ./tool/generate.dart
+          cd example
+          flutter pub get
+          flutter build web --release --no-pub --base-href /flutter/
+
+      - run: mv packages/flutter/example/build/web _site/flutter
 
       - run: zip -r _site.zip _site
 

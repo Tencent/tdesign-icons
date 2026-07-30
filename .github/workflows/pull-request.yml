@@ -91,6 +91,7 @@ jobs:
           version: 3.32.0
 
       - if: matrix.icons == 'tdesign-icons-flutter'
+        working-directory: ./packages/flutter
         run: flutter pub get
 
       - if: matrix.icons == 'tdesign-icons-flutter'

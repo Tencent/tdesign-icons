@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:tdesign_icons_example/main.dart';
@@ -9,5 +10,32 @@ void main() {
 
     expect(find.text('TDesign Icons'), findsOneWidget);
     expect(find.byType(Icon), findsWidgets);
+  });
+
+  testWidgets('点击预览图标复制 TIcon 用法并显示成功反馈', (tester) async {
+    String? clipboardText;
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(SystemChannels.platform, (call) async {
+          if (call.method == 'Clipboard.setData') {
+            clipboardText =
+                (call.arguments as Map<Object?, Object?>)['text'] as String?;
+          }
+          return null;
+        });
+    addTearDown(() {
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(SystemChannels.platform, null);
+    });
+
+    await tester.pumpWidget(const TDesignIconsExampleApp());
+
+    final previewIcon = find.byWidgetPredicate(
+      (widget) => widget is Icon && widget.size == 72,
+    );
+    await tester.tap(previewIcon);
+    await tester.pump();
+
+    expect(clipboardText, 'TIcon(TIcons.ability_open)');
+    expect(find.text('已复制 TIcon(TIcons.ability_open)'), findsOneWidget);
   });
 }

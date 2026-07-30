@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:tdesign_icons/tdesign_icons.dart';
 
 /// 单个 TDesign 图标条目，包含名称与 [IconData]。
@@ -66,6 +67,24 @@ class _IconDemoPageState extends State<IconDemoPage> {
     });
   }
 
+  /// 复制当前图标在 TDesign Flutter 图标容器中的用法。
+  Future<void> _copyIcon(IconEntry entry) async {
+    final code = 'TIcon(TIcons.${entry.key})';
+    await Clipboard.setData(ClipboardData(text: code));
+    if (!mounted) {
+      return;
+    }
+
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          content: Text('已复制 $code'),
+          duration: const Duration(seconds: 2),
+        ),
+      );
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -116,12 +135,20 @@ class _IconDemoPageState extends State<IconDemoPage> {
       ),
       child: Column(
         children: [
-          Icon(
-            entry.value,
-            size: 72,
-            color: _iconColor,
+          Semantics(
+            label: '复制 ${entry.key} 图标',
+            button: true,
+            child: InkResponse(
+              onTap: () => _copyIcon(entry),
+              mouseCursor: SystemMouseCursors.click,
+              radius: 44,
+              child: Padding(
+                padding: const EdgeInsets.all(8),
+                child: Icon(entry.value, size: 72, color: _iconColor),
+              ),
+            ),
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 4),
           Text(
             entry.key,
             style: theme.textTheme.titleMedium?.copyWith(

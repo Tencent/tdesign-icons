@@ -89,6 +89,8 @@ jobs:
         with:
           channel: stable
           version: 3.32.0
+          cache: true
+          cache-sdk: true
 
       - if: matrix.icons == 'tdesign-icons-flutter'
         working-directory: ./packages/flutter

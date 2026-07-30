@@ -9,6 +9,8 @@ jobs:
   publish:
     permissions:
       id-token: write # Required for authentication using OIDC
+    environment:
+      name: pub.dev
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -40,7 +42,5 @@ jobs:
         run: dart ./tool/generate.dart
 
       - name: publish
-        environment:
-          name: pub.dev
         working-directory: ./packages/flutter
         run: flutter pub publish --force

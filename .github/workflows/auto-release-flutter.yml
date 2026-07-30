@@ -24,9 +24,12 @@ jobs:
 
       - run: pnpm run generate
 
-      - uses: TDesignOteam/workflows/actions/setup-flutter@main
+      - uses: flutter-actions/setup-flutter@v4
         with:
-          flutter-version: 3.32.0
+          channel: stable
+          version: 3.32.0
+
+      - uses: flutter-actions/setup-pubdev-credentials@v1
 
       - name: install
         working-directory: ./packages/flutter
@@ -37,5 +40,7 @@ jobs:
         run: dart ./tool/generate.dart
 
       - name: publish
+        environment:
+          name: pub.dev
         working-directory: ./packages/flutter
         run: flutter pub publish --force

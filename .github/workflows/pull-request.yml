@@ -85,14 +85,17 @@ jobs:
         run: pnpm run --if-present --filter ${{ matrix.icons }} build
 
       - if: matrix.icons == 'tdesign-icons-flutter'
-        uses: TDesignOteam/workflows/actions/setup-flutter@main
+        uses: flutter-actions/setup-flutter@v4
         with:
-          flutter-version: 3.32.0
+          channel: stable
+          version: 3.32.0
+
+      - if: matrix.icons == 'tdesign-icons-flutter'
+        run: flutter pub get
 
       - if: matrix.icons == 'tdesign-icons-flutter'
         working-directory: ./packages/flutter
         run: |
-          flutter pub get
           dart ./tool/generate.dart
 
           # 验证

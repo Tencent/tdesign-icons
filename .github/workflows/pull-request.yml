@@ -80,14 +80,14 @@ jobs:
       - if: matrix.icons == 'tdesign-icons-view'
         run: pnpm run --filter tdesign-icons-vue-next build
 
-      - if: matrix.icons != 'tdesign-icons-flutter'
-        run: pnpm run --if-present --filter ${{ matrix.icons }} build
+      - run: pnpm run --if-present --filter ${{ matrix.icons }} build
 
   build-flutter:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
+        # 3.32.0 verifies the minimum supported version; 3.x tracks latest stable.
         flutter-version: ["3.32.0", "3.x"]
 
     steps:

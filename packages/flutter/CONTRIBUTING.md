@@ -16,7 +16,7 @@ fvm use
 
 版本配置见 `.fvmrc`（当前为 Flutter 3.44.1，本地开发推荐版本）。
 
-包与 example 的 `pubspec.yaml` 最低要求为 **Flutter 3.32+ / Dart 3.8+**；CI 会在 **3.32.0** 与 **3.44.1** 两个版本下分别验证。
+包与 example 的 `pubspec.yaml` 最低要求为 **Flutter 3.32+ / Dart 3.8+**；CI 会在最低支持版本 **3.32.0** 和最新稳定版 Flutter 下分别验证。
 
 ---
 
@@ -35,7 +35,7 @@ cd packages/flutter
 fvm flutter pub get
 dart run tool/generate.dart
 
-# 3. 示例应用（仅 Android）：安装依赖并运行
+# 3. 示例应用（Android/Web）：安装依赖并运行
 cd example
 fvm flutter pub get
 fvm flutter run

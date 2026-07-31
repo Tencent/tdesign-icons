@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.5] - 2026-07-31
+
+- 包名由 `tdesign_icons` 改为 `tdesign_flutter_icons`
+
 ## [0.0.4] - 2026-06-03
 
 - fix: 将 pubspec 字体族名 `TDIcons` 改为 `TIcons`，与生成代码 `IconData.fontFamily` 一致

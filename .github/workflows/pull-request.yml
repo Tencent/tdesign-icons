@@ -92,7 +92,7 @@ jobs:
           cache: true
           cache-sdk: true
 
-      - if: matrix.icons == 'tdesign-icons-flutter'
+      - if: matrix.icons == 'tdesign-flutter-icons'
         working-directory: ./packages/flutter
         run: flutter pub get
 

@@ -2,7 +2,7 @@
 
 TDesign Icons for Flutter.
 
-[![Pub Version](https://img.shields.io/pub/v/tdesign_icons.svg)](https://pub.dev/packages/tdesign_icons)
+[![Pub Version](https://img.shields.io/pub/v/tdesign_flutter_icons.svg)](https://pub.dev/packages/tdesign_flutter_icons)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Installation
@@ -11,13 +11,13 @@ Add dependency in your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  tdesign_icons: ^0.0.2
+  tdesign_flutter_icons: ^0.0.5
 ```
 
 ## Usage
 
 ```dart
-import 'package:tdesign_icons/tdesign_icons.dart';
+import 'package:tdesign_flutter_icons/tdesign_flutter_icons.dart';
 
 // Basic icon
 Icon(TIcons.logo_tdesign_filled)
@@ -41,6 +41,19 @@ TIcons.home_filled
 ```
 
 Complete icon list: https://tdesign.tencent.com/icons
+
+## Migrating from `tdesign_icons`
+
+Replace the dependency and import with `tdesign_flutter_icons`:
+
+```yaml
+dependencies:
+  tdesign_flutter_icons: ^0.0.5
+```
+
+```dart
+import 'package:tdesign_flutter_icons/tdesign_flutter_icons.dart';
+```
 
 ## Design Guidelines
 

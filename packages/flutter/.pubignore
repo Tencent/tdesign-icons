@@ -1,13 +1,12 @@
 .DS_Store
 .changelog
 .dart_tool/
+analysis_options.yaml
 build/
+CONTRIBUTING.md
 pubspec.lock
-example/pubspec.lock
-example/.dart_tool/
-example/build/
-example/android/.gradle/
-example/android/.kotlin/
+example/
+tool/
 
 !fonts/
 !fonts/t.ttf

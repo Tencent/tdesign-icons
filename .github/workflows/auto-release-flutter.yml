@@ -3,7 +3,7 @@ name: auto-release-flutter
 on:
   push:
     tags:
-      - "tdesign_icons@*"
+      - "tdesign_flutter_icons@*"
 
 jobs:
   publish:

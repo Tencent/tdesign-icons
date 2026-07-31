@@ -62,7 +62,7 @@ jobs:
           - tdesign-icons-svg
           - tdesign-icons-view
           - tdesign-icons-web-components
-          - tdesign-icons-flutter
+          - tdesign-flutter-icons
 
     steps:
       - uses: actions/checkout@v7
@@ -81,10 +81,10 @@ jobs:
       - if: matrix.icons == 'tdesign-icons-view'
         run: pnpm run --filter tdesign-icons-vue-next build
 
-      - if: matrix.icons != 'tdesign-icons-flutter'
+      - if: matrix.icons != 'tdesign-flutter-icons'
         run: pnpm run --if-present --filter ${{ matrix.icons }} build
 
-      - if: matrix.icons == 'tdesign-icons-flutter'
+      - if: matrix.icons == 'tdesign-flutter-icons'
         uses: flutter-actions/setup-flutter@v4
         with:
           channel: stable
@@ -96,7 +96,7 @@ jobs:
         working-directory: ./packages/flutter
         run: flutter pub get
 
-      - if: matrix.icons == 'tdesign-icons-flutter'
+      - if: matrix.icons == 'tdesign-flutter-icons'
         working-directory: ./packages/flutter
         run: |
           dart ./tool/generate.dart

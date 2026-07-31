@@ -5,7 +5,7 @@ import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
 
 const fontFamily = 'TIcons';
-const fontPackage = 'tdesign_icons';
+const fontPackage = 'tdesign_flutter_icons';
 
 void main() {
   final scriptDir = File.fromUri(Platform.script).parent.path;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 import 'package:tdesign_icons_example/main.dart';
 
@@ -10,6 +11,9 @@ void main() {
 
     expect(find.text('TDesign Icons'), findsOneWidget);
     expect(find.byType(Icon), findsWidgets);
+    expect(find.byType(TNavBar), findsOneWidget);
+    expect(find.byType(TSearchBar), findsOneWidget);
+    expect(find.byType(TIcon), findsWidgets);
   });
 
   testWidgets('点击预览图标复制 TIcon 用法并显示成功反馈', (tester) async {
@@ -37,5 +41,8 @@ void main() {
 
     expect(clipboardText, 'TIcon(TIcons.ability_open)');
     expect(find.text('已复制 TIcon(TIcons.ability_open)'), findsOneWidget);
+
+    await tester.pump(const Duration(seconds: 3));
+    expect(find.text('已复制 TIcon(TIcons.ability_open)'), findsNothing);
   });
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tdesign_flutter_icons/tdesign_flutter_icons.dart';
+import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 /// 单个 TDesign 图标条目，包含名称与 [IconData]。
 typedef IconEntry = MapEntry<String, IconData>;
@@ -75,14 +75,11 @@ class _IconDemoPageState extends State<IconDemoPage> {
       return;
     }
 
-    ScaffoldMessenger.of(context)
-      ..hideCurrentSnackBar()
-      ..showSnackBar(
-        SnackBar(
-          content: Text('已复制 $code'),
-          duration: const Duration(seconds: 2),
-        ),
-      );
+    TToast.showSuccess(
+      '已复制 $code',
+      context: context,
+      duration: const Duration(seconds: 2),
+    );
   }
 
   @override
@@ -91,17 +88,17 @@ class _IconDemoPageState extends State<IconDemoPage> {
     final filtered = _filteredIcons;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('TDesign Icons'),
+      appBar: TNavBar(
+        titleWidget: const TText('TDesign Icons', fontWeight: FontWeight.w600),
+        useDefaultBack: false,
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 12),
-            child: Center(
-              child: Text(
-                '共 ${_allIcons.length} 个',
-                style: theme.textTheme.bodySmall,
-              ),
+          TNavBarItem(
+            customWidget: TText(
+              '共 ${_allIcons.length} 个',
+              font: context.tTheme.fontBodySmall,
+              textColor: context.tTheme.textColorSecondary,
             ),
+            onTap: () {},
           ),
         ],
       ),
@@ -144,12 +141,17 @@ class _IconDemoPageState extends State<IconDemoPage> {
               radius: 44,
               child: Padding(
                 padding: const EdgeInsets.all(8),
-                child: Icon(entry.value, size: 72, color: _iconColor),
+                child: TIcon(
+                  entry.value,
+                  size: 72,
+                  color: _iconColor,
+                  semanticLabel: entry.key,
+                ),
               ),
             ),
           ),
           const SizedBox(height: 4),
-          Text(
+          TText(
             entry.key,
             style: theme.textTheme.titleMedium?.copyWith(
               fontWeight: FontWeight.w600,
@@ -215,8 +217,8 @@ class _IconDemoPageState extends State<IconDemoPage> {
             ),
           ),
           child: isSelected
-              ? Icon(Icons.check, size: 18, color: defaultColor)
-              : Icon(Icons.palette_outlined, size: 18, color: defaultColor),
+              ? TIcon(TIcons.check, size: 18, color: defaultColor)
+              : TIcon(TIcons.palette, size: 18, color: defaultColor),
         ),
       ),
     );
@@ -260,11 +262,7 @@ class _IconDemoPageState extends State<IconDemoPage> {
                 : null,
           ),
           child: isSelected
-              ? Icon(
-                  Icons.check,
-                  size: 18,
-                  color: _contrastColor(color),
-                )
+              ? TIcon(TIcons.check, size: 18, color: _contrastColor(color))
               : null,
         ),
       ),
@@ -278,24 +276,16 @@ class _IconDemoPageState extends State<IconDemoPage> {
 
   /// 搜索栏，按图标名称过滤。
   Widget _buildSearchBar() {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
-      child: TextField(
-        decoration: InputDecoration(
-          hintText: '搜索图标名称…',
-          prefixIcon: const Icon(Icons.search),
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-          isDense: true,
-        ),
-        onChanged: (value) => setState(() => _searchQuery = value),
-      ),
+    return TSearchBar(
+      hintText: '搜索图标名称…',
+      onChanged: (value) => setState(() => _searchQuery = value),
     );
   }
 
   /// 图标网格，点击后在顶部预览区展示。
   Widget _buildIconGrid(List<IconEntry> icons, ThemeData theme) {
     if (icons.isEmpty) {
-      return const Center(child: Text('未找到匹配的图标'));
+      return const TEmpty(icon: TIcons.search, emptyText: '未找到匹配的图标');
     }
 
     return GridView.builder(
@@ -324,13 +314,9 @@ class _IconDemoPageState extends State<IconDemoPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    entry.value,
-                    size: 28,
-                    color: _iconColor,
-                  ),
+                  TIcon(entry.value, size: 28, color: _iconColor),
                   const SizedBox(height: 4),
-                  Text(
+                  TText(
                     entry.key,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,

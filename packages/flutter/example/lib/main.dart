@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 import 'icon_demo_page.dart';
 
@@ -12,13 +13,14 @@ class TDesignIconsExampleApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final token = TThemeData.defaultData();
+
     return MaterialApp(
       title: 'TDesign Icons Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF0052D9)),
-        useMaterial3: true,
-      ),
+      theme: TThemeBuilder.light(token),
+      darkTheme: TThemeBuilder.dark(token),
+      themeMode: ThemeMode.system,
       home: const IconDemoPage(),
     );
   }

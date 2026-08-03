@@ -4,6 +4,8 @@ import renderFn from './utils/render-fn';
 
 import { IconBaseData, SVGJson } from './utils/types';
 
+let overlapMaskSeed = 0;
+
 function hump2Underline(s: string) {
   return s
     .replace(/([A-Z])/g, '-$1')
@@ -43,6 +45,8 @@ export default Vue.extend({
   },
   render(createElement, context): VNode {
     const { icon, id, ...userProps } = context.props;
+    const overlapMaskPrefix = `t-icon-${id}-${overlapMaskSeed}`;
+    overlapMaskSeed += 1;
 
     const {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -75,7 +79,7 @@ export default Vue.extend({
     return renderFn(createElement, icon, {
       class: undefined,
       staticClass: finalCls,
-      props: { ...userProps, ...otherProps },
+      props: { ...userProps, ...otherProps, overlapMaskPrefix },
       attrs,
       style: finalStyle,
       on: { ...on, click: (e: MouseEvent) => click?.({ e }), ...nativeOn },

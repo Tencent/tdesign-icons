@@ -1,10 +1,29 @@
-import { h } from 'vue';
+import { getCurrentInstance, h } from 'vue';
 import { IconProps } from './types';
 
 const camel2Kebab = (camelString:string) => {
-  const covertArr = ['strokeLinecap', 'fillRule', 'clipRule', 'strokeWidth'];
+  const covertArr = [
+    'clipRule',
+    'fillRule',
+    'maskContentUnits',
+    'maskType',
+    'maskUnits',
+    'strokeLinecap',
+    'strokeWidth',
+  ];
   if (covertArr.includes(camelString)) { return camelString.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase(); }
   return camelString;
+};
+
+const resolveChildProp = (value: string, props: Record<string, any>) => {
+  const propName = value.split('.')[1] as keyof IconProps;
+  const overlapMask = /^overlapMask(Id|Url)(\d+)$/.exec(propName);
+  if (overlapMask) {
+    const maskId = `${props.overlapMaskPrefix}-${overlapMask[2]}`;
+    return overlapMask[1] === 'Url' ? `url(#${maskId})` : maskId;
+  }
+
+  return props[propName];
 };
 
 const renderNode = (node: any, props: Record<string, any>) => {
@@ -14,8 +33,7 @@ const renderNode = (node: any, props: Record<string, any>) => {
     // eslint-disable-next-line no-restricted-syntax
     for (const [key, value] of Object.entries(node.attrs)) {
       if (typeof value === 'string' && value.startsWith('props.')) {
-        const propName = value.split('.')[1] as keyof IconProps;
-        processedAttrs[camel2Kebab(key)] = props[propName];
+        processedAttrs[camel2Kebab(key)] = resolveChildProp(value, props);
       } else {
         processedAttrs[camel2Kebab(key)] = value;
       }
@@ -37,4 +55,7 @@ const renderNode = (node: any, props: Record<string, any>) => {
   return h(node.tag, processedAttrs, children);
 };
 
-export default renderNode;
+export default (node: any, props: Record<string, any>) => {
+  const overlapMaskPrefix = `t-icon-overlap-${getCurrentInstance()?.uid ?? 'unknown'}`;
+  return renderNode(node, { ...props, overlapMaskPrefix });
+};

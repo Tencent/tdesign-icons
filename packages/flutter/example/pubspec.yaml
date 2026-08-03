@@ -11,7 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  tdesign_icons:
+  tdesign_flutter_icons:
     path: ../
 
 dev_dependencies:

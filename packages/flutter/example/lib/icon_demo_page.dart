@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tdesign_icons/tdesign_icons.dart';
+import 'package:tdesign_flutter_icons/tdesign_flutter_icons.dart';
 
 /// 单个 TDesign 图标条目，包含名称与 [IconData]。
 typedef IconEntry = MapEntry<String, IconData>;

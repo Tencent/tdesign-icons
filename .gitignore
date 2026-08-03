@@ -6,7 +6,7 @@ src/manifest.ts
 src/icons.ts
 converted_svg
 
-# Flutter generated files
+# Flutter generated files (发布前生成，不提交到 Git)
 packages/flutter/fonts/*.ttf
 packages/flutter/lib/src/assets.g.dart
 
@@ -55,4 +55,3 @@ package-lock.json
 
 # webstorm
 .idea/
-

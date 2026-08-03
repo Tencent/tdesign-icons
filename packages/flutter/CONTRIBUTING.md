@@ -22,7 +22,7 @@ fvm use
 
 ## 本地开发调试
 
-`example` 通过 `path: ../` 引用本地 `tdesign_icons` 包，无需发布到 pub.dev 即可实时测试。
+`example` 通过 `path: ../` 引用本地 `tdesign_flutter_icons` 包，无需发布到 pub.dev 即可实时测试。
 
 在 monorepo 内改图标后，从**仓库根目录**按此顺序验证：
 
@@ -43,7 +43,7 @@ fvm flutter run
 
 ### 调试包源码
 
-- example 直接加载 `packages/flutter/lib/` 源码，可在 IDE 中对 `tdesign_icons` 打断点、单步调试。
+- example 直接加载 `packages/flutter/lib/` 源码，可在 IDE 中对 `tdesign_flutter_icons` 打断点、单步调试。
 - 建议在 `packages/flutter/example` 目录下执行 `fvm flutter run`，或将该目录设为 IDE 运行根目录。
 - 修改 `lib/` 内 Dart 代码：保存后 **热重载（Hot Reload）** 即可生效。
 - 修改 `fonts/t.ttf` 或重新生成 `assets.g.dart` 后：需 **完全重启（Hot Restart 或重新 run）**。
@@ -78,8 +78,8 @@ fvm flutter pub get
 cd example && fvm flutter pub get && fvm flutter run
 
 # 9. 提交并合并发布分支后，创建 Git Tag 触发自动发布
-git tag tdesign_icons@{version}
-git push origin tdesign_icons@{version}
+git tag tdesign_flutter_icons@{version}
+git push origin tdesign_flutter_icons@{version}
 ```
 
 ---
@@ -96,7 +96,7 @@ packages/flutter/
 ├── fonts/
 │   └── t.ttf                # 字体文件（由 gulp 构建生成）
 ├── lib/
-│   ├── tdesign_icons.dart   # 入口文件
+│   ├── tdesign_flutter_icons.dart   # 入口文件
 │   └── src/
 │       └── assets.g.dart    # 图标常量（自动生成）
 ├── tool/
@@ -110,5 +110,5 @@ packages/flutter/
 
 ## 注意事项
 
-- 发布前需要在 pub.dev 配置 Automated publishing，仓库为 `Tencent/tdesign-icons`，Tag pattern 为 `tdesign_icons@{{version}}`
+- 发布前需要在 pub.dev 配置 Automated publishing，仓库为 `Tencent/tdesign-icons`，Tag pattern 为 `tdesign_flutter_icons@{{version}}`
 - 自动发布 workflow 会重新生成 `fonts/t.ttf` 和 `lib/src/assets.g.dart`，这两个产物不需要提交到 Git

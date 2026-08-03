@@ -31,8 +31,3 @@ export const specifiedIcons = [
   'stop-circle',
   'summary',
 ];
-
-export const opacityOverlapIcons: Record<string, Array<'fill' | 'stroke'>> = {
-  'alarm-off': ['stroke'],
-  browse: ['fill'],
-};

@@ -1,8 +1,9 @@
 import { parse } from 'svg-parser';
 import camelCase from 'camelcase';
-import { opacityOverlapIcons, specifiedIcons } from './util/const';
+import { specifiedIcons } from './util/const';
 import { createTransformStream } from './transform';
 import { optimizeOpacityOverlaps } from './opacity-overlap';
+import { detectOpacityOverlapPaintTypes } from './detect-opacity-overlap';
 
 export interface Attrs {
   style?: { [key: string]: any } | string;
@@ -164,7 +165,7 @@ export function svgToElement(
       optimizeOpacityOverlaps(svgElement, {
         maskPaintTypes: options.preventOpacityOverlap === true
           ? undefined
-          : opacityOverlapIcons[iconName] || [],
+          : detectOpacityOverlapPaintTypes(iconName),
         viewBox: svgElement.attrs.viewBox as string | undefined,
       });
     }

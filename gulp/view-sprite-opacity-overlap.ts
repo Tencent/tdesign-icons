@@ -1,4 +1,4 @@
-import { opacityOverlapIcons } from './util/const';
+import { detectOpacityOverlapPaintTypes } from './detect-opacity-overlap';
 
 const TEXT_NODE = 3;
 const SVG_NAMESPACE = 'http://www.w3.org/2000/svg';
@@ -58,7 +58,7 @@ function makeMaskShape(node, paintType) {
 }
 
 export function applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName) {
-  const allowedPaintTypes = opacityOverlapIcons[iconName] || [];
+  const allowedPaintTypes = detectOpacityOverlapPaintTypes(iconName);
   if (!allowedPaintTypes.length) return;
 
   const viewBox = (symbolEle.getAttribute('viewBox') || '0 0 24 24').trim().split(/[\s,]+/);

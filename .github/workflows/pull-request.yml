@@ -163,8 +163,19 @@ jobs:
           cd example
           flutter pub get
           flutter build web --release --no-pub --base-href /flutter/
+          flutter build apk --release --no-pub
 
       - run: mv packages/flutter/example/build/web _site/flutter
+
+      - name: upload Flutter example APK
+        id: upload-flutter-apk
+        uses: actions/upload-artifact@v7
+        with:
+          name: flutter-example-apk
+          path: packages/flutter/example/build/app/outputs/flutter-apk/app-release.apk
+          if-no-files-found: error
+          archive: false
+          retention-days: 5
 
       - run: zip -r _site.zip _site
 
@@ -177,11 +188,15 @@ jobs:
 
       - name: Save PR number
         if: always()
-        run: echo ${{ github.event.number }} > ./pr-id.txt
+        run: |
+          echo ${{ github.event.number }} > ./pr-id.txt
+          echo "${{ steps.upload-flutter-apk.outputs.artifact-url }}" > ./apk-url.txt
 
-      - name: Upload PR number
+      - name: Upload PR preview metadata
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: pr
-          path: ./pr-id.txt
+          path: |
+            ./pr-id.txt
+            ./apk-url.txt

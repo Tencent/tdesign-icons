@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tdesign_flutter/tdesign_flutter.dart';
@@ -5,9 +7,60 @@ import 'package:tdesign_flutter/tdesign_flutter.dart';
 /// 单个 TDesign 图标条目，包含名称与 [IconData]。
 typedef IconEntry = MapEntry<String, IconData>;
 
+enum _CopyType {
+  basic('基础'),
+  byName('名称'),
+  custom('参数');
+
+  const _CopyType(this.label);
+
+  final String label;
+
+  String codeFor(String iconName, {String? colorCode}) => switch (this) {
+    _CopyType.basic => 'TIcon(TIcons.$iconName)',
+    _CopyType.byName => "TIcon.fromName('$iconName')",
+    _CopyType.custom =>
+      'TIcon(\n'
+          '  TIcons.$iconName,\n'
+          '  size: 24,\n'
+          '${colorCode == null ? '' : '  color: $colorCode,\n'}'
+          ')',
+  };
+}
+
+enum _IconColorOption {
+  brand('品牌色', 'context.tTheme.brandNormalColor'),
+  error('错误色', 'context.tTheme.errorNormalColor'),
+  success('成功色', 'context.tTheme.successNormalColor'),
+  warning('警告色', 'context.tTheme.warningNormalColor'),
+  secondary('次要文本色', 'context.tTheme.textColorSecondary'),
+  purple('自定义紫色', 'const Color(0xFF834EC2)');
+
+  const _IconColorOption(this.label, this.code);
+
+  final String label;
+  final String code;
+
+  Color resolve(TThemeData token) => switch (this) {
+    _IconColorOption.brand => token.brandNormalColor,
+    _IconColorOption.error => token.errorNormalColor,
+    _IconColorOption.success => token.successNormalColor,
+    _IconColorOption.warning => token.warningNormalColor,
+    _IconColorOption.secondary => token.textColorSecondary,
+    _IconColorOption.purple => const Color(0xFF834EC2),
+  };
+}
+
 /// TDesign Icons 演示主页：顶部展示选中图标，下方可搜索浏览全部图标。
 class IconDemoPage extends StatefulWidget {
-  const IconDemoPage({super.key});
+  const IconDemoPage({
+    super.key,
+    required this.isDarkMode,
+    required this.onDarkModeChanged,
+  });
+
+  final bool isDarkMode;
+  final ValueChanged<bool> onDarkModeChanged;
 
   @override
   State<IconDemoPage> createState() => _IconDemoPageState();
@@ -24,22 +77,20 @@ class _IconDemoPageState extends State<IconDemoPage> {
   /// 搜索关键词，用于过滤下方网格。
   String _searchQuery = '';
 
-  /// 可选的测试颜色列表。
-  static const _testColors = <Color>[
-    Color(0xFF0052D9), // TDesign 品牌蓝
-    Color(0xFFE34D59), // 错误红
-    Color(0xFF00A870), // 成功绿
-    Color(0xFFED7B2F), // 警告橙
-    Color(0xFF834EC2), // 紫色
-    Color(0xFF909399), // 中性灰
-  ];
+  /// 当前选中的图标颜色类型，`null` 表示使用 IconTheme 默认颜色。
+  _IconColorOption? _iconColorOption;
 
-  /// 当前选中的图标颜色，`null` 表示使用主题默认颜色。
-  Color? _iconColor;
+  /// 当前选择的复制写法。
+  _CopyType _copyType = _CopyType.basic;
+
+  /// 最近完成复制的图标名称，用于驱动预览区成功态。
+  String? _copiedIconName;
+
+  Timer? _copyFeedbackTimer;
 
   /// 解析实际用于 [Icon] 的颜色，默认色跟随 [IconTheme]。
-  Color? _resolveIconColor(ThemeData theme) {
-    return _iconColor ?? theme.iconTheme.color;
+  Color? _resolveIconColor(ThemeData theme, TThemeData token) {
+    return _iconColorOption?.resolve(token) ?? theme.iconTheme.color;
   }
 
   /// 根据搜索词过滤后的图标列表。
@@ -62,24 +113,58 @@ class _IconDemoPageState extends State<IconDemoPage> {
 
   /// 选中指定图标并在顶部展示。
   void _selectIcon(IconEntry entry) {
+    _copyFeedbackTimer?.cancel();
     setState(() {
       _selectedIconName = entry.key;
+      _copiedIconName = null;
+    });
+  }
+
+  void _selectCopyType(_CopyType type) {
+    _copyFeedbackTimer?.cancel();
+    setState(() {
+      _copyType = type;
+      _copiedIconName = null;
     });
   }
 
   /// 复制当前图标在 TDesign Flutter 图标容器中的用法。
   Future<void> _copyIcon(IconEntry entry) async {
-    final code = 'TIcon(TIcons.${entry.key})';
+    final code = _copyType.codeFor(
+      entry.key,
+      colorCode: _iconColorOption?.code,
+    );
     await Clipboard.setData(ClipboardData(text: code));
     if (!mounted) {
       return;
     }
 
-    TToast.showSuccess(
-      '已复制 $code',
-      context: context,
-      duration: const Duration(seconds: 2),
+    _copyFeedbackTimer?.cancel();
+    setState(() => _copiedIconName = entry.key);
+    _copyFeedbackTimer = Timer(const Duration(milliseconds: 1600), () {
+      if (mounted && _copiedIconName == entry.key) {
+        setState(() => _copiedIconName = null);
+      }
+    });
+  }
+
+  /// 在覆盖层中展示当前选择的代码写法，避免代码行数影响主页布局。
+  void _showCodePreview(IconEntry entry) {
+    final width = MediaQuery.sizeOf(context).width.clamp(0, 360).toDouble();
+    TPopup.show(
+      context,
+      options: TPopupOptions.center(
+        width: width - 32,
+        height: 184,
+        child: _buildCodePreview(entry, context.tTheme),
+      ),
     );
+  }
+
+  @override
+  void dispose() {
+    _copyFeedbackTimer?.cancel();
+    super.dispose();
   }
 
   @override
@@ -116,8 +201,11 @@ class _IconDemoPageState extends State<IconDemoPage> {
   /// 顶部预览区：展示当前选中的大号图标与名称。
   Widget _buildPreview(ThemeData theme) {
     final entry = _selectedIcon;
+    final copied = _copiedIconName == entry.key;
+    final token = context.tTheme;
 
     return Container(
+      key: const Key('icon-preview'),
       width: double.infinity,
       padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
       decoration: BoxDecoration(
@@ -130,58 +218,292 @@ class _IconDemoPageState extends State<IconDemoPage> {
           end: Alignment.bottomCenter,
         ),
       ),
-      child: Column(
-        children: [
-          Semantics(
-            label: '复制 ${entry.key} 图标',
-            button: true,
-            child: InkResponse(
-              onTap: () => _copyIcon(entry),
-              mouseCursor: SystemMouseCursors.click,
-              radius: 44,
-              child: Padding(
-                padding: const EdgeInsets.all(8),
-                child: TIcon(
-                  entry.value,
-                  size: 72,
-                  color: _iconColor,
-                  semanticLabel: entry.key,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final compact = constraints.maxWidth < 360;
+          final cardWidth = compact ? 96.0 : 112.0;
+          final cardHeight = compact ? 88.0 : 104.0;
+
+          return SizedBox(
+            height: compact ? 148 : 168,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: SizedBox.expand(
+                    key: const Key('copy-type-pane'),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: SizedBox(
+                        width: compact ? 108 : 120,
+                        child: TRadioGroup<_CopyType>(
+                          key: const Key('copy-type-group'),
+                          value: _copyType,
+                          options: [
+                            for (final type in _CopyType.values)
+                              TRadioOption(value: type, label: type.label),
+                          ],
+                          size: TRadioSize.small,
+                          onChanged: _selectCopyType,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox.expand(
+                    key: const Key('preview-icon-pane'),
+                    child: Align(
+                      alignment: Alignment.topCenter,
+                      child: SizedBox(
+                        width: cardWidth,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            _buildCopyButton(
+                              entry: entry,
+                              copied: copied,
+                              token: token,
+                              width: cardWidth,
+                              height: cardHeight,
+                            ),
+                            const SizedBox(height: 4),
+                            TText(
+                              entry.key,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: theme.textTheme.titleSmall?.copyWith(
+                                fontWeight: FontWeight.w600,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            const SizedBox(height: 4),
+                            TText(
+                              copied ? '已复制${_copyType.label}写法' : '点击图标复制',
+                              key: const Key('preview-copy-hint'),
+                              font: token.fontBodySmall,
+                              textColor: copied
+                                  ? token.successNormalColor
+                                  : token.textColorSecondary,
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox.expand(
+                    key: const Key('code-info-pane'),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Semantics(
+                            label: '查看 ${entry.key} 代码写法',
+                            button: true,
+                            child: IconButton(
+                              key: const Key('code-preview-info-button'),
+                              onPressed: () => _showCodePreview(entry),
+                              icon: TIcon(
+                                TIcons.info_circle,
+                                color: token.brandNormalColor,
+                                semanticLabel: '查看代码',
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 4),
+                          _buildThemeSwitch(token),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  Widget _buildThemeSwitch(TThemeData token) {
+    return Semantics(
+      label: '暗黑主题',
+      child: SizedBox(
+        key: const Key('theme-switch'),
+        width: 45,
+        height: 28,
+        child: Stack(
+          children: [
+            TSwitch(
+              value: widget.isDarkMode,
+              size: TSwitchSize.medium,
+              variant: TSwitchVariant.filled,
+              onChanged: widget.onDarkModeChanged,
+            ),
+            Positioned.fill(
+              left: 2,
+              right: 2,
+              child: IgnorePointer(
+                child: AnimatedAlign(
+                  duration: const Duration(milliseconds: 200),
+                  alignment: widget.isDarkMode
+                      ? Alignment.centerRight
+                      : Alignment.centerLeft,
+                  child: SizedBox(
+                    width: 24,
+                    height: 24,
+                    child: Center(
+                      child: TIcon(
+                        widget.isDarkMode ? TIcons.moon : TIcons.mode_light,
+                        key: const Key('theme-switch-icon'),
+                        size: 16,
+                        color: widget.isDarkMode
+                            ? token.brandNormalColor
+                            : token.warningNormalColor,
+                        semanticLabel: widget.isDarkMode ? '暗黑模式' : '明亮模式',
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-          ),
-          const SizedBox(height: 4),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCodePreview(IconEntry entry, TThemeData token) {
+    return Container(
+      key: const Key('copy-code-preview'),
+      padding: const EdgeInsets.all(24),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
           TText(
-            entry.key,
-            style: theme.textTheme.titleMedium?.copyWith(
-              fontWeight: FontWeight.w600,
+            '${_copyType.label}写法',
+            font: token.fontBodySmall,
+            textColor: token.textColorSecondary,
+          ),
+          const SizedBox(height: 8),
+          TText(
+            _copyType.codeFor(entry.key, colorCode: _iconColorOption?.code),
+            key: const Key('copy-code-text'),
+            style: TextStyle(
+              color: token.textColorPrimary,
+              fontFamily: 'monospace',
+              fontSize: 12,
+              height: 1.5,
             ),
-            textAlign: TextAlign.center,
           ),
         ],
       ),
     );
   }
 
+  Widget _buildCopyButton({
+    required IconEntry entry,
+    required bool copied,
+    required TThemeData token,
+    required double width,
+    required double height,
+  }) {
+    return Semantics(
+      label: copied
+          ? '${entry.key} ${_copyType.label}写法已复制'
+          : '复制 ${entry.key} ${_copyType.label}写法',
+      button: true,
+      child: InkResponse(
+        key: const Key('preview-copy-button'),
+        onTap: () => _copyIcon(entry),
+        mouseCursor: SystemMouseCursors.click,
+        containedInkWell: true,
+        highlightShape: BoxShape.rectangle,
+        borderRadius: BorderRadius.circular(16),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          width: width,
+          height: height,
+          decoration: BoxDecoration(
+            color: copied ? token.successLightColor : token.bgColorContainer,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: copied ? token.successNormalColor : token.brandNormalColor,
+              width: 1.5,
+            ),
+            boxShadow: token.shadowsBase,
+          ),
+          child: Stack(
+            children: [
+              Center(
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 220),
+                  transitionBuilder: (child, animation) => FadeTransition(
+                    opacity: animation,
+                    child: ScaleTransition(scale: animation, child: child),
+                  ),
+                  child: copied
+                      ? TIcon(
+                          TIcons.check_circle_filled,
+                          key: const ValueKey('copy-success-icon'),
+                          size: 56,
+                          color: token.successNormalColor,
+                          semanticLabel: '复制成功',
+                        )
+                      : TIcon(
+                          entry.value,
+                          key: ValueKey(entry.key),
+                          size: width < 100 ? 60 : 72,
+                          color: _iconColorOption?.resolve(token),
+                          semanticLabel: entry.key,
+                        ),
+                ),
+              ),
+              if (!copied)
+                Positioned(
+                  top: 8,
+                  right: 8,
+                  child: TIcon(
+                    TIcons.copy,
+                    size: 18,
+                    color: token.brandNormalColor,
+                    semanticLabel: '复制',
+                  ),
+                ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   /// 颜色选择区：默认色 + 六个色块，用于测试 [Icon] 的 color 属性。
   Widget _buildColorPicker(ThemeData theme) {
+    final token = context.tTheme;
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
       child: Row(
         children: [
           _buildDefaultColorSwatch(theme),
-          ...List.generate(_testColors.length, (index) {
-            final color = _testColors[index];
-            final isSelected = _iconColor == color;
+          ...List.generate(_IconColorOption.values.length, (index) {
+            final option = _IconColorOption.values[index];
+            final color = option.resolve(token);
+            final isSelected = _iconColorOption == option;
 
             return Padding(
               padding: const EdgeInsets.only(left: 12),
               child: _buildColorSwatch(
                 theme: theme,
+                option: option,
                 color: color,
                 isSelected: isSelected,
-                onTap: () => setState(() => _iconColor = color),
+                onTap: () => setState(() => _iconColorOption = option),
               ),
             );
           }),
@@ -192,15 +514,15 @@ class _IconDemoPageState extends State<IconDemoPage> {
 
   /// 默认颜色色块：不传 [Icon.color] 时使用主题色。
   Widget _buildDefaultColorSwatch(ThemeData theme) {
-    final isSelected = _iconColor == null;
-    final defaultColor = _resolveIconColor(theme)!;
+    final isSelected = _iconColorOption == null;
+    final defaultColor = _resolveIconColor(theme, context.tTheme)!;
 
     return Semantics(
       label: '选择默认颜色',
       button: true,
       selected: isSelected,
       child: InkWell(
-        onTap: () => setState(() => _iconColor = null),
+        onTap: () => setState(() => _iconColorOption = null),
         customBorder: const CircleBorder(),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
@@ -227,15 +549,17 @@ class _IconDemoPageState extends State<IconDemoPage> {
   /// 单个自定义颜色色块。
   Widget _buildColorSwatch({
     required ThemeData theme,
+    required _IconColorOption option,
     required Color color,
     required bool isSelected,
     required VoidCallback onTap,
   }) {
     return Semantics(
-      label: '选择颜色',
+      label: '选择${option.label}',
       button: true,
       selected: isSelected,
       child: InkWell(
+        key: ValueKey('color-${option.name}'),
         onTap: onTap,
         customBorder: const CircleBorder(),
         child: AnimatedContainer(
@@ -288,6 +612,7 @@ class _IconDemoPageState extends State<IconDemoPage> {
       return const TEmpty(icon: TIcons.search, emptyText: '未找到匹配的图标');
     }
 
+    final iconColor = _iconColorOption?.resolve(context.tTheme);
     return GridView.builder(
       padding: const EdgeInsets.all(12),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -314,7 +639,7 @@ class _IconDemoPageState extends State<IconDemoPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  TIcon(entry.value, size: 28, color: _iconColor),
+                  TIcon(entry.value, size: 28, color: iconColor),
                   const SizedBox(height: 4),
                   TText(
                     entry.key,

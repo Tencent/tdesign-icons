@@ -8,8 +8,19 @@ void main() {
 }
 
 /// TDesign Icons 示例应用入口。
-class TDesignIconsExampleApp extends StatelessWidget {
+class TDesignIconsExampleApp extends StatefulWidget {
   const TDesignIconsExampleApp({super.key});
+
+  @override
+  State<TDesignIconsExampleApp> createState() => _TDesignIconsExampleAppState();
+}
+
+class _TDesignIconsExampleAppState extends State<TDesignIconsExampleApp> {
+  ThemeMode _themeMode = ThemeMode.system;
+
+  void _setDarkMode(bool enabled) {
+    setState(() => _themeMode = enabled ? ThemeMode.dark : ThemeMode.light);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +31,13 @@ class TDesignIconsExampleApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: TThemeBuilder.light(token),
       darkTheme: TThemeBuilder.dark(token),
-      themeMode: ThemeMode.system,
-      home: const IconDemoPage(),
+      themeMode: _themeMode,
+      home: Builder(
+        builder: (context) => IconDemoPage(
+          isDarkMode: Theme.of(context).brightness == Brightness.dark,
+          onDarkModeChanged: _setDarkMode,
+        ),
+      ),
     );
   }
 }

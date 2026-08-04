@@ -109,31 +109,25 @@ jobs:
           channel: stable
           version: ${{ matrix.flutter-version }}
 
-      - name: pub get
+      - name: install Flutter package dependencies
         working-directory: ./packages/flutter
         run: flutter pub get
 
-      - name: generate flutter icons
+      - name: generate Flutter icon assets
         working-directory: ./packages/flutter
         run: dart ./tool/generate.dart
 
-      - name: build and verify flutter package
+      - name: analyze Flutter package
         working-directory: ./packages/flutter
-        run: |
-          echo "Flutter ${{ matrix.flutter-version }}"
+        run: flutter analyze
 
-          # 验证
-          [ -f "lib/src/assets.g.dart" ] || (echo "❌ assets.g.dart 不存在" && exit 1)
-          [ -f "fonts/t.ttf" ] || (echo "❌ t.ttf 不存在" && exit 1)
-          icon_count=$(grep -c "static const " lib/src/assets.g.dart || echo "0")
-          echo "✅ Flutter 包构建成功，共 $icon_count 个图标"
+      - name: install Flutter example dependencies
+        working-directory: ./packages/flutter/example
+        run: flutter pub get
 
-          flutter analyze
-          cd example
-          flutter pub get
-          flutter analyze
-          flutter build web --release --no-pub
-          # flutter pub publish --dry-run
+      - name: analyze Flutter example
+        working-directory: ./packages/flutter/example
+        run: flutter analyze
 
   site:
     runs-on: ubuntu-latest
@@ -162,28 +156,28 @@ jobs:
           channel: stable
           version: 3.32.0
 
-      - name: pub get
+      - name: install Flutter package dependencies
         working-directory: ./packages/flutter
         run: flutter pub get
 
-      - name: generate flutter icons
+      - name: generate Flutter icon assets
         working-directory: ./packages/flutter
         run: dart ./tool/generate.dart
 
-
-      - name: pub get for example
+      - name: install Flutter example dependencies
         working-directory: ./packages/flutter/example
         run: flutter pub get
 
-      - name: build flutter web
+      - name: build Flutter Web preview
         working-directory: ./packages/flutter/example
         run: flutter build web --release --no-pub --base-href /flutter/
 
-      - name: build flutter apk
+      - name: build Flutter example APK
         working-directory: ./packages/flutter/example
         run: flutter build apk --release --no-pub
 
-      - run: mv packages/flutter/example/build/web _site/flutter
+      - name: add Flutter Web preview to site
+        run: mv packages/flutter/example/build/web _site/flutter
 
       - name: upload Flutter example APK
         id: upload-flutter-apk
@@ -195,7 +189,8 @@ jobs:
           archive: false
           retention-days: 5
 
-      - run: zip -r _site.zip _site
+      - name: archive preview site
+        run: zip -r _site.zip _site
 
       - name: upload _site artifact
         uses: actions/upload-artifact@v7

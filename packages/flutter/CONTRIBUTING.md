@@ -33,7 +33,7 @@ pnpm run generate
 # 2. Flutter 包：安装依赖并生成 Dart 图标代码
 cd packages/flutter
 fvm flutter pub get
-dart run tool/generate.dart
+fvm dart run tool/generate.dart
 
 # 3. 示例应用（Android/Web）：安装依赖并运行
 cd example
@@ -66,7 +66,7 @@ cd packages/flutter
 fvm flutter pub get
 
 # 5. 生成代码
-dart run tool/generate.dart
+fvm dart run tool/generate.dart
 
 # 6. 代码检查
 fvm flutter analyze

@@ -89,8 +89,10 @@ class _IconDemoPageState extends State<IconDemoPage> {
   Timer? _copyFeedbackTimer;
 
   /// 解析实际用于 [Icon] 的颜色，默认色跟随 [IconTheme]。
-  Color? _resolveIconColor(ThemeData theme, TThemeData token) {
-    return _iconColorOption?.resolve(token) ?? theme.iconTheme.color;
+  Color _resolveIconColor(ThemeData theme, TThemeData token) {
+    return _iconColorOption?.resolve(token) ??
+        theme.iconTheme.color ??
+        token.textColorPrimary;
   }
 
   /// 根据搜索词过滤后的图标列表。
@@ -150,11 +152,13 @@ class _IconDemoPageState extends State<IconDemoPage> {
 
   /// 在覆盖层中展示当前选择的代码写法，避免代码行数影响主页布局。
   void _showCodePreview(IconEntry entry) {
-    final width = MediaQuery.sizeOf(context).width.clamp(0, 360).toDouble();
+    final width = (MediaQuery.sizeOf(context).width - 32)
+        .clamp(0.0, 328.0)
+        .toDouble();
     TPopup.show(
       context,
       options: TPopupOptions.center(
-        width: width - 32,
+        width: width,
         height: 184,
         child: _buildCodePreview(entry, context.tTheme),
       ),
@@ -515,7 +519,7 @@ class _IconDemoPageState extends State<IconDemoPage> {
   /// 默认颜色色块：不传 [Icon.color] 时使用主题色。
   Widget _buildDefaultColorSwatch(ThemeData theme) {
     final isSelected = _iconColorOption == null;
-    final defaultColor = _resolveIconColor(theme, context.tTheme)!;
+    final defaultColor = _resolveIconColor(theme, context.tTheme);
 
     return Semantics(
       label: '选择默认颜色',

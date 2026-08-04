@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:tdesign_flutter/tdesign_flutter.dart';
 
+import 'package:tdesign_icons_example/icon_demo_page.dart';
 import 'package:tdesign_icons_example/main.dart';
 
 void main() {
@@ -86,6 +87,29 @@ void main() {
       findsOneWidget,
     );
     expect(find.byType(SelectableText), findsNothing);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('极窄 viewport 和空 IconTheme 仍可打开代码面板', (tester) async {
+    final token = TThemeData.defaultData();
+    final theme = TThemeBuilder.light(
+      token,
+    ).copyWith(iconTheme: const IconThemeData());
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: theme,
+        home: MediaQuery(
+          data: const MediaQueryData(size: Size(16, 800)),
+          child: IconDemoPage(isDarkMode: false, onDarkModeChanged: (_) {}),
+        ),
+      ),
+    );
+
+    await tester.tap(find.byKey(const Key('code-preview-info-button')));
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const Key('copy-code-preview')), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 

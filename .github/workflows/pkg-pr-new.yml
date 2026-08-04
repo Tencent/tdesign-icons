@@ -24,7 +24,7 @@ jobs:
 
       - run: pnpm run generate
 
-      - run: pnpm -r run build
+      - run: pnpm -r run --if-present build
 
 
       - run: pnpm dlx pkg-pr-new publish --pnpm './packages/*' --packageManager=npm,pnpm,bun

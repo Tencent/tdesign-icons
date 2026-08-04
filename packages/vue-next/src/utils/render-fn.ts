@@ -2,12 +2,11 @@ import { getCurrentInstance, h } from 'vue';
 import { IconProps } from './types';
 
 const camel2Kebab = (camelString:string) => {
+  // 注意 maskUnits / maskContentUnits / viewBox 在 SVG 中本就是驼峰，转成 kebab 会失效
   const covertArr = [
     'clipRule',
     'fillRule',
-    'maskContentUnits',
     'maskType',
-    'maskUnits',
     'strokeLinecap',
     'strokeWidth',
   ];

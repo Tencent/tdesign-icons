@@ -87,8 +87,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # 3.32.0 verifies the minimum supported version; 3.x tracks latest stable.
-        flutter-version: ["3.32.0", "3.x"]
+        # 3.32.0 verifies the minimum supported version; tracks latest stable.
+        flutter-version: ["3.32.0", "latest"]
 
     steps:
       - uses: actions/checkout@v7
@@ -104,17 +104,23 @@ jobs:
 
       - run: pnpm run generate
 
-      - uses: TDesignOteam/workflows/actions/setup-flutter@main
+      - uses: flutter-actions/setup-flutter@v4
         with:
-          flutter-version: ${{ matrix.flutter-version }}
+          channel: stable
+          version: ${{ matrix.flutter-version }}
+
+      - name: pub get
+        working-directory: ./packages/flutter
+        run: flutter pub get
+
+      - name: generate flutter icons
+        working-directory: ./packages/flutter
+        run: dart ./tool/generate.dart
 
       - name: build and verify flutter package
         working-directory: ./packages/flutter
         run: |
           echo "Flutter ${{ matrix.flutter-version }}"
-          flutter --version
-          flutter pub get
-          dart ./tool/generate.dart
 
           # 验证
           [ -f "lib/src/assets.g.dart" ] || (echo "❌ assets.g.dart 不存在" && exit 1)
@@ -145,25 +151,37 @@ jobs:
 
       - run: pnpm run generate
 
-      - uses: TDesignOteam/workflows/actions/setup-flutter@main
-        with:
-          flutter-version: 3.32.0
-
       - run: pnpm run --filter tdesign-icons-vue-next build
 
       - run: pnpm run --filter tdesign-icons-view preview
 
       - run: mv packages/view/dist _site
 
-      - name: build flutter web demo
+      - uses: flutter-actions/setup-flutter@v4
+        with:
+          channel: stable
+          version: 3.32.0
+
+      - name: pub get
         working-directory: ./packages/flutter
-        run: |
-          flutter pub get
-          dart ./tool/generate.dart
-          cd example
-          flutter pub get
-          flutter build web --release --no-pub --base-href /flutter/
-          flutter build apk --release --no-pub
+        run: flutter pub get
+
+      - name: generate flutter icons
+        working-directory: ./packages/flutter
+        run: dart ./tool/generate.dart
+
+
+      - name: pub get for example
+        working-directory: ./packages/flutter/example
+        run: flutter pub get
+
+      - name: build flutter web
+        working-directory: ./packages/flutter/example
+        run: flutter build web --release --no-pub --base-href /flutter/
+
+      - name: build flutter apk
+        working-directory: ./packages/flutter/example
+        run: flutter build apk --release --no-pub
 
       - run: mv packages/flutter/example/build/web _site/flutter
 

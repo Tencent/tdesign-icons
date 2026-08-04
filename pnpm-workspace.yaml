@@ -4,7 +4,6 @@ packages:
   - packages/view
   - packages/svg
   - packages/vue
-  - packages/react-native
   - packages/web-components
 catalog:
   "@babel/core": ^7.20.12

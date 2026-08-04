@@ -1,6 +1,6 @@
 {
   "name": "tdesign-icons-view",
-  "version": "0.5.4",
+  "version": "0.5.8",
   "description": "A Webcomponents package for display all tdesign icons in any UI framework",
   "type": "module",
   "scripts": {
@@ -16,7 +16,8 @@
   },
   "files": [
     "dist/td-icons-view.es.js",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "homepage": "https://github.com/Tencent/tdesign-icons/blob/develop/README.md",
   "bugs": {
@@ -31,7 +32,7 @@
   "dependencies": {
     "@popperjs/core": "catalog:",
     "lodash": "catalog:",
-    "tdesign-icons-vue-next": "^0.4.3",
+    "tdesign-icons-vue-next": "workspace:^",
     "tdesign-vue-next": "catalog:tdesign",
     "vue": "catalog:vue"
   },

@@ -2,6 +2,7 @@
   "name": "tdesign-icons",
   "private": true,
   "description": "mono repo for TDesign Icon",
+  "packageManager": "pnpm@10.33.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:Tencent/tdesign-icons.git"

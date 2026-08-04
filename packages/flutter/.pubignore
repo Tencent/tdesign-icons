@@ -1,0 +1,14 @@
+.DS_Store
+.changelog
+.dart_tool/
+analysis_options.yaml
+build/
+CONTRIBUTING.md
+pubspec.lock
+example/
+tool/
+
+!fonts/
+!fonts/t.ttf
+!lib/src/
+!lib/src/assets.g.dart

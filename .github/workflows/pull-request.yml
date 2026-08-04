@@ -8,7 +8,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: check_github_primary_email
         run: |
@@ -28,7 +28,7 @@ jobs:
               echo "邮箱 $log_emails 校验通过";
           fi
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
@@ -62,16 +62,14 @@ jobs:
           - tdesign-icons-svg
           - tdesign-icons-view
           - tdesign-icons-web-components
-          - tdesign-icons-flutter
+          - tdesign-flutter-icons
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10
+      - uses: pnpm/action-setup@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .node-version
           cache: "pnpm"
@@ -80,26 +78,40 @@ jobs:
 
       - run: pnpm run generate
 
-      - if: matrix.icons != 'tdesign-icons-flutter'
-        run: pnpm run --filter ${{ matrix.icons }} build
+      - if: matrix.icons == 'tdesign-icons-view'
+        run: pnpm run --filter tdesign-icons-vue-next build
 
-      - if: matrix.icons == 'tdesign-icons-flutter'
-        uses: dart-lang/setup-dart@v1
+      - if: matrix.icons != 'tdesign-flutter-icons'
+        run: pnpm run --if-present --filter ${{ matrix.icons }} build
 
-      - if: matrix.icons == 'tdesign-icons-flutter'
-        run: dart gen_dart_file.dart
+      - if: matrix.icons == 'tdesign-flutter-icons'
+        uses: TDesignOteam/workflows/actions/setup-flutter@main
+        with:
+          flutter-version: 3.32.0
+
+      - if: matrix.icons == 'tdesign-flutter-icons'
         working-directory: ./packages/flutter
+        run: |
+          flutter pub get
+          dart ./tool/generate.dart
+
+          # 验证
+          [ -f "lib/src/assets.g.dart" ] || (echo "❌ assets.g.dart 不存在" && exit 1)
+          [ -f "fonts/t.ttf" ] || (echo "❌ t.ttf 不存在" && exit 1)
+          icon_count=$(grep -c "static const " lib/src/assets.g.dart || echo "0")
+          echo "✅ Flutter 包构建成功，共 $icon_count 个图标"
+
+          flutter analyze
+          # flutter pub publish --dry-run
 
   site:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10
+      - uses: pnpm/action-setup@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .node-version
           cache: "pnpm"
@@ -107,6 +119,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - run: pnpm run generate
+
+      - run: pnpm run --filter tdesign-icons-vue-next build
 
       - run: pnpm run --filter tdesign-icons-view preview
 
@@ -115,7 +129,7 @@ jobs:
       - run: zip -r _site.zip _site
 
       - name: upload _site artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: _site
           path: _site.zip
@@ -127,7 +141,7 @@ jobs:
 
       - name: Upload PR number
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pr
           path: ./pr-id.txt

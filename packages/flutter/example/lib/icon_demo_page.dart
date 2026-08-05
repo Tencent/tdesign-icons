@@ -225,11 +225,12 @@ class _IconDemoPageState extends State<IconDemoPage> {
       child: LayoutBuilder(
         builder: (context, constraints) {
           final compact = constraints.maxWidth < 360;
-          final cardWidth = compact ? 96.0 : 112.0;
-          final cardHeight = compact ? 88.0 : 104.0;
+          final desktop = constraints.maxWidth >= 720;
+          final cardWidth = desktop ? 144.0 : (compact ? 96.0 : 112.0);
+          final cardHeight = desktop ? 132.0 : (compact ? 88.0 : 104.0);
 
           return SizedBox(
-            height: compact ? 148 : 168,
+            height: desktop ? 196 : (compact ? 148 : 168),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -237,7 +238,7 @@ class _IconDemoPageState extends State<IconDemoPage> {
                   child: SizedBox.expand(
                     key: const Key('copy-type-pane'),
                     child: Align(
-                      alignment: Alignment.centerLeft,
+                      alignment: Alignment.topCenter,
                       child: SizedBox(
                         width: compact ? 108 : 120,
                         child: TRadioGroup<_CopyType>(
@@ -260,6 +261,7 @@ class _IconDemoPageState extends State<IconDemoPage> {
                     child: Align(
                       alignment: Alignment.topCenter,
                       child: SizedBox(
+                        key: const Key('preview-icon-content'),
                         width: cardWidth,
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -301,8 +303,9 @@ class _IconDemoPageState extends State<IconDemoPage> {
                   child: SizedBox.expand(
                     key: const Key('code-info-pane'),
                     child: Align(
-                      alignment: Alignment.topLeft,
+                      alignment: Alignment.topCenter,
                       child: Row(
+                        key: const Key('code-info-actions'),
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Semantics(
@@ -455,14 +458,14 @@ class _IconDemoPageState extends State<IconDemoPage> {
                       ? TIcon(
                           TIcons.check_circle_filled,
                           key: const ValueKey('copy-success-icon'),
-                          size: 56,
+                          size: width >= 140 ? 72 : 56,
                           color: token.successNormalColor,
                           semanticLabel: '复制成功',
                         )
                       : TIcon(
                           entry.value,
                           key: ValueKey(entry.key),
-                          size: width < 100 ? 60 : 72,
+                          size: width >= 140 ? 88 : (width < 100 ? 60 : 72),
                           color: _iconColorOption?.resolve(token),
                           semanticLabel: entry.key,
                         ),
@@ -617,50 +620,70 @@ class _IconDemoPageState extends State<IconDemoPage> {
     }
 
     final iconColor = _iconColorOption?.resolve(context.tTheme);
-    return GridView.builder(
-      padding: const EdgeInsets.all(12),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4,
-        mainAxisSpacing: 8,
-        crossAxisSpacing: 8,
-        childAspectRatio: 0.85,
-      ),
-      itemCount: icons.length,
-      itemBuilder: (context, index) {
-        final entry = icons[index];
-        final isSelected = entry.key == _selectedIconName;
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final desktop = constraints.maxWidth >= 600;
+        final gridDelegate = desktop
+            ? const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 128,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                childAspectRatio: 0.95,
+              )
+            : const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4,
+                mainAxisSpacing: 8,
+                crossAxisSpacing: 8,
+                childAspectRatio: 0.85,
+              );
 
-        return Material(
-          color: isSelected
-              ? theme.colorScheme.primaryContainer
-              : theme.colorScheme.surfaceContainerHighest,
-          borderRadius: BorderRadius.circular(8),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(8),
-            onTap: () => _selectIcon(entry),
-            child: Padding(
-              padding: const EdgeInsets.all(6),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TIcon(entry.value, size: 28, color: iconColor),
-                  const SizedBox(height: 4),
-                  TText(
-                    entry.key,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.center,
-                    style: theme.textTheme.labelSmall?.copyWith(
-                      fontSize: 9,
-                      color: isSelected
-                          ? theme.colorScheme.primary
-                          : theme.colorScheme.onSurfaceVariant,
-                    ),
+        return GridView.builder(
+          padding: EdgeInsets.all(desktop ? 16 : 12),
+          gridDelegate: gridDelegate,
+          itemCount: icons.length,
+          itemBuilder: (context, index) {
+            final entry = icons[index];
+            final isSelected = entry.key == _selectedIconName;
+
+            return Material(
+              key: ValueKey('icon-grid-item-${entry.key}'),
+              color: isSelected
+                  ? theme.colorScheme.primaryContainer
+                  : theme.colorScheme.surfaceContainerHighest,
+              borderRadius: BorderRadius.circular(8),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(8),
+                onTap: () => _selectIcon(entry),
+                child: Padding(
+                  padding: EdgeInsets.all(desktop ? 10 : 6),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TIcon(
+                        entry.value,
+                        key: ValueKey('icon-grid-icon-${entry.key}'),
+                        size: desktop ? 36 : 28,
+                        color: iconColor,
+                      ),
+                      SizedBox(height: desktop ? 8 : 4),
+                      TText(
+                        entry.key,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.center,
+                        style: theme.textTheme.labelSmall?.copyWith(
+                          fontSize: desktop ? 11 : 9,
+                          color: isSelected
+                              ? theme.colorScheme.primary
+                              : theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
-          ),
+            );
+          },
         );
       },
     );

@@ -37,15 +37,15 @@ void main() {
     expect(find.byKey(const Key('copy-code-preview')), findsNothing);
     expect(find.byKey(const Key('preview-copy-button')), findsOneWidget);
     expect(find.byKey(const Key('copy-type-group')), findsOneWidget);
-    final paneHeights = [
+    final paneSizes = [
       for (final key in const [
         Key('copy-type-pane'),
         Key('preview-icon-pane'),
         Key('code-info-pane'),
       ])
-        tester.getSize(find.byKey(key)).height,
+        tester.getSize(find.byKey(key)),
     ];
-    expect(paneHeights.toSet(), hasLength(1));
+    expect(paneSizes.toSet(), hasLength(1));
     expect(
       tester.getCenter(find.byKey(const Key('copy-type-group'))).dx,
       lessThan(
@@ -59,8 +59,28 @@ void main() {
       ),
     );
     expect(
-      tester.getTopLeft(find.byKey(const Key('code-preview-info-button'))),
-      tester.getTopLeft(find.byKey(const Key('code-info-pane'))),
+      tester.getCenter(find.byKey(const Key('copy-type-group'))).dx,
+      tester.getCenter(find.byKey(const Key('copy-type-pane'))).dx,
+    );
+    expect(
+      tester.getCenter(find.byKey(const Key('preview-icon-content'))).dx,
+      tester.getCenter(find.byKey(const Key('preview-icon-pane'))).dx,
+    );
+    expect(
+      tester.getCenter(find.byKey(const Key('code-info-actions'))).dx,
+      tester.getCenter(find.byKey(const Key('code-info-pane'))).dx,
+    );
+    expect(
+      tester.getTopLeft(find.byKey(const Key('copy-type-group'))).dy,
+      tester.getTopLeft(find.byKey(const Key('copy-type-pane'))).dy,
+    );
+    expect(
+      tester.getTopLeft(find.byKey(const Key('preview-icon-content'))).dy,
+      tester.getTopLeft(find.byKey(const Key('preview-icon-pane'))).dy,
+    );
+    expect(
+      tester.getTopLeft(find.byKey(const Key('code-info-actions'))).dy,
+      tester.getTopLeft(find.byKey(const Key('code-info-pane'))).dy,
     );
 
     final initialSize = tester.getSize(find.byKey(const Key('icon-preview')));
@@ -87,6 +107,57 @@ void main() {
       findsOneWidget,
     );
     expect(find.byType(SelectableText), findsNothing);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('大屏限制列表单元尺寸并放大预览图标', (tester) async {
+    await tester.binding.setSurfaceSize(const Size(1200, 900));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.pumpWidget(const TDesignIconsExampleApp());
+
+    final previewButtonSize = tester.getSize(
+      find.byKey(const Key('preview-copy-button')),
+    );
+    final gridItemSize = tester.getSize(
+      find.byKey(const ValueKey('icon-grid-item-ability_open')),
+    );
+    final gridIconSize = tester.getSize(
+      find.byKey(const ValueKey('icon-grid-icon-ability_open')),
+    );
+
+    expect(previewButtonSize, const Size(144, 132));
+    expect(gridItemSize.width, lessThanOrEqualTo(128));
+    expect(gridIconSize, const Size.square(36));
+    final paneWidths = [
+      for (final key in const [
+        Key('copy-type-pane'),
+        Key('preview-icon-pane'),
+        Key('code-info-pane'),
+      ])
+        tester.getSize(find.byKey(key)).width,
+    ];
+    expect(paneWidths.toSet(), hasLength(1));
+    expect(
+      tester.getCenter(find.byKey(const Key('copy-type-group'))).dx,
+      tester.getCenter(find.byKey(const Key('copy-type-pane'))).dx,
+    );
+    expect(
+      tester.getCenter(find.byKey(const Key('preview-icon-content'))).dx,
+      tester.getCenter(find.byKey(const Key('preview-icon-pane'))).dx,
+    );
+    expect(
+      tester.getCenter(find.byKey(const Key('code-info-actions'))).dx,
+      tester.getCenter(find.byKey(const Key('code-info-pane'))).dx,
+    );
+    expect(
+      tester.getTopLeft(find.byKey(const Key('copy-type-group'))).dy,
+      tester.getTopLeft(find.byKey(const Key('code-info-actions'))).dy,
+    );
+    expect(
+      tester.getTopLeft(find.byKey(const Key('preview-icon-content'))).dy,
+      tester.getTopLeft(find.byKey(const Key('code-info-actions'))).dy,
+    );
     expect(tester.takeException(), isNull);
   });
 

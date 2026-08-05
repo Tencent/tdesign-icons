@@ -21,7 +21,6 @@
     ]
   },
   "scripts": {
-    "preinstall": "npx -y only-allow pnpm",
     "husky": "husky",
     "prepare": "husky install",
     "dev:icons": "pnpm -C packages/view dev ",

@@ -30,45 +30,15 @@
   ],
   "scripts": {
     "prebuild": "rimraf esm/* lib/* dist/*",
-    "build": "cross-env NODE_ENV=production rollup -c rollup.config.js && npm run build:tsc",
-    "build:tsc": "concurrently \"npm:build:tsc-*\"",
-    "build:tsc-esm": "tsc --emitDeclarationOnly -d --outDir esm/",
-    "build:tsc-lib": " tsc --emitDeclarationOnly -d --outDir lib/"
+    "build": "tsdown"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "catalog:",
-    "@babel/plugin-transform-runtime": "catalog:",
-    "@babel/preset-env": "catalog:",
-    "@rollup/plugin-babel": "catalog:",
-    "@rollup/plugin-commonjs": "catalog:",
-    "@rollup/plugin-node-resolve": "catalog:",
-    "@rollup/plugin-replace": "catalog:",
-    "@vue/babel-plugin-jsx": "catalog:",
-    "@vue/babel-preset-jsx": "catalog:",
-    "@types/node": "catalog:types",
-    "camelcase": "catalog:",
-    "concurrently": "catalog:",
-    "cross-env": "catalog:",
-    "esbuild": "catalog:",
-    "less": "catalog:",
-    "postcss": "catalog:",
-    "rollup": "catalog:",
-    "rollup-plugin-esbuild": "catalog:",
-    "rollup-plugin-ignore-import": "catalog:",
-    "rollup-plugin-less": "catalog:",
-    "rollup-plugin-multi-input": "catalog:",
-    "rollup-plugin-postcss": "catalog:",
-    "rollup-plugin-static-import": "catalog:",
-    "rollup-plugin-styles": "catalog:",
-    "rollup-plugin-terser": "catalog:",
-    "rollup-plugin-vue": "catalog:",
-    "typescript": "catalog:",
-    "vue": "catalog:vue"
-  },
-  "dependencies": {
-    "@babel/runtime": "catalog:"
+    "@tsdown/css": "0.22.14",
+    "tsdown": "0.22.14",
+    "typescript": "5.6.3",
+    "vue": "3"
   }
 }

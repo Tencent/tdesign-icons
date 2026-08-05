@@ -56,14 +56,18 @@ export default Vue.extend({
       checkScriptAndLoad(url, `${classPrefix}-svg-js-stylesheet--unique-class`);
     });
   },
-  render() {
+  render(createElement) {
     const attrs = {
       href: `#${this.iconName}`,
     };
-    return (
-      <svg class={this.classes} style={this.iconStyle} onClick={this.handleClick}>
-        <use {...{ attrs }} />
-      </svg>
+    return createElement(
+      'svg',
+      {
+        class: this.classes,
+        style: this.iconStyle,
+        on: { click: this.handleClick },
+      },
+      [createElement('use', { attrs })],
     );
   },
 });

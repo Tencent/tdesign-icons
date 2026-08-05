@@ -61,9 +61,13 @@ export const IconFont = Vue.extend({
       this.onClick?.({ e });
     },
   },
-  render(): VNode {
+  render(createElement): VNode {
     const Component = this.tag;
-    return <Component class={this.classes} style={this.iconStyle} onClick={this.handleClick}></Component>;
+    return createElement(Component, {
+      class: this.classes,
+      style: this.iconStyle,
+      on: { click: this.handleClick },
+    });
   },
 });
 

@@ -24,4 +24,6 @@ jobs:
 
       - run: pnpm run generate
 
-      - run: pnpm dlx pkg-pr-new publish --pnpm './packages/tdesign-icons-svg' --packageManager=npm,pnpm,bun
+      - run: pnpm run --filter tdesign-icons-vue build
+
+      - run: pnpm dlx pkg-pr-new publish --pnpm './packages/tdesign-icons-vue' --packageManager=npm,pnpm,bun

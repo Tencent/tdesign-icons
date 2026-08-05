@@ -62,7 +62,6 @@ jobs:
           - tdesign-icons-svg
           - tdesign-icons-view
           - tdesign-icons-web-components
-          - tdesign-flutter-icons
 
     steps:
       - uses: actions/checkout@v7
@@ -81,28 +80,58 @@ jobs:
       - if: matrix.icons == 'tdesign-icons-view'
         run: pnpm run --filter tdesign-icons-vue-next build
 
-      - if: matrix.icons != 'tdesign-flutter-icons'
-        run: pnpm run --if-present --filter ${{ matrix.icons }} build
+      - run: pnpm run --if-present --filter ${{ matrix.icons }} build
 
-      - if: matrix.icons == 'tdesign-flutter-icons'
-        uses: TDesignOteam/workflows/actions/setup-flutter@main
+  build-flutter:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 3.32.0 verifies the minimum supported version; tracks latest stable.
+        flutter-version: ["3.32.0", "latest"]
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
         with:
-          flutter-version: 3.32.0
+          node-version-file: .node-version
+          cache: "pnpm"
 
-      - if: matrix.icons == 'tdesign-flutter-icons'
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm run generate
+
+      - uses: flutter-actions/setup-flutter@v4
+        with:
+          channel: stable
+          version: ${{ matrix.flutter-version }}
+
+      - name: install Flutter package dependencies
         working-directory: ./packages/flutter
-        run: |
-          flutter pub get
-          dart ./tool/generate.dart
+        run: flutter pub get
 
-          # 验证
-          [ -f "lib/src/assets.g.dart" ] || (echo "❌ assets.g.dart 不存在" && exit 1)
-          [ -f "fonts/t.ttf" ] || (echo "❌ t.ttf 不存在" && exit 1)
-          icon_count=$(grep -c "static const " lib/src/assets.g.dart || echo "0")
-          echo "✅ Flutter 包构建成功，共 $icon_count 个图标"
+      - name: generate Flutter icon assets
+        working-directory: ./packages/flutter
+        run: dart ./tool/generate.dart
 
-          flutter analyze
-          # flutter pub publish --dry-run
+      - name: analyze Flutter package
+        working-directory: ./packages/flutter
+        run: flutter analyze
+
+      - name: dry-run Flutter publish
+        working-directory: ./packages/flutter
+        run: flutter pub publish --dry-run
+
+      - name: install Flutter example dependencies
+        working-directory: ./packages/flutter/example
+        run: flutter pub get
+
+      - name: analyze Flutter example
+        working-directory: ./packages/flutter/example
+        run: flutter analyze
 
   site:
     runs-on: ubuntu-latest
@@ -126,7 +155,46 @@ jobs:
 
       - run: mv packages/view/dist _site
 
-      - run: zip -r _site.zip _site
+      - uses: flutter-actions/setup-flutter@v4
+        with:
+          channel: stable
+          version: 3.32.0
+
+      - name: install Flutter package dependencies
+        working-directory: ./packages/flutter
+        run: flutter pub get
+
+      - name: generate Flutter icon assets
+        working-directory: ./packages/flutter
+        run: dart ./tool/generate.dart
+
+      - name: install Flutter example dependencies
+        working-directory: ./packages/flutter/example
+        run: flutter pub get
+
+      - name: build Flutter Web preview
+        working-directory: ./packages/flutter/example
+        run: flutter build web --release --no-pub --base-href /flutter/
+
+      - name: build Flutter example APK
+        working-directory: ./packages/flutter/example
+        run: flutter build apk --release --no-pub
+
+      - name: add Flutter Web preview to site
+        run: mv packages/flutter/example/build/web _site/flutter
+
+      - name: upload Flutter example APK
+        id: upload-flutter-apk
+        uses: actions/upload-artifact@v7
+        with:
+          name: flutter-example-apk
+          path: packages/flutter/example/build/app/outputs/flutter-apk/app-release.apk
+          if-no-files-found: error
+          archive: false
+          retention-days: 5
+
+      - name: archive preview site
+        run: zip -r _site.zip _site
 
       - name: upload _site artifact
         uses: actions/upload-artifact@v7
@@ -137,11 +205,15 @@ jobs:
 
       - name: Save PR number
         if: always()
-        run: echo ${{ github.event.number }} > ./pr-id.txt
+        run: |
+          echo ${{ github.event.number }} > ./pr-id.txt
+          echo "${{ steps.upload-flutter-apk.outputs.artifact-url }}" > ./apk-url.txt
 
-      - name: Upload PR number
+      - name: Upload PR preview metadata
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: pr
-          path: ./pr-id.txt
+          path: |
+            ./pr-id.txt
+            ./apk-url.txt

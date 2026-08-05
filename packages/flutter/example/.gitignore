@@ -1,0 +1,12 @@
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+pubspec.lock
+
+# Android
+android/.gradle/
+android/local.properties
+**/GeneratedPluginRegistrant.java

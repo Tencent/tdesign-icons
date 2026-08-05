@@ -3,6 +3,11 @@
 
 name: PREVIEW_PUBLISH
 
+permissions:
+  actions: read
+  contents: read
+  pull-requests: write
+
 on:
   workflow_run:
     workflows: ["MAIN_PULL_REQUEST"]
@@ -14,3 +19,42 @@ jobs:
     uses: TDesignOteam/workflows/.github/workflows/reusable-pr-preview.yml@main
     secrets:
       TDESIGN_SURGE_TOKEN: ${{ secrets.TDESIGN_SURGE_TOKEN }}
+
+  comment-flutter-preview:
+    needs: call-preview
+    if: >
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download PR preview metadata
+        uses: dawidd6/action-download-artifact@b6e2e70617bc3265edd6dab6c906732b2f1ae151 # v21
+        with:
+          workflow: ${{ github.event.workflow_run.workflow_id }}
+          run_id: ${{ github.event.workflow_run.id }}
+          name: pr
+
+      - name: Read preview metadata
+        id: preview
+        run: |
+          echo "pr=$(<pr-id.txt)" >> "$GITHUB_OUTPUT"
+          echo "apk_url=$(<apk-url.txt)" >> "$GITHUB_OUTPUT"
+          repository=${{ github.repository }}
+          project_name=${repository#*/}
+          echo "root_url=https://preview-pr-$(<pr-id.txt)-$project_name.surge.sh" >> "$GITHUB_OUTPUT"
+
+      - name: Add Flutter preview links to PR comment
+        uses: TDesignOteam/workflows/actions/maintain-one-comment@83293c1063bcb1af6e91e2e9c7d6a9dd3b69089f # main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            <a href="${{ steps.preview.outputs.root_url }}"><img height="96" alt="预览构建完成" src="https://user-images.githubusercontent.com/15634204/150816437-9f5bb788-cd67-4cbc-9897-b82d74e9aa65.png" /></a>
+
+            - [图标站点预览](${{ steps.preview.outputs.root_url }})
+            - [Flutter Web 预览](${{ steps.preview.outputs.root_url }}/flutter/)
+            - [下载 Android APK](${{ steps.preview.outputs.apk_url }})
+            - [查看构建记录](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }})
+
+            <!-- AUTO_PREVIEW_HOOK -->
+          number: ${{ steps.preview.outputs.pr }}
+          body-include: <!-- AUTO_PREVIEW_HOOK -->

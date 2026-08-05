@@ -150,7 +150,6 @@ function makeMaskShape(node: IconElement, paintType: PaintType): IconElement {
 function makeMask(
   id: string,
   upperNodes: IconElement[],
-  paintType: PaintType,
   viewBox: ViewBox,
 ): IconElement {
   return {
@@ -176,15 +175,16 @@ function makeMask(
           fill: '#fff',
         },
       },
-      ...upperNodes.map((node) => makeMaskShape(node, paintType)),
+      ...upperNodes.map((node) => makeMaskShape(node, getPaintTypes(node)[0])),
     ],
   };
 }
 
 /**
  * Makes sibling paint layers disjoint without parsing path geometry. For each
- * lower layer, a luminance mask removes the area painted by later siblings of
- * the same type. This preserves painter order, rgba props and dynamic strokes.
+ * lower layer, a luminance mask removes the area painted by later single-paint
+ * siblings, including fill/stroke cross-overlaps. This preserves painter order,
+ * rgba props and dynamic strokes.
  */
 export function optimizeOpacityOverlaps(root: IconElement, options: OptimizeOptions) {
   const masks: IconElement[] = [];
@@ -213,25 +213,20 @@ export function optimizeOpacityOverlaps(root: IconElement, options: OptimizeOpti
         return;
       }
 
-      paintTypes.forEach((paintType) => {
-        const upperNodes = node.children
-          ?.slice(childIndex + 1)
-          .filter((upperNode) => {
-            const upperPaintTypes = getPaintTypes(upperNode);
-            return upperPaintTypes.length === 1 && upperPaintTypes[0] === paintType;
-          }) || [];
+      const upperNodes = node.children
+        ?.slice(childIndex + 1)
+        .filter((upperNode) => getPaintTypes(upperNode).length === 1) || [];
 
-        if (!upperNodes.length) {
-          return;
-        }
+      if (!upperNodes.length) {
+        return;
+      }
 
-        const maskId = `props.overlapMaskId${maskIndex}`;
-        const maskUrl = `props.overlapMaskUrl${maskIndex}`;
-        maskIndex += 1;
-        masks.push(makeMask(maskId, upperNodes, paintType, viewBox));
-        // eslint-disable-next-line no-param-reassign
-        child.attrs.mask = maskUrl;
-      });
+      const maskId = `props.overlapMaskId${maskIndex}`;
+      const maskUrl = `props.overlapMaskUrl${maskIndex}`;
+      maskIndex += 1;
+      masks.push(makeMask(maskId, upperNodes, viewBox));
+      // eslint-disable-next-line no-param-reassign
+      child.attrs.mask = maskUrl;
     });
   };
 

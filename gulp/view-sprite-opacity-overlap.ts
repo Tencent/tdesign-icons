@@ -80,7 +80,7 @@ export function applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName) 
       const paintType = paintTypes[0];
       const upperNodes = children.slice(childIndex + 1).filter((upperNode) => {
         const upperPaintTypes = getPaintTypes(upperNode);
-        return upperPaintTypes.length === 1 && upperPaintTypes[0] === paintType;
+        return upperPaintTypes.length === 1;
       });
       if (!upperNodes.length) return;
 
@@ -104,7 +104,9 @@ export function applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName) 
       background.setAttribute('height', height);
       background.setAttribute('fill', '#fff');
       mask.appendChild(background);
-      upperNodes.forEach((upperNode) => mask.appendChild(makeMaskShape(upperNode, paintType)));
+      upperNodes.forEach((upperNode) => {
+        mask.appendChild(makeMaskShape(upperNode, getPaintTypes(upperNode)[0]));
+      });
       masks.push(mask);
       child.setAttribute('mask', `url(#${maskId})`);
     });

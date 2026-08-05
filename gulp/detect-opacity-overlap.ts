@@ -46,6 +46,11 @@ const MIN_OVERLAP_PIXELS = 12;
 
 type SvgElement = any;
 
+interface OverlapLayer {
+  paintType: PaintType;
+  paintedElements: Set<SvgElement>;
+}
+
 const detectionCache = new Map<string, PaintType[]>();
 
 function getElementChildren(node: SvgElement): SvgElement[] {
@@ -146,32 +151,7 @@ function dropDanglingReferences(elements: SvgElement[]) {
   });
 }
 
-/**
- * 收集会被 mask 处理的图层：同一父节点下出现两个以上「只有单一 paint 类型」的
- * 兄弟节点时，它们才可能因为半透明颜色叠加而变深。
- */
-function collectOverlapLayers(root: SvgElement, paintType: PaintType): SvgElement[] {
-  const layers: SvgElement[] = [];
-
-  const visit = (parent: SvgElement) => {
-    const children = getElementChildren(parent).filter((child) => !isDefinition(child));
-    children.forEach(visit);
-
-    const sameTypeChildren = children.filter((child) => {
-      const paintTypes = getPaintTypes(child);
-      return paintTypes.length === 1 && paintTypes[0] === paintType;
-    });
-
-    if (sameTypeChildren.length > 1) {
-      layers.push(...sameTypeChildren);
-    }
-  };
-
-  visit(root);
-  return layers;
-}
-
-function collectPaintedElements(layers: SvgElement[], paintType: PaintType) {
+function collectPaintedElements(layer: SvgElement, paintType: PaintType) {
   const painted = new Set<SvgElement>();
 
   const visit = (element: SvgElement) => {
@@ -181,8 +161,39 @@ function collectPaintedElements(layers: SvgElement[], paintType: PaintType) {
     getElementChildren(element).forEach(visit);
   };
 
-  layers.forEach(visit);
+  visit(layer);
   return painted;
+}
+
+/**
+ * 收集同一父节点下按绘制顺序排列的单一 paint 图层。fill 和 stroke 也可能互相
+ * 重叠（例如 support），因此不能再按 paint 类型拆开检测。
+ */
+function collectOverlapLayerGroups(root: SvgElement): OverlapLayer[][] {
+  const groups: OverlapLayer[][] = [];
+
+  const visit = (parent: SvgElement) => {
+    const children = getElementChildren(parent).filter((child) => !isDefinition(child));
+    children.forEach(visit);
+
+    const layers = children.reduce<OverlapLayer[]>((result, child) => {
+      const paintTypes = getPaintTypes(child);
+      if (paintTypes.length === 1) {
+        result.push({
+          paintType: paintTypes[0],
+          paintedElements: collectPaintedElements(child, paintTypes[0]),
+        });
+      }
+      return result;
+    }, []);
+
+    if (layers.length > 1) {
+      groups.push(layers);
+    }
+  };
+
+  visit(root);
+  return groups;
 }
 
 function applyTestPaint(elements: SvgElement[], painted: Set<SvgElement>, paintType: PaintType) {
@@ -203,16 +214,24 @@ function applyTestPaint(elements: SvgElement[], painted: Set<SvgElement>, paintT
   });
 }
 
-function hasAlphaOverlap(svgString: string) {
+function renderAlpha(svgString: string) {
   const { pixels } = new Resvg(svgString, {
     fitTo: { mode: 'width', value: RENDER_WIDTH },
     // 图标不含文本，跳过系统字体扫描，否则每次栅格化都要百毫秒级开销
     font: { loadSystemFonts: false },
   }).render();
 
+  const alpha = new Uint8Array(pixels.length / 4);
+  for (let sourceIndex = 3, targetIndex = 0; sourceIndex < pixels.length; sourceIndex += 4, targetIndex += 1) {
+    alpha[targetIndex] = pixels[sourceIndex];
+  }
+  return alpha;
+}
+
+function hasAlphaOverlap(lowerAlpha: Uint8Array, upperAlpha: Uint8Array) {
   let overlapPixels = 0;
-  for (let index = 3; index < pixels.length; index += 4) {
-    if (pixels[index] - SINGLE_LAYER_ALPHA >= MIN_ALPHA_DELTA) {
+  for (let index = 0; index < lowerAlpha.length; index += 1) {
+    if (lowerAlpha[index] + upperAlpha[index] - SINGLE_LAYER_ALPHA >= MIN_ALPHA_DELTA) {
       overlapPixels += 1;
       if (overlapPixels >= MIN_OVERLAP_PIXELS) {
         return true;
@@ -249,23 +268,35 @@ function detectPaintTypes(svgString: string): PaintType[] {
     OPACITY_ATTRS.forEach((attribute) => element.removeAttribute(attribute));
   });
 
-  const paintedByType = PAINT_TYPES.reduce((painted, paintType) => {
-    const layers = collectOverlapLayers(root, paintType);
-    return {
-      ...painted,
-      [paintType]: layers.length ? collectPaintedElements(layers, paintType) : new Set<SvgElement>(),
-    };
-  }, {} as Record<PaintType, Set<SvgElement>>);
-
+  const layerGroups = collectOverlapLayerGroups(root);
   const serializer = new XMLSerializer();
-  return PAINT_TYPES.filter((paintType) => {
-    if (!paintedByType[paintType].size) {
-      return false;
-    }
+  const alphaByLayer = new Map<OverlapLayer, Uint8Array>();
+  const getLayerAlpha = (layer: OverlapLayer) => {
+    const cached = alphaByLayer.get(layer);
+    if (cached) return cached;
 
-    applyTestPaint(paintableElements, paintedByType[paintType], paintType);
-    return hasAlphaOverlap(serializer.serializeToString(xmlDoc));
+    applyTestPaint(paintableElements, layer.paintedElements, layer.paintType);
+    const alpha = renderAlpha(serializer.serializeToString(xmlDoc));
+    alphaByLayer.set(layer, alpha);
+    return alpha;
+  };
+  const overlappedPaintTypes = new Set<PaintType>();
+
+  layerGroups.forEach((layers) => {
+    layers.forEach((lowerLayer, lowerIndex) => {
+      if (overlappedPaintTypes.has(lowerLayer.paintType)) return;
+
+      const lowerAlpha = getLayerAlpha(lowerLayer);
+      const overlapsUpperLayer = layers
+        .slice(lowerIndex + 1)
+        .some((upperLayer) => hasAlphaOverlap(lowerAlpha, getLayerAlpha(upperLayer)));
+      if (overlapsUpperLayer) {
+        overlappedPaintTypes.add(lowerLayer.paintType);
+      }
+    });
   });
+
+  return PAINT_TYPES.filter((paintType) => overlappedPaintTypes.has(paintType));
 }
 
 /**

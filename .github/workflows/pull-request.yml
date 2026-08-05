@@ -121,6 +121,10 @@ jobs:
         working-directory: ./packages/flutter
         run: flutter analyze
 
+      - name: dry-run Flutter publish
+        working-directory: ./packages/flutter
+        run: flutter pub publish --dry-run
+
       - name: install Flutter example dependencies
         working-directory: ./packages/flutter/example
         run: flutter pub get

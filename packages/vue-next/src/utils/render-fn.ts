@@ -1,4 +1,4 @@
-import { getCurrentInstance, h } from 'vue';
+import { h, useId } from 'vue';
 import { IconProps } from './types';
 
 const camel2Kebab = (camelString:string) => {
@@ -55,6 +55,7 @@ const renderNode = (node: any, props: Record<string, any>) => {
 };
 
 export default (node: any, props: Record<string, any>) => {
-  const overlapMaskPrefix = `t-icon-overlap-${getCurrentInstance()?.uid ?? 'unknown'}`;
+  const overlapMaskPrefix = `t-icon-overlap-${useId()}`;
+
   return renderNode(node, { ...props, overlapMaskPrefix });
 };

@@ -231,7 +231,6 @@
         <div
           v-for="(icons, index) in allIcons"
           :key="index"
-          @mousemove="(e) => handleHoverIcon(e)"
         >
           <p
             class="category-title"
@@ -250,6 +249,7 @@
             :key="index"
             class="t-icons-view__wrapper"
             :id="icon.name"
+            @mouseenter="handleHoverIcon"
           >
             <svg
               width="1em"
@@ -337,6 +337,7 @@ import {
   watch,
   nextTick,
   defineProps,
+  onBeforeUnmount,
 } from 'vue';
 import forEach from 'lodash/forEach';
 import debounce from 'lodash/debounce';
@@ -518,16 +519,14 @@ const handleReset = () => {
 };
 
 const handleHoverIcon = (e) => {
-  let triggerNode = e.target;
-  while (
-    triggerNode?.tagName?.toLowerCase?.() !== 'li'
-    && triggerNode?.parentNode
-  ) {
-    triggerNode = triggerNode?.parentNode;
-  }
-  if (!triggerNode) return;
+  const triggerNode = e.currentTarget;
+  if (!triggerNode?.classList?.contains('t-icons-view__wrapper')) return;
 
-  currentIconName.value = triggerNode.getAttribute?.('id');
+  const iconName = triggerNode.getAttribute('id');
+  if (popperInstance && currentIconName.value === iconName) return;
+
+  popperInstance?.destroy();
+  currentIconName.value = iconName;
 
   const tooltip = getRoot()?.querySelector('#tooltip');
   tooltip.style.display = 'block';
@@ -745,6 +744,18 @@ const hidePopover = () => {
   }
 };
 
+const handleDocumentClick = (event) => {
+  const eventPath = event.composedPath();
+  const tooltipEle = getRoot()?.querySelector('#tooltip');
+  const clickedIcon = eventPath.some(
+    (node) => node?.classList?.contains('t-icons-view__wrapper'),
+  );
+
+  if (!eventPath.includes(tooltipEle) && !clickedIcon) {
+    hidePopover();
+  }
+};
+
 const handleCreateIssue = () => {
   window.open('https://github.com/Tencent/tdesign-icons/issues', '_blank');
 };
@@ -781,15 +792,12 @@ onMounted(() => {
     appendStyleSheet();
   });
 
-  document.addEventListener('click', (e) => {
-    const contentNode = getRoot()?.querySelector('.t-icons-view__content');
-    if (
-      !contentNode.contains(e.target)
-      && !e.composedPath().includes(contentNode)
-    ) {
-      hidePopover();
-    }
-  });
+  document.addEventListener('click', handleDocumentClick);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleDocumentClick);
+  hidePopover();
 });
 </script>
 <style>

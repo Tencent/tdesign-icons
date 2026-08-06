@@ -1,4 +1,4 @@
-import { detectOpacityOverlapPaintTypes } from './detect-opacity-overlap';
+import { detectOpacityOverlaps } from './detect-opacity-overlap';
 
 const TEXT_NODE = 3;
 const SVG_NAMESPACE = 'http://www.w3.org/2000/svg';
@@ -58,8 +58,9 @@ function makeMaskShape(node, paintType) {
 }
 
 export function applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName) {
-  const allowedPaintTypes = detectOpacityOverlapPaintTypes(iconName);
-  if (!allowedPaintTypes.length) return;
+  const overlaps = detectOpacityOverlaps(iconName);
+  if (!overlaps.length) return;
+  const overlapsByLowerPath = new Map(overlaps.map((overlap) => [overlap.lowerPathId, overlap]));
 
   const viewBox = (symbolEle.getAttribute('viewBox') || '0 0 24 24').trim().split(/[\s,]+/);
   const [x = '0', y = '0', width = '24', height = '24'] = viewBox;
@@ -68,6 +69,12 @@ export function applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName) 
     .find((child) => child.nodeType !== TEXT_NODE && child.getAttribute?.('id')?.endsWith(iconName));
   const namespacedIconId = iconRoot?.getAttribute('id') || iconName;
   const idNamespace = namespacedIconId.slice(0, -iconName.length);
+  const getPathId = (node) => {
+    const rawPathId = node.getAttribute('id') || '';
+    return idNamespace && rawPathId.startsWith(idNamespace)
+      ? rawPathId.slice(idNamespace.length)
+      : rawPathId;
+  };
 
   const visit = (parent) => {
     const children = Array.from(parent.childNodes)
@@ -75,19 +82,21 @@ export function applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName) 
 
     children.forEach(visit);
     children.forEach((child, childIndex) => {
-      const rawPathId = child.getAttribute('id') || '';
-      const pathId = idNamespace && rawPathId.startsWith(idNamespace)
-        ? rawPathId.slice(idNamespace.length)
-        : rawPathId;
-      if (child.hasAttribute('mask') || !pathId) return;
+      const pathId = getPathId(child);
+      const detectedOverlap = overlapsByLowerPath.get(pathId);
+      if (child.hasAttribute('mask') || !detectedOverlap) return;
 
       const paintTypes = getPaintTypes(child);
-      if (paintTypes.length !== 1 || !allowedPaintTypes.includes(paintTypes[0])) return;
+      if (paintTypes.length !== 1) return;
 
-      const upperNodes = children.slice(childIndex + 1).filter((upperNode) => {
+      let upperNodes = children.slice(childIndex + 1).filter((upperNode) => {
         const upperPaintTypes = getPaintTypes(upperNode);
         return upperPaintTypes.length === 1;
       });
+      if (!detectedOverlap.hasUnidentifiedUpper) {
+        const upperPathIds = new Set(detectedOverlap.upperPathIds);
+        upperNodes = upperNodes.filter((upperNode) => upperPathIds.has(getPathId(upperNode)));
+      }
       if (!upperNodes.length) return;
 
       const maskId = `t-icon-${iconName}-overlap-${pathId}`;

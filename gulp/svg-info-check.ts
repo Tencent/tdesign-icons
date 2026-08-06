@@ -3,7 +3,7 @@ import camelCase from 'camelcase';
 import { specifiedIcons } from './util/const';
 import { createTransformStream } from './transform';
 import { optimizeOpacityOverlaps } from './opacity-overlap';
-import { detectOpacityOverlapPaintTypes } from './detect-opacity-overlap';
+import { detectOpacityOverlaps } from './detect-opacity-overlap';
 
 export interface Attrs {
   style?: { [key: string]: any } | string;
@@ -163,9 +163,9 @@ export function svgToElement(
     if (shouldOptimizeOpacityOverlap) {
       const iconName = file.basename.replace(/\.[^.]+$/, '');
       optimizeOpacityOverlaps(svgElement, {
-        maskPaintTypes: options.preventOpacityOverlap === true
+        overlaps: options.preventOpacityOverlap === true
           ? undefined
-          : detectOpacityOverlapPaintTypes(iconName),
+          : detectOpacityOverlaps(iconName),
         viewBox: svgElement.attrs.viewBox as string | undefined,
       });
     }

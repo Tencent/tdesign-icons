@@ -41,7 +41,7 @@
   "devDependencies": {
     "@tsdown/css": "catalog:tsdown",
     "tsdown": "catalog:tsdown",
-    "typescript": "catalog:tsdown",
+    "typescript": "catalog:",
     "vue": "catalog:vue26"
   },
   "dependencies": {

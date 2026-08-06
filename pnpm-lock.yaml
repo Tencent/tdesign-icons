@@ -150,14 +150,11 @@ catalogs:
       version: 1.17.3
   tsdown:
     '@tsdown/css':
-      specifier: 0.22.14
+      specifier: ^0.22.14
       version: 0.22.14
     tsdown:
-      specifier: 0.22.14
+      specifier: ^0.22.14
       version: 0.22.14
-    typescript:
-      specifier: 5.6.3
-      version: 5.6.3
   types:
     '@types/fs-extra':
       specifier: ^9.0.9
@@ -371,10 +368,10 @@ importers:
         version: 19.0.0(react@19.0.0)
       tsdown:
         specifier: catalog:tsdown
-        version: 0.22.14(@tsdown/css@0.22.14)(typescript@5.6.3)
+        version: 0.22.14(@tsdown/css@0.22.14)(typescript@5.8.2)
       typescript:
-        specifier: catalog:tsdown
-        version: 5.6.3
+        specifier: 'catalog:'
+        version: 5.8.2
 
   packages/svg: {}
 
@@ -420,10 +417,10 @@ importers:
         version: 0.22.14(postcss@8.5.6)(tsdown@0.22.14)
       tsdown:
         specifier: catalog:tsdown
-        version: 0.22.14(@tsdown/css@0.22.14)(typescript@5.6.3)
+        version: 0.22.14(@tsdown/css@0.22.14)(typescript@5.8.2)
       typescript:
-        specifier: catalog:tsdown
-        version: 5.6.3
+        specifier: 'catalog:'
+        version: 5.8.2
       vue:
         specifier: catalog:vue26
         version: 2.6.12
@@ -435,13 +432,13 @@ importers:
         version: 0.22.14(postcss@8.5.6)(tsdown@0.22.14)
       tsdown:
         specifier: catalog:tsdown
-        version: 0.22.14(@tsdown/css@0.22.14)(typescript@5.6.3)
+        version: 0.22.14(@tsdown/css@0.22.14)(typescript@5.8.2)
       typescript:
-        specifier: catalog:tsdown
-        version: 5.6.3
+        specifier: 'catalog:'
+        version: 5.8.2
       vue:
         specifier: '3'
-        version: 3.5.21(typescript@5.6.3)
+        version: 3.5.21(typescript@5.8.2)
 
   packages/web-components:
     dependencies:
@@ -460,10 +457,10 @@ importers:
         version: 0.22.14(postcss@8.5.6)(tsdown@0.22.14)
       tsdown:
         specifier: catalog:tsdown
-        version: 0.22.14(@tsdown/css@0.22.14)(typescript@5.6.3)
+        version: 0.22.14(@tsdown/css@0.22.14)(typescript@5.8.2)
       typescript:
-        specifier: catalog:tsdown
-        version: 5.6.3
+        specifier: 'catalog:'
+        version: 5.8.2
 
 packages:
 
@@ -5958,11 +5955,6 @@ packages:
   typedarray@0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
 
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-
   typescript@5.8.2:
     resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
     engines: {node: '>=14.17'}
@@ -7429,7 +7421,7 @@ snapshots:
       lightningcss: 1.33.0
       postcss-load-config: 6.0.1(postcss@8.5.6)
       rolldown: 1.2.3
-      tsdown: 0.22.14(@tsdown/css@0.22.14)(typescript@5.6.3)
+      tsdown: 0.22.14(@tsdown/css@0.22.14)(typescript@5.8.2)
     optionalDependencies:
       postcss: 8.5.6
     transitivePeerDependencies:
@@ -7730,12 +7722,6 @@ snapshots:
       '@vue/runtime-core': 3.5.21
       '@vue/shared': 3.5.21
       csstype: 3.1.3
-
-  '@vue/server-renderer@3.5.21(vue@3.5.21(typescript@5.6.3))':
-    dependencies:
-      '@vue/compiler-ssr': 3.5.21
-      '@vue/shared': 3.5.21
-      vue: 3.5.21(typescript@5.6.3)
 
   '@vue/server-renderer@3.5.21(vue@3.5.21(typescript@5.8.2))':
     dependencies:
@@ -11442,7 +11428,7 @@ snapshots:
     dependencies:
       glob: 10.4.2
 
-  rolldown-plugin-dts@0.27.14(rolldown@1.2.3)(typescript@5.6.3):
+  rolldown-plugin-dts@0.27.14(rolldown@1.2.3)(typescript@5.8.2):
     dependencies:
       dts-resolver: 3.0.0
       get-tsconfig: 5.0.0-beta.5
@@ -11452,7 +11438,7 @@ snapshots:
       yuku-codegen: 0.8.3
       yuku-parser: 0.8.3
     optionalDependencies:
-      typescript: 5.6.3
+      typescript: 5.8.2
     transitivePeerDependencies:
       - oxc-resolver
 
@@ -12111,7 +12097,7 @@ snapshots:
       minimist: 1.2.8
       strip-bom: 3.0.0
 
-  tsdown@0.22.14(@tsdown/css@0.22.14)(typescript@5.6.3):
+  tsdown@0.22.14(@tsdown/css@0.22.14)(typescript@5.8.2):
     dependencies:
       ansis: 4.3.1
       cac: 7.0.0
@@ -12122,7 +12108,7 @@ snapshots:
       obug: 2.1.4
       picomatch: 4.0.5
       rolldown: 1.2.3
-      rolldown-plugin-dts: 0.27.14(rolldown@1.2.3)(typescript@5.6.3)
+      rolldown-plugin-dts: 0.27.14(rolldown@1.2.3)(typescript@5.8.2)
       tinyexec: 1.3.0
       tinyglobby: 0.2.17
       tree-kill: 1.2.2
@@ -12130,7 +12116,7 @@ snapshots:
       verkit: 0.3.2
     optionalDependencies:
       '@tsdown/css': 0.22.14(postcss@8.5.6)(tsdown@0.22.14)
-      typescript: 5.6.3
+      typescript: 5.8.2
     transitivePeerDependencies:
       - '@typescript/native-preview'
       - '@volar/typescript'
@@ -12226,8 +12212,6 @@ snapshots:
       is-typed-array: 1.1.12
 
   typedarray@0.0.6: {}
-
-  typescript@5.6.3: {}
 
   typescript@5.8.2: {}
 
@@ -12420,16 +12404,6 @@ snapshots:
       - supports-color
 
   vue@2.6.12: {}
-
-  vue@3.5.21(typescript@5.6.3):
-    dependencies:
-      '@vue/compiler-dom': 3.5.21
-      '@vue/compiler-sfc': 3.5.21
-      '@vue/runtime-dom': 3.5.21
-      '@vue/server-renderer': 3.5.21(vue@3.5.21(typescript@5.6.3))
-      '@vue/shared': 3.5.21
-    optionalDependencies:
-      typescript: 5.6.3
 
   vue@3.5.21(typescript@5.8.2):
     dependencies:

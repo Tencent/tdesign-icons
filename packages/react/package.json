@@ -45,7 +45,7 @@
     "@types/react": "catalog:types",
     "@types/react-dom": "catalog:types",
     "tsdown": "catalog:tsdown",
-    "typescript": "catalog:tsdown",
+    "typescript": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
   },

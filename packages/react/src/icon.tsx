@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import * as React from 'react';
 import {
   createElement,
   ReactElement,
@@ -7,6 +8,7 @@ import {
   forwardRef,
   Ref,
   useEffect,
+  useRef,
 } from 'react';
 import useSizeProps from './util/use-size-props';
 import { loadStylesheet } from './util/check-url-and-load';
@@ -32,12 +34,37 @@ export interface IconFulfilledProps extends IconProps {
   id: string;
 }
 
+let fallbackIdSeed = 0;
+
+function useIconInstanceId(iconId: string) {
+  const fallbackId = useRef<string | null>(null);
+  if (!fallbackId.current) {
+    fallbackId.current = `${fallbackIdSeed}`;
+    fallbackIdSeed += 1;
+  }
+
+  const useId = (React as any).useId as undefined | (() => string);
+  const reactId = useId ? useId() : fallbackId.current;
+  return `t-icon-${iconId}-${reactId}`;
+}
+
+function resolveChildProp(value: string, childProps: Record<string, any>) {
+  const propName = value.split('.')[1];
+  const overlapMask = /^overlapMask(Id|Url)(\d+)$/.exec(propName);
+  if (overlapMask) {
+    const maskId = `${childProps.overlapMaskPrefix}-${overlapMask[2]}`;
+    return overlapMask[1] === 'Url' ? `url(#${maskId})` : maskId;
+  }
+
+  return childProps[propName];
+}
+
 /**
  * use react createElement to render an IconElement with other props
  */
 function render(node: IconElement, id: string, rootProps: IconProps & {
   ref: Ref<SVGElement>
-}): ReactElement {
+}, overlapMaskPrefix: string): ReactElement {
   const {
     strokeColor = 'currentColor', strokeWidth = 2, fillColor = 'transparent', ...resetRootProps
   } = rootProps;
@@ -53,6 +80,7 @@ function render(node: IconElement, id: string, rootProps: IconProps & {
     fillColor1: Array.isArray(fillColor) ? fillColor[0] : fillColor,
     fillColor2: Array.isArray(fillColor) ? fillColor[1] ?? fillColor[0] : fillColor,
     filledColor,
+    overlapMaskPrefix,
   };
   return createElement(
     node.tag,
@@ -65,14 +93,13 @@ function render(node: IconElement, id: string, rootProps: IconProps & {
   );
 }
 
-function childRender(node: IconElement, childProps: IconProps, index: number): ReactElement {
+function childRender(node: IconElement, childProps: Record<string, any>, index: number): ReactElement {
   const processedAttrs: Record<string, any> = {};
   if (node.attrs) {
     // eslint-disable-next-line no-restricted-syntax
     for (const [key, value] of Object.entries(node.attrs)) {
       if (typeof value === 'string' && value.startsWith('props.')) {
-        const propName = value.split('.')[1] as keyof IconProps;
-        processedAttrs[key] = childProps[propName];
+        processedAttrs[key] = resolveChildProp(value, childProps);
       } else {
         processedAttrs[key] = value;
       }
@@ -95,6 +122,7 @@ export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGEleme
   } = props;
   const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
   const cls = classNames('t-icon', `t-icon-${id}`, className, sizeClassName);
+  const overlapMaskPrefix = useIconInstanceId(id);
 
   useEffect(() => {
     loadStylesheet();
@@ -106,5 +134,5 @@ export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGEleme
     // fill none 是为了避免存在旧版本图标的 fill:currentColor 造成的样式污染
     style: { fill: 'none', ...style, ...sizeStyle },
     ...restProps,
-  });
+  }, overlapMaskPrefix);
 });

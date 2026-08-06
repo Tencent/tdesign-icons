@@ -79,7 +79,7 @@ export default defineConfig([
     dts: false,
     treeshake: true,
     sourcemap: true,
-    clean: false,
+    clean: true,
     platform: 'neutral' as const,
     target: false,
     deps,

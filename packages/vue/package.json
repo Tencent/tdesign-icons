@@ -32,7 +32,6 @@
     "lib/style/**/*"
   ],
   "scripts": {
-    "prebuild": "rimraf esm/* lib/* dist/*",
     "build": "tsdown"
   },
   "peerDependencies": {

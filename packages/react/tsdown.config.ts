@@ -63,7 +63,6 @@ export default defineConfig([
     deps: {
       alwaysBundle: ['classnames'],
     },
-    clean: false,
     outputOptions: (options) => {
       options.entryFileNames = 'index.js';
       options.globals = { react: 'React', 'react-dom': 'ReactDOM' };

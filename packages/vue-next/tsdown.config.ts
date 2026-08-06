@@ -68,7 +68,6 @@ export default defineConfig([
     globalName: 'TDesignIconVueNext',
     dts: false,
     ...shared,
-    clean: false,
     outputOptions: (options) => {
       options.entryFileNames = 'index.js';
       options.globals = { vue: 'Vue' };

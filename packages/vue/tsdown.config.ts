@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsdown';
+import { defineConfig, type TsdownHooks, type UserConfig } from 'tsdown';
 import { writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -8,9 +8,9 @@ const entry = ['src/**/*.ts', 'src/**/*.tsx'];
  * CJS 产物中 style/css.ts 会被 rolldown 输出为 `require("./index.css")`，
  * 与 rollup 时代通过 `ignoreImport` 产物（空 css.js）不一致，这里在构建后清空该文件。
  */
-function fixCjsCss() {
+function fixCjsCss(): Partial<TsdownHooks> {
   return {
-    'build:done': ({ options }: { options: { outDir: string } }) => {
+    'build:done': ({ options }) => {
       const cssFile = join(options.outDir, 'style', 'css.js');
       if (existsSync(cssFile)) writeFileSync(cssFile, '');
     },
@@ -21,12 +21,12 @@ const shared = {
   sourcemap: true,
   clean: true,
   treeshake: false,
-  platform: 'neutral' as const,
+  platform: 'neutral',
   target: false,
   deps: {
     neverBundle: ['vue', 'classnames'],
   },
-};
+} satisfies UserConfig;
 
 export default defineConfig([
   // ESM 多入口，保留 src 目录结构
@@ -68,11 +68,11 @@ export default defineConfig([
     globalName: 'TDesignIconVue',
     dts: false,
     ...shared,
-    outputOptions: (options) => {
-      options.entryFileNames = 'index.js';
-      options.globals = { vue: 'Vue', classnames: 'classNames' };
-      return options;
-    },
+    outputOptions: (options) => ({
+      ...options,
+      entryFileNames: 'index.js',
+      globals: { vue: 'Vue', classnames: 'classNames' },
+    }),
     css: {
       fileName: 'index.css',
       splitting: false,
@@ -89,11 +89,11 @@ export default defineConfig([
     dts: false,
     ...shared,
     clean: false,
-    outputOptions: (options) => {
-      options.entryFileNames = 'index.min.js';
-      options.globals = { vue: 'Vue', classnames: 'classNames' };
-      return options;
-    },
+    outputOptions: (options) => ({
+      ...options,
+      entryFileNames: 'index.min.js',
+      globals: { vue: 'Vue', classnames: 'classNames' },
+    }),
     css: {
       fileName: 'index.min.css',
       splitting: false,

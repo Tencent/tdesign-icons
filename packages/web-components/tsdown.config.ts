@@ -1,4 +1,9 @@
-import { defineConfig } from 'tsdown';
+import {
+  defineConfig,
+  type DepsConfig,
+  type Rolldown,
+  type UserConfig,
+} from 'tsdown';
 
 const entry = ['src/**/*.ts', 'src/**/*.tsx'];
 
@@ -12,7 +17,7 @@ const deps = {
   dts: {
     neverBundle: ['omi', 'clsx', 'tailwind-merge'],
   },
-};
+} satisfies DepsConfig;
 
 /**
  * omi 的 JSX 使用 `h` 工厂函数，fragment 为 `h.f`
@@ -28,17 +33,17 @@ const inputOptions = {
       pragmaFrag: 'h.f',
     },
   },
-};
+} satisfies Rolldown.InputOptions;
 
 const shared = {
   sourcemap: true,
   clean: true,
   treeshake: false,
-  platform: 'neutral' as const,
+  platform: 'neutral',
   target: false,
   deps,
   inputOptions,
-};
+} satisfies UserConfig;
 
 export default defineConfig([
   // ESM 多入口，保留 src 目录结构
@@ -84,10 +89,10 @@ export default defineConfig([
     target: false,
     deps,
     inputOptions,
-    outputOptions: (options) => {
-      options.entryFileNames = 'index.js';
-      return options;
-    },
+    outputOptions: (options) => ({
+      ...options,
+      entryFileNames: 'index.js',
+    }),
   },
   // UMD 压缩
   {
@@ -104,9 +109,9 @@ export default defineConfig([
     target: false,
     deps,
     inputOptions,
-    outputOptions: (options) => {
-      options.entryFileNames = 'index.min.js';
-      return options;
-    },
+    outputOptions: (options) => ({
+      ...options,
+      entryFileNames: 'index.min.js',
+    }),
   },
 ]);

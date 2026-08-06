@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsdown';
+import { defineConfig, type UserConfig } from 'tsdown';
 
 const entry = ['src/**/*.ts', 'src/**/*.tsx'];
 
@@ -12,7 +12,7 @@ const shared = {
   sourcemap: true,
   clean: true,
   treeshake: false,
-  platform: 'neutral' as const,
+  platform: 'neutral',
   target: false,
   deps: {
     neverBundle: ['react', 'react-dom'],
@@ -29,7 +29,7 @@ const shared = {
       },
     },
   },
-};
+} satisfies UserConfig;
 
 export default defineConfig([
   // ESM 多入口，保留 src 目录结构
@@ -63,11 +63,11 @@ export default defineConfig([
     deps: {
       alwaysBundle: ['classnames'],
     },
-    outputOptions: (options) => {
-      options.entryFileNames = 'index.js';
-      options.globals = { react: 'React', 'react-dom': 'ReactDOM' };
-      return options;
-    },
+    outputOptions: (options) => ({
+      ...options,
+      entryFileNames: 'index.js',
+      globals: { react: 'React', 'react-dom': 'ReactDOM' },
+    }),
   },
   // UMD 压缩
   {
@@ -82,10 +82,10 @@ export default defineConfig([
       alwaysBundle: ['classnames'],
     },
     clean: false,
-    outputOptions: (options) => {
-      options.entryFileNames = 'index.min.js';
-      options.globals = { react: 'React', 'react-dom': 'ReactDOM' };
-      return options;
-    },
+    outputOptions: (options) => ({
+      ...options,
+      entryFileNames: 'index.min.js',
+      globals: { react: 'React', 'react-dom': 'ReactDOM' },
+    }),
   },
 ]);

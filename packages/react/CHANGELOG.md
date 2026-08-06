@@ -1,5 +1,11 @@
 # tdesign-icons-react
 
+## 🌈 0.6.9 `2026-08-06`
+
+### 🐞 Bug Fixes
+
+- 优化 mask id 为固定输出 @uyarn ([#284](https://github.com/Tencent/tdesign-icons/pull/284))
+
 ## 🌈 0.6.8 `2026-08-06`
 
 ### 🐞 Bug Fixes

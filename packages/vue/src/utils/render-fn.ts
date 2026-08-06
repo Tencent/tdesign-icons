@@ -51,7 +51,7 @@ const renderFn = (createElement: CreateElement, node: SVGJson, rootData: VNodeDa
     strokeColor1: Array.isArray(strokeColor) ? strokeColor[0] : strokeColor,
     strokeColor2: Array.isArray(strokeColor) ? strokeColor[1] ?? strokeColor[0] : strokeColor,
     fillColor1: Array.isArray(fillColor) ? fillColor[0] : fillColor,
-    fillColor2: Array.isArray(fillColor) ? fillColor[1] ?? strokeColor[0] : fillColor,
+    fillColor2: Array.isArray(fillColor) ? fillColor[1] ?? fillColor[0] : fillColor,
     filledColor,
     overlapMaskPrefix: rootData.props?.overlapMaskPrefix,
   };

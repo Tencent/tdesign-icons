@@ -19,7 +19,7 @@ const $ICON_NAME = Vue.extend<IconProps>({
       type: [String, Array] as PropType<IconProps['fillColor']>,
     },
     strokeColor: {
-      type: [String, Array] as PropType<IconProps['fillColor']>,
+      type: [String, Array] as PropType<IconProps['strokeColor']>,
     },
     strokeWidth: {
       type: Number,

@@ -48,10 +48,18 @@ type SvgElement = any;
 
 interface OverlapLayer {
   paintType: PaintType;
+  pathId: string;
   paintedElements: Set<SvgElement>;
 }
 
-const detectionCache = new Map<string, PaintType[]>();
+export interface OpacityOverlap {
+  lowerPathId: string;
+  paintType: PaintType;
+  upperPathIds: string[];
+  hasUnidentifiedUpper: boolean;
+}
+
+const detectionCache = new Map<string, OpacityOverlap[]>();
 
 function getElementChildren(node: SvgElement): SvgElement[] {
   return Array.from(node?.childNodes || []).filter((child: SvgElement) => child.nodeType === ELEMENT_NODE);
@@ -181,6 +189,7 @@ function collectOverlapLayerGroups(root: SvgElement): OverlapLayer[][] {
       if (paintTypes.length === 1) {
         result.push({
           paintType: paintTypes[0],
+          pathId: child.getAttribute('id') || '',
           paintedElements: collectPaintedElements(child, paintTypes[0]),
         });
       }
@@ -242,7 +251,7 @@ function hasAlphaOverlap(lowerAlpha: Uint8Array, upperAlpha: Uint8Array) {
   return false;
 }
 
-function detectPaintTypes(svgString: string): PaintType[] {
+function detectOverlaps(svgString: string): OpacityOverlap[] {
   const xmlDoc = new DOMParser().parseFromString(svgString, 'image/svg+xml');
   const root = xmlDoc.documentElement;
   if (!root.getAttribute('xmlns')) {
@@ -280,50 +289,72 @@ function detectPaintTypes(svgString: string): PaintType[] {
     alphaByLayer.set(layer, alpha);
     return alpha;
   };
-  const overlappedPaintTypes = new Set<PaintType>();
+  const overlapsByLowerPath = new Map<string, {
+    paintType: PaintType;
+    upperPathIds: Set<string>;
+    hasUnidentifiedUpper: boolean;
+  }>();
 
   layerGroups.forEach((layers) => {
     layers.forEach((lowerLayer, lowerIndex) => {
-      if (overlappedPaintTypes.has(lowerLayer.paintType)) return;
+      if (!lowerLayer.pathId) return;
 
       const lowerAlpha = getLayerAlpha(lowerLayer);
-      const overlapsUpperLayer = layers
-        .slice(lowerIndex + 1)
-        .some((upperLayer) => hasAlphaOverlap(lowerAlpha, getLayerAlpha(upperLayer)));
-      if (overlapsUpperLayer) {
-        overlappedPaintTypes.add(lowerLayer.paintType);
-      }
+      layers.slice(lowerIndex + 1).forEach((upperLayer) => {
+        if (!hasAlphaOverlap(lowerAlpha, getLayerAlpha(upperLayer))) return;
+
+        const overlap = overlapsByLowerPath.get(lowerLayer.pathId) || {
+          paintType: lowerLayer.paintType,
+          upperPathIds: new Set<string>(),
+          hasUnidentifiedUpper: false,
+        };
+        if (upperLayer.pathId) {
+          overlap.upperPathIds.add(upperLayer.pathId);
+        } else {
+          overlap.hasUnidentifiedUpper = true;
+        }
+        overlapsByLowerPath.set(lowerLayer.pathId, overlap);
+      });
     });
   });
 
-  return PAINT_TYPES.filter((paintType) => overlappedPaintTypes.has(paintType));
+  return Array.from(overlapsByLowerPath.entries())
+    .map(([lowerPathId, overlap]) => ({
+      lowerPathId,
+      paintType: overlap.paintType,
+      upperPathIds: Array.from(overlap.upperPathIds),
+      hasUnidentifiedUpper: overlap.hasUnidentifiedUpper,
+    }))
+    .sort((left, right) => left.lowerPathId.localeCompare(right.lowerPathId));
 }
 
 /**
- * 构建时自动判断图标的哪些 paint 类型存在同类型图层重叠，替代人工白名单。
- * 检测基于 `svg/` 下的原图，各产物流水线共享同一份结果。
+ * 构建时自动判断图标中实际重叠的上下层路径，增加 mask 处理。
  */
-export function detectOpacityOverlapPaintTypes(iconName: string): PaintType[] {
+export function detectOpacityOverlaps(iconName: string): OpacityOverlap[] {
   const cached = detectionCache.get(iconName);
   if (cached) {
     return cached;
   }
 
-  let paintTypes: PaintType[] = [];
+  let overlaps: OpacityOverlap[] = [];
   try {
-    paintTypes = detectPaintTypes(fs.readFileSync(path.join(SVG_DIR, `${iconName}.svg`), 'utf-8'));
+    overlaps = detectOverlaps(fs.readFileSync(path.join(SVG_DIR, `${iconName}.svg`), 'utf-8'));
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     throw new Error(`检测图标 ${iconName} 的半透明图层重叠失败: ${message}`);
   }
 
-  detectionCache.set(iconName, paintTypes);
-  return paintTypes;
+  detectionCache.set(iconName, overlaps);
+  return overlaps;
 }
 
 export function getOpacityOverlapDetections() {
   return Array.from(detectionCache.entries())
-    .filter(([, paintTypes]) => paintTypes.length)
-    .map(([iconName, paintTypes]) => ({ iconName, paintTypes }))
+    .filter(([, overlaps]) => overlaps.length)
+    .map(([iconName, overlaps]) => ({
+      iconName,
+      paintTypes: PAINT_TYPES.filter((paintType) => overlaps.some((overlap) => overlap.paintType === paintType)),
+    }))
     .sort((left, right) => left.iconName.localeCompare(right.iconName));
 }

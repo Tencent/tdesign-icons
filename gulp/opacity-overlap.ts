@@ -189,7 +189,6 @@ function makeMask(
 export function optimizeOpacityOverlaps(root: IconElement, options: OptimizeOptions) {
   const masks: IconElement[] = [];
   const viewBox = parseViewBox(options.viewBox);
-  let maskIndex = 0;
 
   const visit = (node: IconElement) => {
     if (!node.children?.length || ['defs', 'mask'].includes(node.tag)) {
@@ -201,7 +200,8 @@ export function optimizeOpacityOverlaps(root: IconElement, options: OptimizeOpti
     node.children = mergeAdjacentStrokePaths(node.children);
 
     node.children.forEach((child, childIndex) => {
-      if (child.attrs.mask) {
+      const pathId = child.attrs.id;
+      if (child.attrs.mask || typeof pathId !== 'string') {
         return;
       }
 
@@ -221,9 +221,8 @@ export function optimizeOpacityOverlaps(root: IconElement, options: OptimizeOpti
         return;
       }
 
-      const maskId = `props.overlapMaskId${maskIndex}`;
-      const maskUrl = `props.overlapMaskUrl${maskIndex}`;
-      maskIndex += 1;
+      const maskId = `props.overlapMaskId_${pathId}`;
+      const maskUrl = `props.overlapMaskUrl_${pathId}`;
       masks.push(makeMask(maskId, upperNodes, viewBox));
       // eslint-disable-next-line no-param-reassign
       child.attrs.mask = maskUrl;

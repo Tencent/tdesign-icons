@@ -1,4 +1,7 @@
-import { computed, PropType, defineComponent } from 'vue';
+import * as Vue from 'vue';
+import {
+  computed, getCurrentInstance, PropType, defineComponent,
+} from 'vue';
 import renderFn from '../utils/render-fn';
 import {
   IconProps, SVGJson,
@@ -29,6 +32,9 @@ export default defineComponent({
     }
   },
   setup(props, { attrs }) {
+    const useId = (Vue as any).useId as undefined | (() => string);
+    const rawInstanceId = useId ? useId() : `${getCurrentInstance()?.uid ?? 'unknown'}`;
+    const overlapMaskInstanceId = rawInstanceId.replace(/[^a-zA-Z0-9_]/g, '');
     const propsSize = computed(() => props.size);
 
     const strokeColor1 = computed(() => {
@@ -70,7 +76,9 @@ export default defineComponent({
       fillColor1: fillColor1.value,
       fillColor2: fillColor2.value,
       strokeWidth: props.strokeWidth || 2,
-      filledColor: filledColor.value
+      filledColor: filledColor.value,
+      iconId: '$KEY',
+      overlapMaskInstanceId
     }));
     return () => renderFn(element, finalProps.value);
   },

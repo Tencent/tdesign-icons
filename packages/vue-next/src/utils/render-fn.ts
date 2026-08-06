@@ -1,4 +1,4 @@
-import { getCurrentInstance, h } from 'vue';
+import { h } from 'vue';
 import { IconProps } from './types';
 
 const camel2Kebab = (camelString:string) => {
@@ -16,9 +16,9 @@ const camel2Kebab = (camelString:string) => {
 
 const resolveChildProp = (value: string, props: Record<string, any>) => {
   const propName = value.split('.')[1] as keyof IconProps;
-  const overlapMask = /^overlapMask(Id|Url)(\d+)$/.exec(propName);
+  const overlapMask = /^overlapMask(Id|Url)_(.+)$/.exec(propName);
   if (overlapMask) {
-    const maskId = `${props.overlapMaskPrefix}-${overlapMask[2]}`;
+    const maskId = `${props.overlapMaskPrefix}-overlap-${overlapMask[2]}`;
     return overlapMask[1] === 'Url' ? `url(#${maskId})` : maskId;
   }
 
@@ -55,6 +55,6 @@ const renderNode = (node: any, props: Record<string, any>) => {
 };
 
 export default (node: any, props: Record<string, any>) => {
-  const overlapMaskPrefix = `t-icon-overlap-${getCurrentInstance()?.uid ?? 'unknown'}`;
+  const overlapMaskPrefix = `t-icon-${props.iconId}-instance-${props.overlapMaskInstanceId}`;
   return renderNode(node, { ...props, overlapMaskPrefix });
 };

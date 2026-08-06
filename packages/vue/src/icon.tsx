@@ -46,7 +46,7 @@ export default Vue.extend({
   },
   render(createElement, context): VNode {
     const { icon, id, ...userProps } = context.props;
-    const overlapMaskPrefix = `t-icon-${id}-${overlapMaskSeed}`;
+    const overlapMaskPrefix = `t-icon-${id}-instance-${overlapMaskSeed}`;
     overlapMaskSeed += 1;
 
     const {

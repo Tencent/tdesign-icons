@@ -42,4 +42,5 @@ jobs:
         uses: TDesignOteam/tdesign-changelog-action@next
         with:
           token: ${{ secrets.TDESIGN_BOT_TOKEN }}
+          mode: monorepo
           packages: "tdesign-icons-vue-next,tdesign-icons-react,tdesign-icons-view,tdesign-icons-svg,tdesign-icons-vue,tdesign-icons-web-components"

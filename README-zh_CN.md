@@ -18,7 +18,7 @@ TDesign Icons 是统一生产、管理 TDesign 各框架的 Icons 组件资源�
 | [tdesign-icons-web-components](./packages/web-components) | Web Components | [![npm](https://img.shields.io/npm/v/tdesign-icons-web-components.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-web-components) | [![npm](https://img.shields.io/npm/dm/tdesign-icons-web-components.svg)](https://www.npmjs.com/package/tdesign-icons-web-components) |
 | [tdesign-icons-view](./packages/view) | Web Components | [![npm](https://img.shields.io/npm/v/tdesign-icons-view.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-view) | [![npm](http://img.shields.io/npm/dm/tdesign-icons-view.svg)](https://npmjs.org/package/tdesign-icons-view) |
 | [tdesign-icons-svg](./packages/svg) | SVG | [![npm](https://img.shields.io/npm/v/tdesign-icons-svg.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-svg) | [![npm](http://img.shields.io/npm/dm/tdesign-icons-svg.svg)](https://npmjs.org/package/tdesign-icons-svg) |
-| [tdesign_flutter_icons](./packages/flutter) | Flutter | [![pub](https://img.shields.io/pub/v/tdesign_flutter_icons.svg?style=flat)](https://pub.dev/packages/tdesign_flutter_icons) | [![pub](https://img.shields.io/pub/likes/tdesign_flutter_icons.svg)](https://pub.dev/packages/tdesign_flutter_icons) |
+| [tdesign_flutter_icons](./packages/flutter) | Flutter | [![pub](https://img.shields.io/pub/v/tdesign_flutter_icons.svg?style=flat)](https://pub.dev/packages/tdesign_flutter_icons) | [![pub](https://img.shields.io/pub/dm/tdesign_flutter_icons.svg)](https://pub.dev/packages/tdesign_flutter_icons) |
 
 # 开发指南
 

@@ -8,6 +8,7 @@ packages:
 catalog:
   "@changesets/cli": ^2.26.1
   "@popperjs/core": ^2.11.0
+  "@resvg/resvg-js": ^2.6.2
   "@typescript-eslint/eslint-plugin": ^4.20.0
   "@typescript-eslint/parser": ^4.20.0
   "@vitejs/plugin-vue": "^5.2.1"

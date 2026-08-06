@@ -7,6 +7,7 @@ import concat from 'gulp-concat';
 import svgSprite from 'gulp-svg-sprite';
 import { createTransformStream } from '../../../gulp/transform';
 import { specifiedIcons } from '../../../gulp/util/const';
+import { applyViewSpriteOpacityOverlapMasks } from '../../../gulp/view-sprite-opacity-overlap';
 
 const iconGlob = path.resolve(__dirname, '../../../svg/*.svg');
 const iconDir = path.resolve(__dirname, '../../../svg');
@@ -139,8 +140,9 @@ export function processSvgSpriteInNode(svgString) {
     if (symbolEle.nodeType !== TEXT_NODE) {
       // @ts-ignore
       if (symbolEle.tagName?.toLowerCase?.() === 'symbol') {
+        const iconName = symbolEle.getAttribute('id').replace('t-icon-', '');
         // @ts-ignore
-        if (specifiedIcons.includes(symbolEle.getAttribute('id').replace('t-icon-', ''))) {
+        if (specifiedIcons.includes(iconName)) {
           isSpecified = true;
         }
 
@@ -163,6 +165,8 @@ export function processSvgSpriteInNode(svgString) {
             }
           }
         }
+
+        applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName);
       }
     }
   }

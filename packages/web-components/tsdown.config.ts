@@ -15,12 +15,14 @@ const banner = `/**
  */`;
 
 /**
- * 与 rollup 时代保持一致：omi / clsx / tailwind-merge 均打进产物
- * （对外不保留运行时外部依赖），仅 omi 作为 peerDependency 保留 d.ts 外部引用。
+ * omi 是 peerDependency，运行时由宿主提供（与官方包一致，从 node_modules/omi 解析），
+ * 不内嵌进产物，避免发布后 esm/node_modules/ 依赖 files 通配覆盖的隐患。
+ * clsx / tailwind-merge / reactive-signal / weakmap-polyfill 无 peer 约定，仍打进产物。
  */
 const deps = {
-  alwaysBundle: ['omi', 'clsx', 'tailwind-merge', 'reactive-signal', 'weakmap-polyfill'],
-  // omi 的 d.ts 为 CommonJS 语法，无法被 rolldown-plugin-dts 内联，d.ts 保留外部引用
+  alwaysBundle: ['clsx', 'tailwind-merge', 'reactive-signal', 'weakmap-polyfill'],
+  // omi 作为 external 不被打包；其 d.ts 为 CommonJS 语法，无法被 rolldown-plugin-dts 内联，d.ts 保留外部引用
+  external: ['omi'],
   dts: {
     neverBundle: ['omi', 'clsx', 'tailwind-merge'],
   },

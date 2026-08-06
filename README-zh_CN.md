@@ -6,7 +6,7 @@
 
 简体中文 | [English](./README.md)
 
-TDesign Icons 是统一生产、管理 TDesign 各框架的 Icons 组件资源的仓库。
+TDesign Icons 是统一生产、管理 TDesign 各框架的 Icons 组件资源的仓库。提供超过 2000 个可变粗细、多色填充的图标的原始 SVG 和各类框架、字体、雪碧图的资源。
 
 # 各框架图标资源
 

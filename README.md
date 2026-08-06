@@ -6,7 +6,7 @@
 
 English | [简体中文](./README-zh_CN.md)
 
-TDesign Icons is a mono-repo for TDesign Icons packages and resources management.
+TDesign Icons is a mono-repo for TDesign Icons packages and resources management. TDesign Icons provides over 2,000 icons with variable stroke widths and multi-color fills, available as raw SVGs and resources for various frameworks, fonts, and sprite sheets.
 
 # Resources and Packages
 

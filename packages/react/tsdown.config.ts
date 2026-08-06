@@ -1,6 +1,13 @@
 import { defineConfig, type UserConfig } from 'tsdown';
+import pkg from './package.json' with { type: 'json' };
 
 const entry = ['src/**/*.ts', 'src/**/*.tsx'];
+
+const banner = `/**
+ * ${pkg.name} v${pkg.version}
+ * (c) ${new Date().getFullYear()} ${pkg.author}
+ * @license ${pkg.license}
+ */`;
 
 /**
  * 与 rollup 时代保持一致：
@@ -9,6 +16,7 @@ const entry = ['src/**/*.ts', 'src/**/*.tsx'];
  *   UMD 产物中单独 alwaysBundle 内联，避免依赖全局 classNames。
  */
 const shared = {
+  banner,
   sourcemap: true,
   clean: true,
   treeshake: false,

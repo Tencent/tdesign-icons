@@ -1,10 +1,18 @@
 import { defineConfig, type TsdownHooks, type UserConfig } from 'tsdown';
 import { writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import pkg from './package.json' with { type: 'json' };
 
 const entry = ['src/**/*.ts', 'src/**/*.tsx'];
 
+const banner = `/**
+ * ${pkg.name} v${pkg.version}
+ * (c) ${new Date().getFullYear()} ${pkg.author}
+ * @license ${pkg.license}
+ */`;
+
 const shared = {
+  banner,
   sourcemap: true,
   clean: true,
   treeshake: false,

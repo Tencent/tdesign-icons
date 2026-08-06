@@ -1,6 +1,7 @@
 {
   "name": "tdesign-icons-vue",
   "version": "0.4.7",
+  "author": "tdesign",
   "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

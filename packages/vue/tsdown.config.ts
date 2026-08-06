@@ -1,8 +1,15 @@
 import { defineConfig, type TsdownHooks, type UserConfig } from 'tsdown';
 import { writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import pkg from './package.json' with { type: 'json' };
 
 const entry = ['src/**/*.ts', 'src/**/*.tsx'];
+
+const banner = `/**
+ * ${pkg.name} v${pkg.version}
+ * (c) ${new Date().getFullYear()} ${pkg.author}
+ * @license ${pkg.license}
+ */`;
 
 /**
  * src/style/css.ts 是组件统一引用的样式入口。ESM 保留
@@ -24,6 +31,7 @@ function fixCjsCss(): Partial<TsdownHooks> {
 }
 
 const shared = {
+  banner,
   sourcemap: true,
   clean: true,
   treeshake: false,

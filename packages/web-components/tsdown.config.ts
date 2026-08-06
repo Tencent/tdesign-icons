@@ -4,8 +4,15 @@ import {
   type Rolldown,
   type UserConfig,
 } from 'tsdown';
+import pkg from './package.json' with { type: 'json' };
 
 const entry = ['src/**/*.ts', 'src/**/*.tsx'];
+
+const banner = `/**
+ * ${pkg.name} v${pkg.version}
+ * (c) ${new Date().getFullYear()} ${pkg.author}
+ * @license ${pkg.license}
+ */`;
 
 /**
  * 与 rollup 时代保持一致：omi / clsx / tailwind-merge 均打进产物
@@ -36,6 +43,7 @@ const inputOptions = {
 } satisfies Rolldown.InputOptions;
 
 const shared = {
+  banner,
   sourcemap: true,
   clean: true,
   treeshake: false,
@@ -81,6 +89,7 @@ export default defineConfig([
     format: 'umd',
     outDir: 'dist',
     globalName: 'TDesignIconWebComponents',
+    banner,
     dts: false,
     treeshake: true,
     sourcemap: true,
@@ -100,6 +109,7 @@ export default defineConfig([
     format: 'umd',
     outDir: 'dist',
     globalName: 'TDesignIconWebComponents',
+    banner,
     minify: true,
     dts: false,
     treeshake: true,

@@ -16,8 +16,14 @@ const shared = {
 } satisfies UserConfig;
 
 /**
- * CJS 产物中 style/css.ts 会被 rolldown 输出为 `require("./index.cjs")`，
- * 与 rollup 时代通过 `ignoreImport` 产物（空 css.js）不一致，这里在构建后清空该文件。
+ * src/style/css.ts 是组件统一引用的样式入口。ESM 保留
+ * `import "./index.css"`，交给前端构建工具处理；CJS 则只提取
+ * style/index.css，不应在运行时 require CSS，否则原生 Node 会将 CSS
+ * 当作 JavaScript 解析并报错。
+ *
+ * Rollup 时代通过 ignoreImport 生成空的 style/css.js。Rolldown 会为
+ * CSS 入口生成 require 调用，因此构建后将该 JS 占位文件清空，以保持
+ * 旧产物行为和模块路径兼容。真实样式文件 style/index.css 与声明文件仍会保留。
  */
 function fixCjsCss(): Partial<TsdownHooks> {
   return {

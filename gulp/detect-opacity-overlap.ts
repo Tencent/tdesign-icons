@@ -329,8 +329,7 @@ function detectOverlaps(svgString: string): OpacityOverlap[] {
 }
 
 /**
- * 构建时自动判断图标中实际重叠的上下层路径，替代人工白名单。
- * 检测基于 `svg/` 下的原图，各产物流水线共享同一份结果。
+ * 构建时自动判断图标中实际重叠的上下层路径，增加 mask 处理。
  */
 export function detectOpacityOverlaps(iconName: string): OpacityOverlap[] {
   const cached = detectionCache.get(iconName);

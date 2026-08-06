@@ -15,14 +15,14 @@ const banner = `/**
  */`;
 
 /**
- * omi 是 peerDependency，运行时由宿主提供（与官方包一致，从 node_modules/omi 解析），
- * 不内嵌进产物，避免发布后 esm/node_modules/ 依赖 files 通配覆盖的隐患。
- * clsx / tailwind-merge / reactive-signal / weakmap-polyfill 无 peer 约定，仍打进产物。
+ * unbundle 模式下 alwaysBundle 不会真正内联源码，而是产出 node_modules/.pnpm/... 相对路径——
+ * 发布到 npm 后无法解析。因此 clsx / tailwind-merge 也走 external，由 dependencies 保证运行时解析。
+ * reactive-signal / weakmap-polyfill 是 omi 的传递依赖且未列在 dependencies 中，仍需内嵌；
+ * 若它们也出现 .pnpm 路径残留，需将它们也 external 化或改由 dependencies 显式声明。
  */
 const deps = {
-  alwaysBundle: ['clsx', 'tailwind-merge', 'reactive-signal', 'weakmap-polyfill'],
-  // omi 作为 external 不被打包；其 d.ts 为 CommonJS 语法，无法被 rolldown-plugin-dts 内联，d.ts 保留外部引用
-  external: ['omi'],
+  alwaysBundle: ['reactive-signal', 'weakmap-polyfill'],
+  external: ['omi', 'clsx', 'tailwind-merge'],
   dts: {
     neverBundle: ['omi', 'clsx', 'tailwind-merge'],
   },

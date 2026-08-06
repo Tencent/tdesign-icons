@@ -3,9 +3,9 @@ import { SVGJson } from './types';
 
 const resolveChildProp = (value: string, childProps: Record<string, any>) => {
   const propName = value.split('.')[1];
-  const overlapMask = /^overlapMask(Id|Url)(\d+)$/.exec(propName);
+  const overlapMask = /^overlapMask(Id|Url)_(.+)$/.exec(propName);
   if (overlapMask) {
-    const maskId = `${childProps.overlapMaskPrefix}-${overlapMask[2]}`;
+    const maskId = `${childProps.overlapMaskPrefix}-overlap-${overlapMask[2]}`;
     return overlapMask[1] === 'Url' ? `url(#${maskId})` : maskId;
   }
 

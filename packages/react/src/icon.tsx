@@ -36,23 +36,23 @@ export interface IconFulfilledProps extends IconProps {
 
 let fallbackIdSeed = 0;
 
-function useIconInstanceId(iconId: string) {
+function useIconInstanceId() {
   const fallbackId = useRef<string | null>(null);
   if (!fallbackId.current) {
-    fallbackId.current = `${fallbackIdSeed}`;
+    fallbackId.current = `legacy${fallbackIdSeed}`;
     fallbackIdSeed += 1;
   }
 
   const useId = (React as any).useId as undefined | (() => string);
-  const reactId = useId ? useId() : fallbackId.current;
-  return `t-icon-${iconId}-${reactId}`;
+  const instanceId = useId ? useId() : fallbackId.current;
+  return instanceId.replace(/[^a-zA-Z0-9_]/g, '') || fallbackId.current;
 }
 
 function resolveChildProp(value: string, childProps: Record<string, any>) {
   const propName = value.split('.')[1];
-  const overlapMask = /^overlapMask(Id|Url)(\d+)$/.exec(propName);
+  const overlapMask = /^overlapMask(Id|Url)_(.+)$/.exec(propName);
   if (overlapMask) {
-    const maskId = `${childProps.overlapMaskPrefix}-${overlapMask[2]}`;
+    const maskId = `${childProps.overlapMaskPrefix}-overlap-${overlapMask[2]}`;
     return overlapMask[1] === 'Url' ? `url(#${maskId})` : maskId;
   }
 
@@ -122,7 +122,8 @@ export const IconBase = forwardRef((props: IconFulfilledProps, ref: Ref<SVGEleme
   } = props;
   const { className: sizeClassName, style: sizeStyle } = useSizeProps(size);
   const cls = classNames('t-icon', `t-icon-${id}`, className, sizeClassName);
-  const overlapMaskPrefix = useIconInstanceId(id);
+  const instanceId = useIconInstanceId();
+  const overlapMaskPrefix = `t-icon-${id}-instance-${instanceId}`;
 
   useEffect(() => {
     loadStylesheet();

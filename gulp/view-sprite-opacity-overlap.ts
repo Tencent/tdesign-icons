@@ -64,7 +64,10 @@ export function applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName) 
   const viewBox = (symbolEle.getAttribute('viewBox') || '0 0 24 24').trim().split(/[\s,]+/);
   const [x = '0', y = '0', width = '24', height = '24'] = viewBox;
   const masks = [];
-  let maskIndex = 0;
+  const iconRoot = Array.from(symbolEle.childNodes)
+    .find((child) => child.nodeType !== TEXT_NODE && child.getAttribute?.('id')?.endsWith(iconName));
+  const namespacedIconId = iconRoot?.getAttribute('id') || iconName;
+  const idNamespace = namespacedIconId.slice(0, -iconName.length);
 
   const visit = (parent) => {
     const children = Array.from(parent.childNodes)
@@ -72,20 +75,22 @@ export function applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName) 
 
     children.forEach(visit);
     children.forEach((child, childIndex) => {
-      if (child.hasAttribute('mask')) return;
+      const rawPathId = child.getAttribute('id') || '';
+      const pathId = idNamespace && rawPathId.startsWith(idNamespace)
+        ? rawPathId.slice(idNamespace.length)
+        : rawPathId;
+      if (child.hasAttribute('mask') || !pathId) return;
 
       const paintTypes = getPaintTypes(child);
       if (paintTypes.length !== 1 || !allowedPaintTypes.includes(paintTypes[0])) return;
 
-      const paintType = paintTypes[0];
       const upperNodes = children.slice(childIndex + 1).filter((upperNode) => {
         const upperPaintTypes = getPaintTypes(upperNode);
         return upperPaintTypes.length === 1;
       });
       if (!upperNodes.length) return;
 
-      const maskId = `t-icon-${iconName}-${paintType}-overlap-${maskIndex}`;
-      maskIndex += 1;
+      const maskId = `t-icon-${iconName}-overlap-${pathId}`;
       const mask = xmlDoc.createElementNS(SVG_NAMESPACE, 'mask');
       mask.setAttribute('id', maskId);
       mask.setAttribute('maskUnits', 'userSpaceOnUse');

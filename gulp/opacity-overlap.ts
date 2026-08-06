@@ -1,4 +1,5 @@
 import type { IconElement } from './svg-info-check';
+import type { OpacityOverlap } from './detect-opacity-overlap';
 
 export type PaintType = 'fill' | 'stroke';
 
@@ -10,7 +11,7 @@ interface ViewBox {
 }
 
 interface OptimizeOptions {
-  maskPaintTypes?: PaintType[];
+  overlaps?: OpacityOverlap[];
   viewBox?: string;
 }
 
@@ -189,6 +190,9 @@ function makeMask(
 export function optimizeOpacityOverlaps(root: IconElement, options: OptimizeOptions) {
   const masks: IconElement[] = [];
   const viewBox = parseViewBox(options.viewBox);
+  const overlapsByLowerPath = options.overlaps
+    ? new Map(options.overlaps.map((overlap) => [overlap.lowerPathId, overlap]))
+    : undefined;
 
   const visit = (node: IconElement) => {
     if (!node.children?.length || ['defs', 'mask'].includes(node.tag)) {
@@ -206,16 +210,18 @@ export function optimizeOpacityOverlaps(root: IconElement, options: OptimizeOpti
       }
 
       const paintTypes = getPaintTypes(child);
-      if (
-        paintTypes.length !== 1
-        || (options.maskPaintTypes && !options.maskPaintTypes.includes(paintTypes[0]))
-      ) {
+      const detectedOverlap = overlapsByLowerPath?.get(pathId);
+      if (paintTypes.length !== 1 || (overlapsByLowerPath && !detectedOverlap)) {
         return;
       }
 
-      const upperNodes = node.children
+      let upperNodes = node.children
         ?.slice(childIndex + 1)
         .filter((upperNode) => getPaintTypes(upperNode).length === 1) || [];
+      if (detectedOverlap && !detectedOverlap.hasUnidentifiedUpper) {
+        const upperPathIds = new Set(detectedOverlap.upperPathIds);
+        upperNodes = upperNodes.filter((upperNode) => upperPathIds.has(upperNode.attrs.id as string));
+      }
 
       if (!upperNodes.length) {
         return;

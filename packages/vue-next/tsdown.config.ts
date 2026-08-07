@@ -85,12 +85,11 @@ export default defineConfig([
     globalName: 'TDesignIconVueNext',
     dts: false,
     ...shared,
-    outputOptions: (options) => ({
-      ...options,
+    outputOptions: {
       entryFileNames: 'index.js',
       exports: 'named',
       globals: { vue: 'Vue' },
-    }),
+    },
     css: {
       fileName: 'index.css',
       splitting: false,
@@ -107,12 +106,11 @@ export default defineConfig([
     dts: false,
     ...shared,
     clean: false,
-    outputOptions: (options) => ({
-      ...options,
+    outputOptions: {
       entryFileNames: 'index.min.js',
       exports: 'named',
       globals: { vue: 'Vue' },
-    }),
+    },
     css: {
       fileName: 'index.min.css',
       splitting: false,

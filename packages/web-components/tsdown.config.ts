@@ -104,12 +104,11 @@ export default defineConfig([
     target: false,
     deps: umdDeps,
     inputOptions,
-    outputOptions: (options) => ({
-      ...options,
+    outputOptions: {
       entryFileNames: 'index.js',
       exports: 'named',
       globals: { omi: 'omi' },
-    }),
+    },
   },
   // UMD 压缩
   {
@@ -127,11 +126,10 @@ export default defineConfig([
     target: false,
     deps: umdDeps,
     inputOptions,
-    outputOptions: (options) => ({
-      ...options,
+    outputOptions: {
       entryFileNames: 'index.min.js',
       exports: 'named',
       globals: { omi: 'omi' },
-    }),
+    },
   },
 ]);

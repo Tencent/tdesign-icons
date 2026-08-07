@@ -89,12 +89,11 @@ export default defineConfig([
       alwaysBundle: ['classnames'],
       neverBundle: ['vue'],
     },
-    outputOptions: (options) => ({
-      ...options,
+    outputOptions: {
       entryFileNames: 'index.js',
       exports: 'named',
       globals: { vue: 'Vue' },
-    }),
+    },
     css: {
       fileName: 'index.css',
       splitting: false,
@@ -115,12 +114,11 @@ export default defineConfig([
       neverBundle: ['vue'],
     },
     clean: false,
-    outputOptions: (options) => ({
-      ...options,
+    outputOptions: {
       entryFileNames: 'index.min.js',
       exports: 'named',
       globals: { vue: 'Vue' },
-    }),
+    },
     css: {
       fileName: 'index.min.css',
       splitting: false,

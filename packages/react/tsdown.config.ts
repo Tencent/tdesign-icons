@@ -74,12 +74,11 @@ export default defineConfig([
       alwaysBundle: ['classnames'],
       neverBundle: ['react', 'react-dom'],
     },
-    outputOptions: (options) => ({
-      ...options,
+    outputOptions: {
       entryFileNames: 'index.js',
       exports: 'named',
       globals: { react: 'React', 'react-dom': 'ReactDOM' },
-    }),
+    },
   },
   // UMD 压缩
   {
@@ -95,11 +94,10 @@ export default defineConfig([
       neverBundle: ['react', 'react-dom'],
     },
     clean: false,
-    outputOptions: (options) => ({
-      ...options,
+    outputOptions: {
       entryFileNames: 'index.min.js',
       exports: 'named',
       globals: { react: 'React', 'react-dom': 'ReactDOM' },
-    }),
+    },
   },
 ]);

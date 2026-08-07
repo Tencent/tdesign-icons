@@ -20,12 +20,17 @@ const banner = `/**
  * reactive-signal / weakmap-polyfill 是 omi 的传递依赖且未列在 dependencies 中，仍需内嵌；
  * 若它们也出现 .pnpm 路径残留，需将它们也 external 化或改由 dependencies 显式声明。
  */
-const deps = {
+const unbundledDeps = {
   alwaysBundle: ['reactive-signal', 'weakmap-polyfill'],
-  external: ['omi', 'clsx', 'tailwind-merge'],
+  neverBundle: ['omi', 'clsx', 'tailwind-merge'],
   dts: {
     neverBundle: ['omi', 'clsx', 'tailwind-merge'],
   },
+} satisfies DepsConfig;
+
+const umdDeps = {
+  alwaysBundle: ['clsx', 'tailwind-merge'],
+  neverBundle: ['omi'],
 } satisfies DepsConfig;
 
 /**
@@ -51,7 +56,7 @@ const shared = {
   treeshake: false,
   platform: 'neutral',
   target: false,
-  deps,
+  deps: unbundledDeps,
   inputOptions,
 } satisfies UserConfig;
 
@@ -70,7 +75,7 @@ export default defineConfig([
       to: 'esm/iconfont',
     },
   },
-  // CJS 多入口，保留 src 目录结构（与 rollup 基线一致：cjs 使用默认 treeshake，入口副作用 import 被剪除）
+  // CJS 多入口，保留 src 目录结构和入口的自定义元素注册副作用
   {
     entry,
     format: 'cjs',
@@ -79,13 +84,12 @@ export default defineConfig([
     unbundle: true,
     dts: true,
     ...shared,
-    treeshake: true,
     copy: {
       from: ['src/iconfont/t.*', 'src/iconfont/index.css'],
       to: 'lib/iconfont',
     },
   },
-  // UMD 非压缩（与 rollup 基线一致：treeshake 开启，产出精简的入口）
+  // UMD 非压缩
   {
     entry: { index: 'src/index.ts' },
     format: 'umd',
@@ -93,16 +97,17 @@ export default defineConfig([
     globalName: 'TDesignIconWebComponents',
     banner,
     dts: false,
-    treeshake: true,
+    treeshake: false,
     sourcemap: true,
     clean: true,
     platform: 'neutral' as const,
     target: false,
-    deps,
+    deps: umdDeps,
     inputOptions,
     outputOptions: (options) => ({
       ...options,
       entryFileNames: 'index.js',
+      globals: { omi: 'omi' },
     }),
   },
   // UMD 压缩
@@ -114,16 +119,17 @@ export default defineConfig([
     banner,
     minify: true,
     dts: false,
-    treeshake: true,
+    treeshake: false,
     sourcemap: true,
     clean: false,
     platform: 'neutral' as const,
     target: false,
-    deps,
+    deps: umdDeps,
     inputOptions,
     outputOptions: (options) => ({
       ...options,
       entryFileNames: 'index.min.js',
+      globals: { omi: 'omi' },
     }),
   },
 ]);

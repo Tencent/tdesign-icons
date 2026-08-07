@@ -12,7 +12,6 @@ const banner = `/**
  */`;
 
 const shared = {
-  banner,
   sourcemap: true,
   clean: true,
   treeshake: false,
@@ -83,6 +82,7 @@ export default defineConfig([
     format: 'umd',
     outDir: 'dist',
     globalName: 'TDesignIconVueNext',
+    banner,
     dts: false,
     ...shared,
     outputOptions: {
@@ -102,6 +102,7 @@ export default defineConfig([
     format: 'umd',
     outDir: 'dist',
     globalName: 'TDesignIconVueNext',
+    banner,
     minify: true,
     dts: false,
     ...shared,

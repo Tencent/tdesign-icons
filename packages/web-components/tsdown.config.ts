@@ -47,7 +47,6 @@ const inputOptions = {
 } satisfies Rolldown.InputOptions;
 
 const shared = {
-  banner,
   sourcemap: true,
   clean: true,
   treeshake: false,

@@ -31,7 +31,6 @@ function fixCjsCss(): Partial<TsdownHooks> {
 }
 
 const shared = {
-  banner,
   sourcemap: true,
   clean: true,
   treeshake: false,
@@ -83,6 +82,7 @@ export default defineConfig([
     format: 'umd',
     outDir: 'dist',
     globalName: 'TDesignIconVue',
+    banner,
     dts: false,
     ...shared,
     deps: {
@@ -106,6 +106,7 @@ export default defineConfig([
     format: 'umd',
     outDir: 'dist',
     globalName: 'TDesignIconVue',
+    banner,
     minify: true,
     dts: false,
     ...shared,

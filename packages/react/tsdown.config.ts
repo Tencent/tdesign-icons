@@ -14,7 +14,6 @@ const banner = `/**
  * classnames 内联后可直接配合页面中的 React 全局变量使用。
  */
 const shared = {
-  banner,
   sourcemap: true,
   clean: true,
   treeshake: false,
@@ -68,6 +67,7 @@ export default defineConfig([
     format: 'umd',
     outDir: 'dist',
     globalName: 'TDesignIconReact',
+    banner,
     dts: false,
     ...shared,
     deps: {
@@ -86,6 +86,7 @@ export default defineConfig([
     format: 'umd',
     outDir: 'dist',
     globalName: 'TDesignIconReact',
+    banner,
     minify: true,
     dts: false,
     ...shared,

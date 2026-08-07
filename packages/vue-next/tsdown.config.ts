@@ -31,7 +31,7 @@ const shared = {
  *
  * Rollup 时代通过 ignoreImport 生成空的 style/css.js。Rolldown 会为
  * CSS 入口生成 require 调用，因此构建后将该 JS 占位文件清空，以保持
- * 旧产物行为和模块路径兼容。真实样式文件 style/index.css 与声明文件仍会保留。
+ * 模块路径兼容。真实样式文件 style/index.css 与声明文件仍会保留。
  */
 function fixCjsCss(): Partial<TsdownHooks> {
   return {
@@ -68,6 +68,9 @@ export default defineConfig([
     dts: true,
     ...shared,
     hooks: fixCjsCss(),
+    outputOptions: {
+      exports: 'named',
+    },
     css: {
       fileName: 'style/index.css',
       splitting: true,
@@ -85,6 +88,7 @@ export default defineConfig([
     outputOptions: (options) => ({
       ...options,
       entryFileNames: 'index.js',
+      exports: 'named',
       globals: { vue: 'Vue' },
     }),
     css: {
@@ -106,6 +110,7 @@ export default defineConfig([
     outputOptions: (options) => ({
       ...options,
       entryFileNames: 'index.min.js',
+      exports: 'named',
       globals: { vue: 'Vue' },
     }),
     css: {

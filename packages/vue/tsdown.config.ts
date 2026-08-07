@@ -17,9 +17,9 @@ const banner = `/**
  * style/index.css，不应在运行时 require CSS，否则原生 Node 会将 CSS
  * 当作 JavaScript 解析并报错。
  *
- * Rollup 时代通过 ignoreImport 生成空的 style/css.js。Rolldown 会生成
- * `require("./index.css")`，因此构建后将该 JS 占位文件清空，以保持旧产物
- * 行为和模块路径兼容。真实样式文件 style/index.css 与声明文件仍会保留。
+ * Rollup 时代通过 ignoreImport 生成空的 style/css.js。Rolldown 会为
+ * CSS 入口生成 require 调用，因此构建后将该 JS 占位文件清空，以保持
+ * 模块路径兼容。真实样式文件 style/index.css 与声明文件仍会保留。
  */
 function fixCjsCss(): Partial<TsdownHooks> {
   return {
@@ -68,6 +68,9 @@ export default defineConfig([
     dts: true,
     ...shared,
     hooks: fixCjsCss(),
+    outputOptions: {
+      exports: 'named',
+    },
     css: {
       fileName: 'style/index.css',
       splitting: true,
@@ -82,10 +85,15 @@ export default defineConfig([
     globalName: 'TDesignIconVue',
     dts: false,
     ...shared,
+    deps: {
+      alwaysBundle: ['classnames'],
+      neverBundle: ['vue'],
+    },
     outputOptions: (options) => ({
       ...options,
       entryFileNames: 'index.js',
-      globals: { vue: 'Vue', classnames: 'classNames' },
+      exports: 'named',
+      globals: { vue: 'Vue' },
     }),
     css: {
       fileName: 'index.css',
@@ -102,11 +110,16 @@ export default defineConfig([
     minify: true,
     dts: false,
     ...shared,
+    deps: {
+      alwaysBundle: ['classnames'],
+      neverBundle: ['vue'],
+    },
     clean: false,
     outputOptions: (options) => ({
       ...options,
       entryFileNames: 'index.min.js',
-      globals: { vue: 'Vue', classnames: 'classNames' },
+      exports: 'named',
+      globals: { vue: 'Vue' },
     }),
     css: {
       fileName: 'index.min.css',

@@ -15,13 +15,10 @@ const banner = `/**
  */`;
 
 /**
- * unbundle 模式下 alwaysBundle 不会真正内联源码，而是产出 node_modules/.pnpm/... 相对路径——
- * 发布到 npm 后无法解析。因此 clsx / tailwind-merge 也走 external，由 dependencies 保证运行时解析。
- * reactive-signal / weakmap-polyfill 是 omi 的传递依赖且未列在 dependencies 中，仍需内嵌；
- * 若它们也出现 .pnpm 路径残留，需将它们也 external 化或改由 dependencies 显式声明。
+ * ESM/CJS 保留 omi、clsx 和 tailwind-merge 的包引用，避免 unbundle 产物
+ * 带入包管理器内部路径。UMD 只外置 omi，工具依赖内联后可直接在浏览器使用。
  */
 const unbundledDeps = {
-  alwaysBundle: ['reactive-signal', 'weakmap-polyfill'],
   neverBundle: ['omi', 'clsx', 'tailwind-merge'],
   dts: {
     neverBundle: ['omi', 'clsx', 'tailwind-merge'],
@@ -84,6 +81,9 @@ export default defineConfig([
     unbundle: true,
     dts: true,
     ...shared,
+    outputOptions: {
+      exports: 'named',
+    },
     copy: {
       from: ['src/iconfont/t.*', 'src/iconfont/index.css'],
       to: 'lib/iconfont',
@@ -107,6 +107,7 @@ export default defineConfig([
     outputOptions: (options) => ({
       ...options,
       entryFileNames: 'index.js',
+      exports: 'named',
       globals: { omi: 'omi' },
     }),
   },
@@ -129,6 +130,7 @@ export default defineConfig([
     outputOptions: (options) => ({
       ...options,
       entryFileNames: 'index.min.js',
+      exports: 'named',
       globals: { omi: 'omi' },
     }),
   },

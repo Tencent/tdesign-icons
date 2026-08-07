@@ -10,10 +10,8 @@ const banner = `/**
  */`;
 
 /**
- * 与 rollup 时代保持一致：
- * - react / react-dom 作为 peerDependency 保持外部引用；
- * - classnames 位于 dependencies，默认按依赖外置（保持 `import classNames from 'classnames'`）；
- *   UMD 产物中单独 alwaysBundle 内联，避免依赖全局 classNames。
+ * ESM/CJS 保留框架和运行时依赖的包引用；UMD 只外置 React，
+ * classnames 内联后可直接配合页面中的 React 全局变量使用。
  */
 const shared = {
   banner,
@@ -23,11 +21,12 @@ const shared = {
   platform: 'neutral',
   target: false,
   deps: {
-    neverBundle: ['react', 'react-dom'],
+    neverBundle: ['react', 'react-dom', 'classnames'],
     dts: {
-      neverBundle: ['react', 'react-dom'],
+      neverBundle: ['react', 'react-dom', 'classnames'],
     },
   },
+  // tsconfig 保留 JSX；发布构建统一转换为兼容旧产物的 React classic 调用。
   inputOptions: {
     transform: {
       jsx: {
@@ -59,6 +58,9 @@ export default defineConfig([
     unbundle: true,
     dts: true,
     ...shared,
+    outputOptions: {
+      exports: 'named',
+    },
   },
   // UMD 非压缩（classnames 内联）
   {
@@ -70,10 +72,12 @@ export default defineConfig([
     ...shared,
     deps: {
       alwaysBundle: ['classnames'],
+      neverBundle: ['react', 'react-dom'],
     },
     outputOptions: (options) => ({
       ...options,
       entryFileNames: 'index.js',
+      exports: 'named',
       globals: { react: 'React', 'react-dom': 'ReactDOM' },
     }),
   },
@@ -88,11 +92,13 @@ export default defineConfig([
     ...shared,
     deps: {
       alwaysBundle: ['classnames'],
+      neverBundle: ['react', 'react-dom'],
     },
     clean: false,
     outputOptions: (options) => ({
       ...options,
       entryFileNames: 'index.min.js',
+      exports: 'named',
       globals: { react: 'React', 'react-dom': 'ReactDOM' },
     }),
   },

@@ -350,6 +350,7 @@ import {
   anchorHighlight,
   appendStyleSheet,
   kebabToPascal,
+  pascalToKebab,
 } from './utils/index';
 import { manifest as manifestSrc } from './manifest';
 import SvgSprite from '../gulp/template/svg-sprite.vue';
@@ -558,6 +559,7 @@ const getCurrentRawSvg = () => {
 
 const handleCopyIcon = async (type) => {
   const isSingleColor = configuration.colorType === 'single';
+  const componentName = `${kebabToPascal(currentIconName.value)}Icon`;
 
   const fillColor = isSingleColor
     ? configuration.fillColor1
@@ -571,7 +573,7 @@ const handleCopyIcon = async (type) => {
       const fillText = !isSingleColor ? fillColor : `"${fillColor}"`;
       const strokeText = !isSingleColor ? strokeColor : `"${strokeColor}"`;
       await navigator.clipboard.writeText(
-        `<${currentIconName.value}-icon :fill-color='${fillText}' :stroke-color='${strokeText}' :stroke-width="${configuration.strokeWidth}"/>`,
+        `<${pascalToKebab(componentName)} :fill-color='${fillText}' :stroke-color='${strokeText}' :stroke-width="${configuration.strokeWidth}"/>`,
       );
     } else if (type === 'react') {
       const fillText = !isSingleColor ? `{${fillColor}}` : `'${fillColor}'`;
@@ -579,9 +581,7 @@ const handleCopyIcon = async (type) => {
         ? `{${strokeColor}}`
         : `'${strokeColor}'`;
       await navigator.clipboard.writeText(
-        `<${kebabToPascal(
-          currentIconName.value,
-        )}Icon fillColor=${fillText} strokeColor=${strokeText} strokeWidth={${
+        `<${componentName} fillColor=${fillText} strokeColor=${strokeText} strokeWidth={${
           configuration.strokeWidth
         }}/>`,
       );

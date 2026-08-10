@@ -1,0 +1,11 @@
+{
+  "name": "TDesign Icons",
+  "short_name": "TDesign Icons",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0052D9",
+  "description": "TDesign Icons Flutter demo",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}

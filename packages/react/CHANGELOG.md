@@ -1,5 +1,17 @@
 # tdesign-icons-react
 
+## 🌈 0.6.9 `2026-08-06`
+
+### 🐞 Bug Fixes
+
+- 优化 mask id 为固定输出 @uyarn ([#284](https://github.com/Tencent/tdesign-icons/pull/284))
+
+## 🌈 0.6.8 `2026-08-06`
+
+### 🐞 Bug Fixes
+
+- 修复同时使用多个存在 alpha 通道的颜色填充时出现透明度重叠导致渲染不符合预期的问题 @uyarn ([#276](https://github.com/Tencent/tdesign-icons/pull/276))
+
 ## 🌈 0.6.7 `2026-07-23`
 
 ### 🚀 Features

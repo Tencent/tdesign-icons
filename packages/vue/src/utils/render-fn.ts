@@ -1,6 +1,17 @@
 import { CreateElement, VNodeData, VNode } from 'vue';
 import { SVGJson } from './types';
 
+const resolveChildProp = (value: string, childProps: Record<string, any>) => {
+  const propName = value.split('.')[1];
+  const overlapMask = /^overlapMask(Id|Url)_(.+)$/.exec(propName);
+  if (overlapMask) {
+    const maskId = `${childProps.overlapMaskPrefix}-overlap-${overlapMask[2]}`;
+    return overlapMask[1] === 'Url' ? `url(#${maskId})` : maskId;
+  }
+
+  return childProps[propName];
+};
+
 const renderChildNode = (createElement: CreateElement, node: SVGJson, childProps: any): VNode => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const processedAttrs: Record<string, any> = {};
@@ -8,8 +19,7 @@ const renderChildNode = (createElement: CreateElement, node: SVGJson, childProps
     // eslint-disable-next-line no-restricted-syntax
     for (const [key, value] of Object.entries(node.attrs)) {
       if (typeof value === 'string' && value.startsWith('props.')) {
-        const propName = value.split('.')[1];
-        processedAttrs[key] = childProps[propName];
+        processedAttrs[key] = resolveChildProp(value, childProps);
       } else {
         processedAttrs[key] = value;
       }
@@ -41,8 +51,9 @@ const renderFn = (createElement: CreateElement, node: SVGJson, rootData: VNodeDa
     strokeColor1: Array.isArray(strokeColor) ? strokeColor[0] : strokeColor,
     strokeColor2: Array.isArray(strokeColor) ? strokeColor[1] ?? strokeColor[0] : strokeColor,
     fillColor1: Array.isArray(fillColor) ? fillColor[0] : fillColor,
-    fillColor2: Array.isArray(fillColor) ? fillColor[1] ?? strokeColor[0] : fillColor,
+    fillColor2: Array.isArray(fillColor) ? fillColor[1] ?? fillColor[0] : fillColor,
     filledColor,
+    overlapMaskPrefix: rootData.props?.overlapMaskPrefix,
   };
   return createElement(
     node.tag,

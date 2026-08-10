@@ -2,9 +2,11 @@ import { parse } from 'svg-parser';
 import camelCase from 'camelcase';
 import { specifiedIcons } from './util/const';
 import { createTransformStream } from './transform';
+import { optimizeOpacityOverlaps } from './opacity-overlap';
+import { detectOpacityOverlaps } from './detect-opacity-overlap';
 
 export interface Attrs {
-  style: { [key: string]: any } | string;
+  style?: { [key: string]: any } | string;
 
   [key: string]: string | object;
 }
@@ -26,6 +28,7 @@ export interface IconElement {
 export interface SvgToElementOptions {
   replaceColor?: boolean;
   propsString?: boolean;
+  preventOpacityOverlap?: boolean;
 }
 
 function normalizeWidthAndHeight(node: IconElement) {
@@ -150,11 +153,22 @@ export function svgToElement(
     propsString: false,
   },
 ) {
-  return createTransformStream((svgString) => {
+  return createTransformStream((svgString, file) => {
     const ast = parse(svgString);
     const isSpecified = specifiedIcons.includes(ast.children?.[0].children?.[0].properties.id);
     const svgElement = astToElement((ast.children as any) as IconNode[], options, null, isSpecified)[0];
     normalizeWidthAndHeight(svgElement);
+    const shouldOptimizeOpacityOverlap = options.preventOpacityOverlap !== false
+      && Boolean(options.replaceColor && options.propsString);
+    if (shouldOptimizeOpacityOverlap) {
+      const iconName = file.basename.replace(/\.[^.]+$/, '');
+      optimizeOpacityOverlaps(svgElement, {
+        overlaps: options.preventOpacityOverlap === true
+          ? undefined
+          : detectOpacityOverlaps(iconName),
+        viewBox: svgElement.attrs.viewBox as string | undefined,
+      });
+    }
 
     return JSON.stringify(svgElement);
   });

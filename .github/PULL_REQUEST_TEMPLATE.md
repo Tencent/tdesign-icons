@@ -72,7 +72,7 @@ PR 在维护者审核通过后会合并，谢谢！
 - feat(组件名称): 处理问题或特性描述
 -->
 
-#### tdesign_icons
+#### tdesign_flutter_icons
 
 <!--
 - feat(组件名称): 处理问题或特性描述

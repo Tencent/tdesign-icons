@@ -1,4 +1,4 @@
-# tdesign_icons
+# tdesign_flutter_icons
 
 ## 🌈 0.0.5 `2026-07-31`
 

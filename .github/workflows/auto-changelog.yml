@@ -38,7 +38,7 @@ jobs:
             tdesign-icons-svg
             tdesign-icons-vue
             tdesign-icons-web-components
-            tdesign_icons
+            tdesign_flutter_icons
 
   commit-changelog:
     if: github.event.issue.pull_request
@@ -55,4 +55,4 @@ jobs:
             tdesign-icons-svg
             tdesign-icons-vue
             tdesign-icons-web-components
-            tdesign_icons
+            tdesign_flutter_icons

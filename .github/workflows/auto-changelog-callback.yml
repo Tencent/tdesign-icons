@@ -34,5 +34,5 @@ jobs:
             tdesign-icons-svg
             tdesign-icons-vue
             tdesign-icons-web-components
-            tdesign_icons
+            tdesign_flutter_icons
           pr_number: ${{ steps.pr.outputs.id }}

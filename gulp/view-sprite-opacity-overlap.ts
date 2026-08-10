@@ -1,4 +1,7 @@
-import { detectOpacityOverlaps } from './detect-opacity-overlap';
+import {
+  detectInternalStrokeOverlapGroupIds,
+  detectOpacityOverlaps,
+} from './detect-opacity-overlap';
 
 const TEXT_NODE = 3;
 const SVG_NAMESPACE = 'http://www.w3.org/2000/svg';
@@ -59,7 +62,8 @@ function makeMaskShape(node, paintType) {
 
 export function applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName) {
   const overlaps = detectOpacityOverlaps(iconName);
-  if (!overlaps.length) return;
+  const internalStrokeOverlapGroupIds = new Set(detectInternalStrokeOverlapGroupIds(iconName));
+  if (!overlaps.length && !internalStrokeOverlapGroupIds.size) return;
   const overlapsByLowerPath = new Map(overlaps.map((overlap) => [overlap.lowerPathId, overlap]));
 
   const viewBox = (symbolEle.getAttribute('viewBox') || '0 0 24 24').trim().split(/[\s,]+/);
@@ -75,12 +79,56 @@ export function applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName) 
       ? rawPathId.slice(idNamespace.length)
       : rawPathId;
   };
+  const addMask = (maskedNode, upperNodes, maskId) => {
+    const mask = xmlDoc.createElementNS(SVG_NAMESPACE, 'mask');
+    mask.setAttribute('id', maskId);
+    mask.setAttribute('maskUnits', 'userSpaceOnUse');
+    mask.setAttribute('maskContentUnits', 'userSpaceOnUse');
+    mask.setAttribute('mask-type', 'luminance');
+    mask.setAttribute('visibility', 'visible');
+    mask.setAttribute('x', x);
+    mask.setAttribute('y', y);
+    mask.setAttribute('width', width);
+    mask.setAttribute('height', height);
 
+    const background = xmlDoc.createElementNS(SVG_NAMESPACE, 'rect');
+    background.setAttribute('x', x);
+    background.setAttribute('y', y);
+    background.setAttribute('width', width);
+    background.setAttribute('height', height);
+    background.setAttribute('fill', '#fff');
+    mask.appendChild(background);
+    upperNodes.forEach((upperNode) => {
+      mask.appendChild(makeMaskShape(upperNode, getPaintTypes(upperNode)[0]));
+    });
+    masks.push(mask);
+    maskedNode.setAttribute('mask', `url(#${maskId})`);
+  };
   const visit = (parent) => {
     const children = Array.from(parent.childNodes)
       .filter((child) => child.nodeType !== TEXT_NODE && !['defs', 'mask'].includes(child.tagName?.toLowerCase?.()));
 
     children.forEach(visit);
+    const parentPathId = getPathId(parent);
+    if (internalStrokeOverlapGroupIds.has(parentPathId)) {
+      const strokeChildren = children.filter((child) => {
+        const paintTypes = getPaintTypes(child);
+        return paintTypes.length === 1 && paintTypes[0] === 'stroke';
+      });
+      strokeChildren.forEach((child, childIndex) => {
+        if (child.hasAttribute('mask')) return;
+
+        const upperNodes = strokeChildren.slice(childIndex + 1);
+        if (!upperNodes.length) return;
+
+        addMask(
+          child,
+          upperNodes,
+          `t-icon-${iconName}-overlap-${parentPathId}-${childIndex}`,
+        );
+      });
+    }
+
     children.forEach((child, childIndex) => {
       const pathId = getPathId(child);
       const detectedOverlap = overlapsByLowerPath.get(pathId);
@@ -99,30 +147,7 @@ export function applyViewSpriteOpacityOverlapMasks(xmlDoc, symbolEle, iconName) 
       }
       if (!upperNodes.length) return;
 
-      const maskId = `t-icon-${iconName}-overlap-${pathId}`;
-      const mask = xmlDoc.createElementNS(SVG_NAMESPACE, 'mask');
-      mask.setAttribute('id', maskId);
-      mask.setAttribute('maskUnits', 'userSpaceOnUse');
-      mask.setAttribute('maskContentUnits', 'userSpaceOnUse');
-      mask.setAttribute('mask-type', 'luminance');
-      mask.setAttribute('visibility', 'visible');
-      mask.setAttribute('x', x);
-      mask.setAttribute('y', y);
-      mask.setAttribute('width', width);
-      mask.setAttribute('height', height);
-
-      const background = xmlDoc.createElementNS(SVG_NAMESPACE, 'rect');
-      background.setAttribute('x', x);
-      background.setAttribute('y', y);
-      background.setAttribute('width', width);
-      background.setAttribute('height', height);
-      background.setAttribute('fill', '#fff');
-      mask.appendChild(background);
-      upperNodes.forEach((upperNode) => {
-        mask.appendChild(makeMaskShape(upperNode, getPaintTypes(upperNode)[0]));
-      });
-      masks.push(mask);
-      child.setAttribute('mask', `url(#${maskId})`);
+      addMask(child, upperNodes, `t-icon-${iconName}-overlap-${pathId}`);
     });
   };
 

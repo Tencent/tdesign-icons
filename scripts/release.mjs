@@ -18,31 +18,51 @@ function getCurrentBranch() {
 
 async function getReleasablePackages() {
   const entries = await fs.readdir(packagesDir, { withFileTypes: true });
-  const packages = [];
-
-  for (const entry of entries) {
-    if (!entry.isDirectory()) continue;
+  const packages = await Promise.all(entries.map(async (entry) => {
+    if (!entry.isDirectory()) return null;
 
     const packageDir = path.join(packagesDir, entry.name);
     const changelogDir = path.join(packageDir, '.changelog');
     const packageFile = path.join(packageDir, 'package.json');
+    const pubspecFile = path.join(packageDir, 'pubspec.yaml');
 
     try {
-      const [changelogEntries, packageJson] = await Promise.all([
-        fs.readdir(changelogDir),
-        fs.readFile(packageFile, 'utf8'),
-      ]);
-      if (changelogEntries.length === 0) continue;
-      const manifest = JSON.parse(packageJson);
-      if (manifest.name && manifest.version) {
-        packages.push({ dir: packageDir, changelogDir, ...manifest });
+      const changelogEntries = await fs.readdir(changelogDir);
+      if (changelogEntries.length === 0) return null;
+
+      try {
+        const manifest = JSON.parse(await fs.readFile(packageFile, 'utf8'));
+        if (manifest.name && manifest.version) {
+          return {
+            dir: packageDir,
+            changelogDir,
+            manifestFile: packageFile,
+            ...manifest,
+          };
+        }
+      } catch {
+        // Try pubspec.yaml below.
+      }
+
+      const pubspec = await fs.readFile(pubspecFile, 'utf8');
+      const name = pubspec.match(/^name:\s*([^\s#]+)\s*(?:#.*)?$/m)?.[1];
+      const version = pubspec.match(/^version:\s*([^\s+#]+)(?:\+[^\s#]+)?\s*(?:#.*)?$/m)?.[1];
+      if (name && version) {
+        return {
+          dir: packageDir,
+          changelogDir,
+          manifestFile: pubspecFile,
+          name,
+          version,
+        };
       }
     } catch {
-      // A package without a changelog directory or package.json is not releasable.
+      // A package without changelog entries or a supported manifest is not releasable.
     }
-  }
+    return null;
+  }));
 
-  return packages.sort((a, b) => a.name.localeCompare(b.name));
+  return packages.filter(Boolean).sort((a, b) => a.name.localeCompare(b.name));
 }
 
 async function choosePackages(packages) {
@@ -70,10 +90,19 @@ function nextVersion(version, type) {
 
 async function updatePackageVersion(pkg, type) {
   const version = nextVersion(pkg.version, type);
-  const packageFile = path.join(pkg.dir, 'package.json');
-  const manifest = JSON.parse(await fs.readFile(packageFile, 'utf8'));
-  manifest.version = version;
-  await fs.writeFile(packageFile, `${JSON.stringify(manifest, null, 2)}\n`);
+  if (path.basename(pkg.manifestFile) === 'pubspec.yaml') {
+    const pubspec = await fs.readFile(pkg.manifestFile, 'utf8');
+    const updated = pubspec.replace(
+      /^(version:\s*)[^\s+#]+(?:\+[^\s#]+)?(\s*(?:#.*)?)$/m,
+      `$1${version}$2`,
+    );
+    if (updated === pubspec) throw new Error(`无法更新版本号：${pkg.manifestFile}`);
+    await fs.writeFile(pkg.manifestFile, updated);
+  } else {
+    const manifest = JSON.parse(await fs.readFile(pkg.manifestFile, 'utf8'));
+    manifest.version = version;
+    await fs.writeFile(pkg.manifestFile, `${JSON.stringify(manifest, null, 2)}\n`);
+  }
   return { name: pkg.name, from: pkg.version, to: version };
 }
 
@@ -93,13 +122,12 @@ async function main() {
   if (selected.length === 0) return;
   const type = await chooseVersion();
   if (!type) return;
-  const updates = selected.map((pkg) => ({ pkg, version: nextVersion(pkg.version, type) }));
   const branch = `release/${new Date().toISOString().slice(0, 10)}-${type}`;
   execFileSync('git', ['switch', '-c', branch], { stdio: 'inherit' });
-  for (const { pkg } of updates) {
-    const update = await updatePackageVersion(pkg, type);
+  const updates = await Promise.all(selected.map((pkg) => updatePackageVersion(pkg, type)));
+  updates.forEach((update) => {
     process.stdout.write(`${update.name}: ${update.from} -> ${update.to}\n`);
-  }
+  });
   process.stdout.write(`\n已创建分支：${branch}\n`);
 }
 

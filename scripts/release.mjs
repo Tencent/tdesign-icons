@@ -8,7 +8,7 @@ import {
 
 const root = process.cwd();
 const packagesDir = path.join(root, 'packages');
-const versionTypes = ['major', 'minor', 'patch'];
+const versionTypes = ['patch', 'minor', 'major'];
 
 function getCurrentBranch() {
   try {

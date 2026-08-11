@@ -2,7 +2,9 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import { execFileSync } from 'node:child_process';
-import { checkbox, select } from '@inquirer/prompts';
+import {
+  intro, outro, isCancel, cancel, select, multiselect,
+} from '@clack/prompts';
 
 const root = process.cwd();
 const packagesDir = path.join(root, 'packages');
@@ -66,18 +68,28 @@ async function getReleasablePackages() {
 }
 
 async function choosePackages(packages) {
-  return checkbox({
+  const result = await multiselect({
     message: '选择要发布的包',
-    instructions: '↑/↓ 移动，空格切换，a 全选，i 反选，Enter 确认',
-    choices: packages.map((pkg) => ({ name: `${pkg.name} (${pkg.version})`, value: pkg })),
+    options: packages.map((pkg) => ({ value: pkg, label: `${pkg.name} (${pkg.version})` })),
+    required: false,
   });
+  if (isCancel(result)) {
+    cancel('操作已取消');
+    return [];
+  }
+  return result;
 }
 
 async function chooseVersion() {
-  return select({
+  const result = await select({
     message: '选择版本类型',
-    choices: versionTypes.map((type) => ({ name: type, value: type })),
+    options: versionTypes.map((type) => ({ value: type, label: type })),
   });
+  if (isCancel(result)) {
+    cancel('操作已取消');
+    return '';
+  }
+  return result;
 }
 
 function nextVersion(version, type) {
@@ -116,6 +128,7 @@ async function main() {
   }
   execFileSync('git', ['switch', 'develop'], { stdio: 'inherit' });
   execFileSync('git', ['pull', '--ff-only', 'origin', 'develop'], { stdio: 'inherit' });
+  intro('Release 发布流程');
   const packages = await getReleasablePackages();
   if (packages.length === 0) throw new Error('packages 下没有包含 .changelog 内容的包。');
   const selected = await choosePackages(packages);
@@ -128,7 +141,7 @@ async function main() {
   updates.forEach((update) => {
     process.stdout.write(`${update.name}: ${update.from} -> ${update.to}\n`);
   });
-  process.stdout.write(`\n已创建分支：${branch}\n`);
+  outro(`已创建分支：${branch}`);
 }
 
 main().catch((error) => {

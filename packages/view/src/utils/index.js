@@ -9,11 +9,18 @@ export function getRoot() {
 }
 
 export function kebabToPascal(str) {
-  const words = str.split('-');
+  return str
+    .split('-')
+    .map((word) => word.replace(/(^|\d)([a-z])/g, (_, prefix, letter) => `${prefix}${letter.toUpperCase()}`))
+    .join('');
+}
 
-  const capitalizedWords = words.map((word) => word.charAt(0).toUpperCase() + word.slice(1));
-
-  return capitalizedWords.join('');
+export function pascalToKebab(str) {
+  return str
+    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+    .replace(/([A-Z])([A-Z][a-z])/g, '$1-$2')
+    .replace(/([a-zA-Z])(\d)/g, '$1-$2')
+    .toLowerCase();
 }
 
 export function appendStyleSheet() {

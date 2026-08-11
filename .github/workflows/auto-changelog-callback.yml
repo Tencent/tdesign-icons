@@ -27,5 +27,12 @@ jobs:
         uses: TDesignOteam/flow-pilot-action@develop
         with:
           token: ${{ secrets.TDESIGN_BOT_TOKEN }}
-          packages: "tdesign-icons-vue-next,tdesign-icons-react,tdesign-icons-view,tdesign-icons-svg,tdesign-icons-vue,tdesign-icons-web-components"
+          packages: |
+            tdesign-icons-vue-next
+            tdesign-icons-react
+            tdesign-icons-view
+            tdesign-icons-svg
+            tdesign-icons-vue
+            tdesign-icons-web-components
+            tdesign_flutter_icons
           pr_number: ${{ steps.pr.outputs.id }}

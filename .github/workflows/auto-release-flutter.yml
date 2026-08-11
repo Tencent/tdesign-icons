@@ -1,0 +1,47 @@
+name: auto-release-flutter
+
+on:
+  push:
+    tags:
+      - "tdesign_flutter_icons@*"
+
+jobs:
+  publish:
+    permissions:
+      contents: read
+      id-token: write
+    environment:
+      name: pub.dev
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: "pnpm"
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm run generate
+
+      - uses: flutter-actions/setup-flutter@v4
+        with:
+          channel: stable
+          version: 3.32.0
+
+      - uses: flutter-actions/setup-pubdev-credentials@v1
+
+      - name: install
+        working-directory: ./packages/flutter
+        run: flutter pub get
+
+      - name: build
+        working-directory: ./packages/flutter
+        run: dart ./tool/generate.dart
+
+      - name: publish
+        working-directory: ./packages/flutter
+        run: flutter pub publish --force

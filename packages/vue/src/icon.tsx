@@ -4,8 +4,6 @@ import renderFn from './utils/render-fn';
 
 import { IconBaseData, SVGJson } from './utils/types';
 
-let overlapMaskSeed = 0;
-
 // 这些属性在 SVG 中本就是驼峰写法，转成 kebab 会失效
 const camelCaseSvgAttrs = ['viewBox', 'maskUnits', 'maskContentUnits'];
 
@@ -34,7 +32,6 @@ function jsonToUnderline(obj: SVGJson) {
 }
 
 export default Vue.extend({
-  functional: true,
   props: {
     icon: {
       type: Object as PropType<SVGJson>,
@@ -44,15 +41,20 @@ export default Vue.extend({
       default: '',
     },
   },
-  render(createElement, context): VNode {
+  render(h): VNode {
+    // 转为非函数式组件后，每个图标实例拥有稳定的 _uid，用它生成
+    // 稳定的 overlap mask 前缀，避免测试快照因全局自增计数不断变化
+    const context = {
+      props: this.$props,
+      data: (this.$vnode?.data || {}) as IconBaseData,
+    };
     const { icon, id, ...userProps } = context.props;
-    const overlapMaskPrefix = `t-icon-${id}-instance-${overlapMaskSeed}`;
-    overlapMaskSeed += 1;
+    const overlapMaskPrefix = `t-icon-${id}-instance-${(this as any)._uid}`;
 
     const {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       staticClass, style, icon: _, id: __, onClick, ...otherProps
-    } = (context.data as IconBaseData).props;
+    } = context.data.props;
     const {
       class: customClassName,
       staticClass: customStaticClassName,
@@ -77,7 +79,7 @@ export default Vue.extend({
 
     const click = (onClick || on?.click) as Function;
 
-    return renderFn(createElement, icon, {
+    return renderFn(h, icon, {
       class: undefined,
       staticClass: finalCls,
       props: { ...userProps, ...otherProps, overlapMaskPrefix },

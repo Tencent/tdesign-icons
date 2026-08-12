@@ -46,6 +46,19 @@ function contentHash(value: unknown): string {
   return hash.toString(36);
 }
 
+// 同一图标（同 id 同内容）渲染多个实例时，若 mask 前缀完全一致会与内容相同的
+// overlap mask 重复，导致多个 DOM 元素 id 重复、SVG url(#) 引用重叠。
+// 这里以“内容哈希”为分组 key，为同组内的每个实例追加一个自增序号，保证：
+// 1) 同图标多实例 -> 序号不同 -> mask id 唯一，互不重叠；
+// 2) 计数器为模块级状态，测试每次加载新模块即重置，同一测试中相同数量的
+//    图标实例会产生相同的序号序列，快照仍保持跨会话稳定。
+const overlapInstanceCounters = new Map<string, number>();
+function nextOverlapInstanceId(hash: string): string {
+  const seq = overlapInstanceCounters.get(hash) ?? 0;
+  overlapInstanceCounters.set(hash, seq + 1);
+  return `${hash}-${seq}`;
+}
+
 export default Vue.extend({
   functional: true,
   props: {
@@ -62,12 +75,13 @@ export default Vue.extend({
     // 先统一属性命名，确保基于同一结构的对象生成一致的指纹
     // （icon 可能被多个相同实例共享，原地转换后需在统一形式下计算 hash）
     jsonToUnderline(icon);
-    // 使用确定性的 id（图标名）+ 图标内容指纹作为 overlap mask 前缀。
+    // 使用确定性的 id（图标名）+ 图标内容指纹 + 实例序号作为 overlap mask 前缀。
     // - 内容指纹基于图标本身生成，跨会话稳定，测试快照不会因运行时全局自增计数
     //   或组件 _uid 在不同会话间变化而不断更新；
-    // - 同时指纹与图标内容绑定，不同内容（即使 id 相同）会得到不同的前缀，
-    //   避免多个相同 id 的图标实例复用同一 mask 造成 SVG url(#) 引用冲突。
-    const overlapMaskPrefix = `t-icon-${id}-instance-${contentHash(icon)}`;
+    // - 同时指纹与图标内容绑定，不同内容（即使 id 相同）会得到不同的前缀；
+    // - 同组（同 id 同内容）的多个实例追加自增序号，保证每个实例的 mask id 唯一、
+    //   互不重叠，避免 SVG url(#) 引用指向错误的 mask。
+    const overlapMaskPrefix = `t-icon-${id}-instance-${nextOverlapInstanceId(contentHash(icon))}`;
 
     const {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars

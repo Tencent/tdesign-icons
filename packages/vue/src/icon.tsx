@@ -32,6 +32,7 @@ function jsonToUnderline(obj: SVGJson) {
 }
 
 export default Vue.extend({
+  functional: true,
   props: {
     icon: {
       type: Object as PropType<SVGJson>,
@@ -41,20 +42,17 @@ export default Vue.extend({
       default: '',
     },
   },
-  render(h): VNode {
-    // 转为非函数式组件后，每个图标实例拥有稳定的 _uid，用它生成
-    // 稳定的 overlap mask 前缀，避免测试快照因全局自增计数不断变化
-    const context = {
-      props: this.$props,
-      data: (this.$vnode?.data || {}) as IconBaseData,
-    };
+  render(createElement, context): VNode {
     const { icon, id, ...userProps } = context.props;
-    const overlapMaskPrefix = `t-icon-${id}-instance-${(this as any)._uid}`;
+    // 使用确定性的 id（图标名）作为 overlap mask 前缀，避免测试快照
+    // 因运行时全局自增计数 / 实例 _uid 在不同会话间变化而不断更新。
+    // mask 内容为纯静态形状，多个相同图标实例共享同一 mask 不会产生副作用。
+    const overlapMaskPrefix = `t-icon-${id}`;
 
     const {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       staticClass, style, icon: _, id: __, onClick, ...otherProps
-    } = context.data.props;
+    } = (context.data as IconBaseData).props;
     const {
       class: customClassName,
       staticClass: customStaticClassName,
@@ -79,7 +77,7 @@ export default Vue.extend({
 
     const click = (onClick || on?.click) as Function;
 
-    return renderFn(h, icon, {
+    return renderFn(createElement, icon, {
       class: undefined,
       staticClass: finalCls,
       props: { ...userProps, ...otherProps, overlapMaskPrefix },

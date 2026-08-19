@@ -1,5 +1,11 @@
 # tdesign-icons-vue-next
 
+## 🌈 0.4.10 `2026-08-19`
+
+### 🚀 Features
+
+- 新增 `tablet` 和 `tablet-filled` 图标 @RADWIMPS426 ([#293](https://github.com/Tencent/tdesign-icons/pull/293))
+
 ## 🌈 0.4.9 `2026-08-06`
 
 ### 🐞 Bug Fixes

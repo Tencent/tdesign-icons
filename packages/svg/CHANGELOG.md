@@ -1,5 +1,11 @@
 # tdesign-icons-svg
 
+## 🌈 0.4.6 `2026-08-19`
+
+### 🚀 Features
+
+- 新增 `tablet` 和 `tablet-filled` 图标 @RADWIMPS426 ([#293](https://github.com/Tencent/tdesign-icons/pull/293))
+
 ## 🌈 0.4.5 `2026-07-23`
 
 ### 🚀 Features

@@ -8,7 +8,7 @@ import '../style/css';
 
 const { classPrefix } = ConfigContext;
 
-const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.4.4/fonts/index.css';
+const CDN_ICONFONT_URL = 'https://tdesign.gtimg.com/icon/0.4.5/fonts/index.css';
 
 export const IconFont = Vue.extend({
   name: 'IconFont',

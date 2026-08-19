@@ -1,5 +1,15 @@
 # tdesign-icons-view
 
+## 🌈 0.5.10 `2026-08-19`
+
+### 🚀 Features
+
+- 新增 `tablet` 和 `tablet-filled` 图标 @RADWIMPS426 ([#293](https://github.com/Tencent/tdesign-icons/pull/293))
+
+### 🐞 Bug Fixes
+
+- 修复 React 和 Vue 图标组件名复制时的大小写及数字分隔问题 @liweijie0812 ([#288](https://github.com/Tencent/tdesign-icons/pull/288))
+
 ## 🌈 0.5.9 `2026-08-06`
 
 ### 🐞 Bug Fixes

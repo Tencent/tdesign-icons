@@ -393,6 +393,38 @@ const configuration = reactive({
   ...initConfiguration,
 });
 
+const applyQueryConfiguration = () => {
+  const searchParams = new URLSearchParams(window.location.search);
+  const hasFillColor = ['fillColor', 'fillColor1', 'fillColor2'].some((key) => searchParams.has(key));
+  const hasStrokeColor = ['strokeColor', 'strokeColor1', 'strokeColor2'].some((key) => searchParams.has(key));
+  const hasSecondaryColor = searchParams.has('fillColor2') || searchParams.has('strokeColor2');
+  const fillColor = searchParams.get('fillColor');
+  const strokeColor = searchParams.get('strokeColor');
+  const colorParams = {
+    fillColor1: searchParams.get('fillColor1') || fillColor,
+    fillColor2: searchParams.get('fillColor2') || fillColor,
+    strokeColor1: searchParams.get('strokeColor1') || strokeColor,
+    strokeColor2: searchParams.get('strokeColor2') || strokeColor,
+  };
+
+  if (configuration.currentType !== 'filled' && hasFillColor) {
+    configuration.strokeTypes = 'outlineFilled';
+    configuration.colorType = hasSecondaryColor ? 'multiple' : 'double';
+  } else if (configuration.currentType !== 'filled' && hasStrokeColor) {
+    configuration.strokeTypes = 'outline';
+    configuration.colorType = hasSecondaryColor ? 'double' : 'single';
+  }
+
+  Object.entries(colorParams).forEach(([key, value]) => {
+    if (value) configuration[key] = value;
+  });
+
+  const strokeWidth = Number(searchParams.get('strokeWidth'));
+  if (strokeWidth >= 0.5 && strokeWidth <= 2.5) {
+    configuration.strokeWidth = strokeWidth;
+  }
+};
+
 watch(
   () => configuration.currentType,
   (newType) => {
@@ -779,6 +811,7 @@ onMounted(() => {
     configuration.fillColor1 = configCache.fillColor1;
     configuration.fillColor2 = configCache.fillColor2;
   }
+  applyQueryConfiguration();
 
   Object.keys(manifest.value).forEach((renderType) => {
     const currentIcons = manifest.value[renderType];

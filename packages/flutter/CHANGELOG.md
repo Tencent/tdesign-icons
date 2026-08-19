@@ -1,5 +1,11 @@
 # tdesign_flutter_icons
 
+## 🌈 0.0.6 `2026-08-19`
+
+### 🚀 Features
+
+- 新增 `tablet` 和 `tablet-filled` 图标 @RADWIMPS426 ([#293](https://github.com/Tencent/tdesign-icons/pull/293))
+
 ## 🌈 0.0.5 `2026-07-31`
 
 - 包名由 `tdesign_icons` 改为 `tdesign_flutter_icons`

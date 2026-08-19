@@ -358,6 +358,10 @@ import EmptySvg from './components/empty-svg.vue';
 
 let popperInstance = null;
 
+const DEFAULT_FILL_COLOR1 = '#02d8f2';
+const DEFAULT_FILL_COLOR2 = '#ffaa75';
+const DEFAULT_STROKE_COLOR2 = '#0262f8';
+
 const initConfiguration = {
   currentType: 'outline',
   colorType: 'single',
@@ -388,6 +392,38 @@ const activeCategory = ref('');
 const configuration = reactive({
   ...initConfiguration,
 });
+
+const applyQueryConfiguration = () => {
+  const searchParams = new URLSearchParams(window.location.search);
+  const hasFillColor = ['fillColor', 'fillColor1', 'fillColor2'].some((key) => searchParams.has(key));
+  const hasStrokeColor = ['strokeColor', 'strokeColor1', 'strokeColor2'].some((key) => searchParams.has(key));
+  const hasSecondaryColor = searchParams.has('fillColor2') || searchParams.has('strokeColor2');
+  const fillColor = searchParams.get('fillColor');
+  const strokeColor = searchParams.get('strokeColor');
+  const colorParams = {
+    fillColor1: searchParams.get('fillColor1') || fillColor,
+    fillColor2: searchParams.get('fillColor2') || fillColor,
+    strokeColor1: searchParams.get('strokeColor1') || strokeColor,
+    strokeColor2: searchParams.get('strokeColor2') || strokeColor,
+  };
+
+  if (configuration.currentType !== 'filled' && hasFillColor) {
+    configuration.strokeTypes = 'outlineFilled';
+    configuration.colorType = hasSecondaryColor ? 'multiple' : 'double';
+  } else if (configuration.currentType !== 'filled' && hasStrokeColor) {
+    configuration.strokeTypes = 'outline';
+    configuration.colorType = hasSecondaryColor ? 'double' : 'single';
+  }
+
+  Object.entries(colorParams).forEach(([key, value]) => {
+    if (value) configuration[key] = value;
+  });
+
+  const strokeWidth = Number(searchParams.get('strokeWidth'));
+  if (strokeWidth >= 0.5 && strokeWidth <= 2.5) {
+    configuration.strokeWidth = strokeWidth;
+  }
+};
 
 watch(
   () => configuration.currentType,
@@ -441,9 +477,9 @@ watch(
     if (!initialized.value) return;
     configuration.colorType = 'double';
     if (newType === 'outlineFilled') {
-      configuration.fillColor1 = '#bbd3fb';
-      configuration.fillColor2 = '#bbd3fb';
-      configuration.strokeColor2 = configuration.strokeColor1;
+      configuration.fillColor1 = DEFAULT_FILL_COLOR1;
+      configuration.fillColor2 = DEFAULT_FILL_COLOR2;
+      configuration.strokeColor2 = DEFAULT_STROKE_COLOR2;
       return;
     }
     configuration.fillColor2 = 'transparent';
@@ -463,12 +499,12 @@ watch(
         configuration.fillColor2 = configuration.fillColor1;
         configuration.strokeColor2 = configuration.strokeColor1;
       } else {
-        configuration.strokeColor2 = '#0052d9';
+        configuration.strokeColor2 = DEFAULT_STROKE_COLOR2;
       }
     }
     if (newColorType === 'multiple') {
-      configuration.fillColor2 = '#f78d94';
-      configuration.strokeColor2 = '#0052d9';
+      configuration.fillColor2 = DEFAULT_FILL_COLOR2;
+      configuration.strokeColor2 = DEFAULT_STROKE_COLOR2;
     }
   },
 );
@@ -775,6 +811,7 @@ onMounted(() => {
     configuration.fillColor1 = configCache.fillColor1;
     configuration.fillColor2 = configCache.fillColor2;
   }
+  applyQueryConfiguration();
 
   Object.keys(manifest.value).forEach((renderType) => {
     const currentIcons = manifest.value[renderType];

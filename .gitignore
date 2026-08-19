@@ -9,6 +9,8 @@ converted_svg
 # Flutter generated files (发布前生成，不提交到 Git)
 packages/flutter/fonts/*.ttf
 packages/flutter/lib/src/assets.g.dart
+packages/flutter/lib/src/svg_data.g.dart
+packages/flutter/lib/src/icons.g.dart
 
 # build
 dist/

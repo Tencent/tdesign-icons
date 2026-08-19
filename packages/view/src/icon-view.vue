@@ -358,6 +358,10 @@ import EmptySvg from './components/empty-svg.vue';
 
 let popperInstance = null;
 
+const DEFAULT_FILL_COLOR1 = '#02d8f2';
+const DEFAULT_FILL_COLOR2 = '#ffaa75';
+const DEFAULT_STROKE_COLOR2 = '#0262f8';
+
 const initConfiguration = {
   currentType: 'outline',
   colorType: 'single',
@@ -441,9 +445,9 @@ watch(
     if (!initialized.value) return;
     configuration.colorType = 'double';
     if (newType === 'outlineFilled') {
-      configuration.fillColor1 = '#bbd3fb';
-      configuration.fillColor2 = '#bbd3fb';
-      configuration.strokeColor2 = configuration.strokeColor1;
+      configuration.fillColor1 = DEFAULT_FILL_COLOR1;
+      configuration.fillColor2 = DEFAULT_FILL_COLOR2;
+      configuration.strokeColor2 = DEFAULT_STROKE_COLOR2;
       return;
     }
     configuration.fillColor2 = 'transparent';
@@ -463,12 +467,12 @@ watch(
         configuration.fillColor2 = configuration.fillColor1;
         configuration.strokeColor2 = configuration.strokeColor1;
       } else {
-        configuration.strokeColor2 = '#0052d9';
+        configuration.strokeColor2 = DEFAULT_STROKE_COLOR2;
       }
     }
     if (newColorType === 'multiple') {
-      configuration.fillColor2 = '#f78d94';
-      configuration.strokeColor2 = '#0052d9';
+      configuration.fillColor2 = DEFAULT_FILL_COLOR2;
+      configuration.strokeColor2 = DEFAULT_STROKE_COLOR2;
     }
   },
 );

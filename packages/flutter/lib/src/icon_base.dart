@@ -24,7 +24,9 @@ String _colorToHex(Color color) {
   if (a == 'ff') {
     return '#$r$g$b';
   }
-  return '#$a$r$g$b';
+  // SVG/CSS 颜色使用 #RRGGBBAA（alpha 在末尾），而 Dart Color 内部是 ARGB，
+  // 因此这里必须把 alpha 放到最后，否则半透明颜色会被 SVG 渲染器错误解析。
+  return '#$r$g$b$a';
 }
 
 /// TDesign 多色 SVG 图标基础渲染组件。

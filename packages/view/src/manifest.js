@@ -3832,6 +3832,10 @@ export const manifest = {
           keywords: ['手机搜索', '查找手机'],
         },
         {
+          name: 'tablet-filled',
+          keywords: ['平板电脑', '平板', '平板设备'],
+        },
+        {
           name: 'remote-wave-filled',
           keywords: ['远程波动', '远程波'],
         },
@@ -9696,6 +9700,10 @@ export const manifest = {
         {
           name: 'sim-card-2',
           keywords: ['SIM卡', '用户身份模块卡'],
+        },
+        {
+          name: 'tablet',
+          keywords: ['平板电脑', '平板', '平板设备'],
         },
         {
           name: 'tv',

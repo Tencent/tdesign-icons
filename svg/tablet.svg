@@ -1,0 +1,9 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="tablet">
+<g id="fill1">
+<path d="M4 2H20V22H4V2Z" fill="white"/>
+</g>
+<path id="stroke1" d="M4 2H20V22H4V2Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+<path id="stroke2" d="M14 6H10M12 18H12.0039V18.0039H12V18Z" stroke="black" stroke-width="2" stroke-linecap="square"/>
+</g>
+</svg>

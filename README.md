@@ -13,8 +13,8 @@ TDesign Icons is a mono-repo for TDesign Icons packages and resources management
 | Package | Framework | Version | Downloads |
 |---|---|---|---|
 | [tdesign-icons-vue-next](./packages/vue-next) | Vue 3 | [![npm](https://img.shields.io/npm/v/tdesign-icons-vue-next.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-vue-next) | [![npm](http://img.shields.io/npm/dm/tdesign-icons-vue-next.svg)](https://npmjs.org/package/tdesign-icons-vue-next) |
-| [tdesign-icons-vue](./packages/vue) | Vue 2 | [![npm](https://img.shields.io/npm/v/tdesign-icons-vue.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-vue) | [![npm](http://img.shields.io/npm/dm/tdesign-icons-vue.svg)](https://npmjs.org/package/tdesign-icons-vue) |
 | [tdesign-icons-react](./packages/react) | React | [![npm](https://img.shields.io/npm/v/tdesign-icons-react.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-react) | [![npm](http://img.shields.io/npm/dm/tdesign-icons-react.svg)](https://npmjs.org/package/tdesign-icons-react) |
+| [tdesign-icons-vue](./packages/vue) | Vue 2 | [![npm](https://img.shields.io/npm/v/tdesign-icons-vue.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-vue) | [![npm](http://img.shields.io/npm/dm/tdesign-icons-vue.svg)](https://npmjs.org/package/tdesign-icons-vue) |
 | [tdesign-icons-web-components](./packages/web-components) | Web Components | [![npm](https://img.shields.io/npm/v/tdesign-icons-web-components.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-web-components) | [![npm](https://img.shields.io/npm/dm/tdesign-icons-web-components.svg)](https://www.npmjs.com/package/tdesign-icons-web-components) |
 | [tdesign-icons-view](./packages/view) | Web Components | [![npm](https://img.shields.io/npm/v/tdesign-icons-view.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-view) | [![npm](http://img.shields.io/npm/dm/tdesign-icons-view.svg)](https://npmjs.org/package/tdesign-icons-view) |
 | [tdesign-icons-svg](./packages/svg) | SVG | [![npm](https://img.shields.io/npm/v/tdesign-icons-svg.svg?style=flat)](https://www.npmjs.com/package/tdesign-icons-svg) | [![npm](http://img.shields.io/npm/dm/tdesign-icons-svg.svg)](https://npmjs.org/package/tdesign-icons-svg) |
@@ -36,9 +36,7 @@ If you have updated the original icon resources, please execute `pnpm run genera
 
 ## Update Versions and CHANGELOG 🔖
 
-execute `npx changeset`, and choose the version number change rules for each package according to the specific situation, and fill in the content of the `CHANGELOG`.
-
-then execute `pnpm changeset version`，the new content of `CHANGELOG` will be injected into the package.json and `CHANGELOG` of each framework package in the `packages/` directory in turn.
+execute `npm run release`, and choose the version number change rules for each package according to the specific situation.
 
 ## Build NPM Packages 📦
 

@@ -60,6 +60,7 @@ export interface OpacityOverlap {
 }
 
 const detectionCache = new Map<string, OpacityOverlap[]>();
+const internalStrokeDetectionCache = new Map<string, string[]>();
 
 function getElementChildren(node: SvgElement): SvgElement[] {
   return Array.from(node?.childNodes || []).filter((child: SvgElement) => child.nodeType === ELEMENT_NODE);
@@ -144,7 +145,6 @@ function mergeStrokeLayers(node: SvgElement) {
 
 /**
  * 引用了不存在的 clipPath/mask 时元素不会被绘制，检测前需要清掉这类失效引用，
- * 否则整张图都是空白。
  */
 function dropDanglingReferences(elements: SvgElement[]) {
   const ids = new Set(elements.map((element) => element.getAttribute('id')).filter(Boolean));
@@ -175,7 +175,6 @@ function collectPaintedElements(layer: SvgElement, paintType: PaintType) {
 
 /**
  * 收集同一父节点下按绘制顺序排列的单一 paint 图层。fill 和 stroke 也可能互相
- * 重叠（例如 support），因此不能再按 paint 类型拆开检测。
  */
 function collectOverlapLayerGroups(root: SvgElement): OverlapLayer[][] {
   const groups: OverlapLayer[][] = [];
@@ -249,6 +248,76 @@ function hasAlphaOverlap(lowerAlpha: Uint8Array, upperAlpha: Uint8Array) {
   }
 
   return false;
+}
+
+/**
+ * 检测同一个 stroke 图层中多条子路径之间的重叠
+ */
+function detectInternalStrokeOverlapGroups(svgString: string): string[] {
+  const xmlDoc = new DOMParser().parseFromString(svgString, 'image/svg+xml');
+  const root = xmlDoc.documentElement;
+  if (!root.getAttribute('xmlns')) {
+    root.setAttribute('xmlns', SVG_NAMESPACE);
+  }
+
+  const allElements: SvgElement[] = [];
+  const paintableElements: SvgElement[] = [];
+  const collect = (element: SvgElement, insideDefinition: boolean) => {
+    allElements.push(element);
+    const definition = insideDefinition || isDefinition(element);
+    if (!definition) {
+      paintableElements.push(element);
+    }
+    getElementChildren(element).forEach((child) => collect(child, definition));
+  };
+  collect(root, false);
+
+  dropDanglingReferences(allElements);
+  paintableElements.forEach((element) => {
+    OPACITY_ATTRS.forEach((attribute) => element.removeAttribute(attribute));
+  });
+
+  const serializer = new XMLSerializer();
+  const alphaByLayer = new Map<OverlapLayer, Uint8Array>();
+  const getLayerAlpha = (layer: OverlapLayer) => {
+    const cached = alphaByLayer.get(layer);
+    if (cached) return cached;
+
+    applyTestPaint(paintableElements, layer.paintedElements, layer.paintType);
+    const alpha = renderAlpha(serializer.serializeToString(xmlDoc));
+    alphaByLayer.set(layer, alpha);
+    return alpha;
+  };
+  const overlappingGroups = new Set<string>();
+
+  const visit = (parent: SvgElement) => {
+    getElementChildren(parent).forEach(visit);
+
+    const groupPathId = parent.getAttribute?.('id') || '';
+    if (!/^stroke\d+$/.test(groupPathId)) return;
+
+    const layers = getElementChildren(parent)
+      .filter((child) => !isDefinition(child))
+      .map((child) => ({
+        paintType: 'stroke' as PaintType,
+        pathId: '',
+        paintedElements: collectPaintedElements(child, 'stroke'),
+      }))
+      .filter((layer) => layer.paintedElements.size);
+
+    layers.some((lowerLayer, lowerIndex) => {
+      const lowerAlpha = getLayerAlpha(lowerLayer);
+      const hasOverlap = layers.slice(lowerIndex + 1)
+        .some((upperLayer) => hasAlphaOverlap(lowerAlpha, getLayerAlpha(upperLayer)));
+      if (hasOverlap) {
+        overlappingGroups.add(groupPathId);
+      }
+      return hasOverlap;
+    });
+  };
+
+  visit(root);
+  return Array.from(overlappingGroups).sort();
 }
 
 function detectOverlaps(svgString: string): OpacityOverlap[] {
@@ -347,6 +416,26 @@ export function detectOpacityOverlaps(iconName: string): OpacityOverlap[] {
 
   detectionCache.set(iconName, overlaps);
   return overlaps;
+}
+
+export function detectInternalStrokeOverlapGroupIds(iconName: string): string[] {
+  const cached = internalStrokeDetectionCache.get(iconName);
+  if (cached) {
+    return cached;
+  }
+
+  let groups: string[] = [];
+  try {
+    groups = detectInternalStrokeOverlapGroups(
+      fs.readFileSync(path.join(SVG_DIR, `${iconName}.svg`), 'utf-8'),
+    );
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    throw new Error(`检测图标 ${iconName} 的同层半透明路径重叠失败: ${message}`);
+  }
+
+  internalStrokeDetectionCache.set(iconName, groups);
+  return groups;
 }
 
 export function getOpacityOverlapDetections() {

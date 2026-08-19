@@ -23,12 +23,13 @@
   "scripts": {
     "husky": "husky",
     "prepare": "husky install",
+    "release": "node scripts/release.mjs",
     "dev:icons": "pnpm -C packages/view dev ",
     "lint": "eslint ./packages --max-warnings 0 --ext .ts,.tsx --fix",
     "generate": "rimraf converted_svg/* && cross-env gulp --require ts-node/register/transpile-only"
   },
   "devDependencies": {
-    "@changesets/cli": "catalog:",
+    "@clack/prompts": "catalog:",
     "@resvg/resvg-js": "catalog:",
     "@types/fs-extra": "catalog:types",
     "@types/gulp": "catalog:types",

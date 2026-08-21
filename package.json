@@ -26,7 +26,7 @@
     "release": "node scripts/release.mjs",
     "dev:icons": "pnpm -C packages/view dev ",
     "lint": "eslint ./packages --max-warnings 0 --ext .ts,.tsx --fix",
-    "generate": "rimraf converted_svg/* && ts-node --transpile-only scripts/generate-flutter-overlap-manifest.ts && cross-env gulp --require ts-node/register/transpile-only"
+    "generate": "rimraf converted_svg/* packages/flutter/tool/generated && cross-env gulp --require ts-node/register/transpile-only"
   },
   "devDependencies": {
     "@clack/prompts": "catalog:",

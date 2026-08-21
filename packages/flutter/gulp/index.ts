@@ -5,15 +5,14 @@ import path from 'path';
 /**
  * Flutter 图标生成任务（接入根目录 gulp 统一流程）。
  *
- * 调用 `packages/flutter/tool/generate.dart` 生成：
+ * 通过 JS 脚本（Node 子进程）调用 `packages/flutter/tool/generate.dart` 生成文件：
  * - `lib/src/assets.g.dart`（iconfont 常量）
  * - `lib/src/svg_data.g.dart`（多色/可变粗细 SVG 数据）
  * - `lib/src/icons.g.dart`（具名图标组件，如 AiIcon / AddCircleIcon）
  * - `fonts/t.ttf`（iconfont 字体文件）
  *
- * 由于 `pnpm run generate` 会在所有 CI job 中执行，而 Dart/Flutter SDK 仅
- * 在 Flutter 相关 job 中存在，因此当检测不到 Flutter/Dart 环境时会打印提示
- * 并跳过，不影响其它端（React/Vue/SVG...）的生成流程。
+ * 这里仅负责"生成文件"，不涉及工具链解析等复杂逻辑：当环境中存在 dart 命令
+ * 时直接调用生成；不存在（如仅构建 React/Vue 的 CI job）时跳过，不影响其它端。
  */
 
 // packages/flutter 目录绝对路径
@@ -35,33 +34,10 @@ function hasOnPath(name: string): boolean {
   });
 }
 
-/**
- * 判断当前环境是否具备 Flutter/Dart 工具链。
- * 优先使用 fvm（与 .fvmrc 锁定的 Flutter 版本保持一致），回退 flutter/dart。
- * 返回统一命令前缀数组（如 ['fvm'] 或 []），不具备时返回 null。
- */
-function resolveToolchain(): string[] | null {
-  if (hasOnPath('fvm')) {
-    return ['fvm'];
-  }
-  if (hasOnPath('flutter') && hasOnPath('dart')) {
-    return [];
-  }
-  return null;
-}
-
-/**
- * 运行子进程并返回 Promise，透传 stdout/stderr。
- * @param prefix 命令前缀（fvm 场景为 ['fvm']，原生场景为 []）
- * @param sub    子命令名，如 'flutter' / 'dart'
- * @param args   子命令参数
- */
-function run(prefix: string[], sub: string, args: string[]): Promise<void> {
-  const cmd = prefix.length ? prefix[0] : sub;
-  const fullArgs = prefix.length ? [...prefix.slice(1), sub, ...args] : args;
-
+/** 运行子进程并返回 Promise，透传 stdout/stderr。 */
+function run(cmd: string, args: string[]): Promise<void> {
   return new Promise((resolve, reject) => {
-    const child = spawn(cmd, fullArgs, {
+    const child = spawn(cmd, args, {
       cwd: flutterDir,
       stdio: 'inherit',
       shell: false,
@@ -75,7 +51,7 @@ function run(prefix: string[], sub: string, args: string[]): Promise<void> {
       if (code === 0) {
         resolve();
       } else {
-        reject(new Error(`"${cmd} ${fullArgs.join(' ')}" exited with code ${code}`));
+        reject(new Error(`"${cmd} ${args.join(' ')}" exited with code ${code}`));
       }
     });
   });
@@ -88,14 +64,10 @@ function hasResolvedDeps(): boolean {
 
 export function flutterTask() {
   return async function runFlutterTask(): Promise<void> {
-    const prefix = resolveToolchain();
-
-    if (!prefix) {
+    // 无 dart 环境（如仅构建 React/Vue 的 CI job）时跳过。
+    if (!hasOnPath('dart')) {
       // eslint-disable-next-line no-console
-      console.log(
-        '[flutter] 未检测到 Flutter/Dart 环境，跳过 Flutter 图标生成。' +
-          '（仅在安装 Flutter SDK 的环境下才会生成 Flutter 图标代码）',
-      );
+      console.log('[flutter] 未检测到 dart 环境，跳过 Flutter 图标生成。');
       return;
     }
 
@@ -103,11 +75,11 @@ export function flutterTask() {
     if (!hasResolvedDeps()) {
       // eslint-disable-next-line no-console
       console.log('[flutter] 未检测到 package_config.json，先执行 flutter pub get...');
-      await run(prefix, 'flutter', ['pub', 'get']);
+      await run('flutter', ['pub', 'get']);
     }
 
     // eslint-disable-next-line no-console
     console.log('[flutter] 生成 Flutter 图标代码...');
-    await run(prefix, 'dart', ['run', 'tool/generate.dart']);
+    await run('dart', ['run', 'tool/generate.dart']);
   };
 }

@@ -144,7 +144,19 @@ export function flutterGetIconData({
   walk(node);
 
   // 渲染回 SVG 字符串（含 __FILL1__/__STROKE1__ 等占位符）
-  const svg = renderNode(node);
+  let svg = renderNode(node);
+
+  // 品牌/logo 图标遵循「不展示修改效果」约束（对齐 view 端 `generate-view-svg-sprite.ts`）：
+  // 不注入多色/可变粗细占位符，保持单色，颜色统一走 __COLOR__（运行时由 `color` 注入）。
+  if (name.startsWith('logo-')) {
+    svg = svg
+      .replaceAll('__FILL1__', '__COLOR__')
+      .replaceAll('__FILL2__', '__COLOR__')
+      .replaceAll('__STROKE1__', '__COLOR__')
+      .replaceAll('__STROKE2__', '__COLOR__')
+      // 描边宽度固定为默认值，不再暴露可变 strokeWidth
+      .replaceAll('__STROKE_WIDTH__', '2');
+  }
 
   const constName = `svg${upperCamelCase(name)}`;
   // 使用 raw 多行字符串字面量，`$`/`\` 均无需转义；

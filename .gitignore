@@ -11,6 +11,7 @@ packages/flutter/fonts/*.ttf
 packages/flutter/lib/src/assets.g.dart
 packages/flutter/lib/src/svg_data.g.dart
 packages/flutter/lib/src/icons.g.dart
+packages/flutter/tool/overlap_manifest.json
 
 # build
 dist/

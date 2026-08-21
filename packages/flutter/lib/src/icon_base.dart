@@ -11,9 +11,9 @@ class _Nodoc {
 /// 颜色通道回退：当 `fill2` 未设置时回退到 `fill1`，再回退到 `color`。
 ///
 /// 与 vue-next / react 的 `fillColor2 ?? fillColor1 ?? color` 规则保持一致。
-Color? _resolveChannel1(Color? channel1, Color? color) => channel1 ?? color;
+Color _resolveChannel1(Color? channel1, Color color) => channel1 ?? color;
 
-Color? _resolveChannel2(Color? channel2, Color? channel1, Color? color) =>
+Color _resolveChannel2(Color? channel2, Color? channel1, Color color) =>
     channel2 ?? channel1 ?? color;
 
 /// 将 [Color] 转换为 SVG 可用的十六进制颜色字符串。

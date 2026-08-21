@@ -16,6 +16,13 @@ dependencies:
   tdesign_flutter_icons:
     path: ../
 
+dependency_overrides:
+  # 本地开发始终使用当前目录的 tdesign_flutter_icons（0.0.6）。
+  # tdesign_flutter 1.0.0-alpha.1 依赖 tdesign_flutter_icons ^0.0.5（<0.0.6），
+  # 与本地 0.0.6 版本约束冲突，需用 override 强制解析到本地源码。
+  tdesign_flutter_icons:
+    path: ../
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

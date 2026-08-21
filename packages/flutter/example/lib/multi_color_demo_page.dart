@@ -2,15 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tdesign_flutter_icons/tdesign_flutter_icons.dart';
 
 /// 多色 / 可变粗细 / 可变颜色图标示例页。
-///
-/// 展示通过具名图标组件（如 `AiIcon`、`AddCircleIcon`）使用多色图标，
-/// 支持 fillColor1/fillColor2/strokeColor1/strokeColor2 四通道上色、
-/// strokeWidth 可变粗细与颜色动态调节。
-///
-/// 颜色操作参考 `packages/view/src/icon-view.vue`：
-/// - 提供「单色 / 双色 / 多色」三种颜色模式切换（对应 view 的 `colorType`）；
-/// - 每种模式下按需展示对应颜色通道，用自由颜色选择器（含 alpha）分别上色；
-/// - 默认颜色与 view 保持一致（fill1 #02d8f2、fill2 #ffaa75、stroke2 #0262f8）。
 class MultiColorDemoPage extends StatefulWidget {
   const MultiColorDemoPage({super.key});
 
@@ -18,7 +9,7 @@ class MultiColorDemoPage extends StatefulWidget {
   State<MultiColorDemoPage> createState() => _MultiColorDemoPageState();
 }
 
-/// 颜色模式，对齐 view 的 `colorType`。
+/// 颜色模式（对齐 view 的 `colorType`）。
 enum ColorMode {
   single('单色'),
   double('双色'),
@@ -28,7 +19,7 @@ enum ColorMode {
   final String label;
 }
 
-/// 可独立上色的颜色通道定义。
+/// 可独立上色的颜色通道。
 enum _ColorChannel {
   fill1('填充 1'),
   fill2('填充 2'),
@@ -43,18 +34,14 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   double _strokeWidth = 2;
   ColorMode _colorMode = ColorMode.multiple;
 
-  // 四通道颜色（与 view 默认色一致）。
+  // 四通道默认颜色与 view 保持一致。
   Color _fillColor1 = const Color(0xFF02D8F2);
   Color _fillColor2 = const Color(0xFFFFAA75);
   Color _strokeColor1 = const Color(0xFF0262F8);
   Color _strokeColor2 = const Color(0xFF0262F8);
 
   /// 当前模式下实际应用到各通道的颜色。
-  ///
-  /// 对齐 view / react 的 `fillColor2 ?? fillColor1 ?? color` 回退规则：
-  /// - 单色：四通道全部回退到同一个颜色；
-  /// - 双色：fill 两通道用填充色、stroke 两通道用描边色；
-  /// - 多色：四通道各自独立。
+  /// 单色全部回退到同一颜色，双色按 fill/stroke 分组，多色各自独立。
   Color _channelColor(_ColorChannel channel) {
     switch (_colorMode) {
       case ColorMode.single:
@@ -78,11 +65,11 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
     setState(() {
       switch (_colorMode) {
         case ColorMode.single:
-          // 单色模式下只改主填充色，其余通道通过回退规则跟随。
+          // 单色只改主填充色，其余通道通过回退规则跟随。
           _fillColor1 = color;
           break;
         case ColorMode.double:
-          // 双色模式下改填充主色 / 描边主色。
+          // 双色改填充主色 / 描边主色。
           if (channel == _ColorChannel.fill1 ||
               channel == _ColorChannel.fill2) {
             _fillColor1 = color;
@@ -127,7 +114,6 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          // 可变粗细调节
           Card(
             child: Padding(
               padding: const EdgeInsets.all(16),
@@ -150,7 +136,6 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
           ),
           const SizedBox(height: 16),
 
-          // 颜色操作区（参考 view 的颜色操作）
           Card(
             child: Padding(
               padding: const EdgeInsets.all(16),
@@ -166,7 +151,6 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
                   ),
                   const SizedBox(height: 16),
 
-                  // 颜色模式切换（单色 / 双色 / 多色）
                   SegmentedButton<ColorMode>(
                     segments: [
                       for (final mode in ColorMode.values)
@@ -181,7 +165,6 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
                   ),
                   const SizedBox(height: 16),
 
-                  // 按颜色模式展示对应颜色通道
                   for (final channel in _visibleChannels) ...[
                     _ColorChannelRow(
                       label: channel.label,
@@ -196,7 +179,6 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
           ),
           const SizedBox(height: 16),
 
-          // 多色图标示例
           Card(
             child: Padding(
               padding: const EdgeInsets.all(16),
@@ -209,7 +191,6 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
                     spacing: 20,
                     runSpacing: 20,
                     children: [
-                      // AiIcon：完全使用可变颜色变量，随选择实时更新
                       _DemoItem(
                         label: 'AiIcon（可变色）',
                         child: AiIcon(
@@ -272,7 +253,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
     );
   }
 
-  /// 打开自由颜色选择器（含透明度调节）为指定通道挑选颜色。
+  /// 打开自由颜色选择器为指定通道挑选颜色。
   Future<void> _pickColor(_ColorChannel channel) async {
     final selected = await showDialog<Color>(
       context: context,
@@ -287,7 +268,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   }
 }
 
-/// 单个颜色通道的展示行：点击打开颜色选择器。
+/// 单个颜色通道的展示行，点击打开颜色选择器。
 class _ColorChannelRow extends StatelessWidget {
   const _ColorChannelRow({
     required this.label,
@@ -349,7 +330,7 @@ class _ColorChannelRow extends StatelessWidget {
   }
 }
 
-/// 将 [Color] 转为 `#RRGGBB`（不透明）或 `#RRGGBBAA`（半透明）显示。
+/// 将 [Color] 转为 `#RRGGBB`（不透明）或 `#RRGGBBAA`（半透明）。
 String _toHex(Color color) {
   String toHex(double v) =>
       (v * 255).round().clamp(0, 255).toInt().toRadixString(16).padLeft(2, '0');
@@ -357,10 +338,7 @@ String _toHex(Color color) {
   return color.a == 1 ? hex : '$hex${toHex(color.a)}';
 }
 
-/// 自由颜色选择器对话框。
-///
-/// 参考 view 的颜色操作：支持任意颜色 + alpha 透明度调节，
-/// 提供色相（Hue）滑杆、饱和度/明度（SV）色板与透明度（Alpha）滑杆。
+/// 自由颜色选择器对话框，支持任意颜色与透明度调节。
 class _ColorPickerDialog extends StatefulWidget {
   const _ColorPickerDialog({required this.title, required this.initial});
 
@@ -400,7 +378,6 @@ class _ColorPickerDialogState extends State<_ColorPickerDialog> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 当前颜色预览 + 十六进制
             Row(
               children: [
                 Container(
@@ -420,7 +397,6 @@ class _ColorPickerDialogState extends State<_ColorPickerDialog> {
             ),
             const SizedBox(height: 16),
 
-            // 色相滑杆
             Text('色相', style: Theme.of(context).textTheme.bodySmall),
             Slider(
               value: _hsv.hue,
@@ -429,7 +405,6 @@ class _ColorPickerDialogState extends State<_ColorPickerDialog> {
               onChanged: (v) => setState(() => _hsv = _hsv.withHue(v)),
             ),
 
-            // 饱和度
             Text('饱和度', style: Theme.of(context).textTheme.bodySmall),
             Slider(
               value: _hsv.saturation,
@@ -438,7 +413,6 @@ class _ColorPickerDialogState extends State<_ColorPickerDialog> {
               onChanged: (v) => setState(() => _hsv = _hsv.withSaturation(v)),
             ),
 
-            // 明度
             Text('明度', style: Theme.of(context).textTheme.bodySmall),
             Slider(
               value: _hsv.value,
@@ -447,7 +421,6 @@ class _ColorPickerDialogState extends State<_ColorPickerDialog> {
               onChanged: (v) => setState(() => _hsv = _hsv.withValue(v)),
             ),
 
-            // 透明度
             Text('透明度', style: Theme.of(context).textTheme.bodySmall),
             Slider(
               value: _alpha,

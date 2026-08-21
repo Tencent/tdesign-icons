@@ -27,25 +27,22 @@ fvm use
 在 monorepo 内改图标后，从**仓库根目录**按此顺序验证：
 
 ```bash
-# 1. 生成各端资源
+# 1. 生成各端资源（含 Flutter 半透明重叠检测清单）
 pnpm run generate
 
-# 2.（可选，改动 svg/ 后需执行）重新生成 Flutter 半透明重叠检测清单
-ts-node --transpile-only scripts/generate-flutter-overlap-manifest.ts
-
-# 3. Flutter 包：安装依赖并生成 Dart 图标代码
+# 2. Flutter 包：安装依赖并生成 Dart 图标代码
 cd packages/flutter
 fvm flutter pub get
 fvm dart run tool/generate.dart
 
-# 4. 示例应用（Android/Web）：安装依赖并运行
+# 3. 示例应用（Android/Web）：安装依赖并运行
 cd example
 fvm flutter pub get
 fvm flutter run
 ```
 
-> **半透明重叠清单**：`packages/flutter/tool/overlap_manifest.json` 记录了存在半透明图层重叠的图标（由仓库根目录的 `gulp/detect-opacity-overlap.ts` 栅格化检测得到）。
-> 生成 SVG 代码时 `tool/generate.dart` 会依据该清单为重叠图层注入 `<mask>`，避免半透明颜色在重叠处被混合两次而变深。**新增或修改 `svg/*.svg` 后必须重新执行第 2 步**，否则清单与图标不同步。
+> **半透明重叠清单**：`packages/flutter/tool/overlap_manifest.json` 记录了存在半透明图层重叠的图标（由仓库根目录的 `gulp/detect-opacity-overlap.ts` 栅格化检测得到），已作为 `pnpm run generate` 管道的第一步自动生成（脚本：`scripts/generate-flutter-overlap-manifest.ts`）。
+> 生成 SVG 代码时 `tool/generate.dart` 会依据该清单为重叠图层注入 `<mask>`，避免半透明颜色在重叠处被混合两次而变深。**新增或修改 `svg/*.svg` 后重新执行 `pnpm run generate` 即可自动更新清单**，无需单独运行。
 
 ### 调试包源码
 

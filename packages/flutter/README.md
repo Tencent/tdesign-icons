@@ -31,7 +31,7 @@ Icon(TIcons.logo_tdesign_filled, color: Colors.blue, size: 24)
 child: Icon(TIcons.home_filled)
 ```
 
-### 2. 多色 / 可变粗细图标（具名组件方式）
+### 2. 多色 / 可变粗细 / 可变颜色图标（具名组件方式）
 
 每个图标对应一个具名组件，命名规则为 `{图标名 PascalCase} + Icon`，
 与 React 保持一致。例如 `ai` → `AiIcon`，`add-circle` → `AddCircleIcon`。
@@ -52,13 +52,17 @@ AiIcon(
 // 单色使用：只传 color 即可（等效 currentColor）
 AiIcon(color: Colors.blue, size: 24)
 
-// 可变粗细
+// 可变粗细 / 可变颜色：可随时动态修改 strokeWidth 与各通道颜色
 AddCircleIcon(
   strokeColor1: Colors.red,
   strokeColor2: Colors.orange,
   strokeWidth: 3,
 )
 ```
+
+> **示例 Demo**：在 example 的「多色 / 可变粗细图标」页面中，提供**可变粗细**
+> 滑杆与**可变颜色**色板（描边 1 / 描边 2 / 填充 1 / 填充 2 四通道），
+> 可实时切换图标颜色与描边宽度，直观体验具名组件的动态能力。
 
 > **半透明颜色说明**：当多个图层（fill/stroke 通道）在图标内重叠时，半透明颜色会在重叠处被混合两次而变深。
 > 生成器已对存在重叠的图标自动注入 `<mask>`，避免该问题，与 React/vue 各端行为保持一致；

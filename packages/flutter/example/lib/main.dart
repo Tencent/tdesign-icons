@@ -87,7 +87,7 @@ class _HomePage extends StatelessWidget {
           Card(
             child: ListTile(
               leading: const Icon(Icons.palette),
-              title: const Text('多色 / 可变粗细图标'),
+              title: const Text('多色 / 可变粗细 / 可变颜色图标'),
               subtitle: const Text('使用具名图标组件（如 AiIcon、AddCircleIcon）'),
               trailing: const Icon(Icons.chevron_right),
               onTap: () => Navigator.push(

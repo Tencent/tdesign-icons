@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-/// 标记内部 API，dart doc 不会为其生成公开文档。
-const _Nodoc nodoc = _Nodoc();
-
-class _Nodoc {
-  const _Nodoc();
-}
-
 /// 颜色通道回退：当 `fill2` 未设置时回退到 `fill1`，再回退到 `color`。
 ///
 /// 与 vue-next / react 的 `fillColor2 ?? fillColor1 ?? color` 规则保持一致。
@@ -36,7 +29,6 @@ String _colorToHex(Color color) {
   return '#$r$g$b$a';
 }
 
-@nodoc
 class TDIconBase extends StatelessWidget {
   const TDIconBase({
     super.key,

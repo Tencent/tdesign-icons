@@ -36,10 +36,9 @@ fvm flutter pub get
 fvm flutter run
 ```
 
-> **统一流程**：Flutter 图标代码已接入根目录 gulp 统一流程（`packages/flutter/gulp/index.ts` 的 `flutterTask`，注册于 `gulpfile.ts`）。当环境中存在 Dart/Flutter SDK 时，`pnpm run generate` 会在生成其它端资源后自动执行 `dart run tool/generate.dart`（必要时先 `flutter pub get`）；若未安装 Dart/Flutter（如仅构建 React/Vue 的 CI job），则会打印提示并跳过，不影响其它端生成。
+> **统一流程**：Flutter 图标代码已接入根目录 gulp 统一流程（`packages/flutter/gulp/index.ts` 的 `flutterTask`，注册于 `gulpfile.ts`），**全部由 TS/JS 实现，不再依赖 Dart/Flutter SDK**。`pnpm run generate` 会依次：复用 gulp 的 `svgToElement` 管线生成 per-icon 的 SVG 数据（`flutter-use-template.ts`），再由 `flutter-aggregate.ts` 聚合生成 `svg_data.g.dart`/`icons.g.dart`/`assets.g.dart` 并复制 `fonts/t.ttf`。因此即使仅构建 React/Vue 的 CI job 也能完整生成 Flutter 代码。
 
-> **半透明重叠处理**：Flutter 的 SVG 数据通过仓库根目录 gulp 的 `svgToElement` 管线（`replaceColor + propsString`）生成（`packages/flutter/gulp/flutter-use-template.ts`），与 React/Vue 端共用同一套颜色通道替换与 `optimizeOpacityOverlaps` 半透明重叠修复逻辑，不再在 Dart 侧重复实现。
-> `tool/generate.dart` 仅负责把这些 per-icon 数据聚合为 `svg_data.g.dart`/`icons.g.dart`。**新增或修改 `svg/*.svg` 后重新执行 `pnpm run generate` 即可自动生效**。
+> **半透明重叠处理**：Flutter 的 SVG 数据通过仓库根目录 gulp 的 `svgToElement` 管线（`replaceColor + propsString`）生成（`packages/flutter/gulp/flutter-use-template.ts`），与 React/Vue 端共用同一套颜色通道替换与 `optimizeOpacityOverlaps` 半透明重叠修复逻辑。聚合逻辑见 `packages/flutter/gulp/flutter-aggregate.ts`。**新增或修改 `svg/*.svg` 后重新执行 `pnpm run generate` 即可自动生效**。
 
 ### 调试包源码
 
@@ -96,8 +95,10 @@ packages/flutter/
 │   ├── tdesign_flutter_icons.dart   # 入口文件
 │   └── src/
 │       └── assets.g.dart    # 图标常量（自动生成）
-├── tool/
-│   └── generate.dart        # 代码生成器
+├── gulp/
+│   ├── index.ts             # flutterTask（接入根目录 gulp 统一流程）
+│   ├── flutter-use-template.ts   # per-icon SVG 数据生成模板
+│   └── flutter-aggregate.ts     # 聚合生成 svg_data/icons/assets（替代原 generate.dart）
 ├── pubspec.yaml             # 包配置
 ├── CHANGELOG.md             # 版本记录
 └── README.md                # 使用说明

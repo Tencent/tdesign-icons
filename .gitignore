@@ -1,4 +1,5 @@
 .DS_Store
+.pnpm-store
 
 # auto generated icons
 src/components/*.tsx

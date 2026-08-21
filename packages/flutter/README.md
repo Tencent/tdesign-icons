@@ -64,21 +64,6 @@ AddCircleIcon(
 > 生成器已对存在重叠的图标自动注入 `<mask>`，避免该问题，与 React/vue 各端行为保持一致；
 > 半透明色与不透明色的渲染结果均为正确效果。
 
-### 3. 使用基础组件
-
-也可以直接使用 `TDIconBase` 基础组件（需要手动提供 SVG 数据）：
-
-```dart
-import 'package:tdesign_flutter_icons/tdesign_flutter_icons.dart';
-
-TDIconBase(
-  svgData: svgDataMap['ai']!,
-  fillColor1: Colors.transparent,
-  strokeColor1: Colors.blue,
-  strokeWidth: 2,
-)
-```
-
 ## Available Icons
 
 All icons are available as static constants in `TIcons` class (using snake_case naming):

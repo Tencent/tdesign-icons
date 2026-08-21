@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+/// 标记内部 API，dart doc 不会为其生成公开文档。
+const _Nodoc nodoc = _Nodoc();
+
+class _Nodoc {
+  const _Nodoc();
+}
+
 /// 颜色通道回退：当 `fill2` 未设置时回退到 `fill1`，再回退到 `color`。
 ///
 /// 与 vue-next / react 的 `fillColor2 ?? fillColor1 ?? color` 规则保持一致。
@@ -29,12 +36,7 @@ String _colorToHex(Color color) {
   return '#$r$g$b$a';
 }
 
-/// TDesign 多色 SVG 图标基础渲染组件。
-///
-/// 该组件接收经过预处理的 SVG 字符串（其中颜色使用占位符），
-/// 在 [build] 阶段将占位符替换为实际颜色，并通过 [SvgPicture] 渲染。
-///
-/// 通常无需直接使用，推荐使用生成的具名图标组件（如 `AiIcon`、`AddCircleIcon`）。
+@nodoc
 class TDIconBase extends StatelessWidget {
   const TDIconBase({
     super.key,

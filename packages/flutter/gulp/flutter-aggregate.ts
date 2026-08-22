@@ -236,7 +236,7 @@ class ${className} extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TDIconBase(
+    return IconBase(
       svgData: svgDataMap['${svgKey}']!,
       size: size,
     );
@@ -283,7 +283,7 @@ class ${className} extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TDIconBase(
+    return IconBase(
       svgData: svgDataMap['${svgKey}']!,
       size: size,
       color: color,

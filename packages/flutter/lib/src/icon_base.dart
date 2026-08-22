@@ -29,8 +29,12 @@ String _colorToHex(Color color) {
   return '#$r$g$b$a';
 }
 
-class TDIconBase extends StatelessWidget {
-  const TDIconBase({
+/// 内部基础图标组件：负责将带占位符的 SVG 数据替换为实际颜色/粗细并渲染。
+///
+/// 该组件为**内部实现**，不通过包公共入口导出，请勿直接使用；
+/// 具名图标组件（如 `AiIcon`）已封装了全部参数。
+class IconBase extends StatelessWidget {
+  const IconBase({
     super.key,
     required this.svgData,
     this.size,

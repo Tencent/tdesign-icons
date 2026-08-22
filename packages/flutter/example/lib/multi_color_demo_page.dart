@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tdesign_flutter_icons/tdesign_flutter_icons.dart';
+import '../../lib/src/icon_base.dart' show IconBase;
 
 /// 多色 / 可变粗细 / 可变颜色图标示例页。
 ///
@@ -271,7 +272,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
     );
   }
 
-  /// 图标网格：当前类型下的全部多色图标，复用 [TDIconBase] 动态渲染。
+  /// 图标网格：当前类型下的全部多色图标，复用 [IconBase] 动态渲染。
   Widget _buildIconGrid(BuildContext context) {
     final icons = _currentIcons;
     if (icons.isEmpty) {
@@ -314,7 +315,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TDIconBase(
+                IconBase(
                   svgData: svg,
                   size: desktop ? 32 : 28,
                   fillColor1: fillColor,

@@ -99,13 +99,15 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
 
   /// 当前模式下需要展示的可独立上色通道。
   List<_ColorChannel> get _visibleChannels => switch (_colorMode) {
-        ColorMode.single => const [_ColorChannel.fill1],
-        ColorMode.double =>
-          const [_ColorChannel.fill1, _ColorChannel.stroke1],
-        ColorMode.multiple =>
-          const [_ColorChannel.fill1, _ColorChannel.fill2,
-              _ColorChannel.stroke1, _ColorChannel.stroke2],
-      };
+    ColorMode.single => const [_ColorChannel.fill1],
+    ColorMode.double => const [_ColorChannel.fill1, _ColorChannel.stroke1],
+    ColorMode.multiple => const [
+      _ColorChannel.fill1,
+      _ColorChannel.fill2,
+      _ColorChannel.stroke1,
+      _ColorChannel.stroke2,
+    ],
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -142,8 +144,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('颜色操作',
-                      style: Theme.of(context).textTheme.titleSmall),
+                  Text('颜色操作', style: Theme.of(context).textTheme.titleSmall),
                   const SizedBox(height: 4),
                   Text(
                     '选择颜色模式后，为各通道挑选颜色（含透明度），图标实时更新',
@@ -154,14 +155,12 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
                   SegmentedButton<ColorMode>(
                     segments: [
                       for (final mode in ColorMode.values)
-                        ButtonSegment(
-                          value: mode,
-                          label: Text(mode.label),
-                        ),
+                        ButtonSegment(value: mode, label: Text(mode.label)),
                     ],
                     selected: {_colorMode},
-                    onSelectionChanged: (selection) =>
-                        setState(() => _colorMode = selection.first),
+                    onSelectionChanged:
+                        (selection) =>
+                            setState(() => _colorMode = selection.first),
                   ),
                   const SizedBox(height: 16),
 
@@ -195,10 +194,10 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
                         label: 'AiIcon（可变色）',
                         child: AiIcon(
                           size: 48,
-                          fillColor1: _fillColor1,
-                          fillColor2: _fillColor2,
-                          strokeColor1: _strokeColor1,
-                          strokeColor2: _strokeColor2,
+                          fillColor1: _channelColor(_ColorChannel.fill1),
+                          fillColor2: _channelColor(_ColorChannel.fill2),
+                          strokeColor1: _channelColor(_ColorChannel.stroke1),
+                          strokeColor2: _channelColor(_ColorChannel.stroke2),
                           strokeWidth: _strokeWidth,
                         ),
                       ),
@@ -206,10 +205,10 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
                         label: 'AddressBookIcon',
                         child: AddressBookIcon(
                           size: 48,
-                          fillColor1: _fillColor1,
-                          fillColor2: _fillColor2,
-                          strokeColor1: _strokeColor1,
-                          strokeColor2: _strokeColor2,
+                          fillColor1: _channelColor(_ColorChannel.fill1),
+                          fillColor2: _channelColor(_ColorChannel.fill2),
+                          strokeColor1: _channelColor(_ColorChannel.stroke1),
+                          strokeColor2: _channelColor(_ColorChannel.stroke2),
                           strokeWidth: _strokeWidth,
                         ),
                       ),
@@ -217,10 +216,10 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
                         label: 'AddCircleIcon',
                         child: AddCircleIcon(
                           size: 48,
-                          fillColor1: _fillColor1,
-                          fillColor2: _fillColor2,
-                          strokeColor1: _strokeColor1,
-                          strokeColor2: _strokeColor2,
+                          fillColor1: _channelColor(_ColorChannel.fill1),
+                          fillColor2: _channelColor(_ColorChannel.fill2),
+                          strokeColor1: _channelColor(_ColorChannel.stroke1),
+                          strokeColor2: _channelColor(_ColorChannel.stroke2),
                           strokeWidth: _strokeWidth,
                         ),
                       ),
@@ -228,19 +227,16 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
                         label: 'AbstractIcon',
                         child: AbstractIcon(
                           size: 48,
-                          fillColor1: _fillColor1,
-                          fillColor2: _fillColor2,
-                          strokeColor1: _strokeColor1,
-                          strokeColor2: _strokeColor2,
+                          fillColor1: _channelColor(_ColorChannel.fill1),
+                          fillColor2: _channelColor(_ColorChannel.fill2),
+                          strokeColor1: _channelColor(_ColorChannel.stroke1),
+                          strokeColor2: _channelColor(_ColorChannel.stroke2),
                           strokeWidth: _strokeWidth,
                         ),
                       ),
                       _DemoItem(
                         label: 'LogoCnbIcon',
-                        child: LogoCnbIcon(
-                          size: 48,
-                          color: _fillColor1,
-                        ),
+                        child: LogoCnbIcon(size: 48, color: _fillColor1),
                       ),
                     ],
                   ),
@@ -257,10 +253,11 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   Future<void> _pickColor(_ColorChannel channel) async {
     final selected = await showDialog<Color>(
       context: context,
-      builder: (context) => _ColorPickerDialog(
-        title: '选择${channel.label}颜色',
-        initial: _channelColor(channel),
-      ),
+      builder:
+          (context) => _ColorPickerDialog(
+            title: '选择${channel.label}颜色',
+            initial: _channelColor(channel),
+          ),
     );
     if (selected != null) {
       _setChannelColor(channel, selected);
@@ -297,30 +294,30 @@ class _ColorChannelRow extends StatelessWidget {
             Container(
               width: 28,
               height: 28,
-              color: isTransparent ? Colors.white : color,
               decoration: BoxDecoration(
+                color: isTransparent ? Colors.white : color,
                 border: Border.all(
                   color: Theme.of(context).dividerColor,
                   width: 1,
                 ),
                 borderRadius: BorderRadius.circular(6),
               ),
-              child: isTransparent
-                  ? const Center(
-                      child: Icon(Icons.not_interested,
-                          size: 16, color: Colors.black54),
-                    )
-                  : null,
+              child:
+                  isTransparent
+                      ? const Center(
+                        child: Icon(
+                          Icons.not_interested,
+                          size: 16,
+                          color: Colors.black54,
+                        ),
+                      )
+                      : null,
             ),
             const SizedBox(width: 12),
             Expanded(
-              child: Text(label,
-                  style: Theme.of(context).textTheme.bodyMedium),
+              child: Text(label, style: Theme.of(context).textTheme.bodyMedium),
             ),
-            Text(
-              _toHex(color),
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
+            Text(_toHex(color), style: Theme.of(context).textTheme.bodySmall),
             const SizedBox(width: 4),
             const Icon(Icons.edit, size: 16),
           ],
@@ -385,14 +382,15 @@ class _ColorPickerDialogState extends State<_ColorPickerDialog> {
                   height: 40,
                   decoration: BoxDecoration(
                     color: _color,
-                    border: Border.all(
-                        color: Theme.of(context).dividerColor),
+                    border: Border.all(color: Theme.of(context).dividerColor),
                     borderRadius: BorderRadius.circular(6),
                   ),
                 ),
                 const SizedBox(width: 12),
-                Text(_toHex(_color),
-                    style: Theme.of(context).textTheme.bodyMedium),
+                Text(
+                  _toHex(_color),
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
               ],
             ),
             const SizedBox(height: 16),
@@ -458,10 +456,7 @@ class _DemoItem extends StatelessWidget {
       children: [
         child,
         const SizedBox(height: 4),
-        Text(
-          label,
-          style: Theme.of(context).textTheme.labelSmall,
-        ),
+        Text(label, style: Theme.of(context).textTheme.labelSmall),
       ],
     );
   }

@@ -72,10 +72,13 @@ function toKebabCase(attr: string): string {
 }
 
 /** 将节点属性中的 gulp 占位符替换为 Flutter 占位符。 */
+// 需要就地修改传入的 attrs 属性，故禁用该规则。
+// eslint-disable-next-line no-param-reassign
 function mapPlaceholders(attrs: Record<string, unknown>): void {
   Object.keys(attrs).forEach((key) => {
     const value = attrs[key];
     if (typeof value === 'string' && PLACEHOLDER_MAP[value]) {
+      // eslint-disable-next-line no-param-reassign
       attrs[key] = PLACEHOLDER_MAP[value];
       return;
     }
@@ -86,10 +89,12 @@ function mapPlaceholders(attrs: Record<string, unknown>): void {
     // 唯一即可，无需像 React/Vue 那样加实例前缀（那是对多图标共用 SVG sprite
     // 的兼容处理）。
     if (key === 'id' && typeof value === 'string' && value.startsWith('props.overlapMaskId_')) {
+      // eslint-disable-next-line no-param-reassign
       attrs[key] = `overlap-mask-${value.slice('props.overlapMaskId_'.length)}`;
       return;
     }
     if (key === 'mask' && typeof value === 'string' && value.startsWith('props.overlapMaskUrl_')) {
+      // eslint-disable-next-line no-param-reassign
       attrs[key] = `url(#overlap-mask-${value.slice('props.overlapMaskUrl_'.length)})`;
     }
   });
@@ -112,9 +117,12 @@ function renderNode(node: IconElement): string {
       if (val === undefined || val === null) {
         return classes;
       }
-      const attrName = currentKey === 'className'
-        ? 'class'
-        : (KEBAB_ATTRS.has(currentKey) ? toKebabCase(currentKey) : currentKey);
+      let attrName = currentKey;
+      if (currentKey === 'className') {
+        attrName = 'class';
+      } else if (KEBAB_ATTRS.has(currentKey)) {
+        attrName = toKebabCase(currentKey);
+      }
       classes.push(`${attrName}="${String(val)}"`);
       return classes;
     }, []);
@@ -144,19 +152,9 @@ export function flutterGetIconData({
   walk(node);
 
   // 渲染回 SVG 字符串（含 __FILL1__/__STROKE1__ 等占位符）
-  let svg = renderNode(node);
-
-  // 品牌/logo 图标遵循「不展示修改效果」约束（对齐 view 端 `generate-view-svg-sprite.ts`）：
-  // 不注入多色/可变粗细占位符，保持单色，颜色统一走 __COLOR__（运行时由 `color` 注入）。
-  if (name.startsWith('logo-')) {
-    svg = svg
-      .replaceAll('__FILL1__', '__COLOR__')
-      .replaceAll('__FILL2__', '__COLOR__')
-      .replaceAll('__STROKE1__', '__COLOR__')
-      .replaceAll('__STROKE2__', '__COLOR__')
-      // 描边宽度固定为默认值，不再暴露可变 strokeWidth
-      .replaceAll('__STROKE_WIDTH__', '2');
-  }
+  // 注意：品牌/logo 图标在 gulp 侧以 `replaceColor: false` 单独生成，
+  // 其 SVG 数据已保留原始品牌色（字面颜色），此处不含任何占位符。
+  const svg = renderNode(node);
 
   const constName = `svg${upperCamelCase(name)}`;
   // 使用 raw 多行字符串字面量，`$`/`\` 均无需转义；

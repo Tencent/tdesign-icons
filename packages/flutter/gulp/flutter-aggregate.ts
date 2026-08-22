@@ -219,31 +219,26 @@ function generateIconClass(iconName: string, svgKey: string): string {
   const className = toComponentName(iconName);
 
   // 品牌/logo 图标遵循「不展示修改效果」约束（对齐 view 端）：
-  // 生成单色组件，不暴露 fill/stroke 多色通道与可变 strokeWidth，
-  // 颜色统一走 `color`（其 SVG 数据中已无多色占位符，仅保留 __COLOR__）。
+  // 保留原始品牌色，SVG 数据无任何占位符，因此既不暴露 fill/stroke 多色
+  // 通道与 strokeWidth，也不暴露单色 `color`（品牌色不可修改）。
   if (iconName.startsWith('logo-')) {
     return `/// TDesign 图标「${iconName}」。
 ///
-/// 品牌图标遵循「不展示修改效果」约束，仅支持单色（[color]）。
+/// 品牌图标遵循「不展示修改效果」约束，保留原始品牌色，颜色不可修改。
 class ${className} extends StatelessWidget {
   const ${className}({
     super.key,
     this.size,
-    this.color,
   });
 
   /// 图标尺寸（宽高）。
   final double? size;
-
-  /// 图标颜色（单色）。
-  final Color? color;
 
   @override
   Widget build(BuildContext context) {
     return TDIconBase(
       svgData: svgDataMap['${svgKey}']!,
       size: size,
-      color: color,
     );
   }
 }

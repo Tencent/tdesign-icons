@@ -236,7 +236,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
                       ),
                       _DemoItem(
                         label: 'LogoCnbIcon',
-                        child: LogoCnbIcon(size: 48, color: _fillColor1),
+                        child: LogoCnbIcon(size: 48),
                       ),
                     ],
                   ),

@@ -21,25 +21,45 @@ import { flutterGetIconData } from './flutter-use-template';
 // gulp 管线生成的 per-icon SVG 数据目录
 const svgDataTo = 'packages/flutter/tool/generated/svg';
 
-const source: string[] = ['svg/*.svg'];
+// 品牌/logo 图标：保留原始品牌色，不参与多色/可变（对齐 view 端约束），
+// 故用 `replaceColor: false` 使其 SVG 数据保留字面颜色（如 #000/#fff）。
+const logoSource: string[] = ['svg/logo-*.svg'];
+// 非 logo 图标：正常做颜色通道替换与半透明重叠修复。
+const normalSource: string[] = ['svg/*.svg', '!svg/logo-*.svg'];
 
 /**
  * 生成每个图标的 SVG 数据 Dart 文件（复用 gulp `svgToElement` 管线）。
  * 使用 `.dart` 扩展名，每个文件声明一个 `const String svg<Name>`。
+ *
+ * 分两趟生成：logo 图标保留原始品牌色（replaceColor: false），
+ * 其余图标做多色占位符替换（replaceColor: true + propsString: true）。
  */
 function generateFlutterSvgData() {
-  return generateIcons({
-    from: source,
-    to: svgDataTo,
-    iconGenerator: flutterGetIconData,
-    extName: '.dart',
-    options: {
-      replaceColor: true,
-      propsString: true,
-      // 复用 gulp 管线内置的半透明重叠修复：默认仅对栅格化检测出重叠的
-      // 图标（detectOpacityOverlaps）注入 <mask>，与 React/Vue 端行为一致。
-    },
-  });
+  return series(
+    generateIcons({
+      from: normalSource,
+      to: svgDataTo,
+      iconGenerator: flutterGetIconData,
+      extName: '.dart',
+      options: {
+        replaceColor: true,
+        propsString: true,
+        // 复用 gulp 管线内置的半透明重叠修复：默认仅对栅格化检测出重叠的
+        // 图标（detectOpacityOverlaps）注入 <mask>，与 React/Vue 端行为一致。
+      },
+    }),
+    // 品牌图标不参与多色，单独一趟生成（保留原始品牌色）。
+    generateIcons({
+      from: logoSource,
+      to: svgDataTo,
+      iconGenerator: flutterGetIconData,
+      extName: '.dart',
+      options: {
+        replaceColor: false,
+        propsString: false,
+      },
+    }),
+  );
 }
 
 export function flutterTask() {

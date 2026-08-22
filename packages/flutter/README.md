@@ -68,10 +68,10 @@ AddCircleIcon(
 > 默认颜色与 view 保持一致（fill1 `#02d8f2`、fill2 `#ffaa75`、stroke2 `#0262f8`）。
 
 > **品牌/logo 图标说明**：品牌（`logo-` 前缀）图标遵循「不展示修改效果」约束（对齐 view 端），
-> **不支持多色 / 可变粗细**，仅支持单色（通过 `color` 参数着色）：
+> **保留原始品牌色，不支持多色 / 可变粗细 / 单色修改**，颜色不可改变：
 > ```dart
-> // 品牌图标仅支持单色
-> LogoGithubIcon(color: Colors.blue, size: 24)
+> // 品牌图标保留原始品牌色，仅可调整尺寸
+> LogoGithubIcon(size: 24)
 > ```
 
 > **半透明颜色说明**：当多个图层（fill/stroke 通道）在图标内重叠时，半透明颜色会在重叠处被混合两次而变深。

@@ -62,9 +62,11 @@ AddCircleIcon(
 
 > **示例 Demo**：在 example 的「多色 / 可变粗细图标」页面中，提供**可变粗细**
 > 滑杆与**可变颜色**交互（颜色操作参考 `packages/view/src/icon-view.vue`）：
+> - **全部多色图标**通过开关分为 **填充图标（`-filled` 后缀）** 与 **非填充图标** 两类展示（对齐 view 的 `currentType`）；
 > - 支持 **单色 / 双色 / 多色** 三种颜色模式切换（对齐 view 的 `colorType`）；
 > - 每种模式按需展示对应颜色通道，用**自由颜色选择器（含透明度）**分别为
->   fill1 / fill2 / stroke1 / stroke2 上色，图标实时更新。
+>   fill1 / fill2 / stroke1 / stroke2 上色，图标实时更新；
+> - 提供 **重置** 操作，一键恢复默认图标类型、颜色与粗细（对齐 view 的 `handleReset`）。
 > 默认颜色与 view 保持一致（fill1 `#02d8f2`、fill2 `#ffaa75`、stroke2 `#0262f8`）。
 
 > **品牌/logo 图标说明**：品牌（`logo-` 前缀）图标遵循「不展示修改效果」约束（对齐 view 端），

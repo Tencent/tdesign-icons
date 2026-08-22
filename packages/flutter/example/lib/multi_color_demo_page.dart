@@ -2,11 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:tdesign_flutter_icons/tdesign_flutter_icons.dart';
 
 /// 多色 / 可变粗细 / 可变颜色图标示例页。
+///
+/// 对齐 `packages/view/src/icon-view.vue` 的交互：
+/// - 展示**全部**多色图标（填充 / 非填充两类），复用 `svgDataMap` 动态渲染；
+/// - 填充图标（`-filled` 后缀）与 **非填充图标** 通过开关切换；
+/// - 提供可变粗细滑杆、单色/双色/多色颜色模式与自由取色；
+/// - 提供「重置」操作，一键恢复默认颜色与粗细。
 class MultiColorDemoPage extends StatefulWidget {
   const MultiColorDemoPage({super.key});
 
   @override
   State<MultiColorDemoPage> createState() => _MultiColorDemoPageState();
+}
+
+/// 图标类型（对齐 view 的 `currentType`：outline / filled）。
+enum IconType {
+  outline('非填充'),
+  filled('填充');
+
+  const IconType(this.label);
+  final String label;
 }
 
 /// 颜色模式（对齐 view 的 `colorType`）。
@@ -31,6 +46,7 @@ enum _ColorChannel {
 }
 
 class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
+  IconType _iconType = IconType.outline;
   double _strokeWidth = 2;
   ColorMode _colorMode = ColorMode.multiple;
 
@@ -39,6 +55,19 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   Color _fillColor2 = const Color(0xFFFFAA75);
   Color _strokeColor1 = const Color(0xFF0262F8);
   Color _strokeColor2 = const Color(0xFF0262F8);
+
+  /// 当前图标类型下的图标名列表（按名称排序）。
+  List<String> get _currentIcons {
+    final names = svgDataMap.keys
+        .where(
+          (name) => _iconType == IconType.filled
+              ? name.endsWith('-filled')
+              : !name.endsWith('-filled'),
+        )
+        .toList()
+      ..sort();
+    return names;
+  }
 
   /// 当前模式下实际应用到各通道的颜色。
   /// 单色全部回退到同一颜色，双色按 fill/stroke 分组，多色各自独立。
@@ -109,144 +138,17 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
     ],
   };
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('多色图标 Demo')),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('可变粗细: ${_strokeWidth.toStringAsFixed(1)}'),
-                  const SizedBox(height: 8),
-                  Slider(
-                    value: _strokeWidth,
-                    min: 0.5,
-                    max: 4,
-                    divisions: 14,
-                    label: _strokeWidth.toStringAsFixed(1),
-                    onChanged: (v) => setState(() => _strokeWidth = v),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 16),
-
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('颜色操作', style: Theme.of(context).textTheme.titleSmall),
-                  const SizedBox(height: 4),
-                  Text(
-                    '选择颜色模式后，为各通道挑选颜色（含透明度），图标实时更新',
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
-                  const SizedBox(height: 16),
-
-                  SegmentedButton<ColorMode>(
-                    segments: [
-                      for (final mode in ColorMode.values)
-                        ButtonSegment(value: mode, label: Text(mode.label)),
-                    ],
-                    selected: {_colorMode},
-                    onSelectionChanged:
-                        (selection) =>
-                            setState(() => _colorMode = selection.first),
-                  ),
-                  const SizedBox(height: 16),
-
-                  for (final channel in _visibleChannels) ...[
-                    _ColorChannelRow(
-                      label: channel.label,
-                      color: _channelColor(channel),
-                      onTap: () => _pickColor(channel),
-                    ),
-                    const SizedBox(height: 12),
-                  ],
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 16),
-
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('多色图标（fillColor + strokeColor）'),
-                  const SizedBox(height: 16),
-                  Wrap(
-                    spacing: 20,
-                    runSpacing: 20,
-                    children: [
-                      _DemoItem(
-                        label: 'AiIcon（可变色）',
-                        child: AiIcon(
-                          size: 48,
-                          fillColor1: _channelColor(_ColorChannel.fill1),
-                          fillColor2: _channelColor(_ColorChannel.fill2),
-                          strokeColor1: _channelColor(_ColorChannel.stroke1),
-                          strokeColor2: _channelColor(_ColorChannel.stroke2),
-                          strokeWidth: _strokeWidth,
-                        ),
-                      ),
-                      _DemoItem(
-                        label: 'AddressBookIcon',
-                        child: AddressBookIcon(
-                          size: 48,
-                          fillColor1: _channelColor(_ColorChannel.fill1),
-                          fillColor2: _channelColor(_ColorChannel.fill2),
-                          strokeColor1: _channelColor(_ColorChannel.stroke1),
-                          strokeColor2: _channelColor(_ColorChannel.stroke2),
-                          strokeWidth: _strokeWidth,
-                        ),
-                      ),
-                      _DemoItem(
-                        label: 'AddCircleIcon',
-                        child: AddCircleIcon(
-                          size: 48,
-                          fillColor1: _channelColor(_ColorChannel.fill1),
-                          fillColor2: _channelColor(_ColorChannel.fill2),
-                          strokeColor1: _channelColor(_ColorChannel.stroke1),
-                          strokeColor2: _channelColor(_ColorChannel.stroke2),
-                          strokeWidth: _strokeWidth,
-                        ),
-                      ),
-                      _DemoItem(
-                        label: 'AbstractIcon',
-                        child: AbstractIcon(
-                          size: 48,
-                          fillColor1: _channelColor(_ColorChannel.fill1),
-                          fillColor2: _channelColor(_ColorChannel.fill2),
-                          strokeColor1: _channelColor(_ColorChannel.stroke1),
-                          strokeColor2: _channelColor(_ColorChannel.stroke2),
-                          strokeWidth: _strokeWidth,
-                        ),
-                      ),
-                      _DemoItem(
-                        label: 'LogoCnbIcon',
-                        child: LogoCnbIcon(size: 48),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+  /// 重置：恢复默认图标类型、颜色与粗细（对齐 view 的 `handleReset`）。
+  void _reset() {
+    setState(() {
+      _iconType = IconType.outline;
+      _strokeWidth = 2;
+      _colorMode = ColorMode.multiple;
+      _fillColor1 = const Color(0xFF02D8F2);
+      _fillColor2 = const Color(0xFFFFAA75);
+      _strokeColor1 = const Color(0xFF0262F8);
+      _strokeColor2 = const Color(0xFF0262F8);
+    });
   }
 
   /// 打开自由颜色选择器为指定通道挑选颜色。
@@ -262,6 +164,181 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
     if (selected != null) {
       _setChannelColor(channel, selected);
     }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isFilled = _iconType == IconType.filled;
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('多色图标 Demo')),
+      body: Column(
+        children: [
+          _buildControls(context, isFilled: isFilled),
+          const Divider(height: 1),
+          Expanded(child: _buildIconGrid(context)),
+        ],
+      ),
+    );
+  }
+
+  /// 顶部控制区：图标类型、可变粗细、颜色操作与重置。
+  Widget _buildControls(BuildContext context, {required bool isFilled}) {
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // 填充 / 非填充切换（对齐 view 的 currentType）
+          Row(
+            children: [
+              Text('图标类型', style: Theme.of(context).textTheme.titleSmall),
+              const Spacer(),
+              SegmentedButton<IconType>(
+                segments: [
+                  for (final type in IconType.values)
+                    ButtonSegment(value: type, label: Text(type.label)),
+                ],
+                selected: {_iconType},
+                onSelectionChanged: (selection) {
+                  setState(() => _iconType = selection.first);
+                },
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+
+          // 可变粗细：非填充图标才支持（对齐 view）
+          if (!isFilled) ...[
+            Row(
+              children: [
+                Text(
+                  '可变粗细: ${_strokeWidth.toStringAsFixed(1)}',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ],
+            ),
+            Slider(
+              value: _strokeWidth,
+              min: 0.5,
+              max: 4,
+              divisions: 14,
+              label: _strokeWidth.toStringAsFixed(1),
+              onChanged: (v) => setState(() => _strokeWidth = v),
+            ),
+            const SizedBox(height: 8),
+          ],
+
+          Text('颜色操作', style: Theme.of(context).textTheme.titleSmall),
+          const SizedBox(height: 4),
+          Text(
+            '选择颜色模式后，为各通道挑选颜色（含透明度），图标实时更新',
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
+          const SizedBox(height: 12),
+
+          SegmentedButton<ColorMode>(
+            segments: [
+              for (final mode in ColorMode.values)
+                ButtonSegment(value: mode, label: Text(mode.label)),
+            ],
+            selected: {_colorMode},
+            onSelectionChanged:
+                (selection) => setState(() => _colorMode = selection.first),
+          ),
+          const SizedBox(height: 12),
+
+          for (final channel in _visibleChannels) ...[
+            _ColorChannelRow(
+              label: channel.label,
+              color: _channelColor(channel),
+              onTap: () => _pickColor(channel),
+            ),
+            const SizedBox(height: 8),
+          ],
+
+          const SizedBox(height: 8),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: OutlinedButton.icon(
+              onPressed: _reset,
+              icon: const Icon(Icons.refresh),
+              label: const Text('重置'),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// 图标网格：当前类型下的全部多色图标，复用 [TDIconBase] 动态渲染。
+  Widget _buildIconGrid(BuildContext context) {
+    final icons = _currentIcons;
+    if (icons.isEmpty) {
+      return const Center(child: Text('未找到图标'));
+    }
+
+    final isFilled = _iconType == IconType.filled;
+    final fillColor = _channelColor(_ColorChannel.fill1);
+    final fillColor2 = _channelColor(_ColorChannel.fill2);
+    final strokeColor = _channelColor(_ColorChannel.stroke1);
+    final strokeColor2 = _channelColor(_ColorChannel.stroke2);
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final desktop = constraints.maxWidth >= 600;
+        final gridDelegate = desktop
+            ? const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 96,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                childAspectRatio: 0.9,
+              )
+            : const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4,
+                mainAxisSpacing: 8,
+                crossAxisSpacing: 8,
+                childAspectRatio: 0.8,
+              );
+
+        return GridView.builder(
+          padding: EdgeInsets.all(desktop ? 16 : 12),
+          gridDelegate: gridDelegate,
+          itemCount: icons.length,
+          itemBuilder: (context, index) {
+            final name = icons[index];
+            final svg = svgDataMap[name];
+            if (svg == null) {
+              return const SizedBox.shrink();
+            }
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TDIconBase(
+                  svgData: svg,
+                  size: desktop ? 32 : 28,
+                  fillColor1: fillColor,
+                  fillColor2: fillColor2,
+                  strokeColor1: strokeColor,
+                  strokeColor2: strokeColor2,
+                  strokeWidth: isFilled ? 2 : _strokeWidth,
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  name,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                    fontSize: desktop ? 10 : 8,
+                  ),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
   }
 }
 
@@ -438,25 +515,6 @@ class _ColorPickerDialogState extends State<_ColorPickerDialog> {
           onPressed: () => Navigator.pop(context, _color),
           child: const Text('确定'),
         ),
-      ],
-    );
-  }
-}
-
-class _DemoItem extends StatelessWidget {
-  const _DemoItem({required this.label, required this.child});
-
-  final String label;
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        child,
-        const SizedBox(height: 4),
-        Text(label, style: Theme.of(context).textTheme.labelSmall),
       ],
     );
   }

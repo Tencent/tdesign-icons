@@ -58,8 +58,11 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   Color _strokeColor2 = const Color(0xFF000000);
 
   /// 当前图标类型下的图标名列表（按名称排序）。
+  /// 品牌/logo 图标（`logo-` 前缀）保留原始品牌色、不可改色，
+  /// 故不参与多色/可变颜色展示（对齐 view 的品牌分组语义）。
   List<String> get _currentIcons {
     final names = svgDataMap.keys
+        .where((name) => !name.startsWith('logo-'))
         .where(
           (name) => _iconType == IconType.filled
               ? name.endsWith('-filled')

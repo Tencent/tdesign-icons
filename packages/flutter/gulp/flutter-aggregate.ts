@@ -182,13 +182,20 @@ function generateSvgData(svgDataMap: Map<string, string>): void {
   const lines: string[] = [];
   lines.push(`// ${header}`);
   lines.push('');
-  lines.push('/// 所有图标的 SVG 数据（已预处理颜色占位符）。');
-  lines.push('const Map<String, String> svgDataMap = {');
+  lines.push('/// 各图标独立的 SVG 数据，供具名组件按需引用和 Tree Shaking。');
 
   const sortedEntries = Array.from(svgDataMap.entries()).sort((a, b) => a[0].localeCompare(b[0]));
   sortedEntries.forEach(([key, value]) => {
     const escaped = escapeDartString(value);
-    lines.push(`  '${key}': '''${escaped}''',`);
+    lines.push(`const String ${toSvgConstName(key)} = '''${escaped}''';`);
+  });
+
+  lines.push('');
+  lines.push('/// 所有图标的 SVG 数据（已预处理颜色占位符）。');
+  lines.push('const Map<String, String> svgDataMap = {');
+
+  sortedEntries.forEach(([key]) => {
+    lines.push(`  '${key}': ${toSvgConstName(key)},`);
   });
 
   lines.push('};');
@@ -214,9 +221,14 @@ function toComponentName(iconName: string): string {
   return `${camel}Icon`;
 }
 
+function toSvgConstName(iconName: string): string {
+  return `svg${toComponentName(iconName).slice(0, -'Icon'.length)}`;
+}
+
 /** 生成单个图标组件类的 Dart 代码。 */
-function generateIconClass(iconName: string, svgKey: string): string {
+function generateIconClass(iconName: string): string {
   const className = toComponentName(iconName);
+  const svgConstName = toSvgConstName(iconName);
 
   // 品牌/logo 图标遵循「不展示修改效果」约束（对齐 view 端）：
   // 保留原始品牌色，SVG 数据无任何占位符，因此既不暴露 fill/stroke 多色
@@ -237,7 +249,7 @@ class ${className} extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconBase(
-      svgData: svgDataMap['${svgKey}']!,
+      svgData: ${svgConstName},
       size: size,
     );
   }
@@ -284,7 +296,7 @@ class ${className} extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconBase(
-      svgData: svgDataMap['${svgKey}']!,
+      svgData: ${svgConstName},
       size: size,
       color: color,
       fillColor1: fillColor1,
@@ -313,7 +325,7 @@ function generateNamedIcons(svgDataMap: Map<string, string>): void {
 
   const sortedKeys = Array.from(svgDataMap.keys()).sort();
   sortedKeys.forEach((key) => {
-    lines.push(generateIconClass(key, key));
+    lines.push(generateIconClass(key));
   });
 
   fs.writeFileSync(path.join(outputDir, 'icons.g.dart'), `${lines.join('\n')}`);

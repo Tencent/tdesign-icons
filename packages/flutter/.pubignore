@@ -7,7 +7,7 @@ CONTRIBUTING.md
 pubspec.lock
 example/
 tool/
-glup/
+gulp/
 
 !fonts/
 !fonts/t.ttf

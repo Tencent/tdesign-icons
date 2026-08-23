@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tdesign_flutter_icons/tdesign_flutter_icons.dart';
+// ignore: implementation_imports
+import 'package:tdesign_flutter_icons/src/icon_base.dart';
 
 /// 多色 / 可变粗细 / 可变颜色图标示例页。
 ///

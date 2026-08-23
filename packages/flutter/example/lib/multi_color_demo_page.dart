@@ -48,13 +48,14 @@ enum _ColorChannel {
 class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   IconType _iconType = IconType.outline;
   double _strokeWidth = 2;
-  ColorMode _colorMode = ColorMode.multiple;
+  // 默认单色模式，且不修改颜色（使用图标默认单色）。
+  ColorMode _colorMode = ColorMode.single;
 
-  // 四通道默认颜色与 view 保持一致。
-  Color _fillColor1 = const Color(0xFF02D8F2);
-  Color _fillColor2 = const Color(0xFFFFAA75);
-  Color _strokeColor1 = const Color(0xFF0262F8);
-  Color _strokeColor2 = const Color(0xFF0262F8);
+  // 默认单色：不修改颜色，使用默认黑色单色渲染。
+  Color _fillColor1 = const Color(0xFF000000);
+  Color _fillColor2 = const Color(0xFF000000);
+  Color _strokeColor1 = const Color(0xFF000000);
+  Color _strokeColor2 = const Color(0xFF000000);
 
   /// 当前图标类型下的图标名列表（按名称排序）。
   List<String> get _currentIcons {
@@ -143,11 +144,11 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
     setState(() {
       _iconType = IconType.outline;
       _strokeWidth = 2;
-      _colorMode = ColorMode.multiple;
-      _fillColor1 = const Color(0xFF02D8F2);
-      _fillColor2 = const Color(0xFFFFAA75);
-      _strokeColor1 = const Color(0xFF0262F8);
-      _strokeColor2 = const Color(0xFF0262F8);
+      _colorMode = ColorMode.single;
+      _fillColor1 = const Color(0xFF000000);
+      _fillColor2 = const Color(0xFF000000);
+      _strokeColor1 = const Color(0xFF000000);
+      _strokeColor2 = const Color(0xFF000000);
     });
   }
 

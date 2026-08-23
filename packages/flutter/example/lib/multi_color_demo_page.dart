@@ -71,12 +71,23 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   }
 
   /// 当前模式下实际应用到各通道的颜色。
-  /// 单色全部回退到同一颜色，双色按 fill/stroke 分组，多色各自独立。
-  Color _channelColor(_ColorChannel channel) {
+  /// [isFilled] 用于区分填充 / 非填充图标：非填充（描边）图标在单色/双色模式下
+  /// 只给描边上色，填充通道保持透明；填充图标则整体按所选颜色上色。
+  Color _channelColor(_ColorChannel channel, {required bool isFilled}) {
     switch (_colorMode) {
       case ColorMode.single:
+        // 单色：非填充图标只描边（fill 透明），填充图标整体同色。
+        if (!isFilled &&
+            (channel == _ColorChannel.fill1 || channel == _ColorChannel.fill2)) {
+          return Colors.transparent;
+        }
         return _fillColor1;
       case ColorMode.double:
+        // 双色：非填充图标只描边（fill 透明），填充图标 fill+stroke 分两组。
+        if (!isFilled &&
+            (channel == _ColorChannel.fill1 || channel == _ColorChannel.fill2)) {
+          return Colors.transparent;
+        }
         return (channel == _ColorChannel.fill1 ||
                 channel == _ColorChannel.fill2)
             ? _fillColor1
@@ -95,7 +106,8 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
     setState(() {
       switch (_colorMode) {
         case ColorMode.single:
-          // 单色只改主填充色，其余通道通过回退规则跟随。
+          // 单色主色存于 _fillColor1：非填充图标经 _channelColor 落到描边，
+          // 填充图标落到填充，其余通道按回退规则跟随。
           _fillColor1 = color;
           break;
         case ColorMode.double:
@@ -128,8 +140,10 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   }
 
   /// 当前模式下需要展示的可独立上色通道。
-  List<_ColorChannel> get _visibleChannels => switch (_colorMode) {
-    ColorMode.single => const [_ColorChannel.fill1],
+  /// 单色模式下，非填充图标只描边上色（展示描边通道），填充图标上填充色（展示填充通道）。
+  List<_ColorChannel> _visibleChannelsFor(bool isFilled) => switch (_colorMode) {
+    ColorMode.single =>
+      isFilled ? const [_ColorChannel.fill1] : const [_ColorChannel.stroke1],
     ColorMode.double => const [_ColorChannel.fill1, _ColorChannel.stroke1],
     ColorMode.multiple => const [
       _ColorChannel.fill1,
@@ -159,7 +173,10 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
       builder:
           (context) => _ColorPickerDialog(
             title: '选择${channel.label}颜色',
-            initial: _channelColor(channel),
+            initial: _channelColor(
+              channel,
+              isFilled: _iconType == IconType.filled,
+            ),
           ),
     );
     if (selected != null) {
@@ -249,10 +266,10 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
           ),
           const SizedBox(height: 12),
 
-          for (final channel in _visibleChannels) ...[
+          for (final channel in _visibleChannelsFor(isFilled)) ...[
             _ColorChannelRow(
               label: channel.label,
-              color: _channelColor(channel),
+              color: _channelColor(channel, isFilled: isFilled),
               onTap: () => _pickColor(channel),
             ),
             const SizedBox(height: 8),
@@ -280,10 +297,10 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
     }
 
     final isFilled = _iconType == IconType.filled;
-    final fillColor = _channelColor(_ColorChannel.fill1);
-    final fillColor2 = _channelColor(_ColorChannel.fill2);
-    final strokeColor = _channelColor(_ColorChannel.stroke1);
-    final strokeColor2 = _channelColor(_ColorChannel.stroke2);
+    final fillColor = _channelColor(_ColorChannel.fill1, isFilled: isFilled);
+    final fillColor2 = _channelColor(_ColorChannel.fill2, isFilled: isFilled);
+    final strokeColor = _channelColor(_ColorChannel.stroke1, isFilled: isFilled);
+    final strokeColor2 = _channelColor(_ColorChannel.stroke2, isFilled: isFilled);
 
     return LayoutBuilder(
       builder: (context, constraints) {

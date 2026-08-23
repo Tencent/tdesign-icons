@@ -98,6 +98,13 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
             ? _fillColor1
             : _strokeColor1;
       case ColorMode.multiple:
+        // 多色：非填充图标同样只描边（fill 保持透明），避免把描边图标的
+        // 白色填充底渲染成实心色块；填充图标才使用 fill+stroke 四通道上色。
+        // 与单色/双色一致，非填充图标的多色效果通过 stroke1/stroke2 呈现。
+        if (!isFilled &&
+            (channel == _ColorChannel.fill1 || channel == _ColorChannel.fill2)) {
+          return Colors.transparent;
+        }
         return switch (channel) {
           _ColorChannel.fill1 => _fillColor1,
           _ColorChannel.fill2 => _fillColor2,
@@ -150,12 +157,14 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
     ColorMode.single =>
       isFilled ? const [_ColorChannel.fill1] : const [_ColorChannel.stroke1],
     ColorMode.double => const [_ColorChannel.fill1, _ColorChannel.stroke1],
-    ColorMode.multiple => const [
-      _ColorChannel.fill1,
-      _ColorChannel.fill2,
-      _ColorChannel.stroke1,
-      _ColorChannel.stroke2,
-    ],
+    ColorMode.multiple => isFilled
+      ? const [
+          _ColorChannel.fill1,
+          _ColorChannel.fill2,
+          _ColorChannel.stroke1,
+          _ColorChannel.stroke2,
+        ]
+      : const [_ColorChannel.stroke1, _ColorChannel.stroke2],
   };
 
   /// 重置：恢复默认图标类型、颜色与粗细（对齐 view 的 `handleReset`）。

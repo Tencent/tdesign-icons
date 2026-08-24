@@ -92,16 +92,16 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   /// 当前模式下实际应用到各通道的颜色。
   /// [isFilled] 用于区分填充 / 非填充图标：非填充（描边）图标在单色/双色模式下
   /// 只给描边上色，填充通道保持透明；填充图标则整体按所选颜色上色。
-  /// 未自定义颜色时单色默认色跟随主题 [context] 的 onSurface，保证深浅色下均可见。
-  Color _channelColor(
+  /// 未自定义颜色时返回 `null`，表示「不指定」，交由 [IconBase] 走缺省回退
+  /// （fill 缺省 transparent、stroke 缺省 currentColor 跟随主题），与 view 对齐。
+  Color? _channelColor(
     _ColorChannel channel, {
     required bool isFilled,
-    required BuildContext context,
   }) {
-    // 未自定义颜色时，单色模式使用主题默认色（onSurface），随深浅色切换自动变化。
-    final baseColor = (!_colorCustomized && _colorMode == ColorMode.single)
-        ? Theme.of(context).colorScheme.onSurface
-        : _fillColor1;
+    // 未自定义颜色：不指定任何通道颜色，由 IconBase 按缺省逻辑渲染。
+    if (!_colorCustomized) {
+      return null;
+    }
     switch (_colorMode) {
       case ColorMode.single:
         // 单色：非填充图标只描边（fill 透明），填充图标整体同色。
@@ -109,7 +109,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
             (channel == _ColorChannel.fill1 || channel == _ColorChannel.fill2)) {
           return Colors.transparent;
         }
-        return baseColor;
+        return _fillColor1;
       case ColorMode.double:
         // 双色：非填充图标只描边（fill 透明），填充图标 fill+stroke 分两组。
         if (!isFilled &&
@@ -135,6 +135,25 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
           _ColorChannel.stroke2 => _strokeColor2,
         };
     }
+  }
+
+  /// 用于 UI 展示（颜色行 / 取色器初始值）的展示色。
+  /// 未自定义颜色时，展示 [IconBase] 缺省会渲染的效果色：
+  /// fill 缺省 transparent、stroke 缺省 currentColor（跟随主题 onSurface），
+  /// 保证深浅色下展示与实际渲染一致。
+  Color _displayColor(
+    _ColorChannel channel, {
+    required bool isFilled,
+    required BuildContext context,
+  }) {
+    final c = _channelColor(channel, isFilled: isFilled);
+    if (c != null) {
+      return c;
+    }
+    if (channel == _ColorChannel.fill1 || channel == _ColorChannel.fill2) {
+      return Colors.transparent;
+    }
+    return Theme.of(context).colorScheme.onSurface;
   }
 
   void _setChannelColor(_ColorChannel channel, Color color) {
@@ -212,7 +231,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
       builder:
           (context) => _ColorPickerDialog(
             title: '选择${channel.label}颜色',
-            initial: _channelColor(
+            initial: _displayColor(
               channel,
               isFilled: _iconType == IconType.filled,
               context: context,
@@ -245,7 +264,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
         children: [
           _buildControls(context, isFilled: isFilled),
           const Divider(height: 1),
-          Expanded(child: _buildIconGrid(context)),
+          Expanded(child: _buildIconGrid()),
         ],
       ),
     );
@@ -320,7 +339,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
           for (final channel in _visibleChannelsFor(isFilled)) ...[
             _ColorChannelRow(
               label: channel.label,
-              color: _channelColor(channel, isFilled: isFilled, context: context),
+              color: _displayColor(channel, isFilled: isFilled, context: context),
               onTap: () => _pickColor(channel),
             ),
             const SizedBox(height: 8),
@@ -341,17 +360,17 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   }
 
   /// 图标网格：当前类型下的全部多色图标，复用 [IconBase] 动态渲染。
-  Widget _buildIconGrid(BuildContext context) {
+  Widget _buildIconGrid() {
     final icons = _currentIcons;
     if (icons.isEmpty) {
       return const Center(child: Text('未找到图标'));
     }
 
     final isFilled = _iconType == IconType.filled;
-    final fillColor = _channelColor(_ColorChannel.fill1, isFilled: isFilled, context: context);
-    final fillColor2 = _channelColor(_ColorChannel.fill2, isFilled: isFilled, context: context);
-    final strokeColor = _channelColor(_ColorChannel.stroke1, isFilled: isFilled, context: context);
-    final strokeColor2 = _channelColor(_ColorChannel.stroke2, isFilled: isFilled, context: context);
+    final fillColor = _channelColor(_ColorChannel.fill1, isFilled: isFilled);
+    final fillColor2 = _channelColor(_ColorChannel.fill2, isFilled: isFilled);
+    final strokeColor = _channelColor(_ColorChannel.stroke1, isFilled: isFilled);
+    final strokeColor2 = _channelColor(_ColorChannel.stroke2, isFilled: isFilled);
 
     return LayoutBuilder(
       builder: (context, constraints) {

@@ -65,8 +65,12 @@ class IconBase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 缺省颜色跟随主题：iconTheme.color 未设置时回退到 onSurface，
+    // 保证深色模式下图标不会误用黑色而不可见。
     final currentColor =
-        color ?? Theme.of(context).iconTheme.color ?? Colors.black;
+        color ??
+        Theme.of(context).iconTheme.color ??
+        Theme.of(context).colorScheme.onSurface;
 
     // 颜色通道缺省回退规则对齐 vue-next / react：
     // - fill（__FILL1__/__FILL2__）：缺省为 transparent（非填充图标只描边不上填充）；

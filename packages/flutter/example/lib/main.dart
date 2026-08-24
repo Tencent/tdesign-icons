@@ -93,7 +93,10 @@ class _HomePage extends StatelessWidget {
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) => const MultiColorDemoPage(),
+                  builder: (_) => MultiColorDemoPage(
+                    isDarkMode: isDarkMode,
+                    onDarkModeChanged: onDarkModeChanged,
+                  ),
                 ),
               ),
             ),

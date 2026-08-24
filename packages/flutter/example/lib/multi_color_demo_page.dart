@@ -9,9 +9,20 @@ import 'package:tdesign_flutter_icons/src/icon_base.dart';
 /// - 展示**全部**多色图标（填充 / 非填充两类），复用 `svgDataMap` 动态渲染；
 /// - 填充图标（`-filled` 后缀）与 **非填充图标** 通过开关切换；
 /// - 提供可变粗细滑杆、单色/双色/多色颜色模式与自由取色；
+/// - 页面右上角支持深浅色主题切换，未自定义颜色时单色图标随主题自动适配；
 /// - 提供「重置」操作，一键恢复默认颜色与粗细。
 class MultiColorDemoPage extends StatefulWidget {
-  const MultiColorDemoPage({super.key});
+  const MultiColorDemoPage({
+    super.key,
+    required this.isDarkMode,
+    required this.onDarkModeChanged,
+  });
+
+  /// 当前是否为深色模式，用于在页面内切换深浅色主题。
+  final bool isDarkMode;
+
+  /// 深浅色主题切换回调。
+  final ValueChanged<bool> onDarkModeChanged;
 
   @override
   State<MultiColorDemoPage> createState() => _MultiColorDemoPageState();
@@ -53,7 +64,10 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   // 默认单色模式，且不修改颜色（使用图标默认单色）。
   ColorMode _colorMode = ColorMode.single;
 
-  // 默认单色：不修改颜色，使用默认黑色单色渲染。
+  // 是否自定义过颜色：未自定义时单色默认色跟随主题（深浅色下均可见）。
+  bool _colorCustomized = false;
+
+  // 默认单色：不修改颜色，使用主题默认色渲染。
   Color _fillColor1 = const Color(0xFF000000);
   Color _fillColor2 = const Color(0xFF000000);
   Color _strokeColor1 = const Color(0xFF000000);
@@ -78,7 +92,16 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
   /// 当前模式下实际应用到各通道的颜色。
   /// [isFilled] 用于区分填充 / 非填充图标：非填充（描边）图标在单色/双色模式下
   /// 只给描边上色，填充通道保持透明；填充图标则整体按所选颜色上色。
-  Color _channelColor(_ColorChannel channel, {required bool isFilled}) {
+  /// 未自定义颜色时单色默认色跟随主题 [context] 的 onSurface，保证深浅色下均可见。
+  Color _channelColor(
+    _ColorChannel channel, {
+    required bool isFilled,
+    required BuildContext context,
+  }) {
+    // 未自定义颜色时，单色模式使用主题默认色（onSurface），随深浅色切换自动变化。
+    final baseColor = (!_colorCustomized && _colorMode == ColorMode.single)
+        ? Theme.of(context).colorScheme.onSurface
+        : _fillColor1;
     switch (_colorMode) {
       case ColorMode.single:
         // 单色：非填充图标只描边（fill 透明），填充图标整体同色。
@@ -86,7 +109,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
             (channel == _ColorChannel.fill1 || channel == _ColorChannel.fill2)) {
           return Colors.transparent;
         }
-        return _fillColor1;
+        return baseColor;
       case ColorMode.double:
         // 双色：非填充图标只描边（fill 透明），填充图标 fill+stroke 分两组。
         if (!isFilled &&
@@ -116,6 +139,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
 
   void _setChannelColor(_ColorChannel channel, Color color) {
     setState(() {
+      _colorCustomized = true;
       switch (_colorMode) {
         case ColorMode.single:
           // 单色主色存于 _fillColor1：非填充图标经 _channelColor 落到描边，
@@ -173,6 +197,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
       _iconType = IconType.outline;
       _strokeWidth = 2;
       _colorMode = ColorMode.single;
+      _colorCustomized = false;
       _fillColor1 = const Color(0xFF000000);
       _fillColor2 = const Color(0xFF000000);
       _strokeColor1 = const Color(0xFF000000);
@@ -190,6 +215,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
             initial: _channelColor(
               channel,
               isFilled: _iconType == IconType.filled,
+              context: context,
             ),
           ),
     );
@@ -203,7 +229,18 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
     final isFilled = _iconType == IconType.filled;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('多色图标 Demo')),
+      appBar: AppBar(
+        title: const Text('多色图标 Demo'),
+        actions: [
+          IconButton(
+            tooltip: widget.isDarkMode ? '切换明亮模式' : '切换深色模式',
+            icon: Icon(
+              widget.isDarkMode ? Icons.light_mode : Icons.dark_mode,
+            ),
+            onPressed: () => widget.onDarkModeChanged(!widget.isDarkMode),
+          ),
+        ],
+      ),
       body: Column(
         children: [
           _buildControls(context, isFilled: isFilled),
@@ -283,7 +320,7 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
           for (final channel in _visibleChannelsFor(isFilled)) ...[
             _ColorChannelRow(
               label: channel.label,
-              color: _channelColor(channel, isFilled: isFilled),
+              color: _channelColor(channel, isFilled: isFilled, context: context),
               onTap: () => _pickColor(channel),
             ),
             const SizedBox(height: 8),
@@ -311,10 +348,10 @@ class _MultiColorDemoPageState extends State<MultiColorDemoPage> {
     }
 
     final isFilled = _iconType == IconType.filled;
-    final fillColor = _channelColor(_ColorChannel.fill1, isFilled: isFilled);
-    final fillColor2 = _channelColor(_ColorChannel.fill2, isFilled: isFilled);
-    final strokeColor = _channelColor(_ColorChannel.stroke1, isFilled: isFilled);
-    final strokeColor2 = _channelColor(_ColorChannel.stroke2, isFilled: isFilled);
+    final fillColor = _channelColor(_ColorChannel.fill1, isFilled: isFilled, context: context);
+    final fillColor2 = _channelColor(_ColorChannel.fill2, isFilled: isFilled, context: context);
+    final strokeColor = _channelColor(_ColorChannel.stroke1, isFilled: isFilled, context: context);
+    final strokeColor2 = _channelColor(_ColorChannel.stroke2, isFilled: isFilled, context: context);
 
     return LayoutBuilder(
       builder: (context, constraints) {

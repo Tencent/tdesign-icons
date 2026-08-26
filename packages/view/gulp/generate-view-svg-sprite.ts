@@ -118,18 +118,12 @@ export function processSvgSpriteInNode(svgString) {
       } else if (isLogo) {
         element.setAttribute('fill', isSpecified ? 'currentColor' : 'transparent');
       } else {
-        // 单色填充图标（带有 id 但不是 strokeN/fillN 多色路径，如 caret-down-small）：
-        //
-        // 问题链路：
-        // 1. 源文件 svg/caret-down-small.svg 中 path 硬编码了 fill="black"，
-        //    经 svgo 处理后会被归一化为 fill="#000"（黑）。
-        // 2. 该 path 自带 id（如 ambcaret-down-small），因此会进入上方 else if (nodeId)
-        //    分支，但其 id 既不属于 strokeN 也不属于 fillN 多色路径、也不是 logo，
-        //    此前没有任何分支命中，硬编码的 fill="#000" 会被原样保留。
-        // 3. 结果：深色模式下图标仍以纯黑渲染，无法随主题色变化。
-        //
-        // 处理方式：移除硬编码的 fill，并绑定为主题色变量，
-        // 使其跟随组件 props（isSpecified 时为 strokeColor1，否则为 fillColor1）。
+        // 单色填充图标：path 自带 id（如 caret-down-small 的 ambcaret-down-small），
+        // 但既非 strokeN/fillN 多色路径，也非 logo，上方分支均不命中。
+        // 若保留源文件硬编码的 fill="black"（svgo 会归一化为 fill="#000"），
+        // 图标将无法跟随主题色（深色模式下仍为纯黑），
+        // 故此处移除硬编码 fill，改为绑定主题色变量
+        // （isSpecified 时为 strokeColor1，否则为 fillColor1）。
         element.removeAttribute('fill');
         element.setAttribute(':fill', isSpecified ? 'strokeColor1' : 'fillColor1');
       }

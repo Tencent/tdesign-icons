@@ -117,6 +117,15 @@ export function processSvgSpriteInNode(svgString) {
         }
       } else if (isLogo) {
         element.setAttribute('fill', isSpecified ? 'currentColor' : 'transparent');
+      } else {
+        // 单色填充图标：path 自带 id（如 caret-down-small），
+        // 但既非 strokeN/fillN 多色路径，也非 logo，上方分支均不命中。
+        // 若保留源文件硬编码的 fill="black"（svgo 会归一化为 fill="#000"），
+        // 图标将无法跟随主题色（深色模式下仍为纯黑），
+        // 故此处移除硬编码 fill，改为绑定主题色变量
+        // （isSpecified 时为 strokeColor1，否则为 fillColor1）。
+        element.removeAttribute('fill');
+        element.setAttribute(':fill', isSpecified ? 'strokeColor1' : 'fillColor1');
       }
     } else {
       // 填充图标处理逻辑

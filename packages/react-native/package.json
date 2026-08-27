@@ -1,6 +1,7 @@
 {
   "name": "tdesign-icons-react-native",
   "version": "0.0.3",
+  "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -7,7 +7,7 @@ export default function classname(...inputs: ClassValue[]) {
 }
 
 export function getClassPrefix() {
-  return (window as any).__TDESIGN_THEME_PREFIX__ || 't';
+  return (typeof window !== 'undefined' && (window as any).__TDESIGN_THEME_PREFIX__) || 't';
 }
 
 export const classPrefix = getClassPrefix();

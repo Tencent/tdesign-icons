@@ -1,5 +1,12 @@
 # tdesign-icons-view
 
+## 🌈 0.5.11 `2026-08-28`
+
+### 🐞 Bug Fixes
+
+- 修复 usb 原始图标的图层 ID 错误,在深色模式下渲染错误 @uyarn ([#298](https://github.com/Tencent/tdesign-icons/pull/298))
+- 修复带 id 的单色填充图标（如 `caret-down-small`）硬编码黑色 fill 未替换为主题色，导致深色模式下渲染为纯黑的问题 @liweijie0812 ([#299](https://github.com/Tencent/tdesign-icons/pull/299))
+
 ## 🌈 0.5.10 `2026-08-19`
 
 ### 🚀 Features

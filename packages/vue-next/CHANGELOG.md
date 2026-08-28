@@ -1,5 +1,11 @@
 # tdesign-icons-vue-next
 
+## 🌈 0.4.11 `2026-08-28`
+
+### 🐞 Bug Fixes
+
+- 修复 usb 原始图标的图层 ID 错误,在深色模式下渲染错误 @uyarn ([#298](https://github.com/Tencent/tdesign-icons/pull/298))
+
 ## 🌈 0.4.10 `2026-08-19`
 
 ### 🚀 Features

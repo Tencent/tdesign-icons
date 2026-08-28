@@ -6,7 +6,7 @@ on:
 
 jobs:
   call-tag-is-tdesign-icons-view:
-    if: startsWith(github.event.release.tag_name,'tdesign-icons-view')
+    if: startsWith(github.event.release.tag_name,'tdesign-icons-view@')
     runs-on: ubuntu-latest
     steps:
       - uses: TDesignOteam/workflows/actions/upgrade-deps@main
@@ -15,4 +15,40 @@ jobs:
           owner: Tencent
           repo: tdesign
           deps: tdesign-icons-view
+          package-manager: pnpm
+
+  call-tag-is-tdesign-icons-react:
+    if: startsWith(github.event.release.tag_name,'tdesign-icons-react@')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TDesignOteam/workflows/actions/upgrade-deps@main
+        with:
+          token: ${{ secrets.TDESIGN_BOT_TOKEN }}
+          owner: Tencent
+          repo: tdesign-react
+          deps: tdesign-icons-react
+          package-manager: pnpm
+  
+  call-tag-is-tdesign-icons-vue-next:
+    if: startsWith(github.event.release.tag_name,'tdesign-icons-vue-next@')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TDesignOteam/workflows/actions/upgrade-deps@main
+        with:
+          token: ${{ secrets.TDESIGN_BOT_TOKEN }}
+          owner: Tencent
+          repo: tdesign-vue-next
+          deps: tdesign-icons-vue-next
+          package-manager: pnpm
+  
+  call-tag-is-tdesign-icons-vue:
+    if: startsWith(github.event.release.tag_name,'tdesign-icons-vue@')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TDesignOteam/workflows/actions/upgrade-deps@main
+        with:
+          token: ${{ secrets.TDESIGN_BOT_TOKEN }}
+          owner: Tencent
+          repo: tdesign-vue
+          deps: tdesign-icons-vue
           package-manager: pnpm

@@ -51,4 +51,3 @@ jobs:
           owner: Tencent
           repo: tdesign-vue
           deps: tdesign-icons-vue
-          package-manager: pnpm

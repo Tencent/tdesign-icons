@@ -5,7 +5,7 @@ on:
     types: [created]
 
 jobs:
-  call-tag-is-tdesign-icons-view:
+  pr-to-tdesign:
     if: startsWith(github.event.release.tag_name,'tdesign-icons-view@')
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +17,7 @@ jobs:
           deps: tdesign-icons-view
           package-manager: pnpm
 
-  call-tag-is-tdesign-icons-react:
+  pr-to-tdesign-react:
     if: startsWith(github.event.release.tag_name,'tdesign-icons-react@')
     runs-on: ubuntu-latest
     steps:
@@ -28,8 +28,19 @@ jobs:
           repo: tdesign-react
           deps: tdesign-icons-react
           package-manager: pnpm
+
+  pr-to-tdesign-mobile-react:
+    if: startsWith(github.event.release.tag_name,'tdesign-icons-react@')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TDesignOteam/workflows/actions/upgrade-deps@main
+        with:
+          token: ${{ secrets.TDESIGN_BOT_TOKEN }}
+          owner: Tencent
+          repo: tdesign-mobile-react
+          deps: tdesign-icons-react
   
-  call-tag-is-tdesign-icons-vue-next:
+  pr-to-tdesign-vue-next:
     if: startsWith(github.event.release.tag_name,'tdesign-icons-vue-next@')
     runs-on: ubuntu-latest
     steps:
@@ -40,8 +51,19 @@ jobs:
           repo: tdesign-vue-next
           deps: tdesign-icons-vue-next
           package-manager: pnpm
+
+  pr-to-tdesign-mobile-vue:
+    if: startsWith(github.event.release.tag_name,'tdesign-icons-vue-next@')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TDesignOteam/workflows/actions/upgrade-deps@main
+        with:
+          token: ${{ secrets.TDESIGN_BOT_TOKEN }}
+          owner: Tencent
+          repo: tdesign-mobile-vue
+          deps: tdesign-icons-vue-next
   
-  call-tag-is-tdesign-icons-vue:
+  pr-to-tdesign-vue:
     if: startsWith(github.event.release.tag_name,'tdesign-icons-vue@')
     runs-on: ubuntu-latest
     steps:

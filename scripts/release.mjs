@@ -115,7 +115,7 @@ async function updatePackageVersion(pkg, type) {
       const readmeFile = path.join(path.dirname(pkg.manifestFile), 'README.md');
       const readme = await fs.readFile(readmeFile, 'utf8');
       const updatedReadme = readme.replace(
-        new RegExp(`(^[ \\t]*${pkg.name}:[ \\t]*\\^)${pkg.version}([ \\t]*$)`, 'gm'),
+        new RegExp(`(^[ \\t]*${pkg.name}:[ \\t]*\\^)${pkg.version}([ \\t]*$)`, 'm'),
         `$1${version}$2`,
       );
       if (updatedReadme === readme) throw new Error(`无法更新版本号：${readmeFile}`);

@@ -29,7 +29,7 @@
     ".": {
       "import": "./dist/td-icons-view.es.js"
     },
-    "./manifest": "./dist/td-icons-view.manifest.es.js"
+    "./manifest": "./dist/td-icons-manifest.es.js"
   },
   "keywords": [
     "icons",

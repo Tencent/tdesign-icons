@@ -8,9 +8,13 @@ const buildMap = {
   preview: null,
   production: {
     lib: {
-      entry: resolve(__dirname, 'src/build-entry.js'),
+      entry: {
+        'td-icons-view': resolve(__dirname, 'src/build-entry.js'),
+        'td-icons-manifest': resolve(__dirname, 'src/manifest-entry.js'),
+      },
+      formats: ['es'],
       name: 'td-icons-view',
-      fileName: (format) => `td-icons-view.${format}.js`,
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
   },
 };

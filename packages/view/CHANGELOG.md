@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 🌈 0.5.12 `2026-09-08`
+
+### 🚀 Features
+
+- 导出 manifest, 供按需使用获取图标清单 @liweijie0812 ([#307](https://github.com/Tencent/tdesign-icons/pull/307))
+
 ## 🌈 0.5.11 `2026-08-28`
 
 ### 🐞 Bug Fixes

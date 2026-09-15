@@ -11,7 +11,7 @@ Add dependency in your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  tdesign_flutter_icons: ^0.0.5
+  tdesign_flutter_icons: ^0.0.7
 ```
 
 ## Usage

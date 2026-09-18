@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 🌈 0.5.13 `2026-09-18`
+
+### 🐞 Bug Fixes
+
+- 优化带透明度颜色的展示效果 @uyarn ([#310](https://github.com/Tencent/tdesign-icons/pull/310))
+
 ## 🌈 0.5.12 `2026-09-08`
 
 ### 🚀 Features

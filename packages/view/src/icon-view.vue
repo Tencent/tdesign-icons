@@ -161,6 +161,9 @@
               <t-color-picker
                 v-model="configuration.fillColor1"
                 :color-modes="['monochrome']"
+                :input-props="{
+                  autoWidth: false
+                }"
                 :enable-alpha="true"
                 format="RGBA"
                 style="margin: 8px 0 0 0"
@@ -179,6 +182,9 @@
                 <t-color-picker
                   v-model="configuration.fillColor2"
                   :color-modes="['monochrome']"
+                  :input-props="{
+                    autoWidth: false
+                  }"
                   :enable-alpha="true"
                   format="RGBA"
                   style="margin: 8px 0 0 0"
@@ -194,6 +200,9 @@
               <t-color-picker
                 v-model="configuration.strokeColor1"
                 :color-modes="['monochrome']"
+                :input-props="{
+                  autoWidth: false
+                }"
                 :enable-alpha="true"
                 format="RGBA"
                 style="margin: 8px 0 0 0"
@@ -213,6 +222,9 @@
               <t-color-picker
                 v-model="configuration.strokeColor2"
                 :color-modes="['monochrome']"
+                :input-props="{
+                  autoWidth: false
+                }"
                 :enable-alpha="true"
                 format="RGBA"
                 style="margin: 8px 0 0 0"

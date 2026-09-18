@@ -13,7 +13,7 @@ catalog:
   "@babel/preset-env": ^7.16.4
   "@babel/preset-react": ^7.16.0
   "@babel/runtime": "^7.16.5"
-  '@clack/prompts': ^1.7.0
+  "@clack/prompts": ^1.7.0
   "@popperjs/core": ^2.11.0
   "@resvg/resvg-js": ^2.6.2
   "@rollup/plugin-babel": ^5.3.0
@@ -97,7 +97,7 @@ catalogs:
     "react-dom": "^19.0.0"
   tdesign:
     "tdesign-icons-vue-next": "^0.4.1"
-    "tdesign-vue-next": "~1.17.3"
+    "tdesign-vue-next": "~1.20.8"
   types:
     "@types/fs-extra": ^9.0.9
     "@types/gulp": ^4.0.6

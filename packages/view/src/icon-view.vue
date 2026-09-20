@@ -337,7 +337,7 @@ import {
   Button as TButton,
   Link as TLink,
   Tooltip as TTooltip,
-} from 'tdesign-vue-next/lib/index-lib.js';
+} from 'tdesign-vue-next/lib';
 
 import { SearchIcon, InfoCircleIcon } from 'tdesign-icons-vue-next';
 import {

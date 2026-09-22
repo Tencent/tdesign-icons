@@ -337,7 +337,7 @@ import {
   Button as TButton,
   Link as TLink,
   Tooltip as TTooltip,
-} from 'tdesign-vue-next';
+} from 'tdesign-vue-next/lib';
 
 import { SearchIcon, InfoCircleIcon } from 'tdesign-icons-vue-next';
 import {
@@ -535,6 +535,14 @@ watch(
 // 是否为嵌入框架内展示，减少展示内容和配置功能
 const isFrameworkContent = computed(() => !!frameworkContent);
 
+// 组件渲染在 shadow DOM 内，MessagePlugin 默认挂载 document.body 会丢失样式，需指定挂载点
+const messageAttach = () => getRoot()?.querySelector('.t-icons-view') || document.body;
+
+const message = {
+  success: (content) => MessagePlugin.success({ content, attach: messageAttach }),
+  error: (content) => MessagePlugin.error({ content, attach: messageAttach }),
+};
+
 const categories = computed(
   () => ({
     ...manifest.value[configuration.currentType],
@@ -667,9 +675,9 @@ const handleCopyIcon = async (type) => {
       };
       img.src = url;
     }
-    MessagePlugin.success(lang.value.copied);
+    message.success(lang.value.copied);
   } catch {
-    MessagePlugin.error(lang.value.copyFailed);
+    message.error(lang.value.copyFailed);
   }
 };
 
@@ -711,9 +719,9 @@ const handleDownloadIcon = (type) => {
       img.src = url;
     }
   } catch {
-    MessagePlugin.success(lang.value.downloadFailed);
+    message.error(lang.value.downloadFailed);
   } finally {
-    MessagePlugin.success(lang.value.downloaded);
+    message.success(lang.value.downloaded);
   }
 };
 

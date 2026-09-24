@@ -102,20 +102,16 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - run: pnpm run generate
-
       - uses: flutter-actions/setup-flutter@v4
         with:
           channel: stable
           version: ${{ matrix.flutter-version }}
 
+      - run: pnpm run generate
+
       - name: install Flutter package dependencies
         working-directory: ./packages/flutter
         run: flutter pub get
-
-      - name: generate Flutter icon assets
-        working-directory: ./packages/flutter
-        run: dart ./tool/generate.dart
 
       - name: analyze Flutter package
         working-directory: ./packages/flutter
@@ -147,6 +143,11 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - uses: flutter-actions/setup-flutter@v4
+        with:
+          channel: stable
+          version: 3.32.0
+
       - run: pnpm run generate
 
       - run: pnpm run --filter tdesign-icons-vue-next build
@@ -155,18 +156,9 @@ jobs:
 
       - run: mv packages/view/dist _site
 
-      - uses: flutter-actions/setup-flutter@v4
-        with:
-          channel: stable
-          version: 3.32.0
-
       - name: install Flutter package dependencies
         working-directory: ./packages/flutter
         run: flutter pub get
-
-      - name: generate Flutter icon assets
-        working-directory: ./packages/flutter
-        run: dart ./tool/generate.dart
 
       - name: install Flutter example dependencies
         working-directory: ./packages/flutter/example

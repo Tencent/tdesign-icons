@@ -27,19 +27,18 @@ fvm use
 在 monorepo 内改图标后，从**仓库根目录**按此顺序验证：
 
 ```bash
-# 1. 生成各端资源
+# 1. 生成各端资源（含 Flutter 图标代码）
 pnpm run generate
 
-# 2. Flutter 包：安装依赖并生成 Dart 图标代码
-cd packages/flutter
-fvm flutter pub get
-fvm dart run tool/generate.dart
-
-# 3. 示例应用（Android/Web）：安装依赖并运行
-cd example
+# 2. 示例应用（Android/Web）：安装依赖并运行
+cd packages/flutter/example
 fvm flutter pub get
 fvm flutter run
 ```
+
+> **统一流程**：Flutter 图标代码已接入根目录 gulp 统一流程（`packages/flutter/gulp/index.ts` 的 `flutterTask`，注册于 `gulpfile.ts`），**全部由 TS/JS 实现，不再依赖 Dart/Flutter SDK**。`pnpm run generate` 会依次：复用 gulp 的 `svgToElement` 管线生成 per-icon 的 SVG 数据（`flutter-use-template.ts`），再由 `flutter-aggregate.ts` 聚合生成 `svg_data.g.dart`/`icons.g.dart`/`assets.g.dart` 并复制 `fonts/t.ttf`。因此即使仅构建 React/Vue 的 CI job 也能完整生成 Flutter 代码。
+
+> **半透明重叠处理**：Flutter 的 SVG 数据通过仓库根目录 gulp 的 `svgToElement` 管线（`replaceColor + propsString`）生成（`packages/flutter/gulp/flutter-use-template.ts`），与 React/Vue 端共用同一套颜色通道替换与 `optimizeOpacityOverlaps` 半透明重叠修复逻辑。聚合逻辑见 `packages/flutter/gulp/flutter-aggregate.ts`。**新增或修改 `svg/*.svg` 后重新执行 `pnpm run generate` 即可自动生效**。
 
 ### 调试包源码
 
@@ -56,28 +55,25 @@ fvm flutter run
 # 1. 安装依赖（仓库根目录）
 pnpm install
 
-# 2. 生成资源（仓库根目录）
+# 2. 生成资源（仓库根目录，含 Flutter 图标代码）
 pnpm run generate
 
 # 3. 进入 Flutter 包目录
 cd packages/flutter
 
-# 4. 安装 Flutter 依赖
+# 4. 安装 Flutter 依赖（若第 2 步已自动 pub get 可省略）
 fvm flutter pub get
 
-# 5. 生成代码
-fvm dart run tool/generate.dart
-
-# 6. 代码检查
+# 5. 代码检查
 fvm flutter analyze
 
-# 7. 更新版本号 (编辑 pubspec.yaml 和 CHANGELOG.md)
+# 6. 更新版本号 (编辑 pubspec.yaml 和 CHANGELOG.md)
 
-# 8. 本地预览（在 packages/flutter 目录下执行）
+# 7. 本地预览（在 packages/flutter 目录下执行）
 fvm flutter pub get
 cd example && fvm flutter pub get && fvm flutter run
 
-# 9. 提交并合并发布分支后，创建 Git Tag 触发自动发布
+# 8. 提交并合并发布分支后，创建 Git Tag 触发自动发布
 git tag tdesign_flutter_icons@{version}
 git push origin tdesign_flutter_icons@{version}
 ```
@@ -99,8 +95,10 @@ packages/flutter/
 │   ├── tdesign_flutter_icons.dart   # 入口文件
 │   └── src/
 │       └── assets.g.dart    # 图标常量（自动生成）
-├── tool/
-│   └── generate.dart        # 代码生成器
+├── gulp/
+│   ├── index.ts             # flutterTask（接入根目录 gulp 统一流程）
+│   ├── flutter-use-template.ts   # per-icon SVG 数据生成模板
+│   └── flutter-aggregate.ts     # 聚合生成 svg_data/icons/assets（替代原 generate.dart）
 ├── pubspec.yaml             # 包配置
 ├── CHANGELOG.md             # 版本记录
 └── README.md                # 使用说明

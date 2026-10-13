@@ -1,5 +1,6 @@
 import { parallel, series } from 'gulp';
 
+import { flutterTask } from './packages/flutter/gulp';
 import { reactTask } from './packages/react/gulp';
 import { svgTask } from './packages/svg/gulp';
 import { vueTask } from './packages/vue/gulp';
@@ -26,4 +27,6 @@ export default series(
     iconViewTask(),
     wcTask(source),
   ),
+  // Flutter 依赖 icon-font 产物（resources/icon-font/dist），需在其后执行
+  flutterTask(),
 );

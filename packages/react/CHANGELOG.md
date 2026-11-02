@@ -1,5 +1,11 @@
 # tdesign-icons-react
 
+## 🌈 0.6.12 `2026-10-30`
+
+### 🚀 Features
+
+- 新增 `check-1`和 `remove-1` 图标
+
 ## 🌈 0.6.11 `2026-08-28`
 
 ### 🐞 Bug Fixes

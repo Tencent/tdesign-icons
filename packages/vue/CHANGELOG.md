@@ -1,5 +1,11 @@
 # tdesign-icons-vue
 
+## 🌈 0.4.12 `2026-10-30`
+
+### 🚀 Features
+
+- 新增 `check-1`和 `remove-1` 图标
+
 ## 🌈 0.4.11 `2026-08-28`
 
 ### 🐞 Bug Fixes

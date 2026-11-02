@@ -7589,7 +7589,10 @@ export const manifest = {
     Else: {
       labelCN: '其他',
       labelEn: 'Else',
-      icons: [],
+      icons: [{
+        name: 'loading',
+        keywords: ['加载中', '正在加载'],
+      }],
     },
     System: {
       labelCN: '系统',

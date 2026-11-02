@@ -1,5 +1,11 @@
 # tdesign-icons-web-components
 
+## 🌈 0.3.10 `2026-10-30`
+
+### 🚀 Features
+
+- 新增 `check-1`和 `remove-1` 图标
+
 ## 🌈 0.3.9 `2026-08-28`
 
 ### 🐞 Bug Fixes

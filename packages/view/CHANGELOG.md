@@ -1,5 +1,11 @@
 # tdesign-icons-view
 
+## 🌈 0.5.15 `2026-10-30`
+
+### 🚀 Features
+
+- 新增 `check-1`和 `remove-1` 图标
+
 ## 🌈 0.5.14 `2026-09-18`
 
 ### 🐞 Bug Fixes

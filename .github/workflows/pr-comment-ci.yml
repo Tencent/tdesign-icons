@@ -10,7 +10,8 @@ jobs:
     steps:
       - uses: pnpm/setup@v3
         with:
-          runtime: node@22  
+          runtime: node@22
+          version: v12
 
       - uses: TDesignOteam/tdesign-pr-trigger-action@main
         with:

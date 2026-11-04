@@ -25,8 +25,6 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - run: pnpm run generate
-
       - uses: flutter-actions/setup-flutter@v4
         with:
           channel: stable
@@ -34,13 +32,11 @@ jobs:
 
       - uses: flutter-actions/setup-pubdev-credentials@v1
 
+      - run: pnpm run generate
+
       - name: install
         working-directory: ./packages/flutter
         run: flutter pub get
-
-      - name: build
-        working-directory: ./packages/flutter
-        run: dart ./tool/generate.dart
 
       - name: publish
         working-directory: ./packages/flutter

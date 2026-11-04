@@ -26,6 +26,12 @@ export const generateIcons = ({
         if (file.basename) {
           // eslint-disable-next-line no-param-reassign
           file.extname = extName;
+          // Dart 文件名要求 lower_case_with_underscores，把源 SVG 的
+          // kebab-case 图标名（如 `ability-open`）转成 snake_case（`ability_open`）。
+          if (extName === '.dart') {
+            // eslint-disable-next-line no-param-reassign
+            file.basename = file.basename.replace(/-/g, '_');
+          }
         }
       }),
     )

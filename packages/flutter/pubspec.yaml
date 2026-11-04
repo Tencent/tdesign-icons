@@ -22,13 +22,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^2.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
-  code_builder: ^4.11.1
-  dart_style: ^3.1.2
 
 flutter:
   fonts:

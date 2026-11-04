@@ -110,6 +110,17 @@ async function updatePackageVersion(pkg, type) {
     );
     if (updated === pubspec) throw new Error(`无法更新版本号：${pkg.manifestFile}`);
     await fs.writeFile(pkg.manifestFile, updated);
+
+    if (pkg.name === 'tdesign_flutter_icons') {
+      const readmeFile = path.join(path.dirname(pkg.manifestFile), 'README.md');
+      const readme = await fs.readFile(readmeFile, 'utf8');
+      const updatedReadme = readme.replace(
+        new RegExp(`(^[ \\t]*${pkg.name}:[ \\t]*\\^)${pkg.version}([ \\t]*$)`, 'm'),
+        `$1${version}$2`,
+      );
+      if (updatedReadme === readme) throw new Error(`无法更新版本号：${readmeFile}`);
+      await fs.writeFile(readmeFile, updatedReadme);
+    }
   } else {
     const manifest = JSON.parse(await fs.readFile(pkg.manifestFile, 'utf8'));
     manifest.version = version;

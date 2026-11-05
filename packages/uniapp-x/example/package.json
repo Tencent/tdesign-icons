@@ -1,0 +1,32 @@
+{
+  "name": "tdesign-icons-example-uniapp-x",
+  "version": "0.0.0",
+  "private": true,
+  "description": "tdesign-icons-uniapp-x 示例工程（uni-app x / uvue）",
+  "scripts": {
+    "dev:h5": "uni",
+    "dev:mp-weixin": "uni -p mp-weixin",
+    "build:h5": "uni build",
+    "build:mp-weixin": "uni build -p mp-weixin"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "3.0.0-5030420261029002",
+    "@dcloudio/uni-components": "3.0.0-5030420261029002",
+    "@dcloudio/uni-h5": "3.0.0-5030420261029002",
+    "tdesign-icons-uniapp-x": "workspace:*",
+    "vue": "catalog:vue"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^3.4.32",
+    "@dcloudio/uni-cli-shared": "3.0.0-5030420261029002",
+    "@dcloudio/uni-uts-v1": "3.0.0-5030420261029002",
+    "@dcloudio/vite-plugin-uni": "3.0.0-5030420261029002",
+    "vite": "catalog:"
+  },
+  "optionalDependencies": {
+    "@dcloudio/uts-darwin-arm64": "3.0.0-5030420261029002",
+    "@dcloudio/uts-darwin-x64": "3.0.0-5030420261029002",
+    "@dcloudio/uts-linux-x64-gnu": "3.0.0-5030420261029002",
+    "@dcloudio/uts-win32-x64-msvc": "3.0.0-5030420261029002"
+  }
+}

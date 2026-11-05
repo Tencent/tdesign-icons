@@ -1,0 +1,104 @@
+<template>
+  <view class="t-icon-root" :class="_classNames" :style="_rootStyle" @click="_onClick">
+    <image class="t-icon-image" :src="_src" mode="aspectFit" :style="_imageStyle" />
+  </view>
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue'
+import {
+  getSizeClassName,
+  resolveSizeStyle,
+  resolveSvg,
+  toSvgDataUri,
+} from '../../utils/icon-runtime.uts'
+
+/**
+ * 图标模板：由 `pnpm run generate` 生成，请勿手动修改。
+ * 颜色占位符 {f1}/{f2}/{s1}/{s2} 与描边宽度占位符 {sw} 在运行时由 icon-runtime 解析。
+ */
+const TEMPLATE = `$TEMPLATE`
+
+/**
+ * 与官方 uni-app x 组件写法保持一致：
+ * - `<script setup lang="ts">`（不是 lang="uts"）
+ * - 用纯类型 `defineProps<Props>()` + `withDefaults`
+ *
+ * 用 `defineProps({ type: ... })` 的对象字面量在 web 端会被包成 UTSJSONObject，
+ * Vue 处理 setup 返回值时对它执行 defineProperty 会抛
+ * `Invalid property descriptor. Cannot both specify accessors and a value`。
+ */
+type Props = {
+  /** 图标尺寸，支持 'small' | 'medium' | 'large' | '20px' | '1.5em' */
+  size?: string
+  /** 描边颜色，支持 string 或 string[]，多色图标按顺序取用 */
+  strokeColor?: string | string[] | null
+  /** 填充颜色，支持 string 或 string[]，多色图标按顺序取用 */
+  fillColor?: string | string[] | null
+  /** 描边宽度 */
+  strokeWidth?: number
+  /** 点击事件 */
+  onClick?: (() => void) | null
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  size: '',
+  strokeColor: null,
+  fillColor: null,
+  strokeWidth: 2,
+  onClick: null,
+})
+
+const iconName = '$KEY'
+
+/** 组件内部 name（easycom 标签名由目录决定，不依赖这里） */
+defineOptions({
+  name: '$ICON_NAME',
+})
+
+/** 供演示组件读取的原始占位符模板 */
+const template = TEMPLATE
+
+/**
+ * 每个实例的唯一后缀，用于隔离 <mask> 的 id。
+ *
+ * 图标是用 <image> 渲染 svg Data URI，同一页面上会同时存在多个图标，
+ * 而模板里的 mask id 是固定名（fill1-overlap 等）。id 重复时后加载的
+ * 文档会覆盖先前的定义，导致带填充色的图标互相串味、甚至整块渲染成空白。
+ * web 端的做法是给 id 拼上实例前缀（props.overlapMaskId_fill1），这里等价处理。
+ */
+const _uid = `u${Math.ceil(Math.random() * 10e8).toString(36)}`
+
+const _src = computed((): string => toSvgDataUri(
+  resolveSvg(
+    TEMPLATE,
+    props.strokeColor,
+    props.fillColor,
+    props.strokeWidth,
+    _uid,
+  ),
+))
+
+const _classNames = computed((): string => {
+  const sizeClass = getSizeClassName(props.size)
+  // class 名用 t-icon-<name>，与 web 端保持一致
+  return sizeClass != '' ? `t-icon t-icon-${iconName} ${sizeClass}` : `t-icon t-icon-${iconName}`
+})
+
+const _rootStyle = computed((): string => {
+  // 无尺寸时回落到 1em，否则 <image> 的 100% 尺寸会失去参照而塌缩为 0
+  return resolveSizeStyle(props.size)
+})
+
+const _imageStyle = computed((): string => 'width:100%;height:100%;display:block;')
+
+const _onClick = (): void => {
+  if (props.onClick != null) {
+    props.onClick()
+  }
+}
+</script>
+
+<style>
+@import '../../style/index.css';
+</style>

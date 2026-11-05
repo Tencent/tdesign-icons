@@ -1,0 +1,66 @@
+{
+  "id": "tdesign-icons-uniapp-x",
+  "displayName": "TDesign Icons for uni-app x",
+  "version": "0.1.0",
+  "description": "TDesign 图标库（uni-app x / uvue），支持可变描边宽度与多色",
+  "keywords": [
+    "tdesign",
+    "icons",
+    "uni-app-x",
+    "uvue",
+    "svg"
+  ],
+  "repository": "https://github.com/Tencent/tdesign-icons",
+  "engines": {
+    "HBuilderX": "^4.81.0",
+    "uni-app-x": "^4.81.0"
+  },
+  "dcloudext": {
+    "type": "component-vue",
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      },
+      "sourcecode": {
+        "price": "0.00"
+      }
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    }
+  },
+  "uni_modules": {
+    "dependencies": [],
+    "platforms": {
+      "client": {
+        "uni-app-x": {
+          "web": {
+            "chrome": "√",
+            "safari": "√"
+          },
+          "app": {
+            "android": "√",
+            "ios": "√",
+            "harmony": "√"
+          },
+          "mp": {
+            "weixin": "√",
+            "alipay": "√",
+            "toutiao": "√"
+          }
+        }
+      }
+    },
+    "treeShaking": {
+      "app": true,
+      "web": true
+    }
+  },
+  "name": "tdesign-icons-uniapp-x"
+}

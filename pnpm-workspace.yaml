@@ -5,6 +5,10 @@ packages:
   - packages/svg
   - packages/vue
   - packages/web-components
+  - packages/uniapp
+  - packages/uniapp-x
+  - packages/uniapp/example
+  - packages/uniapp-x/example
 catalog:
   "@babel/core": ^7.20.12
   "@babel/eslint-parser": ^7.12.16

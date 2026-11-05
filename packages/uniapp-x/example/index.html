@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- 本文件为编译到 web 专用文件 -->
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      var coverSupport =
+        'CSS' in window &&
+        typeof CSS.supports === 'function' &&
+        (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'));
+      document.write(
+        '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+          (coverSupport ? ', viewport-fit=cover' : '') +
+          '" />',
+      );
+    </script>
+    <title>TDesign Icons · uni-app x</title>
+    <!--preload-links-->
+    <!--app-context-->
+  </head>
+  <body>
+    <div id="app"><!--app-html--></div>
+    <!--
+      入口必须写 "/main"（虚拟模块），不能写 "/src/main.uts"。
+      后者会被 Vite 当作静态资源原样返回源码，浏览器直接报
+      `Unexpected token 'export'`，整个应用（页面脚本、图标、面板）都起不来。
+      "/main" 由 uni-app x 插件生成：编译 main.uts、重写 createSSRApp、并注入 mount("#app")。
+    -->
+    <script type="module" src="/main"></script>
+  </body>
+</html>

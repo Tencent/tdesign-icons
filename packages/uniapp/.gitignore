@@ -1,0 +1,5 @@
+# auto generated icons
+src/components/*
+src/index.uts
+src/manifest.ts
+src/global-config.ts

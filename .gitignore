@@ -1,4 +1,5 @@
 .DS_Store
+.pnpm-store
 
 # auto generated icons
 src/components/*.tsx
@@ -55,3 +56,6 @@ package-lock.json
 
 # webstorm
 .idea/
+
+# uni-app x 示例通过软链接引用 packages/uniapp-x/src，避免重复提交 2358 个组件
+packages/uniapp-x/example/src

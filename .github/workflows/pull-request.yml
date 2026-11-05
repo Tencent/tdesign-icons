@@ -62,6 +62,8 @@ jobs:
           - tdesign-icons-svg
           - tdesign-icons-view
           - tdesign-icons-web-components
+          - tdesign-icons-uniapp
+          - tdesign-icons-uniapp-x
 
     steps:
       - uses: actions/checkout@v7
@@ -81,6 +83,9 @@ jobs:
         run: pnpm run --filter tdesign-icons-vue-next build
 
       - run: pnpm run --if-present --filter ${{ matrix.icons }} build
+
+      - if: startsWith(matrix.icons, 'tdesign-icons-uniapp')
+        run: pnpm run check:uniapp
 
   build-flutter:
     runs-on: ubuntu-latest

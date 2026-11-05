@@ -13,10 +13,10 @@
   ],
   "author": "tdesign",
   "lint-staged": {
-    "packages/**/{src,gulp}/**/*.{js,ts,tsx,jsx,vue}": [
+    "packages/**/{src,gulp}/**/*.{js,ts,tsx,jsx}": [
       "eslint --fix"
     ],
-    "gulp/**/*.{js,ts,tsx,jsx,vue}": [
+    "gulp/**/*.{js,ts,tsx,jsx}": [
       "eslint --fix"
     ]
   },
@@ -26,7 +26,8 @@
     "release": "node scripts/release.mjs",
     "dev:icons": "pnpm -C packages/view dev ",
     "lint": "eslint ./packages --max-warnings 0 --ext .ts,.tsx --fix",
-    "generate": "rimraf converted_svg/* && cross-env gulp --require ts-node/register/transpile-only"
+    "generate": "rimraf converted_svg/* && cross-env gulp --require ts-node/register/transpile-only",
+    "check:uniapp": "node scripts/check-uniapp-parity.mjs"
   },
   "devDependencies": {
     "@clack/prompts": "catalog:",

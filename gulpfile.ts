@@ -11,6 +11,8 @@ import { iconFontTask } from './resources/icon-font/gulp';
 
 import { iconViewTask } from './packages/view/gulp';
 import { wcTask } from './packages/web-components/gulp';
+import { uniAppTask } from './packages/uniapp/gulp';
+import { uniAppXTask } from './packages/uniapp-x/gulp';
 
 const source: string[] = ['svg/*.svg'];
 
@@ -25,5 +27,7 @@ export default series(
     iconFontTask(),
     iconViewTask(),
     wcTask(source),
+    uniAppTask(source),
+    uniAppXTask(source),
   ),
 );

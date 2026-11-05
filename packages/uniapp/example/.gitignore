@@ -1,0 +1,5 @@
+dist/
+node_modules/
+unpackage/
+# 指向 ../../src 的软链接，仅用于本地验证
+src/uni_modules/tdesign-icons-uniapp

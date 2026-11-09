@@ -1,0 +1,291 @@
+/* 示例首页共用样式：两个标签页、控制面板、全量图标网格 */
+.page {
+  min-height: 100vh;
+  padding: 24rpx;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+.header {
+  padding: 8rpx 0 24rpx;
+}
+
+.header-title {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #181818;
+}
+
+.header-desc {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #888;
+}
+
+.tabs {
+  display: flex;
+  padding: 6rpx;
+  margin-bottom: 24rpx;
+  background-color: #ebebeb;
+  border-radius: 12rpx;
+}
+
+.tab {
+  flex: 1;
+  padding: 16rpx 0;
+  text-align: center;
+  font-size: 26rpx;
+  color: #666;
+  border-radius: 10rpx;
+}
+
+.tab--active {
+  background-color: #fff;
+  color: #0052d9;
+  font-weight: 600;
+}
+
+.section-title {
+  padding: 8rpx 0 16rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.panel {
+  padding: 24rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.panel-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24rpx;
+}
+
+.panel-row:last-child {
+  margin-bottom: 0;
+}
+
+.panel-label {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 12rpx;
+}
+
+.panel-hint {
+  margin-top: 12rpx;
+  margin-bottom: 0;
+  font-size: 22rpx;
+  color: #999;
+  word-break: break-all;
+}
+
+.slot-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.slot-row:last-child {
+  margin-bottom: 0;
+}
+
+.slot-label {
+  width: 100%;
+  font-size: 22rpx;
+  color: #888;
+  margin-bottom: 8rpx;
+}
+
+.slot-colors {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slot-color {
+  width: 44rpx;
+  height: 44rpx;
+  margin: 0 14rpx 8rpx 0;
+  border-radius: 8rpx;
+  box-shadow: 0 0 0 2rpx rgba(0, 0, 0, 0.08);
+}
+
+.slot-color--active {
+  box-shadow: 0 0 0 4rpx #0052d9;
+}
+
+.slot-value {
+  margin-left: auto;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.panel-slider {
+  margin: 0 8rpx;
+}
+
+.segmented {
+  display: flex;
+  background-color: #f5f5f5;
+  border-radius: 12rpx;
+  padding: 6rpx;
+}
+
+.segmented-item {
+  flex: 1;
+  text-align: center;
+  padding: 14rpx 0;
+  font-size: 26rpx;
+  color: #666;
+  border-radius: 10rpx;
+}
+
+.segmented-item--active {
+  background-color: #0052d9;
+  color: #fff;
+  font-weight: 600;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  margin: 0 16rpx 12rpx 0;
+  font-size: 24rpx;
+  color: #666;
+  background-color: #f5f5f5;
+  border-radius: 100rpx;
+}
+
+.chip--active {
+  background-color: #e6eeff;
+  color: #0052d9;
+  font-weight: 600;
+}
+
+.color-dot {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+  border-radius: 50%;
+  border: 1rpx solid rgba(0, 0, 0, 0.1);
+}
+
+.search {
+  padding: 4rpx 0;
+  margin-bottom: 12rpx;
+}
+
+.search-input {
+  height: 72rpx;
+  padding: 0 24rpx;
+  font-size: 26rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+}
+
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 16rpx 0;
+  margin-bottom: 24rpx;
+}
+
+.grid-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx 8rpx;
+  box-sizing: border-box;
+}
+
+.grid-name {
+  margin-top: 12rpx;
+  font-size: 20rpx;
+  color: #999;
+  text-align: center;
+  word-break: break-all;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 24rpx;
+}
+
+.demo-icon {
+  margin: 20rpx;
+}
+
+.list-hint {
+  padding: 0 0 12rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.list-actions {
+  display: flex;
+  margin-bottom: 24rpx;
+}
+
+.load-more,
+.load-all {
+  flex: 1;
+  padding: 20rpx 0;
+  text-align: center;
+  font-size: 24rpx;
+  border-radius: 12rpx;
+}
+
+.load-more {
+  margin-right: 16rpx;
+  color: #0052d9;
+  background-color: #e6eeff;
+  font-weight: 600;
+}
+
+.load-all {
+  color: #888;
+  background-color: #fff;
+}
+
+.list-end {
+  padding: 24rpx 0;
+  margin-bottom: 24rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.empty {
+  padding: 48rpx 0;
+  text-align: center;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.note {
+  padding: 20rpx 24rpx;
+  font-size: 22rpx;
+  line-height: 1.6;
+  color: #888;
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 24rpx;
+}

@@ -5,6 +5,7 @@ import { clearDir } from '../../../gulp/clean-dir';
 import { svgElementJsonToTemplate } from '../../../gulp/svg-to-template';
 
 import { uniAppGetIconFileContent } from './template-generator';
+import { generateIconMap } from './icon-map';
 import {
   generateUniAppEntry,
   generateUniAppManifest,
@@ -61,6 +62,12 @@ export function uniAppTask(source: string[]) {
           propsString: true,
         },
         transformElement: (elementJson, name) => svgElementJsonToTemplate(elementJson, name),
+      }),
+
+      // t-icon 按 name 动态渲染所需的全量图标表，与各图标组件同源
+      generateIconMap({
+        from: [...source],
+        to: `${PKG_DIR}/src`,
       }),
 
       generateUniAppManifest({

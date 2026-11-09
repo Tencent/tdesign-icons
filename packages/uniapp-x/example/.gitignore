@@ -2,4 +2,8 @@ dist/
 node_modules/
 unpackage/
 # 指向 ../../src 的软链接，仅用于本地验证
-uni_modules/tdesign-icons-uniapp-x
+src/uni_modules/tdesign-icons-uniapp-x
+# 由 pnpm run generate 生成的图标名清单，不提交
+src/utils/icon-names.ts
+# CDN 字体 CSS 的本地缓存
+.cache/

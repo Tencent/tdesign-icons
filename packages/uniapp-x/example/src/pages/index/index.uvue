@@ -1,0 +1,275 @@
+<template>
+  <view class="page">
+    <view class="header">
+      <view class="header-title">TDesign Icons · uni-app x</view>
+      <view class="header-desc">全量图标用 CDN 字体单色渲染 · 多色 / 可变描边宽度挑几个演示</view>
+    </view>
+
+    <view class="tabs">
+      <view
+        v-for="item in tabs"
+        :key="item.key"
+        class="tab"
+        :class="activeTab == item.key ? 'tab tab--active' : 'tab'"
+        @click="activeTab = item.key"
+      >{{ item.label }}</view>
+    </view>
+
+    <!-- Tab 1：全量图标，字体图标渲染，属性只改 CSS -->
+    <view v-if="activeTab == 'all'">
+      <view class="panel">
+        <view class="panel-row">
+          <text class="panel-label">图标颜色</text>
+          <view class="chips">
+            <view
+              v-for="item in colorOptions"
+              :key="item"
+              class="chip"
+              :class="iconColor == item ? 'chip chip--active' : 'chip'"
+              @click="iconColor = item"
+            >
+              <view class="color-dot" :style="'background-color:' + item"></view>
+              <text>{{ item }}</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="panel-row">
+          <text class="panel-label">图标尺寸</text>
+          <view class="chips">
+            <view
+              v-for="item in sizeOptions"
+              :key="item"
+              class="chip"
+              :class="size == item ? 'chip chip--active' : 'chip'"
+              @click="size = item"
+            >{{ item }}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="search">
+        <input class="search-input" :value="keyword" placeholder="搜索图标名，如 chart / arrow" @input="onSearch" />
+      </view>
+
+      <view class="section-title">全部图标 · 字体图标（{{ matchedCount }} / {{ total }}）</view>
+      <view class="list-hint">当前渲染 {{ visibleNames.length }} 个 · 点「加载更多」继续</view>
+      <view class="icon-grid">
+        <view v-for="name in visibleNames" :key="name" class="grid-item">
+          <t-icon :name="name" :color="iconColor" :size="size" />
+          <text class="grid-name">{{ name }}</text>
+        </view>
+      </view>
+      <view v-if="hasMore" class="list-actions">
+        <view class="load-more" @click="loadMore">加载更多（还有 {{ matchedCount - visibleNames.length }} 个）</view>
+        <view class="load-all" @click="loadAll">加载全部</view>
+      </view>
+      <view v-else-if="matchedCount > 0" class="list-end">已加载全部 {{ visibleNames.length }} 个</view>
+      <view v-if="matchedCount == 0" class="empty">没有匹配的图标</view>
+    </view>
+
+    <!-- Tab 2：多色 / 可变描边宽度，只用少量具体图标组件 -->
+    <view v-else>
+      <view class="panel">
+        <view class="panel-row">
+          <text class="panel-label">颜色模式（单色 / 双色 / 多色）</text>
+          <view class="segmented">
+            <view
+              v-for="item in colorTypes"
+              :key="item.key"
+              class="segmented-item"
+              :class="colorType == item.key ? 'segmented-item segmented-item--active' : 'segmented-item'"
+              @click="colorType = item.key"
+            >{{ item.label }}</view>
+          </view>
+          <text class="panel-hint">{{ colorSummary }}</text>
+          <text class="panel-hint">色位：填充 f1/f2、描边 s1/s2 · 单色=单值、双色=第 2 色位跟随、多色=4 色位独立</text>
+        </view>
+
+        <view class="panel-row">
+          <text class="panel-label">配色（点击色块修改当前模式下生效的色位）</text>
+          <view v-for="key in activeSlots" :key="key" class="slot-row">
+            <text class="slot-label">{{ slotLabel(key) }}</text>
+            <view class="slot-colors">
+              <view
+                v-for="c in colorPalette"
+                :key="c"
+                class="slot-color"
+                :class="slotValue(key) == c ? 'slot-color slot-color--active' : 'slot-color'"
+                :style="'background-color:' + c"
+                @click="setSlotColor(key, c)"
+              ></view>
+            </view>
+            <text class="slot-value">{{ slotValue(key) }}</text>
+          </view>
+        </view>
+
+        <view class="panel-row">
+          <text class="panel-label">描边宽度 {{ strokeWidth }}</text>
+          <slider
+            class="panel-slider"
+            :value="strokeWidth"
+            :min="1"
+            :max="3"
+            :step="0.5"
+            active-color="#0052d9"
+            block-color="#0052d9"
+            :block-size="16"
+            @change="onStrokeWidthChange"
+          />
+        </view>
+
+        <view class="panel-row">
+          <text class="panel-label">图标尺寸</text>
+          <view class="chips">
+            <view
+              v-for="item in sizeOptions"
+              :key="item"
+              class="chip"
+              :class="size == item ? 'chip chip--active' : 'chip'"
+              @click="size = item"
+            >{{ item }}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="section-title">多色 / 可变描边宽度 · 精选 {{ multicolorIcons.length }} 个</view>
+      <view class="grid">
+        <ability-open-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="strokeColors" :fill-color="fillColors" />
+        <abstract-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="strokeColors" :fill-color="fillColors" />
+        <accessibility-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="strokeColors" :fill-color="fillColors" />
+        <system-components-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="strokeColors" :fill-color="fillColors" />
+        <chart-pie-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="strokeColors" :fill-color="fillColors" />
+        <logo-tdesign-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="strokeColors" :fill-color="fillColors" />
+      </view>
+
+      <view class="note">
+        全量图标共 {{ total }} 个，在「全部图标（CDN 字体）」标签里用 t-icon 单色展示。
+        多色 / 可变描边宽度由每个图标的独立组件提供，把全部组件打进包里会带来明显的体积与渲染开销，
+        因此这里只挑 {{ multicolorIcons.length }} 个带多色位的代表性图标演示。
+      </view>
+    </view>
+  </view>
+</template>
+
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import TIcon from '../../uni_modules/tdesign-icons-uniapp-x/t-icon/t-icon.uvue'
+import { ICON_NAMES } from '../../utils/icon-names'
+import {
+  COLOR_PRESET,
+  COLOR_TYPES,
+  COLOR_OPTIONS,
+  COLOR_PALETTE,
+  SIZE_OPTIONS,
+  MULTICOLOR_ICONS,
+  editableSlots,
+  resolveColors,
+} from '../../utils/demo'
+
+/** 字体图标很轻，但一次挂载 2358 个节点仍有开销，分批渲染 */
+const PAGE_SIZE = 60
+
+const tabs = [
+  { key: 'all', label: '全部图标（CDN 字体）' },
+  { key: 'multi', label: '多色 / 可变' },
+]
+const colorTypes = COLOR_TYPES
+const colorOptions = COLOR_OPTIONS
+const colorPalette = COLOR_PALETTE
+const sizeOptions = SIZE_OPTIONS
+const multicolorIcons = MULTICOLOR_ICONS
+
+const activeTab = ref('all')
+const keyword = ref('')
+const matchedCount = ref(ICON_NAMES.length)
+const visibleCount = ref(PAGE_SIZE)
+const iconColor = ref(COLOR_OPTIONS[0])
+const size = ref('32px')
+const colorType = ref('double')
+const strokeWidth = ref(2)
+
+const fillColor1 = ref(COLOR_PRESET.fillColor1)
+const fillColor2 = ref(COLOR_PRESET.fillColor2)
+const strokeColor1 = ref(COLOR_PRESET.strokeColor1)
+const strokeColor2 = ref(COLOR_PRESET.strokeColor2)
+
+const total = computed((): number => ICON_NAMES.length)
+
+const visibleNames = computed((): string[] => {
+  const kw = keyword.value.trim().toLowerCase()
+  const names = kw != '' ? ICON_NAMES.filter((n) => n.toLowerCase().includes(kw)) : ICON_NAMES
+  return names.slice(0, visibleCount.value)
+})
+
+const hasMore = computed((): boolean => visibleCount.value < matchedCount.value)
+
+const slotValues = computed(() => ({
+  strokeColor1: strokeColor1.value,
+  strokeColor2: strokeColor2.value,
+  fillColor1: fillColor1.value,
+  fillColor2: fillColor2.value,
+}))
+
+const palette = computed(() => resolveColors(colorType.value, slotValues.value))
+const strokeColors = computed((): string[] => palette.value.strokeColor)
+const fillColors = computed((): string[] => palette.value.fillColor)
+
+const colorSummary = computed((): string => {
+  return `${colorType.value} · 描边 ${strokeColors.value.join(' / ')} · 填充 ${fillColors.value.join(' / ')}`
+})
+
+const activeSlots = computed((): string[] => editableSlots(colorType.value))
+
+function slotLabel(key: string): string {
+  if (key == 'fillColor1') return '填充 1 · f1'
+  if (key == 'fillColor2') return '填充 2 · f2'
+  if (key == 'strokeColor1') return '描边 1 · s1'
+  return '描边 2 · s2'
+}
+
+function slotValue(key: string): string {
+  if (key == 'fillColor1') return fillColor1.value
+  if (key == 'fillColor2') return fillColor2.value
+  if (key == 'strokeColor1') return strokeColor1.value
+  return strokeColor2.value
+}
+
+function setSlotColor(key: string, color: string) {
+  if (key == 'fillColor1') {
+    fillColor1.value = color
+  } else if (key == 'fillColor2') {
+    fillColor2.value = color
+  } else if (key == 'strokeColor1') {
+    strokeColor1.value = color
+  } else {
+    strokeColor2.value = color
+  }
+}
+
+function onSearch(e: any) {
+  keyword.value = e.detail.value as string
+  const kw = keyword.value.trim().toLowerCase()
+  matchedCount.value = kw != ''
+    ? ICON_NAMES.filter((n) => n.toLowerCase().includes(kw)).length
+    : ICON_NAMES.length
+  visibleCount.value = PAGE_SIZE
+}
+
+function loadMore() {
+  if (!hasMore.value) return
+  visibleCount.value = Math.min(visibleCount.value + PAGE_SIZE, matchedCount.value)
+}
+
+function loadAll() {
+  visibleCount.value = matchedCount.value
+}
+
+function onStrokeWidthChange(e: any) {
+  strokeWidth.value = e.detail.value as number
+}
+</script>
+
+<style>
+@import '../../style/multicolor.css';
+</style>

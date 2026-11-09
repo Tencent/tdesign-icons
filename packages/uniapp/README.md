@@ -60,6 +60,45 @@ CSS 类名仍是 `t-icon-<名称>`（如 `t-icon-close`），与 web 端保持�
 import { Close, Abstract } from 'tdesign-icons-uniapp';
 ```
 
+## 按名称动态渲染（t-icon）
+
+图标名来自配置、需要动态选择时，用通用组件 `t-icon`：
+
+```vue
+<template>
+  <view>
+    <t-icon :name="iconName" color="#0052D9" size="32px" />
+  </view>
+</template>
+
+<script>
+import TIcon from '@/uni_modules/tdesign-icons-uniapp/t-icon/t-icon.vue';
+
+export default {
+  components: { TIcon },
+  data() {
+    return { iconName: 'close' };
+  },
+};
+</script>
+```
+
+`t-icon` 走**字体图标**：一套 CDN 字体（`tdesign.gtimg.com/icon/0.4.6/fonts/t.woff`，约 280KB，不进小程序包）
++ 码点映射 `src/utils/icon-unicode.js`，用 `<text>` 直接输出 unicode 字符。
+`color` / `size` 就是 CSS 的 `color` / `font-size`，切换时**不重算图标内容、不重新解码图片**，全量图标列表也不卡。
+
+> `t-icon` 不在 `components/` 两级目录下，easycom 不会自动注册，需显式引入并注册。
+> 它只提供 `name` / `size` / `color`（单色、描边宽度固定）；
+> 需要多色 / 可变描边宽度请用具体图标组件（如 `<abstract-icon :stroke-color="..." :stroke-width="..." />`）。
+> 小程序端不支持 `<component :is>`，动态图标名与精细样式控制刻意走两条路径。
+
+字体由 `@font-face` 从 CDN 加载（见 `src/style/iconfont.css`）：**小程序端需把
+`https://tdesign.gtimg.com` 配到 downloadFile 合法域名**，开发者工具可关闭域名校验。
+码点表从同版本 `fonts/index.css` 解析而来，请勿手动修改。
+
+另有生成物 `icon-map.js`（全量带占位符的 SVG 模板表，根目录 `pnpm run generate` 产出、不提交），
+供需要按 name 拿原始 SVG 模板的场景使用；`t-icon` 不依赖它。
+
 ## 属性
 
 | 属性 | 类型 | 默认值 | 说明 |
@@ -75,15 +114,22 @@ import { Close, Abstract } from 'tdesign-icons-uniapp';
 ## 按需加载
 
 easycom 只在页面实际用到某个标签时才引入对应组件文件。
-实测示例小程序构建产物里，`uni_modules/tdesign-icons-uniapp/components` 下只有页面用到的 17 个图标，而不是全部 2358 个。
+示例工程的「多色 / 可变」标签页只用到 6 个具体图标组件，构建产物里就只有这 6 个，而不是全部 2358 个；
+「全部图标」标签页用通用 `t-icon` 字体图标覆盖全量单色图标——一套 CDN 字体 + 码点表即可，
+不需要把 2358 个组件或 2.4MB 的 `icon-map.js` 打进产物。
 
 > 不建议全量 `import * from 'tdesign-icons-uniapp'`：入口是 2358 条 re-export，
 > dev 模式下 Vite 会逐个请求全部模块，页面会长时间卡在加载中。
 
 ## 实现说明
 
-图标会被编译成一段带占位符的 SVG 字符串，运行时替换颜色与描边宽度后编码为 `data:image/svg+xml`，交给 `<image>` 渲染。
-这样 H5 / App / 小程序共用同一条渲染路径，**不需要内联 `<svg>` 标签**（小程序也不支持）。
+两条渲染路径，H5 / App / 小程序共用，都不需要内联 `<svg>` 标签（小程序不支持）：
+
+- **具体图标组件**（`components/<name>-icon/`）：编译成带占位符的 SVG 字符串，运行时替换颜色与描边宽度后
+  编码为 `data:image/svg+xml`，交给 `<image>` 渲染。支持多色 / 可变描边宽度，但每个图标都是一张图，
+  大量图标同时渲染会逐张解码，不适合全量列表。
+- **通用 `t-icon`**：字体图标，`<text>` 输出 unicode 字符，颜色 / 尺寸纯 CSS。单色、按 name 动态渲染，
+  全量列表与频繁切换属性都轻量。
 
 ## 平台支持
 

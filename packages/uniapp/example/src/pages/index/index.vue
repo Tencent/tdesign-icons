@@ -2,240 +2,291 @@
   <view class="page">
     <view class="header">
       <view class="header-title">TDesign Icons · uni-app</view>
-      <view class="header-desc">通过 uni_modules + easycom 直接使用，无需 import</view>
+      <view class="header-desc">全量图标用 CDN 字体单色渲染 · 多色 / 可变描边宽度挑几个演示</view>
     </view>
 
-    <!-- 配置面板 -->
-    <view class="panel">
-      <view class="panel-row">
-        <text class="panel-label">颜色模式</text>
-        <view class="segmented">
-          <view
-            v-for="item in colorTypes"
-            :key="item.key"
-            class="segmented-item"
-            :class="{ 'segmented-item--active': colorType === item.key }"
-            @click="colorType = item.key"
-          >
-            {{ item.label }}
-          </view>
-        </view>
-      </view>
-
-      <view class="panel-row">
-        <text class="panel-label">描边宽度 {{ strokeWidth }}</text>
-        <slider
-          class="panel-slider"
-          :value="strokeWidth"
-          :min="1"
-          :max="3"
-          :step="0.5"
-          active-color="#0052d9"
-          block-color="#0052d9"
-          :block-size="16"
-          @change="onStrokeWidthChange"
-        />
-      </view>
-
-      <view class="panel-row">
-        <text class="panel-label">图标尺寸</text>
-        <view class="chips">
-          <view
-            v-for="item in sizeOptions"
-            :key="item"
-            class="chip"
-            :class="{ 'chip--active': size === item }"
-            @click="size = item"
-          >
-            {{ item }}
-          </view>
-        </view>
-      </view>
+    <!-- 两个演示入口：全量单色图标 / 多色可变处理 -->
+    <view class="tabs">
+      <view
+        v-for="item in tabs"
+        :key="item.key"
+        class="tab"
+        :class="{ 'tab--active': activeTab === item.key }"
+        @click="activeTab = item.key"
+      >{{ item.label }}</view>
     </view>
 
     <!--
-      easycom 自动扫描 uni_modules/<id>/components/<name>/<name>.vue，
-      所以这里直接写 <ability-open-icon /> 即可，不需要 import 和 components 注册。
+      Tab 1：全部图标。
+      t-icon 走字体图标（CDN 字体 + 码点映射），用 <text> 渲染 unicode 字符，
+      切换颜色 / 尺寸只是 CSS，不重算图标内容、不重新解码图片。
+      图标名清单由 pnpm run generate 从固定版本的 CDN 字体 CSS 解析。
     -->
-    <view class="section-title">多色 / 可变线宽</view>
-    <view class="grid">
-      <ability-open-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <abstract-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <accessibility-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <system-components-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <chart-pie-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <logo-tdesign-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+    <view v-if="activeTab === 'all'">
+      <view class="panel">
+        <view class="panel-row">
+          <text class="panel-label">图标颜色</text>
+          <view class="chips">
+            <view
+              v-for="item in colorOptions"
+              :key="item"
+              class="chip"
+              :class="{ 'chip--active': iconColor === item }"
+              @click="iconColor = item"
+            >
+              <view class="color-dot" :style="{ backgroundColor: item }"></view>
+              <text>{{ item }}</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="panel-row">
+          <text class="panel-label">图标尺寸</text>
+          <view class="chips">
+            <view
+              v-for="item in sizeOptions"
+              :key="item"
+              class="chip"
+              :class="{ 'chip--active': size === item }"
+              @click="size = item"
+            >{{ item }}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="search">
+        <input
+          class="search-input"
+          :value="keyword"
+          placeholder="搜索图标名，如 chart / arrow"
+          confirm-type="search"
+          @input="onSearch"
+        />
+      </view>
+
+      <view class="section-title">全部图标 · 字体图标（{{ matchedCount }} / {{ total }}）</view>
+      <view class="list-hint">当前渲染 {{ visibleNames.length }} 个 · 滚动到底自动加载更多</view>
+      <view class="icon-grid">
+        <view v-for="name in visibleNames" :key="name" class="grid-item">
+          <t-icon :name="name" :color="iconColor" :size="size" />
+          <text class="grid-name">{{ name }}</text>
+        </view>
+      </view>
+      <view v-if="hasMore" class="list-actions">
+        <view class="load-more" @click="loadMore">加载更多（还有 {{ matchedCount - visibleNames.length }} 个）</view>
+        <view class="load-all" @click="loadAll">加载全部</view>
+      </view>
+      <view v-else-if="matchedCount" class="list-end">已加载全部 {{ visibleNames.length }} 个</view>
+      <view v-if="!matchedCount" class="empty">没有匹配的图标</view>
     </view>
 
-    <view class="section-title">常用图标</view>
-    <view class="grid">
-      <close-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <check-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <search-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <home-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <user-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <setting-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <add-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <heart-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <star-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <notification-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <mail-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-      <camera-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+    <view v-else>
+      <!--
+        Tab 2：多色 / 可变描边宽度。
+        具体图标组件支持 strokeColor / fillColor / strokeWidth，但每个都是独立组件，
+        全量引入会带来明显的体积与渲染开销，因此只挑几个带多色位的代表性图标演示。
+        小程序端不支持动态组件，这里保持编译期静态标签（easycom 自动注册）。
+      -->
+      <view class="panel">
+        <view class="panel-row">
+          <text class="panel-label">颜色模式（单色 / 双色 / 多色）</text>
+          <view class="segmented">
+            <view
+              v-for="item in colorTypes"
+              :key="item.key"
+              class="segmented-item"
+              :class="{ 'segmented-item--active': colorType === item.key }"
+              @click="colorType = item.key"
+            >{{ item.label }}</view>
+          </view>
+          <text class="panel-hint">{{ colorSummary }}</text>
+          <text class="panel-hint">色位：填充 f1/f2、描边 s1/s2 · 单色=单值、双色=第 2 色位跟随、多色=4 色位独立</text>
+        </view>
+
+        <view class="panel-row">
+          <text class="panel-label">配色（点击色块修改当前模式下生效的色位）</text>
+          <view v-for="slot in activeSlots" :key="slot.key" class="slot-row">
+            <text class="slot-label">{{ slot.label }}</text>
+            <view class="slot-colors">
+              <view
+                v-for="c in colorPalette"
+                :key="c"
+                class="slot-color"
+                :class="{ 'slot-color--active': slot.value === c }"
+                :style="{ backgroundColor: c }"
+                @click="setSlotColor(slot.key, c)"
+              ></view>
+            </view>
+            <text class="slot-value">{{ slot.value }}</text>
+          </view>
+        </view>
+
+        <view class="panel-row">
+          <text class="panel-label">描边宽度 {{ strokeWidth }}</text>
+          <slider
+            class="panel-slider"
+            :value="strokeWidth"
+            :min="1"
+            :max="3"
+            :step="0.5"
+            active-color="#0052d9"
+            block-color="#0052d9"
+            :block-size="16"
+            @change="onStrokeWidthChange"
+          />
+        </view>
+
+        <view class="panel-row">
+          <text class="panel-label">图标尺寸</text>
+          <view class="chips">
+            <view
+              v-for="item in sizeOptions"
+              :key="item"
+              class="chip"
+              :class="{ 'chip--active': size === item }"
+              @click="size = item"
+            >{{ item }}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="section-title">多色 / 可变描边宽度 · 精选 {{ multicolorIcons.length }} 个</view>
+      <view class="grid">
+        <ability-open-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <abstract-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <accessibility-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <system-components-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <chart-pie-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <logo-tdesign-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+      </view>
+
+      <view class="note">
+        全量图标共 {{ total }} 个，在「{{ tabs[0].label }}」标签里用 t-icon 单色展示。
+        多色 / 可变描边宽度由每个图标的独立组件提供，把全部组件打进包里会带来明显的体积与渲染开销，
+        因此这里只挑 {{ multicolorIcons.length }} 个带多色位的代表性图标演示。
+      </view>
     </view>
   </view>
 </template>
 
 <script>
-import { COLOR_TYPES, SIZE_OPTIONS, resolveColors } from '../../utils/demo';
+import TIcon from '../../uni_modules/tdesign-icons-uniapp/t-icon/t-icon.vue';
+import { ICON_NAMES } from '../../utils/icon-names';
+import {
+  COLOR_PRESET,
+  COLOR_TYPES,
+  COLOR_OPTIONS,
+  COLOR_PALETTE,
+  COLOR_SLOTS,
+  SIZE_OPTIONS,
+  MULTICOLOR_ICONS,
+  editableSlots,
+  resolveColors,
+} from '../../utils/demo';
+
+/**
+ * 字体图标很轻，但小程序里一次挂载 2358 个节点仍有开销。
+ * 分批渲染让首屏、搜索、属性切换都只涉及当前这一批；
+ * 且切换颜色 / 尺寸只改 CSS，不重算图标内容、不会重新解码图片。
+ */
+const PAGE_SIZE = 60;
 
 export default {
+  components: { TIcon },
   data() {
     return {
+      activeTab: 'all',
+      tabs: [
+        { key: 'all', label: '全部图标（CDN 字体）' },
+        { key: 'multi', label: '多色 / 可变' },
+      ],
       colorTypes: COLOR_TYPES,
+      colorOptions: COLOR_OPTIONS,
       sizeOptions: SIZE_OPTIONS,
+      multicolorIcons: MULTICOLOR_ICONS,
+      colorPalette: COLOR_PALETTE,
+      colorSlots: COLOR_SLOTS,
+      fillColor1: COLOR_PRESET.fillColor1,
+      fillColor2: COLOR_PRESET.fillColor2,
+      strokeColor1: COLOR_PRESET.strokeColor1,
+      strokeColor2: COLOR_PRESET.strokeColor2,
+      matchedCount: ICON_NAMES.length,
+      visibleCount: PAGE_SIZE,
       colorType: 'double',
       strokeWidth: 2,
       size: '32px',
+      iconColor: COLOR_OPTIONS[0],
+      keyword: '',
     };
   },
   computed: {
+    total() {
+      return ICON_NAMES.length;
+    },
+    visibleNames() {
+      const keyword = this.keyword.trim().toLowerCase();
+      const names = keyword
+        ? ICON_NAMES.filter((name) => name.toLowerCase().includes(keyword))
+        : ICON_NAMES;
+      return names.slice(0, this.visibleCount);
+    },
+    hasMore() {
+      return this.visibleCount < this.matchedCount;
+    },
+    slotValues() {
+      return {
+        fillColor1: this.fillColor1,
+        fillColor2: this.fillColor2,
+        strokeColor1: this.strokeColor1,
+        strokeColor2: this.strokeColor2,
+      };
+    },
+    activeSlots() {
+      const keys = editableSlots(this.colorType);
+      return this.colorSlots
+        .filter((slot) => keys.includes(slot.key))
+        .map((slot) => ({ ...slot, value: this[slot.key] }));
+    },
     colors() {
-      return resolveColors(this.colorType);
+      return resolveColors(this.colorType, this.slotValues);
+    },
+    colorSummary() {
+      const current = this.colorTypes.find((item) => item.key === this.colorType);
+      return `${current ? current.label : this.colorType} · 描边 ${this.colors.strokeColor.join(' / ')} · 填充 ${this.colors.fillColor.join(' / ')}`;
     },
   },
   methods: {
+    setSlotColor(key, color) {
+      if (key === 'fillColor1') this.fillColor1 = color;
+      else if (key === 'fillColor2') this.fillColor2 = color;
+      else if (key === 'strokeColor1') this.strokeColor1 = color;
+      else if (key === 'strokeColor2') this.strokeColor2 = color;
+    },
+    onSearch(e) {
+      this.keyword = e.detail.value;
+      const keyword = this.keyword.trim().toLowerCase();
+      this.matchedCount = keyword
+        ? ICON_NAMES.filter((name) => name.toLowerCase().includes(keyword)).length
+        : ICON_NAMES.length;
+      this.visibleCount = PAGE_SIZE;
+    },
+    loadMore() {
+      if (!this.hasMore) return;
+      this.visibleCount = Math.min(this.visibleCount + PAGE_SIZE, this.matchedCount);
+    },
+    loadAll() {
+      this.visibleCount = this.matchedCount;
+    },
     onStrokeWidthChange(e) {
       this.strokeWidth = e.detail.value;
     },
+  },
+  onReachBottom() {
+    this.loadMore();
   },
 };
 </script>
 
 <style>
-.page {
-  min-height: 100vh;
-  padding: 24rpx;
-  box-sizing: border-box;
-  background-color: #f5f5f5;
-}
-
-.header {
-  padding: 8rpx 0 24rpx;
-}
-
-.header-title {
-  font-size: 40rpx;
-  font-weight: 700;
-  color: #181818;
-}
-
-.header-desc {
-  margin-top: 8rpx;
-  font-size: 24rpx;
-  color: #888;
-}
-
-.section-title {
-  padding: 8rpx 0 16rpx;
-  font-size: 26rpx;
-  font-weight: 600;
-  color: #333;
-}
-
-.panel {
-  padding: 24rpx;
-  background-color: #fff;
-  border-radius: 16rpx;
-  margin-bottom: 24rpx;
-}
-
-.panel-row {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 24rpx;
-}
-
-.panel-row:last-child {
-  margin-bottom: 0;
-}
-
-.panel-label {
-  font-size: 26rpx;
-  color: #666;
-  margin-bottom: 12rpx;
-}
-
-.panel-slider {
-  margin: 0 8rpx;
-}
-
-.segmented {
-  display: flex;
-  background-color: #f5f5f5;
-  border-radius: 12rpx;
-  padding: 6rpx;
-}
-
-.segmented-item {
-  flex: 1;
-  text-align: center;
-  padding: 14rpx 0;
-  font-size: 26rpx;
-  color: #666;
-  border-radius: 10rpx;
-}
-
-.segmented-item--active {
-  background-color: #0052d9;
-  color: #fff;
-  font-weight: 600;
-}
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.chip {
-  padding: 10rpx 24rpx;
-  margin: 0 16rpx 12rpx 0;
-  font-size: 24rpx;
-  color: #666;
-  background-color: #f5f5f5;
-  border-radius: 100rpx;
-}
-
-.chip--active {
-  background-color: #e6eeff;
-  color: #0052d9;
-  font-weight: 600;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 16rpx;
-  padding: 24rpx;
-  margin-bottom: 24rpx;
-}
-
-.grid-item {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20rpx 8rpx;
-}
-
-.grid-name {
-  margin-top: 12rpx;
-  font-size: 20rpx;
-  color: #999;
-}
-
-.demo-icon {
-  margin: 20rpx;
-}
+@import '../../style/multicolor.css';
 </style>

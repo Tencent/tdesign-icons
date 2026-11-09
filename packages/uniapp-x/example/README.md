@@ -6,30 +6,43 @@
 
 uni-app x 项目需使用 **HBuilderX 4.81+** 打开本目录（`manifest.json` 所在目录）运行：
 
-1. 在仓库根目录执行 `corepack pnpm run generate` 生成图标产物；
-2. 用 HBuilderX 打开 `packages/uniapp-x/example`；
-3. 运行到浏览器（H5）、微信小程序或 App（真机）。
+1. 在仓库根目录执行 `corepack pnpm run generate` 生成图标组件产物；
+2. 进入本目录执行 `corepack pnpm run generate` 生成图标名清单与 `uni_modules` 软链接；
+3. 用 HBuilderX 打开 `packages/uniapp-x/example`；
+4. 运行到浏览器（H5）、微信小程序或 App（真机）。
 
-> `example/uni_modules/tdesign-icons-uniapp-x` 是指向 `packages/uniapp-x/src` 的软链接。
+> 第 2 步会拉取 `https://tdesign.gtimg.com/icon/0.4.6/fonts/index.css`，
+> 从 `.t-icon-<name>:before` 规则解析出 2358 个图标名写入 `src/utils/icon-names.ts`；
+> 结果缓存到 `.cache/icons-0.4.6.css`，网络不可用时自动回退缓存。
+> 可用 `ICONS_VERSION`（或 `pnpm run generate -- --version 0.4.7`）与 `ICONS_CSS_URL` 覆盖版本 / 数据源；
+> 换版本时须同步更新 `packages/uniapp-x/src/utils/icon-unicode.ts` 与 `src/style/iconfont.css`，
+> 否则名字没有对应字形。
+
+> `example/src/uni_modules/tdesign-icons-uniapp-x` 是指向 `packages/uniapp-x/src` 的软链接。
 > 如果系统/工具不支持软链接，请把 `packages/uniapp-x/src` 复制到该位置（只用于本地验证，不要提交）。
 
-包内没有预置图标组件，全部由 `pnpm run generate` 产出，因此必须先执行生成步骤。
+包内没有预置图标组件，全部由仓库根目录的 `pnpm run generate` 产出，因此必须先执行生成步骤。
 
 ## 目录结构
 
 ```
 example/
-├── manifest.json
-├── pages.json
-├── uni_modules/
-│   └── tdesign-icons-uniapp-x/        # → packages/uniapp-x/src（软链接）
-│       ├── package.json               # uni_modules 元信息
-│       └── components/
-│           ├── ability-open-icon/
-│           │   └── ability-open-icon.uvue  # 目录名即 easycom 标签名
-│           └── close-icon/
-│               └── close.uvue
-└── pages/index/index.uvue
+├── scripts/generate-icon-names.mjs    # 解析 CDN CSS，生成 icon-names.ts + 建软链接
+├── .cache/icons-0.4.6.css             # CSS 本地缓存（生成物）
+└── src/
+    ├── manifest.json
+    ├── pages.json
+    ├── pages/index/index.uvue
+    ├── utils/
+    │   └── icon-names.ts              # 生成物：ICON_NAMES
+    └── uni_modules/
+        └── tdesign-icons-uniapp-x/    # → packages/uniapp-x/src（软链接）
+            ├── package.json           # uni_modules 元信息
+            └── components/
+                ├── ability-open-icon/
+                │   └── ability-open-icon.uvue  # 目录名即 easycom 标签名
+                └── close-icon/
+                    └── close-icon.uvue
 ```
 
 ## 用法：easycom 短标签

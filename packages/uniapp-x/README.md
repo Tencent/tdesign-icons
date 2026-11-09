@@ -59,6 +59,37 @@ import { Close, Abstract } from '@/uni_modules/tdesign-icons-uniapp-x/index.uts'
 </script>
 ```
 
+## 按名称动态渲染（t-icon）
+
+图标名来自配置、需要动态选择时，用通用组件 `t-icon`：
+
+```vue
+<template>
+  <view>
+    <t-icon :name="iconName" color="#0052D9" size="32px" />
+  </view>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import TIcon from '@/uni_modules/tdesign-icons-uniapp-x/t-icon/t-icon.uvue'
+
+const iconName = ref('close')
+</script>
+```
+
+`t-icon` 走**字体图标**：一套 CDN 字体（`tdesign.gtimg.com/icon/0.4.6/fonts/t.woff`，约 280KB，不进包）
++ 码点映射 `src/utils/icon-unicode.ts`，用 `<text>` 输出 unicode 字符。
+`color` / `size` 就是 CSS 的 `color` / `font-size`，切换时不重算图标内容、不重新解码图片，全量列表也不卡。
+
+> `t-icon` 不在 `components/` 两级目录下，easycom 不会自动注册，需显式引入。
+> 它只提供 `name` / `size` / `color`（单色）；`size` 支持 `small` / `medium` / `large` 及 `24px` / `1.5em` 等任意 CSS 字号。
+> 需要多色 / 可变描边宽度请用具体图标组件（如 `<abstract-icon :stroke-color="..." :stroke-width="..." />`）。
+
+字体由 `@font-face` 从 CDN 加载（见 `src/style/iconfont.css`）：**小程序端需把
+`https://tdesign.gtimg.com` 配到 downloadFile 合法域名**，开发者工具可关闭域名校验。
+码点表从同版本 `fonts/index.css` 解析而来，请勿手动修改。
+
 ## 属性
 
 | 属性 | 类型 | 默认值 | 说明 |
@@ -79,7 +110,13 @@ easycom 只在页面实际用到某个标签时才引入对应组件文件。
 
 ## 实现说明
 
-uvue 不支持内联 `<svg>` 标签，因此图标会被编译成一段带占位符的 SVG 字符串，运行时替换颜色与描边宽度后编码为 `data:image/svg+xml`，交给 `<image>` 渲染。
+uvue 不支持内联 `<svg>` 标签，两条渲染路径：
+
+- **具体图标组件**（`components/<name>-icon/`）：编译成带占位符的 SVG 字符串，运行时替换颜色与描边宽度后
+  编码为 `data:image/svg+xml`，交给 `<image>` 渲染。支持多色 / 可变描边宽度，但每个图标都是一张图，
+  大量图标同时渲染会逐张解码，不适合全量列表。
+- **通用 `t-icon`**：字体图标，`<text>` 输出 unicode 字符，颜色 / 尺寸纯 CSS。单色、按 name 动态渲染，
+  全量列表与频繁切换属性都轻量。
 
 ## 平台支持
 
@@ -90,7 +127,9 @@ uvue 不支持内联 `<svg>` 标签，因此图标会被编译成一段带占位
 | 微信 / 支付宝 / 抖音 等小程序 | ✅ | |
 | HarmonyOS | ⚠️ | 可用，但 `data:image/svg+xml` 会被转成位图渲染（鸿蒙 API ≥ 26 除外） |
 
-> 由于通过 `<image>` 渲染，父级 `color` 不会自动生效，需要显式传 `strokeColor` / `fillColor`。
+> 具体图标组件通过 `<image>` 渲染，父级 `color` 不会自动生效，需要显式传 `strokeColor` / `fillColor`。
+> 全量列表用的 `t-icon` 依赖 CDN 字体，小程序端需把 `https://tdesign.gtimg.com` 配到 downloadFile 合法域名；
+> 开发者工具可关闭域名校验，字体未加载完时图标会短暂空白。
 
 ## License
 

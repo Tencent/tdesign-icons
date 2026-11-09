@@ -1,0 +1,21 @@
+/* TDesign 图标字体：与 web 端 iconfont 同源，字体走 CDN、不进小程序包 */
+@font-face {
+  font-family: 't';
+  src: url('https://tdesign.gtimg.com/icon/0.4.6/fonts/t.woff') format('woff'),
+    url('https://tdesign.gtimg.com/icon/0.4.6/fonts/t.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.t-icon {
+  font-family: 't' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

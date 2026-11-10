@@ -22,6 +22,8 @@ export const COLOR_TYPES = [
 
 export const SIZE_OPTIONS = ['small', 'medium', 'large', '24px', '32px', '48px'];
 
+/** 默认尺寸，取下限以外的可选值 */
+
 /** 「全部图标」标签页可选的图标颜色 */
 export const COLOR_OPTIONS = ['#333333', '#0052D9', '#E37318', '#07C160', '#E34D59'];
 

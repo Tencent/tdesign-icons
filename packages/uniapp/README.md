@@ -19,7 +19,7 @@ your-project/
             ├── ability-open-icon/
             │   └── ability-open-icon.vue
             └── close-icon/
-                └── close.vue
+                └── close-icon.vue
 ```
 
 也可以从 npm 安装：
@@ -57,8 +57,10 @@ CSS 类名仍是 `t-icon-<名称>`（如 `t-icon-close`），与 web 端保持�
 如果项目自定义了 easycom 规则（`pages.json` 的 `easycom` 字段），也可以显式引入：
 
 ```js
-import { Close, Abstract } from 'tdesign-icons-uniapp';
+import { CloseIcon, AbstractIcon } from '@/uni_modules/tdesign-icons-uniapp/index.uts';
 ```
+
+导出名是 `<Name>Icon`（目录名 `close-icon` → `CloseIcon`），与 `manifest` 里的 `icon` 字段一致。
 
 ## 按名称动态渲染（t-icon）
 
@@ -103,7 +105,7 @@ export default {
 
 | 属性 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
-| `size` | `string \| number` | `1em` | 图标尺寸，支持 `small` / `medium` / `large`，也支持 `20px`、`1.5em` 等 |
+| `size` | `string` | `1em` | 图标尺寸，支持 `small` / `medium` / `large`，也支持 `20px`、`1.5em` 等（带单位的字符串，数字请自己补单位） |
 | `strokeColor` | `string \| string[]` | `currentColor` | 描边颜色，多色图标按顺序取用 |
 | `fillColor` | `string \| string[]` | `currentColor` | 填充颜色，多色图标按顺序取用 |
 | `strokeWidth` | `number` | `2` | 描边宽度 |

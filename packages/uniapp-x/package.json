@@ -34,9 +34,6 @@
   "uni-app": {
     "compilerVersion": 4
   },
-  "scripts": {
-    "check": "node scripts/check-parity.mjs"
-  },
   "devDependencies": {
     "typescript": "catalog:"
   }

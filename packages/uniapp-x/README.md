@@ -19,7 +19,7 @@ your-project/
             ├── ability-open-icon/
             │   └── ability-open-icon.uvue
             └── close-icon/
-                └── close.uvue
+                └── close-icon.uvue
 ```
 
 也可以从 npm 安装：
@@ -55,7 +55,8 @@ CSS 类名仍是 `t-icon-<名称>`（如 `t-icon-close`），与 web 端保持�
 
 ```vue
 <script setup lang="uts">
-import { Close, Abstract } from '@/uni_modules/tdesign-icons-uniapp-x/index.uts'
+// 导出名是 <Name>Icon（目录名 close-icon → CloseIcon）
+import { CloseIcon, AbstractIcon } from '@/uni_modules/tdesign-icons-uniapp-x/index.uts'
 </script>
 ```
 
@@ -94,7 +95,7 @@ const iconName = ref('close')
 
 | 属性 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
-| `size` | `string \| number` | `1em` | 图标尺寸，支持 `small` / `medium` / `large`，也支持 `20px`、`1.5em` 等 |
+| `size` | `string` | `1em` | 图标尺寸，支持 `small` / `medium` / `large`，也支持 `20px`、`1.5em` 等（带单位的字符串，数字请自己补单位） |
 | `strokeColor` | `string \| string[]` | `currentColor` | 描边颜色，多色图标按顺序取用 |
 | `fillColor` | `string \| string[]` | `currentColor` | 填充颜色，多色图标按顺序取用 |
 | `strokeWidth` | `number` | `2` | 描边宽度 |

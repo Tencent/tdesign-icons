@@ -79,5 +79,5 @@ const _imageStyle = computed((): string => 'width:100%;height:100%;display:block
 </script>
 
 <style>
-@import '../style/index.css';
+@import '../../style/index.css';
 </style>

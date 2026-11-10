@@ -32,9 +32,6 @@
   "uni-app": {
     "compilerVersion": 3
   },
-  "scripts": {
-    "check": "node scripts/check-parity.mjs"
-  },
   "peerDependencies": {
     "vue": "^2.6.12 || ^3.0.0"
   },

@@ -14,23 +14,20 @@
     "baseUrl": ".",
     "lib": ["ESNext", "DOM"],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
   },
-  // uni-app x 的全局类型（defineApp / createSSRApp / onLaunch / UTSJSONObject 等）
+  // uni-app x 的全局类型（createSSRApp / onLaunch / UTSJSONObject 等）
   "include": [
     "shims.d.ts",
-    "*.uts",
-    "*.uvue",
-    "**/*.uts",
-    "**/*.uvue",
-    "**/*.ts",
-    "**/*.d.ts",
-    "*.json",
-    "node_modules/@dcloudio/uni-app-x/types/index.d.ts"
+    "src/**/*.uts",
+    "src/**/*.uvue",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.json"
   ],
   "exclude": [
     "node_modules",
-    "uni_modules/tdesign-icons-uniapp-x/components"
+    "src/uni_modules/tdesign-icons-uniapp-x/components"
   ]
 }

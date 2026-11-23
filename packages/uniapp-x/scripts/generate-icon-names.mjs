@@ -24,7 +24,7 @@ const CSS_URL = process.env.ICONS_CSS_URL
 
 const PROJECT_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CACHE_FILE = path.join(PROJECT_DIR, '.cache', `icons-${VERSION}.css`);
-const ICON_NAMES_FILE = path.join(PROJECT_DIR, 'utils', 'icon-names.ts');
+const ICON_NAMES_FILE = path.join(PROJECT_DIR, 'src', 'utils', 'icon-names.ts');
 
 /** 解析 .t-icon-<name>:before { content: "\eXXX"; }，按 CSS 顺序去重 */
 function parseIconNames(css) {
@@ -76,4 +76,4 @@ const css = await loadCss();
 const names = parseIconNames(css);
 writeIconNames(names);
 
-console.log(`[icons] ${names.length} 个图标名 -> utils/icon-names.ts`);
+console.log(`[icons] ${names.length} 个图标名 -> src/utils/icon-names.ts`);

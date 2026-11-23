@@ -13,7 +13,7 @@
   ],
   "author": "tdesign",
   "lint-staged": {
-    "packages/**/{src,gulp}/**/*.{js,ts,tsx,jsx}": [
+    "packages/**/{src,gulp,uni_modules}/**/*.{js,ts,tsx,jsx}": [
       "eslint --fix"
     ],
     "gulp/**/*.{js,ts,tsx,jsx}": [

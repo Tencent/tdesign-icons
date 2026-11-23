@@ -12,8 +12,8 @@ const versionTypes = ['patch', 'minor', 'major'];
 
 // uni-app 包的发布清单在嵌套的真实插件目录里（同时用于 npm 与插件市场）
 const UNI_PLUGIN_MANIFESTS = {
-  uniapp: 'uni_modules/tdesign-icons-uniapp/package.json',
-  'uniapp-x': 'uni_modules/tdesign-icons-uniapp-x/package.json',
+  uniapp: 'src/uni_modules/tdesign-icons-uniapp/package.json',
+  'uniapp-x': 'src/uni_modules/tdesign-icons-uniapp-x/package.json',
 };
 
 function getCurrentBranch() {

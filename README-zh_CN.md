@@ -53,12 +53,16 @@ TDesign Icon 仓库负责生产和构建 TDesign 所有图标相关的资源和�
 ## uni-app 双渠道发布 🚀
 
 `tdesign-icons-uniapp` 与 `tdesign-icons-uniapp-x` 的发布清单位于
-`packages/<包名>/uni_modules/<包名>/package.json`，同一目录既是 npm 包根，也是 DCloud
-插件市场的 `uni_modules` 插件目录：
+`packages/<包名>/src/uni_modules/<包名>/package.json`，同一目录既是 npm 包根，也是 DCloud
+插件市场的 `uni_modules` 插件目录。包根是 Vite CLI 示例工程（`dev:h5` 等），CLI 项目按规范
+从 `src/uni_modules/` 读取插件。
 
-- **npm**：从上述插件目录执行 `npm publish --access public`；
-- **插件市场**：用 Linux HBuilderX CLI（无需 GUI）执行
-  `cli uni_modules --publish <插件ID> --project "$PWD/packages/<包名>" --json`。
+先在仓库根目录执行 `pnpm run generate`，确保 `components/`、`index.uts` 等生成物存在。
+
+- **npm**：进入上述插件目录执行 `npm publish --access public`；
+- **插件市场**：先 `cli open` 并 `cli user login` 登录作者账号，然后执行
+  `cli uni_modules --publish <插件ID> --project "$PWD/packages/<包名>" --changeLog "$(cat packages/<包名>/.changelog/<版本>.md)" --json`。
+  不传 `--changeLog` 时 CLI 读取插件根目录的 `changelog.md`，需自行补上当前版本内容。
 
 插件 `package.json` 同时包含 `name`（npm）与 `id`/`dcloudext`/`uni_modules`（DCloud），
 `files` 白名单同时约束两个渠道的产物；`dcloudext.npmurl` 指向对应 npm 包。

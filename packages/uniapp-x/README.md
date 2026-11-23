@@ -28,6 +28,11 @@ your-project/
 npm i tdesign-icons-uniapp-x
 ```
 
+> npm 包的内容就是这个插件目录本身。easycom 默认只扫描项目的 `components/` 与
+> `uni_modules/*/components/`，不会扫描 `node_modules`。npm 安装后若要用 easycom 短标签，
+> 请把 `node_modules/tdesign-icons-uniapp-x` 拷到项目的 `uni_modules/tdesign-icons-uniapp-x/`，
+> 或在 `pages.json` 的 `easycom.custom` 中显式指向 `node_modules` 里的组件路径。
+
 ## 使用
 
 组件为 `.uvue`，脚本使用 uts。easycom 会自动扫描 `uni_modules/<id>/components/<name>/<name>.uvue`，

@@ -11,6 +11,6 @@
     "skipLibCheck": true,
     "baseUrl": "./"
   },
-  "include": ["uni_modules/**/*.ts"],
-  "exclude": ["node_modules", "uni_modules/tdesign-icons-uniapp/components"]
+  "include": ["src/uni_modules/**/*.ts"],
+  "exclude": ["node_modules", "src/uni_modules/tdesign-icons-uniapp/components"]
 }

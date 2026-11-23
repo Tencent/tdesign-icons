@@ -1,3 +1,5 @@
+import fs from 'node:fs';
+
 import { parallel, series } from 'gulp';
 
 import { reactTask } from './packages/react/gulp';
@@ -16,6 +18,32 @@ import { uniAppXTask } from './packages/uniapp-x/gulp';
 
 const source: string[] = ['svg/*.svg'];
 
+/**
+ * 插件目录里的 readme / license / changelog 是发布产物，
+ * 始终从仓库的单一来源（README.md / LICENSE / .changelog/<version>.md）同步，
+ * 避免两份拷贝漂移。
+ */
+async function syncUniAppPluginDocs() {
+  const packages = [
+    { dir: 'uniapp', id: 'tdesign-icons-uniapp' },
+    { dir: 'uniapp-x', id: 'tdesign-icons-uniapp-x' },
+  ];
+
+  for (const { dir, id } of packages) {
+    const root = `packages/${dir}`;
+    const plugin = `${root}/src/uni_modules/${id}`;
+    fs.copyFileSync(`${root}/README.md`, `${plugin}/readme.md`);
+    fs.copyFileSync(`${root}/LICENSE`, `${plugin}/license.md`);
+
+    const { version } = JSON.parse(fs.readFileSync(`${plugin}/package.json`, 'utf8'));
+    const notes = `${root}/.changelog/${version}.md`;
+    if (fs.existsSync(notes)) {
+      const body = fs.readFileSync(notes, 'utf8').trimEnd();
+      fs.writeFileSync(`${plugin}/changelog.md`, `## ${version}\n\n${body}\n`);
+    }
+  }
+}
+
 export default series(
   parallel(
     reactTask(source),
@@ -30,4 +58,5 @@ export default series(
     uniAppTask(source),
     uniAppXTask(source),
   ),
+  syncUniAppPluginDocs,
 );

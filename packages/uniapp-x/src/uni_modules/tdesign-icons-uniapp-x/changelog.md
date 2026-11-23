@@ -1,5 +1,6 @@
 ## 0.1.0
 
+### 🌱 初始版本
 
 - 新增 `tdesign-icons-uniapp-x`，支持 uni-app x（uvue）的 H5、App、各平台小程序
 - 图标通过 SVG Data URI 渲染，支持可变描边宽度（`strokeWidth`）与多色图标（`strokeColor` / `fillColor` 支持字符串或数组）

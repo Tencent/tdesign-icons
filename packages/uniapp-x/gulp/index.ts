@@ -11,7 +11,7 @@ import {
 
 import { uniAppXGetIconFileContent } from './template-generator';
 
-const PLUGIN_DIR = 'packages/uniapp-x/uni_modules/tdesign-icons-uniapp-x';
+const PLUGIN_DIR = 'packages/uniapp-x/src/uni_modules/tdesign-icons-uniapp-x';
 
 /**
  * uni-app x：组件后缀为 .uvue，脚本为 uts

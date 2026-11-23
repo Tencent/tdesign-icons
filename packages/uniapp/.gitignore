@@ -1,12 +1,12 @@
 # 插件生成物（由仓库根目录 pnpm run generate 产出，不提交）
-uni_modules/tdesign-icons-uniapp/components/*
-uni_modules/tdesign-icons-uniapp/index.uts
-uni_modules/tdesign-icons-uniapp/manifest.ts
-uni_modules/tdesign-icons-uniapp/global-config.ts
-uni_modules/tdesign-icons-uniapp/icon-map.js
+src/uni_modules/tdesign-icons-uniapp/components/*
+src/uni_modules/tdesign-icons-uniapp/index.uts
+src/uni_modules/tdesign-icons-uniapp/manifest.ts
+src/uni_modules/tdesign-icons-uniapp/global-config.ts
+src/uni_modules/tdesign-icons-uniapp/icon-map.js
 
 # 示例工程生成物
-utils/icon-names.js
+src/utils/icon-names.js
 .cache/
 dist/
 unpackage/

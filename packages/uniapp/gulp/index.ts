@@ -12,7 +12,7 @@ import {
   generateUniAppTypeMap,
 } from './meta';
 
-const PLUGIN_DIR = 'packages/uniapp/uni_modules/tdesign-icons-uniapp';
+const PLUGIN_DIR = 'packages/uniapp/src/uni_modules/tdesign-icons-uniapp';
 
 /**
  * 传统 uni-app：组件后缀为 .vue（.uvue 仅 uni-app x 支持）

@@ -2,11 +2,13 @@
  * TDesign 图标运行时（uni-app / JS 引擎版）
  *
  * 图标产物是「带占位符的 svg 字符串」，本模块负责：
- * 1. 把 {f1||'currentColor'} / {s1||'currentColor'} / {sw} 替换为真实的颜色与描边宽度
- * 2. 编码成 Data URI，交给 <image> 渲染
+ * 1. resolveSvg：把 {f1||'currentColor'} / {s1||'currentColor'} / {sw} 替换为真实颜色与描边宽度，
+ *    并按实例 uid 重写 mask id，产出可直接内联的原生 SVG 字符串；
+ * 2. toSvgDataUri：编码成 Data URI，供小程序端 <image> 渲染。
  *
- * 传统 uni-app 不支持内联 svg 标签（小程序端），H5/App 也可以统一走 <image>，
- * 因此 H5 / App / 小程序共用同一条渲染路径，无需按平台分支。
+ * 具体图标组件按平台差异化渲染（组件模板内用条件编译）：
+ * 小程序走 <image> + Data URI，其他平台走内联 <svg>（v-html + resolveSvg 结果）。
+ * 通用 t-icon 走字体图标，与本运行时无关。
  */
 
 export interface IconSizeStyle {

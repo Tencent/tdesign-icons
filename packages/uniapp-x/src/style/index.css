@@ -13,6 +13,22 @@
   display: block;
 }
 
+/* WEB 端渲染内联 SVG：wrapper 填满根节点，svg 再填满 wrapper */
+/* #ifdef WEB */
+.t-icon-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* v-html 注入的 <svg> 不带作用域属性，需用 :deep() 穿透，否则尺寸规则不生效 */
+.t-icon-svg :deep(svg) {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* #endif */
+
 .t-icon-loading {
   animation: t-spin 1s linear infinite;
 }

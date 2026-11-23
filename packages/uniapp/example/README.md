@@ -92,6 +92,7 @@ echo "$CNB_VSCODE_PROXY_URI" | sed "s/{{port}}/5173/"
 ### 标签二：多色 / 可变
 
 - 用具体图标组件（`<ability-open-icon />` 等）演示 `strokeColor` / `fillColor` / `strokeWidth`；
+- 具体图标组件按平台差异化渲染：H5 / App 输出原生内联 `<svg>`，小程序走 `<image>` + SVG data URI（见包 README「实现说明」）；
 - 可切换单色 / 双色 / 多色、描边宽度 1 ~ 3（步长 0.5）、尺寸 `small` / `medium` / `large` / `24px` / `32px` / `48px`；
 - **4 个色位（f1/f2/s1/s2）都能改颜色**：小程序端没有 color-picker，改用预设色块，点击即改；
   按模式只显示生效的色位（单色 1 个、双色 2 个、多色 4 个），与 view 里颜色选择器的显示规则一致。

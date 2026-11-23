@@ -1,6 +1,24 @@
 <template>
   <view class="t-icon-root" :class="_classNames" :style="_rootStyle" @click="onClick">
+    <!-- H5：webview 渲染，内联 SVG -->
+    <!-- #ifdef H5 -->
+    <view class="t-icon-svg" v-html="_svg"></view>
+    <!-- #endif -->
+    <!-- App(vue)：webview 渲染，内联 SVG；nvue 原生渲染不支持 -->
+    <!-- #ifdef APP-PLUS -->
+    <!-- #ifndef APP-NVUE -->
+    <view class="t-icon-svg" v-html="_svg"></view>
+    <!-- #endif -->
+    <!-- #endif -->
+    <!-- 小程序 / nvue / 快应用等：不支持内联 SVG，回落到 <image> + data URI -->
+    <!-- #ifndef H5 -->
+    <!-- #ifndef APP-PLUS -->
     <image class="t-icon-image" :src="_src" mode="aspectFit" style="width: 100%; height: 100%; display: block;" />
+    <!-- #endif -->
+    <!-- #ifdef APP-NVUE -->
+    <image class="t-icon-image" :src="_src" mode="aspectFit" style="width: 100%; height: 100%; display: block;" />
+    <!-- #endif -->
+    <!-- #endif -->
   </view>
 </template>
 
@@ -59,8 +77,22 @@ export default {
     },
   },
   computed: {
+    /**
+     * 解析占位符后的原生 SVG 字符串，供内联渲染使用。
+     * 未传色时显式补黑色，与小程序 <image> 里 currentColor 解析为黑色的行为保持一致，
+     * 避免内联路径继承父级 color 造成两端颜色不一致。
+     */
+    _svg() {
+      return resolveSvg(
+        TEMPLATE,
+        this.strokeColor || ['#000000'],
+        this.fillColor || ['#000000'],
+        this.strokeWidth,
+        this.uid,
+      );
+    },
     _src() {
-      return toSvgDataUri(resolveSvg(TEMPLATE, this.strokeColor, this.fillColor, this.strokeWidth, this.uid));
+      return toSvgDataUri(this._svg);
     },
     _classNames() {
       const sizeClass = SIZE_CLASS_NAMES[this.size];
@@ -71,7 +103,7 @@ export default {
       const sizeStyle = resolveSizeStyle(this.size);
       // 预设尺寸交给 class（t-size-s/m/l）控制，这里不能写 width/height，否则会覆盖 class；
       // 自定义尺寸或无尺寸时则显式给宽高（无尺寸回落到 1em），
-      // 否则 <image> 的 100% 尺寸会失去参照而塌缩为 0
+      // 否则内部渲染层的 100% 尺寸会失去参照而塌缩为 0
       if (!sizeStyle.width) {
         return SIZE_CLASS_NAMES[this.size]
           ? 'display:inline-block;vertical-align:middle;'

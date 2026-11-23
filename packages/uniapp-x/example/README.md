@@ -85,6 +85,10 @@ easycom 只在页面实际用到某个标签时才引入对应组件文件。小
 - 描边宽度 1 ~ 3
 - 尺寸：`small` / `medium` / `large` / `24px` / `32px` / `48px`
 
+具体图标组件按平台差异化渲染：WEB 端输出原生内联 `<svg>`，App / 小程序 / 鸿蒙端走
+`<image>` + SVG data URI（uvue 原生渲染不支持内联 `<svg>`，详见包 README「实现说明」）。
+「全部图标」用的 `t-icon` 仍是字体图标，不受此影响。
+
 ## 注意
 
 uni-app x 只支持 `.uvue`；传统 uni-app（Vue2 / Vue3）请使用 `packages/uniapp`（`.vue`）。

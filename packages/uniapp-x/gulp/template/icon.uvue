@@ -1,6 +1,13 @@
 <template>
   <view class="t-icon-root" :class="_classNames" :style="_rootStyle" @click="_onClick">
+    <!-- WEB 端是完整 Vue 3，支持内联 SVG -->
+    <!-- #ifdef WEB -->
+    <view class="t-icon-svg" v-html="_svg"></view>
+    <!-- #endif -->
+    <!-- App / 小程序 / 鸿蒙：uvue 原生渲染不支持内联 SVG，回落到 <image> + data URI -->
+    <!-- #ifndef WEB -->
     <image class="t-icon-image" :src="_src" mode="aspectFit" :style="_imageStyle" />
+    <!-- #endif -->
   </view>
 </template>
 
@@ -62,22 +69,27 @@ const template = TEMPLATE
 /**
  * 每个实例的唯一后缀，用于隔离 <mask> 的 id。
  *
- * 图标是用 <image> 渲染 svg Data URI，同一页面上会同时存在多个图标，
+ * 同一页面上会同时存在多个图标（内联 SVG 或 <image> data URI），
  * 而模板里的 mask id 是固定名（fill1-overlap 等）。id 重复时后加载的
  * 文档会覆盖先前的定义，导致带填充色的图标互相串味、甚至整块渲染成空白。
  * web 端的做法是给 id 拼上实例前缀（props.overlapMaskId_fill1），这里等价处理。
  */
 const _uid = `u${Math.ceil(Math.random() * 10e8).toString(36)}`
 
-const _src = computed((): string => toSvgDataUri(
-  resolveSvg(
-    TEMPLATE,
-    props.strokeColor,
-    props.fillColor,
-    props.strokeWidth,
-    _uid,
-  ),
+/**
+ * 解析占位符后的原生 SVG 字符串，供 WEB 端内联渲染使用（非 WEB 编译时会被剔除）。
+ * 未传色时显式补黑色，与 <image> 里 currentColor 解析为黑色的行为保持一致，
+ * 避免 WEB 内联路径继承父级 color 造成两端颜色不一致。
+ */
+const _svg = computed((): string => resolveSvg(
+  TEMPLATE,
+  props.strokeColor != null ? props.strokeColor : ['#000000'],
+  props.fillColor != null ? props.fillColor : ['#000000'],
+  props.strokeWidth,
+  _uid,
 ))
+
+const _src = computed((): string => toSvgDataUri(_svg.value))
 
 const _classNames = computed((): string => {
   const sizeClass = getSizeClassName(props.size)
@@ -86,7 +98,7 @@ const _classNames = computed((): string => {
 })
 
 const _rootStyle = computed((): string => {
-  // 无尺寸时回落到 1em，否则 <image> 的 100% 尺寸会失去参照而塌缩为 0
+  // 无尺寸时回落到 1em，否则内部渲染层的 100% 尺寸会失去参照而塌缩为 0
   return resolveSizeStyle(props.size)
 })
 

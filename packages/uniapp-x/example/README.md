@@ -79,9 +79,9 @@ easycom 只在页面实际用到某个标签时才引入对应组件文件。小
 
 ## 页面说明
 
-`pages/index/index.uvue` 参考 [miniprogram-svg-icons](https://github.com/anlyyao/miniprogram-svg-icons) 的交互：
+`pages/index/index.uvue` 的交互：
 
-- 单色 / 双色 / 多色切换
+- 描边类型（描边 / 描边-填充）与颜色模式（随描边类型变化）切换，规则与 [view 的 icon-view.vue](https://github.com/Tencent/tdesign-icons/blob/develop/packages/view/src/icon-view.vue) 一致
 - 描边宽度 1 ~ 3
 - 尺寸：`small` / `medium` / `large` / `24px` / `32px` / `48px`
 

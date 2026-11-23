@@ -89,7 +89,20 @@
       -->
       <view class="panel">
         <view class="panel-row">
-          <text class="panel-label">颜色模式（单色 / 双色 / 多色）</text>
+          <text class="panel-label">描边类型（描边 / 描边-填充，对齐 view 的 strokeTypes）</text>
+          <view class="segmented">
+            <view
+              v-for="item in strokeTypes"
+              :key="item.key"
+              class="segmented-item"
+              :class="{ 'segmented-item--active': strokeType === item.key }"
+              @click="onStrokeTypeChange(item.key)"
+            >{{ item.label }}</view>
+          </view>
+        </view>
+
+        <view class="panel-row">
+          <text class="panel-label">颜色模式（随描边类型变化，对齐 view 的 colorType）</text>
           <view class="segmented">
             <view
               v-for="item in colorTypes"
@@ -100,7 +113,7 @@
             >{{ item.label }}</view>
           </view>
           <text class="panel-hint">{{ colorSummary }}</text>
-          <text class="panel-hint">色位：填充 f1/f2、描边 s1/s2 · 单色=单值、双色=第 2 色位跟随、多色=4 色位独立</text>
+          <text class="panel-hint">色位：填充 f1/f2、描边 s1/s2 · 描边双色=两个独立描边色、描边-填充双色=第 2 色位跟随、多色=4 色位独立</text>
         </view>
 
         <view class="panel-row">
@@ -157,7 +170,13 @@
         <accessibility-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
         <system-components-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
         <chart-pie-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
-        <logo-tdesign-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <certificate-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <app-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <camera-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <chart-ring-1-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <building-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <brightness-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
+        <cake-icon class="demo-icon" :size="size" :stroke-width="strokeWidth" :stroke-color="colors.strokeColor" :fill-color="colors.fillColor" />
       </view>
 
       <view class="note">
@@ -175,6 +194,7 @@ import { ICON_NAMES } from '../../utils/icon-names';
 import {
   COLOR_PRESET,
   COLOR_TYPES,
+  STROKE_TYPES,
   COLOR_OPTIONS,
   COLOR_PALETTE,
   COLOR_SLOTS,
@@ -200,7 +220,9 @@ export default {
         { key: 'all', label: '全部图标（CDN 字体）' },
         { key: 'multi', label: '多色 / 可变' },
       ],
-      colorTypes: COLOR_TYPES,
+      strokeTypes: STROKE_TYPES,
+      strokeType: 'outlineFilled',
+      colorTypes: COLOR_TYPES.outlineFilled,
       colorOptions: COLOR_OPTIONS,
       sizeOptions: SIZE_OPTIONS,
       multicolorIcons: MULTICOLOR_ICONS,
@@ -242,20 +264,29 @@ export default {
       };
     },
     activeSlots() {
-      const keys = editableSlots(this.colorType);
+      const keys = editableSlots(this.colorType, this.strokeType);
       return this.colorSlots
         .filter((slot) => keys.includes(slot.key))
         .map((slot) => ({ ...slot, value: this[slot.key] }));
     },
     colors() {
-      return resolveColors(this.colorType, this.slotValues);
+      return resolveColors(this.colorType, this.strokeType, this.slotValues);
     },
     colorSummary() {
+      const stroke = this.strokeTypes.find((item) => item.key === this.strokeType);
       const current = this.colorTypes.find((item) => item.key === this.colorType);
-      return `${current ? current.label : this.colorType} · 描边 ${this.colors.strokeColor.join(' / ')} · 填充 ${this.colors.fillColor.join(' / ')}`;
+      return `${stroke ? stroke.label : this.strokeType} · ${current ? current.label : this.colorType} · 描边 ${this.colors.strokeColor.join(' / ')} · 填充 ${this.colors.fillColor.join(' / ')}`;
     },
   },
   methods: {
+    /** 切换描边类型时，把颜色模式收敛到新类型支持的选项（与 view 的 radio 联动一致） */
+    onStrokeTypeChange(key) {
+      this.strokeType = key;
+      this.colorTypes = COLOR_TYPES[key];
+      if (!this.colorTypes.some((item) => item.key === this.colorType)) {
+        this.colorType = 'double';
+      }
+    },
     setSlotColor(key, color) {
       if (key === 'fillColor1') this.fillColor1 = color;
       else if (key === 'fillColor2') this.fillColor2 = color;

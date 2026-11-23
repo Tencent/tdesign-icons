@@ -62,7 +62,7 @@ TDesign Icon 仓库负责生产和构建 TDesign 所有图标相关的资源和�
 
 插件 `package.json` 同时包含 `name`（npm）与 `id`/`dcloudext`/`uni_modules`（DCloud），
 `files` 白名单同时约束两个渠道的产物；`dcloudext.npmurl` 指向对应 npm 包。
-发布流程已在 `auto-release.yml` 中自动化，凭证走 `DCLOUD_USERNAME` / `DCLOUD_PASSWORD` secrets。
+发布 CI 暂未接入，目前按上述命令手动发布。
 
 # 开源协议
 

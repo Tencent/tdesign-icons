@@ -38,8 +38,6 @@ jobs:
             tdesign-icons-svg
             tdesign-icons-vue
             tdesign-icons-web-components
-            tdesign-icons-uniapp
-            tdesign-icons-uniapp-x
             tdesign_flutter_icons
 
   commit-changelog:
@@ -57,6 +55,4 @@ jobs:
             tdesign-icons-svg
             tdesign-icons-vue
             tdesign-icons-web-components
-            tdesign-icons-uniapp
-            tdesign-icons-uniapp-x
             tdesign_flutter_icons

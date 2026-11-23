@@ -80,14 +80,14 @@ const iconName = ref('close')
 ```
 
 `t-icon` 走**字体图标**：一套 CDN 字体（`tdesign.gtimg.com/icon/0.4.6/fonts/t.woff`，约 280KB，不进包）
-+ 码点映射 `src/utils/icon-unicode.ts`，用 `<text>` 输出 unicode 字符。
++ 码点映射 `utils/icon-unicode.ts`，用 `<text>` 输出 unicode 字符。
 `color` / `size` 就是 CSS 的 `color` / `font-size`，切换时不重算图标内容、不重新解码图片，全量列表也不卡。
 
 > `t-icon` 不在 `components/` 两级目录下，easycom 不会自动注册，需显式引入。
 > 它只提供 `name` / `size` / `color`（单色）；`size` 支持 `small` / `medium` / `large` 及 `24px` / `1.5em` 等任意 CSS 字号。
 > 需要多色 / 可变描边宽度请用具体图标组件（如 `<abstract-icon :stroke-color="..." :stroke-width="..." />`）。
 
-字体由 `@font-face` 从 CDN 加载（见 `src/style/iconfont.css`）：**小程序端需把
+字体由 `@font-face` 从 CDN 加载（见 `style/iconfont.css`）：**小程序端需把
 `https://tdesign.gtimg.com` 配到 downloadFile 合法域名**，开发者工具可关闭域名校验。
 码点表从同版本 `fonts/index.css` 解析而来，请勿手动修改。
 

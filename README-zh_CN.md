@@ -50,6 +50,20 @@ TDesign Icon 仓库负责生产和构建 TDesign 所有图标相关的资源和�
 
 在根目录执行 `pnpm publish -r`，将发布所有框架的 npm 包。
 
+## uni-app 双渠道发布 🚀
+
+`tdesign-icons-uniapp` 与 `tdesign-icons-uniapp-x` 的发布清单位于
+`packages/<包名>/uni_modules/<包名>/package.json`，同一目录既是 npm 包根，也是 DCloud
+插件市场的 `uni_modules` 插件目录：
+
+- **npm**：从上述插件目录执行 `npm publish --access public`；
+- **插件市场**：用 Linux HBuilderX CLI（无需 GUI）执行
+  `cli uni_modules --publish <插件ID> --project "$PWD/packages/<包名>" --json`。
+
+插件 `package.json` 同时包含 `name`（npm）与 `id`/`dcloudext`/`uni_modules`（DCloud），
+`files` 白名单同时约束两个渠道的产物；`dcloudext.npmurl` 指向对应 npm 包。
+发布流程已在 `auto-release.yml` 中自动化，凭证走 `DCLOUD_USERNAME` / `DCLOUD_PASSWORD` secrets。
+
 # 开源协议
 
 TDesign 遵循 [MIT 协议](https://github.com/Tencent/tdesign-icons/blob/main/LICENSE)。

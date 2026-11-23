@@ -1,6 +1,13 @@
-# auto generated icons
-src/components/*
-src/index.uts
-src/manifest.ts
-src/global-config.ts
-src/icon-map.js
+# 插件生成物（由仓库根目录 pnpm run generate 产出，不提交）
+uni_modules/tdesign-icons-uniapp/components/*
+uni_modules/tdesign-icons-uniapp/index.uts
+uni_modules/tdesign-icons-uniapp/manifest.ts
+uni_modules/tdesign-icons-uniapp/global-config.ts
+uni_modules/tdesign-icons-uniapp/icon-map.js
+
+# 示例工程生成物
+utils/icon-names.js
+.cache/
+dist/
+unpackage/
+node_modules/

@@ -1,16 +1,36 @@
 {
   "compilerOptions": {
-    "lib": ["esnext", "dom"],
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "useDefineForClassFields": false,
     "noImplicitAny": false,
-    "strictNullChecks": false,
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    "baseUrl": "./"
+    "baseUrl": ".",
+    "lib": ["ESNext", "DOM"],
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "src/components"]
+  // uni-app x 的全局类型（defineApp / createSSRApp / onLaunch / UTSJSONObject 等）
+  "include": [
+    "shims.d.ts",
+    "*.uts",
+    "*.uvue",
+    "**/*.uts",
+    "**/*.uvue",
+    "**/*.ts",
+    "**/*.d.ts",
+    "*.json",
+    "node_modules/@dcloudio/uni-app-x/types/index.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "uni_modules/tdesign-icons-uniapp-x/components"
+  ]
 }

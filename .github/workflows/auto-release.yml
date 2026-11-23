@@ -41,4 +41,35 @@ jobs:
             tdesign-icons-svg
             tdesign-icons-vue
             tdesign-icons-web-components
+            tdesign-icons-uniapp
+            tdesign-icons-uniapp-x
             tdesign_flutter_icons
+
+      # 同一份 uni_modules 真实目录，通过 Linux HBuilderX CLI 发布到 DCloud 插件市场。
+      # 无需 GUI；需要先打开 cli 服务并用插件作者账号登录（secrets）。
+      - name: Install HBuilderX Linux CLI
+        run: |
+          curl -fsSL -o /tmp/hbuilderx.tar.gz \
+            https://download1.dcloud.net.cn/download/HBuilderX.5.34.2026102909.linux_x64.full.tar.gz
+          mkdir -p /opt/hbuilderx
+          tar -zxvf /tmp/hbuilderx.tar.gz -C /opt/hbuilderx --strip-components=1
+          /opt/hbuilderx/cli open
+          echo "/opt/hbuilderx" >> "$GITHUB_PATH"
+
+      - name: Login to DCloud plugin author account
+        run: cli user login --username "${{ secrets.DCLOUD_USERNAME }}" --password "${{ secrets.DCLOUD_PASSWORD }}"
+
+      - name: Publish uni-app plugin to marketplace
+        run: |
+          for spec in "uniapp:tdesign-icons-uniapp" "uniapp-x:tdesign-icons-uniapp-x"; do
+            dir="${spec%%:*}"
+            id="${spec#*:}"
+            pkg="packages/$dir/uni_modules/$id"
+            version=$(node -p "require('./$pkg/package.json').version")
+            notes="packages/$dir/.changelog/$version.md"
+            changeLog="Release $version"
+            if [ -f "$notes" ]; then changeLog="$(cat "$notes")"; fi
+            cli uni_modules --validate "$id" --project "$PWD/packages/$dir" --json
+            cli uni_modules --publish "$id" --project "$PWD/packages/$dir" \
+              --changeLog "$changeLog" --json
+          done

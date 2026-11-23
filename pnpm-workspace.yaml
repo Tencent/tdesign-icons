@@ -6,9 +6,9 @@ packages:
   - packages/vue
   - packages/web-components
   - packages/uniapp
+  - packages/uniapp/uni_modules/tdesign-icons-uniapp
   - packages/uniapp-x
-  - packages/uniapp/example
-  - packages/uniapp-x/example
+  - packages/uniapp-x/uni_modules/tdesign-icons-uniapp-x
 catalog:
   "@babel/core": ^7.20.12
   "@babel/eslint-parser": ^7.12.16

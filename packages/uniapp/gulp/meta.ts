@@ -1,7 +1,5 @@
 import { dest, src } from 'gulp';
 import concat from 'gulp-concat';
-import { Readable } from 'stream';
-import Vinyl from 'vinyl';
 
 import { createTransformStream } from '../../../gulp/transform';
 import { upperCamelCase } from '../../../gulp/util';
@@ -58,66 +56,4 @@ export const generateUniAppTypeMap = ({ from, to }: { from: string[]; to: string
     .pipe(createTransformStream((content) => `export type GlobalIconConfig = {\n${content}};\n`))
     .pipe(concat('global-config.ts'))
     .pipe(dest(to));
-};
-
-/**
- * 生成 uni_modules 插件的 package.json。
- *
- * uni_modules 要求插件目录下必须有 package.json，字段格式为 `作者ID-插件英文名称`；
- * components 目录会自动被 easycom 扫描，因此使用方无需 import，直接写 `<close />`。
- */
-export const generateUniModulesManifest = ({
-  id,
-  name,
-  displayName,
-  description,
-  keywords,
-  engines,
-  platforms,
-  to,
-}: {
-  id: string;
-  name: string;
-  displayName: string;
-  description: string;
-  keywords: string[];
-  engines: Record<string, string>;
-  platforms: Record<string, unknown>;
-  to: string;
-}) => function generateUniModulesManifest() {
-  const content = {
-    id,
-    displayName,
-    version: '0.1.0',
-    description,
-    keywords,
-    repository: 'https://github.com/Tencent/tdesign-icons',
-    engines,
-    dcloudext: {
-      type: 'component-vue',
-      category: ['前端组件', '通用组件'],
-      sale: {
-        regular: { price: '0.00' },
-        sourcecode: { price: '0.00' },
-      },
-      declaration: {
-        ads: '无',
-        data: '插件不采集任何数据',
-        permissions: '无',
-      },
-    },
-    uni_modules: {
-      dependencies: [],
-      platforms: { client: platforms },
-      // 图标是纯静态组件，未使用的组件不应被打进产物
-      treeShaking: { app: true, web: true },
-    },
-    // 同时保留 npm 包名，方便从 npm 安装后复制到 uni_modules
-    name,
-  };
-
-  return Readable.from([new Vinyl({
-    path: 'package.json',
-    contents: Buffer.from(`${JSON.stringify(content, null, 2)}\n`),
-  })]).pipe(dest(to));
 };

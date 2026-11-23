@@ -1,40 +1,13 @@
 {
-  "name": "tdesign-icons-uniapp-x",
-  "version": "0.1.0",
-  "license": "MIT",
-  "description": "TDesign Icons for uni-app x (uvue), supports variable stroke width and multi-color",
-  "keywords": [
-    "icons",
-    "t design",
-    "tdesign",
-    "uni-app",
-    "uni-app-x",
-    "uniapp",
-    "uvue",
-    "uts",
-    "svg"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Tencent/tdesign-icons.git",
-    "directory": "packages/uniapp-x"
+  "name": "tdesign-icons-uniapp-x-example",
+  "version": "0.0.0",
+  "private": true,
+  "description": "tdesign-icons-uniapp-x 示例工程（普通 uni-app x 项目，根目录含 uni_modules）",
+  "scripts": {
+    "generate": "node scripts/generate-icon-names.mjs"
   },
-  "homepage": "https://github.com/Tencent/tdesign-icons/blob/develop/README.md",
-  "bugs": {
-    "url": "https://github.com/Tencent/tdesign-icons/issues"
-  },
-  "files": [
-    "src",
-    "README.md",
-    "CHANGELOG.md",
-    "LICENSE"
-  ],
-  "main": "src/index.ts",
-  "module": "src/index.ts",
-  "uni-app": {
-    "compilerVersion": 4
-  },
-  "devDependencies": {
-    "typescript": "catalog:"
+  "dependencies": {
+    "tdesign-icons-uniapp-x": "workspace:*",
+    "vue": "catalog:vue"
   }
 }

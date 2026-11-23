@@ -84,9 +84,6 @@ jobs:
 
       - run: pnpm run --if-present --filter ${{ matrix.icons }} build
 
-      - if: startsWith(matrix.icons, 'tdesign-icons-uniapp')
-        run: pnpm run check:uniapp
-
   build-flutter:
     runs-on: ubuntu-latest
     strategy:

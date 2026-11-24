@@ -3,7 +3,7 @@ import camelCase from 'camelcase';
 import { specifiedIcons } from './util/const';
 import { createTransformStream } from './transform';
 import { optimizeOpacityOverlaps } from './opacity-overlap';
-import { detectOpacityOverlaps } from './detect-opacity-overlap';
+import { detectInternalStrokeOverlapGroupIds, detectOpacityOverlaps } from './detect-opacity-overlap';
 
 export interface Attrs {
   style?: { [key: string]: any } | string;
@@ -80,12 +80,15 @@ function normalizeColor(node: IconElement, options: SvgToElementOptions, nodeId?
 
   if (options.propsString) {
     if (attrs.fill && attrs.fill !== 'none') {
+      // specified 图标以描边方式处理填充，统一走 strokeColor1 通道；
+      // 必须用 else if 收口，避免后续分支再次覆盖已写入的 strokeColor1。
       if (isSpecified) {
         attrs.fill = 'props.strokeColor1';
-      }
-      if (attrs.id === 'fill1') attrs.fill = 'props.fillColor1';
-      else if (attrs.id === 'fill2') attrs.fill = 'props.fillColor2';
-      else if (!attrs.id) {
+      } else if (attrs.id === 'fill1') {
+        attrs.fill = 'props.fillColor1';
+      } else if (attrs.id === 'fill2') {
+        attrs.fill = 'props.fillColor2';
+      } else if (!attrs.id) {
         if (nodeId === 'fill1') attrs.fill = 'props.fillColor1';
         else if (nodeId === 'fill2') attrs.fill = 'props.fillColor2';
         else {
@@ -166,6 +169,9 @@ export function svgToElement(
         overlaps: options.preventOpacityOverlap === true
           ? undefined
           : detectOpacityOverlaps(iconName),
+        internalStrokeOverlapGroupIds: options.preventOpacityOverlap === true
+          ? undefined
+          : new Set(detectInternalStrokeOverlapGroupIds(iconName)),
         viewBox: svgElement.attrs.viewBox as string | undefined,
       });
     }

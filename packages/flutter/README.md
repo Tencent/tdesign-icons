@@ -11,10 +11,12 @@ Add dependency in your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  tdesign_flutter_icons: ^0.0.5
+  tdesign_flutter_icons: ^0.0.6
 ```
 
 ## Usage
+
+### 1. 单色图标（iconfont 方式）
 
 ```dart
 import 'package:tdesign_flutter_icons/tdesign_flutter_icons.dart';
@@ -28,6 +30,58 @@ Icon(TIcons.logo_tdesign_filled, color: Colors.blue, size: 24)
 // In widget tree
 child: Icon(TIcons.home_filled)
 ```
+
+### 2. 多色 / 可变粗细 / 可变颜色图标（具名组件方式）
+
+每个图标对应一个具名组件，命名规则为 `{图标名 PascalCase} + Icon`，
+与 React 保持一致。例如 `ai` → `AiIcon`，`add-circle` → `AddCircleIcon`。
+
+```dart
+import 'package:tdesign_flutter_icons/tdesign_flutter_icons.dart';
+
+// 多色图标：按 fill1/fill2/stroke1/stroke2 四通道分别上色
+AiIcon(
+  fillColor1: Colors.transparent,
+  fillColor2: Colors.transparent,
+  strokeColor1: Colors.blue,
+  strokeColor2: Colors.green,
+  strokeWidth: 2,
+  size: 32,
+)
+
+// 单色使用：只传 color 即可（等效 currentColor）
+AiIcon(color: Colors.blue, size: 24)
+
+// 可变粗细 / 可变颜色：可随时动态修改 strokeWidth 与各通道颜色
+AddCircleIcon(
+  strokeColor1: Colors.red,
+  strokeColor2: Colors.orange,
+  strokeWidth: 3,
+)
+```
+
+> **示例 Demo**：在 example 的「多色 / 可变粗细图标」页面中，提供**可变粗细**
+> 滑杆与**可变颜色**交互（颜色操作参考 `packages/view/src/icon-view.vue`）：
+> - **全部多色图标**通过开关分为 **填充图标（`-filled` 后缀）** 与 **非填充图标** 两类展示（对齐 view 的 `currentType`）；
+> - 支持 **单色 / 双色 / 多色** 三种颜色模式切换（对齐 view 的 `colorType`）；
+> - 每种模式按需展示对应颜色通道，用**自由颜色选择器（含透明度）**分别为
+>   fill1 / fill2 / stroke1 / stroke2 上色，图标实时更新；
+> - 页面右上角支持**深浅色主题切换**，未自定义颜色时单色图标自动跟随主题
+>   （深色下用 `onSurface` 保证可见）；
+> - 提供 **重置** 操作，一键恢复默认图标类型、颜色与粗细（对齐 view 的 `handleReset`）。
+> **默认单色模式，且不修改颜色**：打开示例时以默认单色展示（不应用多色配色），
+> 如需体验多色 / 双色效果，可在页面上切换颜色模式后自由取色。
+
+> **品牌/logo 图标说明**：品牌（`logo-` 前缀）图标遵循「不展示修改效果」约束（对齐 view 端），
+> **保留原始品牌色，不支持多色 / 可变粗细 / 单色修改**，颜色不可改变：
+> ```dart
+> // 品牌图标保留原始品牌色，仅可调整尺寸
+> LogoGithubIcon(size: 24)
+> ```
+
+> **半透明颜色说明**：当多个图层（fill/stroke 通道）在图标内重叠时，半透明颜色会在重叠处被混合两次而变深。
+> 生成器已对存在重叠的图标自动注入 `<mask>`，避免该问题，与 React/vue 各端行为保持一致；
+> 半透明色与不透明色的渲染结果均为正确效果。
 
 ## Available Icons
 
@@ -48,7 +102,7 @@ Replace the dependency and import with `tdesign_flutter_icons`:
 
 ```yaml
 dependencies:
-  tdesign_flutter_icons: ^0.0.5
+  tdesign_flutter_icons: ^0.0.6
 ```
 
 ```dart

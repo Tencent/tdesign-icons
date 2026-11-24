@@ -12,6 +12,8 @@ interface ViewBox {
 
 interface OptimizeOptions {
   overlaps?: OpacityOverlap[];
+  /** 同层内部描边重叠组（`strokeN` 组内多条子描边 path 发生 alpha 重叠）的组 id 集合。 */
+  internalStrokeOverlapGroupIds?: Set<string>;
   viewBox?: string;
 }
 
@@ -202,6 +204,33 @@ export function optimizeOpacityOverlaps(root: IconElement, options: OptimizeOpti
     node.children.forEach(visit);
     // eslint-disable-next-line no-param-reassign
     node.children = mergeAdjacentStrokePaths(node.children);
+
+    // 处理同层内部描边重叠（`strokeN` 组内多条子描边 path 的 alpha 重叠）。
+    // 对齐 view 端 `applyViewSpriteOpacityOverlapMasks`：对组内每条纯描边子路径，
+    // 用其后的同组描边子路径作为 upper mask 将重叠区域抠掉，使重叠处只混合一次。
+    // `mergeAdjacentStrokePaths` 只能合并相邻且属性完全相同的描边，不相邻的同层
+    // 描边（如 screenshot 的两条 V 形）仍需 mask 处理。
+    const groupPathId = node.attrs.id as string | undefined;
+    if (groupPathId && options.internalStrokeOverlapGroupIds?.has(groupPathId)) {
+      const strokeChildren = (node.children || []).filter((child) => {
+        const paintTypes = getPaintTypes(child);
+        return paintTypes.length === 1 && paintTypes[0] === 'stroke';
+      });
+      strokeChildren.forEach((child, childIndex) => {
+        if (child.attrs.mask) {
+          return;
+        }
+        const upperNodes = strokeChildren.slice(childIndex + 1);
+        if (!upperNodes.length) {
+          return;
+        }
+        const maskId = `props.overlapMaskId_${groupPathId}_${childIndex}`;
+        const maskUrl = `props.overlapMaskUrl_${groupPathId}_${childIndex}`;
+        masks.push(makeMask(maskId, upperNodes, viewBox));
+        // eslint-disable-next-line no-param-reassign
+        child.attrs.mask = maskUrl;
+      });
+    }
 
     node.children.forEach((child, childIndex) => {
       const pathId = child.attrs.id;

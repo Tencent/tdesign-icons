@@ -1,0 +1,17 @@
+<script setup lang="ts">
+/**
+ * 说明：这里用 `lang="ts"` 而不是 `lang="uts"`，与官方 hello-uni-app-x 保持一致。
+ * uni-app x 编译到 web 时，uts2js 会给对象字面量套上 UTSJSONObject 包装，
+ * 而 Vue 在 setup 阶段对组件状态做 defineProperty 时会报
+ * `Invalid property descriptor. Cannot both specify accessors and a value or writable attribute`。
+ *
+ * onLaunch / onAppShow 等生命周期由 uni-app x 自动注入，无需 import。
+ */
+onLaunch(() => {
+  console.log('App Launch')
+})
+</script>
+
+<style>
+/* 每个页面公共 css */
+</style>

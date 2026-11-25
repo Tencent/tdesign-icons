@@ -1,4 +1,5 @@
 .DS_Store
+.pnpm-store
 
 # auto generated icons
 src/components/*.tsx
@@ -55,3 +56,8 @@ package-lock.json
 
 # webstorm
 .idea/
+
+# uni-app x 示例：软链接与生成物由 example/.gitignore 忽略，页面源码需要提交
+
+# 本地打包的示例构建产物，通过 HTTP 链接分发，不提交
+/*.zip

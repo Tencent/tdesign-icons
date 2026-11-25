@@ -1,0 +1,64 @@
+<template>
+  <text class="t-icon" :class="_classNames" :style="_rootStyle" @click="handleClick">{{ _unicode }}</text>
+</template>
+
+<script setup lang="ts">
+import { computed } from 'vue'
+import { ICON_UNICODE } from '../../utils/icon-unicode'
+
+/**
+ * t-icon：按名称渲染任意内置图标（单色），与 tdesign-miniprogram / uni-icons 一样走字体图标。
+ * 一套 CDN 字体 + 码点表，用 <text> 输出 unicode 字符，color / font-size 纯 CSS：
+ * 无逐张 SVG 图片解码，切换属性不重算 src，全量列表也不卡。
+ *
+ * 本文件是模板：由 `pnpm run generate` 原样输出到 components/t-icon/t-icon.uvue，请勿手动使用。
+ * easycom 只扫描 components/<name>/<name>.uvue，所以它必须生成到那里才能被自动注册。
+ *
+ * 字体由 @font-face 从 CDN 加载，不进包；小程序端需把
+ * https://tdesign.gtimg.com 配到 downloadFile 合法域名。
+ * 需要多色 / 可变描边宽度请用具体图标组件（<app-icon :stroke-color="..." />）。
+ *
+ * 点击以 click 事件抛出：小程序端父级的 @click 会被编译成自定义事件（bindclick），只有 $emit 能触发。
+ */
+type Props = {
+  /** 图标名，即 icon-unicode.ts 里的 key */
+  name?: string
+  /** 尺寸，支持 small / medium / large / '20px' / '1.5em' */
+  size?: string
+  /** 单色颜色 */
+  color?: string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  name: '',
+  size: '',
+  color: '#333333',
+})
+
+const emit = defineEmits(['click'])
+
+function handleClick(e: any): void {
+  emit('click', e)
+}
+
+/** 纯字符串比较，避免 uts 的对象字面量被包装成 UTSJSONObject */
+function sizeToPx(size: string): string {
+  if (size == 'small') return '14px'
+  if (size == 'medium') return '16px'
+  if (size == 'large') return '18px'
+  return size != '' ? size : '1em'
+}
+
+const _unicode = computed((): string => {
+  const value = ICON_UNICODE[props.name]
+  return value != null ? value : ''
+})
+
+const _classNames = computed((): string => `t-icon-${props.name}`)
+
+const _rootStyle = computed((): string => `color:${props.color};font-size:${sizeToPx(props.size)};line-height:1;`)
+</script>
+
+<style>
+@import '../../style/iconfont.css';
+</style>

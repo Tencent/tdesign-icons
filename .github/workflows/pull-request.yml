@@ -82,6 +82,39 @@ jobs:
 
       - run: pnpm run --if-present --filter ${{ matrix.icons }} build
 
+  # tdesign-icons-uniapp / tdesign-icons-uniapp-x 没有 build 脚本，产物直接落在示例工程的
+  # src/uni_modules 里，所以通过示例工程验证：h5 走 Vite + Vue 3，mp-weixin 验证小程序端的组件编译
+  build-uniapp:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        example:
+          - tdesign-icons-uniapp-example
+          - tdesign-icons-uniapp-x-example
+        platform:
+          - h5
+          - mp-weixin
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: "pnpm"
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm run generate
+
+      # 示例首页的图标名清单（src/utils/icon-names.*）是生成物，需要单独生成
+      - run: pnpm --filter ${{ matrix.example }} generate
+
+      - run: pnpm --filter ${{ matrix.example }} build:${{ matrix.platform }}
+
   build-flutter:
     runs-on: ubuntu-latest
     strategy:

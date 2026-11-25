@@ -10,6 +10,12 @@ const root = process.cwd();
 const packagesDir = path.join(root, 'packages');
 const versionTypes = ['patch', 'minor', 'major'];
 
+// uni-app 包的发布清单在嵌套的真实插件目录里（同时用于 npm 与插件市场）
+const UNI_PLUGIN_MANIFESTS = {
+  uniapp: 'src/uni_modules/tdesign-icons-uniapp/package.json',
+  'uniapp-x': 'src/uni_modules/tdesign-icons-uniapp-x/package.json',
+};
+
 function getCurrentBranch() {
   try {
     return execFileSync('git', ['branch', '--show-current'], { encoding: 'utf8' }).trim();
@@ -25,7 +31,10 @@ async function getReleasablePackages() {
 
     const packageDir = path.join(packagesDir, entry.name);
     const changelogDir = path.join(packageDir, '.changelog');
-    const packageFile = path.join(packageDir, 'package.json');
+    const nestedManifest = UNI_PLUGIN_MANIFESTS[entry.name];
+    const packageFile = nestedManifest
+      ? path.join(packageDir, nestedManifest)
+      : path.join(packageDir, 'package.json');
     const pubspecFile = path.join(packageDir, 'pubspec.yaml');
 
     try {
@@ -34,7 +43,7 @@ async function getReleasablePackages() {
 
       try {
         const manifest = JSON.parse(await fs.readFile(packageFile, 'utf8'));
-        if (manifest.name && manifest.version) {
+        if (manifest.name && manifest.version && !manifest.private) {
           return {
             dir: packageDir,
             changelogDir,

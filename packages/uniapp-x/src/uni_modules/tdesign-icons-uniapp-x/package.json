@@ -1,0 +1,92 @@
+{
+  "name": "tdesign-icons-uniapp-x",
+  "id": "tdesign-icons-uniapp-x",
+  "displayName": "TDesign Icons for uni-app x",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "TDesign 图标库（uni-app x / uvue），支持可变描边宽度与多色",
+  "keywords": [
+    "tdesign",
+    "icons",
+    "uni-app-x",
+    "uvue",
+    "svg"
+  ],
+  "homepage": "https://github.com/Tencent/tdesign-icons/blob/develop/README.md",
+  "bugs": {
+    "url": "https://github.com/Tencent/tdesign-icons/issues"
+  },
+  "repository": "https://github.com/Tencent/tdesign-icons",
+  "engines": {
+    "HBuilderX": "^4.81.0",
+    "uni-app-x": "^4.81.0"
+  },
+  "main": "index.uts",
+  "module": "index.ts",
+  "files": [
+    "components",
+    "style",
+    "utils",
+    "index.ts",
+    "index.uts",
+    "manifest.ts",
+    "global-config.ts",
+    "README.md",
+    "changelog.md",
+    "LICENSE"
+  ],
+  "uni-app": {
+    "compilerVersion": 4
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "dcloudext": {
+    "type": "component-vue",
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      },
+      "sourcecode": {
+        "price": "0.00"
+      }
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": "https://www.npmjs.com/package/tdesign-icons-uniapp-x"
+  },
+  "uni_modules": {
+    "dependencies": [],
+    "platforms": {
+      "client": {
+        "uni-app-x": {
+          "web": {
+            "chrome": "√",
+            "safari": "√"
+          },
+          "app": {
+            "android": "√",
+            "ios": "√",
+            "harmony": "√"
+          },
+          "mp": {
+            "weixin": "√",
+            "alipay": "√",
+            "toutiao": "√"
+          }
+        }
+      }
+    },
+    "treeShaking": {
+      "app": true,
+      "web": true
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "TDesign Icons · uni-app x",
+  "appid": "",
+  "description": "tdesign-icons-uniapp-x 示例工程",
+  "versionName": "0.1.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "vueVersion": "3",
+  "uni-app-x": {},
+  "h5": {
+    "title": "TDesign Icons · uni-app x",
+    "router": {
+      "mode": "hash"
+    }
+  },
+  "mp-weixin": {
+    "appid": "",
+    "setting": {
+      "urlCheck": false
+    },
+    "usingComponents": true
+  },
+  "mp-toutiao": {
+    "usingComponents": true
+  },
+  "app": {
+    "usingComponents": true
+  }
+}

@@ -1,0 +1,206 @@
+/**
+ * TDesign 图标运行时（uni-app x / uvue）
+ *
+ * 图标产物是「带占位符的 svg 字符串」，本模块负责：
+ * 1. resolveSvg：把 {f1||'currentColor'} / {s1||'currentColor'} / {sw} 替换为真实颜色与描边宽度，
+ *    并按实例 uid 重写 mask id，产出可直接内联的原生 SVG 字符串；
+ * 2. toSvgDataUri：编码成 Data URI，供非 WEB 端 <image> 渲染。
+ *
+ * 具体图标组件按平台差异化渲染（组件模板内用条件编译）：
+ * WEB 端走内联 <svg>（v-html + resolveSvg 结果）；App / 小程序 / 鸿蒙的 uvue 原生渲染
+ * 不支持内联 svg，仍走 <image> + Data URI（HBuilderX 4.81+ 保持矢量渲染）。
+ * 通用 t-icon 走字体图标，与本运行时无关。
+ */
+
+export const DEFAULT_STROKE_WIDTH = 2
+
+/**
+ * small/medium/large 的尺寸类名，样式见 style/index.css
+ *
+ * 这里刻意不用 uts 的 Map / UTSJSONObject：
+ * 它们会被编译成 `UTS.mapGet(...)` / `UTS.UTSType`，而 H5 运行时并不注入
+ * 全局 UTS，组件 computed 会直接抛错，图标就渲染不出来。
+ * 改用纯字符串比较，编译产物只剩原生 JS。
+ */
+export function getSizeClassName(size: string): string {
+  if (size == 'small') {
+    return 't-size-s'
+  }
+  if (size == 'medium') {
+    return 't-size-m'
+  }
+  if (size == 'large') {
+    return 't-size-l'
+  }
+  return ''
+}
+
+function toColorArray(color: string | string[] | null): string[] {
+  if (color == null) {
+    return [] as string[]
+  }
+  if (typeof color == 'string') {
+    return [color as string] as string[]
+  }
+  return color as string[]
+}
+
+function pickColor(colors: string[], index: number, fallback: string): string {
+  if (index >= colors.length) {
+    // 未显式传色时，第 2 个颜色位回落到第 1 个，与 web 端行为保持一致
+    const first = colors.length > 0 ? colors[0] : ''
+    return first != '' ? first : fallback
+  }
+  const color = colors[index]
+  return color != '' ? color : fallback
+}
+
+/**
+ * 用真实颜色替换模板里的占位符。
+ * - 未传颜色时回落到模板里声明的默认值（通常是 currentColor）
+ * - 传单个颜色时，多色图标的每个颜色位都用同一个值
+ *
+ * 注意：uts 编译到 App 端不支持 RegExp / String.prototype.replace(callback)，
+ * 这里用纯字符串扫描实现，保证 H5 / App / 小程序行为一致。
+ */
+export function resolveSvg(
+  template: string,
+  strokeColor: string | string[] | null,
+  fillColor: string | string[] | null,
+  strokeWidth: number,
+  uid: string,
+): string {
+  if (template == '') {
+    return ''
+  }
+
+  const fills = toColorArray(fillColor)
+  const strokes = toColorArray(strokeColor)
+  const width = strokeWidth > 0 ? strokeWidth : DEFAULT_STROKE_WIDTH
+
+  let result = ''
+  let rest = template
+
+  while (true) {
+    const start = rest.indexOf('{')
+    if (start < 0) {
+      break
+    }
+    const end = rest.indexOf('}', start)
+    if (end < 0) {
+      break
+    }
+
+    result += rest.substring(0, start)
+    const token = rest.substring(start + 1, end)
+
+    if (token == 'sw') {
+      result += `${width}`
+    } else if (token.length > 1 && (token.substring(0, 1) == 'f' || token.substring(0, 1) == 's')) {
+      // 形如 f1||'currentColor' / s2||'currentColor'
+      const sep = token.indexOf('||')
+      if (sep < 0) {
+        result += '{' + token + '}'
+        rest = rest.substring(end + 1)
+        continue
+      }
+      const fallback = trimQuotes(token.substring(sep + 2, token.length))
+      const index = parseInt(token.substring(1, sep)) - 1
+      result += pickColor(token.substring(0, 1) == 'f' ? fills : strokes, index, fallback)
+    } else {
+      // 非占位符（例如模板中其它内容的 } 之前的部分），原样保留
+      result += '{' + token + '}'
+    }
+
+    rest = rest.substring(end + 1)
+  }
+
+  return applyMaskUid(result + rest, uid)
+}
+
+/**
+ * 给 <mask> 的 id 加上实例前缀，并把引用处的 url(#id) 一并改掉。
+ *
+ * 不用 RegExp.replace(callback)（uts 编译到 App 端不可用），用纯字符串扫描。
+ */
+function applyMaskUid(svg: string, uid: string): string {
+  if (uid == '' || svg.indexOf('-overlap') < 0) {
+    return svg
+  }
+  let out = ''
+  let rest = svg
+  while (true) {
+    const index = rest.indexOf('-overlap')
+    if (index < 0) {
+      break
+    }
+    out += rest.substring(0, index) + '-' + uid + '-overlap'
+    rest = rest.substring(index + '-overlap'.length)
+  }
+  return out + rest
+}
+
+function trimQuotes(text: string): string {
+  if (text.length >= 2) {
+    const first = text.substring(0, 1)
+    const last = text.substring(text.length - 1, text.length)
+    if ((first == '\'' && last == '\'') || (first == '"' && last == '"')) {
+      return text.substring(1, text.length - 1)
+    }
+  }
+  return text
+}
+
+/**
+ * 生成 <image> 可用的 Data URI。
+ *
+ * 只转义 `<` `>` `#` 三个会破坏 URL 结构的字符，保留其余字符可读，
+ * 相比整段 encodeURIComponent 体积更小；`#` 是颜色值的前缀，必须转义。
+ */
+export function toSvgDataUri(svg: string): string {
+  if (svg == '') {
+    return ''
+  }
+  // uts 的 replace(callback) 在 App 端不可用，这里做纯字符映射。
+  // 必须转义 `"` `'` `(` `)`：uni-app H5 的 <image> 用 `background-image: url("...")` 渲染，
+  // 未转义的引号会提前闭合 CSS 字符串，导致图标不显示。
+  let encoded = ''
+  for (let i = 0; i < svg.length; i++) {
+    const char = svg.substring(i, i + 1)
+    if (char == '<') {
+      encoded += '%3C'
+    } else if (char == '>') {
+      encoded += '%3E'
+    } else if (char == '#') {
+      encoded += '%23'
+    } else if (char == '"') {
+      encoded += '%22'
+    } else if (char == "'") {
+      encoded += '%27'
+    } else if (char == '(') {
+      encoded += '%28'
+    } else if (char == ')') {
+      encoded += '%29'
+    } else {
+      encoded += char
+    }
+  }
+  return `data:image/svg+xml;charset=utf-8,${encoded}`
+}
+
+/**
+ * 计算根节点的内联样式。
+ *
+ * 尺寸既支持 small/medium/large 预置值，也支持 '20px'、'1.5em'。
+ * 这里刻意返回字符串而不是对象：uts 里 `{...} as 某类型` 会被编译成
+ * `class ... extends UTS.UTSType`，而 H5 运行时并不注入全局 UTS，
+ * 会导致组件 computed 直接抛错、图标渲染不出来。
+ */
+export function resolveSizeStyle(size: string): string {
+  // 预置尺寸由 class 控制（t-size-s/m/l），不能写 width/height，否则会覆盖 class
+  if (size == '' || size == 'default' || getSizeClassName(size) != '') {
+    return 'display:inline-block;vertical-align:middle;'
+  }
+  // 自定义尺寸：必须显式给宽高，否则 <image> 的 100% 尺寸会失去参照而塌缩为 0
+  return `display:inline-block;vertical-align:middle;width:${size};height:${size};`
+}

@@ -1,0 +1,100 @@
+{
+  "name": "tdesign-icons-uniapp",
+  "id": "tdesign-icons-uniapp",
+  "displayName": "TDesign Icons for uni-app",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "TDesign 图标库（uni-app / .vue），支持可变描边宽度与多色",
+  "keywords": [
+    "tdesign",
+    "icons",
+    "uni-app",
+    "svg",
+    "icon"
+  ],
+  "homepage": "https://github.com/Tencent/tdesign-icons/blob/develop/README.md",
+  "bugs": {
+    "url": "https://github.com/Tencent/tdesign-icons/issues"
+  },
+  "repository": "https://github.com/Tencent/tdesign-icons",
+  "engines": {
+    "HBuilderX": "^3.1.0",
+    "uni-app": "^4.1.0"
+  },
+  "main": "index.uts",
+  "module": "index.ts",
+  "files": [
+    "components",
+    "style",
+    "utils",
+    "index.ts",
+    "index.uts",
+    "manifest.ts",
+    "global-config.ts",
+    "README.md",
+    "changelog.md",
+    "LICENSE"
+  ],
+  "uni-app": {
+    "compilerVersion": 3
+  },
+  "peerDependencies": {
+    "vue": "^2.6.12 || ^3.0.0"
+  },
+  "dcloudext": {
+    "type": "component-vue",
+    "category": [
+      "前端组件",
+      "通用组件"
+    ],
+    "sale": {
+      "regular": {
+        "price": "0.00"
+      },
+      "sourcecode": {
+        "price": "0.00"
+      }
+    },
+    "declaration": {
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
+    },
+    "npmurl": "https://www.npmjs.com/package/tdesign-icons-uniapp"
+  },
+  "uni_modules": {
+    "dependencies": [],
+    "platforms": {
+      "client": {
+        "uni-app": {
+          "vue": {
+            "vue2": "√",
+            "vue3": "√"
+          },
+          "web": {
+            "chrome": "√",
+            "safari": "√"
+          },
+          "app": {
+            "vue": "√",
+            "nvue": "x"
+          },
+          "mp": {
+            "weixin": "√",
+            "alipay": "√",
+            "baidu": "√",
+            "toutiao": "√",
+            "kuaishou": "√",
+            "jd": "√",
+            "qq": "√",
+            "lark": "√"
+          }
+        }
+      }
+    },
+    "treeShaking": {
+      "app": true,
+      "web": true
+    }
+  }
+}

@@ -1,0 +1,58 @@
+/* TDesign Icon 基础样式（uni-app / uni-app x 通用） */
+.t-icon-root {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+}
+
+.t-icon-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* H5 / App(vue) 渲染内联 SVG：wrapper 填满根节点，svg 再填满 wrapper */
+/* #ifndef MP */
+.t-icon-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* v-html 注入的 <svg> 不带作用域属性，需用 :deep() 穿透，否则尺寸规则不生效 */
+.t-icon-svg :deep(svg) {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* #endif */
+
+.t-icon-loading {
+  animation: t-spin 1s linear infinite;
+}
+
+@keyframes t-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.t-icon.t-size-s {
+  width: 14px;
+  height: 14px;
+}
+
+.t-icon.t-size-m {
+  width: 16px;
+  height: 16px;
+}
+
+.t-icon.t-size-l {
+  width: 18px;
+  height: 18px;
+}

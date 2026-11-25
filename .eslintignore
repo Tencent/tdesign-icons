@@ -3,3 +3,16 @@
 **/lib/
 **/esm/
 **/template/
+
+# uni-app 插件的生成物（不提交、不需要 lint）
+packages/*/src/uni_modules/*/components/
+packages/*/src/uni_modules/*/manifest.ts
+packages/*/src/uni_modules/*/global-config.ts
+packages/uniapp/src/utils/icon-names.js
+packages/uniapp-x/src/utils/icon-names.ts
+
+# 各框架包的生成物（已被各自 .gitignore 忽略）
+packages/*/src/manifest.ts
+packages/*/src/components/*.tsx
+packages/*/src/icons.ts
+packages/web-components/src/svg-sprite/svg-icon.ts

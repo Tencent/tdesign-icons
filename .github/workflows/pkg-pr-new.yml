@@ -26,4 +26,4 @@ jobs:
 
       - run: pnpm -r run --if-present build
 
-      - run: pnpm dlx pkg-pr-new publish --pnpm './packages/*' --packageManager=npm,pnpm,bun
+      - run: pnpm dlx pkg-pr-new publish --pnpm --packageManager=npm,pnpm,bun './packages/*' 'packages/uniapp/src/uni_modules/tdesign-icons-uniapp' 'packages/uniapp-x/src/uni_modules/tdesign-icons-uniapp-x'

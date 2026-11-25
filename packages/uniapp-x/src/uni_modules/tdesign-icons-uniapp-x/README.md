@@ -88,6 +88,7 @@ const iconName = ref('close')
 + 码点映射 `utils/icon-unicode.ts`，用 `<text>` 输出 unicode 字符。
 `color` / `size` 就是 CSS 的 `color` / `font-size`，切换时不重算图标内容、不重新解码图片，全量列表也不卡。
 
+> 点击以 `click` 事件抛出：`<t-icon name="close" @click="onClick" />`。
 > 它只提供 `name` / `size` / `color`（单色）；`size` 支持 `small` / `medium` / `large` 及 `24px` / `1.5em` 等任意 CSS 字号。
 > 需要多色 / 可变描边宽度请用具体图标组件（如 `<abstract-icon :stroke-color="..." :stroke-width="..." />`）。
 
@@ -105,7 +106,7 @@ const iconName = ref('close')
 | `strokeWidth` | `number` | `2` | 描边宽度 |
 | `class` | `string` | - | 透传类名，组件自身会附加 `t-icon t-icon-<name>` |
 
-组件还会透传其他属性（例如 `@click`）。
+点击以 `click` 事件抛出，直接写 `<close-icon @click="onClick" />` 即可，小程序端同样生效。
 
 ## 按需加载
 

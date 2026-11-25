@@ -1,5 +1,5 @@
 <template>
-  <text class="t-icon" :class="_classNames" :style="_rootStyle">{{ _unicode }}</text>
+  <text class="t-icon" :class="_classNames" :style="_rootStyle" @click="handleClick">{{ _unicode }}</text>
 </template>
 
 <script>
@@ -22,6 +22,9 @@
  * https://tdesign.gtimg.com 配到 downloadFile 合法域名（开发者工具可关闭域名校验）。
  *
  * 需要多色 / 可变描边宽度请用具体图标组件（<app-icon :stroke-color="..." />）。
+ *
+ * 点击以 click 事件抛出，写法与具体图标组件一致：声明 emits 后 Vue 3 不会再把父级监听器
+ * 透传到根节点（不会触发两次），Vue 2 与小程序端则依赖 $emit（小程序端父级的 @click 被编译成自定义事件）。
  */
 import { ICON_UNICODE } from '../../utils/icon-unicode';
 
@@ -30,6 +33,7 @@ const SIZE_PX = { small: '14px', medium: '16px', large: '18px' };
 
 export default {
   name: 'TIcon',
+  emits: ['click'],
   props: {
     /** 图标名，即 icon-unicode.js 里的 key */
     name: {
@@ -57,6 +61,11 @@ export default {
     _rootStyle() {
       const fontSize = SIZE_PX[this.size] || this.size || '1em';
       return `color:${this.color || '#333333'};font-size:${fontSize};line-height:1;`;
+    },
+  },
+  methods: {
+    handleClick(e) {
+      this.$emit('click', e);
     },
   },
 };

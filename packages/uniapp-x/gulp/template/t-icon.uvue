@@ -1,5 +1,5 @@
 <template>
-  <text class="t-icon" :class="_classNames" :style="_rootStyle">{{ _unicode }}</text>
+  <text class="t-icon" :class="_classNames" :style="_rootStyle" @click="handleClick">{{ _unicode }}</text>
 </template>
 
 <script setup lang="ts">
@@ -17,6 +17,8 @@ import { ICON_UNICODE } from '../../utils/icon-unicode'
  * 字体由 @font-face 从 CDN 加载，不进包；小程序端需把
  * https://tdesign.gtimg.com 配到 downloadFile 合法域名。
  * 需要多色 / 可变描边宽度请用具体图标组件（<app-icon :stroke-color="..." />）。
+ *
+ * 点击以 click 事件抛出：小程序端父级的 @click 会被编译成自定义事件（bindclick），只有 $emit 能触发。
  */
 type Props = {
   /** 图标名，即 icon-unicode.ts 里的 key */
@@ -32,6 +34,12 @@ const props = withDefaults(defineProps<Props>(), {
   size: '',
   color: '#333333',
 })
+
+const emit = defineEmits(['click'])
+
+function handleClick(e: any): void {
+  emit('click', e)
+}
 
 /** 纯字符串比较，避免 uts 的对象字面量被包装成 UTSJSONObject */
 function sizeToPx(size: string): string {

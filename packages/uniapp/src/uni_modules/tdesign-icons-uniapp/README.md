@@ -92,6 +92,7 @@ export default {
 + 码点映射 `utils/icon-unicode.js`，用 `<text>` 直接输出 unicode 字符。
 `color` / `size` 就是 CSS 的 `color` / `font-size`，切换时**不重算图标内容、不重新解码图片**，全量图标列表也不卡。
 
+> 点击以 `click` 事件抛出：`<t-icon name="close" @click="onClick" />`。
 > 它只提供 `name` / `size` / `color`（单色、描边宽度固定）；
 > 需要多色 / 可变描边宽度请用具体图标组件（如 `<abstract-icon :stroke-color="..." :stroke-width="..." />`）。
 > 小程序端不支持 `<component :is>`，动态图标名与精细样式控制刻意走两条路径。

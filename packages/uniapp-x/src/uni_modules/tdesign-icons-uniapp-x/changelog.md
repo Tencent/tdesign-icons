@@ -3,5 +3,6 @@
 ### 🌱 初始版本
 
 - 新增 `tdesign-icons-uniapp-x`，支持 uni-app x（uvue）的 H5、App、各平台小程序
-- 图标通过 SVG Data URI 渲染，支持可变描边宽度（`strokeWidth`）与多色图标（`strokeColor` / `fillColor` 支持字符串或数组）
+- 具体图标组件按平台渲染：WEB 内联 `<svg>`，App / 小程序用 `<image>` + SVG Data URI；支持可变描边宽度（`strokeWidth`）与多色图标（`strokeColor` / `fillColor` 支持字符串或数组）
+- 新增通用组件 `t-icon`，按 `name` 渲染单色字体图标，适用于全量图标列表
 - 以 `uni_modules` 真实目录同时发布到 npm 与 DCloud 插件市场，与 `tdesign-icons-uniapp` 共用同一套图标产物

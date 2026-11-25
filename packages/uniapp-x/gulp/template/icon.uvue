@@ -63,9 +63,6 @@ defineOptions({
   name: '$ICON_NAME',
 })
 
-/** 供演示组件读取的原始占位符模板 */
-const template = TEMPLATE
-
 /**
  * 每个实例的唯一后缀，用于隔离 <mask> 的 id。
  *

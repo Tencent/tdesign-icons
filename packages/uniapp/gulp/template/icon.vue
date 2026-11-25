@@ -1,5 +1,5 @@
 <template>
-  <view class="t-icon-root" :class="_classNames" :style="_rootStyle" @click="onClick">
+  <view class="t-icon-root" :class="_classNames" :style="_rootStyle" @click="handleClick">
     <!-- H5：webview 渲染，内联 SVG -->
     <!-- #ifdef H5 -->
     <view class="t-icon-svg" v-html="_svg"></view>
@@ -35,6 +35,14 @@ const TEMPLATE = `$TEMPLATE`;
 
 export default {
   name: '$ICON_NAME',
+  /**
+   * click 以组件事件抛出，而不是把 onClick 声明成 prop 接收。
+   * Vue 3 的 @click 会编译成 onClick 属性，prop 写法能命中；
+   * 但 Vue 2 的 @click 进的是 $listeners、小程序端自定义组件事件同样依赖 $emit，
+   * prop 写法在这两条路径上会静默失效。
+   * 声明 emits 后，Vue 3 不再把父级监听器透传到根节点，因此也不会触发两次。
+   */
+  emits: ['click'],
   /** 原始占位符模板：供按需渲染的场景直接取用（例如小程序端不支持动态组件时） */
   TEMPLATE,
   data() {
@@ -69,11 +77,6 @@ export default {
     strokeWidth: {
       type: Number,
       default: 2,
-    },
-    /** 点击事件 */
-    onClick: {
-      type: Function,
-      default: null,
     },
   },
   computed: {
@@ -110,6 +113,11 @@ export default {
           : 'display:inline-block;vertical-align:middle;width:1em;height:1em;';
       }
       return `display:inline-block;vertical-align:middle;width:${sizeStyle.width};height:${sizeStyle.height};`;
+    },
+  },
+  methods: {
+    handleClick(e) {
+      this.$emit('click', e);
     },
   },
 };

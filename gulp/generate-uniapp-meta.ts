@@ -1,8 +1,25 @@
 import { dest, src } from 'gulp';
 import concat from 'gulp-concat';
 
-import { createTransformStream } from '../../../gulp/transform';
-import { upperCamelCase } from '../../../gulp/util';
+import { createTransformStream } from './transform';
+import { upperCamelCase } from './util';
+
+/**
+ * uni-app / uni-app x 共用的入口、图标清单、全局图标配置类型生成，以及通用组件模板的输出。
+ *
+ * 与 generate-entry / generate-manifest / generate-type-map 的区别：
+ * 组件位于 uni_modules 的 easycom 目录下（components/<name>/<name><extName>），产物是 .uts 入口。
+ */
+
+/**
+ * 把手写的组件模板原样输出成 easycom 组件。
+ *
+ * 用于 t-icon 这类不随单个图标变化的通用组件：模板放在各包的 gulp/template 下，
+ * 与图标组件一起生成到 components/<name>/ 下，才会被 easycom 扫描到。
+ */
+export const generateUniAppComponent = ({ from, to }: { from: string; to: string }) => function generateUniAppComponent() {
+  return src(from).pipe(dest(to));
+};
 
 /**
  * 生成 icons 入口文件。

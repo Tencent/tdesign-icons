@@ -25,7 +25,6 @@
     "vue": "catalog:vue"
   },
   "devDependencies": {
-    "@dcloudio/uni-automator": "3.0.0-5030420261029002",
     "@dcloudio/uni-cli-shared": "3.0.0-5030420261029002",
     "@dcloudio/vite-plugin-uni": "3.0.0-5030420261029002",
     "vite": "catalog:"

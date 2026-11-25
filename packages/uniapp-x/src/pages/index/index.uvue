@@ -173,18 +173,19 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import TIcon from '../../uni_modules/tdesign-icons-uniapp-x/t-icon/t-icon.uvue'
 import { ICON_NAMES } from '../../utils/icon-names'
 import {
   COLOR_PRESET,
-  COLOR_TYPES,
   STROKE_TYPES,
   COLOR_OPTIONS,
   COLOR_PALETTE,
   SIZE_OPTIONS,
   MULTICOLOR_ICONS,
+  getColorTypes,
   editableSlots,
   resolveColors,
+  ColorPreset,
+  LabelOption,
 } from '../../utils/demo'
 
 /** 字体图标很轻，但一次挂载 2358 个节点仍有开销，分批渲染 */
@@ -197,7 +198,7 @@ const tabs = [
 const strokeTypes = STROKE_TYPES
 /** 默认与当前演示一致：描边-填充 + 双色（填充 / 描边各 1 色） */
 const strokeType = ref('outlineFilled')
-const colorTypes = computed(() => COLOR_TYPES[strokeType.value])
+const colorTypes = computed((): LabelOption[] => getColorTypes(strokeType.value))
 const colorOptions = COLOR_OPTIONS
 const colorPalette = COLOR_PALETTE
 const sizeOptions = SIZE_OPTIONS
@@ -227,7 +228,7 @@ const visibleNames = computed((): string[] => {
 
 const hasMore = computed((): boolean => visibleCount.value < matchedCount.value)
 
-const slotValues = computed(() => ({
+const slotValues = computed((): ColorPreset => ({
   strokeColor1: strokeColor1.value,
   strokeColor2: strokeColor2.value,
   fillColor1: fillColor1.value,
@@ -238,7 +239,7 @@ const palette = computed(() => resolveColors(colorType.value, strokeType.value, 
 const strokeColors = computed((): string[] => palette.value.strokeColor)
 const fillColors = computed((): string[] => palette.value.fillColor)
 
-function optionLabel(options: { key: string; label: string }[], key: string): string {
+function optionLabel(options: LabelOption[], key: string): string {
   const found = options.find((item) => item.key == key)
   return found != null ? found.label : key
 }

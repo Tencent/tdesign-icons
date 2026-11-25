@@ -4,7 +4,7 @@ TDesign Icons 的 uni-app（JS 引擎版）版本，支持 **可变描边宽度*
 
 以 **uni_modules** 插件形式发布，通过 **easycom** 自动注册，页面里直接写标签即可，无需 `import`。
 
-> 需要 uni-app x（uvue）版本请使用 [tdesign-icons-uniapp-x](../uniapp-x)。
+> 需要 uni-app x（uvue）版本请使用 [tdesign-icons-uniapp-x](https://github.com/Tencent/tdesign-icons/tree/develop/packages/uniapp-x)。
 
 ## 安装
 
@@ -41,7 +41,7 @@ easycom 会自动扫描 `uni_modules/<id>/components/<name>/<name>.vue`，
 ```vue
 <template>
   <view>
-    <!-- 单色图标，默认 currentColor -->
+    <!-- 单色图标，默认黑色，不继承父级 color -->
     <close-icon />
 
     <!-- 预设尺寸 -->
@@ -62,14 +62,15 @@ CSS 类名仍是 `t-icon-<名称>`（如 `t-icon-close`），与 web 端保持�
 如果项目自定义了 easycom 规则（`pages.json` 的 `easycom` 字段），也可以显式引入：
 
 ```js
-import { CloseIcon, AbstractIcon } from '@/uni_modules/tdesign-icons-uniapp/index.uts';
+import { CloseIcon, AbstractIcon, TIcon } from '@/uni_modules/tdesign-icons-uniapp/index.uts';
 ```
 
 导出名是 `<Name>Icon`（目录名 `close-icon` → `CloseIcon`），与 `manifest` 里的 `icon` 字段一致。
 
 ## 按名称动态渲染（t-icon）
 
-图标名来自配置、需要动态选择时，用通用组件 `t-icon`：
+图标名来自配置、需要动态选择时，用通用组件 `t-icon`。它和具体图标组件一样位于 `components/` 下，
+由 easycom 自动注册，**直接写标签即可**：
 
 ```vue
 <template>
@@ -79,10 +80,7 @@ import { CloseIcon, AbstractIcon } from '@/uni_modules/tdesign-icons-uniapp/inde
 </template>
 
 <script>
-import TIcon from '@/uni_modules/tdesign-icons-uniapp/t-icon/t-icon.vue';
-
 export default {
-  components: { TIcon },
   data() {
     return { iconName: 'close' };
   },
@@ -94,7 +92,6 @@ export default {
 + 码点映射 `utils/icon-unicode.js`，用 `<text>` 直接输出 unicode 字符。
 `color` / `size` 就是 CSS 的 `color` / `font-size`，切换时**不重算图标内容、不重新解码图片**，全量图标列表也不卡。
 
-> `t-icon` 不在 `components/` 两级目录下，easycom 不会自动注册，需显式引入并注册。
 > 它只提供 `name` / `size` / `color`（单色、描边宽度固定）；
 > 需要多色 / 可变描边宽度请用具体图标组件（如 `<abstract-icon :stroke-color="..." :stroke-width="..." />`）。
 > 小程序端不支持 `<component :is>`，动态图标名与精细样式控制刻意走两条路径。
@@ -103,29 +100,32 @@ export default {
 `https://tdesign.gtimg.com` 配到 downloadFile 合法域名**，开发者工具可关闭域名校验。
 码点表从同版本 `fonts/index.css` 解析而来，请勿手动修改。
 
-另有生成物 `icon-map.js`（全量带占位符的 SVG 模板表，根目录 `pnpm run generate` 产出、不提交），
-供需要按 name 拿原始 SVG 模板的场景使用；`t-icon` 不依赖它。
-
 ## 属性
 
 | 属性 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | `size` | `string` | `1em` | 图标尺寸，支持 `small` / `medium` / `large`，也支持 `20px`、`1.5em` 等（带单位的字符串，数字请自己补单位） |
-| `strokeColor` | `string \| string[]` | `currentColor` | 描边颜色，多色图标按顺序取用 |
-| `fillColor` | `string \| string[]` | `currentColor` | 填充颜色，多色图标按顺序取用 |
+| `strokeColor` | `string \| string[]` | `#000000` | 描边颜色，多色图标按顺序取用 |
+| `fillColor` | `string \| string[]` | `#000000` | 填充颜色，多色图标按顺序取用 |
 | `strokeWidth` | `number` | `2` | 描边宽度 |
 | `class` | `string` | - | 透传类名，组件自身会附加 `t-icon t-icon-<name>` |
 
-组件还会透传其他属性（例如 `@click`）。
+点击以 `click` 事件抛出，Vue 2 / Vue 3 写法一致：
+
+```vue
+<close-icon @click="onClick" />
+```
+
+其余非 prop 属性会透传到根节点。
 
 ## 按需加载
 
 easycom 只在页面实际用到某个标签时才引入对应组件文件。
 示例工程的「多色 / 可变」标签页只用到 12 个具体图标组件，构建产物里就只有这 12 个，而不是全部 2358 个；
 「全部图标」标签页用通用 `t-icon` 字体图标覆盖全量单色图标——一套 CDN 字体 + 码点表即可，
-不需要把 2358 个组件或 2.4MB 的 `icon-map.js` 打进产物。
+不需要把 2358 个组件打进产物。
 
-> 不建议全量 `import * from 'tdesign-icons-uniapp'`：入口是 2358 条 re-export，
+> 不建议全量 `import * from 'tdesign-icons-uniapp'`：入口是 2359 条 re-export，
 > dev 模式下 Vite 会逐个请求全部模块，页面会长时间卡在加载中。
 
 ## 实现说明
@@ -148,7 +148,7 @@ easycom 只在页面实际用到某个标签时才引入对应组件文件。
 | 微信 / QQ / 支付宝 / 抖音 / 百度 / 快手 / 京东 / 小红书 小程序 | ✅ | `<image>` + SVG data URI（QQ 可直接使用微信方案） |
 | App（nvue 原生渲染页面） | ❌ | 原生渲染不支持 SVG 图片 |
 
-> 未传色时各平台均按 `currentColor` 的缺省值（黑色）渲染，父级 `color` 不会生效；
+> 未传色时固定渲染为黑色，不继承父级 `color`（与小程序端 `<image>` 的渲染结果保持一致）；
 > 需要改色请显式传 `strokeColor` / `fillColor`。
 
 ## License

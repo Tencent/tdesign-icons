@@ -19,9 +19,9 @@ import { uniAppXTask } from './packages/uniapp-x/gulp';
 const source: string[] = ['svg/*.svg'];
 
 /**
- * 插件目录里的 readme / license / changelog 是发布产物，
- * 始终从仓库的单一来源（README.md / LICENSE / .changelog/<version>.md）同步，
- * 避免两份拷贝漂移。
+ * 插件目录里的 changelog.md 是发布产物，从 .changelog/<version>.md 同步，避免两份拷贝漂移。
+ *
+ * README.md / LICENSE 直接放在插件目录里（插件目录本身就是发布单元），不需要同步。
  */
 async function syncUniAppPluginDocs() {
   const packages = [
@@ -32,8 +32,6 @@ async function syncUniAppPluginDocs() {
   for (const { dir, id } of packages) {
     const root = `packages/${dir}`;
     const plugin = `${root}/src/uni_modules/${id}`;
-    fs.copyFileSync(`${root}/README.md`, `${plugin}/readme.md`);
-    fs.copyFileSync(`${root}/LICENSE`, `${plugin}/license.md`);
 
     const { version } = JSON.parse(fs.readFileSync(`${plugin}/package.json`, 'utf8'));
     const notes = `${root}/.changelog/${version}.md`;

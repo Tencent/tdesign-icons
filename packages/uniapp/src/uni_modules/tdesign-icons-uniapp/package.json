@@ -25,17 +25,15 @@
   "module": "index.ts",
   "files": [
     "components",
-    "t-icon",
     "style",
     "utils",
     "index.ts",
     "index.uts",
     "manifest.ts",
     "global-config.ts",
-    "icon-map.js",
-    "readme.md",
+    "README.md",
     "changelog.md",
-    "license.md"
+    "LICENSE"
   ],
   "uni-app": {
     "compilerVersion": 3

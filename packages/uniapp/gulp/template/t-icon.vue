@@ -6,6 +6,9 @@
 /**
  * t-icon：单组件按名称渲染任意内置图标（单色）。
  *
+ * 本文件是模板：由 `pnpm run generate` 原样输出到 components/t-icon/t-icon.vue，请勿手动使用。
+ * easycom 只扫描 components/<name>/<name>.vue，所以它必须生成到那里才能被自动注册。
+ *
  * 与 tdesign-miniprogram 的 uniapp icon、uni-icons 一样走「字体图标」：
  * 一套 CDN 字体 + 码点映射，用 <text> 直接输出 unicode 字符，
  * 颜色 / 尺寸只是 color / font-size，由 CSS 控制。
@@ -20,7 +23,7 @@
  *
  * 需要多色 / 可变描边宽度请用具体图标组件（<app-icon :stroke-color="..." />）。
  */
-import { ICON_UNICODE } from '../utils/icon-unicode';
+import { ICON_UNICODE } from '../../utils/icon-unicode';
 
 /** small/medium/large 与 style/index.css 里的预设尺寸保持一致 */
 const SIZE_PX = { small: '14px', medium: '16px', large: '18px' };
@@ -60,5 +63,5 @@ export default {
 </script>
 
 <style>
-@import '../style/iconfont.css';
+@import '../../style/iconfont.css';
 </style>

@@ -8,7 +8,6 @@
 packages/*/src/uni_modules/*/components/
 packages/*/src/uni_modules/*/manifest.ts
 packages/*/src/uni_modules/*/global-config.ts
-packages/*/src/uni_modules/*/icon-map.js
 packages/uniapp/src/utils/icon-names.js
 packages/uniapp-x/src/utils/icon-names.ts
 

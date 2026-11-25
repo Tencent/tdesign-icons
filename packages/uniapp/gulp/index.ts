@@ -3,14 +3,14 @@ import { parallel, series } from 'gulp';
 import { generateIcons } from '../../../gulp/generate-icons';
 import { clearDir } from '../../../gulp/clean-dir';
 import { svgElementJsonToTemplate } from '../../../gulp/svg-to-template';
-
-import { uniAppGetIconFileContent } from './template-generator';
-import { generateIconMap } from './icon-map';
 import {
+  generateUniAppComponent,
   generateUniAppEntry,
   generateUniAppManifest,
   generateUniAppTypeMap,
-} from './meta';
+} from '../../../gulp/generate-uniapp-meta';
+
+import { uniAppGetIconFileContent } from './template-generator';
 
 const PLUGIN_DIR = 'packages/uniapp/src/uni_modules/tdesign-icons-uniapp';
 
@@ -41,10 +41,11 @@ export function uniAppTask(source: string[]) {
         transformElement: (elementJson, name) => svgElementJsonToTemplate(elementJson, name),
       }),
 
-      // t-icon 按 name 动态渲染所需的全量图标表，与各图标组件同源
-      generateIconMap({
-        from: [...source],
-        to: `${PLUGIN_DIR}`,
+      // 通用字体图标组件 t-icon：源码是手写模板，不随单个图标变化；
+      // 和图标组件一起生成到 components/ 下，才会被 easycom 扫描到
+      generateUniAppComponent({
+        from: 'packages/uniapp/gulp/template/t-icon.vue',
+        to: `${PLUGIN_DIR}/components/t-icon`,
       }),
 
       generateUniAppManifest({

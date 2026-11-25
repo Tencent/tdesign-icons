@@ -189,7 +189,6 @@
 </template>
 
 <script>
-import TIcon from '../../uni_modules/tdesign-icons-uniapp/t-icon/t-icon.vue';
 import { ICON_NAMES } from '../../utils/icon-names';
 import {
   COLOR_PRESET,
@@ -212,7 +211,6 @@ import {
 const PAGE_SIZE = 60;
 
 export default {
-  components: { TIcon },
   data() {
     return {
       activeTab: 'all',

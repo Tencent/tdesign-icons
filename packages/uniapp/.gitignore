@@ -3,7 +3,6 @@ src/uni_modules/tdesign-icons-uniapp/components/*
 src/uni_modules/tdesign-icons-uniapp/index.uts
 src/uni_modules/tdesign-icons-uniapp/manifest.ts
 src/uni_modules/tdesign-icons-uniapp/global-config.ts
-src/uni_modules/tdesign-icons-uniapp/icon-map.js
 
 # 示例工程生成物
 src/utils/icon-names.js

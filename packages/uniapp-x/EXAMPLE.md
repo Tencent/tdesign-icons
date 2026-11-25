@@ -39,8 +39,10 @@ corepack pnpm build:h5
 │   └── uni_modules/
 │       └── tdesign-icons-uniapp-x/              # 真实插件目录 = npm 包根
 │           ├── package.json                     # 唯一发布清单（name + id + dcloudext）
-│           ├── components/<name>-icon/<name>-icon.uvue
-│           ├── t-icon/  style/  utils/
+│           ├── README.md  LICENSE  changelog.md # 插件的文档、协议、更新日志都在这里
+│           ├── components/<name>-icon/<name>-icon.uvue  # 生成物，模板在 gulp/template/icon.uvue
+│           ├── components/t-icon/t-icon.uvue             # 生成物，通用字体图标，模板在 gulp/template/t-icon.uvue
+│           ├── style/  utils/
 │           └── index.uts  index.ts  manifest.ts  global-config.ts
 ├── scripts/generate-icon-names.mjs              # 只生成图标名，不建软链
 └── gulp/  .changelog/

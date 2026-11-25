@@ -4,12 +4,15 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { ICON_UNICODE } from '../utils/icon-unicode'
+import { ICON_UNICODE } from '../../utils/icon-unicode'
 
 /**
  * t-icon：按名称渲染任意内置图标（单色），与 tdesign-miniprogram / uni-icons 一样走字体图标。
  * 一套 CDN 字体 + 码点表，用 <text> 输出 unicode 字符，color / font-size 纯 CSS：
  * 无逐张 SVG 图片解码，切换属性不重算 src，全量列表也不卡。
+ *
+ * 本文件是模板：由 `pnpm run generate` 原样输出到 components/t-icon/t-icon.uvue，请勿手动使用。
+ * easycom 只扫描 components/<name>/<name>.uvue，所以它必须生成到那里才能被自动注册。
  *
  * 字体由 @font-face 从 CDN 加载，不进包；小程序端需把
  * https://tdesign.gtimg.com 配到 downloadFile 合法域名。
@@ -49,5 +52,5 @@ const _rootStyle = computed((): string => `color:${props.color};font-size:${size
 </script>
 
 <style>
-@import '../style/iconfont.css';
+@import '../../style/iconfont.css';
 </style>

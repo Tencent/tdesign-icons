@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tdesign_flutter/tdesign_flutter.dart';
 
@@ -29,10 +28,10 @@ enum _CopyType {
 }
 
 enum _IconColorOption {
-  brand('品牌色', 'context.tTheme.brandNormalColor'),
-  error('错误色', 'context.tTheme.errorNormalColor'),
-  success('成功色', 'context.tTheme.successNormalColor'),
-  warning('警告色', 'context.tTheme.warningNormalColor'),
+  brand('品牌色', 'context.tTheme.brandColor'),
+  error('错误色', 'context.tTheme.errorColor'),
+  success('成功色', 'context.tTheme.successColor'),
+  warning('警告色', 'context.tTheme.warningColor'),
   secondary('次要文本色', 'context.tTheme.textColorSecondary'),
   purple('自定义紫色', 'const Color(0xFF834EC2)');
 
@@ -42,10 +41,10 @@ enum _IconColorOption {
   final String code;
 
   Color resolve(TThemeData token) => switch (this) {
-    _IconColorOption.brand => token.brandNormalColor,
-    _IconColorOption.error => token.errorNormalColor,
-    _IconColorOption.success => token.successNormalColor,
-    _IconColorOption.warning => token.warningNormalColor,
+    _IconColorOption.brand => token.brandColor,
+    _IconColorOption.error => token.errorColor,
+    _IconColorOption.success => token.successColor,
+    _IconColorOption.warning => token.warningColor,
     _IconColorOption.secondary => token.textColorSecondary,
     _IconColorOption.purple => const Color(0xFF834EC2),
   };
@@ -178,14 +177,17 @@ class _IconDemoPageState extends State<IconDemoPage> {
 
     return Scaffold(
       appBar: TNavBar(
-        titleWidget: const TText('TDesign Icons', fontWeight: FontWeight.w600),
+        title: const TText(
+          'TDesign Icons',
+          style: TextStyle(fontWeight: FontWeight.w600),
+        ),
         useDefaultBack: false,
         actions: [
           TNavBarItem(
             customWidget: TText(
               '共 ${_allIcons.length} 个',
               font: context.tTheme.fontBodySmall,
-              textColor: context.tTheme.textColorSecondary,
+              style: TextStyle(color: context.tTheme.textColorSecondary),
             ),
             onTap: () {},
           ),
@@ -241,7 +243,7 @@ class _IconDemoPageState extends State<IconDemoPage> {
                       alignment: Alignment.topCenter,
                       child: SizedBox(
                         width: compact ? 108 : 120,
-                        child: TRadioGroup<_CopyType>(
+                        child: TRadioGroup<_CopyType>.options(
                           key: const Key('copy-type-group'),
                           value: _copyType,
                           options: [
@@ -288,9 +290,11 @@ class _IconDemoPageState extends State<IconDemoPage> {
                               copied ? '已复制${_copyType.label}写法' : '点击图标复制',
                               key: const Key('preview-copy-hint'),
                               font: token.fontBodySmall,
-                              textColor: copied
-                                  ? token.successNormalColor
-                                  : token.textColorSecondary,
+                              style: TextStyle(
+                                color: copied
+                                    ? token.successColor
+                                    : token.textColorSecondary,
+                              ),
                               textAlign: TextAlign.center,
                             ),
                           ],
@@ -316,7 +320,7 @@ class _IconDemoPageState extends State<IconDemoPage> {
                               onPressed: () => _showCodePreview(entry),
                               icon: TIcon(
                                 TIcons.info_circle,
-                                color: token.brandNormalColor,
+                                color: token.brandColor,
                                 semanticLabel: '查看代码',
                               ),
                             ),
@@ -369,8 +373,8 @@ class _IconDemoPageState extends State<IconDemoPage> {
                         key: const Key('theme-switch-icon'),
                         size: 16,
                         color: widget.isDarkMode
-                            ? token.brandNormalColor
-                            : token.warningNormalColor,
+                            ? token.brandColor
+                            : token.warningColor,
                         semanticLabel: widget.isDarkMode ? '暗黑模式' : '明亮模式',
                       ),
                     ),
@@ -395,7 +399,7 @@ class _IconDemoPageState extends State<IconDemoPage> {
           TText(
             '${_copyType.label}写法',
             font: token.fontBodySmall,
-            textColor: token.textColorSecondary,
+            style: TextStyle(color: token.textColorSecondary),
           ),
           const SizedBox(height: 8),
           TText(
@@ -437,13 +441,13 @@ class _IconDemoPageState extends State<IconDemoPage> {
           width: width,
           height: height,
           decoration: BoxDecoration(
-            color: copied ? token.successLightColor : token.bgColorContainer,
+            color: copied ? token.successColorLight : token.bgColorContainer,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: copied ? token.successNormalColor : token.brandNormalColor,
+              color: copied ? token.successColor : token.brandColor,
               width: 1.5,
             ),
-            boxShadow: token.shadowsBase,
+            boxShadow: token.shadow1,
           ),
           child: Stack(
             children: [
@@ -459,7 +463,7 @@ class _IconDemoPageState extends State<IconDemoPage> {
                           TIcons.check_circle_filled,
                           key: const ValueKey('copy-success-icon'),
                           size: width >= 140 ? 72 : 56,
-                          color: token.successNormalColor,
+                          color: token.successColor,
                           semanticLabel: '复制成功',
                         )
                       : TIcon(
@@ -478,7 +482,7 @@ class _IconDemoPageState extends State<IconDemoPage> {
                   child: TIcon(
                     TIcons.copy,
                     size: 18,
-                    color: token.brandNormalColor,
+                    color: token.brandColor,
                     semanticLabel: '复制',
                   ),
                 ),

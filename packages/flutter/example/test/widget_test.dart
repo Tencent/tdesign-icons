@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:tdesign_flutter/tdesign_flutter.dart';
@@ -225,7 +224,7 @@ void main() {
     const customCode = '''TIcon(
   TIcons.ability_open,
   size: 24,
-  color: context.tTheme.brandNormalColor,
+  color: context.tTheme.brandColor,
 )''';
     expect(find.text('参数写法'), findsNothing);
     expect(find.text(customCode), findsNothing);

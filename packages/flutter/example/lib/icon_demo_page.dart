@@ -160,6 +160,15 @@ class _IconDemoPageState extends State<IconDemoPage> {
         width: width,
         height: 184,
         child: _buildCodePreview(entry, context.tTheme),
+        closeBuilder: (popupContext, close) => IconButton(
+          tooltip: '关闭',
+          icon: Icon(
+            TIcons.close_circle,
+            color: popupContext.tTheme.fontWhite1,
+            size: 32,
+          ),
+          onPressed: close,
+        ),
       ),
     );
   }

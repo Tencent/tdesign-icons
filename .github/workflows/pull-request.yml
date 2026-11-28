@@ -176,6 +176,12 @@ jobs:
         working-directory: ./packages/flutter/example
         run: flutter build web --release --no-pub --base-href /flutter/
 
+      - name: Set up Java for the Flutter APK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
       - name: build Flutter example APK
         working-directory: ./packages/flutter/example
         run: flutter build apk --release --no-pub
